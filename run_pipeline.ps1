@@ -6,7 +6,8 @@ param(
     [switch]$WithPerformance,
     [switch]$WithLibreOffice,
     [int]$CandidateLimit = 15,
-    [int]$BootstrapSamples = 1000
+    [int]$BootstrapSamples = 1000,
+    [int]$Workers = 0
 )
 
 $ErrorActionPreference = "Stop"
@@ -57,6 +58,22 @@ $Python = Resolve-Executable $BundledPython @("python", "py")
 $Node = Resolve-Executable $BundledNode @("node")
 $Git = Resolve-Executable $BundledGit @("git")
 
+$RunGitCommit = ""
+if ($Mode -in @("quick", "full")) {
+    $TrackedStatus = (& $Git -C $ProjectRoot status --porcelain --untracked-files=no) -join "`n"
+    if ($LASTEXITCODE -ne 0) {
+        throw "Unable to inspect Git worktree before $Mode evaluation."
+    }
+    if ($TrackedStatus.Trim()) {
+        throw "$Mode evaluation requires a clean tracked worktree. Commit the current code before running the experiment."
+    }
+    $RunGitCommit = (& $Git -C $ProjectRoot rev-parse HEAD).Trim()
+    if ($LASTEXITCODE -ne 0 -or -not $RunGitCommit) {
+        throw "Unable to record the Git commit before $Mode evaluation."
+    }
+    Write-Host "Reproducibility lock: $RunGitCommit"
+}
+
 if (-not (Test-Path -LiteralPath "node_modules\@oai\artifact-tool")) {
     if (-not (Test-Path -LiteralPath $BundledModules)) {
         throw "@oai/artifact-tool is unavailable. Open this project in Codex Desktop once, or install the required Node package."
@@ -104,7 +121,8 @@ $ExperimentArgs = @(
     "--validation", (Join-Path $Validation "validated_instances.jsonl"),
     "--output", $Results,
     "--candidate-limit", $CandidateLimit,
-    "--bootstrap-samples", $BootstrapSamples
+    "--bootstrap-samples", $BootstrapSamples,
+    "--workers", $Workers
 )
 if ($Ablations) { $ExperimentArgs += "--ablations" }
 if ($Mode -eq "full") { $ExperimentArgs += @("--config", $FrozenConfig) }
@@ -144,7 +162,7 @@ Invoke-Checked -Executable $Python -Arguments @("scripts\audit_outputs.py", "--b
 
 if ($WithSensitivity) {
     Write-Host "[extra] Running bounded candidate-count and weight sensitivity..."
-    Invoke-Checked -Executable $Python -Arguments @("scripts\run_sensitivity.py", "--benchmark", $Benchmark, "--validation", (Join-Path $Validation "validated_instances.jsonl"), "--output", $Results, "--limit", "48")
+    Invoke-Checked -Executable $Python -Arguments @("scripts\run_sensitivity.py", "--benchmark", $Benchmark, "--validation", (Join-Path $Validation "validated_instances.jsonl"), "--output", $Results, "--limit", "48", "--workers", "$Workers")
 }
 
 if ($WithPerformance) {
@@ -157,6 +175,18 @@ if ($WithPerformance) {
 if ($WithLibreOffice) {
     Write-Host "[extra] Cross-checking a bounded sample with LibreOffice..."
     Invoke-Checked -Executable $Python -Arguments @("scripts\validate_with_libreoffice.py", "--benchmark", $Benchmark, "--output", $Results, "--limit", "20", "--required")
+}
+
+if ($Mode -in @("quick", "full")) {
+    $EndGitCommit = (& $Git -C $ProjectRoot rev-parse HEAD).Trim()
+    $EndTrackedStatus = (& $Git -C $ProjectRoot status --porcelain --untracked-files=no) -join "`n"
+    if ($EndGitCommit -ne $RunGitCommit) {
+        throw "Git commit changed during $Mode evaluation: $RunGitCommit -> $EndGitCommit. Discard these results and rerun."
+    }
+    if ($EndTrackedStatus.Trim()) {
+        throw "Tracked files changed during $Mode evaluation. Commit or restore them, then rerun so the evidence matches one code version."
+    }
+    Write-Host "Reproducibility lock verified: $EndGitCommit"
 }
 
 Stop-Transcript | Out-Null

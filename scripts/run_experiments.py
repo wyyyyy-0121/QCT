@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import csv
 import json
 import math
+import os
 import random
 import statistics
 import sys
@@ -68,6 +70,88 @@ def failed_sinks(clean, mutant):
     }
 
 
+def resolve_worker_count(requested, task_count, logical_cpus=None):
+    if requested < 0:
+        raise ValueError("workers must be 0 (auto) or a positive integer")
+    if task_count < 1:
+        return 1
+    if requested > 0:
+        return min(requested, task_count)
+    logical = logical_cpus or os.cpu_count() or 2
+    return min(task_count, max(1, math.floor(logical * 0.75)))
+
+
+def evaluate_instance(task):
+    benchmark_text, instance, methods, candidate_limit, gir_weights = task
+    benchmark = Path(benchmark_text)
+    clean = WorkbookModel.from_xlsx(benchmark / instance["clean_workbook"])
+    mutant = WorkbookModel.from_xlsx(benchmark / instance["mutant_workbook"])
+    source = parse_cell_label(instance["source_cell"])
+    oracle_failed = None
+    rows = []
+    for method in methods:
+        if method == "sfl_oracle" and oracle_failed is None:
+            oracle_failed = failed_sinks(clean, mutant)
+        started = time.perf_counter()
+        results = localize(
+            mutant,
+            method,
+            failed_sinks=oracle_failed if method == "sfl_oracle" else None,
+            candidate_limit=candidate_limit,
+            gir_weights=gir_weights,
+        )
+        elapsed = time.perf_counter() - started
+        rank = next((rank for rank, result in enumerate(results, 1) if result.cell == source), len(results) + 1)
+        source_result = next((result for result in results if result.cell == source), None)
+        top_score = results[0].score if results else 0.0
+        second_score = results[1].score if len(results) > 1 else 0.0
+        repair = source_result.candidate_formula if source_result else None
+        correct = instance["correct_formula"]
+        repair_exact = bool(repair) and normalized_formula(repair) == normalized_formula(correct)
+        candidate_rank = None
+        if method == "formulaguard":
+            source_candidates = generate_candidates(mutant, source, limit=max(10, candidate_limit))
+            candidate_rank = next(
+                (
+                    candidate_index
+                    for candidate_index, candidate in enumerate(source_candidates, 1)
+                    if normalized_formula(candidate.formula) == normalized_formula(correct)
+                ),
+                None,
+            )
+        rows.append({
+            "instance_id": instance["instance_id"],
+            "template_family": instance["template_family"],
+            "data_split": instance.get("data_split", "unspecified"),
+            "mutation_type": instance["mutation_type"],
+            "expected_depth": instance["expected_depth"],
+            "actual_depth": instance["actual_depth"],
+            "depth_bin": instance["depth_bin"],
+            "formula_count": len(mutant.formulas),
+            "method": method,
+            "rank": rank,
+            "top1": int(rank <= 1),
+            "top3": int(rank <= 3),
+            "top5": int(rank <= 5),
+            "mrr": 1.0 / rank,
+            "exam": rank / max(1, len(mutant.formulas)),
+            "repair_exact": int(repair_exact),
+            "candidate_formula": repair or "",
+            "candidate_rank": candidate_rank if method == "formulaguard" and candidate_rank is not None else "",
+            "candidate_coverage_at_10": int(candidate_rank <= 10) if method == "formulaguard" and candidate_rank is not None else (0 if method == "formulaguard" else ""),
+            "candidate_coverage_at_15": int(candidate_rank <= 15) if method == "formulaguard" and candidate_rank is not None else (0 if method == "formulaguard" else ""),
+            "source_score": source_result.score if source_result else 0.0,
+            "top_score": top_score,
+            "top_score_margin": top_score - second_score,
+            "runtime_seconds": elapsed,
+            "candidate_quality": source_result.evidence.get("candidate_quality", "") if source_result and method == "formulaguard" else "",
+            "candidate_support": source_result.evidence.get("candidate_support", "") if source_result and method == "formulaguard" else "",
+            "candidate_edit_kind": source_result.evidence.get("candidate_edit_kind", "") if source_result and method == "formulaguard" else "",
+            "candidate_source": source_result.evidence.get("candidate_source", "") if source_result and method == "formulaguard" else "",
+        })
+    return instance["instance_id"], rows
+
+
 def run(args):
     benchmark = args.benchmark
     validation_file = args.validation or benchmark / "validation" / "validated_instances.jsonl"
@@ -85,79 +169,35 @@ def run(args):
         if len(gir_weights) != 4:
             raise SystemExit("Frozen configuration gir_weights must contain four values.")
     raw_rows = []
-    cache: dict[Path, WorkbookModel] = {}
-
-    for index, instance in enumerate(instances, 1):
-        clean_path = benchmark / instance["clean_workbook"]
-        mutant_path = benchmark / instance["mutant_workbook"]
-        clean = cache.get(clean_path)
-        if clean is None:
-            clean = WorkbookModel.from_xlsx(clean_path)
-            cache[clean_path] = clean
-        mutant = WorkbookModel.from_xlsx(mutant_path)
-        source = parse_cell_label(instance["source_cell"])
-        oracle_failed = None
-        for method in methods:
-            if method == "sfl_oracle" and oracle_failed is None:
-                oracle_failed = failed_sinks(clean, mutant)
-            started = time.perf_counter()
-            results = localize(
-                mutant,
-                method,
-                failed_sinks=oracle_failed if method == "sfl_oracle" else None,
-                candidate_limit=args.candidate_limit,
-                gir_weights=gir_weights,
-            )
-            elapsed = time.perf_counter() - started
-            rank = next((rank for rank, result in enumerate(results, 1) if result.cell == source), len(results) + 1)
-            source_result = next((result for result in results if result.cell == source), None)
-            top_score = results[0].score if results else 0.0
-            second_score = results[1].score if len(results) > 1 else 0.0
-            repair = source_result.candidate_formula if source_result else None
-            correct = instance["correct_formula"]
-            repair_exact = bool(repair) and normalized_formula(repair) == normalized_formula(correct)
-            candidate_rank = None
-            if method == "formulaguard":
-                source_candidates = generate_candidates(mutant, source, limit=max(10, args.candidate_limit))
-                candidate_rank = next(
-                    (
-                        candidate_index
-                        for candidate_index, candidate in enumerate(source_candidates, 1)
-                        if normalized_formula(candidate.formula) == normalized_formula(correct)
-                    ),
-                    None,
-                )
-            raw_rows.append({
-                "instance_id": instance["instance_id"],
-                "template_family": instance["template_family"],
-                "data_split": instance.get("data_split", "unspecified"),
-                "mutation_type": instance["mutation_type"],
-                "expected_depth": instance["expected_depth"],
-                "actual_depth": instance["actual_depth"],
-                "depth_bin": instance["depth_bin"],
-                "formula_count": len(mutant.formulas),
-                "method": method,
-                "rank": rank,
-                "top1": int(rank <= 1),
-                "top3": int(rank <= 3),
-                "top5": int(rank <= 5),
-                "mrr": 1.0 / rank,
-                "exam": rank / max(1, len(mutant.formulas)),
-                "repair_exact": int(repair_exact),
-                "candidate_formula": repair or "",
-                "candidate_rank": candidate_rank if method == "formulaguard" and candidate_rank is not None else "",
-                "candidate_coverage_at_10": int(candidate_rank <= 10) if method == "formulaguard" and candidate_rank is not None else (0 if method == "formulaguard" else ""),
-                "candidate_coverage_at_15": int(candidate_rank <= 15) if method == "formulaguard" and candidate_rank is not None else (0 if method == "formulaguard" else ""),
-                "source_score": source_result.score if source_result else 0.0,
-                "top_score": top_score,
-                "top_score_margin": top_score - second_score,
-                "runtime_seconds": elapsed,
-                "candidate_quality": source_result.evidence.get("candidate_quality", "") if source_result and method == "formulaguard" else "",
-                "candidate_support": source_result.evidence.get("candidate_support", "") if source_result and method == "formulaguard" else "",
-                "candidate_edit_kind": source_result.evidence.get("candidate_edit_kind", "") if source_result and method == "formulaguard" else "",
-                "candidate_source": source_result.evidence.get("candidate_source", "") if source_result and method == "formulaguard" else "",
-            })
-        print(f"[{index}/{len(instances)}] {instance['instance_id']}", flush=True)
+    worker_count = resolve_worker_count(args.workers, len(instances))
+    tasks = [
+        (str(benchmark), instance, tuple(methods), args.candidate_limit, tuple(gir_weights))
+        for instance in instances
+    ]
+    started_all = time.perf_counter()
+    print(f"Experiment scheduling: {worker_count} worker process(es) for {len(tasks)} workbooks.", flush=True)
+    if worker_count == 1:
+        evaluated = map(evaluate_instance, tasks)
+        for index, (instance_id, rows) in enumerate(evaluated, 1):
+            raw_rows.extend(rows)
+            print(f"[{index}/{len(instances)}] {instance_id}", flush=True)
+    else:
+        try:
+            executor = concurrent.futures.ProcessPoolExecutor(max_workers=worker_count)
+        except PermissionError as exc:
+            print(f"Parallel workers unavailable ({exc}); falling back to one process.", flush=True)
+            worker_count = 1
+            evaluated = map(evaluate_instance, tasks)
+            for index, (instance_id, rows) in enumerate(evaluated, 1):
+                raw_rows.extend(rows)
+                print(f"[{index}/{len(instances)}] {instance_id}", flush=True)
+        else:
+            with executor:
+                evaluated = executor.map(evaluate_instance, tasks, chunksize=1)
+                for index, (instance_id, rows) in enumerate(evaluated, 1):
+                    raw_rows.extend(rows)
+                    print(f"[{index}/{len(instances)}] {instance_id}", flush=True)
+    wall_seconds = time.perf_counter() - started_all
 
     output = args.output
     write_csv(output / "raw_results.csv", raw_rows)
@@ -235,6 +275,8 @@ def run(args):
         "methods": methods,
         "candidate_limit": args.candidate_limit,
         "gir_weights": gir_weights,
+        "worker_processes": worker_count,
+        "experiment_wall_seconds": wall_seconds,
         "summary": summary_rows,
         "comparison": comparison,
         "warning": "These are measured prototype results, not competition award guarantees.",
@@ -253,7 +295,10 @@ def main():
     parser.add_argument("--bootstrap-samples", type=int, default=1000)
     parser.add_argument("--ablations", action="store_true")
     parser.add_argument("--config", type=Path, help="Frozen quick configuration used by full evaluation")
+    parser.add_argument("--workers", type=int, default=0, help="Worker processes; 0 uses 75% of logical CPUs")
     args = parser.parse_args()
+    if args.workers < 0:
+        parser.error("--workers must be 0 (auto) or a positive integer")
     args.output.mkdir(parents=True, exist_ok=True)
     run(args)
 

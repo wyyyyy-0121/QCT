@@ -27,6 +27,10 @@ run_pipeline.cmd smoke -Ablations
 run_pipeline.cmd quick -Ablations -WithSensitivity
 ```
 
+流水线默认自动使用约 75% 的逻辑处理器并行处理不同工作簿。在 32 线程机器上通常启动 24 个工作进程；可用 `-Workers 16` 手动限制，或用 `-Workers 1` 进行串行复核。该并行化不改变算法分数，只缩短批量实验的总耗时。FormulaGuard 当前不依赖神经网络或大规模矩阵计算，因此不要求 GPU。
+
+`quick` 和 `full` 启动前会检查 Git：已跟踪文件必须全部提交；流水线结束时还会确认提交号没有在运行期间发生变化。这样可以防止实验跑到一半才提交或重置仓库，导致结果与代码版本无法对应。生成的 `results`、`outputs` 和基准工作簿属于忽略文件，不影响此检查。
+
 quick 完成后，由 Codex 审核结果并运行冻结脚本：
 
 ```bat
