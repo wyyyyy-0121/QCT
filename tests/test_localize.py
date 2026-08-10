@@ -179,6 +179,27 @@ class LocalizationTests(unittest.TestCase):
                 self.assertEqual(result.evidence["evidence_strength"], 0.0)
                 self.assertLessEqual(result.score, 0.20)
 
+    def test_v3_intervenes_on_all_formulas_in_typical_medium_workbook(self):
+        cells = {("Model", f"A{row}"): row for row in range(1, 55)}
+        formulas = {("Model", f"B{row}"): f"=A{row}*2" for row in range(1, 55)}
+        model = WorkbookModel.from_cells(cells, formulas)
+        results = localize(model, "formulaguard_v3", candidate_limit=1)
+        indexed = {result.cell: result for result in results}
+        self.assertIsNotNone(indexed[("Model", "B54")].candidate_formula)
+
+    def test_v3_reports_all_reachable_structural_sinks(self):
+        cells = {("Model", "A1"): 2}
+        formulas = {("Model", "B1"): "=A1*2"}
+        for row in range(2, 14):
+            formulas[("Model", f"B{row}")] = "=B1+1"
+        model = WorkbookModel.from_cells(cells, formulas)
+        source = next(
+            result for result in localize(model, "formulaguard_v3", candidate_limit=1)
+            if result.cell == ("Model", "B1")
+        )
+        for row in range(2, 14):
+            self.assertIn(f"Model!B{row}", source.evidence["reported_paths"])
+
 
 if __name__ == "__main__":
     unittest.main()

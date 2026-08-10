@@ -696,7 +696,7 @@ def car_v3_scores(
     model: WorkbookModel,
     *,
     candidate_limit: int = 15,
-    max_intervention_cells: int = 50,
+    max_intervention_cells: int = 100,
     use_adaptive_graph: bool = True,
     use_side_effect_penalty: bool = True,
     use_path_responsibility: bool = True,
@@ -882,7 +882,7 @@ def car_v3_scores(
                 graph.shortest_path_length(key, cell) or 10**9,
                 cell,
             ),
-        )[:10]
+        )
         paths = [graph.shortest_path(key, target) or [] for target in reachable_terminals]
         serialized_paths = [
             " -> ".join(f"{sheet}!{address}" for sheet, address in path)

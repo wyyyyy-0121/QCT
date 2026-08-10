@@ -99,6 +99,11 @@ if ($Mode -eq "full" -and -not (Test-Path -LiteralPath $FrozenConfig)) {
     throw "Full mode requires $FrozenConfig. The matching $BenchmarkVersion quick run must pass the freeze assessment first."
 }
 New-Item -ItemType Directory -Force -Path $Results | Out-Null
+if ($Mode -eq "quick" -and (Test-Path -LiteralPath $FrozenConfig)) {
+    $InvalidatedConfig = Join-Path $Results ($FrozenConfigName -replace "\.json$", ".invalidated.json")
+    Move-Item -LiteralPath $FrozenConfig -Destination $InvalidatedConfig -Force
+    Write-Host "Previous quick freeze invalidated: $InvalidatedConfig"
+}
 Start-Transcript -Path (Join-Path $Results "pipeline.log") -Force | Out-Null
 $script:TranscriptActive = $true
 
