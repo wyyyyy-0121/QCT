@@ -10,6 +10,8 @@ from pathlib import Path
 CORE_HASH_PREFIXES = ("formulaguard/",)
 CORE_HASH_FILES = {
     "scripts/build_benchmarks.mjs",
+    "scripts/build_benchmarks_v2.mjs",
+    "scripts/audit_structural_diversity.py",
     "scripts/run_experiments.py",
     "scripts/run_clean_evaluation.py",
     "scripts/run_sensitivity.py",
@@ -104,6 +106,7 @@ def main():
         "schema_version": 1,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "source_mode": "quick",
+        "benchmark_name": args.validation.parent.name,
         "profile": selected_profile["profile"],
         "gir_weights": json.loads(selected_profile["gir_weights"]),
         "candidate_limit": 15,

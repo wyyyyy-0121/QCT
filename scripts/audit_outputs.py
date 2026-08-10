@@ -28,8 +28,11 @@ def main():
     parser.add_argument("--strict", action="store_true", help="Exit nonzero when evidence is incomplete")
     args = parser.parse_args()
     output = args.output or args.results / "completion_audit.json"
+    manifest_path = args.benchmark / "dataset_manifest.json"
+    manifest_preview = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else {}
+    is_v2 = manifest_preview.get("name") == "PropagationBench-V2-Synthetic"
     required = [
-        args.benchmark / "dataset_manifest.json",
+        manifest_path,
         args.benchmark / "instances.jsonl",
         args.benchmark / "evaluation_labels.jsonl",
         args.benchmark / "validation" / "dataset_quality.json",
@@ -38,6 +41,7 @@ def main():
         args.results / "by_depth.csv",
         args.results / "by_error.csv",
         args.results / "by_family.csv",
+        args.results / "by_topology.csv",
         args.results / "by_split.csv",
         args.results / "paired_comparison.json",
         args.results / "clean_summary.json",
@@ -52,6 +56,9 @@ def main():
         args.results / "pipeline.log",
         args.results / "results_workbook_formula_errors.ndjson",
     ]
+    if is_v2:
+        required.append(args.benchmark / "validation" / "structural_diversity.json")
+        required.append(args.results / "figures" / "by_topology_mrr.svg")
     missing_files = [str(path) for path in required if not path.is_file()]
     checks = {}
     details = {}
@@ -77,6 +84,10 @@ def main():
             for line in (args.results / "results_workbook_formula_errors.ndjson").read_text(encoding="utf-8").splitlines()
             if line.strip()
         ]
+        structural = (
+            json.loads((args.benchmark / "validation" / "structural_diversity.json").read_text(encoding="utf-8"))
+            if is_v2 else None
+        )
         checks = {
             "validation_rate_at_least_95_percent": quality["valid_rate"] >= 0.95,
             "all_six_mutation_types_present": len(mutation_types) >= 6,
@@ -89,6 +100,8 @@ def main():
             "git_commit_recorded": bool(environment.get("git_commit")) and not str(environment["git_commit"]).startswith("unavailable:"),
             "result_workbook_has_no_formula_errors": not any(row.get("kind") == "match" for row in workbook_scan),
         }
+        if structural is not None:
+            checks["structural_diversity_passed"] = bool(structural.get("passed"))
         details = {
             "valid_instances": quality["valid"],
             "valid_rate": quality["valid_rate"],
@@ -100,6 +113,9 @@ def main():
             "minimum_instances_for_mode": minimum_instances,
             "git_commit": environment.get("git_commit", ""),
         }
+        if structural is not None:
+            details["unique_declared_topologies"] = structural.get("unique_declared_topologies", 0)
+            details["unique_calculated_signatures"] = structural.get("unique_calculated_signatures", 0)
     audit = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "evidence_complete": not missing_files and all(checks.values()),

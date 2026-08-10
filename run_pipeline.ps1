@@ -1,6 +1,8 @@
 param(
     [ValidateSet("smoke", "quick", "full")]
     [string]$Mode = "quick",
+    [ValidateSet("v1", "v2")]
+    [string]$BenchmarkVersion = "v1",
     [switch]$Ablations,
     [switch]$WithSensitivity,
     [switch]$WithPerformance,
@@ -84,23 +86,29 @@ if (-not (Test-Path -LiteralPath "node_modules\@oai\artifact-tool")) {
     New-Item -ItemType Junction -Path "node_modules" -Target $BundledModules | Out-Null
 }
 
-$Benchmark = Join-Path $ProjectRoot "data\propagationbench_$Mode"
+$VersionPrefix = if ($BenchmarkVersion -eq "v2") { "v2_" } else { "" }
+$BenchmarkName = if ($BenchmarkVersion -eq "v2") { "propagationbench_v2_$Mode" } else { "propagationbench_$Mode" }
+$BenchmarkBuilder = if ($BenchmarkVersion -eq "v2") { "scripts\build_benchmarks_v2.mjs" } else { "scripts\build_benchmarks.mjs" }
+$Benchmark = Join-Path $ProjectRoot "data\$BenchmarkName"
 $Validation = Join-Path $Benchmark "validation"
-$Results = Join-Path $ProjectRoot "results\$Mode"
-$WorkbookOutput = Join-Path $ProjectRoot "outputs\FormulaGuard_${Mode}_experiment_results.xlsx"
-$FrozenConfig = Join-Path $ProjectRoot "results\quick\frozen_config.json"
+$Results = Join-Path $ProjectRoot "results\${VersionPrefix}$Mode"
+$WorkbookOutput = Join-Path $ProjectRoot "outputs\FormulaGuard_${VersionPrefix}${Mode}_experiment_results.xlsx"
+$FrozenConfig = Join-Path $ProjectRoot "results\${VersionPrefix}quick\frozen_config.json"
 if ($Mode -eq "full" -and -not (Test-Path -LiteralPath $FrozenConfig)) {
-    throw "Full mode requires results\quick\frozen_config.json. Quick must pass the freeze assessment first."
+    throw "Full mode requires $FrozenConfig. The matching $BenchmarkVersion quick run must pass the freeze assessment first."
 }
 New-Item -ItemType Directory -Force -Path $Results | Out-Null
 Start-Transcript -Path (Join-Path $Results "pipeline.log") -Force | Out-Null
 $script:TranscriptActive = $true
 
 Write-Host "[1/11] Generating $Mode benchmark..."
-Invoke-Checked -Executable $Node -Arguments @("scripts\build_benchmarks.mjs", "--mode", $Mode, "--output", $Benchmark)
+Invoke-Checked -Executable $Node -Arguments @($BenchmarkBuilder, "--mode", $Mode, "--output", $Benchmark)
 
 Write-Host "[2/11] Validating silent-error labels and propagation depth..."
 Invoke-Checked -Executable $Python -Arguments @("scripts\validate_benchmark.py", "--benchmark", $Benchmark, "--output", $Validation)
+if ($BenchmarkVersion -eq "v2") {
+    Invoke-Checked -Executable $Python -Arguments @("scripts\audit_structural_diversity.py", "--benchmark", $Benchmark, "--output", (Join-Path $Validation "structural_diversity.json"), "--strict")
+}
 
 Write-Host "[3/11] Recording environment and source hashes..."
 Invoke-Checked -Executable $Python -Arguments @("scripts\record_environment.py", "--root", $ProjectRoot, "--output", (Join-Path $Results "environment.json"), "--node", $Node, "--git", $Git)
@@ -131,11 +139,11 @@ Invoke-Checked -Executable $Python -Arguments $ExperimentArgs
 Write-Host "[5/11] Estimating alarms on clean synthetic workbooks..."
 $CalibrationResults = $Results
 if ($Mode -eq "full") {
-    $QuickCalibration = Join-Path $ProjectRoot "results\quick\raw_results.csv"
+    $QuickCalibration = Join-Path $ProjectRoot "results\${VersionPrefix}quick\raw_results.csv"
     if (-not (Test-Path -LiteralPath $QuickCalibration)) {
-        throw "Full mode requires frozen quick calibration results. Run: run_pipeline.cmd quick -Ablations -WithSensitivity"
+        throw "Full mode requires frozen quick calibration results for $BenchmarkVersion."
     }
-    $CalibrationResults = Join-Path $ProjectRoot "results\quick"
+    $CalibrationResults = Join-Path $ProjectRoot "results\${VersionPrefix}quick"
     Invoke-Checked -Executable $Python -Arguments @("scripts\verify_calibration.py", "--calibration", (Join-Path $CalibrationResults "environment.json"), "--current", (Join-Path $Results "environment.json"))
 }
 $CleanArgs = @("scripts\run_clean_evaluation.py", "--benchmark", $Benchmark, "--mutant-results", $CalibrationResults, "--output", $Results, "--candidate-limit", "$CandidateLimit")

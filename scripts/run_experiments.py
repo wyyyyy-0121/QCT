@@ -122,6 +122,7 @@ def evaluate_instance(task):
         rows.append({
             "instance_id": instance["instance_id"],
             "template_family": instance["template_family"],
+            "topology_id": instance.get("topology_id", "unspecified"),
             "data_split": instance.get("data_split", "unspecified"),
             "mutation_type": instance["mutation_type"],
             "expected_depth": instance["expected_depth"],
@@ -252,6 +253,7 @@ def run(args):
     write_csv(output / "by_depth.csv", grouped("depth_bin"))
     write_csv(output / "by_error.csv", grouped("mutation_type"))
     write_csv(output / "by_family.csv", grouped("template_family"))
+    write_csv(output / "by_topology.csv", grouped("topology_id"))
     write_csv(output / "by_split.csv", grouped("data_split"))
 
     no_oracle_baselines = [m for m in CORE_METHODS if m not in ("formulaguard", "sfl_oracle")]

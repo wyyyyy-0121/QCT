@@ -27,6 +27,7 @@ def main():
             output_rows.append({
                 "instance_id": instance_id,
                 "template_family": fg["template_family"],
+                "topology_id": fg.get("topology_id", "unspecified"),
                 "data_split": fg.get("data_split", ""),
                 "mutation_type": fg["mutation_type"],
                 "depth_bin": fg["depth_bin"],
@@ -41,7 +42,7 @@ def main():
     output = args.output or args.results / "failure_cases.csv"
     output.parent.mkdir(parents=True, exist_ok=True)
     fields = [
-        "instance_id", "template_family", "data_split", "mutation_type", "depth_bin", "formula_count",
+        "instance_id", "template_family", "topology_id", "data_split", "mutation_type", "depth_bin", "formula_count",
         "formulaguard_rank", "baseline", "baseline_rank", "rank_gap", "candidate_formula",
     ]
     with output.open("w", encoding="utf-8-sig", newline="") as handle:

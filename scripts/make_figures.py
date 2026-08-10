@@ -81,6 +81,7 @@ def main():
     for filename, source_name, key_name, title in [
         ("by_depth_mrr.svg", "by_depth.csv", "depth_bin", "传播深度分层：MRR"),
         ("by_error_mrr.svg", "by_error.csv", "mutation_type", "错误类型分层：MRR"),
+        ("by_topology_mrr.svg", "by_topology.csv", "topology_id", "Dependency topology: MRR"),
     ]:
         rows = load_csv(args.results / source_name)
         categories = sorted({row[key_name] for row in rows})
@@ -92,4 +93,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

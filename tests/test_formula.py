@@ -3,6 +3,7 @@ import unittest
 from formulaguard.formula import (
     FormulaSyntaxError,
     formula_fingerprint,
+    normalized_formula,
     parse_formula,
     small_edit_candidates,
     small_edit_candidates_with_kinds,
@@ -36,6 +37,18 @@ class FormulaTests(unittest.TestCase):
         self.assertIn("=SUM(B2:B6)", candidates)
         self.assertIn("range_boundary", candidates["=SUM(B$2:B7)"])
         self.assertIn("absolute_reference", candidates["=SUM(B2:B6)"])
+
+    def test_normalized_formula_treats_optional_simple_sheet_quotes_as_equal(self):
+        self.assertEqual(
+            normalized_formula("=Detail!B7+'Other Sheet'!C2"),
+            normalized_formula("='Detail'!B7+'Other Sheet'!C2"),
+        )
+
+    def test_small_edit_candidates_can_restore_absolute_copy_offset(self):
+        candidates = dict(small_edit_candidates_with_kinds("=A1*(1+Params!B6)"))
+        self.assertIn("=A1*(1+'Params'!$B$5)", candidates)
+        self.assertIn("absolute_reference", candidates["=A1*(1+'Params'!$B$5)"])
+        self.assertIn("reference_shift", candidates["=A1*(1+'Params'!$B$5)"])
 
     def test_parser_rejects_unsupported_text_literal(self):
         with self.assertRaises(FormulaSyntaxError):

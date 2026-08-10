@@ -288,7 +288,11 @@ def translate_formula(formula: str, source_anchor: str, target_anchor: str) -> s
 
 
 def normalized_formula(formula: str) -> str:
-    return re.sub(r"\s+", "", formula).upper()
+    compact = re.sub(r"\s+", "", formula).upper()
+    # Excel treats quotes around a simple sheet identifier as optional.
+    # Canonicalizing this spelling prevents semantically identical repairs such
+    # as Detail!B7 and 'Detail'!B7 from being scored as different formulas.
+    return re.sub(r"'([A-Z_][A-Z0-9_.]*)'!", r"\1!", compact)
 
 
 def edit_cost(left: str, right: str) -> float:
@@ -320,7 +324,8 @@ def small_edit_candidates_with_kinds(formula: str) -> list[tuple[str, tuple[str,
 
     # Shift one non-absolute reference by one row or column. This covers
     # boundary mistakes, copy offsets, and many absolute-reference failures.
-    for match in list(REF_RE.finditer(body)):
+    reference_matches = list(REF_RE.finditer(body))
+    for match_index, match in enumerate(reference_matches):
         ref = _parse_ref(match.group())
         a = ref.address
         variants: list[Address] = []
@@ -337,7 +342,18 @@ def small_edit_candidates_with_kinds(formula: str) -> list[tuple[str, tuple[str,
             before = body[:match.start()].rstrip()
             after = body[match.end():].lstrip()
             kind = "range_boundary" if before.endswith(":") or after.startswith(":") else "reference_shift"
-            add(prefix + body[:match.start()] + replacement + body[match.end():], kind)
+            candidate = prefix + body[:match.start()] + replacement + body[match.end():]
+            add(candidate, kind)
+            if kind == "range_boundary" and moved.row != a.row:
+                add(candidate, "range_boundary_row")
+                if before.endswith(":"):
+                    add(candidate, "range_boundary_end_row")
+            if kind == "range_boundary" and moved.col != a.col and before.endswith(":"):
+                add(candidate, "range_boundary_end_col")
+            if kind == "reference_shift" and match_index == len(reference_matches) - 1:
+                add(candidate, "copy_offset")
+                if moved.row != a.row:
+                    add(candidate, "copy_offset_row")
 
         # Toggle row/column anchoring independently. Toggling is intentionally
         # bounded to one axis so candidates remain explainable one-edit repairs.
@@ -348,6 +364,28 @@ def small_edit_candidates_with_kinds(formula: str) -> list[tuple[str, tuple[str,
         for changed in absolute_variants:
             replacement = _format_ref(Ref(changed, ref.sheet))
             add(prefix + body[:match.start()] + replacement + body[match.end():], "absolute_reference")
+
+        # A missing absolute reference is often revealed only after a copied
+        # formula has shifted to a neighboring row or column.  Include bounded
+        # repairs that both restore full anchoring and undo one copy offset.
+        if not (a.row_abs and a.col_abs):
+            fully_absolute_neighbors = []
+            for row_delta, col_delta in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                if a.row + row_delta >= 1 and a.col + col_delta >= 1:
+                    fully_absolute_neighbors.append(Address(
+                        a.row + row_delta,
+                        a.col + col_delta,
+                        row_abs=True,
+                        col_abs=True,
+                    ))
+            for changed in fully_absolute_neighbors:
+                replacement = _format_ref(Ref(changed, ref.sheet))
+                candidate = prefix + body[:match.start()] + replacement + body[match.end():]
+                add(candidate, "absolute_reference")
+                add(candidate, "reference_shift")
+                compact_before = re.sub(r"\s+", "", body[:match.start()])
+                if compact_before.endswith(("(1+", "(1-", "(100+", "(100-")):
+                    add(candidate, "parameter_anchor")
 
     return [
         (candidate, tuple(sorted(kinds)))

@@ -72,6 +72,23 @@ function columnName(oneBasedIndex) {
   return result;
 }
 
+function csvCell(value) {
+  const text = String(value ?? "");
+  return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
+function literalizeCsvColumn(csvText, headerName) {
+  const rows = parseCsv(csvText);
+  if (!rows.length) return csvText;
+  const columnIndex = rows[0].indexOf(headerName);
+  if (columnIndex < 0) return csvText;
+  for (const row of rows.slice(1)) {
+    const value = row[columnIndex] ?? "";
+    if (value.startsWith("=")) row[columnIndex] = `'${value}`;
+  }
+  return rows.map(row => row.map(csvCell).join(",")).join("\n") + "\n";
+}
+
 function restoreLiteralColumn(workbook, sheetName, csvText, headerName) {
   const rows = parseCsv(csvText);
   if (rows.length < 2) return;
@@ -113,10 +130,16 @@ async function main() {
   const depthText = await fs.readFile(path.join(args.results, "by_depth.csv"), "utf8");
   const errorText = await fs.readFile(path.join(args.results, "by_error.csv"), "utf8");
   const familyText = await fs.readFile(path.join(args.results, "by_family.csv"), "utf8");
+  const topologyText = await fs.readFile(path.join(args.results, "by_topology.csv"), "utf8").catch(error => {
+    if (error?.code === "ENOENT") return "topology_id,method,instances,top1,top5,mrr\n";
+    throw error;
+  });
   const splitText = await fs.readFile(path.join(args.results, "by_split.csv"), "utf8");
   const rawText = await fs.readFile(path.join(args.results, "raw_results.csv"), "utf8");
   const cleanText = await fs.readFile(path.join(args.results, "clean_results.csv"), "utf8");
   const failureText = await fs.readFile(path.join(args.results, "failure_cases.csv"), "utf8");
+  const rawImportText = literalizeCsvColumn(rawText, "candidate_formula");
+  const failureImportText = literalizeCsvColumn(failureText, "candidate_formula");
   const comparison = JSON.parse(await fs.readFile(path.join(args.results, "paired_comparison.json"), "utf8"));
   const quality = JSON.parse(await fs.readFile(path.join(args.validation, "dataset_quality.json"), "utf8"));
   const cleanSummary = JSON.parse(await fs.readFile(path.join(args.results, "clean_summary.json"), "utf8"));
@@ -125,10 +148,11 @@ async function main() {
   await workbook.fromCSV(depthText, { sheetName: "ByDepth" });
   await workbook.fromCSV(errorText, { sheetName: "ByError" });
   await workbook.fromCSV(familyText, { sheetName: "ByFamily" });
+  await workbook.fromCSV(topologyText, { sheetName: "ByTopology" });
   await workbook.fromCSV(splitText, { sheetName: "BySplit" });
-  await workbook.fromCSV(rawText, { sheetName: "RawResults" });
+  await workbook.fromCSV(rawImportText, { sheetName: "RawResults" });
   await workbook.fromCSV(cleanText, { sheetName: "CleanBooks" });
-  await workbook.fromCSV(failureText, { sheetName: "Failures" });
+  await workbook.fromCSV(failureImportText, { sheetName: "Failures" });
   // Workbook.fromCSV interprets leading '=' as executable formulas. Candidate
   // repairs are evidence text and must remain literal, auditable strings.
   restoreLiteralColumn(workbook, "RawResults", rawText, "candidate_formula");
@@ -177,15 +201,32 @@ async function main() {
   styleTabularSheet(workbook.worksheets.getItem("ByDepth"), "F", rowCount(depthText), { A: 14, B: 24, C: 12, D: 12, E: 12, F: 12 });
   styleTabularSheet(workbook.worksheets.getItem("ByError"), "F", rowCount(errorText), { A: 28, B: 24, C: 12, D: 12, E: 12, F: 12 });
   styleTabularSheet(workbook.worksheets.getItem("ByFamily"), "F", rowCount(familyText), { A: 18, B: 24, C: 12, D: 12, E: 12, F: 12 });
+  styleTabularSheet(workbook.worksheets.getItem("ByTopology"), "F", rowCount(topologyText), { A: 24, B: 24, C: 12, D: 12, E: 12, F: 12 });
   styleTabularSheet(workbook.worksheets.getItem("BySplit"), "F", rowCount(splitText), { A: 18, B: 24, C: 12, D: 12, E: 12, F: 12 });
-  styleTabularSheet(workbook.worksheets.getItem("RawResults"), "AB", rowCount(rawText), { A: 30, B: 16, C: 16, D: 28, E: 14, F: 12, G: 12, H: 12, I: 24, J: 10, K: 10, L: 10, M: 10, N: 12, O: 12, P: 14, Q: 45, R: 14, S: 20, T: 18, U: 14, V: 14, W: 16, X: 16, Y: 16, Z: 18, AA: 24, AB: 24 });
+  styleTabularSheet(workbook.worksheets.getItem("RawResults"), "AC", rowCount(rawText), { A: 30, B: 18, C: 24, D: 16, E: 28, F: 14, G: 12, H: 12, I: 14, J: 24, K: 10, L: 10, M: 10, N: 10, O: 12, P: 12, Q: 14, R: 45, S: 14, T: 18, U: 18, V: 14, W: 14, X: 16, Y: 16, Z: 16, AA: 16, AB: 24, AC: 24 });
   styleTabularSheet(workbook.worksheets.getItem("CleanBooks"), "G", rowCount(cleanText), { A: 24, B: 18, C: 14, D: 16, E: 24, F: 16, G: 12 });
-  styleTabularSheet(workbook.worksheets.getItem("Failures"), "K", rowCount(failureText), { A: 30, B: 18, C: 16, D: 28, E: 14, F: 14, G: 18, H: 24, I: 16, J: 12, K: 45 });
+  styleTabularSheet(workbook.worksheets.getItem("Failures"), "L", rowCount(failureText), { A: 30, B: 18, C: 24, D: 16, E: 28, F: 14, G: 14, H: 18, I: 24, J: 16, K: 12, L: 45 });
 
   const previewDir = path.join(args.results, "workbook_previews");
   await fs.mkdir(previewDir, { recursive: true });
-  for (const sheetName of ["README", "Summary", "ByDepth", "ByError", "ByFamily", "BySplit", "CleanBooks", "Failures", "RawResults"]) {
-    const preview = await workbook.render({ sheetName, autoCrop: "all", scale: 1.2, format: "png" });
+  // Full evaluation has more than twelve thousand RawResults rows. Rendering
+  // an entire raw-data sheet produces a hundreds-of-thousands-pixel image and
+  // is both unnecessary for visual QA and rejected by the renderer. Preview a
+  // bounded, representative range while keeping every row in the XLSX export.
+  const previewRanges = {
+    README: "A1:B13",
+    Summary: `A1:N${Math.min(rowCount(summaryText), 20)}`,
+    ByDepth: `A1:F${Math.min(rowCount(depthText), 50)}`,
+    ByError: `A1:F${Math.min(rowCount(errorText), 100)}`,
+    ByFamily: `A1:F${Math.min(rowCount(familyText), 100)}`,
+    ByTopology: `A1:F${Math.min(rowCount(topologyText), 100)}`,
+    BySplit: `A1:F${Math.min(rowCount(splitText), 20)}`,
+    CleanBooks: `A1:G${Math.min(rowCount(cleanText), 60)}`,
+    Failures: `A1:L${Math.min(rowCount(failureText), 80)}`,
+    RawResults: `A1:AC${Math.min(rowCount(rawText), 40)}`,
+  };
+  for (const sheetName of ["README", "Summary", "ByDepth", "ByError", "ByFamily", "ByTopology", "BySplit", "CleanBooks", "Failures", "RawResults"]) {
+    const preview = await workbook.render({ sheetName, range: previewRanges[sheetName], scale: 1.0, format: "png" });
     await fs.writeFile(path.join(previewDir, `${sheetName}.png`), new Uint8Array(await preview.arrayBuffer()));
   }
   const inspect = await workbook.inspect({ kind: "workbook,sheet,table", maxChars: 8000, tableMaxRows: 15, tableMaxCols: 18 });

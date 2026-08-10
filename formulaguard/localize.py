@@ -15,6 +15,7 @@ from .formula import (
     Range,
     Ref,
     Func,
+    Binary,
     edit_cost,
     iter_refs,
     normalized_formula,
@@ -96,9 +97,43 @@ def _peers(model: WorkbookModel, key: CellKey, radius: int = 5) -> list[CellKey]
             same_row.append((abs(ocol - col), other))
     same_col.sort()
     same_row.sort()
-    selected = [item for _, item in same_col]
-    if len(selected) < 2:
-        selected += [item for _, item in same_row]
+    column_peers = [item for _, item in same_col]
+    row_peers = [item for _, item in same_row]
+
+    def orientation_score(peers: list[CellKey]) -> tuple[int, float, int]:
+        translated: list[str] = []
+        for peer in peers:
+            try:
+                translated.append(translate_formula(model.formulas[peer], peer[1], key[1]))
+            except Exception:
+                continue
+        if not translated:
+            return 0, float("-inf"), 0
+        counts = Counter(normalized_formula(item) for item in translated)
+        consensus = max(counts.values())
+        closest = min(
+            edit_cost(model.formulas[key], item)
+            for item in translated
+            if counts[normalized_formula(item)] == consensus
+        )
+        return consensus, -closest, len(translated)
+
+    column_score = orientation_score(column_peers)
+    row_score = orientation_score(row_peers)
+    if column_score[0] >= 2 and row_score[0] >= 2:
+        # When both directions form a copy family, prefer the family requiring
+        # the smaller edit from the current formula; use vote count only as a
+        # tie-breaker.  This avoids swallowing a short horizontal block into a
+        # longer but semantically unrelated vertical region.
+        column_choice = (column_score[1], column_score[0], column_score[2])
+        row_choice = (row_score[1], row_score[0], row_score[2])
+        selected = column_peers if column_choice >= row_choice else row_peers
+    elif column_score[0] >= 2:
+        selected = column_peers
+    elif row_score[0] >= 2:
+        selected = row_peers
+    else:
+        selected = column_peers + row_peers
     result = list(dict.fromkeys(selected))
     cache[cache_key] = result
     return result
@@ -178,7 +213,45 @@ def _median_abs_deviation(values: Sequence[float]) -> tuple[float, float]:
     return median, mad
 
 
-def behavior_anomaly_scores(model: WorkbookModel, overrides: Mapping[CellKey, str] | None = None):
+def constraint_residual_scores(
+    model: WorkbookModel,
+    overrides: Mapping[CellKey, str] | None = None,
+    evaluation: tuple[Mapping[CellKey, object], Mapping[CellKey, str]] | None = None,
+):
+    """Score internal balance checks, reusing an existing workbook evaluation when supplied."""
+    values, errors = evaluation if evaluation is not None else model.evaluate(overrides)
+    scores: dict[CellKey, float] = {}
+    for key in model.formula_cells:
+        formula = (overrides or {}).get(key, model.formulas[key])
+        try:
+            node = parse_formula(formula)
+        except Exception:
+            continue
+        if not isinstance(node, Binary) or node.op != "-":
+            continue
+        if not isinstance(node.left, Ref) or not isinstance(node.right, Ref):
+            continue
+        left_key = (node.left.sheet or key[0], node.left.address.a1.replace("$", ""))
+        right_key = (node.right.sheet or key[0], node.right.address.a1.replace("$", ""))
+        if key in errors or left_key in errors or right_key in errors:
+            scores[key] = 1.0
+            continue
+        try:
+            left_value = float(values[left_key])
+            right_value = float(values[right_key])
+        except (KeyError, TypeError, ValueError):
+            scores[key] = 1.0
+            continue
+        relative_residual = abs(left_value - right_value) / max(1.0, abs(left_value), abs(right_value))
+        scores[key] = min(1.0, 10.0 * relative_residual)
+    return scores
+
+
+def _behavior_anomaly_bundle(
+    model: WorkbookModel,
+    overrides: Mapping[CellKey, str] | None = None,
+) -> tuple[dict[CellKey, float], dict[CellKey, float], dict[CellKey, float]]:
+    """Return public, general, and constraint scores from one workbook evaluation."""
     fps = model.fingerprints(overrides)
     values, errors = model.evaluate(overrides)
     groups: dict[tuple[str, int, str], list[CellKey]] = defaultdict(list)
@@ -241,6 +314,19 @@ def behavior_anomaly_scores(model: WorkbookModel, overrides: Mapping[CellKey, st
         for key, range_key in group:
             if range_key != dominant_range:
                 scores[key] = 1.0
+
+    # Balance/check cells provide an internal invariant without an external
+    # answer key.  Keep them visible to the behavior-only baseline as well.
+    general_scores = scores
+    constraint_scores = constraint_residual_scores(model, overrides, (values, errors))
+    combined_scores = dict(general_scores)
+    for key, score in constraint_scores.items():
+        combined_scores[key] = max(combined_scores[key], score)
+    return combined_scores, general_scores, constraint_scores
+
+
+def behavior_anomaly_scores(model: WorkbookModel, overrides: Mapping[CellKey, str] | None = None):
+    scores, _, _ = _behavior_anomaly_bundle(model, overrides)
     return scores
 
 
@@ -288,12 +374,16 @@ def _energy(model: WorkbookModel, overrides: Mapping[CellKey, str] | None = None
             weights=(0.45, 0.25, 0.30)):
     fa = formula_anomaly_scores(model, overrides)
     ga = graph_anomaly_scores(model, overrides)
-    ba = behavior_anomaly_scores(model, overrides)
+    _, ba_general, ca = _behavior_anomaly_bundle(model, overrides)
     n = max(1, len(model.formula_cells))
+    behavior_general = sum(ba_general.values()) / n
+    constraint_energy = sum(ca.values()) / max(1, len(ca))
     components = {
         "formula": sum(fa.values()) / n,
         "graph": sum(ga.values()) / n,
-        "behavior": sum(ba.values()) / n,
+        "behavior": 0.25 * behavior_general + 0.75 * constraint_energy,
+        "behavior_general": behavior_general,
+        "constraint": constraint_energy,
     }
     total = weights[0] * components["formula"] + weights[1] * components["graph"] + weights[2] * components["behavior"]
     return total, components
@@ -356,6 +446,12 @@ def generate_candidates(model: WorkbookModel, key: CellKey, limit: int = 10) -> 
         kind_prior = max(
             ({
                 "copy_pattern": 1.00 if support[candidate] >= 2 else 0.60,
+                "copy_offset": 1.00,
+                "copy_offset_row": 1.00,
+                "parameter_anchor": 1.00,
+                "range_boundary_row": 0.98,
+                "range_boundary_end_row": 1.00,
+                "range_boundary_end_col": 1.00,
                 "operator": 0.95,
                 "aggregate_function": 0.95,
                 "range_boundary": 0.90,
@@ -379,7 +475,38 @@ def generate_candidates(model: WorkbookModel, key: CellKey, limit: int = 10) -> 
             quality=candidate_quality,
         ))
     ranked.sort(key=lambda item: (-item.quality, -item.support, item.edit_cost, item.formula))
-    return ranked[:limit]
+    if limit < 12 or len(ranked) <= limit:
+        return ranked[:limit]
+
+    # Preserve edit-family diversity in the bounded Top-15.  Without a small
+    # portfolio, numerous operator/reference variants can crowd out an entire
+    # plausible error class before counterfactual evaluation begins.
+    quotas = (
+        ("copy_offset_row", 2),
+        ("range_boundary_end_row", 2),
+        ("range_boundary_end_col", 2),
+        ("operator", 3),
+        ("aggregate_function", 3),
+        ("parameter_anchor", 2),
+    )
+    selected: list[RepairCandidate] = []
+    selected_formulas: set[str] = set()
+    for kind, quota in quotas:
+        for item in ranked:
+            if len(selected) >= limit or quota <= 0:
+                break
+            if item.formula in selected_formulas or kind not in item.edit_kinds:
+                continue
+            selected.append(item)
+            selected_formulas.add(item.formula)
+            quota -= 1
+    for item in ranked:
+        if len(selected) >= limit:
+            break
+        if item.formula not in selected_formulas:
+            selected.append(item)
+            selected_formulas.add(item.formula)
+    return selected
 
 
 def warder_like_scores(model: WorkbookModel):
@@ -433,6 +560,20 @@ def gir_scores(model: WorkbookModel, *, candidate_limit=15, weights=(0.45, 0.25,
         )[:max_intervention_cells])
     descendant_counts = {key: len(graph.descendants(key)) for key in intervention_cells}
     max_desc = max(descendant_counts.values(), default=1)
+    formula_set = set(model.formula_cells)
+
+    def block_boundary_factor(key: CellKey) -> float:
+        sheet, row, col = _coordinate(key)
+        column = num_to_col(col)
+        above = (sheet, f"{column}{row - 1}") if row > 1 else None
+        below = (sheet, f"{column}{row + 1}")
+        below_two = (sheet, f"{column}{row + 2}")
+        # The first seed of a recurrence block commonly has a different
+        # formula shape and graph degree from the repeated rows below it.
+        if above not in formula_set and below in formula_set and below_two in formula_set:
+            return 0.25
+        return 1.0
+
     results: list[LocalizationResult] = []
 
     for key in model.formula_cells:
@@ -440,7 +581,10 @@ def gir_scores(model: WorkbookModel, *, candidate_limit=15, weights=(0.45, 0.25,
         influence = 0.0
         if use_influence and key in intervention_cells:
             influence = math.log1p(descendants) / max(1e-9, math.log1p(max_desc))
-        best_score = gir_weights[0] * prior_scores[key]
+        influence_factor = 1.0 if not use_influence else 0.25 + 0.75 * influence
+        boundary_factor = block_boundary_factor(key)
+        prior_responsibility = prior_scores[key] * influence_factor * boundary_factor
+        best_score = gir_weights[0] * prior_responsibility
         best_candidate = None
         best_delta = 0.0
         best_delta_normalized = 0.0
@@ -449,17 +593,21 @@ def gir_scores(model: WorkbookModel, *, candidate_limit=15, weights=(0.45, 0.25,
         best_edit_kind = ""
         best_candidate_source = ""
         best_components: dict[str, float] = {}
+        candidate_pool: list[RepairCandidate] = []
         if use_intervention and key in intervention_cells:
-            for repair_candidate in generate_candidates(model, key, candidate_limit):
+            candidate_pool = generate_candidates(model, key, candidate_limit)
+            for repair_candidate in candidate_pool:
                 candidate, support = repair_candidate
                 candidate_energy, candidate_components = _energy(model, {key: candidate}, weights=weights)
                 delta = base_energy - candidate_energy
                 delta_normalized = max(0.0, delta) / max(1e-9, base_energy)
+                delta_responsibility = delta_normalized * influence_factor
+                quality_responsibility = repair_candidate.quality * influence_factor if delta_normalized > 0 else 0.0
                 score = (
-                    gir_weights[0] * prior_scores[key]
-                    + gir_weights[1] * delta_normalized
+                    gir_weights[0] * prior_responsibility
+                    + gir_weights[1] * delta_responsibility
                     + gir_weights[2] * delta_normalized * influence
-                    + gir_weights[3] * repair_candidate.quality
+                    + gir_weights[3] * quality_responsibility
                 )
                 if score > best_score:
                     best_score = score
@@ -471,6 +619,13 @@ def gir_scores(model: WorkbookModel, *, candidate_limit=15, weights=(0.45, 0.25,
                     best_edit_kind = ",".join(repair_candidate.edit_kinds)
                     best_candidate_source = ",".join(repair_candidate.sources)
                     best_components = candidate_components
+        if use_intervention and candidate_pool and best_candidate is None:
+            fallback = max(candidate_pool, key=lambda item: (item.support, item.quality, -item.edit_cost, item.formula))
+            best_candidate = fallback.formula
+            best_quality = fallback.quality
+            best_support = fallback.support
+            best_edit_kind = ",".join(fallback.edit_kinds)
+            best_candidate_source = ",".join(fallback.sources)
         elif not use_intervention:
             candidates = generate_candidates(model, key, candidate_limit)
             if candidates:
@@ -489,12 +644,20 @@ def gir_scores(model: WorkbookModel, *, candidate_limit=15, weights=(0.45, 0.25,
                 "graph_anomaly": graph_scores[key],
                 "behavior_anomaly": behavior_scores[key],
                 "prior_score": prior_scores[key],
+                "prior_responsibility": prior_responsibility,
+                "rootness_factor": influence_factor,
+                "block_boundary_factor": boundary_factor,
                 "descendants": descendants,
                 "influence": influence,
                 "base_energy": base_energy,
                 "delta_energy": best_delta,
                 "delta_energy_normalized": best_delta_normalized,
+                "delta_responsibility": best_delta_normalized * (1.0 if not use_influence else 0.25 + 0.75 * influence),
                 "candidate_quality": best_quality,
+                "candidate_quality_responsibility": (
+                    best_quality * (1.0 if not use_influence else 0.25 + 0.75 * influence)
+                    if best_delta_normalized > 0 else 0.0
+                ),
                 "candidate_support": best_support,
                 "candidate_edit_kind": best_edit_kind,
                 "candidate_source": best_candidate_source,

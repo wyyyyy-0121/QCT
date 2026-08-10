@@ -1,6 +1,7 @@
 import unittest
+from unittest.mock import patch
 
-from formulaguard.localize import generate_candidates, localize
+from formulaguard.localize import _energy, constraint_residual_scores, behavior_anomaly_scores, generate_candidates, localize
 from formulaguard.workbook import WorkbookModel
 
 
@@ -27,6 +28,62 @@ class LocalizationTests(unittest.TestCase):
         self.assertIn("peer_translation", indexed["=B7*C7"].sources)
         self.assertGreater(indexed["=B7*C7"].quality, 0.0)
 
+    def test_horizontal_peer_evidence_is_kept_with_vertical_neighbors(self):
+        cells = {
+            ("Model", "A6"): 2, ("Model", "A7"): 3,
+            ("Model", "B5"): 4, ("Model", "C5"): 5,
+            ("Model", "D5"): 20, ("Model", "E5"): 20,
+        }
+        formulas = {
+            ("Model", "D5"): "=B4*C5",
+            ("Model", "D6"): "=A6+A7",
+            ("Model", "D7"): "=A7+A6",
+            ("Model", "E5"): "=C5*D5",
+            ("Model", "F5"): "=D5*E5",
+        }
+        model = WorkbookModel.from_cells(cells, formulas)
+        candidates = generate_candidates(model, ("Model", "D5"), limit=20)
+        indexed = {candidate.formula: candidate for candidate in candidates}
+        self.assertIn("=B5*C5", indexed)
+        self.assertIn("peer_translation", indexed["=B5*C5"].sources)
+        self.assertGreaterEqual(indexed["=B5*C5"].support, 2)
+
+    def test_internal_balance_residual_responds_to_counterfactual_repair(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 10},
+            {
+                ("Model", "B1"): "=A1*2",
+                ("Model", "C1"): "=A1*3",
+                ("Model", "D1"): "=B1-C1",
+            },
+        )
+        before = behavior_anomaly_scores(model)
+        after = behavior_anomaly_scores(model, {("Model", "B1"): "=A1*3"})
+        self.assertGreater(before[("Model", "D1")], 0.0)
+        self.assertEqual(after[("Model", "D1")], 0.0)
+        invalid = constraint_residual_scores(model, {("Model", "B1"): "=A1/0"})
+        self.assertEqual(invalid[("Model", "D1")], 1.0)
+
+    def test_behavior_and_constraint_scores_share_one_workbook_evaluation(self):
+        model = repeated_formula_model()
+        with patch.object(model, "evaluate", wraps=model.evaluate) as evaluate:
+            behavior_anomaly_scores(model)
+        self.assertEqual(evaluate.call_count, 1)
+
+    def test_energy_does_not_double_count_constraint_as_general_behavior(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 10},
+            {
+                ("Model", "B1"): "=A1*2",
+                ("Model", "C1"): "=A1*3",
+                ("Model", "D1"): "=B1-C1",
+            },
+        )
+        _, components = _energy(model)
+        self.assertEqual(components["behavior_general"], 0.0)
+        self.assertEqual(components["constraint"], 1.0)
+        self.assertEqual(components["behavior"], 0.75)
+
     def test_all_no_oracle_methods_return_complete_rankings(self):
         model = repeated_formula_model()
         methods = [
@@ -49,9 +106,14 @@ class LocalizationTests(unittest.TestCase):
         result = localize(repeated_formula_model(), "formulaguard", candidate_limit=5)[0]
         self.assertIn("base_energy", result.evidence)
         self.assertIn("prior_score", result.evidence)
+        self.assertIn("prior_responsibility", result.evidence)
+        self.assertIn("rootness_factor", result.evidence)
+        self.assertIn("block_boundary_factor", result.evidence)
         self.assertIn("localization_seconds", result.evidence)
         self.assertIn("delta_energy_normalized", result.evidence)
+        self.assertIn("delta_responsibility", result.evidence)
         self.assertIn("candidate_quality", result.evidence)
+        self.assertIn("candidate_quality_responsibility", result.evidence)
         self.assertGreaterEqual(result.evidence["influence"], 0.0)
         self.assertLessEqual(result.evidence["influence"], 1.0)
 

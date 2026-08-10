@@ -1,103 +1,113 @@
 # FormulaGuard
 
-FormulaGuard 是一个面向高中生竞赛项目的可复现实验原型：在不知道正确输出值的情况下，从 Excel 公式依赖图中定位最可能的静默源错误，并给出候选修复。项目目标是做到本科课程设计级别的完整度，而不是堆成博士论文规模。
+FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在不知道正确输出值的情况下，从 Excel 公式依赖图中定位最可能的静默源错误，并给出候选修复和传播路径。项目目标是本科课程设计级别的完整研究，而不是堆成研究生或博士论文规模。
 
-## 现在已经有什么
+## 研究主线
 
-- `.xlsx` 读取、A1公式解析、依赖图和支持公式子集重算；
-- 公式族、图结构、行为异常和图干预责任分数 GIR；
-- 10类模板族、6类静默错误、浅/中/深传播的可控基准生成器；
-- 9个主比较方法、5个消融方法、bootstrap置信区间；
-- 干净工作簿警报率、敏感性、性能、失败案例与真实语料评价代码；
-- 自动生成 CSV、Markdown 报告、格式化 Excel 结果工作簿和完成度审计。
+1. 把公式单元格及引用关系转换为有向依赖图；
+2. 计算公式族、图结构、数值行为和内部一致性异常；
+3. 从邻近公式和平移/小编辑生成候选修复；
+4. 临时替换候选并重算工作簿，测量异常能量下降；
+5. 用图干预责任分数GIR输出Top-5源错误、修复建议和影响路径。
 
-## 第一次运行
+正确公式和源错误标签只用于离线评价，不传给定位器。
 
-在 Windows `cmd` 中：
+## 当前版本
+
+- v1：已冻结并完成864例full，保留为工程基线；其测试族结构重复，不作为最终跨结构结论。
+- v2：当前主版本，包含六种可审计的实际依赖拓扑，以及可见/困难两种局部证据条件。
+
+研究设计、方法和数据说明：
+
+- `research\METHOD_SPEC.md`
+- `research\EXPERIMENT_PROTOCOL.md`
+- `research\DATA_SOURCES.md`
+- `research\PAPER_ARCHITECTURE.md`
+- `PROJECT_STATUS.md`
+
+## 你和Codex的分工
+
+Codex负责：单元测试、smoke、结构检查、单工作簿诊断、候选检查、CSV/报告/Excel审计、失败定位和短代码修改。
+
+用户只负责：Codex明确通知的大型quick、full、敏感性、性能、LibreOffice和Enron批量实验。大型运行后不必粘贴长日志，只需告诉Codex“运行完成”或最后一段错误信息。
+
+## 短测试（由Codex运行）
 
 ```bat
 cd /d D:\code\QCT
 run_tests.cmd
-run_pipeline.cmd smoke -Ablations
+run_pipeline.cmd smoke -BenchmarkVersion v2 -Ablations
 ```
 
-短测试和 smoke 由 Codex 负责。如果它们通过，用户只需运行首轮大型实验：
+smoke只检查工程链路，不写入论文主结论。
+
+## 第一次大型v2实验
+
+只有在Codex确认短测试通过并要求提交代码后，用户才运行：
 
 ```bat
-run_pipeline.cmd quick -Ablations -WithSensitivity
+cd /d D:\code\QCT
+run_pipeline.cmd quick -BenchmarkVersion v2 -Ablations -WithSensitivity
 ```
 
-流水线默认自动使用约 75% 的逻辑处理器并行处理不同工作簿。在 32 线程机器上通常启动 24 个工作进程；可用 `-Workers 16` 手动限制，或用 `-Workers 1` 进行串行复核。该并行化不改变算法分数，只缩短批量实验的总耗时。FormulaGuard 当前不依赖神经网络或大规模矩阵计算，因此不要求 GPU。
+流水线默认使用约75%的逻辑处理器。在32线程机器上通常是24个工作进程；可用 `-Workers 16` 手动限制。FormulaGuard不训练神经网络，也没有适合GPU的大矩阵批处理，所以GPU空闲是正常现象，性能主要来自CPU多进程和减少重复求值。
 
-`quick` 和 `full` 启动前会检查 Git：已跟踪文件必须全部提交；流水线结束时还会确认提交号没有在运行期间发生变化。这样可以防止实验跑到一半才提交或重置仓库，导致结果与代码版本无法对应。生成的 `results`、`outputs` 和基准工作簿属于忽略文件，不影响此检查。
+quick会生成：
 
-quick 完成后，由 Codex 审核结果并运行冻结脚本：
+- `results\v2_quick\summary.csv`：主指标；
+- `paired_comparison.json`：与最强无真值基线的配对比较；
+- `by_error.csv`、`by_depth.csv`、`by_family.csv`：分层结果；
+- `clean_summary.json`：干净表报警与召回；
+- `sensitivity_summary.csv`：三组预登记权重和候选数；
+- `completion_audit.json`：证据完整度；
+- `outputs\FormulaGuard_v2_quick_experiment_results.xlsx`：查看与答辩用工作簿。
+
+## 冻结与正式实验
+
+Codex审核quick通过后生成：
 
 ```bat
-python scripts\freeze_configuration.py --results results\quick --validation data\propagationbench_quick\validation
+python scripts\freeze_configuration.py --results results\v2_quick --validation data\propagationbench_v2_quick\validation
 ```
 
-只有生成 `results\quick\frozen_config.json` 后，才能运行最终合成实验和性能实验：
+冻结文件保存权重、报警阈值、候选数、Git提交和核心文件哈希。v2 full会拒绝缺少冻结文件、代码变化或未提交工作区，防止看完正式测试结果后再调参。
+
+冻结完成后，用户运行：
 
 ```bat
-run_pipeline.cmd full -Ablations -WithSensitivity -WithPerformance -WithLibreOffice
+run_pipeline.cmd full -BenchmarkVersion v2 -Ablations -WithSensitivity -WithPerformance -WithLibreOffice
 ```
 
-不要把 `results\smoke` 的数字写进论文。smoke 只是检查流水线；`quick` 用于改进算法和冻结权重；`full` 会校验冻结配置、代码哈希、Git提交及工作区状态，最终主表只使用冻结后生成的 `full`。
-
-## 运行后看哪些文件
-
-以 quick 为例：
-
-- `data\propagationbench_quick\validation\dataset_quality.json`：数据是否有效、六类错误和深度分布；
-- `results\quick\summary.csv`：全部方法的 Top-k、MRR、EXAM、修复率和耗时；
-- `results\quick\paired_comparison.json`：FormulaGuard 与最强无真值基线的配对比较；
-- `results\quick\by_error.csv`、`by_depth.csv`、`by_family.csv`：分错误、深度和模板结果；
-- `results\quick\by_split.csv`：开发/验证分区结果；full 应只出现 `test`；
-- `results\quick\clean_summary.json`：干净合成工作簿的警报率；
-- `results\quick\failure_cases.csv`：FormulaGuard 落后于最强基线的案例；
-- `results\quick\figures\`：由实测 CSV 自动生成的论文 SVG 图；
-- `results\quick\demo\demo_case.json`：可复现的Top-5和影响路径演示；
-- `results\quick\environment.json`：运行环境、源文件哈希和代码版本；
-- `results\quick\pipeline.log`、`result_index.json`：完整命令输出和带哈希的结果索引；
-- `results\quick\REPORT.md`：自动生成的文字报告；
-- `results\quick\completion_audit.json`：证据文件是否齐全；
-- `outputs\FormulaGuard_quick_experiment_results.xlsx`：答辩和作图用工作簿。
-
-## 检查一个自己的工作簿
+## 诊断自己的工作簿
 
 ```bat
 diagnose.cmd "D:\你的路径\example.xlsx" --top 10 --json "D:\你的路径\diagnosis.json"
 ```
 
-算法冻结后，答辩演示增加 `--config results\quick\frozen_config.json`，保证现场诊断使用的权重与 full 正式实验完全一致。
+该命令不需要正确答案，只输出可疑公式、候选修复和证据。正式答辩演示应增加冻结配置，确保与论文实验一致。
 
-这个命令不需要正确答案，只会给公式单元格排序和候选修复。当前支持范围见 `research\METHOD_SPEC.md`；宏、外部链接、结构化引用、动态数组和大量高级函数暂不支持。
+## Enron真实语料
 
-运行完 quick 后可以直接生成/查看三分钟演示案例：
-
-```bat
-run_demo.cmd quick
-```
-
-## 真实语料外部验证
-
-先按 `data\external\README.md` 下载并整理 Enron Error Corpus。准备好 `manifest.csv` 后运行：
+按 `data\external\README.md` 准备 Enron Error Corpus 和 `manifest.csv` 后运行：
 
 ```bat
 run_external.cmd "data\external\enron\manifest.csv" "results\enron"
 ```
 
-真实语料结果必须与合成结果分表报告，不能把未支持、损坏或标签不清的文件悄悄删除；逐项记录排除原因。
+所有36项都要清点；不支持、损坏或标签不清的文件逐项记录排除原因。真实和合成结果分开报告。
 
-## 环境
+## 环境与Git
 
-核心 Python 代码和单元测试只使用 Python 3.11+ 标准库，不需要安装额外 Python 包。工作簿生成和结果工作簿使用 Codex Desktop 随附的 `@oai/artifact-tool`。一键脚本会优先寻找 Codex 随附的 Python、Node 和模块，找不到时再使用系统安装。
+核心Python代码和单元测试使用Python 3.11+标准库。工作簿生成和结果工作簿使用Codex Desktop附带的Node运行环境。LibreOffice只用于独立批量重算与交叉验证，不参与FormulaGuard定位。
+
+`quick` 和 `full` 启动时会检查Git：已跟踪文件必须全部提交，运行结束时提交号不能变化。`results`、`outputs`和生成的基准文件默认忽略，不进入源码提交。
 
 ## 研究纪律
 
-- 错误位置和正确公式只用于离线评价，不能传给 FormulaGuard。
-- ExceLint-like、WARDER-like 和 Behavior-like 是思想级透明复现，不冒充原作者官方实现。
-- 所有论文数字由输出 CSV 生成，不手工改表。
-- 置信区间跨过0时，不写“显著优于”。
-- 数据来源、论文结构和正式方法分别见 `research\DATA_SOURCES.md`、`research\PAPER_ARCHITECTURE.md`、`research\METHOD_SPEC.md`。
+- 不把合成数据写成真实业务数据；
+- 不把内部一致性检查写成实验真值；
+- 不把ExceLint-like、WARDER-like写成原作者官方实现；
+- 不把smoke、topology或sparse探针数字写成正式主结论；
+- 置信区间跨0时不写“稳定优于”；
+- full完成后不再调整模型权重或报警阈值；
+- 所有论文数字和图表从原始CSV自动生成。
