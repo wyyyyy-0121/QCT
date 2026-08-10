@@ -50,11 +50,13 @@ def main():
     parser.add_argument("--max-clean-alarm", type=float, default=0.25)
     parser.add_argument("--min-mutant-recall", type=float, default=0.80)
     parser.add_argument("--config", type=Path, help="Frozen quick configuration used by full evaluation")
+    parser.add_argument("--model-version", choices=("v2", "v3"), default="v2")
     args = parser.parse_args()
 
     clean_manifest = json.loads((args.benchmark / "clean_manifest.json").read_text(encoding="utf-8"))
+    primary_method = "formulaguard_v3" if args.model_version == "v3" else "formulaguard"
     with (args.mutant_results / "raw_results.csv").open("r", encoding="utf-8-sig", newline="") as handle:
-        mutant_rows = [row for row in csv.DictReader(handle) if row["method"] == "formulaguard"]
+        mutant_rows = [row for row in csv.DictReader(handle) if row["method"] == primary_method]
     if not clean_manifest or not mutant_rows:
         raise SystemExit("Clean manifest or FormulaGuard mutant scores are empty.")
 
@@ -62,6 +64,8 @@ def main():
     frozen = None
     if args.config:
         frozen = json.loads(args.config.read_text(encoding="utf-8"))
+        if frozen.get("model_version", args.model_version) != args.model_version:
+            raise SystemExit("Frozen configuration model_version does not match clean evaluation.")
         args.candidate_limit = int(frozen["candidate_limit"])
         gir_weights = tuple(float(value) for value in frozen["gir_weights"])
     clean_families = {record["family"] for record in clean_manifest}
@@ -70,12 +74,17 @@ def main():
     for record in clean_manifest:
         family = record["family"]
         model = WorkbookModel.from_xlsx(args.benchmark / record["path"])
-        ranking = localize(model, "formulaguard", candidate_limit=args.candidate_limit, gir_weights=gir_weights)
-        top = ranking[0] if ranking else None
-        top_score = top.score if top else 0.0
+        ranking = localize(model, primary_method, candidate_limit=args.candidate_limit, gir_weights=gir_weights)
+        if args.model_version == "v3":
+            top = max(ranking, key=lambda item: float(item.evidence.get("evidence_strength", 0.0)), default=None)
+            top_score = float(top.evidence.get("evidence_strength", 0.0)) if top else 0.0
+        else:
+            top = ranking[0] if ranking else None
+            top_score = top.score if top else 0.0
         scored_clean.append((record, len(model.formulas), top, top_score))
 
-    mutant_scores = [float(row["source_score"]) for row in mutant_rows]
+    score_field = "evidence_strength" if args.model_version == "v3" else "source_score"
+    mutant_scores = [float(row[score_field]) for row in mutant_rows]
     clean_scores = [row[3] for row in scored_clean]
     if frozen:
         threshold = float(frozen["alarm_threshold"])
@@ -116,6 +125,8 @@ def main():
         "calibration_clean_alarm_rate": calibration_alarm,
         "threshold_gate_passed": calibration_recall >= args.min_mutant_recall and calibration_alarm <= args.max_clean_alarm,
         "threshold_protocol": protocol,
+        "model_version": args.model_version,
+        "alarm_score": score_field,
         "calibration_results": str(args.mutant_results),
         "frozen_config": str(args.config) if args.config else "",
         "gir_weights": gir_weights,

@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from formulaguard.benchmark import load_jsonl, parse_cell_label
-from formulaguard.localize import gir_scores
+from formulaguard.localize import car_v3_scores, gir_scores
 from formulaguard.workbook import WorkbookModel
 from scripts.run_experiments import resolve_worker_count
 
@@ -36,15 +36,25 @@ def select_threshold(mutant_scores, clean_scores, max_clean_alarm=0.25):
     return max(feasible, key=lambda item: (item[0], item[1]))
 
 
+def profile_catalog(model_version):
+    if model_version == "v3":
+        return [("v3_preregistered_car", (0.20, 0.60, 0.10, 0.10))]
+    return PROFILES
+
+
 def evaluate_mutant(task):
-    benchmark_text, instance, candidate_limits = task
+    benchmark_text, instance, candidate_limits, model_version = task
     model = WorkbookModel.from_xlsx(Path(benchmark_text) / instance["mutant_workbook"])
     source = parse_cell_label(instance["source_cell"])
     rows = []
-    for profile_name, gir_weights in PROFILES:
+    for profile_name, gir_weights in profile_catalog(model_version):
         for candidate_limit in candidate_limits:
             started = time.perf_counter()
-            ranking = gir_scores(model, candidate_limit=candidate_limit, gir_weights=gir_weights)
+            ranking = (
+                car_v3_scores(model, candidate_limit=candidate_limit)
+                if model_version == "v3"
+                else gir_scores(model, candidate_limit=candidate_limit, gir_weights=gir_weights)
+            )
             runtime = time.perf_counter() - started
             rank = next((i for i, result in enumerate(ranking, 1) if result.cell == source), len(ranking) + 1)
             source_result = next((result for result in ranking if result.cell == source), None)
@@ -58,20 +68,34 @@ def evaluate_mutant(task):
                 "top1": int(rank <= 1),
                 "top5": int(rank <= 5),
                 "mrr": 1.0 / rank,
-                "source_score": source_result.score if source_result else 0.0,
+                "source_score": (
+                    float(source_result.evidence.get("evidence_strength", 0.0))
+                    if source_result and model_version == "v3"
+                    else source_result.score if source_result else 0.0
+                ),
                 "runtime_seconds": runtime,
             })
     return instance["instance_id"], rows
 
 
 def evaluate_clean(task):
-    benchmark_text, record, candidate_limits = task
+    benchmark_text, record, candidate_limits, model_version = task
     model = WorkbookModel.from_xlsx(Path(benchmark_text) / record["path"])
     scores = {}
-    for profile_name, gir_weights in PROFILES:
+    for profile_name, gir_weights in profile_catalog(model_version):
         for candidate_limit in candidate_limits:
-            ranking = gir_scores(model, candidate_limit=candidate_limit, gir_weights=gir_weights)
-            scores[(profile_name, candidate_limit)] = ranking[0].score if ranking else 0.0
+            ranking = (
+                car_v3_scores(model, candidate_limit=candidate_limit)
+                if model_version == "v3"
+                else gir_scores(model, candidate_limit=candidate_limit, gir_weights=gir_weights)
+            )
+            if model_version == "v3":
+                scores[(profile_name, candidate_limit)] = max(
+                    (float(item.evidence.get("evidence_strength", 0.0)) for item in ranking),
+                    default=0.0,
+                )
+            else:
+                scores[(profile_name, candidate_limit)] = ranking[0].score if ranking else 0.0
     return record["cleanId"], scores
 
 
@@ -82,7 +106,8 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--candidate-limits", default="5,10,15,20")
     parser.add_argument("--limit", type=int, default=48, help="Bound runtime; 0 means all instances")
-    parser.add_argument("--workers", type=int, default=0, help="Worker processes; 0 uses 75% of logical CPUs")
+    parser.add_argument("--workers", type=int, default=0, help="Worker processes; 0 uses three quarters of logical CPUs")
+    parser.add_argument("--model-version", choices=("v2", "v3"), default="v2")
     args = parser.parse_args()
     if args.workers < 0:
         parser.error("--workers must be 0 (auto) or a positive integer")
@@ -97,7 +122,7 @@ def main():
 
     rows = []
     worker_count = resolve_worker_count(args.workers, len(instances))
-    tasks = [(str(args.benchmark), instance, tuple(candidate_limits)) for instance in instances]
+    tasks = [(str(args.benchmark), instance, tuple(candidate_limits), args.model_version) for instance in instances]
     print(f"Sensitivity scheduling: {worker_count} worker process(es) for {len(tasks)} mutant workbooks.", flush=True)
     if worker_count == 1:
         evaluated = map(evaluate_mutant, tasks)
@@ -127,8 +152,9 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     clean_manifest = json.loads((args.benchmark / "clean_manifest.json").read_text(encoding="utf-8"))
-    clean_scores = {(profile_name, candidate_limit): [] for profile_name, _ in PROFILES for candidate_limit in candidate_limits}
-    clean_tasks = [(str(args.benchmark), record, tuple(candidate_limits)) for record in clean_manifest]
+    profiles = profile_catalog(args.model_version)
+    clean_scores = {(profile_name, candidate_limit): [] for profile_name, _ in profiles for candidate_limit in candidate_limits}
+    clean_tasks = [(str(args.benchmark), record, tuple(candidate_limits), args.model_version) for record in clean_manifest]
     clean_workers = resolve_worker_count(args.workers, len(clean_tasks))
     if clean_workers == 1:
         clean_evaluated = map(evaluate_clean, clean_tasks)
@@ -152,12 +178,13 @@ def main():
                         clean_scores[key].append(score)
 
     summary = []
-    for profile_name, gir_weights in PROFILES:
+    for profile_name, gir_weights in profiles:
         for candidate_limit in candidate_limits:
             group = [row for row in rows if row["profile"] == profile_name and row["candidate_limit"] == candidate_limit]
             recall, threshold, clean_alarm = select_threshold(
                 [float(row["source_score"]) for row in group],
                 clean_scores[(profile_name, candidate_limit)],
+                max_clean_alarm=0.20 if args.model_version == "v3" else 0.25,
             )
             summary.append({
                 "profile": profile_name,
@@ -171,7 +198,7 @@ def main():
                 "selected_threshold": threshold,
                 "calibration_mutant_recall": recall,
                 "calibration_clean_alarm_rate": clean_alarm,
-                "threshold_gate_passed": int(recall >= 0.80 and clean_alarm <= 0.25),
+                "threshold_gate_passed": int(recall >= 0.80 and clean_alarm <= (0.20 if args.model_version == "v3" else 0.25)),
             })
     with (args.output / "sensitivity_summary.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(summary[0]))

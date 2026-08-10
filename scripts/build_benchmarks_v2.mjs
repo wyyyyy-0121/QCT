@@ -7,17 +7,19 @@ import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 function parseArgs(argv) {
-  const args = { mode: "smoke", output: path.join(ROOT, "data", "propagationbench_v2_smoke") };
+  const args = { mode: "smoke", datasetVersion: "v2", output: path.join(ROOT, "data", "propagationbench_v2_smoke") };
   for (let i = 2; i < argv.length; i += 1) {
     if (argv[i] === "--mode") args.mode = argv[++i];
+    else if (argv[i] === "--dataset-version") args.datasetVersion = argv[++i];
     else if (argv[i] === "--output") args.output = path.resolve(argv[++i]);
     else throw new Error(`Unknown argument: ${argv[i]}`);
   }
   if (!new Set(["smoke", "topology", "sparse", "quick", "full"]).has(args.mode)) throw new Error(`Invalid mode: ${args.mode}`);
+  if (!new Set(["v2", "v3"]).has(args.datasetVersion)) throw new Error(`Invalid dataset version: ${args.datasetVersion}`);
   return args;
 }
 
-const FAMILIES = [
+const V2_FAMILIES = [
   { id: "budget_tree", split: "development", title: "Department Budget", topology: "hierarchical_tree" },
   { id: "sales_timeline", split: "development", title: "Sales Timeline", topology: "horizontal_chain" },
   { id: "inventory_flow", split: "validation", title: "Inventory Flow", topology: "multi_sheet_cascade" },
@@ -29,6 +31,21 @@ const FAMILIES = [
   { id: "attendance_matrix", split: "test", title: "Attendance Matrix", topology: "matrix_hub" },
   { id: "fundraising_branches", split: "test", title: "Fundraising Channels", topology: "fork_join" },
 ];
+
+const V3_FAMILIES = [
+  { id: "cashflow_lattice", split: "development", title: "Cashflow Lattice", topology: "fork_join", datasetVersion: "v3" },
+  { id: "production_wave", split: "development", title: "Production Wave", topology: "rolling_vertical", datasetVersion: "v3" },
+  { id: "procurement_cascade", split: "validation", title: "Procurement Cascade", topology: "multi_sheet_cascade", datasetVersion: "v3" },
+  { id: "assessment_grid", split: "validation", title: "Assessment Grid", topology: "matrix_hub", datasetVersion: "v3" },
+  { id: "carbon_accounting", split: "test", title: "Carbon Accounting", topology: "hierarchical_tree", datasetVersion: "v3" },
+  { id: "supply_network", split: "test", title: "Supply Network", topology: "fork_join", datasetVersion: "v3" },
+  { id: "laboratory_series", split: "test", title: "Laboratory Series", topology: "rolling_vertical", datasetVersion: "v3" },
+  { id: "resource_schedule", split: "test", title: "Resource Schedule", topology: "horizontal_chain", datasetVersion: "v3" },
+  { id: "quality_matrix", split: "test", title: "Quality Matrix", topology: "matrix_hub", datasetVersion: "v3" },
+  { id: "multi_stage_budget", split: "test", title: "Multi-stage Budget", topology: "multi_sheet_cascade", datasetVersion: "v3" },
+];
+
+const ALL_FAMILIES = [...V2_FAMILIES, ...V3_FAMILIES];
 
 function parseAddress(address) {
   const match = /^([A-Z]+)([1-9]\d*)$/.exec(address);
@@ -78,11 +95,11 @@ function translateFormula(formula, sourceAddress, targetAddress) {
 }
 
 function createSpec(family, variant) {
-  const familyIndex = FAMILIES.findIndex(item => item.id === family.id);
+  const familyIndex = ALL_FAMILIES.findIndex(item => item.id === family.id);
   return {
     family,
     variant,
-    seed: 2026082000 + familyIndex * 100 + variant,
+    seed: (family.datasetVersion === "v3" ? 2026083000 : 2026082000) + familyIndex * 100 + variant,
     sheets: new Map(),
     formulas: new Map(),
     anchors: {},
@@ -172,6 +189,34 @@ function addCounterfactualChecks(spec) {
     putFormula(spec, "Checks", `B${row}`, qualifiedAnchorFormula(anchor));
     putFormula(spec, "Checks", `C${row}`, `=${anchor.cell}-B${row}`);
   }
+}
+
+function addV3ResponsibilityLayer(spec) {
+  addTitleAndHeaders(spec, "Control", `${spec.family.title} Responsibility Controls`, ["Depth", "Observed", "Independent", "Residual"]);
+  for (const [index, depth] of ["deep", "medium", "shallow"].entries()) {
+    const row = 5 + index;
+    const anchor = spec.anchors[depth];
+    putValue(spec, "Control", `A${row}`, depth);
+    putFormula(spec, "Control", `B${row}`, `=${anchor.cell}`);
+    putFormula(spec, "Control", `C${row}`, qualifiedAnchorFormula(anchor));
+    putFormula(spec, "Control", `D${row}`, `=B${row}-C${row}`);
+  }
+  putFormula(spec, "Control", "B9", "=SUM(D5:D7)");
+  putFormula(spec, "Control", "B10", "=SUM(B5:B7)");
+  putFormula(spec, "Control", "B11", "=B9+B10");
+
+  // A disconnected, fully legitimate copy region challenges methods that
+  // confuse unusual local shape or high degree with causal responsibility.
+  addTitleAndHeaders(spec, "Reference", `${spec.family.title} Reference Region`, ["Item", "Input", "Adjusted", "Running"]);
+  putValue(spec, "Reference", "B2", 0.04 + spec.variant * 0.001);
+  for (let row = 5; row <= 15; row += 1) {
+    putValue(spec, "Reference", `A${row}`, `R${row - 4}`);
+    putValue(spec, "Reference", `B${row}`, deterministicValue(spec, 300 + row, 4, 25));
+    putFormula(spec, "Reference", `C${row}`, `=B${row}*(1+$B$2)`);
+    putFormula(spec, "Reference", `D${row}`, row === 5 ? "=C5" : `=D${row - 1}+C${row}`);
+  }
+  // Keep the topology's original labelled sink so the three preregistered
+  // propagation depths are not collapsed by the independent control chain.
 }
 
 function buildRollingVertical(spec) {
@@ -395,6 +440,7 @@ function workbookSpec(family, variant) {
     throw new Error(`Incomplete topology specification: ${family.id}`);
   }
   addCounterfactualChecks(spec);
+  if (family.datasetVersion === "v3") addV3ResponsibilityLayer(spec);
   return spec;
 }
 
@@ -501,12 +547,13 @@ async function main() {
   const previewDir = path.join(args.output, "preview");
   await Promise.all([fs.mkdir(cleanDir, { recursive: true }), fs.mkdir(mutantDir, { recursive: true }), fs.mkdir(previewDir, { recursive: true })]);
 
+  const familyCatalog = args.datasetVersion === "v3" ? V3_FAMILIES : V2_FAMILIES;
   const families = args.mode === "smoke"
-    ? FAMILIES.filter(item => item.split === "development")
+    ? familyCatalog.filter(item => item.split === "development")
     : args.mode === "topology" || args.mode === "sparse" || args.mode === "full"
-      ? FAMILIES.filter(item => item.split === "test")
+      ? familyCatalog.filter(item => item.split === "test")
       : args.mode === "quick"
-      ? FAMILIES.filter(item => item.split !== "test")
+      ? familyCatalog.filter(item => item.split !== "test")
       : [];
   const variantValues = args.mode === "full"
     ? Array.from({ length: 8 }, (_, index) => index)
@@ -569,15 +616,15 @@ async function main() {
           expected_depth: mutation.expectedDepth,
           sink_cell: spec.sink,
           generator: "scripts/build_benchmarks_v2.mjs",
-          generator_version: "0.2.0",
+          generator_version: args.datasetVersion === "v3" ? "0.3.0" : "0.2.0",
         });
       }
     }
   }
 
   const manifest = {
-    name: "PropagationBench-V2-Synthetic",
-    version: "0.2.0",
+    name: args.datasetVersion === "v3" ? "PropagationBench-V3-Synthetic" : "PropagationBench-V2-Synthetic",
+    version: args.datasetVersion === "v3" ? "0.3.0" : "0.2.0",
     generated_at: new Date().toISOString(),
     mode: args.mode,
     source_nature: "synthetic, structurally diverse, generated by this research project",
@@ -586,8 +633,10 @@ async function main() {
     data_splits: [...new Set(families.map(item => item.split))],
     clean_workbooks: cleanRecords.length,
     mutant_instances: instances.length,
-    random_seed_scheme: "2026082000 + family_index*100 + variant",
-    design_note: "Test families use six distinct dependency layouts: cascade, rolling sequence, horizontal chain, hierarchy, matrix hub, and fork-join.",
+    random_seed_scheme: `${args.datasetVersion === "v3" ? "2026083000" : "2026082000"} + family_index*100 + variant`,
+    design_note: args.datasetVersion === "v3"
+      ? "Fresh families combine six dependency layouts with an independent control chain and a disconnected legitimate reference region."
+      : "Test families use six distinct dependency layouts: cascade, rolling sequence, horizontal chain, hierarchy, matrix hub, and fork-join.",
     label_isolation: {
       public_instances: "instances.jsonl",
       evaluation_labels: "evaluation_labels.jsonl",

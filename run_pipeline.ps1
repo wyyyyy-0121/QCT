@@ -1,7 +1,7 @@
 param(
     [ValidateSet("smoke", "quick", "full")]
     [string]$Mode = "quick",
-    [ValidateSet("v1", "v2")]
+    [ValidateSet("v1", "v2", "v3")]
     [string]$BenchmarkVersion = "v1",
     [switch]$Ablations,
     [switch]$WithSensitivity,
@@ -86,14 +86,15 @@ if (-not (Test-Path -LiteralPath "node_modules\@oai\artifact-tool")) {
     New-Item -ItemType Junction -Path "node_modules" -Target $BundledModules | Out-Null
 }
 
-$VersionPrefix = if ($BenchmarkVersion -eq "v2") { "v2_" } else { "" }
-$BenchmarkName = if ($BenchmarkVersion -eq "v2") { "propagationbench_v2_$Mode" } else { "propagationbench_$Mode" }
-$BenchmarkBuilder = if ($BenchmarkVersion -eq "v2") { "scripts\build_benchmarks_v2.mjs" } else { "scripts\build_benchmarks.mjs" }
+$VersionPrefix = if ($BenchmarkVersion -in @("v2", "v3")) { "${BenchmarkVersion}_" } else { "" }
+$BenchmarkName = if ($BenchmarkVersion -in @("v2", "v3")) { "propagationbench_${BenchmarkVersion}_$Mode" } else { "propagationbench_$Mode" }
+$BenchmarkBuilder = if ($BenchmarkVersion -in @("v2", "v3")) { "scripts\build_benchmarks_v2.mjs" } else { "scripts\build_benchmarks.mjs" }
 $Benchmark = Join-Path $ProjectRoot "data\$BenchmarkName"
 $Validation = Join-Path $Benchmark "validation"
 $Results = Join-Path $ProjectRoot "results\${VersionPrefix}$Mode"
 $WorkbookOutput = Join-Path $ProjectRoot "outputs\FormulaGuard_${VersionPrefix}${Mode}_experiment_results.xlsx"
-$FrozenConfig = Join-Path $ProjectRoot "results\${VersionPrefix}quick\frozen_config.json"
+$FrozenConfigName = if ($BenchmarkVersion -eq "v3") { "frozen_config_v3.json" } else { "frozen_config.json" }
+$FrozenConfig = Join-Path $ProjectRoot "results\${VersionPrefix}quick\$FrozenConfigName"
 if ($Mode -eq "full" -and -not (Test-Path -LiteralPath $FrozenConfig)) {
     throw "Full mode requires $FrozenConfig. The matching $BenchmarkVersion quick run must pass the freeze assessment first."
 }
@@ -102,11 +103,13 @@ Start-Transcript -Path (Join-Path $Results "pipeline.log") -Force | Out-Null
 $script:TranscriptActive = $true
 
 Write-Host "[1/11] Generating $Mode benchmark..."
-Invoke-Checked -Executable $Node -Arguments @($BenchmarkBuilder, "--mode", $Mode, "--output", $Benchmark)
+$BuilderArgs = @($BenchmarkBuilder, "--mode", $Mode, "--output", $Benchmark)
+if ($BenchmarkVersion -eq "v3") { $BuilderArgs += @("--dataset-version", "v3") }
+Invoke-Checked -Executable $Node -Arguments $BuilderArgs
 
 Write-Host "[2/11] Validating silent-error labels and propagation depth..."
 Invoke-Checked -Executable $Python -Arguments @("scripts\validate_benchmark.py", "--benchmark", $Benchmark, "--output", $Validation)
-if ($BenchmarkVersion -eq "v2") {
+if ($BenchmarkVersion -in @("v2", "v3")) {
     Invoke-Checked -Executable $Python -Arguments @("scripts\audit_structural_diversity.py", "--benchmark", $Benchmark, "--output", (Join-Path $Validation "structural_diversity.json"), "--strict")
 }
 
@@ -132,6 +135,7 @@ $ExperimentArgs = @(
     "--bootstrap-samples", $BootstrapSamples,
     "--workers", $Workers
 )
+if ($BenchmarkVersion -eq "v3") { $ExperimentArgs += @("--model-version", "v3") }
 if ($Ablations) { $ExperimentArgs += "--ablations" }
 if ($Mode -eq "full") { $ExperimentArgs += @("--config", $FrozenConfig) }
 Invoke-Checked -Executable $Python -Arguments $ExperimentArgs
@@ -147,6 +151,7 @@ if ($Mode -eq "full") {
     Invoke-Checked -Executable $Python -Arguments @("scripts\verify_calibration.py", "--calibration", (Join-Path $CalibrationResults "environment.json"), "--current", (Join-Path $Results "environment.json"))
 }
 $CleanArgs = @("scripts\run_clean_evaluation.py", "--benchmark", $Benchmark, "--mutant-results", $CalibrationResults, "--output", $Results, "--candidate-limit", "$CandidateLimit")
+if ($BenchmarkVersion -eq "v3") { $CleanArgs += @("--model-version", "v3", "--max-clean-alarm", "0.20") }
 if ($Mode -eq "full") { $CleanArgs += @("--config", $FrozenConfig) }
 Invoke-Checked -Executable $Python -Arguments $CleanArgs
 
@@ -163,14 +168,25 @@ Write-Host "[9/11] Generating formatted result workbook..."
 Invoke-Checked -Executable $Node -Arguments @("scripts\build_results_workbook.mjs", "--results", $Results, "--validation", $Validation, "--output", $WorkbookOutput)
 
 Write-Host "[10/11] Building a reproducible demonstration case..."
-Invoke-Checked -Executable $Python -Arguments @("scripts\demo_case.py", "--benchmark", $Benchmark, "--output", (Join-Path $Results "demo"))
+$DemoArgs = @("scripts\demo_case.py", "--benchmark", $Benchmark, "--output", (Join-Path $Results "demo"))
+if ($BenchmarkVersion -eq "v3") { $DemoArgs += @("--model-version", "v3") }
+Invoke-Checked -Executable $Python -Arguments $DemoArgs
 
 Write-Host "[11/11] Auditing evidence completeness..."
 Invoke-Checked -Executable $Python -Arguments @("scripts\audit_outputs.py", "--benchmark", $Benchmark, "--results", $Results, "--strict")
 
 if ($WithSensitivity) {
     Write-Host "[extra] Running bounded candidate-count and weight sensitivity..."
-    Invoke-Checked -Executable $Python -Arguments @("scripts\run_sensitivity.py", "--benchmark", $Benchmark, "--validation", (Join-Path $Validation "validated_instances.jsonl"), "--output", $Results, "--limit", "48", "--workers", "$Workers")
+    $SensitivityArgs = @("scripts\run_sensitivity.py", "--benchmark", $Benchmark, "--validation", (Join-Path $Validation "validated_instances.jsonl"), "--output", $Results, "--limit", "48", "--workers", "$Workers")
+    if ($BenchmarkVersion -eq "v3") { $SensitivityArgs += @("--model-version", "v3") }
+    Invoke-Checked -Executable $Python -Arguments $SensitivityArgs
+}
+
+if ($Mode -eq "quick") {
+    Write-Host "[freeze] Assessing quick gates and writing immutable configuration..."
+    $FreezeArgs = @("scripts\freeze_configuration.py", "--results", $Results, "--validation", $Validation, "--output", $FrozenConfig)
+    if ($BenchmarkVersion -eq "v3") { $FreezeArgs += @("--model-version", "v3") }
+    Invoke-Checked -Executable $Python -Arguments $FreezeArgs
 }
 
 if ($WithPerformance) {

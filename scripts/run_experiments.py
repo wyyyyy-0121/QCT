@@ -21,13 +21,16 @@ from formulaguard.localize import generate_candidates, localize
 from formulaguard.workbook import WorkbookModel
 
 
-CORE_METHODS = [
+BASE_METHODS = [
     "random", "excel_like", "pattern", "graph", "behavior",
-    "excelint_like", "warder_like", "formulaguard", "sfl_oracle",
+    "excelint_like", "warder_like",
 ]
-ABLATION_METHODS = [
+V2_ABLATION_METHODS = [
     "ablate_formula", "ablate_graph", "ablate_behavior",
     "ablate_influence", "ablate_intervention",
+]
+V3_ABLATION_METHODS = [
+    "v3_ablate_adaptive", "v3_ablate_side_effect", "v3_ablate_path",
 ]
 
 
@@ -82,7 +85,7 @@ def resolve_worker_count(requested, task_count, logical_cpus=None):
 
 
 def evaluate_instance(task):
-    benchmark_text, instance, methods, candidate_limit, gir_weights = task
+    benchmark_text, instance, methods, candidate_limit, gir_weights, primary_method = task
     benchmark = Path(benchmark_text)
     clean = WorkbookModel.from_xlsx(benchmark / instance["clean_workbook"])
     mutant = WorkbookModel.from_xlsx(benchmark / instance["mutant_workbook"])
@@ -109,7 +112,7 @@ def evaluate_instance(task):
         correct = instance["correct_formula"]
         repair_exact = bool(repair) and normalized_formula(repair) == normalized_formula(correct)
         candidate_rank = None
-        if method == "formulaguard":
+        if method in {"formulaguard", "formulaguard_v3"}:
             source_candidates = generate_candidates(mutant, source, limit=max(10, candidate_limit))
             candidate_rank = next(
                 (
@@ -119,6 +122,23 @@ def evaluate_instance(task):
                 ),
                 None,
             )
+        rank_by_cell = {result.cell: item_rank for item_rank, result in enumerate(results, 1)}
+        formula_descendants = mutant.dependency_graph().descendants(source) & set(mutant.formula_cells)
+        descendant_precedence = [rank < rank_by_cell[cell] for cell in formula_descendants]
+        source_before_descendants = (
+            statistics.fmean(descendant_precedence) if descendant_precedence else 1.0
+        )
+        source_first_in_cone = int(all(descendant_precedence))
+        sink_label = instance.get("sink_cell", "")
+        reported_paths = str(source_result.evidence.get("reported_paths", "")) if source_result else ""
+        path_coverage = int(bool(sink_label) and sink_label in reported_paths) if method == "formulaguard_v3" else ""
+        repair_safety = ""
+        if source_result and method == "formulaguard_v3" and repair:
+            repair_safety = int(
+                float(source_result.evidence.get("candidate_total_energy", float("inf"))) <= float(source_result.evidence.get("base_energy", float("inf"))) + 1e-12
+                and float(source_result.evidence.get("candidate_constraint_energy", float("inf"))) <= float(source_result.evidence.get("base_constraint_energy", float("inf"))) + 1e-12
+            )
+        is_fg_method = method in {"formulaguard", "formulaguard_v3"}
         rows.append({
             "instance_id": instance["instance_id"],
             "template_family": instance["template_family"],
@@ -138,17 +158,23 @@ def evaluate_instance(task):
             "exam": rank / max(1, len(mutant.formulas)),
             "repair_exact": int(repair_exact),
             "candidate_formula": repair or "",
-            "candidate_rank": candidate_rank if method == "formulaguard" and candidate_rank is not None else "",
-            "candidate_coverage_at_10": int(candidate_rank <= 10) if method == "formulaguard" and candidate_rank is not None else (0 if method == "formulaguard" else ""),
-            "candidate_coverage_at_15": int(candidate_rank <= 15) if method == "formulaguard" and candidate_rank is not None else (0 if method == "formulaguard" else ""),
+            "candidate_rank": candidate_rank if is_fg_method and candidate_rank is not None else "",
+            "candidate_coverage_at_10": int(candidate_rank <= 10) if is_fg_method and candidate_rank is not None else (0 if is_fg_method else ""),
+            "candidate_coverage_at_15": int(candidate_rank <= 15) if is_fg_method and candidate_rank is not None else (0 if is_fg_method else ""),
             "source_score": source_result.score if source_result else 0.0,
             "top_score": top_score,
             "top_score_margin": top_score - second_score,
             "runtime_seconds": elapsed,
-            "candidate_quality": source_result.evidence.get("candidate_quality", "") if source_result and method == "formulaguard" else "",
-            "candidate_support": source_result.evidence.get("candidate_support", "") if source_result and method == "formulaguard" else "",
-            "candidate_edit_kind": source_result.evidence.get("candidate_edit_kind", "") if source_result and method == "formulaguard" else "",
-            "candidate_source": source_result.evidence.get("candidate_source", "") if source_result and method == "formulaguard" else "",
+            "candidate_quality": source_result.evidence.get("candidate_quality", "") if source_result and is_fg_method else "",
+            "candidate_support": source_result.evidence.get("candidate_support", "") if source_result and is_fg_method else "",
+            "candidate_edit_kind": source_result.evidence.get("candidate_edit_kind", "") if source_result and is_fg_method else "",
+            "candidate_source": source_result.evidence.get("candidate_source", "") if source_result and is_fg_method else "",
+            "source_before_descendants": source_before_descendants,
+            "source_first_in_causal_cone": source_first_in_cone,
+            "path_coverage": path_coverage,
+            "repair_safety": repair_safety,
+            "evidence_strength": source_result.evidence.get("evidence_strength", "") if source_result and method == "formulaguard_v3" else "",
+            "reported_paths": reported_paths if method == "formulaguard_v3" else "",
         })
     return instance["instance_id"], rows
 
@@ -161,10 +187,18 @@ def run(args):
         instances = instances[: args.limit]
     if not instances:
         raise SystemExit(f"No validated benchmark instances found in: {validation_file}")
-    methods = CORE_METHODS + (ABLATION_METHODS if args.ablations else [])
+    primary_method = "formulaguard_v3" if args.model_version == "v3" else "formulaguard"
+    methods = BASE_METHODS + ["formulaguard"]
+    if args.model_version == "v3":
+        methods.append("formulaguard_v3")
+    methods.append("sfl_oracle")
+    if args.ablations:
+        methods += V3_ABLATION_METHODS if args.model_version == "v3" else V2_ABLATION_METHODS
     gir_weights = (0.35, 0.50, 0.10, 0.05)
     if args.config:
         config = json.loads(args.config.read_text(encoding="utf-8"))
+        if config.get("model_version", args.model_version) != args.model_version:
+            raise SystemExit("Frozen configuration model_version does not match this experiment.")
         args.candidate_limit = int(config["candidate_limit"])
         gir_weights = tuple(float(value) for value in config["gir_weights"])
         if len(gir_weights) != 4:
@@ -172,7 +206,7 @@ def run(args):
     raw_rows = []
     worker_count = resolve_worker_count(args.workers, len(instances))
     tasks = [
-        (str(benchmark), instance, tuple(methods), args.candidate_limit, tuple(gir_weights))
+        (str(benchmark), instance, tuple(methods), args.candidate_limit, tuple(gir_weights), primary_method)
         for instance in instances
     ]
     started_all = time.perf_counter()
@@ -227,6 +261,16 @@ def run(args):
                 for row in rows
                 if row["candidate_coverage_at_15"] != ""
             ]),
+            "source_before_descendants": mean([float(row["source_before_descendants"]) for row in rows]),
+            "source_first_in_causal_cone": mean([int(row["source_first_in_causal_cone"]) for row in rows]),
+            "path_coverage": (
+                mean([int(row["path_coverage"]) for row in rows if row["path_coverage"] != ""])
+                if any(row["path_coverage"] != "" for row in rows) else ""
+            ),
+            "repair_safety": (
+                mean([int(row["repair_safety"]) for row in rows if row["repair_safety"] != ""])
+                if any(row["repair_safety"] != "" for row in rows) else ""
+            ),
             "runtime_median": statistics.median([float(row["runtime_seconds"]) for row in rows]) if rows else 0.0,
             "runtime_p95": sorted(float(row["runtime_seconds"]) for row in rows)[max(0, math.ceil(0.95 * len(rows)) - 1)] if rows else 0.0,
         })
@@ -256,10 +300,10 @@ def run(args):
     write_csv(output / "by_topology.csv", grouped("topology_id"))
     write_csv(output / "by_split.csv", grouped("data_split"))
 
-    no_oracle_baselines = [m for m in CORE_METHODS if m not in ("formulaguard", "sfl_oracle")]
+    no_oracle_baselines = list(BASE_METHODS)
     summary_map = {row["method"]: row for row in summary_rows}
     strongest = max(no_oracle_baselines, key=lambda m: summary_map[m]["mrr"])
-    fg = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == "formulaguard"}
+    fg = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == primary_method}
     base = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == strongest}
     paired = [fg[key] - base[key] for key in sorted(fg.keys() & base.keys())]
     comparison = {
@@ -271,10 +315,24 @@ def run(args):
         "formula_guard_equal_fraction": mean([int(value == 0) for value in paired]),
     }
     (output / "paired_comparison.json").write_text(json.dumps(comparison, ensure_ascii=False, indent=2), encoding="utf-8")
+    if args.model_version == "v3":
+        v2 = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == "formulaguard"}
+        v3 = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == "formulaguard_v3"}
+        differences = [v3[key] - v2[key] for key in sorted(v2.keys() & v3.keys())]
+        v3_comparison = {
+            "paired_instances": len(differences),
+            "mean_mrr_difference_v3_minus_v2": mean(differences),
+            "bootstrap_95_ci": bootstrap_ci(differences, args.bootstrap_samples),
+            "v3_better_fraction": mean([int(value > 0) for value in differences]),
+            "v3_equal_fraction": mean([int(value == 0) for value in differences]),
+        }
+        (output / "v3_vs_v2.json").write_text(json.dumps(v3_comparison, ensure_ascii=False, indent=2), encoding="utf-8")
     report = {
         "benchmark": str(benchmark),
         "instances": len(instances),
         "methods": methods,
+        "model_version": args.model_version,
+        "primary_method": primary_method,
         "candidate_limit": args.candidate_limit,
         "gir_weights": gir_weights,
         "worker_processes": worker_count,
@@ -297,7 +355,8 @@ def main():
     parser.add_argument("--bootstrap-samples", type=int, default=1000)
     parser.add_argument("--ablations", action="store_true")
     parser.add_argument("--config", type=Path, help="Frozen quick configuration used by full evaluation")
-    parser.add_argument("--workers", type=int, default=0, help="Worker processes; 0 uses 75% of logical CPUs")
+    parser.add_argument("--workers", type=int, default=0, help="Worker processes; 0 uses three quarters of logical CPUs")
+    parser.add_argument("--model-version", choices=("v2", "v3"), default="v2")
     args = parser.parse_args()
     if args.workers < 0:
         parser.error("--workers must be 0 (auto) or a positive integer")

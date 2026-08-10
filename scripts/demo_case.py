@@ -22,6 +22,7 @@ def main():
     parser.add_argument("--instance-id")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--top", type=int, default=5)
+    parser.add_argument("--model-version", choices=("v2", "v3"), default="v2")
     args = parser.parse_args()
     validation = args.benchmark / "validation" / "validated_instances.jsonl"
     instances = list(load_jsonl(validation))
@@ -37,7 +38,7 @@ def main():
     workbook_path = args.benchmark / selected["mutant_workbook"]
     model = WorkbookModel.from_xlsx(workbook_path)
     graph = model.dependency_graph()
-    ranking = localize(model, "formulaguard")
+    ranking = localize(model, "formulaguard_v3" if args.model_version == "v3" else "formulaguard")
     source = parse_cell_label(selected["source_cell"])
     source_rank = next((index for index, result in enumerate(ranking, 1) if result.cell == source), len(ranking) + 1)
     top_rows = []
@@ -92,4 +93,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -16,7 +16,7 @@ def structural_metrics(workbook_path: Path) -> dict:
     graph = model.dependency_graph()
     formula_cells = set(model.formula_cells)
     all_sheets = {sheet for sheet, _ in set(model.cells) | set(model.formulas)}
-    auxiliary_sheets = {"Checks", "Params"}
+    auxiliary_sheets = {"Checks", "Params", "Control", "Reference"}
     core_sheets = {sheet for sheet in all_sheets if sheet not in auxiliary_sheets}
     core_formula_cells = {cell for cell in formula_cells if cell[0] in core_sheets}
     formula_edges = []

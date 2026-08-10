@@ -371,7 +371,7 @@ def graph_anomaly_scores(model: WorkbookModel, overrides: Mapping[CellKey, str] 
 
 
 def _energy(model: WorkbookModel, overrides: Mapping[CellKey, str] | None = None,
-            weights=(0.45, 0.25, 0.30)):
+            weights=(0.45, 0.25, 0.30), include_maps: bool = False):
     fa = formula_anomaly_scores(model, overrides)
     ga = graph_anomaly_scores(model, overrides)
     _, ba_general, ca = _behavior_anomaly_bundle(model, overrides)
@@ -386,6 +386,13 @@ def _energy(model: WorkbookModel, overrides: Mapping[CellKey, str] | None = None
         "constraint": constraint_energy,
     }
     total = weights[0] * components["formula"] + weights[1] * components["graph"] + weights[2] * components["behavior"]
+    if include_maps:
+        return total, components, {
+            "formula": fa,
+            "graph": ga,
+            "behavior_general": ba_general,
+            "constraint": ca,
+        }
     return total, components
 
 
@@ -677,6 +684,256 @@ def gir_scores(model: WorkbookModel, *, candidate_limit=15, weights=(0.45, 0.25,
     return results
 
 
+def _v3_component_change(before: float, after: float) -> tuple[float, float]:
+    """Return normalized improvement and harm for one energy component."""
+    denominator = max(1e-9, before)
+    gain = max(0.0, before - after) / denominator
+    harm = max(0.0, after - before) / denominator
+    return gain, harm
+
+
+def car_v3_scores(
+    model: WorkbookModel,
+    *,
+    candidate_limit: int = 15,
+    max_intervention_cells: int = 50,
+    use_adaptive_graph: bool = True,
+    use_side_effect_penalty: bool = True,
+    use_path_responsibility: bool = True,
+):
+    """FormulaGuard-v3 structure-adaptive counterfactual responsibility."""
+    start = time.perf_counter()
+    graph = model.dependency_graph()
+    base_energy, base_components, base_maps = _energy(model, include_maps=True)
+    formula_scores = formula_anomaly_scores(model)
+    graph_scores = graph_anomaly_scores(model)
+    behavior_scores = behavior_anomaly_scores(model)
+    fingerprints = model.fingerprints()
+    formula_set = set(model.formula_cells)
+
+    reliability: dict[CellKey, tuple[float, float, float]] = {}
+    adaptive_weights: dict[CellKey, tuple[float, float, float]] = {}
+    local_priors: dict[CellKey, float] = {}
+    for key in model.formula_cells:
+        peers = _peers(model, key)
+        if peers:
+            peer_fingerprints = [fingerprints[peer] for peer in peers]
+            peer_coverage = min(1.0, len(peers) / 4.0)
+            copy_consistency = max(Counter(peer_fingerprints).values()) / len(peer_fingerprints)
+            rho = peer_coverage * copy_consistency
+        else:
+            rho, peer_coverage, copy_consistency = 0.0, 0.0, 0.0
+        if not use_adaptive_graph:
+            rho = 1.0
+        reliability[key] = (rho, peer_coverage, copy_consistency)
+        weights = (0.45, 0.20 * rho, 0.55 - 0.20 * rho)
+        adaptive_weights[key] = weights
+        local_priors[key] = (
+            weights[0] * formula_scores[key]
+            + weights[1] * graph_scores[key]
+            + weights[2] * behavior_scores[key]
+        )
+
+    if len(model.formula_cells) <= max_intervention_cells:
+        intervention_cells = set(model.formula_cells)
+    else:
+        intervention_cells = set(sorted(
+            model.formula_cells,
+            key=lambda cell: (-local_priors[cell], cell),
+        )[:max_intervention_cells])
+
+    descendants_by_cell = {cell: graph.descendants(cell) for cell in intervention_cells}
+    max_descendants = max((len(nodes) for nodes in descendants_by_cell.values()), default=1) or 1
+    check_tokens = ("check", "audit", "control", "validation")
+    check_cells = {
+        cell for cell in model.formula_cells
+        if any(token in cell[0].casefold() for token in check_tokens)
+    }
+    reached_checks = {
+        cell: descendants_by_cell.get(cell, set()) & check_cells
+        for cell in intervention_cells
+    }
+    max_checks = max((len(nodes) for nodes in reached_checks.values()), default=1) or 1
+    structural_sinks = set(graph.sinks(model.formula_cells))
+
+    def block_boundary_factor(key: CellKey) -> float:
+        sheet, row, col = _coordinate(key)
+        column = num_to_col(col)
+        above = (sheet, f"{column}{row - 1}") if row > 1 else None
+        below = (sheet, f"{column}{row + 1}")
+        below_two = (sheet, f"{column}{row + 2}")
+        if above not in formula_set and below in formula_set and below_two in formula_set:
+            return 0.25
+        return 1.0
+
+    results: list[LocalizationResult] = []
+    for key in model.formula_cells:
+        rho, peer_coverage, copy_consistency = reliability[key]
+        w_formula, w_graph, w_behavior = adaptive_weights[key]
+        descendants = descendants_by_cell.get(key, set())
+        influence = (
+            math.log1p(len(descendants)) / max(1e-9, math.log1p(max_descendants))
+            if key in intervention_cells else 0.0
+        )
+        check_reach = len(reached_checks.get(key, set())) / max_checks if key in intervention_cells else 0.0
+        path_responsibility = 0.60 * influence + 0.40 * check_reach
+        if not use_path_responsibility:
+            path_responsibility = 0.0
+        boundary = block_boundary_factor(key)
+        # Path information may strengthen a positive intervention, but cannot
+        # manufacture suspicion in the absence of counterfactual recovery.
+        adaptive_prior = local_priors[key] * boundary
+
+        best_score = 0.20 * adaptive_prior
+        best_candidate: RepairCandidate | None = None
+        best_values = {
+            "raw_gain": 0.0,
+            "side_effect": 0.0,
+            "net_gain": 0.0,
+            "gain_formula": 0.0,
+            "gain_graph": 0.0,
+            "gain_behavior": 0.0,
+            "gain_constraint": 0.0,
+            "harm_formula": 0.0,
+            "harm_graph": 0.0,
+            "harm_behavior": 0.0,
+            "harm_constraint": 0.0,
+            "candidate_total_energy": base_energy,
+            "candidate_constraint_energy": base_components["constraint"],
+            "downstream_recovery": 0.0,
+            "candidate_path_responsibility": 0.0,
+        }
+        candidates: list[RepairCandidate] = []
+        if key in intervention_cells:
+            candidates = generate_candidates(model, key, candidate_limit)
+            for candidate in candidates:
+                candidate_energy, after, after_maps = _energy(
+                    model, {key: candidate.formula}, include_maps=True
+                )
+                changes = {
+                    name: _v3_component_change(base_components[name], after[name])
+                    for name in ("formula", "graph", "behavior_general", "constraint")
+                }
+                component_weights = {
+                    "formula": 0.20,
+                    "graph": 0.15 * rho,
+                    "behavior_general": 0.25,
+                    "constraint": 0.40,
+                }
+                raw_gain = sum(component_weights[name] * changes[name][0] for name in changes)
+                side_effect = sum(component_weights[name] * changes[name][1] for name in changes)
+                penalty = 0.50 * side_effect if use_side_effect_penalty else 0.0
+                net_gain = max(0.0, raw_gain - penalty)
+                downstream_nodes = descendants | {key}
+                recovery_numerator = 0.0
+                recovery_denominator = 0.0
+                for component_name, component_weight in component_weights.items():
+                    before_map = base_maps[component_name]
+                    after_map = after_maps[component_name]
+                    for node in downstream_nodes:
+                        before_value = float(before_map.get(node, 0.0))
+                        after_value = float(after_map.get(node, 0.0))
+                        recovery_denominator += component_weight * before_value
+                        recovery_numerator += component_weight * max(0.0, before_value - after_value)
+                downstream_recovery = min(
+                    1.0,
+                    recovery_numerator / max(1e-9, recovery_denominator),
+                )
+                candidate_path = path_responsibility * downstream_recovery
+                score = (
+                    0.20 * adaptive_prior
+                    + 0.60 * net_gain
+                    + 0.10 * net_gain * candidate_path
+                    + 0.10 * net_gain * candidate.quality
+                )
+                if score > best_score:
+                    best_score = score
+                    best_candidate = candidate
+                    best_values = {
+                        "raw_gain": raw_gain,
+                        "side_effect": side_effect,
+                        "net_gain": net_gain,
+                        "gain_formula": changes["formula"][0],
+                        "gain_graph": changes["graph"][0],
+                        "gain_behavior": changes["behavior_general"][0],
+                        "gain_constraint": changes["constraint"][0],
+                        "harm_formula": changes["formula"][1],
+                        "harm_graph": changes["graph"][1],
+                        "harm_behavior": changes["behavior_general"][1],
+                        "harm_constraint": changes["constraint"][1],
+                        "candidate_total_energy": candidate_energy,
+                        "candidate_constraint_energy": after["constraint"],
+                        "downstream_recovery": downstream_recovery,
+                        "candidate_path_responsibility": candidate_path,
+                    }
+        if best_candidate is None and candidates:
+            best_candidate = max(
+                candidates,
+                key=lambda item: (item.support, item.quality, -item.edit_cost, item.formula),
+            )
+            fallback_energy, fallback_components = _energy(model, {key: best_candidate.formula})
+            best_values["candidate_total_energy"] = fallback_energy
+            best_values["candidate_constraint_energy"] = fallback_components["constraint"]
+
+        reachable_terminals = sorted(
+            descendants & (structural_sinks | check_cells),
+            key=lambda cell: (
+                0 if cell in check_cells else 1,
+                graph.shortest_path_length(key, cell) or 10**9,
+                cell,
+            ),
+        )[:10]
+        paths = [graph.shortest_path(key, target) or [] for target in reachable_terminals]
+        serialized_paths = [
+            " -> ".join(f"{sheet}!{address}" for sheet, address in path)
+            for path in paths if path
+        ]
+        quality = best_candidate.quality if best_candidate else 0.0
+        net_gain = best_values["net_gain"]
+        results.append(LocalizationResult(
+            cell=key,
+            score=best_score,
+            candidate_formula=best_candidate.formula if best_candidate else None,
+            evidence={
+                "model_version": "v3",
+                "formula_anomaly": formula_scores[key],
+                "graph_anomaly": graph_scores[key],
+                "behavior_anomaly": behavior_scores[key],
+                "structure_reliability": rho,
+                "peer_coverage": peer_coverage,
+                "copy_consistency": copy_consistency,
+                "adaptive_weight_formula": w_formula,
+                "adaptive_weight_graph": w_graph,
+                "adaptive_weight_behavior": w_behavior,
+                "local_prior": local_priors[key],
+                "adaptive_prior": adaptive_prior,
+                "base_energy": base_energy,
+                "base_constraint_energy": base_components["constraint"],
+                "block_boundary_factor": boundary,
+                "descendants": len(descendants),
+                "influence": influence,
+                "check_reach": check_reach,
+                "structural_path_responsibility": path_responsibility,
+                "path_responsibility": best_values["candidate_path_responsibility"],
+                "reported_path": serialized_paths[0] if serialized_paths else "",
+                "reported_paths": " ; ".join(serialized_paths),
+                **best_values,
+                "candidate_quality": quality,
+                "candidate_support": best_candidate.support if best_candidate else 0,
+                "candidate_edit_kind": ",".join(best_candidate.edit_kinds) if best_candidate else "",
+                "candidate_source": ",".join(best_candidate.sources) if best_candidate else "",
+                "evidence_strength": net_gain * quality,
+                "candidate_evidence": "positive" if net_gain > 0 else "weak",
+            },
+        ))
+
+    results.sort(key=lambda item: (-item.score, item.cell))
+    elapsed = time.perf_counter() - start
+    for item in results:
+        item.evidence["localization_seconds"] = elapsed
+    return results
+
+
 def sfl_oracle_scores(model: WorkbookModel, failed_sinks: set[CellKey]):
     graph = model.dependency_graph()
     sinks = set(graph.sinks(model.formula_cells))
@@ -702,6 +959,14 @@ def localize(model: WorkbookModel, method: str = "formulaguard", *, failed_sinks
     method = method.lower()
     if method == "formulaguard":
         return gir_scores(model, candidate_limit=candidate_limit, gir_weights=gir_weights)
+    if method == "formulaguard_v3":
+        return car_v3_scores(model, candidate_limit=candidate_limit)
+    if method == "v3_ablate_adaptive":
+        return car_v3_scores(model, candidate_limit=candidate_limit, use_adaptive_graph=False)
+    if method == "v3_ablate_side_effect":
+        return car_v3_scores(model, candidate_limit=candidate_limit, use_side_effect_penalty=False)
+    if method == "v3_ablate_path":
+        return car_v3_scores(model, candidate_limit=candidate_limit, use_path_responsibility=False)
     if method == "pattern":
         return _results_from_scores(formula_anomaly_scores(model))
     if method == "graph":

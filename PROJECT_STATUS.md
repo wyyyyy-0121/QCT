@@ -1,6 +1,6 @@
 # FormulaGuard 项目状态
 
-更新时间：2026-08-10
+更新时间：2026-08-11
 
 ## 研究目标
 
@@ -63,20 +63,41 @@ smoke中Pattern和WARDER-like优于FormulaGuard，原因是两个可见版本的
 
 行为异常和内部约束已经共享同一次工作簿求值，消除了每个候选的重复重算，并增加回归测试保证以后不会恢复为双重求值。GPU不参与，因为当前算法是公式解析、图遍历和大量小规模分支求值，适合CPU多进程而非神经网络矩阵运算。
 
+## v2 冻结正式结果
+
+冻结提交：`672a62523ff9c0a36e2b9712bf7a9be3746c8f61`，标签 `freeze-v2`。
+
+- full 864/864 实例有效；MRR 0.9452，Top-1 0.9144，Top-5 0.9896；
+- 最强无真值基线 WARDER-like MRR 0.7788，配对差值 +0.1664，95% CI `[0.1422, 0.1899]`；
+- 干净表报警率 16.7%，Coverage@15 100%，正确修复 99.4%；
+- LibreOffice 交叉验证 906/906 公式值一致；
+- 局限：`ablate_graph` MRR 0.9682，高于完整模型约 0.023，因此不得宣称固定局部图异常项有效。
+
+## v3 当前进度
+
+- 已预注册结构自适应反事实责任模型，v2 证据和目录保持只读隔离；
+- 已实现局部结构可靠度、净反事实改善、副作用惩罚、候选级下游恢复与路径责任；
+- 已增加 Source-before-descendants、Source-first-in-causal-cone、Path Coverage、Repair Safety 和证据强度报警；
+- 已建立全新开发、验证和六个测试族，并增加独立控制链与无关合法公式区；
+- v3 smoke：12/12 有效，六类错误和三档深度完整，一键流水线与严格审计通过；
+- v3 smoke 只作为工程验收：v3 MRR/Top-1/修复率均为 100%，但 v2 同样为 100%，不能作为 v3 优势结论；
+- 六测试拓扑探针：36/36 有效，六个声明拓扑和六个实算签名均不同；
+- 27 项单元与回归测试通过。
+
 ## 当前未完成
 
-- v2 quick大型实验、门槛审计和配置冻结；
-- v2 full、敏感性、性能和LibreOffice批量交叉验证；
-- Enron真实语料下载、逐项清点和批量评测；
+- v3 quick 大型实验、门槛审计和配置冻结；
+- v3 full、敏感性、性能和 LibreOffice 批量验证；
+- Enron 真实语料下载、逐项清点和批量评测；
 - 正式论文结果章节、图表、三分钟演示和答辩材料。
 
 ## 下一步与分工
 
-当前先由Codex完成最后的短测试、文档一致性和Git改动审计。通过后用户只需执行一次大型v2 quick：
+当前先提交已通过短测试的 v3 源码。随后用户只需执行一次大型 v3 quick：
 
 ```bat
 cd /d D:\code\QCT
-run_pipeline.cmd quick -BenchmarkVersion v2 -Ablations -WithSensitivity
+run_pipeline.cmd quick -BenchmarkVersion v3 -Ablations -WithSensitivity -Workers 28
 ```
 
-不要提前运行该命令。Codex会先通知提交当前代码，因为quick要求已跟踪文件全部提交。运行完成后用户只需说“运行完成”，Codex直接读取 `results\v2_quick` 完成门槛判断和冻结。
+quick 要求已跟踪文件全部提交。运行完成后用户只需说“运行完成”，Codex直接读取 `results\v3_quick` 完成门槛判断和冻结。GPU不参与，因为该方法是符号公式解析、图遍历和大量小型工作簿重算；28 个 CPU 工作进程可充分利用当前 32 线程处理器并保留少量系统响应空间。

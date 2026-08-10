@@ -16,9 +16,10 @@ def main():
     comparison = json.loads((args.results / "paired_comparison.json").read_text(encoding="utf-8"))
     baseline = comparison["strongest_no_oracle_baseline"]
     indexed = {(row["instance_id"], row["method"]): row for row in rows}
+    primary_method = "formulaguard_v3" if any(row["method"] == "formulaguard_v3" for row in rows) else "formulaguard"
     output_rows = []
     for instance_id in sorted({row["instance_id"] for row in rows}):
-        fg = indexed.get((instance_id, "formulaguard"))
+        fg = indexed.get((instance_id, primary_method))
         base = indexed.get((instance_id, baseline))
         if not fg or not base:
             continue

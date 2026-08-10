@@ -71,9 +71,10 @@ def main():
     strongest = comparison["strongest_no_oracle_baseline"]
     preferred_order = [
         "random", "excel_like", "pattern", "graph", "behavior",
-        "excelint_like", "warder_like", "formulaguard", "sfl_oracle",
+        "excelint_like", "warder_like", "formulaguard", "formulaguard_v3", "sfl_oracle",
     ]
     summary_map = {row["method"]: row for row in summary}
+    primary_method = "formulaguard_v3" if "formulaguard_v3" in summary_map else "formulaguard"
     methods = [method for method in preferred_order if method in summary_map]
     bar_chart(output / "main_mrr.svg", "主实验：MRR", methods, [("MRR", {method: float(summary_map[method]["mrr"]) for method in methods})], percent=False)
     bar_chart(output / "main_top5.svg", "主实验：Top-5 命中率", methods, [("Top-5", {method: float(summary_map[method]["top5"]) for method in methods})], percent=True)
@@ -85,9 +86,9 @@ def main():
     ]:
         rows = load_csv(args.results / source_name)
         categories = sorted({row[key_name] for row in rows})
-        fg = {row[key_name]: float(row["mrr"]) for row in rows if row["method"] == "formulaguard"}
+        fg = {row[key_name]: float(row["mrr"]) for row in rows if row["method"] == primary_method}
         baseline = {row[key_name]: float(row["mrr"]) for row in rows if row["method"] == strongest}
-        bar_chart(output / filename, title, categories, [("FormulaGuard", fg), (strongest, baseline)], percent=False)
+        bar_chart(output / filename, title, categories, [(primary_method, fg), (strongest, baseline)], percent=False)
     print(output)
 
 

@@ -1,7 +1,14 @@
 import unittest
 from unittest.mock import patch
 
-from formulaguard.localize import _energy, constraint_residual_scores, behavior_anomaly_scores, generate_candidates, localize
+from formulaguard.localize import (
+    _energy,
+    _v3_component_change,
+    behavior_anomaly_scores,
+    constraint_residual_scores,
+    generate_candidates,
+    localize,
+)
 from formulaguard.workbook import WorkbookModel
 
 
@@ -95,6 +102,7 @@ class LocalizationTests(unittest.TestCase):
             "excelint_like",
             "warder_like",
             "formulaguard",
+            "formulaguard_v3",
         ]
         for method in methods:
             results = localize(model, method, candidate_limit=5)
@@ -116,6 +124,60 @@ class LocalizationTests(unittest.TestCase):
         self.assertIn("candidate_quality_responsibility", result.evidence)
         self.assertGreaterEqual(result.evidence["influence"], 0.0)
         self.assertLessEqual(result.evidence["influence"], 1.0)
+
+    def test_v3_adaptive_weights_sum_to_one_and_shift_graph_weight(self):
+        results = localize(repeated_formula_model(), "formulaguard_v3", candidate_limit=5)
+        for result in results:
+            evidence = result.evidence
+            total = (
+                evidence["adaptive_weight_formula"]
+                + evidence["adaptive_weight_graph"]
+                + evidence["adaptive_weight_behavior"]
+            )
+            self.assertAlmostEqual(total, 1.0)
+            self.assertGreaterEqual(evidence["structure_reliability"], 0.0)
+            self.assertLessEqual(evidence["structure_reliability"], 1.0)
+            self.assertLessEqual(evidence["adaptive_weight_graph"], 0.20)
+
+    def test_v3_component_change_records_side_effects(self):
+        gain, harm = _v3_component_change(0.4, 0.2)
+        self.assertAlmostEqual(gain, 0.5)
+        self.assertEqual(harm, 0.0)
+        gain, harm = _v3_component_change(0.4, 0.6)
+        self.assertEqual(gain, 0.0)
+        self.assertAlmostEqual(harm, 0.5)
+
+    def test_v3_exposes_counterfactual_and_path_evidence(self):
+        results = localize(repeated_formula_model(), "formulaguard_v3", candidate_limit=5)
+        self.assertEqual(len(results), len(repeated_formula_model().formula_cells))
+        evidence = results[0].evidence
+        required = {
+            "structure_reliability",
+            "adaptive_prior",
+            "raw_gain",
+            "side_effect",
+            "net_gain",
+            "gain_constraint",
+            "harm_constraint",
+            "path_responsibility",
+            "reported_path",
+            "evidence_strength",
+            "candidate_evidence",
+        }
+        self.assertTrue(required.issubset(evidence))
+        self.assertGreaterEqual(evidence["side_effect"], 0.0)
+        self.assertGreaterEqual(evidence["net_gain"], 0.0)
+
+    def test_v3_weak_candidate_cannot_receive_intervention_bonus(self):
+        model = WorkbookModel.from_cells(
+            {("Check", "A1"): 1},
+            {("Check", "B1"): "=A1", ("Check", "C1"): "=B1"},
+        )
+        results = localize(model, "formulaguard_v3", candidate_limit=1)
+        for result in results:
+            if result.evidence["net_gain"] == 0:
+                self.assertEqual(result.evidence["evidence_strength"], 0.0)
+                self.assertLessEqual(result.score, 0.20)
 
 
 if __name__ == "__main__":

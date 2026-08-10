@@ -13,6 +13,11 @@ EXPECTED_METHODS = {
     "ablate_formula", "ablate_graph", "ablate_behavior",
     "ablate_influence", "ablate_intervention",
 }
+EXPECTED_V3_METHODS = {
+    "random", "excel_like", "pattern", "graph", "behavior",
+    "excelint_like", "warder_like", "formulaguard", "formulaguard_v3", "sfl_oracle",
+    "v3_ablate_adaptive", "v3_ablate_side_effect", "v3_ablate_path",
+}
 
 
 def load_csv(path):
@@ -31,6 +36,7 @@ def main():
     manifest_path = args.benchmark / "dataset_manifest.json"
     manifest_preview = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else {}
     is_v2 = manifest_preview.get("name") == "PropagationBench-V2-Synthetic"
+    is_v3 = manifest_preview.get("name") == "PropagationBench-V3-Synthetic"
     required = [
         manifest_path,
         args.benchmark / "instances.jsonl",
@@ -56,9 +62,11 @@ def main():
         args.results / "pipeline.log",
         args.results / "results_workbook_formula_errors.ndjson",
     ]
-    if is_v2:
+    if is_v2 or is_v3:
         required.append(args.benchmark / "validation" / "structural_diversity.json")
         required.append(args.results / "figures" / "by_topology_mrr.svg")
+    if is_v3:
+        required.append(args.results / "v3_vs_v2.json")
     missing_files = [str(path) for path in required if not path.is_file()]
     checks = {}
     details = {}
@@ -86,13 +94,13 @@ def main():
         ]
         structural = (
             json.loads((args.benchmark / "validation" / "structural_diversity.json").read_text(encoding="utf-8"))
-            if is_v2 else None
+            if is_v2 or is_v3 else None
         )
         checks = {
             "validation_rate_at_least_95_percent": quality["valid_rate"] >= 0.95,
             "all_six_mutation_types_present": len(mutation_types) >= 6,
             "all_three_depth_bins_present": {"shallow", "medium", "deep"}.issubset(depths),
-            "all_core_methods_present": EXPECTED_METHODS.issubset(methods),
+            "all_core_methods_present": (EXPECTED_V3_METHODS if is_v3 else EXPECTED_METHODS).issubset(methods),
             "raw_results_nonempty": bool(raw),
             "labels_physically_separated": (args.benchmark / "evaluation_labels.jsonl").is_file(),
             "mode_instance_target_met": quality["valid"] >= minimum_instances,
@@ -102,6 +110,11 @@ def main():
         }
         if structural is not None:
             checks["structural_diversity_passed"] = bool(structural.get("passed"))
+        if is_v3:
+            primary = next(row for row in summary if row["method"] == "formulaguard_v3")
+            checks["v3_source_metrics_present"] = all(
+                field in primary for field in ("source_before_descendants", "source_first_in_causal_cone", "path_coverage", "repair_safety")
+            )
         details = {
             "valid_instances": quality["valid"],
             "valid_rate": quality["valid_rate"],
