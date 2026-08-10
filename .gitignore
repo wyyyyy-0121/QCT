@@ -1,0 +1,37 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Node dependencies supplied by the local Codex runtime
+node_modules/
+npm-debug.log*
+
+# Generated benchmarks and experiment outputs
+data/propagationbench_*/
+data/scaling/
+results/
+outputs/
+*.inspect.ndjson
+
+# Third-party workbooks are never committed before license review
+data/external/**/workbooks/
+
+# Rendering and temporary directories
+.tmp_render/
+_rendered_*/
+tmp/
+*.tmp
+~$*
+
+# IDE and operating-system noise
+.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+

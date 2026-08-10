@@ -1,0 +1,46 @@
+import unittest
+
+from formulaguard.formula import (
+    FormulaSyntaxError,
+    formula_fingerprint,
+    parse_formula,
+    small_edit_candidates,
+    small_edit_candidates_with_kinds,
+    translate_formula,
+)
+
+
+class FormulaTests(unittest.TestCase):
+    def test_relative_formula_fingerprint_is_copy_invariant(self):
+        self.assertEqual(
+            formula_fingerprint("=B5*C5", "D5"),
+            formula_fingerprint("=B9*C9", "D9"),
+        )
+
+    def test_translate_formula_preserves_absolute_references(self):
+        translated = translate_formula("=D5*(1+$B$2)", "E5", "E8")
+        self.assertEqual(translated, "=D8*(1+$B$2)")
+
+    def test_parser_accepts_supported_aggregate_and_if(self):
+        self.assertIsNotNone(parse_formula("=IF(SUM(A1:A3)>5,AVERAGE(A1:A3),0)"))
+
+    def test_small_edit_candidates_cover_operator_and_reference_repairs(self):
+        candidates = small_edit_candidates("=B6+C6")
+        self.assertIn("=B6*C6", candidates)
+        self.assertIn("=B5+C6", candidates)
+
+    def test_small_edit_candidates_cover_range_function_and_absolute_repairs(self):
+        candidates = dict(small_edit_candidates_with_kinds("=SUM(B$2:B6)"))
+        self.assertIn("=MAX(B$2:B6)", candidates)
+        self.assertIn("=SUM(B$2:B7)", candidates)
+        self.assertIn("=SUM(B2:B6)", candidates)
+        self.assertIn("range_boundary", candidates["=SUM(B$2:B7)"])
+        self.assertIn("absolute_reference", candidates["=SUM(B2:B6)"])
+
+    def test_parser_rejects_unsupported_text_literal(self):
+        with self.assertRaises(FormulaSyntaxError):
+            parse_formula('=IF(A1>0,"yes","no")')
+
+
+if __name__ == "__main__":
+    unittest.main()

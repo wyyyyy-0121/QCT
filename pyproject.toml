@@ -1,0 +1,14 @@
+[project]
+name = "formulaguard"
+version = "0.1.0"
+description = "Oracle-free root-cause localization for silent spreadsheet formula errors"
+requires-python = ">=3.11"
+authors = [{name = "FormulaGuard Research Team"}]
+
+[project.scripts]
+formulaguard = "formulaguard.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

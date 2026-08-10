@@ -1,0 +1,11 @@
+{
+  "name": "formulaguard-research",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bench:smoke": "node scripts/build_benchmarks.mjs --mode smoke --output data/propagationbench_smoke",
+    "bench:quick": "node scripts/build_benchmarks.mjs --mode quick --output data/propagationbench_quick",
+    "bench:full": "node scripts/build_benchmarks.mjs --mode full --output data/propagationbench_full"
+  }
+}
+
