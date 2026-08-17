@@ -5,11 +5,13 @@ Do not commit or redistribute third-party workbooks until their terms have been 
 ## Enron Error Corpus
 
 1. Download the files and properties labels from the official corpus page.
-2. Put workbooks under `data/external/enron/workbooks/` and properties files under `data/external/enron/properties/`.
+2. The official archive is kept locally under `data/external/enron/source/`.
+   Converted `.xlsx` files go under the Git-ignored
+   `data/external/enron/workbooks/converted/` directory.
 3. Build a manifest that retains every reviewed fault and every exclusion:
 
 ```bat
-python scripts\prepare_enron_manifest.py --workbooks data\external\enron\workbooks --properties data\external\enron\properties --output data\external\enron\manifest.csv
+python scripts\prepare_enron_manifest.py --workbooks data\external\enron\source\spreadsheets --properties data\external\enron\source\configuration_files --converted data\external\enron\workbooks\converted --output data\external\enron\manifest.csv --libreoffice "D:\Apps\libreoffice\program\soffice.exe"
 ```
 
 For legacy `.xls` files, add `--libreoffice "C:\Program Files\LibreOffice\program\soffice.exe"`. The audit must inventory 36 fault rows before parser exclusions.

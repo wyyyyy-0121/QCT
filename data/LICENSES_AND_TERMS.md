@@ -10,8 +10,19 @@
 ## Enron Error Corpus
 
 - Source page: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/enron-error-corpus/
-- Status: not yet downloaded.
-- Before use: record download date, original paper citation, redistribution terms, archive hash, and any excluded files.
+- Direct archive: https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/2017/06/Error_ENRON.zip
+- Downloaded for local evaluation: 2026-08-17.
+- Archive SHA-256: `4F23C7CBE5DC7534C83F11842AD732AC708E5FAF2C13F8ECF2A07C04292F4450`.
+- Archive inventory: 26 legacy `.xls` workbooks, 26 properties files, and the
+  official `enron-errors.xlsx` overview; the properties inventory is expected
+  to contain 36 fault rows.
+- Citation requested by the corpus page: Thomas Schmitz and Dietmar Jannach,
+  *Finding Errors in the Enron Spreadsheet Corpus*, VL/HCC 2016.
+- Redistribution: no explicit redistribution license was visible on the corpus
+  page at download time. Raw workbooks and properties remain local and ignored
+  by Git; do not publish or bundle them with competition materials.
+- Use restriction adopted by this project: research evaluation and quoted
+  aggregate statistics only, with source attribution and per-file exclusions.
 
 ## Modified EUSES Corpus
 
@@ -31,4 +42,3 @@
 - Repository: https://github.com/RUCKBReasoning/SpreadsheetBench
 - Status: optional parser/scalability stress test; not a root-cause ground-truth benchmark.
 - Before use: record repository commit, dataset version, and license.
-

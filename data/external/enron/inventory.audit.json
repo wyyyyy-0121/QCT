@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-08-17T14:40:51.387118+00:00",
+  "manifest_events": 36,
+  "manifest_included_events": 30,
+  "evaluation_ready_events": 30,
+  "evaluation_excluded_after_support_audit": 0,
+  "unique_ready_workbooks": 25,
+  "ready_events_by_parser_stratum": {
+    "high": 27,
+    "medium": 3,
+    "low": 0
+  },
+  "ready_events_over_intervention_cap": 18,
+  "formula_count_range_ready": [
+    2,
+    5156
+  ],
+  "quantitative_reporting_threshold_met": true,
+  "reporting_warning": "Parser coverage and event set size must accompany aggregate localization metrics. Multi-cell events are one event, not one sample per labeled cell."
+}

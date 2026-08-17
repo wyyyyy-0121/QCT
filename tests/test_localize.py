@@ -103,6 +103,7 @@ class LocalizationTests(unittest.TestCase):
             "warder_like",
             "formulaguard",
             "formulaguard_v3",
+            "formulaguard_v3_real",
         ]
         for method in methods:
             results = localize(model, method, candidate_limit=5)
@@ -199,6 +200,41 @@ class LocalizationTests(unittest.TestCase):
         )
         for row in range(2, 14):
             self.assertIn(f"Model!B{row}", source.evidence["reported_paths"])
+
+    def test_v3_real_falls_back_to_v2_order_when_no_positive_evidence(self):
+        model = WorkbookModel.from_cells(
+            {("Plain", "A1"): 1},
+            {("Plain", "B1"): "=A1", ("Plain", "C1"): "=B1"},
+        )
+        v2 = localize(model, "formulaguard", candidate_limit=1)
+        v3_real = localize(model, "formulaguard_v3_real", candidate_limit=1)
+        self.assertEqual([item.cell for item in v3_real], [item.cell for item in v2])
+        self.assertTrue(all(
+            item.evidence["counterfactual_evidence_strength"] == 0
+            for item in v3_real
+        ))
+
+    def test_v3_real_exposes_selective_evidence_contract(self):
+        results = localize(repeated_formula_model(), "formulaguard_v3_real", candidate_limit=5)
+        for result in results:
+            evidence = result.evidence
+            self.assertIn(evidence["diagnostic_status"], {
+                "counterfactual_supported", "pattern_only", "insufficient_evidence"
+            })
+            self.assertEqual(
+                evidence["fusion_policy"],
+                "v2_score_then_counterfactual_tiebreak",
+            )
+
+    def test_v3_real_never_crosses_distinct_v2_score_groups(self):
+        model = repeated_formula_model()
+        v2 = localize(model, "formulaguard", candidate_limit=5)
+        v3_real = localize(model, "formulaguard_v3_real", candidate_limit=5)
+        v3_position = {item.cell: index for index, item in enumerate(v3_real)}
+        for left in v2:
+            for right in v2:
+                if left.score > right.score:
+                    self.assertLess(v3_position[left.cell], v3_position[right.cell])
 
 
 if __name__ == "__main__":

@@ -934,6 +934,108 @@ def car_v3_scores(
     return results
 
 
+def _dense_score_percentiles(results: Sequence[LocalizationResult]) -> dict[CellKey, float]:
+    """Normalize score groups to [0, 1] while preserving exact ties."""
+    unique = sorted({float(item.score) for item in results}, reverse=True)
+    if len(unique) <= 1:
+        return {item.cell: 0.0 for item in results}
+    percentiles = {
+        score: 1.0 - index / (len(unique) - 1)
+        for index, score in enumerate(unique)
+    }
+    return {item.cell: percentiles[float(item.score)] for item in results}
+
+
+def v3_real_scores(
+    model: WorkbookModel,
+    *,
+    candidate_limit: int = 15,
+):
+    """Evidence-selective fusion for real workbooks.
+
+    v2 GIR supplies the primary score. Frozen v3 counterfactual evidence may
+    only break exact v2-score ties; it cannot cross a non-tied base score. This
+    is a selective diagnostic layer rather than another tuned score blend.
+    """
+    started = time.perf_counter()
+    base_results = gir_scores(model, candidate_limit=candidate_limit)
+    car_results = car_v3_scores(model, candidate_limit=candidate_limit)
+    base_by_cell = {item.cell: item for item in base_results}
+    car_by_cell = {item.cell: item for item in car_results}
+    base_percentiles = _dense_score_percentiles(base_results)
+    unique_base_scores = sorted({float(item.score) for item in base_results}, reverse=True)
+    base_group_priority = {
+        score: float(len(unique_base_scores) - index)
+        for index, score in enumerate(unique_base_scores)
+    }
+    strengths = {
+        item.cell: float(item.evidence.get("evidence_strength", 0.0))
+        for item in car_results
+    }
+    max_strength = max(strengths.values(), default=0.0)
+    supported_cells = sum(value > 0 for value in strengths.values())
+    base_ranks = {item.cell: rank for rank, item in enumerate(base_results, 1)}
+    car_ranks = {item.cell: rank for rank, item in enumerate(car_results, 1)}
+
+    results: list[LocalizationResult] = []
+    for cell in model.formula_cells:
+        base = base_by_cell[cell]
+        car = car_by_cell[cell]
+        strength = strengths[cell]
+        normalized_evidence = strength / max_strength if max_strength > 0 else 0.0
+        # The evidence term is strictly smaller than one base-score group, so
+        # it can only reorder cells whose v2 raw scores are exactly equal.
+        score = base_group_priority[float(base.score)] + 0.50 * normalized_evidence
+        if strength > 0:
+            candidate_formula = car.candidate_formula
+            status = "counterfactual_supported"
+        elif base.score > 0:
+            candidate_formula = base.candidate_formula
+            status = "pattern_only"
+        else:
+            candidate_formula = base.candidate_formula or car.candidate_formula
+            status = "insufficient_evidence"
+        results.append(LocalizationResult(
+            cell=cell,
+            score=score,
+            candidate_formula=candidate_formula,
+            evidence={
+                "model_version": "v3-real",
+                "diagnostic_status": status,
+                "base_method": "formulaguard_v2_gir",
+                "counterfactual_method": "frozen_v3_car",
+                "base_rank": base_ranks[cell],
+                "car_rank": car_ranks[cell],
+                "base_raw_score": base.score,
+                "car_raw_score": car.score,
+                "base_percentile": base_percentiles[cell],
+                "counterfactual_evidence_strength": strength,
+                "counterfactual_evidence_normalized": normalized_evidence,
+                "counterfactual_supported_cells": supported_cells,
+                "max_counterfactual_evidence_strength": max_strength,
+                "fusion_policy": "v2_score_then_counterfactual_tiebreak",
+                "counterfactual_tiebreak_cap": 0.50,
+                "candidate_source": (
+                    car.evidence.get("candidate_source", "") if strength > 0
+                    else base.evidence.get("candidate_source", "")
+                ),
+                "candidate_edit_kind": (
+                    car.evidence.get("candidate_edit_kind", "") if strength > 0
+                    else base.evidence.get("candidate_edit_kind", "")
+                ),
+                "candidate_quality": (
+                    car.evidence.get("candidate_quality", 0.0) if strength > 0
+                    else base.evidence.get("candidate_quality", 0.0)
+                ),
+            },
+        ))
+    results.sort(key=lambda item: (-item.score, item.cell))
+    elapsed = time.perf_counter() - started
+    for item in results:
+        item.evidence["localization_seconds"] = elapsed
+    return results
+
+
 def sfl_oracle_scores(model: WorkbookModel, failed_sinks: set[CellKey]):
     graph = model.dependency_graph()
     sinks = set(graph.sinks(model.formula_cells))
@@ -961,6 +1063,8 @@ def localize(model: WorkbookModel, method: str = "formulaguard", *, failed_sinks
         return gir_scores(model, candidate_limit=candidate_limit, gir_weights=gir_weights)
     if method == "formulaguard_v3":
         return car_v3_scores(model, candidate_limit=candidate_limit)
+    if method in {"formulaguard_v3_real", "v3_real"}:
+        return v3_real_scores(model, candidate_limit=candidate_limit)
     if method == "v3_ablate_adaptive":
         return car_v3_scores(model, candidate_limit=candidate_limit, use_adaptive_graph=False)
     if method == "v3_ablate_side_effect":

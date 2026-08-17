@@ -20,6 +20,7 @@ outputs/
 
 # Third-party workbooks are never committed before license review
 data/external/**/workbooks/
+data/external/enron/source/
 
 # Rendering and temporary directories
 .tmp_render/
@@ -34,4 +35,3 @@ tmp/
 .DS_Store
 Thumbs.db
 desktop.ini
-
