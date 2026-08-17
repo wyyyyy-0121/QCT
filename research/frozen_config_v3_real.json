@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "model_version": "v3-real-b",
-  "created_at": "2026-08-17T14:56:35.918102+00:00",
-  "implementation_commit": "6e5a642324b72f04331c14ec57a69c2fd438ae61",
+  "created_at": "2026-08-17T20:33:35.456626+00:00",
+  "implementation_commit": "8d105808d399686a5d33ab3fc64205503372d4ee",
   "selection_rule": "v2_raw_score_primary_then_positive_car_evidence_breaks_exact_ties_only",
   "candidate_limit": 15,
   "counterfactual_tiebreak_cap": 0.5,
@@ -27,7 +27,7 @@
       "enron_event_35"
     ],
     "manifest_sha256": "d5fdf775488a76cb1f0eb8510d5b6165525369d5b0d024efcc750be4fbf6e1d2",
-    "raw_results_sha256": "a854e754ce9bc825e60bad5b47b5038c66036c6c40d0a40d60c3fecd475a26ac",
+    "raw_results_sha256": "0f0ff0a9811c32e484f00fe2b86f4ca9aa10b26b91f09dc9b813892c410a9e48",
     "analysis_sha256": "971b7ee42d7aea3ffdef9eb392aedd5c0dc32f089df97ad743b3b9b1f08352da",
     "mrr_difference_vs_v2": 0.0,
     "worse_events_vs_v2": 0
@@ -60,7 +60,7 @@
   },
   "source_hashes": {
     "formulaguard/localize.py": "ca8339b1cc8435a91483fa0f755e565796e6a476f89da5a448cbb4c8c8a9cea0",
-    "scripts/run_external_evaluation.py": "cdaccc2f832fe6f2831ddcf81d828c6e74d1baaa087d97b5787210e2651331df",
+    "scripts/run_external_evaluation.py": "da7e946d86ef6841763054c816e1af7cc9b0b09dcf5be8344c74cad39d6ed38d",
     "scripts/analyze_external_results.py": "a3c8d50a3b78a630293a245052df8367cc2ee8061020a47dbebedeb107b0a639"
   }
 }
