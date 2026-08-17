@@ -11,7 +11,7 @@ python scripts\run_external_evaluation.py ^
   --manifest data\external\enron\test_manifest.csv ^
   --output results\enron_test_v3_real ^
   --candidate-limit 15 ^
-  --workers 16
+  --workers 24
 if errorlevel 1 exit /b %errorlevel%
 
 python scripts\analyze_external_results.py ^
