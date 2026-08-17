@@ -12,7 +12,7 @@
 | E5 | v3-real B不改变不同v2分数组，只把反事实证据作为并列裁决和证据标签 | `formulaguard/localize.py`、单元测试、`results/enron_pilot_real_b/` | 开发集验证完成 | 不能称为真实数据上精度提升 |
 | E6 | Enron标签按36个错误事件而非630个单元格统计，30个公式事件可评 | `data/external/enron/manifest.audit.json`、`inventory.audit.json` | 已完成 | 不能把多单元格范围拆成独立样本扩大样本量 |
 | E7 | 外部测试集在规则冻结前保持未运行，开发/测试清单不相交 | `data/external/enron/split_lock.json` | 已锁定 | 测试集运行后不得再改规则或阈值 |
-| E8 | v3-real在20个未见Enron事件上的定位效果 | `results/enron_test_v3_real/` | 待大型实验 | 未完成前不得写结果性结论 |
+| E8 | v3-real在20个未见Enron事件上的定位效果 | `results/enron_test_v3_real/` | 待运行 `run_enron_test.cmd` | 未完成前不得写结果性结论 |
 | E9 | v3在100至5000公式规模下的时间成本 | `results/v3_full/performance_v3.csv` | 待大型实验 | 旧v2性能文件不能代替v3 |
 | E10 | 公式计算与LibreOffice一致性 | `results/v3_full/libreoffice_validation.csv` | 已完成 | 这验证计算一致性，不验证错误标签正确性 |
 
