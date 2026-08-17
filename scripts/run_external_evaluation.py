@@ -32,32 +32,19 @@ METHODS = [
 ]
 
 
-def evaluate_instance(task):
-    """Evaluate one labeled event in a worker process without changing scoring."""
-    instance, manifest_parent, candidate_limit = task
-    workbook_path = (Path(manifest_parent) / instance["workbook"]).resolve()
-    if not workbook_path.is_file():
-        return [], {"instance_id": instance["instance_id"], "reason": f"workbook_not_found:{workbook_path}"}
+def _event_context(instance, model):
+    """Validate one event against an already-loaded workbook."""
     try:
         source_labels = [
             label.strip() for label in instance.get("source_cells", "").split(";")
             if label.strip()
         ] or [instance.get("source_cell", "").strip()]
         sources = {parse_cell_label(label) for label in source_labels if label}
-        model = WorkbookModel.from_xlsx(workbook_path)
     except Exception as exc:
-        return [], {"instance_id": instance["instance_id"], "reason": f"load_error:{type(exc).__name__}:{exc}"}
+        return None, {"instance_id": instance["instance_id"], "reason": f"label_error:{type(exc).__name__}:{exc}"}
     formula_sources = sources & set(model.formulas)
     if not formula_sources:
-        return [], {"instance_id": instance["instance_id"], "reason": "no_labeled_source_cell_is_a_formula"}
-
-    supported_formula_count = 0
-    for formula in model.formulas.values():
-        try:
-            parse_formula(formula)
-            supported_formula_count += 1
-        except FormulaSyntaxError:
-            pass
+        return None, {"instance_id": instance["instance_id"], "reason": "no_labeled_source_cell_is_a_formula"}
     supported_sources = set()
     source_parse_errors = []
     for source in formula_sources:
@@ -68,14 +55,66 @@ def evaluate_instance(task):
             source_parse_errors.append(str(exc))
     if not supported_sources:
         reason = f"all_source_formulas_unsupported:{' | '.join(source_parse_errors[:3])}"
-        return [], {"instance_id": instance["instance_id"], "reason": reason}
+        return None, {"instance_id": instance["instance_id"], "reason": reason}
+    return {
+        "instance": instance,
+        "sources": sources,
+        "formula_sources": formula_sources,
+        "supported_sources": supported_sources,
+    }, None
+
+
+def evaluate_workbook_method(task):
+    """Score one method for all labeled events in one workbook.
+
+    The previous scheduler assigned every complete workbook evaluation to a
+    process.  That created a long three-workbook tail.  This unit of work lets
+    the global pool interleave methods from the same large workbook while
+    retaining exactly the same scoring code and event-level metrics.
+    """
+    workbook_path_text, instances, candidate_limit, method = task
+    workbook_path = Path(workbook_path_text)
+    if not workbook_path.is_file():
+        return [], [
+            {"instance_id": instance["instance_id"], "reason": f"workbook_not_found:{workbook_path}"}
+            for instance in instances
+        ], method, workbook_path.name
+    try:
+        model = WorkbookModel.from_xlsx(workbook_path)
+    except Exception as exc:
+        return [], [
+            {"instance_id": instance["instance_id"], "reason": f"load_error:{type(exc).__name__}:{exc}"}
+            for instance in instances
+        ], method, workbook_path.name
+
+    supported_formula_count = 0
+    for formula in model.formulas.values():
+        try:
+            parse_formula(formula)
+            supported_formula_count += 1
+        except FormulaSyntaxError:
+            pass
+    contexts = []
+    exclusions = []
+    for instance in instances:
+        context, exclusion = _event_context(instance, model)
+        if exclusion:
+            exclusions.append(exclusion)
+        else:
+            contexts.append(context)
+    if not contexts:
+        return [], exclusions, method, workbook_path.name
 
     parser_coverage = supported_formula_count / max(1, len(model.formulas))
+    started = time.perf_counter()
+    results = localize(model, method, candidate_limit=candidate_limit)
+    elapsed = time.perf_counter() - started
     rows = []
-    for method in METHODS:
-        started = time.perf_counter()
-        results = localize(model, method, candidate_limit=candidate_limit)
-        elapsed = time.perf_counter() - started
+    for context in contexts:
+        instance = context["instance"]
+        sources = context["sources"]
+        formula_sources = context["formula_sources"]
+        supported_sources = context["supported_sources"]
         ranked_hits = [
             (i, result) for i, result in enumerate(results, 1)
             if result.cell in supported_sources
@@ -110,7 +149,7 @@ def evaluate_instance(task):
             "car_rank": source_result.evidence.get("car_rank", "") if source_result else "",
             "runtime_seconds": elapsed,
         })
-    return rows, None
+    return rows, exclusions, method, workbook_path.name
 
 
 def main():
@@ -147,17 +186,41 @@ def main():
             })
             continue
         included.append(instance)
-    auto_workers = min(16, max(1, (os.cpu_count() or 2) // 2), max(1, len(included)))
-    workers = auto_workers if args.workers == 0 else max(1, min(args.workers, len(included)))
-    tasks = [(instance, str(args.manifest.parent), args.candidate_limit) for instance in included]
-    print(f"[scheduler] events={len(tasks)} workers={workers}", flush=True)
+    workbook_groups = {}
+    for instance in included:
+        workbook_path = (args.manifest.parent / instance["workbook"]).resolve()
+        workbook_groups.setdefault(str(workbook_path), []).append(instance)
+    method_priority = {
+        "formulaguard_v3_real": 0,
+        "formulaguard_v3": 1,
+        "formulaguard": 2,
+    }
+    tasks = [
+        (path, group, args.candidate_limit, method)
+        for path, group in workbook_groups.items()
+        for method in METHODS
+    ]
+    tasks.sort(key=lambda task: (
+        -Path(task[0]).stat().st_size if Path(task[0]).is_file() else 0,
+        method_priority.get(task[3], 3),
+        task[3],
+    ))
+    auto_workers = min(16, max(1, (os.cpu_count() or 2) // 2), max(1, len(tasks)))
+    workers = auto_workers if args.workers == 0 else max(1, min(args.workers, len(tasks)))
+    print(
+        f"[scheduler] events={len(included)} workbooks={len(workbook_groups)} "
+        f"method_jobs={len(tasks)} workers={workers}",
+        flush=True,
+    )
     with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
-        for index, (event_rows, exclusion) in enumerate(executor.map(evaluate_instance, tasks), 1):
-            rows.extend(event_rows)
-            if exclusion:
-                exclusions.append(exclusion)
-            print(f"[{index}/{len(tasks)}] completed", flush=True)
+        futures = [executor.submit(evaluate_workbook_method, task) for task in tasks]
+        for index, future in enumerate(concurrent.futures.as_completed(futures), 1):
+            method_rows, method_exclusions, method, workbook_name = future.result()
+            rows.extend(method_rows)
+            exclusions.extend(method_exclusions)
+            print(f"[{index}/{len(tasks)}] {workbook_name} :: {method}", flush=True)
     rows.sort(key=lambda row: (row["instance_id"], METHODS.index(row["method"])))
+    exclusions = list({(row["instance_id"], row["reason"]): row for row in exclusions}.values())
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / "external_exclusions.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=["instance_id", "reason"])
