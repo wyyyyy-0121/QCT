@@ -71,8 +71,10 @@ V4_MODERATE_PROMOTION = 2
 def v4_default_parameters() -> dict[str, float | int | str]:
     """Return the exact public parameter contract for the v4 dev model."""
     return {
-        "model_version": "v4-dev",
-        "fusion": "rrf_formula_graph_legacy_prior",
+        "model_version": "v4-dev-r1",
+        "fusion": "graph_safe_two_lane_with_consensus_screening",
+        "graph_signal": "propagation_weighted_review_score",
+        "screening": "best_of_consensus_and_graph_safe_within_one_fixed_budget",
         "rrf_k": V4_RRF_K,
         "intervention_budget": V4_INTERVENTION_BUDGET,
         "scope_depth": V4_SCOPE_DEPTH,
@@ -402,6 +404,30 @@ def graph_anomaly_scores(model: WorkbookModel, overrides: Mapping[CellKey, str] 
                 if same_column_older and previous not in direct_keys:
                     result[key] = 1.0
     return result
+
+
+def graph_review_scores(
+    model: WorkbookModel,
+    overrides: Mapping[CellKey, str] | None = None,
+) -> dict[CellKey, float]:
+    """Graph anomaly weighted by propagation exposure for review ranking."""
+    graph = model.dependency_graph(overrides)
+    anomalies = graph_anomaly_scores(model, overrides)
+    if len(model.formula_cells) <= 500:
+        descendant_counts = {key: len(graph.descendants(key)) for key in model.formula_cells}
+        maximum = max(descendant_counts.values(), default=1) or 1
+        return {
+            key: anomalies[key] * (1 + descendant_counts[key] / maximum)
+            for key in model.formula_cells
+        }
+    maximum = max(
+        (len(graph.dependents.get(key, ())) for key in model.formula_cells),
+        default=1,
+    ) or 1
+    return {
+        key: anomalies[key] * (1 + len(graph.dependents.get(key, ())) / maximum)
+        for key in model.formula_cells
+    }
 
 
 def _energy(model: WorkbookModel, overrides: Mapping[CellKey, str] | None = None,
@@ -1220,6 +1246,7 @@ def v4_scores(
     graph = model.dependency_graph()
     formula_scores = formula_anomaly_scores(model)
     graph_scores = graph_anomaly_scores(model)
+    review_graph_scores = graph_review_scores(model)
     behavior_scores = behavior_anomaly_scores(model)
     legacy_prior = {
         cell: (
@@ -1230,29 +1257,80 @@ def v4_scores(
         for cell in model.formula_cells
     }
     formula_ranks = _competition_ranks(formula_scores)
-    graph_ranks = _competition_ranks(graph_scores)
+    raw_graph_ranks = _competition_ranks(graph_scores)
+    ordered_review_graph = sorted(
+        model.formula_cells,
+        key=lambda cell: (-review_graph_scores[cell], cell),
+    )
+    review_graph_ranks = {
+        cell: rank for rank, cell in enumerate(ordered_review_graph, 1)
+    }
     legacy_ranks = _competition_ranks(legacy_prior)
-    base_scores = {
+    consensus_scores = {
         cell: (
             1.0 / (rrf_k + formula_ranks[cell])
-            + 1.0 / (rrf_k + graph_ranks[cell])
+            + 1.0 / (rrf_k + raw_graph_ranks[cell])
             + 1.0 / (rrf_k + legacy_ranks[cell])
         )
         for cell in model.formula_cells
     }
-    ordered_base = sorted(
+    ordered_consensus = sorted(
         model.formula_cells,
         key=lambda cell: (
-            -base_scores[cell],
+            -consensus_scores[cell],
             -graph_scores[cell],
             -formula_scores[cell],
             -legacy_prior[cell],
             cell,
         ),
     )
+    consensus_ranks = {
+        cell: rank for rank, cell in enumerate(ordered_consensus, 1)
+    }
+    unified_scores = {
+        cell: (
+            1.0 / (rrf_k + formula_ranks[cell])
+            + 1.0 / (rrf_k + review_graph_ranks[cell])
+            + 1.0 / (rrf_k + legacy_ranks[cell])
+        )
+        for cell in model.formula_cells
+    }
+    ordered_unified = sorted(
+        model.formula_cells,
+        key=lambda cell: (
+            -unified_scores[cell],
+            review_graph_ranks[cell],
+            formula_ranks[cell],
+            legacy_ranks[cell],
+            cell,
+        ),
+    )
+    unified_ranks = {cell: rank for rank, cell in enumerate(ordered_unified, 1)}
+    ordered_base = sorted(
+        model.formula_cells,
+        key=lambda cell: (
+            min(review_graph_ranks[cell], unified_ranks[cell]),
+            review_graph_ranks[cell] + unified_ranks[cell],
+            review_graph_ranks[cell],
+            unified_ranks[cell],
+            cell,
+        ),
+    )
     base_ranks = {cell: rank for rank, cell in enumerate(ordered_base, 1)}
-    intervention_cells = set(ordered_base[:max_intervention_cells])
-    intervention_ranks = {cell: rank for rank, cell in enumerate(ordered_base, 1)}
+    ordered_screening = sorted(
+        model.formula_cells,
+        key=lambda cell: (
+            min(consensus_ranks[cell], base_ranks[cell]),
+            consensus_ranks[cell] + base_ranks[cell],
+            base_ranks[cell],
+            consensus_ranks[cell],
+            cell,
+        ),
+    )
+    screening_ranks = {
+        cell: rank for rank, cell in enumerate(ordered_screening, 1)
+    }
+    intervention_cells = set(ordered_screening[:max_intervention_cells])
 
     base_global_energy, _, base_maps = _energy(model, include_maps=True)
     n = len(model.formula_cells)
@@ -1384,20 +1462,24 @@ def v4_scores(
             score=score,
             candidate_formula=candidate.formula if candidate else None,
             evidence={
-                "model_version": "v4-dev",
-                "fusion_policy": "rrf_prior_then_locally_calibrated_bounded_promotion",
+                "model_version": "v4-dev-r1",
+                "fusion_policy": "graph_safe_two_lane_then_calibrated_bounded_promotion",
                 "formula_anomaly": formula_scores[cell],
                 "graph_anomaly": graph_scores[cell],
                 "behavior_anomaly": behavior_scores[cell],
                 "legacy_prior": legacy_prior[cell],
                 "formula_rank": formula_ranks[cell],
-                "graph_rank": graph_ranks[cell],
+                "raw_graph_rank": raw_graph_ranks[cell],
+                "graph_rank": review_graph_ranks[cell],
                 "legacy_prior_rank": legacy_ranks[cell],
                 "rrf_k": rrf_k,
-                "rrf_score": base_scores[cell],
+                "rrf_score": unified_scores[cell],
+                "consensus_rrf_score": consensus_scores[cell],
+                "consensus_rrf_rank": consensus_ranks[cell],
+                "unified_rrf_rank": unified_ranks[cell],
                 "base_rank": base_ranks[cell],
                 "intervention_selected": int(cell in intervention_cells),
-                "intervention_selection_rank": intervention_ranks[cell],
+                "intervention_selection_rank": screening_ranks[cell],
                 "intervention_budget": max_intervention_cells,
                 "candidate_count": int(record["candidate_count"]),
                 "diagnostic_status": str(record["status"]),
@@ -1470,16 +1552,7 @@ def localize(model: WorkbookModel, method: str = "formulaguard", *, failed_sinks
     if method == "pattern":
         return _results_from_scores(formula_anomaly_scores(model))
     if method == "graph":
-        graph = model.dependency_graph()
-        anomalies = graph_anomaly_scores(model)
-        if len(model.formula_cells) <= 500:
-            descendant_counts = {k: len(graph.descendants(k)) for k in model.formula_cells}
-            max_desc = max(descendant_counts.values(), default=1) or 1
-            scores = {k: anomalies[k] * (1 + descendant_counts[k] / max_desc) for k in model.formula_cells}
-        else:
-            max_out = max((len(graph.dependents.get(k, ())) for k in model.formula_cells), default=1) or 1
-            scores = {k: anomalies[k] * (1 + len(graph.dependents.get(k, ())) / max_out) for k in model.formula_cells}
-        return _results_from_scores(scores)
+        return _results_from_scores(graph_review_scores(model))
     if method == "behavior":
         return _results_from_scores(behavior_anomaly_scores(model))
     if method == "excel_like":

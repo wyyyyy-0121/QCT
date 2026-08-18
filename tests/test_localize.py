@@ -9,6 +9,7 @@ from formulaguard.localize import (
     behavior_anomaly_scores,
     constraint_residual_scores,
     generate_candidates,
+    graph_review_scores,
     localize,
     v4_default_parameters,
     v4_scores,
@@ -270,11 +271,21 @@ class LocalizationTests(unittest.TestCase):
         self.assertEqual(ranks[("Model", "A1")], 2)
         self.assertEqual(ranks[("Model", "A3")], 2)
 
+    def test_graph_review_helper_matches_public_graph_ranking(self):
+        model = repeated_formula_model()
+        expected = [item.cell for item in localize(model, "graph")]
+        scores = graph_review_scores(model)
+        actual = sorted(model.formula_cells, key=lambda cell: (-scores[cell], cell))
+        self.assertEqual(actual, expected)
+
     def test_v4_exposes_selection_calibration_and_rank_contract(self):
         results = localize(repeated_formula_model(), "formulaguard_v4", candidate_limit=5)
         self.assertEqual(len(results), len(repeated_formula_model().formula_cells))
         required = {
             "rrf_score",
+            "consensus_rrf_rank",
+            "unified_rrf_rank",
+            "graph_rank",
             "base_rank",
             "intervention_selected",
             "candidate_count",

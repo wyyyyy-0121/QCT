@@ -147,6 +147,26 @@ def evaluate_workbook_method(task):
             len(supported_sources) == 1 and correct and repair
             and normalized_formula(correct) == normalized_formula(repair)
         )
+        top5_cells = ";".join(result.cell_label for result in results[:5])
+        top5_statuses = ";".join(
+            str(result.evidence.get("diagnostic_status", "")) for result in results[:5]
+        )
+        strong_cell_count = sum(
+            result.evidence.get("diagnostic_status") == "strong_counterfactual"
+            for result in results
+        )
+        moderate_cell_count = sum(
+            result.evidence.get("diagnostic_status") == "moderate_counterfactual"
+            for result in results
+        )
+        strong_cells = ";".join(
+            result.cell_label for result in results
+            if result.evidence.get("diagnostic_status") == "strong_counterfactual"
+        )
+        moderate_cells = ";".join(
+            result.cell_label for result in results
+            if result.evidence.get("diagnostic_status") == "moderate_counterfactual"
+        )
         rows.append({
             "instance_id": instance["instance_id"], "workbook": instance["workbook"],
             "error_event": instance.get("error_event", ""), "error_type": instance.get("error_type", ""),
@@ -155,6 +175,9 @@ def evaluate_workbook_method(task):
             "parser_coverage": parser_coverage, "labeled_cell_count": len(sources),
             "labeled_formula_count": len(formula_sources),
             "supported_source_formula_count": len(supported_sources),
+            "supported_source_cells": ";".join(
+                f"{sheet}!{address}" for sheet, address in sorted(supported_sources)
+            ),
             "source_parser_coverage": len(supported_sources) / max(1, len(formula_sources)),
             "rank": rank, "top1": int(rank <= 1), "top3": int(rank <= 3), "top5": int(rank <= 5),
             "mrr": 1 / rank, "exam": rank / max(1, len(model.formulas)),
@@ -162,11 +185,21 @@ def evaluate_workbook_method(task):
             "source_score": source_result.score if source_result else 0.0,
             "candidate_formula": repair or "",
             "candidate_evidence": source_result.evidence.get("candidate_evidence", "") if source_result else "",
+            "top5_cells": top5_cells,
+            "top5_diagnostic_statuses": top5_statuses,
+            "strong_cell_count": strong_cell_count,
+            "moderate_cell_count": moderate_cell_count,
+            "strong_cells": strong_cells,
+            "moderate_cells": moderate_cells,
             "net_gain": source_result.evidence.get("net_gain", "") if source_result else "",
             "structure_reliability": source_result.evidence.get("structure_reliability", "") if source_result else "",
             "diagnostic_status": source_result.evidence.get("diagnostic_status", "") if source_result else "",
             "counterfactual_evidence_strength": source_result.evidence.get("counterfactual_evidence_strength", "") if source_result else "",
             "base_rank": source_result.evidence.get("base_rank", "") if source_result else "",
+            "raw_graph_rank": source_result.evidence.get("raw_graph_rank", "") if source_result else "",
+            "graph_rank": source_result.evidence.get("graph_rank", "") if source_result else "",
+            "consensus_rrf_rank": source_result.evidence.get("consensus_rrf_rank", "") if source_result else "",
+            "unified_rrf_rank": source_result.evidence.get("unified_rrf_rank", "") if source_result else "",
             "car_rank": source_result.evidence.get("car_rank", "") if source_result else "",
             "intervention_selected": source_result.evidence.get("intervention_selected", "") if source_result else "",
             "intervention_selection_rank": source_result.evidence.get("intervention_selection_rank", "") if source_result else "",
