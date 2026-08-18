@@ -1,0 +1,33 @@
+{
+  "receipt_version": 1,
+  "recorded_at": "2026-08-18T18:56:27.4379454+08:00",
+  "protocol": "label_free_prediction_then_sha256_lock",
+  "git_head_at_prediction_review": "bce6bed342bab79c83f0b595b5f800a3d48c7d78",
+  "events": 18,
+  "methods": 5,
+  "event_method_groups": 90,
+  "ranking_rows": 7770,
+  "worker_processes": 16,
+  "prediction_lock_sha256": "a1886b9f5eb9c5ef8e7b06bd2c40c21d531241424ffc250204d3252fb135ad64",
+  "rankings_sha256": "91365fc58dbb46facc426320313d52fefe5790245e3aa5f3cbcc4e0c406e8315",
+  "metadata_sha256": "f3b6f7399044e0ad689c0bb16387e8421a598bd64906b0eb78b2196b2d39964d",
+  "manifest_sha256": "78f440b65bd3a18272c937ce973f53e7127d2b7649a5bf372c44c9a9d9794122",
+  "frozen_config_sha256": "33f527e5a49fc1504e97c5deb92c78f0547f7647c7dd036252fefd37018754b7",
+  "secret_archive": {
+    "filename": "FormulaGuard_V4_blind_SECRET_keep_outside_project.zip",
+    "sha256_before_reveal": "2fc86cfcb4733e87b0f23efa1e090eb0843f00d96e7e8653945e00c9f78806fe",
+    "length_bytes": 128866,
+    "last_write_time": "2026-08-18T18:48:31.7860958+08:00"
+  },
+  "validation": {
+    "lock_hashes_verified": true,
+    "manifest_hash_verified": true,
+    "frozen_config_hash_verified": true,
+    "workbook_hash_count": 18,
+    "source_hash_mismatches": 0,
+    "missing_event_method_groups": 0,
+    "invalid_complete_rankings": 0,
+    "label_columns_in_rankings": 0
+  },
+  "reveal_status": "not_revealed_when_receipt_was_created"
+}
