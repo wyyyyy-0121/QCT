@@ -14,6 +14,7 @@ from formulaguard.localize import (
     v4_default_parameters,
     v4_scores,
 )
+from formulaguard.v5 import _v5_consensus_order, v5_default_parameters, v5_scores
 from formulaguard.workbook import WorkbookModel
 
 
@@ -333,6 +334,101 @@ class LocalizationTests(unittest.TestCase):
                 "strong_counterfactual", "moderate_counterfactual"
             }:
                 self.assertEqual(result.evidence["promotion_cap"], 0)
+
+    def test_v5_public_parameter_contract_is_preregistered(self):
+        params = v5_default_parameters()
+        self.assertEqual(params["base_model"], "v4-dev-r1")
+        self.assertEqual(params["pattern_fraction"], 0.02)
+        self.assertEqual(params["pattern_min_elite"], 3)
+        self.assertEqual(params["pattern_max_elite"], 10)
+        self.assertEqual(params["max_joint_candidates"], 5)
+        self.assertEqual(params["rescue_below_v4_rank"], 5)
+
+    @staticmethod
+    def _mock_v4_result(cell, rank, pattern_rank, status="pattern_only", irg=0.0, delta=0.0):
+        from formulaguard.localize import LocalizationResult
+        return LocalizationResult(
+            cell=("Model", cell),
+            score=100.0 - rank,
+            evidence={
+                "formula_rank": pattern_rank,
+                "diagnostic_status": status,
+                "intervention_responsibility_gain": irg,
+                "candidate_delta": delta,
+                "final_rank": rank,
+            },
+        )
+
+    def test_v5_joint_gate_promotes_consensus_and_preserves_other_relative_order(self):
+        items = [
+            self._mock_v4_result("A1", 1, 8),
+            self._mock_v4_result("A2", 2, 6),
+            self._mock_v4_result("A3", 6, 1, "strong_counterfactual", 8.0, 0.3),
+            self._mock_v4_result("A4", 7, 2, "strong_counterfactual", 6.0, 0.4),
+            self._mock_v4_result("A5", 5, 7),
+        ]
+        ordered, joint, elite_limit, active = _v5_consensus_order(items)
+        self.assertTrue(active)
+        self.assertEqual(elite_limit, 3)
+        self.assertEqual(joint, {("Model", "A3"), ("Model", "A4")})
+        self.assertEqual(
+            [item.cell for item in ordered],
+            [("Model", "A3"), ("Model", "A4"), ("Model", "A1"), ("Model", "A2"), ("Model", "A5")],
+        )
+
+    def test_v5_requires_both_pattern_elite_and_strong_counterfactual(self):
+        items = [
+            self._mock_v4_result("A1", 1, 1, "pattern_only", 10.0, 0.8),
+            self._mock_v4_result("A2", 6, 8, "strong_counterfactual", 10.0, 0.8),
+            self._mock_v4_result("A3", 3, 4),
+            self._mock_v4_result("A4", 4, 5),
+        ]
+        ordered, joint, _, active = _v5_consensus_order(items)
+        self.assertFalse(active)
+        self.assertFalse(joint)
+        self.assertEqual([item.cell for item in ordered], [item.cell for item in items])
+
+    def test_v5_rejects_nonselective_joint_evidence(self):
+        items = [
+            self._mock_v4_result(
+                f"A{index}", index + 5, 1, "strong_counterfactual", 10.0 - index / 10, 0.5
+            )
+            for index in range(1, 7)
+        ]
+        ordered, joint, _, active = _v5_consensus_order(items)
+        self.assertFalse(active)
+        self.assertEqual(len(joint), 6)
+        self.assertEqual([item.cell for item in ordered], [item.cell for item in items])
+
+    def test_v5_exposes_consensus_diagnostics_without_mutating_v4(self):
+        model = repeated_formula_model()
+        before = localize(model, "formulaguard_v4", candidate_limit=5)
+        v5 = v5_scores(model, candidate_limit=5)
+        after = localize(model, "formulaguard_v4", candidate_limit=5)
+        self.assertEqual([item.cell for item in before], [item.cell for item in after])
+        self.assertEqual([item.score for item in before], [item.score for item in after])
+        self.assertEqual(len(v5), len(before))
+        required = {
+            "v4_diagnostic_status", "v4_final_rank", "pattern_elite_limit",
+            "pattern_elite", "joint_eligible", "joint_candidate_count",
+            "joint_gate_active", "joint_confirmed", "v5_final_rank",
+            "v5_rank_change", "v5_promotion_distance", "v5_override_reason",
+        }
+        for result in v5:
+            self.assertTrue(required.issubset(result.evidence))
+            self.assertNotIn("source_cell", result.evidence)
+            self.assertNotIn("correct_formula", result.evidence)
+
+    def test_v5_does_not_override_strong_candidate_already_in_v4_top5(self):
+        items = [
+            self._mock_v4_result("A1", 2, 1, "strong_counterfactual", 9.0, 0.4),
+            self._mock_v4_result("A2", 6, 6),
+            self._mock_v4_result("A3", 7, 7),
+        ]
+        ordered, joint, _, active = _v5_consensus_order(items)
+        self.assertFalse(active)
+        self.assertEqual(joint, set())
+        self.assertEqual([item.cell for item in ordered], [item.cell for item in items])
 
 
 if __name__ == "__main__":

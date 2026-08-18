@@ -1,0 +1,19 @@
+instance_id,workbook,source_cell,correct_formula,error_type,error_subtype,error_event
+blind_001,../blind_v4/workbooks/blind_001.xlsx,Gradebook!E10,=B10*C10,reference_shift,row_plus_one,independent_synthetic_revealed_after_v4_lock
+blind_002,../blind_v4/workbooks/blind_002.xlsx,销售明细!G13,=F13+C13,reference_shift,row_plus_one,independent_synthetic_revealed_after_v4_lock
+blind_003,../blind_v4/workbooks/blind_003.xlsx,Budget Detail!G16,=F16+C16,reference_shift,row_plus_one,independent_synthetic_revealed_after_v4_lock
+blind_004,../blind_v4/workbooks/blind_004.xlsx,Inventory!E19,=SUM(B19:D19),range_boundary,end_column_minus_one,independent_synthetic_revealed_after_v4_lock
+blind_005,../blind_v4/workbooks/blind_005.xlsx,活动费用!G22,=SUM(E22:F22),range_boundary,end_column_minus_one,independent_synthetic_revealed_after_v4_lock
+blind_006,../blind_v4/workbooks/blind_006.xlsx,Orders!G25,=SUM(E25:F25),range_boundary,end_column_minus_one,independent_synthetic_revealed_after_v4_lock
+blind_007,../blind_v4/workbooks/blind_007.xlsx,实验统计!E10,=B10+C10-D10,operator,plus_to_minus,independent_synthetic_revealed_after_v4_lock
+blind_008,../blind_v4/workbooks/blind_008.xlsx,Club Finance!G8,=F8+E8*0.1,operator,plus_to_minus,independent_synthetic_revealed_after_v4_lock
+blind_009,../blind_v4/workbooks/blind_009.xlsx,课程调查!G3,=F3+E3*0.1,operator,plus_to_minus,independent_synthetic_revealed_after_v4_lock
+blind_010,../blind_v4/workbooks/blind_010.xlsx,Project Work!E16,=SUM(B16:D16),function_replacement,sum_to_average,independent_synthetic_revealed_after_v4_lock
+blind_011,../blind_v4/workbooks/blind_011.xlsx,Timesheets!G16,=SUM(E16:F16),function_replacement,sum_to_average,independent_synthetic_revealed_after_v4_lock
+blind_012,../blind_v4/workbooks/blind_012.xlsx,Marketing!G9,=SUM(E9:F9),function_replacement,sum_to_average,independent_synthetic_revealed_after_v4_lock
+blind_013,../blind_v4/workbooks/blind_013.xlsx,Warehouse!E20,=B20*'Settings'!$B$2,absolute_relative,absolute_to_relative,independent_synthetic_revealed_after_v4_lock
+blind_014,../blind_v4/workbooks/blind_014.xlsx,学费台账!G9,=F9*'Settings'!$B$2,absolute_relative,absolute_to_relative,independent_synthetic_revealed_after_v4_lock
+blind_015,../blind_v4/workbooks/blind_015.xlsx,Maintenance!G24,=F24*'Settings'!$B$2,absolute_relative,absolute_to_relative,independent_synthetic_revealed_after_v4_lock
+blind_016,../blind_v4/workbooks/blind_016.xlsx,Energy Use!E11,=B11+C11-D11,copy_offset,previous_row_copy,independent_synthetic_revealed_after_v4_lock
+blind_017,../blind_v4/workbooks/blind_017.xlsx,配送订单!G8,=F8+E8*0.05,copy_offset,previous_row_copy,independent_synthetic_revealed_after_v4_lock
+blind_018,../blind_v4/workbooks/blind_018.xlsx,Scholarship!G4,=F4+E4*0.05,copy_offset,previous_row_copy,independent_synthetic_revealed_after_v4_lock

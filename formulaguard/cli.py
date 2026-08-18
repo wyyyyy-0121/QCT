@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from .localize import localize
+from .v5 import v5_scores
 from .workbook import WorkbookModel
 
 
@@ -27,9 +28,16 @@ def main(argv=None):
     if args.config:
         config = json.loads(args.config.read_text(encoding="utf-8"))
         args.candidate_limit = int(config["candidate_limit"])
-        gir_weights = tuple(float(value) for value in config["gir_weights"])
+        if "gir_weights" in config:
+            gir_weights = tuple(float(value) for value in config["gir_weights"])
     model = WorkbookModel.from_xlsx(args.workbook)
-    results = localize(model, args.method, candidate_limit=args.candidate_limit, gir_weights=gir_weights)
+    results = (
+        v5_scores(model, candidate_limit=args.candidate_limit)
+        if args.method.lower() in {"formulaguard_v5", "v5"}
+        else localize(
+            model, args.method, candidate_limit=args.candidate_limit, gir_weights=gir_weights
+        )
+    )
     graph = model.dependency_graph()
     formula_set = set(model.formula_cells)
     sinks = graph.sinks(model.formula_cells)

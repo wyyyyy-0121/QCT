@@ -1,4 +1,5 @@
 import json
+import csv
 import subprocess
 import sys
 import unittest
@@ -14,9 +15,148 @@ from scripts.run_external_evaluation import METHODS, parse_methods
 from scripts.run_v4_blind_predictions import validate_label_free_columns
 from scripts.score_v4_blind_predictions import score_rankings, verify_prediction_lock
 from scripts.freeze_v4_model import verify_model_source_hashes
+from scripts.merge_v5_development_results import _key_audit
+from scripts.verify_v5_prerequisites import verify as verify_v5_prerequisites
 
 
 class AuthenticityAuditTests(unittest.TestCase):
+    def test_v5_prerequisites_preserve_frozen_v4_and_locked_references(self):
+        repository = Path(__file__).resolve().parents[1]
+        payload = verify_v5_prerequisites(
+            repository, repository / "research" / "V5_REFERENCE_RECEIPT.json"
+        )
+        self.assertTrue(payload["passed"])
+        self.assertEqual(payload["mismatches"], [])
+
+    def test_v5_merge_key_audit_requires_one_row_per_event_method(self):
+        rows = [
+            {"instance_id": "a", "method": "graph"},
+            {"instance_id": "a", "method": "pattern"},
+            {"instance_id": "b", "method": "graph"},
+        ]
+        instances, errors = _key_audit(rows, ("graph", "pattern"))
+        self.assertEqual(instances, {"a", "b"})
+        self.assertTrue(any("missing keys" in error for error in errors))
+
+    def test_v5_merge_preserves_reference_rows_byte_for_field(self):
+        repository = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            reference = root / "reference.csv"
+            v5 = root / "v5.csv"
+            output = root / "combined.csv"
+            reference_methods = (
+                "graph", "pattern", "formulaguard", "formulaguard_v3", "formulaguard_v4"
+            )
+            with reference.open("w", encoding="utf-8-sig", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=["instance_id", "method", "rank"])
+                writer.writeheader()
+                for index, method in enumerate(reference_methods, 1):
+                    writer.writerow({"instance_id": "case", "method": method, "rank": index})
+            with v5.open("w", encoding="utf-8-sig", newline="") as handle:
+                writer = csv.DictWriter(
+                    handle, fieldnames=["instance_id", "method", "rank", "joint_confirmed"]
+                )
+                writer.writeheader()
+                writer.writerow({
+                    "instance_id": "case", "method": "formulaguard_v5",
+                    "rank": 1, "joint_confirmed": 1,
+                })
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    str(repository / "scripts" / "merge_v5_development_results.py"),
+                    "--reference", str(reference), "--v5", str(v5), "--output", str(output),
+                ],
+                cwd=repository, capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            with output.open("r", encoding="utf-8-sig", newline="") as handle:
+                merged = list(csv.DictReader(handle))
+            for index, method in enumerate(reference_methods, 1):
+                row = next(item for item in merged if item["method"] == method)
+                self.assertEqual(row["rank"], str(index))
+                self.assertEqual(row["joint_confirmed"], "")
+            self.assertEqual(len(merged), 6)
+
+    def test_v5_audit_accepts_only_a_complete_gate_passing_matrix(self):
+        repository = Path(__file__).resolve().parents[1]
+        methods = (
+            "graph", "pattern", "formulaguard", "formulaguard_v3",
+            "formulaguard_v4", "formulaguard_v5",
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+
+            def write_matrix(path, count, synthetic=False):
+                fields = [
+                    "instance_id", "method", "rank", "top1", "top3", "top5",
+                    "mrr", "exam", "error_type", "diagnostic_status",
+                    "v4_diagnostic_status", "v4_final_rank", "pattern_elite",
+                    "joint_eligible", "joint_gate_active", "joint_candidate_count",
+                ]
+                with path.open("w", encoding="utf-8-sig", newline="") as handle:
+                    writer = csv.DictWriter(handle, fieldnames=fields)
+                    writer.writeheader()
+                    for index in range(count):
+                        for method in methods:
+                            row = {
+                                "instance_id": f"event_{index:02d}", "method": method,
+                                "rank": 1, "top1": 1, "top3": 1, "top5": 1,
+                                "mrr": 1, "exam": 0.01,
+                                "error_type": f"type_{index % 6}" if synthetic else "natural",
+                            }
+                            if method == "formulaguard_v4":
+                                row.update({
+                                    "rank": 6, "top1": 0, "top3": 0, "top5": 0,
+                                    "mrr": 1 / 6, "exam": 0.06,
+                                })
+                            if method == "formulaguard_v5":
+                                row.update({
+                                    "diagnostic_status": "joint_confirmed",
+                                    "v4_diagnostic_status": "strong_counterfactual",
+                                    "v4_final_rank": 6, "pattern_elite": 1,
+                                    "joint_eligible": 1, "joint_gate_active": 1,
+                                    "joint_candidate_count": 1,
+                                })
+                            writer.writerow(row)
+
+            synthetic = root / "synthetic.csv"
+            enron = root / "enron.csv"
+            write_matrix(synthetic, 18, synthetic=True)
+            write_matrix(enron, 30)
+            synthetic_reference = root / "synthetic_reference.csv"
+            enron_reference = root / "enron_reference.csv"
+            for source, target in ((synthetic, synthetic_reference), (enron, enron_reference)):
+                with source.open("r", encoding="utf-8-sig", newline="") as handle:
+                    rows = [row for row in csv.DictReader(handle) if row["method"] != "formulaguard_v5"]
+                with target.open("w", encoding="utf-8-sig", newline="") as handle:
+                    writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+                    writer.writeheader()
+                    writer.writerows(rows)
+            clean = root / "clean.json"
+            clean.write_text(json.dumps({"clean_workbooks": 48, "alarm_rate": 0.0}), encoding="utf-8")
+            prerequisite = root / "prerequisite.json"
+            prerequisite.write_text(json.dumps({"passed": True}), encoding="utf-8")
+            output = root / "audit.json"
+            completed = subprocess.run(
+                [
+                    sys.executable, str(repository / "scripts" / "audit_v5_development.py"),
+                    "--synthetic-raw", str(synthetic),
+                    "--synthetic-reference", str(synthetic_reference),
+                    "--enron-raw", str(enron),
+                    "--enron-reference", str(enron_reference),
+                    "--clean-summary", str(clean),
+                    "--prerequisite-audit", str(prerequisite),
+                    "--output", str(output),
+                ],
+                cwd=repository, capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertTrue(payload["freeze_permitted"])
+            self.assertTrue(all(payload["gates"].values()))
+
     def test_mirrored_mutation_operator_classification(self):
         self.assertTrue(classify_coupling("M3_operator", {"operator"}))
         self.assertTrue(classify_coupling("M2_range_boundary", {"range_boundary_end_row"}))

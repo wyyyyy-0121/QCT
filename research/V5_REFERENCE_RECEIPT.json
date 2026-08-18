@@ -1,0 +1,19 @@
+{
+  "receipt_version": 1,
+  "scope": "v5_development_inputs_before_the_single_full_development_run",
+  "method_spec_commit": "6a996c4e5e629cc98818e5f9b92c24e16bfa008b",
+  "engineering_smoke_disclosure": "One labeled synthetic event (blind_001) was used only to verify evaluator output. One label-free known-clean workbook (carbon_accounting_v0) then exposed an unnecessary joint alarm for a formula already ranked second by V4. This produced the documented V5_METHOD_SPEC_AMENDMENT_1 necessity gate before any aggregate V5 development run. No 18-event, 30-event, or 48-workbook V5 aggregate gate was computed.",
+  "files": {
+    "research/frozen_config_v4.json": "33f527e5a49fc1504e97c5deb92c78f0547f7647c7dd036252fefd37018754b7",
+    "research/V5_METHOD_SPEC.md": "123114a9a08ef19da1d1dba17d59d1acb6bcd8cf7d8b56699198d315545ff773",
+    "research/V5_METHOD_SPEC_AMENDMENT_1.md": "401be77f0a8af65b4aeff8f97e7d622baa8a9adb4621561d1bf32523b87641e3",
+    "data/v5_development/manifest.csv": "615d9e9fe17683d34f1fca79a2d02e7421963bca9b3d0972470fafea7395a51f",
+    "results/v4_blind_scored/blind_scored_events.csv": "201575c35f33104561b2aa27821f87aedbd24d49f7a682fa8b3f81c7ddfcd272",
+    "results/v4_dev_revision/external_raw.csv": "8212c2837a48bf653808460a8b3eba674ea5c4293f164b56fc16a6c1420a52dd"
+  },
+  "reference_identity": {
+    "synthetic": "V4 locked-prediction study scored only after label reveal; development-only for V5",
+    "enron": "Previously observed V4 retrospective natural-workbook safety set; development-only for V5"
+  },
+  "reference_rows_recomputed_for_v5": false
+}
