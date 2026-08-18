@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import csv
+import hashlib
 import json
 import os
 import statistics
@@ -14,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from formulaguard.benchmark import parse_cell_label
 from formulaguard.formula import FormulaSyntaxError, normalized_formula, parse_formula
-from formulaguard.localize import localize
+from formulaguard.localize import localize, v4_default_parameters
 from formulaguard.workbook import WorkbookModel
 
 
@@ -42,6 +43,14 @@ def parse_methods(value: str) -> list[str]:
     if unknown:
         raise ValueError(f"unknown evaluation method(s): {', '.join(unknown)}")
     return list(dict.fromkeys(requested))
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
 
 
 def _event_context(instance, model):
@@ -302,6 +311,29 @@ def main():
         ],
     }
     (args.output / "external_dataset_audit.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
+    repository_root = Path(__file__).resolve().parents[1]
+    source_files = [
+        repository_root / "formulaguard" / "localize.py",
+        repository_root / "scripts" / "run_external_evaluation.py",
+        repository_root / "scripts" / "analyze_external_results.py",
+        repository_root / "scripts" / "audit_v4_development.py",
+    ]
+    metadata = {
+        "manifest": str(args.manifest.resolve()),
+        "manifest_sha256": sha256_file(args.manifest),
+        "candidate_limit": args.candidate_limit,
+        "worker_processes": workers,
+        "methods": selected_methods,
+        "v4_parameters": v4_default_parameters() if "formulaguard_v4" in selected_methods else None,
+        "source_sha256": {
+            str(path.relative_to(repository_root)).replace("\\", "/"): sha256_file(path)
+            for path in source_files if path.is_file()
+        },
+        "result_contract": "one row per supported event and selected method",
+    }
+    (args.output / "external_run_metadata.json").write_text(
+        json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

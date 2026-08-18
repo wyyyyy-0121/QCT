@@ -54,6 +54,40 @@ class RepairCandidate:
         yield self.support
 
 
+V4_RRF_K = 60
+V4_INTERVENTION_BUDGET = 100
+V4_SCOPE_DEPTH = 3
+V4_SCOPE_DECAY = 0.70
+V4_STRONG_MIN_CONTROLS = 2
+V4_STRONG_MIN_DELTA = 0.05
+V4_STRONG_MIN_IRG = 3.0
+V4_STRONG_PROMOTION = 10
+V4_MODERATE_MIN_CONTROLS = 2
+V4_MODERATE_MIN_DELTA = 0.02
+V4_MODERATE_MIN_IRG = 1.5
+V4_MODERATE_PROMOTION = 2
+
+
+def v4_default_parameters() -> dict[str, float | int | str]:
+    """Return the exact public parameter contract for the v4 dev model."""
+    return {
+        "model_version": "v4-dev",
+        "fusion": "rrf_formula_graph_legacy_prior",
+        "rrf_k": V4_RRF_K,
+        "intervention_budget": V4_INTERVENTION_BUDGET,
+        "scope_depth": V4_SCOPE_DEPTH,
+        "scope_decay": V4_SCOPE_DECAY,
+        "strong_min_controls": V4_STRONG_MIN_CONTROLS,
+        "strong_min_delta": V4_STRONG_MIN_DELTA,
+        "strong_min_irg": V4_STRONG_MIN_IRG,
+        "strong_promotion": V4_STRONG_PROMOTION,
+        "moderate_min_controls": V4_MODERATE_MIN_CONTROLS,
+        "moderate_min_delta": V4_MODERATE_MIN_DELTA,
+        "moderate_min_irg": V4_MODERATE_MIN_IRG,
+        "moderate_promotion": V4_MODERATE_PROMOTION,
+    }
+
+
 def _coordinate(key: CellKey):
     addr = parse_address(key[1])
     return key[0], addr.row, addr.col
@@ -1170,10 +1204,10 @@ def v4_scores(
     model: WorkbookModel,
     *,
     candidate_limit: int = 15,
-    max_intervention_cells: int = 100,
-    rrf_k: int = 60,
-    scope_depth: int = 3,
-    scope_decay: float = 0.70,
+    max_intervention_cells: int = V4_INTERVENTION_BUDGET,
+    rrf_k: int = V4_RRF_K,
+    scope_depth: int = V4_SCOPE_DEPTH,
+    scope_decay: float = V4_SCOPE_DECAY,
 ):
     """Locally calibrated, evidence-selective FormulaGuard-v4 prototype.
 
@@ -1292,14 +1326,18 @@ def v4_scores(
             irg = (float(effect["delta"]) - control_median) / robust_scale if controls else 0.0
             independent_support = candidate.support >= 2 or len(candidate.sources) >= 2
             if (
-                len(controls) >= 2
-                and float(effect["delta"]) >= 0.05
-                and irg >= 3.0
+                len(controls) >= V4_STRONG_MIN_CONTROLS
+                and float(effect["delta"]) >= V4_STRONG_MIN_DELTA
+                and irg >= V4_STRONG_MIN_IRG
                 and independent_support
             ):
-                status, promotion = "strong_counterfactual", 10
-            elif len(controls) >= 2 and float(effect["delta"]) >= 0.02 and irg >= 1.5:
-                status, promotion = "moderate_counterfactual", 2
+                status, promotion = "strong_counterfactual", V4_STRONG_PROMOTION
+            elif (
+                len(controls) >= V4_MODERATE_MIN_CONTROLS
+                and float(effect["delta"]) >= V4_MODERATE_MIN_DELTA
+                and irg >= V4_MODERATE_MIN_IRG
+            ):
+                status, promotion = "moderate_counterfactual", V4_MODERATE_PROMOTION
             elif float(effect["delta"]) > 0 and len(controls) < 2:
                 status, promotion = "uncalibrated_candidate", 0
             else:

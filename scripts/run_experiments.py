@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from formulaguard.benchmark import load_jsonl, parse_cell_label, values_differ
 from formulaguard.formula import normalized_formula
-from formulaguard.localize import generate_candidates, localize
+from formulaguard.localize import generate_candidates, localize, v4_default_parameters
 from formulaguard.workbook import WorkbookModel
 
 
@@ -208,14 +208,20 @@ def run(args):
     if args.ablations and args.model_version != "v4":
         methods += V3_ABLATION_METHODS if args.model_version == "v3" else V2_ABLATION_METHODS
     gir_weights = (0.35, 0.50, 0.10, 0.05)
+    v4_parameters = v4_default_parameters() if args.model_version == "v4" else None
     if args.config:
         config = json.loads(args.config.read_text(encoding="utf-8"))
         if config.get("model_version", args.model_version) != args.model_version:
             raise SystemExit("Frozen configuration model_version does not match this experiment.")
         args.candidate_limit = int(config["candidate_limit"])
-        gir_weights = tuple(float(value) for value in config["gir_weights"])
-        if len(gir_weights) != 4:
-            raise SystemExit("Frozen configuration gir_weights must contain four values.")
+        if args.model_version == "v4":
+            declared = config.get("v4_parameters", v4_parameters)
+            if declared != v4_parameters:
+                raise SystemExit("Frozen v4 parameters do not match the implemented v4 model.")
+        else:
+            gir_weights = tuple(float(value) for value in config["gir_weights"])
+            if len(gir_weights) != 4:
+                raise SystemExit("Frozen configuration gir_weights must contain four values.")
     raw_rows = []
     worker_count = resolve_worker_count(args.workers, len(instances))
     tasks = [
@@ -369,6 +375,7 @@ def run(args):
         "primary_method": primary_method,
         "candidate_limit": args.candidate_limit,
         "gir_weights": gir_weights,
+        "v4_parameters": v4_parameters,
         "worker_processes": worker_count,
         "experiment_wall_seconds": wall_seconds,
         "summary": summary_rows,

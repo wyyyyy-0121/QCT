@@ -10,6 +10,7 @@ from formulaguard.localize import (
     constraint_residual_scores,
     generate_candidates,
     localize,
+    v4_default_parameters,
     v4_scores,
 )
 from formulaguard.workbook import WorkbookModel
@@ -30,6 +31,16 @@ def repeated_formula_model():
 
 
 class LocalizationTests(unittest.TestCase):
+
+    def test_v4_public_parameter_contract_matches_evidence(self):
+        params = v4_default_parameters()
+        results = localize(repeated_formula_model(), "formulaguard_v4", candidate_limit=15)
+        evidence = results[0].evidence
+        self.assertEqual(params["rrf_k"], evidence["rrf_k"])
+        self.assertEqual(params["intervention_budget"], evidence["intervention_budget"])
+        self.assertEqual(params["scope_depth"], evidence["scope_depth"])
+        self.assertEqual(params["scope_decay"], evidence["scope_decay"])
+
     def test_peer_translation_generates_true_repair_without_ground_truth(self):
         model = repeated_formula_model()
         candidates = generate_candidates(model, ("Model", "D7"), limit=20)
