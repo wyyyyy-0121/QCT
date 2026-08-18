@@ -58,6 +58,28 @@ run_v5_development.cmd
 
 该命令只新算V5，并复用已锁定的V4及基线逐事件结果；依次检查18例合成开发集、30例Enron安全回归和48份干净工作簿。V5在合成和干净表门槛通过，但Enron MRR未达标且显著低于V4；因此按预登记停止规则停止V5-R2。
 
+## V5.2非干扰救援开发
+
+V5.2保留冻结V4完整排名，只允许在Top-5之外附加一个独立的第六审查位。A/B/C三轮机制已同时预登记，必须全部运行后才能选择，不会因A轮门槛失败就另开版本：
+
+```bat
+cd /d D:\code\QCT
+run_v52_development.cmd a 24
+run_v52_development.cmd b 24
+run_v52_development.cmd c 24
+run_v52_select_and_freeze.cmd
+```
+
+只有前三轮审计均存在、至少一个版本通过全部硬门槛且产生至少2个开发集新增救援命中时，最后一条命令才会生成`research\frozen_config_v52.json`。开发数据均为已揭晓或回顾性数据，不能写成新盲测。
+
+冻结并提交后，由独立出题人只提供15份无标签公开工作簿，运行：
+
+```bat
+run_v4_v52_blind_lock.cmd --workers 24
+```
+
+看到联合预测锁成功后才接收项目目录外的标签，再运行`run_v4_v52_blind_score.cmd`。详细交接要求见`research\V4_V52_INDEPENDENT_HANDOFF.md`。
+
 ## 第一次大型v2实验
 
 只有在Codex确认短测试通过并要求提交代码后，用户才运行：
