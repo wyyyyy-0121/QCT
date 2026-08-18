@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from formulaguard.localize import localize, v4_default_parameters
 from formulaguard.workbook import WorkbookModel
+from scripts.freeze_v4_model import verify_model_source_hashes
 from scripts.run_external_evaluation import parse_methods, sha256_file
 
 
@@ -51,9 +52,25 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Freeze FormulaGuard-v4 predictions before labels are opened")
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--config", type=Path, required=True, help="Frozen v4 configuration")
     parser.add_argument("--candidate-limit", type=int, default=15)
     parser.add_argument("--methods", default=DEFAULT_METHODS)
     args = parser.parse_args()
+
+    repository_root = Path(__file__).resolve().parents[1]
+    try:
+        frozen = json.loads(args.config.read_text(encoding="utf-8"))
+        if frozen.get("model_version") != "v4":
+            raise ValueError("Frozen configuration is not for v4")
+        if frozen.get("v4_parameters") != v4_default_parameters():
+            raise ValueError("Frozen v4 parameters differ from the running implementation")
+        verify_model_source_hashes(
+            {"source_sha256": frozen.get("model_source_sha256")}, repository_root
+        )
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"Blind prediction refused: {exc}") from exc
+    if args.candidate_limit != int(frozen.get("candidate_limit", -1)):
+        raise SystemExit("Blind prediction refused: candidate limit differs from frozen v4")
 
     if args.output.exists() and any(args.output.iterdir()):
         raise SystemExit(f"Refusing to overwrite non-empty blind output directory: {args.output}")
@@ -111,7 +128,6 @@ def main() -> None:
 
     rankings_path = args.output / "blind_rankings.csv"
     _write_csv(rankings_path, ranking_rows)
-    repository_root = Path(__file__).resolve().parents[1]
     source_paths = [
         repository_root / "formulaguard" / "localize.py",
         repository_root / "scripts" / "run_v4_blind_predictions.py",
@@ -124,6 +140,8 @@ def main() -> None:
         "instances": len(instances),
         "methods": methods,
         "candidate_limit": args.candidate_limit,
+        "frozen_config": str(args.config.resolve()),
+        "frozen_config_sha256": sha256_file(args.config),
         "v4_parameters": v4_default_parameters(),
         "workbook_sha256": workbook_hashes,
         "source_sha256": {

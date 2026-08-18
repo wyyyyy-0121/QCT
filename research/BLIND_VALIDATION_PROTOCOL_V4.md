@@ -23,12 +23,13 @@
 cd /d D:\code\QCT
 python scripts\run_v4_blind_predictions.py ^
   --manifest data\blind_v4\blind_manifest.csv ^
+  --config results\v4_dev_revision\frozen_config_v4.json ^
   --output results\v4_blind_locked
 ```
 
-脚本拒绝包含`source_cell`、`correct_formula`、`error_type`等字段的清单，也拒绝覆盖
-已有输出。它保存所有公式的完整排名，并生成`prediction_lock.json`。锁文件创建后，
-不得编辑排名或元数据。
+脚本首先验证冻结配置、模型参数和源码哈希，然后拒绝包含`source_cell`、
+`correct_formula`、`error_type`等字段的清单，也拒绝覆盖已有输出。它保存所有公式
+的完整排名，并生成`prediction_lock.json`。锁文件创建后，不得编辑排名或元数据。
 
 ## 第二步：揭盲并评分
 

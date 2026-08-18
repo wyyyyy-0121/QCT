@@ -11,6 +11,7 @@ from scripts.prepare_enron_manifest import expand_fault_spec
 from scripts.run_external_evaluation import METHODS, parse_methods
 from scripts.run_v4_blind_predictions import validate_label_free_columns
 from scripts.score_v4_blind_predictions import score_rankings, verify_prediction_lock
+from scripts.freeze_v4_model import verify_model_source_hashes
 
 
 class AuthenticityAuditTests(unittest.TestCase):
@@ -90,6 +91,18 @@ class AuthenticityAuditTests(unittest.TestCase):
             rankings.write_text("rank\n2\n", encoding="utf-8")
             with self.assertRaises(ValueError):
                 verify_prediction_lock(lock)
+
+    def test_frozen_model_source_verification_detects_tampering(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "model.py"
+            source.write_text("before", encoding="utf-8")
+            from scripts.run_external_evaluation import sha256_file
+            metadata = {"source_sha256": {"model.py": sha256_file(source)}}
+            verify_model_source_hashes(metadata, root)
+            source.write_text("after", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                verify_model_source_hashes(metadata, root)
 
     def test_enron_overview_range_expansion_is_event_level(self):
         self.assertEqual(expand_fault_spec("F28:G28"), {"F28", "G28"})
