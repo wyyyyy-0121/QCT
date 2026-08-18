@@ -126,12 +126,27 @@ def main() -> None:
     enron_v5 = method_summary(enron, "formulaguard_v5")
 
     embedded_v4_rank_changes = []
+    embedded_v4_rank_noncomparable_multi_source = []
     for dataset_name, rows in (("synthetic", synthetic), ("enron", enron)):
         by_instance: dict[str, dict[str, dict[str, str]]] = defaultdict(dict)
         for row in rows:
             by_instance[row["instance_id"]][row["method"]] = row
         for instance_id, methods in sorted(by_instance.items()):
-            embedded = int(float(methods["formulaguard_v5"].get("v4_final_rank", "0") or 0))
+            v5 = methods["formulaguard_v5"]
+            source_count = int(float(v5.get("supported_source_formula_count", "0") or 0))
+            if source_count != 1:
+                embedded_v4_rank_noncomparable_multi_source.append({
+                    "dataset": dataset_name,
+                    "instance_id": instance_id,
+                    "supported_source_formula_count": source_count,
+                    "reason": (
+                        "V5 source-row v4_final_rank belongs to the source selected by "
+                        "the V5 event minimum; it is not necessarily the source that "
+                        "attained the locked V4 event minimum."
+                    ),
+                })
+                continue
+            embedded = int(float(v5.get("v4_final_rank", "0") or 0))
             locked = int(float(methods["formulaguard_v4"]["rank"]))
             if embedded != locked:
                 embedded_v4_rank_changes.append({
@@ -164,6 +179,10 @@ def main() -> None:
         if v5_rank - v4_rank > 20:
             severe_vs_v4.append({"instance_id": instance_id, "rank_drop": v5_rank - v4_rank})
 
+    by_instance = {}
+    for row in synthetic + enron:
+        by_instance.setdefault(row["instance_id"], {})[row["method"]] = row
+
     invalid_joint_rows = []
     invalid_fallback_rows = []
     for row in [item for item in synthetic + enron if item["method"] == "formulaguard_v5"]:
@@ -183,12 +202,13 @@ def main() -> None:
                 })
         joint_count = int(float(row.get("joint_candidate_count", "0") or 0))
         if joint_count == 0 or joint_count > 5:
-            if int(float(row["rank"])) != int(float(row.get("v4_final_rank", "0") or 0)):
+            locked_v4_rank = int(float(by_instance[row["instance_id"]]["formulaguard_v4"]["rank"]))
+            if int(float(row["rank"])) != locked_v4_rank:
                 invalid_fallback_rows.append({
                     "instance_id": row["instance_id"],
                     "joint_candidate_count": joint_count,
                     "v5_rank": int(float(row["rank"])),
-                    "v4_rank": int(float(row.get("v4_final_rank", "0") or 0)),
+                    "v4_rank": locked_v4_rank,
                 })
 
     comparison_methods = ("graph", "pattern", "formulaguard", "formulaguard_v3", "formulaguard_v4")
@@ -210,7 +230,7 @@ def main() -> None:
         "synthetic_complete_matrix": bool(synthetic_matrix["passed"]),
         "enron_complete_matrix": bool(enron_matrix["passed"]),
         "reference_ranks_unchanged": not synthetic_changes and not enron_changes,
-        "v5_embedded_v4_source_rank_matches_locked_v4": not embedded_v4_rank_changes,
+        "v5_embedded_v4_single_source_rank_matches_locked_v4": not embedded_v4_rank_changes,
         "joint_rules_respected": not invalid_joint_rows,
         "inactive_gate_exactly_falls_back_to_v4": not invalid_fallback_rows,
         "synthetic_top5_at_least_17_of_18": synthetic_v5["top5"] >= 17 / 18,
@@ -231,7 +251,10 @@ def main() -> None:
         "enron_matrix": enron_matrix,
         "synthetic_reference_rank_changes": synthetic_changes,
         "enron_reference_rank_changes": enron_changes,
-        "v5_embedded_v4_source_rank_changes": embedded_v4_rank_changes,
+        "v5_embedded_v4_single_source_rank_changes": embedded_v4_rank_changes,
+        "v5_embedded_v4_rank_noncomparable_multi_source_events": (
+            embedded_v4_rank_noncomparable_multi_source
+        ),
         "synthetic_v5": synthetic_v5,
         "synthetic_v5_by_error_top5": by_error_top5,
         "enron_v5": enron_v5,

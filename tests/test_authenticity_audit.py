@@ -94,6 +94,7 @@ class AuthenticityAuditTests(unittest.TestCase):
                     "mrr", "exam", "error_type", "diagnostic_status",
                     "v4_diagnostic_status", "v4_final_rank", "pattern_elite",
                     "joint_eligible", "joint_gate_active", "joint_candidate_count",
+                    "supported_source_formula_count",
                 ]
                 with path.open("w", encoding="utf-8-sig", newline="") as handle:
                     writer = csv.DictWriter(handle, fieldnames=fields)
@@ -105,6 +106,7 @@ class AuthenticityAuditTests(unittest.TestCase):
                                 "rank": 1, "top1": 1, "top3": 1, "top5": 1,
                                 "mrr": 1, "exam": 0.01,
                                 "error_type": f"type_{index % 6}" if synthetic else "natural",
+                                "supported_source_formula_count": 1,
                             }
                             if method == "formulaguard_v4":
                                 row.update({
@@ -119,6 +121,11 @@ class AuthenticityAuditTests(unittest.TestCase):
                                     "joint_eligible": 1, "joint_gate_active": 1,
                                     "joint_candidate_count": 1,
                                 })
+                                if index == 0:
+                                    row.update({
+                                        "supported_source_formula_count": 2,
+                                        "v4_final_rank": 17,
+                                    })
                             writer.writerow(row)
 
             synthetic = root / "synthetic.csv"
@@ -156,6 +163,10 @@ class AuthenticityAuditTests(unittest.TestCase):
             payload = json.loads(output.read_text(encoding="utf-8"))
             self.assertTrue(payload["freeze_permitted"])
             self.assertTrue(all(payload["gates"].values()))
+            self.assertEqual(
+                len(payload["v5_embedded_v4_rank_noncomparable_multi_source_events"]),
+                2,
+            )
 
     def test_mirrored_mutation_operator_classification(self):
         self.assertTrue(classify_coupling("M3_operator", {"operator"}))
