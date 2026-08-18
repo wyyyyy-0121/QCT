@@ -1,0 +1,44 @@
+{
+  "model_version": "v4",
+  "implementation_version": "v4-dev-r1",
+  "freeze_policy": "one_retrospective_revision_then_independent_blind_validation",
+  "candidate_limit": 15,
+  "v4_parameters": {
+    "model_version": "v4-dev-r1",
+    "fusion": "graph_safe_two_lane_with_consensus_screening",
+    "graph_signal": "propagation_weighted_review_score",
+    "screening": "best_of_consensus_and_graph_safe_within_one_fixed_budget",
+    "rrf_k": 60,
+    "intervention_budget": 100,
+    "scope_depth": 3,
+    "scope_decay": 0.7,
+    "strong_min_controls": 2,
+    "strong_min_delta": 0.05,
+    "strong_min_irg": 3.0,
+    "strong_promotion": 10,
+    "moderate_min_controls": 2,
+    "moderate_min_delta": 0.02,
+    "moderate_min_irg": 1.5,
+    "moderate_promotion": 2
+  },
+  "manifest_sha256": "3eb129423a92320db57c69af667c6d58a25c85e4548fd6adf8ba581054201abd",
+  "model_source_sha256": {
+    "formulaguard/localize.py": "760fbf8519dce5a4604bcc6ba158e9ca44d9434e7e898c85e9f7bc51c6c99c40",
+    "scripts/run_external_evaluation.py": "197a8c1faf0f7eb8b5de106efd1ca2a947f81151e1332c42f603b6c7d4644b1c",
+    "scripts/analyze_external_results.py": "bb191b419d0a83d8f0ee58f967018d51a5a6fdb1fdf2f974b4db8167708cf2fd",
+    "scripts/audit_v4_development.py": "8e0129dc701d5931614cb8340ed212f1ef9d7c7fbd3fecdc8c03f2aa2d37c496"
+  },
+  "development_result_sha256": {
+    "external_raw.csv": "8212c2837a48bf653808460a8b3eba674ea5c4293f164b56fc16a6c1420a52dd",
+    "external_summary.csv": "dd6c7aa04729e3143ecce250e1608bceb6a592f763001a635e970441e2f1f33e",
+    "external_analysis.json": "b24d6898bf238870acb97e422bf495e55f6013cfe9477ff4787cfd96011fffec",
+    "external_dataset_audit.json": "bb1c0e662a2c5975676f21f22bf39af09e095e73c76985872033fcc004961e9b",
+    "external_run_metadata.json": "07e588bc2461fea9bc104f767212506d3742e365e54846c73e59764838c73335",
+    "external_exclusions.csv": "3141adece7e841ba6bf4b1771b73208639b20022a5e64ae8385ef2c28251c17a",
+    "v4_development_audit.json": "24358a5c42bad58723702984683c884edcc417df8a1f5278c9e065442b62bd55",
+    "v4_revision_comparison.json": "03c94d604f64d3ad2cbae542c17049636781541114cbc50b98280e92cff0a1ae"
+  },
+  "git_commit": "096e64ac17111591e26861fcd494a8dad3e82daa",
+  "retrospective_only": true,
+  "blind_labels_seen": false
+}
