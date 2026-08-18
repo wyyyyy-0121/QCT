@@ -29,7 +29,19 @@ METHODS = [
     "formulaguard",
     "formulaguard_v3",
     "formulaguard_v3_real",
+    "formulaguard_v4",
 ]
+
+
+def parse_methods(value: str) -> list[str]:
+    """Parse an ordered, duplicate-free subset of the registered methods."""
+    requested = [item.strip().lower() for item in value.split(",") if item.strip()]
+    if not requested:
+        raise ValueError("at least one evaluation method is required")
+    unknown = [method for method in requested if method not in METHODS]
+    if unknown:
+        raise ValueError(f"unknown evaluation method(s): {', '.join(unknown)}")
+    return list(dict.fromkeys(requested))
 
 
 def _event_context(instance, model):
@@ -147,6 +159,14 @@ def evaluate_workbook_method(task):
             "counterfactual_evidence_strength": source_result.evidence.get("counterfactual_evidence_strength", "") if source_result else "",
             "base_rank": source_result.evidence.get("base_rank", "") if source_result else "",
             "car_rank": source_result.evidence.get("car_rank", "") if source_result else "",
+            "intervention_selected": source_result.evidence.get("intervention_selected", "") if source_result else "",
+            "intervention_selection_rank": source_result.evidence.get("intervention_selection_rank", "") if source_result else "",
+            "candidate_count": source_result.evidence.get("candidate_count", "") if source_result else "",
+            "local_scope_size": source_result.evidence.get("local_scope_size", "") if source_result else "",
+            "candidate_delta": source_result.evidence.get("candidate_delta", "") if source_result else "",
+            "null_control_count": source_result.evidence.get("null_control_count", "") if source_result else "",
+            "intervention_responsibility_gain": source_result.evidence.get("intervention_responsibility_gain", "") if source_result else "",
+            "promotion_cap": source_result.evidence.get("promotion_cap", "") if source_result else "",
             "runtime_seconds": elapsed,
         })
     return rows, exclusions, method, workbook_path.name
@@ -158,10 +178,19 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--candidate-limit", type=int, default=15)
     parser.add_argument(
+        "--methods",
+        default=",".join(METHODS),
+        help="Comma-separated registered methods; defaults to the full historical comparison set",
+    )
+    parser.add_argument(
         "--workers", type=int, default=0,
         help="Worker processes; 0 uses half of logical CPUs capped at 16",
     )
     args = parser.parse_args()
+    try:
+        selected_methods = parse_methods(args.methods)
+    except ValueError as exc:
+        parser.error(str(exc))
     with args.manifest.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         instances = list(reader)
@@ -192,13 +221,14 @@ def main():
         workbook_groups.setdefault(str(workbook_path), []).append(instance)
     method_priority = {
         "formulaguard_v3_real": 0,
-        "formulaguard_v3": 1,
-        "formulaguard": 2,
+        "formulaguard_v4": 1,
+        "formulaguard_v3": 2,
+        "formulaguard": 3,
     }
     tasks = [
         (path, group, args.candidate_limit, method)
         for path, group in workbook_groups.items()
-        for method in METHODS
+        for method in selected_methods
     ]
     tasks.sort(key=lambda task: (
         -Path(task[0]).stat().st_size if Path(task[0]).is_file() else 0,
@@ -219,7 +249,7 @@ def main():
             rows.extend(method_rows)
             exclusions.extend(method_exclusions)
             print(f"[{index}/{len(tasks)}] {workbook_name} :: {method}", flush=True)
-    rows.sort(key=lambda row: (row["instance_id"], METHODS.index(row["method"])))
+    rows.sort(key=lambda row: (row["instance_id"], selected_methods.index(row["method"])))
     exclusions = list({(row["instance_id"], row["reason"]): row for row in exclusions}.values())
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / "external_exclusions.csv").open("w", encoding="utf-8-sig", newline="") as handle:
@@ -239,7 +269,7 @@ def main():
         ]
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
-        for method in METHODS:
+        for method in selected_methods:
             group = [row for row in rows if row["method"] == method]
             repair_rows = [row for row in group if row["repair_evaluable"]]
             writer.writerow({
@@ -262,11 +292,14 @@ def main():
         "excluded_instances": len(exclusions),
         "quantitative_reporting_allowed": len({row["instance_id"] for row in rows}) >= 15,
         "reporting_rule": "Use aggregate external metrics only with at least 15 supported faults; otherwise report exploratory cases.",
-        "methods": METHODS,
+        "methods": selected_methods,
         "synthetic_results_must_remain_separate": True,
         "parser_coverage_must_be_reported": True,
         "unsupported_source_formulas_are_excluded": True,
-        "external_models_under_test": ["formulaguard_v3", "formulaguard_v3_real"],
+        "external_models_under_test": [
+            method for method in ("formulaguard_v3", "formulaguard_v3_real", "formulaguard_v4")
+            if method in selected_methods
+        ],
     }
     (args.output / "external_dataset_audit.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
 

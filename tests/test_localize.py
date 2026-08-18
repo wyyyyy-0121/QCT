@@ -3,11 +3,14 @@ from unittest.mock import patch
 
 from formulaguard.localize import (
     _energy,
+    _competition_ranks,
     _v3_component_change,
+    _v4_bounded_change,
     behavior_anomaly_scores,
     constraint_residual_scores,
     generate_candidates,
     localize,
+    v4_scores,
 )
 from formulaguard.workbook import WorkbookModel
 
@@ -104,6 +107,7 @@ class LocalizationTests(unittest.TestCase):
             "formulaguard",
             "formulaguard_v3",
             "formulaguard_v3_real",
+            "formulaguard_v4",
         ]
         for method in methods:
             results = localize(model, method, candidate_limit=5)
@@ -235,6 +239,78 @@ class LocalizationTests(unittest.TestCase):
             for right in v2:
                 if left.score > right.score:
                     self.assertLess(v3_position[left.cell], v3_position[right.cell])
+
+    def test_v4_bounded_change_stays_stable_near_zero(self):
+        gain, harm = _v4_bounded_change(1e-12, 0.0)
+        self.assertLessEqual(gain, 1.0)
+        self.assertEqual(harm, 0.0)
+        gain, harm = _v4_bounded_change(0.0, 1e-4)
+        self.assertEqual(gain, 0.0)
+        self.assertGreater(harm, 0.0)
+        self.assertLessEqual(harm, 1.0)
+
+    def test_v4_rank_fusion_preserves_equal_component_scores(self):
+        ranks = _competition_ranks({
+            ("Model", "A1"): 0.0,
+            ("Model", "A2"): 1.0,
+            ("Model", "A3"): 0.0,
+        })
+        self.assertEqual(ranks[("Model", "A2")], 1)
+        self.assertEqual(ranks[("Model", "A1")], 2)
+        self.assertEqual(ranks[("Model", "A3")], 2)
+
+    def test_v4_exposes_selection_calibration_and_rank_contract(self):
+        results = localize(repeated_formula_model(), "formulaguard_v4", candidate_limit=5)
+        self.assertEqual(len(results), len(repeated_formula_model().formula_cells))
+        required = {
+            "rrf_score",
+            "base_rank",
+            "intervention_selected",
+            "candidate_count",
+            "diagnostic_status",
+            "local_scope_size",
+            "candidate_delta",
+            "null_control_count",
+            "intervention_responsibility_gain",
+            "promotion_cap",
+            "final_rank",
+        }
+        for result in results:
+            self.assertTrue(required.issubset(result.evidence))
+            self.assertIn(result.evidence["diagnostic_status"], {
+                "not_intervened",
+                "no_candidate",
+                "pattern_only",
+                "uncalibrated_candidate",
+                "moderate_counterfactual",
+                "strong_counterfactual",
+            })
+            self.assertLessEqual(result.evidence["promotion_cap"], 10)
+
+    def test_v4_distinguishes_budget_exclusion_from_empty_candidates(self):
+        model = repeated_formula_model()
+        results = v4_scores(model, candidate_limit=3, max_intervention_cells=2)
+        selected = [item for item in results if item.evidence["intervention_selected"]]
+        excluded = [item for item in results if not item.evidence["intervention_selected"]]
+        self.assertEqual(len(selected), 2)
+        self.assertTrue(excluded)
+        self.assertTrue(all(
+            item.evidence["diagnostic_status"] == "not_intervened"
+            and item.evidence["candidate_count"] == 0
+            for item in excluded
+        ))
+
+    def test_v4_weak_or_uncalibrated_evidence_cannot_promote(self):
+        model = WorkbookModel.from_cells(
+            {("Plain", "A1"): 1},
+            {("Plain", "B1"): "=A1", ("Plain", "C1"): "=B1"},
+        )
+        results = localize(model, "formulaguard_v4", candidate_limit=1)
+        for result in results:
+            if result.evidence["diagnostic_status"] not in {
+                "strong_counterfactual", "moderate_counterfactual"
+            }:
+                self.assertEqual(result.evidence["promotion_cap"], 0)
 
 
 if __name__ == "__main__":

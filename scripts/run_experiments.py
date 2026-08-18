@@ -112,7 +112,7 @@ def evaluate_instance(task):
         correct = instance["correct_formula"]
         repair_exact = bool(repair) and normalized_formula(repair) == normalized_formula(correct)
         candidate_rank = None
-        if method in {"formulaguard", "formulaguard_v3"}:
+        if method in {"formulaguard", "formulaguard_v3", "formulaguard_v4"}:
             source_candidates = generate_candidates(mutant, source, limit=max(10, candidate_limit))
             candidate_rank = next(
                 (
@@ -138,7 +138,7 @@ def evaluate_instance(task):
                 float(source_result.evidence.get("candidate_total_energy", float("inf"))) <= float(source_result.evidence.get("base_energy", float("inf"))) + 1e-12
                 and float(source_result.evidence.get("candidate_constraint_energy", float("inf"))) <= float(source_result.evidence.get("base_constraint_energy", float("inf"))) + 1e-12
             )
-        is_fg_method = method in {"formulaguard", "formulaguard_v3"}
+        is_fg_method = method in {"formulaguard", "formulaguard_v3", "formulaguard_v4"}
         rows.append({
             "instance_id": instance["instance_id"],
             "template_family": instance["template_family"],
@@ -175,6 +175,13 @@ def evaluate_instance(task):
             "repair_safety": repair_safety,
             "evidence_strength": source_result.evidence.get("evidence_strength", "") if source_result and method == "formulaguard_v3" else "",
             "reported_paths": reported_paths if method == "formulaguard_v3" else "",
+            "diagnostic_status": source_result.evidence.get("diagnostic_status", "") if source_result and method == "formulaguard_v4" else "",
+            "intervention_selected": source_result.evidence.get("intervention_selected", "") if source_result and method == "formulaguard_v4" else "",
+            "candidate_count": source_result.evidence.get("candidate_count", "") if source_result and method == "formulaguard_v4" else "",
+            "candidate_delta": source_result.evidence.get("candidate_delta", "") if source_result and method == "formulaguard_v4" else "",
+            "null_control_count": source_result.evidence.get("null_control_count", "") if source_result and method == "formulaguard_v4" else "",
+            "intervention_responsibility_gain": source_result.evidence.get("intervention_responsibility_gain", "") if source_result and method == "formulaguard_v4" else "",
+            "promotion_cap": source_result.evidence.get("promotion_cap", "") if source_result and method == "formulaguard_v4" else "",
         })
     return instance["instance_id"], rows
 
@@ -187,12 +194,18 @@ def run(args):
         instances = instances[: args.limit]
     if not instances:
         raise SystemExit(f"No validated benchmark instances found in: {validation_file}")
-    primary_method = "formulaguard_v3" if args.model_version == "v3" else "formulaguard"
+    primary_method = {
+        "v2": "formulaguard",
+        "v3": "formulaguard_v3",
+        "v4": "formulaguard_v4",
+    }[args.model_version]
     methods = BASE_METHODS + ["formulaguard"]
-    if args.model_version == "v3":
+    if args.model_version in {"v3", "v4"}:
         methods.append("formulaguard_v3")
+    if args.model_version == "v4":
+        methods.append("formulaguard_v4")
     methods.append("sfl_oracle")
-    if args.ablations:
+    if args.ablations and args.model_version != "v4":
         methods += V3_ABLATION_METHODS if args.model_version == "v3" else V2_ABLATION_METHODS
     gir_weights = (0.35, 0.50, 0.10, 0.05)
     if args.config:
@@ -315,7 +328,7 @@ def run(args):
         "formula_guard_equal_fraction": mean([int(value == 0) for value in paired]),
     }
     (output / "paired_comparison.json").write_text(json.dumps(comparison, ensure_ascii=False, indent=2), encoding="utf-8")
-    if args.model_version == "v3":
+    if args.model_version in {"v3", "v4"}:
         v2 = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == "formulaguard"}
         v3 = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == "formulaguard_v3"}
         differences = [v3[key] - v2[key] for key in sorted(v2.keys() & v3.keys())]
@@ -327,6 +340,27 @@ def run(args):
             "v3_equal_fraction": mean([int(value == 0) for value in differences]),
         }
         (output / "v3_vs_v2.json").write_text(json.dumps(v3_comparison, ensure_ascii=False, indent=2), encoding="utf-8")
+    if args.model_version == "v4":
+        v4 = {row["instance_id"]: float(row["mrr"]) for row in raw_rows if row["method"] == "formulaguard_v4"}
+        reference_comparisons = {}
+        for reference_method in ("graph", "pattern", "formulaguard", "formulaguard_v3"):
+            reference = {
+                row["instance_id"]: float(row["mrr"])
+                for row in raw_rows if row["method"] == reference_method
+            }
+            differences = [v4[key] - reference[key] for key in sorted(v4.keys() & reference.keys())]
+            reference_comparisons[f"v4_minus_{reference_method}"] = {
+                "paired_instances": len(differences),
+                "mean_mrr_difference": mean(differences),
+                "bootstrap_95_ci": bootstrap_ci(differences, args.bootstrap_samples),
+                "better_fraction": mean([int(value > 0) for value in differences]),
+                "equal_fraction": mean([int(value == 0) for value in differences]),
+                "worse_fraction": mean([int(value < 0) for value in differences]),
+            }
+        (output / "v4_vs_references.json").write_text(
+            json.dumps(reference_comparisons, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
     report = {
         "benchmark": str(benchmark),
         "instances": len(instances),
@@ -356,7 +390,7 @@ def main():
     parser.add_argument("--ablations", action="store_true")
     parser.add_argument("--config", type=Path, help="Frozen quick configuration used by full evaluation")
     parser.add_argument("--workers", type=int, default=0, help="Worker processes; 0 uses three quarters of logical CPUs")
-    parser.add_argument("--model-version", choices=("v2", "v3"), default="v2")
+    parser.add_argument("--model-version", choices=("v2", "v3", "v4"), default="v2")
     args = parser.parse_args()
     if args.workers < 0:
         parser.error("--workers must be 0 (auto) or a positive integer")

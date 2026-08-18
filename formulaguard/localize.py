@@ -1036,6 +1036,362 @@ def v3_real_scores(
     return results
 
 
+def _competition_ranks(scores: Mapping[CellKey, float]) -> dict[CellKey, int]:
+    """Return one-based competition ranks while preserving exact score ties."""
+    ordered = sorted(scores, key=lambda cell: (-float(scores[cell]), cell))
+    ranks: dict[CellKey, int] = {}
+    previous_score: float | None = None
+    previous_rank = 0
+    for position, cell in enumerate(ordered, 1):
+        score = float(scores[cell])
+        if previous_score is None or score != previous_score:
+            previous_rank = position
+            previous_score = score
+        ranks[cell] = previous_rank
+    return ranks
+
+
+def _v4_scope_weights(
+    model: WorkbookModel,
+    graph: DependencyGraph,
+    start: CellKey,
+    *,
+    max_depth: int = 3,
+    decay: float = 0.70,
+) -> dict[CellKey, float]:
+    """Build a fixed local causal-cone scope for one intervention.
+
+    Nearby formula peers represent the copy family.  Dependency descendants are
+    included through ``max_depth``; deeper structural sinks and explicitly named
+    check sheets remain visible with distance decay.  The scope is fixed from the
+    original workbook so candidate formulas are compared on identical support.
+    """
+    formula_set = set(model.formula_cells)
+    check_tokens = ("check", "audit", "control", "validation")
+    structural_sinks = set(graph.sinks(model.formula_cells))
+    weights: dict[CellKey, float] = {start: 1.0}
+    for peer in _peers(model, start):
+        weights[peer] = max(weights.get(peer, 0.0), 0.50)
+
+    queue: list[tuple[CellKey, int]] = [(start, 0)]
+    seen_depth = {start: 0}
+    index = 0
+    while index < len(queue):
+        node, depth = queue[index]
+        index += 1
+        for nxt in sorted(graph.dependents.get(node, ())):
+            next_depth = depth + 1
+            if next_depth >= seen_depth.get(nxt, 10**9):
+                continue
+            seen_depth[nxt] = next_depth
+            queue.append((nxt, next_depth))
+            if nxt not in formula_set:
+                continue
+            is_terminal = nxt in structural_sinks or any(
+                token in nxt[0].casefold() for token in check_tokens
+            )
+            if next_depth <= max_depth or is_terminal:
+                weights[nxt] = max(weights.get(nxt, 0.0), decay ** next_depth)
+    return weights
+
+
+def _v4_local_energy(
+    maps: Mapping[str, Mapping[CellKey, float]],
+    scope_weights: Mapping[CellKey, float],
+) -> tuple[float, dict[str, float]]:
+    """Aggregate anomaly maps on a candidate-specific but fixed local scope."""
+    denominator = max(1e-9, sum(scope_weights.values()))
+    component_weights = {
+        "formula": 0.35,
+        "graph": 0.35,
+        "behavior_general": 0.15,
+        "constraint": 0.15,
+    }
+    components = {
+        name: sum(
+            weight * float(maps.get(name, {}).get(cell, 0.0))
+            for cell, weight in scope_weights.items()
+        ) / denominator
+        for name in component_weights
+    }
+    total = sum(component_weights[name] * components[name] for name in component_weights)
+    return total, components
+
+
+def _v4_bounded_change(before: float, after: float, *, floor: float = 0.05) -> tuple[float, float]:
+    """Return bounded gain/harm without exploding near a zero baseline."""
+    denominator = max(floor, before)
+    gain = min(1.0, max(0.0, before - after) / denominator)
+    harm = min(1.0, max(0.0, after - before) / denominator)
+    return gain, harm
+
+
+def _v4_matched_controls(
+    target: RepairCandidate,
+    effects: Sequence[dict[str, object]],
+    *,
+    limit: int = 5,
+) -> list[dict[str, object]]:
+    """Select low-support, edit-distance-matched alternatives as null controls."""
+    target_kinds = set(target.edit_kinds)
+    alternatives = [
+        effect for effect in effects
+        if effect["candidate"].formula != target.formula
+    ]
+
+    def distance(effect: dict[str, object]) -> tuple[float, int, str]:
+        candidate = effect["candidate"]
+        overlap_penalty = 0 if target_kinds & set(candidate.edit_kinds) else 1
+        peer_penalty = 1 if "peer_translation" in candidate.sources else 0
+        return (
+            overlap_penalty * 10.0 + abs(candidate.edit_cost - target.edit_cost),
+            peer_penalty,
+            candidate.formula,
+        )
+
+    preferred = [
+        effect for effect in alternatives
+        if target_kinds & set(effect["candidate"].edit_kinds)
+        and abs(effect["candidate"].edit_cost - target.edit_cost) <= 1.5
+        and "peer_translation" not in effect["candidate"].sources
+    ]
+    if len(preferred) < 2:
+        preferred = [
+            effect for effect in alternatives
+            if abs(effect["candidate"].edit_cost - target.edit_cost) <= 1.5
+            and "peer_translation" not in effect["candidate"].sources
+        ]
+    if len(preferred) < 2:
+        preferred = alternatives
+    return sorted(preferred, key=distance)[:limit]
+
+
+def v4_scores(
+    model: WorkbookModel,
+    *,
+    candidate_limit: int = 15,
+    max_intervention_cells: int = 100,
+    rrf_k: int = 60,
+    scope_depth: int = 3,
+    scope_decay: float = 0.70,
+):
+    """Locally calibrated, evidence-selective FormulaGuard-v4 prototype.
+
+    V4 is deliberately separate from frozen-v3.  It uses rank fusion only as a
+    stable review prior, evaluates candidate effects on a local causal cone, and
+    requires improvement over matched alternative edits before allowing bounded
+    promotion in the final ranking.
+    """
+    started = time.perf_counter()
+    graph = model.dependency_graph()
+    formula_scores = formula_anomaly_scores(model)
+    graph_scores = graph_anomaly_scores(model)
+    behavior_scores = behavior_anomaly_scores(model)
+    legacy_prior = {
+        cell: (
+            0.45 * formula_scores[cell]
+            + 0.25 * graph_scores[cell]
+            + 0.30 * behavior_scores[cell]
+        )
+        for cell in model.formula_cells
+    }
+    formula_ranks = _competition_ranks(formula_scores)
+    graph_ranks = _competition_ranks(graph_scores)
+    legacy_ranks = _competition_ranks(legacy_prior)
+    base_scores = {
+        cell: (
+            1.0 / (rrf_k + formula_ranks[cell])
+            + 1.0 / (rrf_k + graph_ranks[cell])
+            + 1.0 / (rrf_k + legacy_ranks[cell])
+        )
+        for cell in model.formula_cells
+    }
+    ordered_base = sorted(
+        model.formula_cells,
+        key=lambda cell: (
+            -base_scores[cell],
+            -graph_scores[cell],
+            -formula_scores[cell],
+            -legacy_prior[cell],
+            cell,
+        ),
+    )
+    base_ranks = {cell: rank for rank, cell in enumerate(ordered_base, 1)}
+    intervention_cells = set(ordered_base[:max_intervention_cells])
+    intervention_ranks = {cell: rank for rank, cell in enumerate(ordered_base, 1)}
+
+    base_global_energy, _, base_maps = _energy(model, include_maps=True)
+    n = len(model.formula_cells)
+    records: dict[CellKey, dict[str, object]] = {}
+    for cell in model.formula_cells:
+        record: dict[str, object] = {
+            "candidate": None,
+            "status": "not_intervened",
+            "candidate_count": 0,
+            "scope_size": 0,
+            "local_before": 0.0,
+            "local_after": 0.0,
+            "local_gain": 0.0,
+            "global_harm": 0.0,
+            "delta": 0.0,
+            "control_count": 0,
+            "control_median": 0.0,
+            "control_mad": 0.0,
+            "irg": 0.0,
+            "promotion": 0,
+        }
+        if cell not in intervention_cells:
+            records[cell] = record
+            continue
+
+        scope_weights = _v4_scope_weights(
+            model, graph, cell, max_depth=scope_depth, decay=scope_decay
+        )
+        local_before, _ = _v4_local_energy(base_maps, scope_weights)
+        candidates = generate_candidates(model, cell, candidate_limit)
+        record.update({
+            "candidate_count": len(candidates),
+            "scope_size": len(scope_weights),
+            "local_before": local_before,
+        })
+        if not candidates:
+            record["status"] = "no_candidate"
+            records[cell] = record
+            continue
+
+        effects: list[dict[str, object]] = []
+        for candidate in candidates:
+            candidate_global_energy, _, candidate_maps = _energy(
+                model, {cell: candidate.formula}, include_maps=True
+            )
+            local_after, _ = _v4_local_energy(candidate_maps, scope_weights)
+            local_gain, local_harm = _v4_bounded_change(local_before, local_after)
+            _, global_harm = _v4_bounded_change(base_global_energy, candidate_global_energy)
+            side_effect = max(local_harm, global_harm)
+            delta = local_gain - 0.50 * side_effect
+            effects.append({
+                "candidate": candidate,
+                "local_after": local_after,
+                "local_gain": local_gain,
+                "global_harm": global_harm,
+                "side_effect": side_effect,
+                "delta": delta,
+            })
+
+        classified: list[dict[str, object]] = []
+        for effect in effects:
+            candidate = effect["candidate"]
+            controls = _v4_matched_controls(candidate, effects)
+            control_values = [float(control["delta"]) for control in controls]
+            control_median = statistics.median(control_values) if control_values else 0.0
+            control_mad = (
+                statistics.median(abs(value - control_median) for value in control_values)
+                if control_values else 0.0
+            )
+            robust_scale = max(0.01, 1.4826 * control_mad)
+            irg = (float(effect["delta"]) - control_median) / robust_scale if controls else 0.0
+            independent_support = candidate.support >= 2 or len(candidate.sources) >= 2
+            if (
+                len(controls) >= 2
+                and float(effect["delta"]) >= 0.05
+                and irg >= 3.0
+                and independent_support
+            ):
+                status, promotion = "strong_counterfactual", 10
+            elif len(controls) >= 2 and float(effect["delta"]) >= 0.02 and irg >= 1.5:
+                status, promotion = "moderate_counterfactual", 2
+            elif float(effect["delta"]) > 0 and len(controls) < 2:
+                status, promotion = "uncalibrated_candidate", 0
+            else:
+                status, promotion = "pattern_only", 0
+            classified.append({
+                **effect,
+                "status": status,
+                "promotion": promotion,
+                "control_count": len(controls),
+                "control_median": control_median,
+                "control_mad": control_mad,
+                "irg": irg,
+            })
+
+        status_priority = {
+            "strong_counterfactual": 4,
+            "moderate_counterfactual": 3,
+            "uncalibrated_candidate": 2,
+            "pattern_only": 1,
+        }
+        best = max(
+            classified,
+            key=lambda item: (
+                status_priority[str(item["status"])],
+                float(item["irg"]),
+                float(item["delta"]),
+                item["candidate"].quality,
+                item["candidate"].formula,
+            ),
+        )
+        record.update(best)
+        records[cell] = record
+
+    results: list[LocalizationResult] = []
+    for cell in model.formula_cells:
+        record = records[cell]
+        candidate = record.get("candidate")
+        promotion = int(record["promotion"])
+        target_rank = max(1, base_ranks[cell] - promotion)
+        evidence_tiebreak = min(0.99, max(0.0, float(record["irg"])) / 100.0)
+        score = float(n - target_rank + 1) + evidence_tiebreak
+        results.append(LocalizationResult(
+            cell=cell,
+            score=score,
+            candidate_formula=candidate.formula if candidate else None,
+            evidence={
+                "model_version": "v4-dev",
+                "fusion_policy": "rrf_prior_then_locally_calibrated_bounded_promotion",
+                "formula_anomaly": formula_scores[cell],
+                "graph_anomaly": graph_scores[cell],
+                "behavior_anomaly": behavior_scores[cell],
+                "legacy_prior": legacy_prior[cell],
+                "formula_rank": formula_ranks[cell],
+                "graph_rank": graph_ranks[cell],
+                "legacy_prior_rank": legacy_ranks[cell],
+                "rrf_k": rrf_k,
+                "rrf_score": base_scores[cell],
+                "base_rank": base_ranks[cell],
+                "intervention_selected": int(cell in intervention_cells),
+                "intervention_selection_rank": intervention_ranks[cell],
+                "intervention_budget": max_intervention_cells,
+                "candidate_count": int(record["candidate_count"]),
+                "diagnostic_status": str(record["status"]),
+                "local_scope_size": int(record["scope_size"]),
+                "scope_depth": scope_depth,
+                "scope_decay": scope_decay,
+                "local_before_energy": float(record["local_before"]),
+                "local_after_energy": float(record["local_after"]),
+                "local_gain": float(record["local_gain"]),
+                "global_harm": float(record["global_harm"]),
+                "candidate_delta": float(record["delta"]),
+                "null_control_count": int(record["control_count"]),
+                "null_control_median": float(record["control_median"]),
+                "null_control_mad": float(record["control_mad"]),
+                "intervention_responsibility_gain": float(record["irg"]),
+                "promotion_cap": promotion,
+                "target_rank_before_collisions": target_rank,
+                "candidate_support": candidate.support if candidate else 0,
+                "candidate_quality": candidate.quality if candidate else 0.0,
+                "candidate_source": ",".join(candidate.sources) if candidate else "",
+                "candidate_edit_kind": ",".join(candidate.edit_kinds) if candidate else "",
+            },
+        ))
+    results.sort(key=lambda item: (-item.score, item.cell))
+    elapsed = time.perf_counter() - started
+    final_ranks = {item.cell: rank for rank, item in enumerate(results, 1)}
+    for item in results:
+        item.evidence["final_rank"] = final_ranks[item.cell]
+        item.evidence["localization_seconds"] = elapsed
+    return results
+
+
 def sfl_oracle_scores(model: WorkbookModel, failed_sinks: set[CellKey]):
     graph = model.dependency_graph()
     sinks = set(graph.sinks(model.formula_cells))
@@ -1065,6 +1421,8 @@ def localize(model: WorkbookModel, method: str = "formulaguard", *, failed_sinks
         return car_v3_scores(model, candidate_limit=candidate_limit)
     if method in {"formulaguard_v3_real", "v3_real"}:
         return v3_real_scores(model, candidate_limit=candidate_limit)
+    if method in {"formulaguard_v4", "v4"}:
+        return v4_scores(model, candidate_limit=candidate_limit)
     if method == "v3_ablate_adaptive":
         return car_v3_scores(model, candidate_limit=candidate_limit, use_adaptive_graph=False)
     if method == "v3_ablate_side_effect":

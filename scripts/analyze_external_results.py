@@ -110,6 +110,10 @@ def main() -> None:
         ("formulaguard_v3_real", "formulaguard"),
         ("formulaguard_v3_real", "formulaguard_v3"),
         ("formulaguard_v3_real", "warder_like"),
+        ("formulaguard_v4", "graph"),
+        ("formulaguard_v4", "pattern"),
+        ("formulaguard_v4", "formulaguard"),
+        ("formulaguard_v4", "formulaguard_v3"),
     )
     for left, right in comparison_pairs:
         if left not in by_method or right not in by_method:
@@ -138,6 +142,29 @@ def main() -> None:
         value: sum(row.get("diagnostic_status", "") == value for row in v3_real_rows)
         for value in ("counterfactual_supported", "pattern_only", "insufficient_evidence", "")
     }
+    v4_rows = by_method.get("formulaguard_v4", [])
+    v4_status_counts = {
+        value: sum(row.get("diagnostic_status", "") == value for row in v4_rows)
+        for value in (
+            "strong_counterfactual",
+            "moderate_counterfactual",
+            "uncalibrated_candidate",
+            "pattern_only",
+            "no_candidate",
+            "not_intervened",
+            "",
+        )
+    }
+    v4_intervention_diagnostics = {
+        "source_selected_for_intervention": sum(row.get("intervention_selected", "") == "1" for row in v4_rows),
+        "source_not_selected_for_intervention": sum(row.get("intervention_selected", "") == "0" for row in v4_rows),
+        "source_with_nonempty_candidate_pool": sum(int(row.get("candidate_count", "0") or 0) > 0 for row in v4_rows),
+        "source_with_empty_candidate_pool": sum(
+            row.get("intervention_selected", "") == "1"
+            and int(row.get("candidate_count", "0") or 0) == 0
+            for row in v4_rows
+        ),
+    }
     payload = {
         "events": len(by_instance),
         "quantitative_reporting_allowed": len(by_instance) >= args.minimum_quantitative_events,
@@ -145,6 +172,8 @@ def main() -> None:
         "paired_comparisons": comparisons,
         "v3_candidate_evidence_counts": evidence_counts,
         "v3_real_diagnostic_status_counts": diagnostic_status_counts,
+        "v4_diagnostic_status_counts": v4_status_counts,
+        "v4_intervention_diagnostics": v4_intervention_diagnostics,
         "interpretation_rule": (
             "For multi-cell events, compare against the exact first-hit expectation for m labeled "
             "formula cells among n formulas; a single seeded random ranking is not a stable baseline."
