@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 import unittest
 import tempfile
 from pathlib import Path
@@ -59,6 +61,37 @@ class AuthenticityAuditTests(unittest.TestCase):
         validate_label_free_columns(["instance_id", "workbook"])
         with self.assertRaises(ValueError):
             validate_label_free_columns(["instance_id", "workbook", "source_cell"])
+
+    def test_blind_prediction_scheduler_writes_locked_parallel_ranking(self):
+        repository = Path(__file__).resolve().parents[1]
+        workbook = repository / "data" / "propagationbench_smoke" / "mutants" / "budget_v0_M1_deep.xlsx"
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = root / "manifest.csv"
+            output = root / "locked"
+            manifest.write_text(
+                f"instance_id,workbook\ncase-1,{workbook}\n", encoding="utf-8-sig"
+            )
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    str(repository / "scripts" / "run_v4_blind_predictions.py"),
+                    "--manifest", str(manifest),
+                    "--config", str(repository / "research" / "frozen_config_v4.json"),
+                    "--output", str(output),
+                    "--methods", "graph,pattern",
+                    "--workers", "2",
+                ],
+                cwd=repository, capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            lock = json.loads((output / "prediction_lock.json").read_text(encoding="utf-8"))
+            metadata = json.loads(
+                (output / lock["metadata_file"]).read_text(encoding="utf-8")
+            )
+            self.assertEqual(metadata["worker_processes"], 2)
+            self.assertEqual(metadata["scheduler_unit"], "one_label_free_workbook_method_ranking")
+            verify_prediction_lock(output / "prediction_lock.json")
 
     def test_blind_scoring_uses_locked_full_ranking(self):
         rankings = [

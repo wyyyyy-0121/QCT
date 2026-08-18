@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import csv
 import hashlib
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -48,6 +50,39 @@ def _write_csv(path: Path, rows: list[dict[str, object]]) -> None:
         writer.writerows(rows)
 
 
+def evaluate_blind_workbook_method(
+    task: tuple[str, str, str, str, int],
+) -> tuple[str, str, list[dict[str, object]]]:
+    """Return one complete ranking; the task contains no source labels."""
+    workbook_text, instance_id, workbook_label, method, candidate_limit = task
+    model = WorkbookModel.from_xlsx(Path(workbook_text))
+    started = time.perf_counter()
+    results = localize(model, method, candidate_limit=candidate_limit)
+    elapsed = time.perf_counter() - started
+    rows: list[dict[str, object]] = []
+    for rank, result in enumerate(results, 1):
+        rows.append({
+            "instance_id": instance_id,
+            "workbook": workbook_label,
+            "method": method,
+            "rank": rank,
+            "formula_count": len(results),
+            "cell": result.cell_label,
+            "score": result.score,
+            "candidate_formula": result.candidate_formula or "",
+            "diagnostic_status": result.evidence.get("diagnostic_status", ""),
+            "intervention_selected": result.evidence.get("intervention_selected", ""),
+            "candidate_count": result.evidence.get("candidate_count", ""),
+            "candidate_delta": result.evidence.get("candidate_delta", ""),
+            "intervention_responsibility_gain": result.evidence.get(
+                "intervention_responsibility_gain", ""
+            ),
+            "promotion_cap": result.evidence.get("promotion_cap", ""),
+            "runtime_seconds": elapsed,
+        })
+    return instance_id, method, rows
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Freeze FormulaGuard-v4 predictions before labels are opened")
     parser.add_argument("--manifest", type=Path, required=True)
@@ -55,6 +90,10 @@ def main() -> None:
     parser.add_argument("--config", type=Path, required=True, help="Frozen v4 configuration")
     parser.add_argument("--candidate-limit", type=int, default=15)
     parser.add_argument("--methods", default=DEFAULT_METHODS)
+    parser.add_argument(
+        "--workers", type=int, default=0,
+        help="Worker processes; 0 uses half of logical CPUs capped at 16",
+    )
     args = parser.parse_args()
 
     repository_root = Path(__file__).resolve().parents[1]
@@ -89,42 +128,50 @@ def main() -> None:
     if any(not instance_id for instance_id in ids) or len(ids) != len(set(ids)):
         raise SystemExit("instance_id values must be non-empty and unique")
 
+    workbook_labels = [row["workbook"].strip() for row in instances]
+    if any(not workbook for workbook in workbook_labels):
+        raise SystemExit("workbook values must be non-empty")
+    if len(workbook_labels) != len(set(workbook_labels)):
+        raise SystemExit(
+            "Each blind event must use a distinct workbook to avoid pseudo-replication"
+        )
+
     args.output.mkdir(parents=True, exist_ok=True)
     ranking_rows: list[dict[str, object]] = []
     workbook_hashes: dict[str, str] = {}
-    for index, instance in enumerate(instances, 1):
+    tasks: list[tuple[str, str, str, str, int]] = []
+    for instance in instances:
         workbook = (args.manifest.parent / instance["workbook"]).resolve()
         if not workbook.is_file():
             raise SystemExit(f"Blind workbook not found: {workbook}")
         workbook_hashes[instance["instance_id"]] = sha256_file(workbook)
-        model = WorkbookModel.from_xlsx(workbook)
         for method in methods:
-            started = time.perf_counter()
-            results = localize(model, method, candidate_limit=args.candidate_limit)
-            elapsed = time.perf_counter() - started
-            for rank, result in enumerate(results, 1):
-                ranking_rows.append({
-                    "instance_id": instance["instance_id"],
-                    "workbook": instance["workbook"],
-                    "method": method,
-                    "rank": rank,
-                    "formula_count": len(results),
-                    "cell": result.cell_label,
-                    "score": result.score,
-                    "candidate_formula": result.candidate_formula or "",
-                    "diagnostic_status": result.evidence.get("diagnostic_status", ""),
-                    "intervention_selected": result.evidence.get("intervention_selected", ""),
-                    "candidate_count": result.evidence.get("candidate_count", ""),
-                    "candidate_delta": result.evidence.get("candidate_delta", ""),
-                    "intervention_responsibility_gain": result.evidence.get(
-                        "intervention_responsibility_gain", ""
-                    ),
-                    "promotion_cap": result.evidence.get("promotion_cap", ""),
-                    "runtime_seconds": elapsed,
-                })
-        print(f"[{index}/{len(instances)}] predictions frozen in memory: {instance['instance_id']}", flush=True)
+            tasks.append((
+                str(workbook), instance["instance_id"], instance["workbook"], method,
+                args.candidate_limit,
+            ))
+    auto_workers = min(16, max(1, (os.cpu_count() or 2) // 2), len(tasks))
+    workers = auto_workers if args.workers == 0 else max(1, min(args.workers, len(tasks)))
+    print(
+        f"[scheduler] events={len(instances)} method_jobs={len(tasks)} workers={workers}",
+        flush=True,
+    )
+    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+        futures = [executor.submit(evaluate_blind_workbook_method, task) for task in tasks]
+        for index, future in enumerate(concurrent.futures.as_completed(futures), 1):
+            instance_id, method, rows = future.result()
+            ranking_rows.extend(rows)
+            print(f"[{index}/{len(tasks)}] {instance_id} :: {method}", flush=True)
     if not ranking_rows:
         raise SystemExit("No blind rankings were generated")
+
+    instance_order = {instance_id: index for index, instance_id in enumerate(ids)}
+    method_order = {method: index for index, method in enumerate(methods)}
+    ranking_rows.sort(key=lambda row: (
+        instance_order[str(row["instance_id"])],
+        method_order[str(row["method"])],
+        int(row["rank"]),
+    ))
 
     rankings_path = args.output / "blind_rankings.csv"
     _write_csv(rankings_path, ranking_rows)
@@ -140,6 +187,8 @@ def main() -> None:
         "instances": len(instances),
         "methods": methods,
         "candidate_limit": args.candidate_limit,
+        "worker_processes": workers,
+        "scheduler_unit": "one_label_free_workbook_method_ranking",
         "frozen_config": str(args.config.resolve()),
         "frozen_config_sha256": sha256_file(args.config),
         "v4_parameters": v4_default_parameters(),

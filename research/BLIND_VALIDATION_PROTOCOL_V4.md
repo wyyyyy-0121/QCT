@@ -7,8 +7,9 @@
 
 ## 数据准备
 
-请由一名不参与模型开发的人准备6--12份非敏感工作簿，每份制造1个仍能返回正常
-数值的静默公式错误。准备两份清单：
+请由一名不参与模型开发的人准备独立的非敏感工作簿，每份制造1个仍能返回正常
+数值的静默公式错误。银奖目标建议至少15份；只有6--12份时仍可执行，但只作为
+探索性案例研究。准备两份清单：
 
 1. 无标签清单只含`instance_id,workbook`，放入项目目录；
 2. 标签清单含`instance_id,source_cell`或`source_cells`，保存在项目目录外。
@@ -19,12 +20,12 @@
 
 ## 第一步：标签打开前冻结预测
 
+在9955HX3D上直接运行`run_v4_blind.cmd`。入口默认使用16个进程，按“工作簿—方法”
+分配任务；这只改变调度，不改变任何排名规则。
+
 ```bat
 cd /d D:\code\QCT
-python scripts\run_v4_blind_predictions.py ^
-  --manifest data\blind_v4\blind_manifest.csv ^
-  --config research\frozen_config_v4.json ^
-  --output results\v4_blind_locked
+run_v4_blind.cmd
 ```
 
 脚本首先验证冻结配置、模型参数和源码哈希，然后拒绝包含`source_cell`、
