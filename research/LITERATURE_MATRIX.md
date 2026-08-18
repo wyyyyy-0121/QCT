@@ -30,7 +30,7 @@
 ## C. 当前采用的正式引用条目
 
 1. Abraham, R.; Erwig, M. GoalDebug: A Spreadsheet Debugger for End Users. ICSE 2007, pp. 251-260. DOI: 10.1109/ICSE.2007.39. https://web.engr.oregonstate.edu/~erwig/papers/GoalDebug_ICSE07.pdf
-2. Abraham, R.; Erwig, M. Spreadsheet Debugging. 2008. https://arxiv.org/abs/0801.4280
+2. Abraham, R.; Erwig, M. Spreadsheet Debugging. 2008. https://arxiv.org/abs/0802.3479
 3. Hofer, B.; Riboira, A.; Wotawa, F.; Abreu, R.; Getzner, E. On the Empirical Evaluation of Fault Localization Techniques for Spreadsheets. FASE 2013, pp. 68-82. DOI: 10.1007/978-3-642-37057-1_6.
 4. Hofer, B. et al. The FaultySheet Detective: When Smells Meet Fault Localization. 2014. https://gzoltar.com/pub/18.pdf
 5. MUSSCO: A Mutation-Based Spreadsheet Formula Repair Approach. 2015. https://dl.ifip.org/IFIP-LNCS-9447/hal-01470160
