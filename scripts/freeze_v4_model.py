@@ -21,7 +21,9 @@ REQUIRED_RESULT_FILES = (
     "external_analysis.json",
     "external_dataset_audit.json",
     "external_run_metadata.json",
+    "external_exclusions.csv",
     "v4_development_audit.json",
+    "v4_revision_comparison.json",
 )
 
 

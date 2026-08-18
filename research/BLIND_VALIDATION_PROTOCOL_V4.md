@@ -23,7 +23,7 @@
 cd /d D:\code\QCT
 python scripts\run_v4_blind_predictions.py ^
   --manifest data\blind_v4\blind_manifest.csv ^
-  --config results\v4_dev_revision\frozen_config_v4.json ^
+  --config research\frozen_config_v4.json ^
   --output results\v4_blind_locked
 ```
 
