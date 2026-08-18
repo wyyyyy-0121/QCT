@@ -12,7 +12,7 @@
 | E5 | v3-real B不改变不同v2分数组，只把反事实证据作为并列裁决和证据标签 | `formulaguard/localize.py`、单元测试、`results/enron_pilot_real_b/` | 开发集验证完成 | 不能称为真实数据上精度提升 |
 | E6 | Enron标签按36个错误事件而非630个单元格统计，30个公式事件可评 | `data/external/enron/manifest.audit.json`、`inventory.audit.json` | 已完成 | 不能把多单元格范围拆成独立样本扩大样本量 |
 | E7 | 外部测试集在规则冻结前保持未运行，开发/测试清单不相交 | `data/external/enron/split_lock.json` | 已锁定 | 测试集运行后不得再改规则或阈值 |
-| E8 | v3-real在20个未见Enron事件上的定位效果 | `results/enron_test_v3_real/` | 待运行 `run_enron_test.cmd` | 未完成前不得写结果性结论 |
+| E8 | v3-real在20个未见Enron事件上的定位效果 | `results/enron_test_v3_real/external_summary.csv`、`blind_result_audit.json` | 已完成：不支持稳定优于图基线或v2 | 不能把高于随机期望写成优于实际无真值基线 |
 | E9 | v3在100至5000公式规模下的时间成本 | `results/v3_full/performance_v3.csv` | 待大型实验 | 旧v2性能文件不能代替v3 |
 | E10 | 公式计算与LibreOffice一致性 | `results/v3_full/libreoffice_validation.csv` | 已完成 | 这验证计算一致性，不验证错误标签正确性 |
 
@@ -33,6 +33,8 @@
 
 ## 最终结论门槛
 
-只有20个未见外部测试事件完成后，才允许填写E8。若v3-real未超过强基线，
-论文仍保留方法贡献，但结论改为“反事实证据分级提高了解释可审计性，真实
-定位精度未显示稳定提升”。负面结果和失败案例不得删除。
+20个未见外部测试事件已经完成。结果显示：图基线 MRR 为0.365，v3为
+0.250，v3-real为0.238；v3−v2 的 MRR 差为 +0.0116，95% bootstrap CI 跨
+0；v3−图基线差为 −0.1154，95% CI 同样跨0。论文结论必须是“反事实
+证据分级提供可审计解释，但真实定位精度未显示稳定提升”。负面结果和
+失败案例不得删除。
