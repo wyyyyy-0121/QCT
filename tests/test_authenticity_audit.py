@@ -1,4 +1,7 @@
+import json
 import unittest
+import tempfile
+from pathlib import Path
 
 from scripts.audit_benchmark_independence import classify_coupling
 from scripts.audit_external_manifest import manifest_sources
@@ -6,6 +9,8 @@ from scripts.analyze_external_results import random_event_expectation
 from scripts.audit_v4_development import build_audit
 from scripts.prepare_enron_manifest import expand_fault_spec
 from scripts.run_external_evaluation import METHODS, parse_methods
+from scripts.run_v4_blind_predictions import validate_label_free_columns
+from scripts.score_v4_blind_predictions import score_rankings, verify_prediction_lock
 
 
 class AuthenticityAuditTests(unittest.TestCase):
@@ -48,6 +53,43 @@ class AuthenticityAuditTests(unittest.TestCase):
         audit = build_audit(rows, expected_events=1)
         self.assertFalse(audit["gates"]["promotion_rules_respected"])
         self.assertFalse(audit["development_decision_ready"])
+
+    def test_blind_manifest_rejects_label_columns(self):
+        validate_label_free_columns(["instance_id", "workbook"])
+        with self.assertRaises(ValueError):
+            validate_label_free_columns(["instance_id", "workbook", "source_cell"])
+
+    def test_blind_scoring_uses_locked_full_ranking(self):
+        rankings = [
+            {"instance_id": "case-1", "method": "graph", "rank": "1", "formula_count": "3", "cell": "S!A1"},
+            {"instance_id": "case-1", "method": "graph", "rank": "2", "formula_count": "3", "cell": "S!A2"},
+            {"instance_id": "case-1", "method": "graph", "rank": "3", "formula_count": "3", "cell": "S!A3"},
+        ]
+        scored, summary = score_rankings(rankings, [{"instance_id": "case-1", "source_cell": "S!A2"}])
+        self.assertEqual(scored[0]["rank"], 2)
+        self.assertEqual(scored[0]["top1"], 0)
+        self.assertEqual(scored[0]["top3"], 1)
+        self.assertEqual(summary[0]["mrr"], 0.5)
+
+    def test_prediction_lock_detects_changed_rankings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            rankings = root / "blind_rankings.csv"
+            metadata = root / "metadata.json"
+            rankings.write_text("rank\n1\n", encoding="utf-8")
+            metadata.write_text("{}", encoding="utf-8")
+            from scripts.run_external_evaluation import sha256_file
+            lock = root / "prediction_lock.json"
+            lock.write_text(json.dumps({
+                "rankings_file": rankings.name,
+                "rankings_sha256": sha256_file(rankings),
+                "metadata_file": metadata.name,
+                "metadata_sha256": sha256_file(metadata),
+            }), encoding="utf-8")
+            verify_prediction_lock(lock)
+            rankings.write_text("rank\n2\n", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                verify_prediction_lock(lock)
 
     def test_enron_overview_range_expansion_is_event_level(self):
         self.assertEqual(expand_fault_spec("F28:G28"), {"F28", "G28"})
