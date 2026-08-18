@@ -13,7 +13,7 @@
 | E6 | Enron标签按36个错误事件而非630个单元格统计，30个公式事件可评 | `data/external/enron/manifest.audit.json`、`inventory.audit.json` | 已完成 | 不能把多单元格范围拆成独立样本扩大样本量 |
 | E7 | 外部测试集在规则冻结前保持未运行，开发/测试清单不相交 | `data/external/enron/split_lock.json` | 已锁定 | 测试集运行后不得再改规则或阈值 |
 | E8 | v3-real在20个未见Enron事件上的定位效果 | `results/enron_test_v3_real/external_summary.csv`、`blind_result_audit.json` | 已完成：不支持稳定优于图基线或v2 | 不能把高于随机期望写成优于实际无真值基线 |
-| E9 | v3在100至5000公式规模下的时间成本 | `results/v3_full/performance_v3.csv` | 待大型实验 | 旧v2性能文件不能代替v3 |
+| E9 | v3在100至5000公式规模下的单工作簿时间成本 | `results/v3_full/performance_v3_latency.csv`、`performance_v3_latency_summary.csv`、`performance_v3_latency_metadata.json` | 已完成：离线诊断延迟 | 旧v2性能文件不能代替v3；不能称为实时插件性能 |
 | E10 | 公式计算与LibreOffice一致性 | `results/v3_full/libreoffice_validation.csv` | 已完成 | 这验证计算一致性，不验证错误标签正确性 |
 
 ## 论文中心贡献的限定表达
@@ -38,3 +38,11 @@
 0；v3−图基线差为 −0.1154，95% CI 同样跨0。论文结论必须是“反事实
 证据分级提供可审计解释，但真实定位精度未显示稳定提升”。负面结果和
 失败案例不得删除。
+
+## 性能结论门槛
+
+单工作簿隔离延迟已按五次重复完成：100、500、1000、5000 个公式的定位
+中位数依次为 12.17、67.03、140.51、726.24 秒，解析中位数均不超过 0.08
+秒。结果支持“当前原型适合离线审计，定位阶段而非文件解析是主要成本”，
+不支持“实时 Excel 插件”或“可即时诊断数千公式工作簿”的表述。批量吞吐
+若完成，必须作为独立补充指标，不能以受竞争影响的单任务耗时替换本结论。

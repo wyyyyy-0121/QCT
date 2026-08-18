@@ -10,7 +10,8 @@
 | 表6-3 合成耦合 | `benchmark_independence.audit.json` | 正确候选是否由镜像编辑保证 | 省略或放在附录 |
 | 表6-4 Enron开发 | `results/enron_pilot*` | 为什么v3-real采取保守证据分级 | “外部验证成功” |
 | 表6-5 Enron盲测 | `results/enron_test_v3_real/external_summary.csv`、`external_analysis.json` | 未见自然错误上的定位表现 | 与开发集合并成30例后调参 |
-| 表6-6 性能 | `results/v3_full/performance_v3.csv` | 100—5000公式规模的耗时趋势 | 用旧v2性能替代 |
+| 表6-6 单表性能 | `results/v3_full/performance_v3_latency.csv`、`performance_v3_latency_summary.csv` | 100—5000公式规模下的隔离诊断延迟 | 用旧v2性能替代；把并行吞吐写成单表延迟 |
+| 表6-7 批量吞吐（补充） | `results/v3_full/performance_v3_throughput.csv`、对应metadata | 多核机器的批量处理能力 | 以受资源争抢的单任务耗时声称算法更快 |
 | 图6-1 真实案例 | `external_raw.csv` + 原始工作簿截图 | 系统为何把某个公式排在前列 | 根据结论手挑不保留失败案例 |
 | 图6-2 失败案例 | 同上 | 哪种表格结构无法提供足够反事实证据 | 只展示成功案例 |
 
