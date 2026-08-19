@@ -80,6 +80,16 @@ run_v4_v52_blind_lock.cmd --workers 24
 
 看到联合预测锁成功后才接收项目目录外的标签，再运行`run_v4_v52_blind_score.cmd`。详细交接要求见`research\V4_V52_INDEPENDENT_HANDOFF.md`。
 
+扩展 100 例合并集（其中 15 例为既有 Cohort-1，85 例为新 Cohort-2）使用：
+
+```bat
+run_v4_v52_blind_100_lock.cmd --workers 24
+```
+
+成功生成新锁文件后才允许释放 Batch-2 标签，再运行
+`run_v4_v52_blind_100_score.cmd`。哈希承诺与证据边界见
+`research\V4_V52_INDEPENDENT_100_PROTOCOL.md`。
+
 ## 第一次大型v2实验
 
 只有在Codex确认短测试通过并要求提交代码后，用户才运行：

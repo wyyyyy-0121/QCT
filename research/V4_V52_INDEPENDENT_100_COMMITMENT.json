@@ -1,0 +1,43 @@
+{
+  "protocol": "v4_v52_frozen_combined_100_case_hash_commitment_before_batch2_label_release",
+  "commitment_date": "2026-08-19",
+  "expected_total_events": 100,
+  "previously_revealed_event_count": 15,
+  "new_blind_event_count": 85,
+  "previously_revealed_ids": [
+    "independent_001", "independent_002", "independent_003", "independent_004",
+    "independent_005", "independent_006", "independent_007", "independent_008",
+    "independent_009", "independent_010", "independent_011", "independent_012",
+    "independent_013", "independent_014", "independent_015"
+  ],
+  "new_blind_ids": [
+    "independent_016", "independent_017", "independent_018", "independent_019",
+    "independent_020", "independent_021", "independent_022", "independent_023",
+    "independent_024", "independent_025", "independent_026", "independent_027",
+    "independent_028", "independent_029", "independent_030", "independent_031",
+    "independent_032", "independent_033", "independent_034", "independent_035",
+    "independent_036", "independent_037", "independent_038", "independent_039",
+    "independent_040", "independent_041", "independent_042", "independent_043",
+    "independent_044", "independent_045", "independent_046", "independent_047",
+    "independent_048", "independent_049", "independent_050", "independent_051",
+    "independent_052", "independent_053", "independent_054", "independent_055",
+    "independent_056", "independent_057", "independent_058", "independent_059",
+    "independent_060", "independent_061", "independent_062", "independent_063",
+    "independent_064", "independent_065", "independent_066", "independent_067",
+    "independent_068", "independent_069", "independent_070", "independent_071",
+    "independent_072", "independent_073", "independent_074", "independent_075",
+    "independent_076", "independent_077", "independent_078", "independent_079",
+    "independent_080", "independent_081", "independent_082", "independent_083",
+    "independent_084", "independent_085", "independent_086", "independent_087",
+    "independent_088", "independent_089", "independent_090", "independent_091",
+    "independent_092", "independent_093", "independent_094", "independent_095",
+    "independent_096", "independent_097", "independent_098", "independent_099",
+    "independent_100"
+  ],
+  "labels_sha256": "6cd81c46a2e0db9a4d2f6b3c4b8558fab38670e9520b68bd0c25da1e454ab91a",
+  "exceptions_sha256": "2d28fec6bb83b11b27a140a0940dfa194289fe3a03b0aa57ea1637c4a07a5514",
+  "private_batch2_archive_sha256": "3c2d82eb6bcbd593df06a4bc2293b8a2f5a7553ac6294fb17343acdd1e70687b",
+  "public_archive_sha256": "649d21f847761c74110701bdcf50f1cedd0676d2fce4ceecf55748e78fc66ebe",
+  "model_policy": "Frozen V4 and frozen V5.2-B only; no tuning from Cohort-1 or Cohort-2 labels.",
+  "reporting_policy": "Report the 85 newly blinded cases separately; the pooled 100-case table is secondary."
+}

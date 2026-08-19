@@ -94,7 +94,9 @@ def main() -> None:
     selected_gates = summary["formal_auxiliary_module_gates"]
     output = {
         "protocol": "v4_v52_independent_result_audit_after_label_release",
-        "scope": "15_event_independent_validation_case_set",
+        "scope": summary.get(
+            "scope", f"{args.expected_events}_event_independent_validation_case_set"
+        ),
         "not_for_model_selection": True,
         "input_files": {
             "summary": str(args.summary.resolve()),

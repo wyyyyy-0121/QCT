@@ -10,17 +10,20 @@ from formulaguard.workbook import WorkbookModel
 from scripts.build_v52_stress_workbooks import build_redteam_workbooks
 from scripts.run_external_evaluation import sha256_file
 from scripts.v52_blind_protocol import validate_public_manifest, verify_joint_lock
+from scripts.run_v4_v52_blind_100_lock import verify_precommit
 
 
 class V52BlindProtocolTests(unittest.TestCase):
-    def _public_set(self, root: Path, *, columns=("instance_id", "workbook")) -> Path:
+    def _public_set(
+        self, root: Path, *, columns=("instance_id", "workbook"), count=15
+    ) -> Path:
         workbook_dir = root / "workbooks"
         workbook_dir.mkdir()
         manifest = root / "manifest.csv"
         with manifest.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=list(columns))
             writer.writeheader()
-            for index in range(1, 16):
+            for index in range(1, count + 1):
                 name = f"case_{index:03d}.xlsx"
                 (workbook_dir / name).write_bytes(b"xlsx-test-fixture")
                 row = {"instance_id": f"case_{index:03d}", "workbook": f"workbooks/{name}"}
@@ -35,6 +38,35 @@ class V52BlindProtocolTests(unittest.TestCase):
             rows, hashes = validate_public_manifest(manifest)
             self.assertEqual(len(rows), 15)
             self.assertEqual(len(hashes), 15)
+
+    def test_public_manifest_supports_preregistered_100_event_cohort(self):
+        with tempfile.TemporaryDirectory() as directory:
+            manifest = self._public_set(Path(directory), count=100)
+            rows, hashes = validate_public_manifest(manifest, expected_events=100)
+            self.assertEqual(len(rows), 100)
+            self.assertEqual(len(hashes), 100)
+
+    def test_100_case_precommit_requires_matching_public_hashes_and_partition(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            commitment = root / "commitment.json"
+            public = root / "secret_precommit_sha256.txt"
+            digest_a = "a" * 64
+            digest_b = "b" * 64
+            digest_c = "c" * 64
+            commitment.write_text(json.dumps({
+                "expected_total_events": 2,
+                "previously_revealed_ids": ["case_001"],
+                "new_blind_ids": ["case_002"],
+                "labels_sha256": digest_a,
+                "exceptions_sha256": digest_b,
+                "private_batch2_archive_sha256": digest_c,
+            }), encoding="utf-8")
+            public.write_text("\n".join((digest_a, digest_b, digest_c)), encoding="utf-8")
+            checked = verify_precommit(
+                commitment, public, {"case_001", "case_002"}, 2
+            )
+            self.assertEqual(checked["labels_sha256"], digest_a)
 
     def test_public_manifest_rejects_even_one_label_column(self):
         with tempfile.TemporaryDirectory() as directory:
