@@ -1,0 +1,48 @@
+{
+  "model_version": "v5.2",
+  "selected_variant": "b",
+  "base_model": "frozen_v4_r1",
+  "freeze_policy": "three_predeclared_development_rounds_then_joint_independent_lock",
+  "candidate_limit": 15,
+  "v52_parameters": {
+    "model_version": "v5.2-b",
+    "base_model": "v4-dev-r1",
+    "fusion": "non_interference_dual_channel_rescue",
+    "core_policy": "exact_frozen_v4_order",
+    "review_policy": "v4_top5_plus_at_most_one_external_rescue",
+    "pattern_fraction": 0.02,
+    "pattern_min_elite": 3,
+    "pattern_max_elite": 10,
+    "rescue_below_v4_rank": 5,
+    "uniqueness_irg_margin": 1.0,
+    "uniqueness_delta_margin": 0.02,
+    "minimum_distinct_repair_sources": 0,
+    "minimum_reference_quality": 0.0,
+    "label_inputs": "forbidden"
+  },
+  "selection_receipt": "D:\\code\\QCT\\results\\v5_2_selection.json",
+  "selection_receipt_sha256": "68a84594c0bf795c2092dedb629d317b4435006d63a80b874d7e6d0bd2430b85",
+  "round_audit_sha256": {
+    "a": "06f577ae2bb02d5f47b1897a84eb42bfe3b264ce3d7ebab56409c243545d27f0",
+    "b": "12eef7cfa35d40d4403a87ab9b2d2f215b4c79e00eb205b97df2427800a72784",
+    "c": "05c80893b929df8da7b8d21abb29507b91f08746b06bd1a44d7a5f6e704d6066"
+  },
+  "model_source_sha256": {
+    "formulaguard/v52.py": "3454998f904d277d7c9a05ba1c0512afdba7bd216d36369ef14a446d4e7af91d",
+    "formulaguard/localize.py": "760fbf8519dce5a4604bcc6ba158e9ca44d9434e7e898c85e9f7bc51c6c99c40",
+    "scripts/run_v52_labeled_development.py": "203ab69886e0cec2544738ba9aa0f5b43fa5e0278667d5f1cf23f33db886ca34",
+    "scripts/run_v52_clean_controls.py": "f4e4f2ff36325fc2c2f0bcbc5a8655c3444925f81a7f37ce8423f721967ef893",
+    "scripts/build_v52_redteam_manifest.py": "c3831ab039123308b8e644582655b60c5e7113b66329737b54441f504057f3c5",
+    "scripts/build_v52_stress_workbooks.py": "d5a8e4d2581f2f642a0fe8e3ced03f4be9d21507c2924c8513370f38a712f6aa",
+    "scripts/audit_v52_round.py": "4d24fd5b956061fa8604bb6b3d056bca74d2bfc1307a39932a9fe6e15aab48c4",
+    "scripts/select_v52_variant.py": "aaad2fa223458702645fb41652d0e3ae1550711780b645e7e328d0784a8d4845",
+    "scripts/run_v4_v52_blind_lock.py": "0d2dc6ba449412ef3d5817d06b29507150f58a3eca5b35d78676589ed7590216",
+    "scripts/score_v4_v52_blind.py": "c4c1e57699a92dee0007dac48c61cfd9ee22ea959f9b9f2896f8856243538864",
+    "scripts/v52_blind_protocol.py": "0d22f886b848b8a391e4e946042b00a5c314b5121fb7e187c7ff8ebf0d90f96f",
+    "research/V52_METHOD_SPEC.md": "ddceb2fb728dd4897dce06e98a7f759e4c2eee473c2cd13225ca54174840d531"
+  },
+  "git_commit": "527e103fd7f4966773cb76a64602507f14a5f07d",
+  "independent_labels_seen": false,
+  "independent_validation_required": true,
+  "claim_boundary": "supplemental_review_slot_only_review6_is_not_top5"
+}
