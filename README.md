@@ -17,6 +17,8 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 - v1：已冻结并完成864例full，保留为工程基线；其测试族结构重复，不作为最终跨结构结论。
 - v4-r1：当前冻结模型；代码、配置和历史证据保持不变。
 - v5-pcg-r1：已完成开发评测但被否决。它在真实Enron安全回归中使MRR低于V4，因此不冻结、不作为论文最终模型；完整记录见 `research\V5_AUDIT_CORRECTION_AND_DECISION.md`。
+- v5.2-B：冻结的安全辅助审查位，不改变 V4 Top-5。
+- v6：正在按新数据和新独立集协议开发的语义一致性主排序器；尚未冻结，不能作为当前正式结论。
 
 研究设计、方法和数据说明：
 
@@ -43,6 +45,40 @@ run_pipeline.cmd smoke -BenchmarkVersion v2 -Ablations
 smoke只检查工程链路，不写入论文主结论。
 
 V5的62项单元、协议和真实性测试，以及单错误表、单干净表工程smoke均由Codex运行；用户不需要重复执行。
+
+V6 的短测试由 Codex 运行：
+
+```bat
+run_tests.cmd
+run_v6_smoke.cmd
+```
+
+用户只在收到通知后依次运行三个大型开发轮次：
+
+```bat
+run_v6_round.cmd a --workers 24
+run_v6_round.cmd b --workers 24
+run_v6_round.cmd c --workers 24
+```
+
+三轮全部完成后才运行一次性内部验证与选择：
+
+```bat
+run_v6_validation.cmd --workers 24
+```
+
+只有选择回执允许冻结时，才运行 `run_v6_freeze.cmd`。冻结并推送
+`v6-lock` 后才接收第三方 PUBLIC.zip，运行 `run_v6_blind_lock.cmd --workers 24`；
+锁成功后才能接收 SECRET.zip 并运行 `run_v6_blind_score.cmd`。性能实验使用
+`run_v6_performance.cmd --workers 24`。V6 的完整方法和第三方交接边界见：
+
+- `research\V6_METHOD_SPEC.md`
+- `research\V6_THIRD_PARTY_PROTOCOL.md`
+
+V6 的实验事件总账为：内部开发/验证/红队/干净控制 2,160，既有 Enron
+回顾性事件 30，最终第三方独立集 600，共 2,790；已揭晓的 100 例不计入
+V6 选择或验证。第三方 final 打包模式只接受项目外已经制作好的工作簿对，
+不会用本仓库生成器冒充独立或半人工数据。
 
 ## V5开发运行记录
 

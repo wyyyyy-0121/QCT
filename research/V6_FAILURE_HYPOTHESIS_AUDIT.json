@@ -1,0 +1,21 @@
+{
+  "protocol": "v6_posthoc_failure_hypothesis_audit",
+  "not_for_v6_model_selection": true,
+  "revealed_events": 100,
+  "new_independent_events": 85,
+  "source_sha256": {
+    "v4_v52_labels.csv": "6cd81c46a2e0db9a4d2f6b3c4b8558fab38670e9520b68bd0c25da1e454ab91a",
+    "independent_scored_events.csv": "f24725115748b30c0d9243a5d014d054de07e80816a0c91b41e55e263c0f70e6",
+    "v4_full_rankings.csv": "a0dd6c39eefe25c4da055a9fc97a986756c2313ff7d7d319310f69a7b3e44eed"
+  },
+  "by_error_type": [
+    {"error_type": "absolute_relative_reference", "events": 14, "top5": 0.6428571428571429, "mrr": 0.370970695970696, "median_rank": 5, "scope": "new_85"},
+    {"error_type": "copy_offset", "events": 14, "top5": 0.8571428571428571, "mrr": 0.4548469387755102, "median_rank": 4, "scope": "new_85"},
+    {"error_type": "function_replacement", "events": 14, "top5": 0.0, "mrr": 0.043922958352846146, "median_rank": 36, "scope": "new_85"},
+    {"error_type": "operator", "events": 15, "top5": 0.9333333333333333, "mrr": 0.64, "median_rank": 1, "scope": "new_85"},
+    {"error_type": "range_boundary", "events": 14, "top5": 0.0, "mrr": 0.06525867922926747, "median_rank": 16, "scope": "new_85"},
+    {"error_type": "reference_offset", "events": 14, "top5": 0.9285714285714286, "mrr": 0.3892857142857143, "median_rank": 2, "scope": "new_85"}
+  ],
+  "hypothesis": "formula-family and range-boundary semantics may address repeated V4 failures",
+  "claim_boundary": "These revealed labels motivated V6 but cannot validate, select, or tune V6."
+}

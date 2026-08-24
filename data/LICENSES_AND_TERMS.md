@@ -7,6 +7,31 @@
 - Intended for reproducible research and competition evaluation.
 - Every workbook must remain linked to its manifest, generator version, and SHA-256 hash.
 
+## FormulaGuard V6 SemanticBench
+
+- Development, validation, red-team, and clean-control workbooks are generated
+  by this repository and contain no personal or company data.
+- They are synthetic development evidence, not independent real-world data.
+- Each layer records the generator source SHA-256, split-specific seed namespace,
+  public/label manifest hashes, workbook hashes, and a completion receipt.
+- The already revealed V4/V5.2 100-case corpus is excluded from V6 selection and
+  is used only to motivate the preregistered failure hypothesis.
+
+## FormulaGuard V6 third-party independent corpus
+
+- Final workbooks must be prepared outside this repository from at least 30
+  templates the project has never used for development or validation.
+- The third party must record source origin and confirm that each template may
+  legally be used for the competition evaluation. Sensitive personal, school,
+  or company data is forbidden.
+- The final packer validates and packages external workbook pairs; it does not
+  generate the claimed independent cases itself.
+- Raw originals, labels, secret seeds, review records, and SECRET.zip remain
+  outside the project until the preregistered freeze and prediction-lock stages.
+- PUBLIC redistribution is permitted only when the third party confirms the
+  underlying template terms. Otherwise only hashes and aggregate results may be
+  submitted, with access handled privately by the competition organizer.
+
 ## Enron Error Corpus
 
 - Source page: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/enron-error-corpus/
