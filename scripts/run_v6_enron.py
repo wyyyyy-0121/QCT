@@ -18,6 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+DEFAULT_ENRON_MANIFEST = ROOT / "data/external/enron/manifest.csv"
+EXPECTED_RETROSPECTIVE_EVENTS = 30
+
 from formulaguard.localize import v4_scores
 from formulaguard.v6 import v6_prepared_v4_scores, v6_scores
 from formulaguard.workbook import WorkbookModel
@@ -46,6 +49,12 @@ def parse_sources(text: str):
             sheet, address = value.rsplit("!", 1)
             cells.append((sheet.strip("'"), address.replace("$", "").upper()))
     return cells
+
+
+def included_events(manifest: Path) -> list[dict[str, str]]:
+    """Return every evaluation-ready Enron event in the selected inventory."""
+    with manifest.open("r", encoding="utf-8-sig", newline="") as handle:
+        return [row for row in csv.DictReader(handle) if row.get("include", "1") == "1"]
 
 
 def task(payload):
@@ -81,7 +90,7 @@ def task(payload):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("data/external/enron"))
-    parser.add_argument("--manifest", type=Path, default=Path("data/external/enron/test_manifest.csv"))
+    parser.add_argument("--manifest", type=Path, default=DEFAULT_ENRON_MANIFEST)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--variant", choices=("a", "b", "c"), required=True)
     parser.add_argument("--workers", type=int, default=24)
@@ -89,8 +98,12 @@ def main():
     args = parser.parse_args()
     if args.workers < 1:
         parser.error("--workers must be positive")
-    with args.manifest.open("r", encoding="utf-8-sig", newline="") as handle:
-        events = [row for row in csv.DictReader(handle) if row.get("include", "1") == "1"]
+    events = included_events(args.manifest)
+    if args.manifest.resolve() == DEFAULT_ENRON_MANIFEST.resolve() and len(events) != EXPECTED_RETROSPECTIVE_EVENTS:
+        raise SystemExit(
+            "Default V6 Enron inventory must contain exactly "
+            f"{EXPECTED_RETROSPECTIVE_EVENTS} evaluation-ready events; found {len(events)}"
+        )
     workbooks = sorted({row["workbook"] for row in events})
     args.output.mkdir(parents=True, exist_ok=True)
     shard_dir = args.output / "shards"
@@ -101,6 +114,8 @@ def main():
         "manifest_sha256": sha256(args.manifest),
         "events": len(events),
         "workbooks": len(workbooks),
+        "event_inventory": "all_evaluation_ready_events",
+        "expected_default_events": EXPECTED_RETROSPECTIVE_EVENTS,
         "retrospective_only": True,
         "v6_source_sha256": sha256(ROOT / "formulaguard/v6.py"),
         "v4_source_sha256": sha256(ROOT / "formulaguard/localize.py"),

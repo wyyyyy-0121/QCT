@@ -268,6 +268,10 @@ def audit_enron(root: Path, variant: str) -> dict:
         issues.append("unexpected_enron_method_set")
     if metadata.get("retrospective_only") is not True:
         issues.append("enron_not_marked_retrospective")
+    if metadata.get("event_inventory") != "all_evaluation_ready_events":
+        issues.append("enron_inventory_not_all_evaluation_ready_events")
+    if completion.get("events") != 30:
+        issues.append("enron_inventory_not_30_events")
     if not completion.get("complete") or not completion.get("full_ranking_audit_passed"):
         issues.append("enron_completion_or_full_ranking_failed")
     if completion.get("events") != summary["summary"]["v4"]["events"]:
@@ -390,7 +394,7 @@ def markdown_report(payload: dict) -> str:
         "",
         "## Limitations and robustness",
         "",
-        "V6-A is a formula-family-only mechanism. It cannot test the registered range-boundary component, and the clean exception result indicates that strong family agreement plus counterfactual improvement is not sufficient evidence of an error. The Enron comparison has only 20 supported events, so the exact one-rank degradation must be reported without overstating its practical size.",
+        "V6-A is a formula-family-only mechanism. It cannot test the registered range-boundary component, and the clean exception result indicates that strong family agreement plus counterfactual improvement is not sufficient evidence of an error. The corrected Enron comparison uses all 30 evaluation-ready events from the existing corpus and remains retrospective rather than independent evidence.",
         "",
         f"A one-workbook diagnostic probe found that the fixed A, B and C implementations all promote a candidate on `{probe['workbook']}`. This probe is not a population result, but it warns that the currently registered B/C safeguards may not remove the exception-family false-alarm mechanism.",
         "",

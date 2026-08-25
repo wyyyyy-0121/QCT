@@ -14,6 +14,7 @@ from formulaguard.workbook import WorkbookModel
 from scripts.build_v6_dataset import Case, build_case, enumerate_cases, write_xlsx
 from scripts.build_v6_third_party_pack import validate_external_case
 from scripts.run_v6_blind_lock import audit_locked_shard
+from scripts.run_v6_enron import DEFAULT_ENRON_MANIFEST, EXPECTED_RETROSPECTIVE_EVENTS, included_events
 from scripts.run_v6_predictions import audit_complete_shard
 
 
@@ -41,6 +42,12 @@ class V6ProtocolTests(unittest.TestCase):
         self.assertEqual(sha256(ROOT / "formulaguard/localize.py"), v4["model_source_sha256"]["formulaguard/localize.py"])
         self.assertEqual(sha256(ROOT / "formulaguard/localize.py"), v52["model_source_sha256"]["formulaguard/localize.py"])
         self.assertEqual(sha256(ROOT / "formulaguard/v52.py"), v52["model_source_sha256"]["formulaguard/v52.py"])
+
+    def test_v6_enron_default_uses_all_30_evaluation_ready_events(self):
+        events = included_events(DEFAULT_ENRON_MANIFEST)
+        self.assertEqual(len(events), EXPECTED_RETROSPECTIVE_EVENTS)
+        self.assertEqual(len({row["instance_id"] for row in events}), EXPECTED_RETROSPECTIVE_EVENTS)
+        self.assertTrue(all(row.get("include") == "1" for row in events))
 
     def test_v6_public_signature_is_exact_and_label_free(self):
         self.assertEqual(

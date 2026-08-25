@@ -47,6 +47,11 @@ def main():
         "traceability_complete": development["traceability_complete"] and redteam["traceability_complete"],
         "candidate_coverage_at_25_at_least_95_percent": dev["candidate_coverage_at_25"] >= 0.95,
         "clean_false_alarm_at_most_10_percent": clean_rate <= 0.10,
+        "enron_inventory_30_events": (
+            enron_completion.get("events") == 30
+            and enron["summary"]["v4"]["events"] == 30
+            and enron["summary"][method]["events"] == 30
+        ),
         "enron_mrr_not_below_v4": enron["v6_mrr_not_below_v4"],
         "worker_policy_24": args.workers == 24,
     }
