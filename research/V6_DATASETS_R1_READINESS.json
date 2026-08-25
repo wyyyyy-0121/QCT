@@ -1,0 +1,41 @@
+{
+  "protocol": "v6_repaired_internal_dataset_readiness_r1",
+  "date": "2026-08-25",
+  "prediction_started": false,
+  "generator_source_sha256": "f943d949f358ede6f6f1b5d6080e3936622d6c7151313bcb51a1d2dffdd9001b",
+  "layers": {
+    "development": {
+      "expected": 1200,
+      "observed": 1200,
+      "valid": 1200,
+      "valid_rate": 1.0,
+      "hard_gate_passed": true,
+      "unique_templates": 200,
+      "unique_graph_formula_signatures": 1200,
+      "unique_formula_pairs": 48,
+      "dataset_manifest_sha256": "1022a43fece309c19623537470f9a903d1998729fd077167358c44cfd7c023f0"
+    },
+    "redteam": {
+      "expected": 360,
+      "observed": 360,
+      "valid": 360,
+      "valid_rate": 1.0,
+      "hard_gate_passed": true,
+      "unique_templates": 60,
+      "unique_graph_formula_signatures": 360,
+      "unique_formula_pairs": 48,
+      "dataset_manifest_sha256": "d83f40cd7665f483d02eb773ad0899ee720f5729c24ced26d089cb236722eb7a"
+    },
+    "clean": {
+      "expected": 240,
+      "observed": 240,
+      "hard_gate_passed": true,
+      "dataset_manifest_sha256": "3d12c45c868df02ab4a2d4720b47ef1b87f4ce1034f754dfa8c7406e51ceab50"
+    }
+  },
+  "cross_split_leakage_passed": true,
+  "cross_split_reasons": [],
+  "historical_100_excluded": true,
+  "seed_spaces_declared_disjoint": true,
+  "status": "ready_for_v6_a_predictions"
+}
