@@ -1,0 +1,42 @@
+# FormulaGuard V6-A data-quality and result audit
+
+## Technical summary
+
+V6-A is trustworthy as a completed development diagnostic, but it did not pass its preregistered round gate and is not eligible for freezing. Development macro Top-5 rose from 43.67% to 87.92%; red-team macro Top-5 rose from 40.00% to 68.89%. However, clean false alarms were 40/240 (16.67%) and Enron MRR changed by -0.00000147. Failed gates: clean_false_alarm_at_most_10_percent, enron_mrr_not_below_v4.
+
+## The gain is large but uneven
+
+On 1,200 development events, MRR improved from 0.2986 to 0.4245, with 531 new Top-5 hits and 0 losses. On 360 red-team events, MRR improved from 0.2345 to 0.3119, with 108 gains and 4 losses. Range-boundary localization remains the weakest family because V6-A intentionally has no BSS component.
+
+## Legitimate exception formulas cause every clean alarm
+
+All 40 alarms occur in the `exception` structure; its false-alarm rate is 100.00%, while every other clean structure is 0%. This is a systematic failure mode rather than diffuse noise: an alternating but intentional MAX/MIN family looks locally inconsistent and receives a strong counterfactual promotion.
+
+## Enron is practically unchanged but fails the exact safety rule
+
+The retrospective Enron set contains 20 supported events from 18 workbooks. Only 1 event changed rank; its source moved down by one position. Top-5 stayed at 50.00%, but the exact non-decrease rule fails because MRR changed by -0.00000147.
+
+## Scope, definitions, and integrity checks
+
+- Grain: one row per `(instance_id, method)` in scored CSV files; one complete-ranking JSON shard per workbook.
+- Top-k: the true source formula has rank at most k. MRR is `1/rank`; EXAM is `rank/formula_count`.
+- Clean alarm: any semantic promotion on a correct clean workbook.
+- Development and red-team raw keys are unique; metric identities and aggregate summaries were independently recomputed.
+- All prediction receipts report 24 requested workers, complete non-duplicate rankings and no label files read during localization.
+- Enron is retrospective only and cannot be presented as new independent evidence.
+
+## Limitations and robustness
+
+V6-A is a formula-family-only mechanism. It cannot test the registered range-boundary component, and the clean exception result indicates that strong family agreement plus counterfactual improvement is not sufficient evidence of an error. The Enron comparison has only 20 supported events, so the exact one-rank degradation must be reported without overstating its practical size.
+
+A one-workbook diagnostic probe found that the fixed A, B and C implementations all promote a candidate on `data/v6_clean/clean/v6_clean_0201.xlsx`. This probe is not a population result, but it warns that the currently registered B/C safeguards may not remove the exception-family false-alarm mechanism.
+
+## Recommended next step
+
+Run the already preregistered V6-B and V6-C rounds without changing their logic. Do not freeze A. After all three rounds, run the one-shot locked internal validation only if a candidate passes its own development gates; otherwise retain V6 as a documented negative/partial result rather than tuning against the locked validation.
+
+## Further questions
+
+- Does BSS lift range-boundary Top-5 without adding new clean alarms?
+- Does C reject any ambiguous promotions beyond A/B, especially the exception-family alarms?
+- Do the fixed ablations confirm that FFC/BSS and the safety constraints each add non-redundant value?
