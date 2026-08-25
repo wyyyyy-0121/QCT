@@ -59,9 +59,9 @@ def audit_prediction_shards(prediction: Path) -> dict[str, bool]:
 
 
 def main():
-    benchmark = Path("data/v6_smoke_semantic_r3")
-    clean = Path("data/v6_smoke_semantic_clean_r3")
-    output = Path("results/v6_smoke_semantic_r3")
+    benchmark = Path("data/v6_smoke_semantic_r4")
+    clean = Path("data/v6_smoke_semantic_clean_r4")
+    output = Path("results/v6_smoke_semantic_r4")
     if not (benchmark / "dataset_manifest.json").exists():
         run("scripts/build_v6_dataset.py", "--profile", "smoke", "--output", benchmark)
     if not (clean / "dataset_manifest.json").exists():

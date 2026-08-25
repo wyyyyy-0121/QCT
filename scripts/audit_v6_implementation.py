@@ -69,8 +69,8 @@ def main():
         for relative in worker_scripts
     }
     receipt_path = ROOT / "results/v6_short_test_receipt.json"
-    smoke_path = ROOT / "results/v6_smoke_semantic_r3/completion_audit.json"
-    metadata_path = ROOT / "results/v6_smoke_semantic_r3/predictions/prediction_metadata.json"
+    smoke_path = ROOT / "results/v6_smoke_semantic_r4/completion_audit.json"
+    metadata_path = ROOT / "results/v6_smoke_semantic_r4/predictions/prediction_metadata.json"
     receipt = load(receipt_path) if receipt_path.exists() else {}
     smoke = load(smoke_path) if smoke_path.exists() else {}
     metadata = load(metadata_path) if metadata_path.exists() else {}

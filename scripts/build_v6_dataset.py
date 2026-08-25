@@ -190,7 +190,13 @@ def build_case(case: Case, *, clean_only: bool = False):
     data_sheet = "Inputs" if cross else "Model"
     input_cells: dict[str, object] = {"B1": round(0.03 + (case.seed % 7) / 100, 2)}
     for row in range(2, last + 1):
-        input_cells[f"B{row}"] = 10 + rng.randrange(30)
+        # Reference-shift and copy-offset mutations replace B[row] with
+        # B[row-1].  Independent random draws occasionally made those two
+        # values equal, producing a syntactic mutation with no downstream
+        # numerical effect.  The affine cycle is deterministic per seed and
+        # has period 41, longer than every generated input block, so adjacent
+        # B values are guaranteed to differ without encoding the error label.
+        input_cells[f"B{row}"] = 10 + ((case.seed * 13 + row * 7) % 41)
         input_cells[f"C{row}"] = 5 + rng.randrange(20)
         input_cells[f"D{row}"] = 2 + rng.randrange(15)
     model_cells = {} if cross else dict(input_cells)

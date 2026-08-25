@@ -47,7 +47,7 @@ def main():
     smoke_code = -1
     if tests_code == 0 and tests_count:
         smoke_code, _ = run_stream([sys.executable, "scripts/run_v6_smoke.py"])
-    smoke_path = ROOT / "results/v6_smoke_semantic_r3/completion_audit.json"
+    smoke_path = ROOT / "results/v6_smoke_semantic_r4/completion_audit.json"
     smoke = json.loads(smoke_path.read_text(encoding="utf-8")) if smoke_path.exists() else {}
     receipt = {
         "protocol": "v6_codex_owned_short_test_receipt_v1",

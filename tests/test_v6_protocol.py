@@ -11,7 +11,7 @@ from pathlib import Path
 
 from formulaguard.v6 import _effective_rows, _prepare_v6, semantic_candidates, v6_scores
 from formulaguard.workbook import WorkbookModel
-from scripts.build_v6_dataset import Case, build_case, write_xlsx
+from scripts.build_v6_dataset import Case, build_case, enumerate_cases, write_xlsx
 from scripts.build_v6_third_party_pack import validate_external_case
 from scripts.run_v6_blind_lock import audit_locked_shard
 from scripts.run_v6_predictions import audit_complete_shard
@@ -76,6 +76,54 @@ class V6ProtocolTests(unittest.TestCase):
             self.assertIsNotNone(changed.dependency_graph().shortest_path_length(source_key, sink_key))
             self.assertNotEqual(clean.evaluate()[0][sink_key], changed.evaluate()[0][sink_key])
             self.assertNotEqual(correct, mutant)
+
+    def test_all_adjacent_shift_cases_change_the_preregistered_sink(self):
+        """Guard every development/red-team reference and copy-offset case.
+
+        These are the only two mutation families whose numerical effect can
+        disappear when adjacent input values happen to be equal.  Checking the
+        complete preregistered case inventory prevents a small smoke sample
+        from hiding that generator failure again.
+        """
+
+        def model_from_sheets(sheets):
+            cells = {
+                (sheet, address): value
+                for sheet, sheet_cells, _ in sheets
+                for address, value in sheet_cells.items()
+            }
+            formulas = {
+                (sheet, address): formula
+                for sheet, _, sheet_formulas in sheets
+                for address, formula in sheet_formulas.items()
+            }
+            return WorkbookModel.from_cells(cells, formulas)
+
+        checked = 0
+        for profile in ("development", "redteam"):
+            for case in enumerate_cases(profile):
+                if case.error_type not in {"reference_shift", "copy_offset"}:
+                    continue
+                mutant_sheets, source, correct, mutant, sink = build_case(case)
+                clean_sheets, *_ = build_case(case, clean_only=True)
+                clean = model_from_sheets(clean_sheets)
+                changed = model_from_sheets(mutant_sheets)
+                clean_values, clean_errors = clean.evaluate()
+                changed_values, changed_errors = changed.evaluate()
+                source_key = tuple(source.rsplit("!", 1))
+                sink_key = tuple(sink.rsplit("!", 1))
+                self.assertFalse(clean_errors, case.instance_id)
+                self.assertFalse(changed_errors, case.instance_id)
+                self.assertNotEqual(correct, mutant, case.instance_id)
+                self.assertIsNotNone(
+                    changed.dependency_graph().shortest_path_length(source_key, sink_key),
+                    case.instance_id,
+                )
+                self.assertNotEqual(
+                    clean_values[sink_key], changed_values[sink_key], case.instance_id
+                )
+                checked += 1
+        self.assertEqual(checked, 520)
 
     def test_external_case_validator_requires_a_real_single_formula_pair(self):
         case = Case("external_unit", "smoke", "operator", "chain", "small", "shallow", "outside_01", 99173)
@@ -185,7 +233,11 @@ class V6ProtocolTests(unittest.TestCase):
             variant: next(rank for rank, row in enumerate(rows, 1) if row.cell_label == source)
             for variant, rows in rankings.items()
         }
-        self.assertEqual(source_ranks["a"], 6)
+        # The exact V4 rank may move when label-independent input values change;
+        # the protocol invariant is that A retains that V4 rank while B/C alone
+        # can use boundary evidence to promote the cell.
+        self.assertEqual(source_ranks["a"], source_rows["a"].evidence["v4_rank"])
+        self.assertGreater(source_ranks["a"], 3)
         self.assertEqual(source_ranks["b"], 3)
         self.assertEqual(source_ranks["c"], 3)
         self.assertEqual(source_rows["a"].evidence["semantic_tier"], "none")
