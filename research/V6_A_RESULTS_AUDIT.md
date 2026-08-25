@@ -2,7 +2,7 @@
 
 ## Technical summary
 
-V6-A is trustworthy as a completed development diagnostic, but it did not pass its preregistered round gate and is not eligible for freezing. Development macro Top-5 rose from 43.67% to 87.92%; red-team macro Top-5 rose from 40.00% to 68.89%. However, clean false alarms were 40/240 (16.67%) and Enron MRR changed by -0.00000147. Failed gates: clean_false_alarm_at_most_10_percent, enron_mrr_not_below_v4.
+V6-A is trustworthy as a completed development diagnostic, but it did not pass its preregistered round gate and is not eligible for freezing. Development macro Top-5 rose from 43.67% to 87.92%; red-team macro Top-5 rose from 40.00% to 68.89%. However, clean false alarms were 40/240 (16.67%) and Enron MRR changed by -0.00000098. Failed gates: clean_false_alarm_at_most_10_percent, enron_mrr_not_below_v4.
 
 ## The gain is large but uneven
 
@@ -14,7 +14,7 @@ All 40 alarms occur in the `exception` structure; its false-alarm rate is 100.00
 
 ## Enron is practically unchanged but fails the exact safety rule
 
-The retrospective Enron set contains 20 supported events from 18 workbooks. Only 1 event changed rank; its source moved down by one position. Top-5 stayed at 50.00%, but the exact non-decrease rule fails because MRR changed by -0.00000147.
+The retrospective Enron set contains 30 supported events from 25 workbooks. Only 1 event changed rank; its source moved down by one position. Top-5 stayed at 50.00%, but the exact non-decrease rule fails because MRR changed by -0.00000098.
 
 ## Scope, definitions, and integrity checks
 
@@ -27,7 +27,7 @@ The retrospective Enron set contains 20 supported events from 18 workbooks. Only
 
 ## Limitations and robustness
 
-V6-A is a formula-family-only mechanism. It cannot test the registered range-boundary component, and the clean exception result indicates that strong family agreement plus counterfactual improvement is not sufficient evidence of an error. The Enron comparison has only 20 supported events, so the exact one-rank degradation must be reported without overstating its practical size.
+V6-A is a formula-family-only mechanism. It cannot test the registered range-boundary component, and the clean exception result indicates that strong family agreement plus counterfactual improvement is not sufficient evidence of an error. The corrected Enron comparison uses all 30 evaluation-ready events from the existing corpus and remains retrospective rather than independent evidence.
 
 A one-workbook diagnostic probe found that the fixed A, B and C implementations all promote a candidate on `data/v6_clean/clean/v6_clean_0201.xlsx`. This probe is not a population result, but it warns that the currently registered B/C safeguards may not remove the exception-family false-alarm mechanism.
 

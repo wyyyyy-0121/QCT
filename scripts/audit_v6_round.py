@@ -80,8 +80,14 @@ def main():
         f"- 红队宏 Top-5：{red['macro_top5']:.4f}；干净误报：{clean_rate:.4f}\n"
         f"- 本轮门槛：{'通过' if payload['round_passed'] else '未通过'}\n\n"
     )
-    if marker not in existing:
-        log.write_text(existing + block, encoding="utf-8")
+    if marker in existing:
+        start = existing.index(marker)
+        next_marker = existing.find("\n## V6-", start + len(marker))
+        end = len(existing) if next_marker < 0 else next_marker + 1
+        existing = existing[:start] + block + existing[end:]
+    else:
+        existing += block
+    log.write_text(existing, encoding="utf-8")
     print(output)
     if not payload["round_passed"]:
         raise SystemExit(2)

@@ -36,3 +36,16 @@ The original 20-event V6-A Enron output is retained locally as a historical snap
 ## Reporting rule
 
 The paper must state that Enron contains 30 evaluation-ready retrospective events originating from a previously inspected corpus. It must not call these cases independent or blind. The corrected 30-event result supersedes the accidental 20-event V6-A safety statistic, while the correction history remains auditable.
+
+## Corrected V6-A result
+
+The canonical corrected run contains 30 events from 25 workbooks and passes the complete-ranking audit:
+
+| Method | Top-5 | MRR | EXAM |
+|---|---:|---:|---:|
+| V4 | 0.5000 | 0.3825389169 | 0.2909486863 |
+| V6-A | 0.5000 | 0.3825379376 | 0.2910055691 |
+
+The paired aggregate MRR difference is `-0.0000009792`. Only `enron_event_24` changes rank, from 184 to 185 among 586 formulas; the other 29 events are unchanged. Therefore the correction does not reverse the V6-A decision: the exact Enron non-decrease gate still fails.
+
+The two longest workbooks (`07.xlsx` and `09.xlsx`) were reused from the original V6-A run only after verifying identical workbook, V4 source, V6 source, method-spec and complete-ranking hashes. The canonical result records this in `shard_reuse_receipt.json`; the original 20-event output remains in `results/v6_development_a/enron_test20_snapshot`, and `inventory_correction_promotion_receipt.json` proves that it was moved rather than deleted.

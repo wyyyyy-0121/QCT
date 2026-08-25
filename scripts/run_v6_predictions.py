@@ -219,7 +219,9 @@ def main():
             print(f"[{index}/{len(pending)}] {instance_id}", flush=True)
     else:
         with concurrent.futures.ProcessPoolExecutor(max_workers=worker_count) as executor:
-            for index, instance_id in enumerate(executor.map(task, payloads, chunksize=1), 1):
+            futures = [executor.submit(task, payload) for payload in payloads]
+            for index, future in enumerate(concurrent.futures.as_completed(futures), 1):
+                instance_id = future.result()
                 print(f"[{index}/{len(pending)}] {instance_id}", flush=True)
     shard_paths = sorted((args.output / "shards").glob("*.json"))
     expected = {row["instance_id"] for row in rows}

@@ -150,7 +150,9 @@ def main():
             print(f"[{index}/{len(pending)}] {relative}", flush=True)
     else:
         with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
-            for index, relative in enumerate(executor.map(task, pending, chunksize=1), 1):
+            futures = [executor.submit(task, payload) for payload in pending]
+            for index, future in enumerate(concurrent.futures.as_completed(futures), 1):
+                relative = future.result()
                 print(f"[{index}/{len(pending)}] {relative}", flush=True)
     records = {relative: json.loads(path.read_text(encoding="utf-8")) for relative, path in lookup.items()}
     if set(records) != set(workbooks):
