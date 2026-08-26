@@ -371,10 +371,10 @@ def markdown_report(payload: dict) -> str:
         )
         next_step = (
             "Run the already preregistered V6-B and V6-C rounds without changing their "
-            "logic. Do not freeze A. After all three rounds, run the one-shot locked "
-            "internal validation only if a candidate passes its own development gates; "
-            "otherwise retain V6 as a documented negative/partial result rather than "
-            "tuning against the locked validation."
+            "logic. Do not freeze A. After all three rounds, run the preregistered one-shot "
+            "locked internal validation with all A/B/C predictions written before labels "
+            "are read. Development gates remain diagnostic and do not replace the locked "
+            "selection gates."
         )
         questions = [
             "- Does BSS lift range-boundary Top-5 without adding new clean alarms?",
@@ -395,8 +395,9 @@ def markdown_report(payload: dict) -> str:
         )
         next_step = (
             "Run the already preregistered V6-C round without changing its logic. Do not "
-            "freeze B. After C is independently audited, apply the registered eligibility "
-            "rules before any one-shot locked internal validation."
+            "freeze B. After C is independently audited, run the preregistered one-shot "
+            "locked internal validation with all A/B/C predictions written before labels "
+            "are read."
         )
         questions = [
             "- Does C reduce exception-family alarms or red-team Top-5 losses without undoing BSS gains?",
@@ -414,9 +415,9 @@ def markdown_report(payload: dict) -> str:
             "registered gates and the A/B/C comparison."
         )
         next_step = (
-            "Audit A, B and C together and apply the registered eligibility rules. Run the "
-            "one-shot locked internal validation only for eligible fixed variants; otherwise "
-            "retain V6 as a documented negative/partial result."
+            "Audit A, B and C together, then run the preregistered one-shot locked internal "
+            "validation. All A/B/C predictions and matched ablations must be written before "
+            "labels are read; the locked validation gates then determine whether freezing is allowed."
         )
         questions = [
             "- Do the C safety constraints reduce clean alarms and harmful red-team promotions?",
@@ -444,10 +445,21 @@ def markdown_report(payload: dict) -> str:
         f"All {clean['alarms']} alarms occur in the `exception` structure; its false-alarm rate is {clean['by_structure']['exception']['false_alarm_rate']:.2%}, while every other clean structure is 0%. "
         "This is a systematic failure mode rather than diffuse noise: an alternating but intentional MAX/MIN family looks locally inconsistent and receives a strong counterfactual promotion.",
         "",
-        "## Enron is practically unchanged but fails the exact safety rule",
+        (
+            "## Enron is practically unchanged and passes the exact safety rule"
+            if gates.get("enron_mrr_not_below_v4", False)
+            else "## Enron is practically unchanged but fails the exact safety rule"
+        ),
         "",
         f"The retrospective Enron set contains {enron['events']} supported events from {enron['workbooks']} workbooks. "
-        f"{len(enron['rank_changes'])} event(s) changed rank. Top-5 stayed at {enron['summary']['v4']['top5']:.2%}, but the exact non-decrease rule fails because MRR changed by {enron['mrr_difference']:+.8f}.",
+        + (
+            f"{len(enron['rank_changes'])} event(s) changed rank. Top-5 stayed at {enron['summary']['v4']['top5']:.2%}; "
+            + (
+                f"the exact non-decrease rule passes because MRR changed by {enron['mrr_difference']:+.8f}."
+                if gates.get("enron_mrr_not_below_v4", False)
+                else f"the exact non-decrease rule fails because MRR changed by {enron['mrr_difference']:+.8f}."
+            )
+        ),
         "",
         "## Scope, definitions, and integrity checks",
         "",
@@ -484,11 +496,16 @@ def main():
     parser.add_argument("--markdown-output", type=Path)
     args = parser.parse_args()
     root = args.root or ROOT / f"results/v6_development_{args.round}"
+    resolved_root = root.resolve()
+    try:
+        root_label = resolved_root.relative_to(ROOT.resolve()).as_posix()
+    except ValueError:
+        root_label = str(resolved_root)
     round_gate = load_json(root / "v6_round_audit.json")
     payload = {
         "protocol": "v6_independent_round_data_quality_audit_v1",
         "round": args.round,
-        "root": root.relative_to(ROOT).as_posix() if root.is_relative_to(ROOT) else str(root),
+        "root": root_label,
         "development": audit_layer(root, "development", args.round),
         "redteam": audit_layer(root, "redteam", args.round),
         "clean": audit_clean(root, args.round),

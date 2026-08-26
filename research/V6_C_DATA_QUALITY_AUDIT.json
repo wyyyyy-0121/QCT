@@ -1,14 +1,14 @@
 {
   "protocol": "v6_independent_round_data_quality_audit_v1",
-  "round": "b",
-  "root": "results/v6_development_b",
+  "round": "c",
+  "root": "results/v6_development_c",
   "development": {
     "expected_events": 1200,
     "raw_rows": 2400,
     "unique_event_method_keys": 2400,
     "methods": [
       "v4",
-      "v6_b"
+      "v6_c"
     ],
     "recomputed": {
       "v4": {
@@ -24,22 +24,22 @@
         "promotion_correct_count": 0,
         "promotion_activation": 0.0,
         "promotion_precision": 0.0,
-        "runtime_median": 26.259957999999983
+        "runtime_median": 24.009602550000636
       },
-      "v6_b": {
+      "v6_c": {
         "events": 1200,
         "top1": 0.18333333333333332,
         "top3": 0.885,
-        "top5": 1.0,
-        "mrr": 0.45401388888888883,
-        "exam": 0.027764620924172975,
+        "top5": 0.9058333333333334,
+        "mrr": 0.4387871497093938,
+        "exam": 0.050568209052668456,
         "repair_exact": 1.0,
         "candidate_coverage_at_25": 1.0,
-        "promotion_active_count": 792,
-        "promotion_correct_count": 792,
-        "promotion_activation": 0.66,
+        "promotion_active_count": 679,
+        "promotion_correct_count": 679,
+        "promotion_activation": 0.5658333333333333,
         "promotion_precision": 1.0,
-        "runtime_median": 30.143130550000024
+        "runtime_median": 27.6076040500011
       }
     },
     "declared": {
@@ -56,7 +56,7 @@
         "candidate_coverage_at_25": 0.0,
         "promotion_activation": 0.0,
         "promotion_precision": 0.0,
-        "runtime_median": 26.259957999999983,
+        "runtime_median": 24.009602550000636,
         "by_error": {
           "absolute_reference": {
             "events": 200,
@@ -90,25 +90,25 @@
           }
         }
       },
-      "v6_b": {
+      "v6_c": {
         "events": 1200,
         "top1": 0.18333333333333332,
         "top3": 0.885,
-        "top5": 1.0,
-        "macro_top5": 1.0,
-        "worst_type_top5": 1.0,
-        "mrr": 0.45401388888888883,
-        "exam": 0.027764620924172975,
+        "top5": 0.9058333333333334,
+        "macro_top5": 0.9058333333333333,
+        "worst_type_top5": 0.435,
+        "mrr": 0.4387871497093938,
+        "exam": 0.050568209052668456,
         "repair_exact": 1.0,
         "candidate_coverage_at_25": 1.0,
-        "promotion_activation": 0.66,
+        "promotion_activation": 0.5658333333333333,
         "promotion_precision": 1.0,
-        "runtime_median": 30.143130550000024,
+        "runtime_median": 27.6076040500011,
         "by_error": {
           "absolute_reference": {
             "events": 200,
-            "top5": 1.0,
-            "mrr": 0.38408333333333333
+            "top5": 0.435,
+            "mrr": 0.29272289825636305
           },
           "copy_offset": {
             "events": 200,
@@ -139,14 +139,11 @@
       }
     },
     "paired_rank_changes": {
-      "rank_unchanged": 408,
-      "rank_improved": 792,
-      "new_top5_hit": 676
+      "rank_unchanged": 521,
+      "rank_improved": 679,
+      "new_top5_hit": 563
     },
     "new_or_lost_top5_by_error": {
-      "absolute_reference": {
-        "new_top5_hit": 113
-      },
       "copy_offset": {
         "new_top5_hit": 104
       },
@@ -170,7 +167,7 @@
       "full_ranking_audit_passed": true,
       "workers_requested": 24,
       "label_files_read": [],
-      "git_commit": "07e6bb8d23fa7af837bba2d203b7369c62fcd6ef",
+      "git_commit": "08d60ade080753c99fed3cd9084ddbab59efebf6",
       "dataset_manifest_sha256": "1022a43fece309c19623537470f9a903d1998729fd077167358c44cfd7c023f0"
     },
     "issues": [],
@@ -182,7 +179,7 @@
     "unique_event_method_keys": 720,
     "methods": [
       "v4",
-      "v6_b"
+      "v6_c"
     ],
     "recomputed": {
       "v4": {
@@ -198,9 +195,9 @@
         "promotion_correct_count": 0,
         "promotion_activation": 0.0,
         "promotion_precision": 0.0,
-        "runtime_median": 29.468565650000073
+        "runtime_median": 41.996322650000366
       },
-      "v6_b": {
+      "v6_c": {
         "events": 360,
         "top1": 0.06944444444444445,
         "top3": 0.7416666666666667,
@@ -213,7 +210,7 @@
         "promotion_correct_count": 184,
         "promotion_activation": 1.0,
         "promotion_precision": 0.5111111111111111,
-        "runtime_median": 35.056275949999986
+        "runtime_median": 49.62114710000242
       }
     },
     "declared": {
@@ -230,7 +227,7 @@
         "candidate_coverage_at_25": 0.0,
         "promotion_activation": 0.0,
         "promotion_precision": 0.0,
-        "runtime_median": 29.468565650000073,
+        "runtime_median": 41.996322650000366,
         "by_error": {
           "absolute_reference": {
             "events": 60,
@@ -264,7 +261,7 @@
           }
         }
       },
-      "v6_b": {
+      "v6_c": {
         "events": 360,
         "top1": 0.06944444444444445,
         "top3": 0.7416666666666667,
@@ -277,7 +274,7 @@
         "candidate_coverage_at_25": 1.0,
         "promotion_activation": 1.0,
         "promotion_precision": 0.5111111111111111,
-        "runtime_median": 35.056275949999986,
+        "runtime_median": 49.62114710000242,
         "by_error": {
           "absolute_reference": {
             "events": 60,
@@ -346,7 +343,7 @@
       "full_ranking_audit_passed": true,
       "workers_requested": 24,
       "label_files_read": [],
-      "git_commit": "07e6bb8d23fa7af837bba2d203b7369c62fcd6ef",
+      "git_commit": "08d60ade080753c99fed3cd9084ddbab59efebf6",
       "dataset_manifest_sha256": "d83f40cd7665f483d02eb773ad0899ee720f5729c24ced26d089cb236722eb7a"
     },
     "issues": [],
@@ -558,24 +555,16 @@
         "mrr": 0.3825389168629013,
         "exam": 0.29094868625386244
       },
-      "v6_b": {
+      "v6_c": {
         "events": 30,
         "top5": 0.5,
-        "mrr": 0.38253793762279165,
-        "exam": 0.2910055690752503
+        "mrr": 0.3825389168629013,
+        "exam": 0.29094868625386244
       }
     },
-    "mrr_difference": -9.79240109666435e-07,
-    "rank_changes": [
-      {
-        "instance_id": "enron_event_24",
-        "v4_rank": 184,
-        "v6_rank": 185,
-        "rank_delta": 1,
-        "formula_count": 586
-      }
-    ],
-    "unchanged_events": 29,
+    "mrr_difference": 0.0,
+    "rank_changes": [],
+    "unchanged_events": 30,
     "issues": [],
     "passed": true
   },
@@ -625,28 +614,28 @@
   },
   "round_gate": {
     "protocol": "v6_preregistered_development_round",
-    "round": "b",
-    "single_mechanism": "FFC+BSS",
+    "round": "c",
+    "single_mechanism": "FFC+BSS+safety",
     "workers": 24,
     "development": {
       "events": 1200,
       "top1": 0.18333333333333332,
       "top3": 0.885,
-      "top5": 1.0,
-      "macro_top5": 1.0,
-      "worst_type_top5": 1.0,
-      "mrr": 0.45401388888888883,
-      "exam": 0.027764620924172975,
+      "top5": 0.9058333333333334,
+      "macro_top5": 0.9058333333333333,
+      "worst_type_top5": 0.435,
+      "mrr": 0.4387871497093938,
+      "exam": 0.050568209052668456,
       "repair_exact": 1.0,
       "candidate_coverage_at_25": 1.0,
-      "promotion_activation": 0.66,
+      "promotion_activation": 0.5658333333333333,
       "promotion_precision": 1.0,
-      "runtime_median": 30.143130550000024,
+      "runtime_median": 27.6076040500011,
       "by_error": {
         "absolute_reference": {
           "events": 200,
-          "top5": 1.0,
-          "mrr": 0.38408333333333333
+          "top5": 0.435,
+          "mrr": 0.29272289825636305
         },
         "copy_offset": {
           "events": 200,
@@ -688,7 +677,7 @@
       "candidate_coverage_at_25": 1.0,
       "promotion_activation": 1.0,
       "promotion_precision": 0.5111111111111111,
-      "runtime_median": 35.056275949999986,
+      "runtime_median": 49.62114710000242,
       "by_error": {
         "absolute_reference": {
           "events": 60,
@@ -730,11 +719,11 @@
         "mrr": 0.3825389168629013,
         "exam": 0.29094868625386244
       },
-      "v6_b": {
+      "v6_c": {
         "events": 30,
         "top5": 0.5,
-        "mrr": 0.38253793762279165,
-        "exam": 0.2910055690752503
+        "mrr": 0.3825389168629013,
+        "exam": 0.29094868625386244
       }
     },
     "gates": {
@@ -747,18 +736,18 @@
       "candidate_coverage_at_25_at_least_95_percent": true,
       "clean_false_alarm_at_most_10_percent": false,
       "enron_inventory_30_events": true,
-      "enron_mrr_not_below_v4": false,
+      "enron_mrr_not_below_v4": true,
       "worker_policy_24": true
     },
     "round_passed": false,
     "selection_forbidden_until_all_rounds_complete": true
   },
   "source_hashes": {
-    "round_audit": "9e2675f4e2f2513679b12a69265807f9005534d033c06717f3f5e722a6b02ad5",
-    "development_raw": "e7ca2ec753ece1fdbf30f13b260cbe72b4657323d4a6c5daf8876eb8bb866511",
-    "redteam_raw": "5a7d0cae007c4f12f2211f882c958363b7e74d59d8c2866bc20c8bf1085e293b",
-    "clean_summary": "3a3e76441f3ead43123ba3ddbadd1ec6ccb7dcc8ce25bd538701b58b815edc75",
-    "enron_raw": "d2df1c610b0536a718175bf1d5f3223c3d578dd6784c1bf6c7b8f156ff3785e4"
+    "round_audit": "607ed557424c24c5d9fbf52461872df653376aed22845cf48743168015746eb7",
+    "development_raw": "3c745aa7192cbf0f26ef1651497b53119776298189559a8079c5fd1de5a7c1e0",
+    "redteam_raw": "9b973a4be1a3920f24c7dbf4ca91d681a0415db71c92309d608caa4faad392a4",
+    "clean_summary": "6e8e86c6345cfca74936a9e1b859da0add519b765eba1ac38b405bbf5dc3bfec",
+    "enron_raw": "89448e5118516c1dbe7f92540ae064dc182b0d3d382b355d7760b79bc15f5398"
   },
   "integrity_passed": true,
   "development_evidence_usable": true,

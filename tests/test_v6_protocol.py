@@ -55,6 +55,12 @@ class V6ProtocolTests(unittest.TestCase):
             ["model", "variant", "base_candidate_limit", "semantic_candidate_limit"],
         )
 
+    def test_locked_selection_does_not_add_a_development_gate(self):
+        source = (ROOT / "scripts/select_v6_variant.py").read_text(encoding="utf-8")
+        self.assertNotIn('"development_round_passed":', source)
+        self.assertIn('"development_round_passed_diagnostic":', source)
+        self.assertIn("one-shot 360-event locked validation", source)
+
     def test_cross_sheet_range_candidate(self):
         cells = {}
         formulas = {}

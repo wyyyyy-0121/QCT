@@ -76,10 +76,18 @@ def main():
                 not missing_ablations and max_ablation_macro <= row["macro_top5"] + 0.02
             ),
             "median_runtime_at_most_1_5x_v4": row["runtime_median"] <= 1.5 * v4["runtime_median"],
-            "development_round_passed": round_audits[letter].get("round_passed", False),
         }
         assessments[letter] = {
             "method": method,
+            # Development rounds diagnose the three fixed mechanisms.  The
+            # preregistered method specification selects only after the
+            # one-shot 360-event locked validation has all A/B/C predictions on disk;
+            # a development diagnostic is therefore recorded, not promoted
+            # into an unregistered selection gate.
+            "development_round_passed_diagnostic": round_audits[letter].get("round_passed", False),
+            "development_round_failed_gates": [
+                name for name, passed in round_audits[letter].get("gates", {}).items() if not passed
+            ],
             "metrics": row,
             "clean_false_alarm_rate": clean_rate,
             "strong_type_declines": strong_declines,

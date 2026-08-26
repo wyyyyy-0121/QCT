@@ -1,0 +1,420 @@
+{
+  "protocol": "v6_preregistered_development_abc_comparison_v1",
+  "scope": "development_diagnostic_only_no_variant_selection",
+  "rounds": {
+    "a": {
+      "mechanism": "FFC",
+      "workers": 24,
+      "development": {
+        "events": 1200,
+        "top1": 0.18333333333333332,
+        "top3": 0.7283333333333334,
+        "top5": 0.8791666666666667,
+        "macro_top5": 0.8791666666666668,
+        "worst_type_top5": 0.275,
+        "mrr": 0.4245371989121989,
+        "exam": 0.03474282263399111,
+        "repair_exact": 0.8791666666666667,
+        "candidate_coverage_at_25": 1.0,
+        "promotion_activation": 0.5033333333333333,
+        "promotion_precision": 1.0,
+        "runtime_median": 25.52411194999968,
+        "by_error": {
+          "absolute_reference": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.38408333333333333
+          },
+          "copy_offset": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.515
+          },
+          "function_replacement": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.48166666666666663
+          },
+          "operator": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.4833333333333333
+          },
+          "range_boundary": {
+            "events": 200,
+            "top5": 0.275,
+            "mrr": 0.15647319347319347
+          },
+          "reference_shift": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.5266666666666666
+          }
+        }
+      },
+      "redteam": {
+        "events": 360,
+        "top1": 0.06944444444444445,
+        "top3": 0.5777777777777777,
+        "top5": 0.6888888888888889,
+        "macro_top5": 0.688888888888889,
+        "worst_type_top5": 0.016666666666666666,
+        "mrr": 0.31192367285424066,
+        "exam": 0.05694656656477165,
+        "repair_exact": 0.8333333333333334,
+        "candidate_coverage_at_25": 1.0,
+        "promotion_activation": 1.0,
+        "promotion_precision": 0.3472222222222222,
+        "runtime_median": 39.304588049999666,
+        "by_error": {
+          "absolute_reference": {
+            "events": 60,
+            "top5": 0.35,
+            "mrr": 0.17554507150388213
+          },
+          "copy_offset": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.4
+          },
+          "function_replacement": {
+            "events": 60,
+            "top5": 0.7666666666666667,
+            "mrr": 0.3966969682078041
+          },
+          "operator": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.4194444444444444
+          },
+          "range_boundary": {
+            "events": 60,
+            "top5": 0.016666666666666666,
+            "mrr": 0.06457777519153546
+          },
+          "reference_shift": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.41527777777777775
+          }
+        }
+      },
+      "clean_false_alarm_rate": 0.16666666666666666,
+      "enron_v4": {
+        "events": 30,
+        "top5": 0.5,
+        "mrr": 0.3825389168629013,
+        "exam": 0.29094868625386244
+      },
+      "enron_variant": {
+        "events": 30,
+        "top5": 0.5,
+        "mrr": 0.38253793762279165,
+        "exam": 0.2910055690752503
+      },
+      "development_diagnostic_gates": {
+        "development_predictions_complete": true,
+        "redteam_predictions_complete": true,
+        "all_full_ranking_audits_passed": true,
+        "all_dataset_quality_gates_passed": true,
+        "cross_split_leakage_audit_passed": true,
+        "traceability_complete": true,
+        "candidate_coverage_at_25_at_least_95_percent": true,
+        "clean_false_alarm_at_most_10_percent": false,
+        "enron_inventory_30_events": true,
+        "enron_mrr_not_below_v4": false,
+        "worker_policy_24": true
+      },
+      "development_round_passed_diagnostic": false,
+      "round_audit_sha256": "bf0f962392feed42719f895e94c4affdf3cc310cce7dd46eceb740ac89d6492f",
+      "independent_audit_sha256": "9573559ebf83b884e4be3edb86c6eb01ded8ebb9f5c8f2e0ffd7358ff7a3e9d4",
+      "prediction_git_commit": "6b3d613da66478674c1db1b1cea6cea7a277f1e7"
+    },
+    "b": {
+      "mechanism": "FFC+BSS",
+      "workers": 24,
+      "development": {
+        "events": 1200,
+        "top1": 0.18333333333333332,
+        "top3": 0.885,
+        "top5": 1.0,
+        "macro_top5": 1.0,
+        "worst_type_top5": 1.0,
+        "mrr": 0.45401388888888883,
+        "exam": 0.027764620924172975,
+        "repair_exact": 1.0,
+        "candidate_coverage_at_25": 1.0,
+        "promotion_activation": 0.66,
+        "promotion_precision": 1.0,
+        "runtime_median": 30.143130550000024,
+        "by_error": {
+          "absolute_reference": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.38408333333333333
+          },
+          "copy_offset": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.515
+          },
+          "function_replacement": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.48166666666666663
+          },
+          "operator": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.4833333333333333
+          },
+          "range_boundary": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.33333333333333326
+          },
+          "reference_shift": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.5266666666666666
+          }
+        }
+      },
+      "redteam": {
+        "events": 360,
+        "top1": 0.06944444444444445,
+        "top3": 0.7416666666666667,
+        "top5": 0.8527777777777777,
+        "macro_top5": 0.8527777777777779,
+        "worst_type_top5": 0.35,
+        "mrr": 0.3564847843963922,
+        "exam": 0.039914256331414134,
+        "repair_exact": 1.0,
+        "candidate_coverage_at_25": 1.0,
+        "promotion_activation": 1.0,
+        "promotion_precision": 0.5111111111111111,
+        "runtime_median": 35.056275949999986,
+        "by_error": {
+          "absolute_reference": {
+            "events": 60,
+            "top5": 0.35,
+            "mrr": 0.17554507150388213
+          },
+          "copy_offset": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.4
+          },
+          "function_replacement": {
+            "events": 60,
+            "top5": 0.7666666666666667,
+            "mrr": 0.3966969682078041
+          },
+          "operator": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.4194444444444444
+          },
+          "range_boundary": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.33194444444444443
+          },
+          "reference_shift": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.41527777777777775
+          }
+        }
+      },
+      "clean_false_alarm_rate": 0.16666666666666666,
+      "enron_v4": {
+        "events": 30,
+        "top5": 0.5,
+        "mrr": 0.3825389168629013,
+        "exam": 0.29094868625386244
+      },
+      "enron_variant": {
+        "events": 30,
+        "top5": 0.5,
+        "mrr": 0.38253793762279165,
+        "exam": 0.2910055690752503
+      },
+      "development_diagnostic_gates": {
+        "development_predictions_complete": true,
+        "redteam_predictions_complete": true,
+        "all_full_ranking_audits_passed": true,
+        "all_dataset_quality_gates_passed": true,
+        "cross_split_leakage_audit_passed": true,
+        "traceability_complete": true,
+        "candidate_coverage_at_25_at_least_95_percent": true,
+        "clean_false_alarm_at_most_10_percent": false,
+        "enron_inventory_30_events": true,
+        "enron_mrr_not_below_v4": false,
+        "worker_policy_24": true
+      },
+      "development_round_passed_diagnostic": false,
+      "round_audit_sha256": "9e2675f4e2f2513679b12a69265807f9005534d033c06717f3f5e722a6b02ad5",
+      "independent_audit_sha256": "9296d5cc3ec66f1748d9d52573571a515a0ccec6a8f7ac28c105b5f3b0d15c79",
+      "prediction_git_commit": "07e6bb8d23fa7af837bba2d203b7369c62fcd6ef"
+    },
+    "c": {
+      "mechanism": "FFC+BSS+safety",
+      "workers": 24,
+      "development": {
+        "events": 1200,
+        "top1": 0.18333333333333332,
+        "top3": 0.885,
+        "top5": 0.9058333333333334,
+        "macro_top5": 0.9058333333333333,
+        "worst_type_top5": 0.435,
+        "mrr": 0.4387871497093938,
+        "exam": 0.050568209052668456,
+        "repair_exact": 1.0,
+        "candidate_coverage_at_25": 1.0,
+        "promotion_activation": 0.5658333333333333,
+        "promotion_precision": 1.0,
+        "runtime_median": 27.6076040500011,
+        "by_error": {
+          "absolute_reference": {
+            "events": 200,
+            "top5": 0.435,
+            "mrr": 0.29272289825636305
+          },
+          "copy_offset": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.515
+          },
+          "function_replacement": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.48166666666666663
+          },
+          "operator": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.4833333333333333
+          },
+          "range_boundary": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.33333333333333326
+          },
+          "reference_shift": {
+            "events": 200,
+            "top5": 1.0,
+            "mrr": 0.5266666666666666
+          }
+        }
+      },
+      "redteam": {
+        "events": 360,
+        "top1": 0.06944444444444445,
+        "top3": 0.7416666666666667,
+        "top5": 0.8527777777777777,
+        "macro_top5": 0.8527777777777779,
+        "worst_type_top5": 0.35,
+        "mrr": 0.3564847843963922,
+        "exam": 0.039914256331414134,
+        "repair_exact": 1.0,
+        "candidate_coverage_at_25": 1.0,
+        "promotion_activation": 1.0,
+        "promotion_precision": 0.5111111111111111,
+        "runtime_median": 49.62114710000242,
+        "by_error": {
+          "absolute_reference": {
+            "events": 60,
+            "top5": 0.35,
+            "mrr": 0.17554507150388213
+          },
+          "copy_offset": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.4
+          },
+          "function_replacement": {
+            "events": 60,
+            "top5": 0.7666666666666667,
+            "mrr": 0.3966969682078041
+          },
+          "operator": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.4194444444444444
+          },
+          "range_boundary": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.33194444444444443
+          },
+          "reference_shift": {
+            "events": 60,
+            "top5": 1.0,
+            "mrr": 0.41527777777777775
+          }
+        }
+      },
+      "clean_false_alarm_rate": 0.16666666666666666,
+      "enron_v4": {
+        "events": 30,
+        "top5": 0.5,
+        "mrr": 0.3825389168629013,
+        "exam": 0.29094868625386244
+      },
+      "enron_variant": {
+        "events": 30,
+        "top5": 0.5,
+        "mrr": 0.3825389168629013,
+        "exam": 0.29094868625386244
+      },
+      "development_diagnostic_gates": {
+        "development_predictions_complete": true,
+        "redteam_predictions_complete": true,
+        "all_full_ranking_audits_passed": true,
+        "all_dataset_quality_gates_passed": true,
+        "cross_split_leakage_audit_passed": true,
+        "traceability_complete": true,
+        "candidate_coverage_at_25_at_least_95_percent": true,
+        "clean_false_alarm_at_most_10_percent": false,
+        "enron_inventory_30_events": true,
+        "enron_mrr_not_below_v4": true,
+        "worker_policy_24": true
+      },
+      "development_round_passed_diagnostic": false,
+      "round_audit_sha256": "607ed557424c24c5d9fbf52461872df653376aed22845cf48743168015746eb7",
+      "independent_audit_sha256": "92ed416989ce10c0cf7abdf0158e47a8d9102bd5c2db329d9a5ba80939cc44a6",
+      "prediction_git_commit": "08d60ade080753c99fed3cd9084ddbab59efebf6"
+    }
+  },
+  "contrasts": {
+    "b_minus_a": {
+      "development_macro_top5": 0.12083333333333324,
+      "development_mrr": 0.02947668997668995,
+      "development_range_boundary_top5": 0.725,
+      "redteam_macro_top5": 0.16388888888888886
+    },
+    "c_minus_b": {
+      "development_macro_top5": -0.09416666666666673,
+      "development_mrr": -0.015226739179495019,
+      "development_absolute_reference_top5": -0.565,
+      "redteam_macro_top5": 0.0,
+      "clean_false_alarm_rate": 0.0
+    }
+  },
+  "comparison_integrity": {
+    "all_independent_round_audits_passed": true,
+    "shared_input_model_and_parameters": true,
+    "prediction_label_isolation": true,
+    "variant_identity_exact": true,
+    "all_rounds_workers_24": true,
+    "all_registered_event_counts_present": true
+  },
+  "comparison_integrity_passed": true,
+  "selection_made": false,
+  "selection_source": "one_shot_locked_360_event_validation_only",
+  "ready_for_locked_validation": true,
+  "method_spec_sha256": "25a287e644237dd7b20241878065c8886d3599cbe9a9a8e3d9165606fc57f295",
+  "v6_source_sha256": "75296073a37c31c422364361d7fde7d6da0a313b816b5e7d7f5cc71b95d2a3c3",
+  "v4_source_sha256": "760fbf8519dce5a4604bcc6ba158e9ca44d9434e7e898c85e9f7bc51c6c99c40"
+}

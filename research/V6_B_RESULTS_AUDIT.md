@@ -14,7 +14,7 @@ All 40 alarms occur in the `exception` structure; its false-alarm rate is 100.00
 
 ## Enron is practically unchanged but fails the exact safety rule
 
-The retrospective Enron set contains 30 supported events from 25 workbooks. 1 event(s) changed rank. Top-5 stayed at 50.00%, but the exact non-decrease rule fails because MRR changed by -0.00000098.
+The retrospective Enron set contains 30 supported events from 25 workbooks. 1 event(s) changed rank. Top-5 stayed at 50.00%; the exact non-decrease rule fails because MRR changed by -0.00000098.
 
 ## Scope, definitions, and integrity checks
 
@@ -33,7 +33,7 @@ A one-workbook diagnostic probe found that the fixed A, B and C implementations 
 
 ## Recommended next step
 
-Run the already preregistered V6-C round without changing its logic. Do not freeze B. After C is independently audited, apply the registered eligibility rules before any one-shot locked internal validation.
+Run the already preregistered V6-C round without changing its logic. Do not freeze B. After C is independently audited, run the preregistered one-shot locked internal validation with all A/B/C predictions written before labels are read.
 
 ## Further questions
 
