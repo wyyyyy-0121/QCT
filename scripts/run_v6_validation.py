@@ -34,12 +34,21 @@ def main():
         "clean": Path("data/v6_clean"),
     }
     if not (datasets["validation"] / "dataset_manifest.json").exists():
-        run("scripts/build_v6_dataset.py", "--profile", "validation", "--output", datasets["validation"])
-    run("scripts/audit_v6_dataset.py", *datasets.values())
+        raise SystemExit(
+            "Validation refused: the precommitted validation dataset is missing; "
+            "do not build labels inside the prediction command"
+        )
+    # This phase hashes only public manifests/audit receipts and workbooks.  It
+    # deliberately does not open evaluation_labels.jsonl.
+    run("scripts/precommit_v6_validation.py", "verify-public", "--dataset", datasets["validation"])
     root = Path("results/v6_validation_locked")
     resume = ["--resume"] if args.resume else []
     run("scripts/run_v6_predictions.py", "--benchmark", datasets["validation"], "--output", root / "predictions",
         "--variants", "a", "b", "c", "--ablations", *ABLATIONS, "--workers", args.workers, *resume)
+    # Only a complete, audited 360-workbook ranking unlocks the precommitted
+    # label hash and permits the scoring process to read labels.
+    run("scripts/precommit_v6_validation.py", "verify-secret", "--dataset", datasets["validation"],
+        "--predictions", root / "predictions")
     run("scripts/score_v6_predictions.py", "--benchmark", datasets["validation"], "--predictions", root / "predictions", "--output", root)
     run("scripts/build_v6_report.py", "--results", root, "--title", "FormulaGuard V6 Locked Internal Validation")
     run("scripts/run_v6_predictions.py", "--benchmark", datasets["clean"], "--output", root / "clean/predictions",

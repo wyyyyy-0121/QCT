@@ -16,6 +16,7 @@ from scripts.build_v6_third_party_pack import validate_external_case
 from scripts.run_v6_blind_lock import audit_locked_shard
 from scripts.run_v6_enron import DEFAULT_ENRON_MANIFEST, EXPECTED_RETROSPECTIVE_EVENTS, included_events
 from scripts.run_v6_predictions import audit_complete_shard
+from scripts.precommit_v6_validation import PUBLIC_FILES
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,6 +61,15 @@ class V6ProtocolTests(unittest.TestCase):
         self.assertNotIn('"development_round_passed":', source)
         self.assertIn('"development_round_passed_diagnostic":', source)
         self.assertIn("one-shot 360-event locked validation", source)
+
+    def test_validation_runner_does_not_build_or_audit_labels_before_prediction(self):
+        source = (ROOT / "scripts/run_v6_validation.py").read_text(encoding="utf-8")
+        before_prediction = source.split('run("scripts/run_v6_predictions.py"', 1)[0]
+        self.assertNotIn("build_v6_dataset.py", before_prediction)
+        self.assertNotIn("audit_v6_dataset.py", before_prediction)
+        self.assertIn('precommit_v6_validation.py", "verify-public"', before_prediction)
+        self.assertIn('precommit_v6_validation.py", "verify-secret"', source)
+        self.assertNotIn("evaluation_labels.jsonl", "\n".join(PUBLIC_FILES))
 
     def test_cross_sheet_range_candidate(self):
         cells = {}
