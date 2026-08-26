@@ -357,6 +357,72 @@ def markdown_report(payload: dict) -> str:
     red_v6, red_v4 = red["declared"][v6], red["declared"]["v4"]
     failed = [name for name, passed in gates.items() if not passed]
     probe = payload["cross_variant_clean_probe"]
+    round_name = payload["round"]
+    if round_name == "a":
+        mechanism_interpretation = (
+            "Range-boundary localization remains the weakest family because V6-A "
+            "intentionally has no BSS component."
+        )
+        limitation = (
+            "V6-A is a formula-family-only mechanism. It cannot test the registered "
+            "range-boundary component, and the clean exception result indicates that "
+            "strong family agreement plus counterfactual improvement is not sufficient "
+            "evidence of an error."
+        )
+        next_step = (
+            "Run the already preregistered V6-B and V6-C rounds without changing their "
+            "logic. Do not freeze A. After all three rounds, run the one-shot locked "
+            "internal validation only if a candidate passes its own development gates; "
+            "otherwise retain V6 as a documented negative/partial result rather than "
+            "tuning against the locked validation."
+        )
+        questions = [
+            "- Does BSS lift range-boundary Top-5 without adding new clean alarms?",
+            "- Does C reject any ambiguous promotions beyond A/B, especially the exception-family alarms?",
+            "- Do the fixed ablations confirm that FFC/BSS and the safety constraints each add non-redundant value?",
+        ]
+    elif round_name == "b":
+        mechanism_interpretation = (
+            "BSS closes the registered range-boundary gap: range-boundary Top-5 reaches "
+            "100.00% on both development and red-team data. The remaining red-team "
+            "weakness is absolute-reference localization at 35.00% Top-5."
+        )
+        limitation = (
+            "V6-B demonstrates that boundary semantics can repair the failure family that "
+            "motivated BSS, but it does not reduce the systematic clean exception alarms. "
+            "Its red-team gains also include three lost V4 Top-5 hits, so semantic evidence "
+            "without the registered C safety constraints is not yet safe enough to freeze."
+        )
+        next_step = (
+            "Run the already preregistered V6-C round without changing its logic. Do not "
+            "freeze B. After C is independently audited, apply the registered eligibility "
+            "rules before any one-shot locked internal validation."
+        )
+        questions = [
+            "- Does C reduce exception-family alarms or red-team Top-5 losses without undoing BSS gains?",
+            "- Does C preserve the 100% development and red-team range-boundary Top-5 result?",
+            "- Do the fixed ablations confirm that FFC/BSS and the safety constraints each add non-redundant value?",
+        ]
+    else:
+        mechanism_interpretation = (
+            "V6-C must be interpreted jointly with A and B: its registered safety constraints "
+            "are useful only if they reduce harmful promotions while preserving the semantic gains."
+        )
+        limitation = (
+            "V6-C is the final preregistered development variant. Its result must not trigger "
+            "another tuning round; eligibility for locked validation follows only from the "
+            "registered gates and the A/B/C comparison."
+        )
+        next_step = (
+            "Audit A, B and C together and apply the registered eligibility rules. Run the "
+            "one-shot locked internal validation only for eligible fixed variants; otherwise "
+            "retain V6 as a documented negative/partial result."
+        )
+        questions = [
+            "- Do the C safety constraints reduce clean alarms and harmful red-team promotions?",
+            "- Are the registered function and range gains preserved under C?",
+            "- Do the fixed ablations confirm that FFC/BSS and the safety constraints each add non-redundant value?",
+        ]
     lines = [
         f"# FormulaGuard V6-{payload['round'].upper()} data-quality and result audit",
         "",
@@ -371,7 +437,7 @@ def markdown_report(payload: dict) -> str:
         "",
         f"On 1,200 development events, MRR improved from {dev_v4['mrr']:.4f} to {dev_v6['mrr']:.4f}, with {dev['paired_rank_changes'].get('new_top5_hit', 0)} new Top-5 hits and {dev['paired_rank_changes'].get('lost_top5_hit', 0)} losses. "
         f"On 360 red-team events, MRR improved from {red_v4['mrr']:.4f} to {red_v6['mrr']:.4f}, with {red['paired_rank_changes'].get('new_top5_hit', 0)} gains and {red['paired_rank_changes'].get('lost_top5_hit', 0)} losses. "
-        "Range-boundary localization remains the weakest family because V6-A intentionally has no BSS component.",
+        + mechanism_interpretation,
         "",
         "## Legitimate exception formulas cause every clean alarm",
         "",
@@ -381,7 +447,7 @@ def markdown_report(payload: dict) -> str:
         "## Enron is practically unchanged but fails the exact safety rule",
         "",
         f"The retrospective Enron set contains {enron['events']} supported events from {enron['workbooks']} workbooks. "
-        f"Only {len(enron['rank_changes'])} event changed rank; its source moved down by one position. Top-5 stayed at {enron['summary']['v4']['top5']:.2%}, but the exact non-decrease rule fails because MRR changed by {enron['mrr_difference']:+.8f}.",
+        f"{len(enron['rank_changes'])} event(s) changed rank. Top-5 stayed at {enron['summary']['v4']['top5']:.2%}, but the exact non-decrease rule fails because MRR changed by {enron['mrr_difference']:+.8f}.",
         "",
         "## Scope, definitions, and integrity checks",
         "",
@@ -394,19 +460,17 @@ def markdown_report(payload: dict) -> str:
         "",
         "## Limitations and robustness",
         "",
-        "V6-A is a formula-family-only mechanism. It cannot test the registered range-boundary component, and the clean exception result indicates that strong family agreement plus counterfactual improvement is not sufficient evidence of an error. The corrected Enron comparison uses all 30 evaluation-ready events from the existing corpus and remains retrospective rather than independent evidence.",
+        limitation + " The corrected Enron comparison uses all 30 evaluation-ready events from the existing corpus and remains retrospective rather than independent evidence.",
         "",
         f"A one-workbook diagnostic probe found that the fixed A, B and C implementations all promote a candidate on `{probe['workbook']}`. This probe is not a population result, but it warns that the currently registered B/C safeguards may not remove the exception-family false-alarm mechanism.",
         "",
         "## Recommended next step",
         "",
-        "Run the already preregistered V6-B and V6-C rounds without changing their logic. Do not freeze A. After all three rounds, run the one-shot locked internal validation only if a candidate passes its own development gates; otherwise retain V6 as a documented negative/partial result rather than tuning against the locked validation.",
+        next_step,
         "",
         "## Further questions",
         "",
-        "- Does BSS lift range-boundary Top-5 without adding new clean alarms?",
-        "- Does C reject any ambiguous promotions beyond A/B, especially the exception-family alarms?",
-        "- Do the fixed ablations confirm that FFC/BSS and the safety constraints each add non-redundant value?",
+        *questions,
         "",
     ]
     return "\n".join(lines)
