@@ -1,0 +1,29 @@
+{
+  "protocol": "v6_locked_internal_validation_precommit_v1",
+  "purpose": "freeze validation inputs before prediction; labels remain unread by localization",
+  "dataset": "data/v6_validation",
+  "expected_events": 360,
+  "expected_workbook_files": 720,
+  "public_file_sha256": {
+    "instances.jsonl": "c311ed740cdbdd45190136ea4217aa2bd1b2e7ae5a542a0733d237bd2e20233d",
+    "clean_manifest.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "dataset_manifest.json": "bf0f81d38c7deb07e9905e30db982432eca5ae0ceacaf218290c66a36b3a0aac",
+    "dataset_summary.csv": "e4042471bef952a3486583520612169aa7c97d5a2e2892f0c3e1c85d0d7fb22d",
+    "dataset_build_complete.json": "bd476b4bac896fd767b1a93a3205b335f5fd195dd94ed1e374068c7c325e542f",
+    "validation/dataset_quality.json": "87eff534bd81dac8f973a318d882b0622b4118ef5d45d9ad30dd0df3a6b79bd8",
+    "validation/structural_diversity.json": "8fd2116effff23b3a86fd4206f7bbc2ab63c39f1bf52910c16afb4d983465cf3",
+    "validation/leakage_audit.json": "04d8e85fc64bace27f92682601c5262b9cd6be054ab5ed5e31e9edfea178fb5d"
+  },
+  "workbook_inventory": {
+    "count": 720,
+    "aggregate_sha256": "037ab5fa4ec047a560e5a142d09144d1f51603bbd727feabcb547b8af3acbacd"
+  },
+  "secret_label_file": "evaluation_labels.jsonl",
+  "secret_label_sha256": "b063056bd6aa7cf7334589512e5af02b939192962c3a0e10b64d551d9a4c9962",
+  "v6_source_sha256": "75296073a37c31c422364361d7fde7d6da0a313b816b5e7d7f5cc71b95d2a3c3",
+  "v4_source_sha256": "760fbf8519dce5a4604bcc6ba158e9ca44d9434e7e898c85e9f7bc51c6c99c40",
+  "method_spec_sha256": "25a287e644237dd7b20241878065c8886d3599cbe9a9a8e3d9165606fc57f295",
+  "git_commit_at_precommit": "6ea31becd8cf0a4892a440a4fd056db581598ff5",
+  "predictions_present_at_precommit": false,
+  "labels_semantically_inspected_by_precommit_script": false
+}
