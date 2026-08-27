@@ -9,7 +9,7 @@ from pathlib import Path
 from formulaguard.a1 import parse_address
 from formulaguard.formula import formula_fingerprint, normalized_formula
 from formulaguard.workbook import WorkbookModel
-from scripts import run_v5_core_predictions, run_v5_core_stage
+from scripts import freeze_v5_core, run_v5_core_predictions, run_v5_core_stage
 from scripts import audit_v5_core_public_inputs
 from scripts.score_v5_core_predictions import hash_file, verify_prediction_completion
 from scripts.build_v5_core_dataset import (
@@ -119,6 +119,32 @@ class V5CoreProtocolTests(unittest.TestCase):
             shard.write_text(json.dumps({"instance_id": "changed"}), encoding="utf-8")
             with self.assertRaises(SystemExit):
                 verify_prediction_completion(root)
+
+    def test_freeze_receipt_locks_code_data_evidence_and_environment(self):
+        source = inspect.getsource(freeze_v5_core.main)
+        for required_field in (
+            '"source_sha256"',
+            '"historical_source_sha256"',
+            '"data_manifest_sha256"',
+            '"evidence_sha256"',
+            '"environment"',
+            '"post_validation_retuning_allowed": False',
+        ):
+            self.assertIn(required_field, source)
+        self.assertIn('git("status", "--porcelain")', source)
+        self.assertIn('selection.get("no_parameter_changes_after_this_receipt")', source)
+
+    def test_freeze_manifest_keys_are_repository_relative_and_portable(self):
+        self.assertEqual(
+            freeze_v5_core.manifest_key(Path("results/v5_core_validation/summary.json")),
+            "results/v5_core_validation/summary.json",
+        )
+        self.assertEqual(
+            freeze_v5_core.manifest_key(
+                Path("D:/code/QCT/results/v5_core_validation/summary.json")
+            ),
+            "results/v5_core_validation/summary.json",
+        )
 
 
 if __name__ == "__main__":
