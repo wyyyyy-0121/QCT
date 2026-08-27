@@ -138,20 +138,38 @@ def clean_cases() -> list[Case]:
         "subtotal", "grand_total", "cross_sheet", "rolling_window",
         "mixed_aggregate", "department_exception", "sparse_formula", "near_tie",
     )
-    cases: list[Case] = []
+    calibration: dict[str, list[Case]] = {structure: [] for structure in structures}
+    held: dict[str, list[Case]] = {structure: [] for structure in structures}
+    index = 0
     for structure in structures:
         for scale in range(3):
             for replicate in range(10):
-                index = len(cases)
                 regime = REGIMES[(structures.index(structure) + scale) % 4]
                 topology = TOPOLOGIES[(structures.index(structure) + replicate) % 5]
-                cases.append(Case(
+                case = Case(
                     f"v5c_clean_{index + 1:04d}", "clean", "function_replacement",
                     topology, regime, COMPLEXITIES[scale],
                     f"clean_{structure}_{scale}_{replicate}", SEED_BASES["clean"] + index,
                     structure,
-                ))
-    return cases
+                )
+                local_index = scale * 10 + replicate
+                (calibration if local_index % 3 != 2 else held)[structure].append(case)
+                index += 1
+
+    def interleave(groups: dict[str, list[Case]]) -> list[Case]:
+        return [
+            groups[structure][position]
+            for position in range(max(len(rows) for rows in groups.values()))
+            for structure in structures
+            if position < len(groups[structure])
+        ]
+
+    return interleave(calibration) + interleave(held)
+
+
+def clean_control_partition(case: Case) -> str:
+    local_index = (case.seed - SEED_BASES["clean"]) % 30
+    return "calibration" if local_index % 3 != 2 else "locked_control"
 
 
 def _qualified(sheet: str, address: str, cross_sheet: bool) -> str:
@@ -170,7 +188,11 @@ def build_case(case: Case, *, clean_only: bool = False):
     }[case.split]
     target_row = target_base + scale
     last = target_row + 8 + 2 * scale
-    cross = case.topology == "cross_sheet"
+    cross = (
+        case.ambiguity == "cross_sheet"
+        if clean_only and case.split == "clean"
+        else case.topology == "cross_sheet"
+    )
     data_sheet = "Inputs" if cross else "Model"
     input_cells: dict[str, object] = {"B1": round(0.03 + (case.seed % 11) / 100, 2)}
     for row in range(2, last + 1):
@@ -180,6 +202,8 @@ def build_case(case: Case, *, clean_only: bool = False):
         input_cells[f"Q{row}"] = 9 + rng.randrange(29)
         input_cells[f"R{row}"] = 3 + rng.randrange(19)
         input_cells[f"S{row}"] = 1 + rng.randrange(13)
+        for offset, column in enumerate(("BA", "BB", "BC", "BD", "BE", "BF", "BG", "BH")):
+            input_cells[f"{column}{row}"] = 4 + ((case.seed + row * 5 + offset * 11) % 31)
     model_cells = {} if cross else dict(input_cells)
     formulas: dict[str, str] = {}
 
@@ -278,6 +302,62 @@ def build_case(case: Case, *, clean_only: bool = False):
         special_row = target_row + 2 if target_row + 2 <= last else target_row - 2
         formulas[f"E{special_row}"] = f"=MAX({ref(f'B{special_row}')}:{ref(f'D{special_row}')})"
 
+    # Clean controls use an explicit W:AB probe block so the twelve declared
+    # structures are observable in the formulas themselves, not just metadata.
+    if clean_only and case.split == "clean":
+        structure = case.ambiguity
+        if structure == "regular_row":
+            for output, left, right in zip(
+                ("W", "X", "Y", "Z", "AA", "AB"),
+                ("BA", "BB", "BC", "BD", "BE", "BF"),
+                ("BB", "BC", "BD", "BE", "BF", "BG"),
+            ):
+                formulas[f"{output}2"] = f"={ref(f'{left}2')}+{ref(f'{right}2')}"
+        elif structure in {"regular_column", "cross_sheet"}:
+            for row in range(2, 14):
+                formulas[f"W{row}"] = f"={ref(f'BA{row}')}+{ref(f'BB{row}')}"
+        elif structure == "two_dimensional":
+            for row in range(2, 8):
+                for output, left, right in (("W", "BA", "BB"), ("X", "BB", "BC"), ("Y", "BC", "BD")):
+                    formulas[f"{output}{row}"] = f"={ref(f'{left}{row}')}+{ref(f'{right}{row}')}"
+        elif structure == "alternating":
+            for row in range(2, 14):
+                formulas[f"W{row}"] = (
+                    f"=SUM({ref(f'BA{row}')}:{ref(f'BC{row}')})"
+                    if row % 2 == 0 else
+                    f"=MAX({ref(f'BA{row}')}:{ref(f'BC{row}')})"
+                )
+        elif structure == "subtotal":
+            for row in (2, 5, 8):
+                formulas[f"W{row}"] = f"=SUM({ref(f'BA{row}')}:{ref(f'BA{row + 2}')})"
+            formulas["X2"] = "=W2+W5+W8"
+        elif structure == "grand_total":
+            for row in range(2, 10):
+                formulas[f"W{row}"] = f"={ref(f'BA{row}')}+{ref(f'BB{row}')}"
+            formulas["X2"] = "=SUM(W2:W9)"
+        elif structure == "rolling_window":
+            for row in range(4, 14):
+                formulas[f"W{row}"] = f"=SUM({ref(f'BA{row - 2}')}:{ref(f'BA{row}')})"
+        elif structure == "mixed_aggregate":
+            functions = ("SUM", "AVERAGE", "MIN", "MAX")
+            for offset, row in enumerate(range(2, 14)):
+                function = functions[offset % len(functions)]
+                formulas[f"W{row}"] = f"={function}({ref(f'BA{row}')}:{ref(f'BC{row}')})"
+        elif structure == "department_exception":
+            for row in range(2, 14):
+                function = "MAX" if row in {6, 10} else "SUM"
+                formulas[f"W{row}"] = f"={function}({ref(f'BA{row}')}:{ref(f'BC{row}')})"
+            formulas["X2"] = "=SUM(W2:W5)"
+            formulas["X6"] = "=SUM(W6:W9)"
+            formulas["X10"] = "=SUM(W10:W13)"
+        elif structure == "sparse_formula":
+            for row in (2, 5, 8, 11):
+                formulas[f"W{row}"] = f"={ref(f'BA{row}')}+{ref(f'BB{row}')}"
+        elif structure == "near_tie":
+            for row in range(2, 10):
+                formulas[f"W{row}"] = f"=SUM({ref(f'BA{row}')}:{ref(f'BC{row}')})"
+                formulas[f"X{row}"] = f"=AVERAGE({ref(f'BA{row}')}:{ref(f'BC{row}')})"
+
     sheets = []
     if cross:
         sheets.append(("Inputs", input_cells, {}))
@@ -320,6 +400,7 @@ def main() -> None:
             clean_manifest.append({
                 "clean_id": case.instance_id,
                 "structure": case.ambiguity,
+                "control_partition": clean_control_partition(case),
                 "regime": case.regime,
                 "complexity": case.complexity,
                 "template_family": case.template_family,

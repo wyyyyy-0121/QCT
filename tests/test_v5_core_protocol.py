@@ -3,9 +3,12 @@ import inspect
 import json
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 
-from formulaguard.formula import normalized_formula
+from formulaguard.a1 import parse_address
+from formulaguard.formula import formula_fingerprint, normalized_formula
+from formulaguard.workbook import WorkbookModel
 from scripts import run_v5_core_predictions, run_v5_core_stage
 from scripts import audit_v5_core_public_inputs
 from scripts.score_v5_core_predictions import hash_file, verify_prediction_completion
@@ -13,7 +16,9 @@ from scripts.build_v5_core_dataset import (
     PROFILE_COUNTS,
     build_case,
     clean_cases,
+    clean_control_partition,
     enumerate_cases,
+    write_xlsx,
 )
 
 
@@ -22,6 +27,16 @@ class V5CoreProtocolTests(unittest.TestCase):
         for profile in ("smoke", "pilot", "development", "redteam", "validation", "third_party"):
             self.assertEqual(len(enumerate_cases(profile)), PROFILE_COUNTS[profile])
         self.assertEqual(len(clean_cases()), 360)
+
+    def test_clean_calibration_and_locked_controls_are_balanced(self):
+        cases = clean_cases()
+        for limit, per_structure in ((24, 2), (48, 4), (240, 20)):
+            self.assertEqual(Counter(case.ambiguity for case in cases[:limit]), Counter({
+                structure: per_structure for structure in {case.ambiguity for case in cases}
+            }))
+        self.assertTrue(all(clean_control_partition(case) == "calibration" for case in cases[:240]))
+        self.assertTrue(all(clean_control_partition(case) == "locked_control" for case in cases[240:]))
+        self.assertEqual(set(Counter(case.ambiguity for case in cases[240:]).values()), {10})
 
     def test_labeled_formula_pairs_are_disjoint_across_splits(self):
         pairs = {}
@@ -34,6 +49,32 @@ class V5CoreProtocolTests(unittest.TestCase):
         for index, left in enumerate(profiles):
             for right in profiles[index + 1:]:
                 self.assertFalse(pairs[left] & pairs[right], (left, right))
+
+    def test_clean_structure_probes_are_real_and_pairwise_distinct(self):
+        selected = {}
+        for case in clean_cases():
+            selected.setdefault(case.ambiguity, case)
+        self.assertEqual(len(selected), 12)
+        signatures = {}
+        with tempfile.TemporaryDirectory() as directory:
+            for structure, case in selected.items():
+                path = Path(directory) / f"{structure}.xlsx"
+                sheets, *_ = build_case(case, clean_only=True)
+                write_xlsx(path, sheets)
+                model = WorkbookModel.from_xlsx(path)
+                _, errors = model.evaluate()
+                self.assertFalse(errors, structure)
+                probe = []
+                for (sheet, address), formula in model.formulas.items():
+                    parsed = parse_address(address)
+                    if sheet == "Model" and 23 <= parsed.col <= 28:
+                        probe.append((parsed.row, parsed.col, formula_fingerprint(formula, address)))
+                self.assertTrue(probe, structure)
+                min_row = min(item[0] for item in probe)
+                min_col = min(item[1] for item in probe)
+                normalized = sorted((row - min_row, col - min_col, fp) for row, col, fp in probe)
+                signatures[structure] = hashlib.sha256(json.dumps(normalized).encode("utf-8")).hexdigest()
+        self.assertEqual(len(set(signatures.values())), 12, signatures)
 
     def test_prediction_worker_source_cannot_read_labels(self):
         source = inspect.getsource(run_v5_core_predictions)
