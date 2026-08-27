@@ -133,6 +133,7 @@ class V5CoreProtocolTests(unittest.TestCase):
             self.assertIn(required_field, source)
         self.assertIn('git("status", "--porcelain")', source)
         self.assertIn('selection.get("no_parameter_changes_after_this_receipt")', source)
+        self.assertLess(source.index("missing_prerequisites"), source.index("json.loads(selection_path"))
 
     def test_freeze_manifest_keys_are_repository_relative_and_portable(self):
         self.assertEqual(

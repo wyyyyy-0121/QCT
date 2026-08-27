@@ -56,6 +56,16 @@ def main() -> None:
     validation_root = repo_path(args.validation_root)
     output_path = repo_path(args.output)
 
+    prerequisite_paths = [selection_path, rule_path, learned_path]
+    missing_prerequisites = [
+        manifest_key(path) for path in prerequisite_paths if not path.exists()
+    ]
+    if missing_prerequisites:
+        raise SystemExit(
+            "Freeze refused: locked selection/configuration is missing: "
+            f"{missing_prerequisites}"
+        )
+
     selection = json.loads(selection_path.read_text(encoding="utf-8"))
     selected = selection.get("selected_head")
     if not selected:
