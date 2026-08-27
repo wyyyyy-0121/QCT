@@ -38,6 +38,21 @@ class V5CoreProtocolTests(unittest.TestCase):
             self.assertEqual(len(enumerate_cases(profile)), PROFILE_COUNTS[profile])
         self.assertEqual(len(clean_cases()), 360)
 
+    def test_redteam_factorial_covers_every_regime_and_ambiguity(self):
+        cases = enumerate_cases("redteam")
+        factorial = Counter((case.error_type, case.topology, case.regime) for case in cases)
+        self.assertEqual(len(factorial), 6 * 5 * 4)
+        self.assertEqual(set(factorial.values()), {3})
+        self.assertEqual(
+            Counter(case.ambiguity for case in cases),
+            Counter({
+                "competing_family": 120,
+                "legitimate_summary": 120,
+                "near_tie": 120,
+            }),
+        )
+        self.assertEqual(set(Counter(case.regime for case in cases).values()), {90})
+
     def test_project_builder_refuses_to_create_its_own_independent_final_set(self):
         source = inspect.getsource(__import__(
             "scripts.build_v5_core_dataset", fromlist=["main"],

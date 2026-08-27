@@ -105,7 +105,12 @@ def enumerate_cases(profile: str, *, secret_seed_offset: int = 0) -> list[Case]:
                         index = len(cases)
                         cases.append(Case(
                             f"v5c_red_{index + 1:04d}", profile, error, topology,
-                            REGIMES[(template + len(cases)) % len(REGIMES)],
+                            # The four red-team templates are the four formula
+                            # regimes.  Including len(cases) here advanced the
+                            # index twice per template and silently produced
+                            # only regimes 0 and 2, which the dataset audit
+                            # correctly rejected as an incomplete factorial.
+                            REGIMES[template],
                             COMPLEXITIES[template], f"red_{topology}_{ambiguity}_{template}",
                             base + index, ambiguity,
                         ))
