@@ -94,6 +94,10 @@ def main() -> None:
         ensure_dataset("smoke", data)
         ensure_dataset("clean", clean, limit=24)
         root = Path("results/v5_core_smoke")
+        run(
+            "scripts/audit_v5_core_dataset.py", data, clean,
+            "--output", root / "dataset_audit.json",
+        )
         predict(data, root / "raw_predictions", args.workers, "--baselines", resume=args.resume)
         predict(clean, root / "raw_clean_predictions", args.workers, "--clean", resume=args.resume)
         config = root / "config"
@@ -126,6 +130,10 @@ def main() -> None:
         ensure_dataset("pilot", data)
         ensure_dataset("clean", clean, limit=48)
         root = Path("results/v5_core_pilot")
+        run(
+            "scripts/audit_v5_core_dataset.py", data, clean,
+            "--output", root / "dataset_audit.json",
+        )
         predict(data, root / "raw_predictions", args.workers, "--baselines", resume=args.resume)
         predict(clean, root / "raw_clean_predictions", args.workers, "--clean", resume=args.resume)
         config = root / "config"
@@ -181,11 +189,13 @@ def main() -> None:
         )
         predict(
             development, root / "development_predictions", args.workers,
-            "--baselines", *config_args, resume=args.resume,
+            "--baselines", *config_args, "--ablations", *ABLATIONS,
+            resume=args.resume,
         )
         predict(
             redteam, root / "redteam_predictions", args.workers,
-            "--baselines", *config_args, resume=args.resume,
+            "--baselines", *config_args, "--ablations", *ABLATIONS,
+            resume=args.resume,
         )
         predict(
             clean, root / "clean_predictions", args.workers,

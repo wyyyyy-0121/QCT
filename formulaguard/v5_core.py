@@ -523,7 +523,54 @@ def build_candidate_portfolio(
         if norm not in used:
             selected.append(item)
             used.add(norm)
-    return selected[:candidate_limit]
+    # Quotas decide membership, not intervention priority. Return the chosen
+    # pool in one global label-free quality order so the base budget really is
+    # spent on the two strongest candidates rather than the first category.
+    selected_norms = {normalized_formula(item.candidate.formula) for item in selected}
+    return [
+        item for item in ranked
+        if normalized_formula(item.candidate.formula) in selected_norms
+    ][:candidate_limit]
+
+
+def _intervention_portfolio(
+    portfolio: Sequence[PortfolioCandidate],
+    limit: int,
+    *,
+    deep: bool,
+    base_count: int = DEFAULT_BASE_INTERVENTIONS,
+) -> list[PortfolioCandidate]:
+    """Choose a quality-first, category-diverse counterfactual budget."""
+    if limit <= 0:
+        return []
+    ordered = list(portfolio)
+    if not deep or limit <= base_count:
+        return ordered[:limit]
+    chosen = ordered[: min(base_count, limit)]
+    used = {normalized_formula(item.candidate.formula) for item in chosen}
+    represented = {_category(item.candidate) for item in chosen}
+    for category in ("family", "range", "translation", "reference", "operator", "cross_sheet"):
+        if len(chosen) >= limit:
+            break
+        if category in represented:
+            continue
+        item = next((
+            row for row in ordered
+            if _category(row.candidate) == category
+            and normalized_formula(row.candidate.formula) not in used
+        ), None)
+        if item is not None:
+            chosen.append(item)
+            used.add(normalized_formula(item.candidate.formula))
+            represented.add(category)
+    for item in ordered:
+        if len(chosen) >= limit:
+            break
+        normalized = normalized_formula(item.candidate.formula)
+        if normalized not in used:
+            chosen.append(item)
+            used.add(normalized)
+    return chosen
 
 
 def _map_value(maps: Mapping[str, Mapping[CellKey, float]], cell: CellKey) -> float:
@@ -672,7 +719,8 @@ def _evaluate_candidates(
         -item.responsibility,
         -sorted((item.structural_evidence, item.causal_evidence, item.graph_recovery_evidence, item.replication_evidence), reverse=True)[2],
         -item.candidate.quality,
-        item.candidate.formula,
+        -item.candidate.reference_quality,
+        -item.descendant_coverage,
     ))
     return results
 
@@ -753,11 +801,16 @@ def _prepare_v5_core(
     graph = model.dependency_graph()
     evidence_by_cell: dict[CellKey, list[CandidateEvidence]] = {}
     for cell in model.formula_cells:
-        limit = deep_candidate_limit if cell in deep_cells else base_interventions
+        is_deep = cell in deep_cells
+        limit = deep_candidate_limit if is_deep else base_interventions
+        intervention_portfolio = _intervention_portfolio(
+            portfolios[cell], min(limit, len(portfolios[cell])), deep=is_deep,
+            base_count=base_interventions,
+        )
         evidence_by_cell[cell] = _evaluate_candidates(
             model,
             cell,
-            portfolios[cell],
+            intervention_portfolio,
             regimes[cell],
             formula_anomaly=formula_scores.get(cell, 0.0),
             graph_anomaly=graph_scores.get(cell, 0.0),
@@ -765,7 +818,7 @@ def _prepare_v5_core(
             base_global_energy=base_global_energy,
             base_maps=base_maps,
             graph=graph,
-            limit=min(limit, len(portfolios[cell])),
+            limit=len(intervention_portfolio),
         )
         if not evidence_by_cell[cell]:
             fallback = _default_candidate_evidence(portfolios[cell], regimes[cell], formula_scores.get(cell, 0.0))
@@ -899,8 +952,8 @@ def v5_core_scores(
     graph_scores: Mapping[CellKey, float] = prepared["graph_scores"]  # type: ignore[assignment]
     behavior_scores: Mapping[CellKey, float] = prepared["behavior_scores"]  # type: ignore[assignment]
 
-    cell_rows: list[tuple[CellKey, CandidateEvidence | None, float, dict[str, float]]] = []
-    for cell in model.formula_cells:
+    cell_rows: list[tuple[int, CellKey, CandidateEvidence | None, float, dict[str, float]]] = []
+    for stable_index, cell in enumerate(model.formula_cells):
         best: CandidateEvidence | None = None
         best_score = float("-inf")
         best_features: dict[str, float] = {}
@@ -915,12 +968,32 @@ def v5_core_scores(
                 evidence, head=normalized_head, config=parameters,
                 features=features, ablation=ablation,
             )
-            tie = (score, evidence.responsibility, evidence.candidate.quality, evidence.candidate.formula)
+            third_evidence = sorted((
+                evidence.structural_evidence,
+                evidence.causal_evidence,
+                evidence.graph_recovery_evidence,
+                evidence.replication_evidence,
+            ), reverse=True)[2]
+            tie = (
+                score,
+                evidence.responsibility,
+                third_evidence,
+                evidence.candidate.quality,
+                evidence.candidate.reference_quality,
+                evidence.descendant_coverage,
+            )
             current_tie = (
                 best_score,
                 best.responsibility if best else -1.0,
+                sorted((
+                    best.structural_evidence,
+                    best.causal_evidence,
+                    best.graph_recovery_evidence,
+                    best.replication_evidence,
+                ), reverse=True)[2] if best else -1.0,
                 best.candidate.quality if best else -1.0,
-                best.candidate.formula if best else "",
+                best.candidate.reference_quality if best else -1.0,
+                best.descendant_coverage if best else -1.0,
             )
             if tie > current_tie:
                 best, best_score, best_features = evidence, score, features
@@ -932,24 +1005,50 @@ def v5_core_scores(
                 graph_score=graph_scores.get(cell, 0.0),
                 behavior_score=behavior_scores.get(cell, 0.0),
             )
-        cell_rows.append((cell, best, best_score, best_features))
+        cell_rows.append((stable_index, cell, best, best_score, best_features))
 
     cell_rows.sort(key=lambda row: (
-        -row[2],
-        -(row[1].responsibility if row[1] else 0.0),
-        -(row[1].candidate.quality if row[1] else 0.0),
+        -row[3],
+        -(row[2].responsibility if row[2] else 0.0),
+        -(
+            sorted((
+                row[2].structural_evidence,
+                row[2].causal_evidence,
+                row[2].graph_recovery_evidence,
+                row[2].replication_evidence,
+            ), reverse=True)[2] if row[2] else 0.0
+        ),
+        -(row[2].candidate.quality if row[2] else 0.0),
+        -(row[2].candidate.reference_quality if row[2] else 0.0),
+        -(row[2].descendant_coverage if row[2] else 0.0),
         row[0],
     ))
-    top_score = cell_rows[0][2] if cell_rows else 0.0
-    second_score = cell_rows[1][2] if len(cell_rows) > 1 else 0.0
+    top_score = cell_rows[0][3] if cell_rows else 0.0
+    second_score = cell_rows[1][3] if len(cell_rows) > 1 else 0.0
     alarm_threshold = float(parameters.get("alarm_threshold", DEFAULT_ALARM_THRESHOLD))
     alarm_margin = float(parameters.get("alarm_margin", DEFAULT_ALARM_MARGIN))
     workbook_alarm = top_score >= alarm_threshold and top_score - second_score >= alarm_margin
     elapsed = float(prepared["elapsed"])
     results: list[LocalizationResult] = []
-    for rank, (cell, best, score, features) in enumerate(cell_rows, 1):
+    for rank, (_, cell, best, score, features) in enumerate(cell_rows, 1):
         regime = regimes[cell]
         portfolio = portfolios[cell]
+        evaluated_candidates = []
+        for candidate_evidence in evidence_by_cell[cell]:
+            candidate_features = _feature_vector(
+                candidate_evidence,
+                formula_score=formula_scores.get(cell, 0.0),
+                graph_score=graph_scores.get(cell, 0.0),
+                behavior_score=behavior_scores.get(cell, 0.0),
+            )
+            evaluated_candidates.append({
+                "formula": candidate_evidence.candidate.formula,
+                "feature_vector": candidate_features,
+                "responsibility": candidate_evidence.responsibility,
+                "candidate_quality": candidate_evidence.candidate.quality,
+                "reference_quality": candidate_evidence.candidate.reference_quality,
+                "evidence_tier": candidate_evidence.evidence_tier,
+            })
         evidence = {
             "model_version": MODEL_VERSION,
             "head": normalized_head,
@@ -981,6 +1080,7 @@ def v5_core_scores(
                 }
                 for row in portfolio
             ],
+            "evaluated_candidate_features": evaluated_candidates,
             "structural_evidence": best.structural_evidence if best else 0.0,
             "causal_evidence": best.causal_evidence if best else 0.0,
             "graph_recovery_evidence": best.graph_recovery_evidence if best else 0.0,

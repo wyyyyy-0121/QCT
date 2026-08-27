@@ -144,6 +144,7 @@ def audit_shard(path: Path, row: dict, benchmark: Path, methods: set[str]) -> No
                 "regime_id", "candidate_portfolio", "structural_evidence",
                 "causal_evidence", "graph_recovery_evidence", "replication_evidence",
                 "exception_likelihood", "feature_vector", "propagation_path",
+                "evaluated_candidate_features",
             }
             if any(not required <= set(item["evidence"]) for item in ranking):
                 raise SystemExit(f"Incomplete V5 evidence in {path}: {method}")

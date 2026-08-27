@@ -22,6 +22,29 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def archive_member_sha256(archive: zipfile.ZipFile, name: str) -> str:
+    digest = hashlib.sha256()
+    with archive.open(name) as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def bundled_git() -> str:
+    path = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
+    return "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(path)
+
+
+def tagged_freeze_bytes() -> bytes:
+    try:
+        return subprocess.check_output(
+            [bundled_git(), "show", "v5-core-lock:research/frozen_config_v5_core.json"],
+            cwd=ROOT,
+        )
+    except subprocess.CalledProcessError as exc:
+        raise SystemExit("Blind lock refused: Git tag v5-core-lock does not contain the frozen configuration") from exc
+
+
 def safe_extract(archive: zipfile.ZipFile, root: Path) -> None:
     root.mkdir(parents=True, exist_ok=True)
     for member in archive.infolist():
@@ -39,32 +62,80 @@ def safe_extract(archive: zipfile.ZipFile, root: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--public-zip", type=Path, default=Path(r"D:\FormulaGuard_V5_ThirdParty\FormulaGuard_V5_PUBLIC_600.zip"))
+    parser.add_argument("--precommit", type=Path, default=Path(r"D:\FormulaGuard_V5_ThirdParty\third_party_precommit.json"))
     parser.add_argument("--frozen-config", type=Path, default=Path("research/frozen_config_v5_core.json"))
     parser.add_argument("--public-root", type=Path, default=Path("data/v5_core_blind/public"))
     parser.add_argument("--output", type=Path, default=Path("results/v5_core_blind_locked"))
     parser.add_argument("--workers", type=int, default=24)
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
+    precommit = json.loads(args.precommit.read_text(encoding="utf-8"))
+    if precommit.get("cases") != 600 or precommit.get("model_was_run") is not False:
+        raise SystemExit("Blind lock refused: invalid third-party precommit receipt")
+    if precommit.get("public_zip_sha256") != sha256(args.public_zip):
+        raise SystemExit("Blind lock refused: public archive differs from its pre-freeze commitment")
     frozen = json.loads(args.frozen_config.read_text(encoding="utf-8"))
+    if frozen.get("third_party_results_seen") is not False or frozen.get("post_validation_retuning_allowed") is not False:
+        raise SystemExit("Blind lock refused: frozen configuration lacks the no-retuning declarations")
+    if hashlib.sha256(tagged_freeze_bytes()).hexdigest() != sha256(args.frozen_config):
+        raise SystemExit("Blind lock refused: local frozen configuration differs from v5-core-lock")
     for relative, expected in frozen["source_sha256"].items():
         if sha256(ROOT / relative) != expected:
             raise SystemExit(f"Frozen source changed: {relative}")
+    with zipfile.ZipFile(args.public_zip) as archive:
+        try:
+            archived_manifest_bytes = archive.read("manifest.csv")
+            archived_precommit_bytes = archive.read("secret_precommit_sha256.txt")
+        except KeyError as exc:
+            raise SystemExit("Public archive lacks its manifest or secret precommit") from exc
+        archived_reader = csv.DictReader(
+            archived_manifest_bytes.decode("utf-8-sig").splitlines()
+        )
+        if archived_reader.fieldnames != ["instance_id", "workbook"]:
+            raise SystemExit("Archived public manifest must contain exactly instance_id,workbook")
+        archived_manifest = list(archived_reader)
+        expected_members = {
+            "manifest.csv", "secret_precommit_sha256.txt",
+            *(row["workbook"] for row in archived_manifest),
+        }
+        observed_members = {member.filename for member in archive.infolist() if not member.is_dir()}
+        if observed_members != expected_members:
+            raise SystemExit("Public archive has missing, extra, or secret-bearing files")
     if not (args.public_root / "manifest.csv").exists():
         if args.public_root.exists() and any(args.public_root.iterdir()):
             raise SystemExit(f"Public extraction root is non-empty: {args.public_root}")
         with zipfile.ZipFile(args.public_zip) as archive:
             safe_extract(archive, args.public_root)
+    if hashlib.sha256((args.public_root / "manifest.csv").read_bytes()).hexdigest() != hashlib.sha256(archived_manifest_bytes).hexdigest():
+        raise SystemExit("Extracted public manifest differs from the committed archive")
+    if hashlib.sha256((args.public_root / "secret_precommit_sha256.txt").read_bytes()).hexdigest() != hashlib.sha256(archived_precommit_bytes).hexdigest():
+        raise SystemExit("Extracted secret precommit differs from the committed archive")
     with (args.public_root / "manifest.csv").open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         if reader.fieldnames != ["instance_id", "workbook"]:
             raise SystemExit("Public manifest must contain exactly instance_id,workbook")
         manifest = list(reader)
+    committed_secret = dict(
+        line.strip().split("=", 1)
+        for line in (args.public_root / "secret_precommit_sha256.txt").read_text(encoding="utf-8").splitlines()
+        if "=" in line
+    )
+    for key in (
+        "secret_zip_sha256", "labels_csv_sha256", "exceptions_csv_sha256",
+        "design_ledger_csv_sha256", "provenance_sha256",
+    ):
+        if committed_secret.get(key) != precommit.get(key):
+            raise SystemExit(f"Blind lock refused: public secret commitment differs for {key}")
     if len(manifest) != 600 or len({row["instance_id"] for row in manifest}) != 600:
         raise SystemExit("Public pack must contain 600 unique cases")
     for row in manifest:
         path = args.public_root / row["workbook"]
         if not path.exists() or args.public_root.resolve() not in path.resolve().parents:
             raise SystemExit(f"Missing or escaping workbook: {row['workbook']}")
+    with zipfile.ZipFile(args.public_zip) as archive:
+        for row in manifest:
+            if sha256(args.public_root / row["workbook"]) != archive_member_sha256(archive, row["workbook"]):
+                raise SystemExit(f"Extracted workbook differs from public archive: {row['workbook']}")
     instances = [
         {
             "instance_id": row["instance_id"],
@@ -112,6 +183,8 @@ def main() -> None:
         "frozen_config_sha256": sha256(args.frozen_config),
         "prediction_completion_sha256": sha256(completion),
         "precommit_text_sha256": sha256(args.public_root / "secret_precommit_sha256.txt"),
+        "third_party_precommit_sha256": sha256(args.precommit),
+        "v5_core_lock_tag_verified": True,
         "cases": 600,
         "labels_read": [],
         "labels_may_now_be_released": True,

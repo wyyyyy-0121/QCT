@@ -10,6 +10,8 @@ from formulaguard.v5_core import (
     FEATURE_NAMES,
     NEGATIVE_FEATURES,
     POSITIVE_FEATURES,
+    _category,
+    _intervention_portfolio,
     build_candidate_portfolio,
     discover_formula_regimes,
     fit_pairwise_linear_ranker,
@@ -53,6 +55,18 @@ class V5CoreTests(unittest.TestCase):
         self.assertIn(wanted, {normalized_formula(row.candidate.formula) for row in range_rows})
         self.assertTrue(all(row.candidate.reference_quality >= 0.80 for row in function_rows + range_rows))
 
+    def test_intervention_budget_is_quality_first_and_category_diverse(self):
+        portfolio = build_candidate_portfolio(family_model("=SUM(B5:C5)"), ("Data", "E5"))
+        self.assertGreaterEqual(len(portfolio), 2)
+        base = _intervention_portfolio(portfolio, 2, deep=False)
+        self.assertEqual(base, portfolio[:2])
+        deep = _intervention_portfolio(portfolio, min(8, len(portfolio)), deep=True)
+        self.assertEqual(deep[:2], portfolio[:2])
+        available_categories = {_category(item.candidate) for item in portfolio}
+        deep_categories = {_category(item.candidate) for item in deep}
+        if len(deep) >= len(available_categories):
+            self.assertTrue(available_categories.issubset(deep_categories))
+
     def test_complete_candidate_centric_ranking(self):
         model = family_model()
         results = v5_core_scores(model)
@@ -61,6 +75,7 @@ class V5CoreTests(unittest.TestCase):
         self.assertEqual(results[0].cell, ("Data", "E5"))
         self.assertTrue(all(results[index].score >= results[index + 1].score for index in range(len(results) - 1)))
         self.assertTrue(all("candidate_portfolio" in row.evidence for row in results))
+        self.assertTrue(all("evaluated_candidate_features" in row.evidence for row in results))
 
     def test_clean_family_is_treated_as_a_legitimate_regime(self):
         model = family_model("=SUM(B5:D5)")

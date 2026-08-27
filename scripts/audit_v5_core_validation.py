@@ -95,6 +95,12 @@ def main() -> None:
             selected_cv = next((row for row in cross_validation if row.get("regularization") == selected_regularization), None)
             if not selected_cv or any(score <= 0.5 for score in selected_cv.get("fold_pair_accuracy", [])):
                 reasons.append("learned head is not stable across all template folds")
+            if not training.get("major_feature_directions_consistent", False):
+                reasons.append("major learned feature directions are inconsistent across folds")
+            if training.get("held_out_family_success_fraction", 0.0) < 0.75:
+                reasons.append("learned gains do not generalize to at least 75% of held-out template families")
+            if training.get("worst_held_out_family_pair_accuracy", 0.0) < 0.25:
+                reasons.append("learned head collapses on at least one held-out template family")
         eligibility[method] = {
             "eligible": not reasons,
             "reasons": reasons,
