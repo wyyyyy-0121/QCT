@@ -199,3 +199,11 @@ V5开发运行已停止。V5.2三轮和之后的独立验证默认使用24个CPU
 - V6-A/B还因Enron同一尾部事件由第184名降至第185名而违反严格不下降门槛；V6-C虽保持Enron不退化，但最弱类型Top-5仅8.33%，并被预注册语义消融超过0.02；
 - 选择回执为`selected_variant=null`、`freeze_allowed=false`。`run_v6_freeze.cmd`已验证会在任何写入、提交或打标签前拒绝执行；V6不冻结，不运行性能和第三方600例，也不在本协议内开启V7；
 - V4-R1继续作为冻结主模型。V6保留为机制实验：BSS补齐范围边界是正结果，合法例外误报和合成语义对齐是关键负结果。完整复算见`research/V6_VALIDATION_AUDIT.json`与`research/V6_VALIDATION_RESULTS.md`。
+
+## 2026-08-27：正式版本体系修正
+
+- 论文和新公共接口将旧V5改称V4.1-PCG、旧V5.2-B改称V4.2-Review-B、旧V6改称V4.3-Semantic；这三项方法均直接复用V4主排序或保持V4 Top-5，属于V4.x机制研究；
+- 真正的V5-Core预留给候选中心、多证据责任的主排序核心重构，最低要求是不调用`v4_scores`取得最终基础排名；
+- 新增`formulaguard/v4x.py`提供V4.1/V4.2/V4.3别名，并在输出中同时记录正式版本号和历史版本号；旧调用仍可复现实验；
+- 旧源码、冻结配置、方法规格、Git标签、结果目录和预测锁不批量改写，因为其中版本字符串已进入SHA-256和复现证据；
+- 完整映射和论文写法见`research/VERSION_LINEAGE_AND_NAMING_POLICY.md`。

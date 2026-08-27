@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .api import localize
 from .v5 import v5_scores
+from .v4x import v4_1_scores
 from .workbook import WorkbookModel
 
 
@@ -35,14 +36,20 @@ def main(argv=None):
         "v6", "formulaguard_v6", "formulaguard_v6_a",
         "formulaguard_v6_b", "formulaguard_v6_c",
     }
+    v43_methods = {
+        "v4.3", "v4_3", "formulaguard_v4_3", "formulaguard_v4_3_a",
+        "formulaguard_v4_3_b", "formulaguard_v4_3_c",
+    }
     results = (
-        v5_scores(model, candidate_limit=args.candidate_limit)
+        v4_1_scores(model, candidate_limit=args.candidate_limit)
+        if args.method.lower() in {"formulaguard_v4_1", "v4_1", "v4.1"}
+        else v5_scores(model, candidate_limit=args.candidate_limit)
         if args.method.lower() in {"formulaguard_v5", "v5"}
         else localize(
             model,
             args.method,
             candidate_limit=args.candidate_limit,
-            **({} if args.method.lower() in v6_methods else {"gir_weights": gir_weights}),
+            **({} if args.method.lower() in v6_methods | v43_methods else {"gir_weights": gir_weights}),
         )
     )
     graph = model.dependency_graph()
