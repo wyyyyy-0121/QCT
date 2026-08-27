@@ -1,0 +1,48 @@
+{
+  "protocol": "v5_core_pilot_decision_v1",
+  "model_version": "v5-core-dev-r2",
+  "decision": "proceed_to_full_development",
+  "mechanism_revision_consumed": true,
+  "further_mechanism_changes_allowed": false,
+  "git_commit": "5eb941714f378efb73b6c3026abea192aa05569c",
+  "model_source_sha256": "4c83129aa3eaf9df044ca9039fe8a494db8e7bdfe8128e79a337db757918ba33",
+  "method_spec_sha256_at_prediction": "2a54d22a595c5c7cecf651a2f4a0bb3fbae38661c486fbbabb3eeaf0fd976e02",
+  "rule_config_sha256": "7bd9055d2c967df706ae2cbcc2e2929037245b14345a42cce8db43ccd72737b8",
+  "learned_config_sha256": "3160af66d7409667e8ae2030c331360d7d067af83689c31dbb699dd2fbb48b22",
+  "instances": 240,
+  "clean_controls": 48,
+  "workers": 24,
+  "gates": {
+    "data_audit": true,
+    "prediction_label_isolation": true,
+    "full_ranking_integrity": true,
+    "candidate_coverage_32": 1.0,
+    "rule_macro_top5": 1.0,
+    "rule_weakest_type_top5": 1.0,
+    "rule_exact_repair": 1.0,
+    "rule_clean_false_alarm_rate": 0.0625,
+    "rule_legitimate_exception_false_alarm_rate": 0.08333333333333333,
+    "learned_macro_top5": 1.0,
+    "learned_weakest_type_top5": 1.0,
+    "learned_exact_repair": 0.9166666666666666,
+    "learned_clean_false_alarm_rate": 0.08333333333333333,
+    "learned_legitimate_exception_false_alarm_rate": 0.1111111111111111,
+    "learned_feature_directions_consistent": true,
+    "learned_worst_held_out_family_pair_accuracy": 1.0
+  },
+  "evidence_sha256": {
+    "summary": "51beb1d58e06063695892423bd4489edef16b11b8c11a72f6633dc5c5f5fff7f",
+    "dataset_audit": "98ec94d6464fe6ba31b35d0e0af15e0fd2232dcab92aecc6f1751344386dee37",
+    "training_audit": "9729e352b4206a8686bd0ebcb8beb23d4960736282355f0195300dcb2a5ec247",
+    "prediction_complete": "15a382ab3b6afb31cc8c74ea75e0c7c03d1c7676103cbf43c5e7015b7393477e",
+    "clean_prediction_complete": "ac8b84c813cff53272433e6b8d668d591137b5c4a40e3e5e31473be07f50262f",
+    "result_workbook": "e75d1ba9860d23a6617a927c1d79dd4681075d742165f5f2ed6fde38ffeacb37",
+    "workbook_inspection": "17b45e25a37c049d69a65c9da3cfb80a77b058638670d85151573ee472e1d017"
+  },
+  "limitations": [
+    "Pilot is development evidence, not independent validation.",
+    "The 240 events contain only 28 exact correct-mutant formula pairs.",
+    "Learned final metrics are in-sample even though template-group cross-validation is recorded.",
+    "The learned head ties the rule head on localization but is worse on exact repair and clean false alarms."
+  ]
+}
