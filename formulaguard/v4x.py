@@ -40,7 +40,7 @@ VERSION_ALIASES = {
         "status": "rejected_for_main_freeze",
     },
     "v5": {
-        "canonical_id": "v5-core-dev-r1",
+        "canonical_id": "v5-core-dev-r2",
         "legacy_id": None,
         "legacy_module": None,
         "role": "reserved_for_candidate_centric_core_redesign",

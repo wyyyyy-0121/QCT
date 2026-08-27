@@ -94,10 +94,32 @@ class V5CoreTests(unittest.TestCase):
         self.assertEqual(regimes[("S", "B5")].regime_type, "periodic")
         self.assertTrue(regimes[("S", "B5")].periodic_position.startswith("period_2"))
 
+    def test_periodic_family_survives_one_corruption_and_uses_same_slot(self):
+        cells = {}
+        formulas = {}
+        for row in range(2, 13):
+            for col, value in zip("BCD", (row, row + 2, row + 4)):
+                cells[("S", f"{col}{row}")] = value
+            function = "SUM" if row % 2 == 0 else "AVERAGE"
+            formulas[("S", f"E{row}")] = f"={function}(B{row}:D{row})"
+        formulas[("S", "E7")] = "=MIN(B7:D7)"
+        model = WorkbookModel.from_cells(cells, formulas)
+        regimes = discover_formula_regimes(model)
+        regime = regimes[("S", "E7")]
+        self.assertEqual(regime.regime_type, "periodic")
+        self.assertLess(regime.exception_likelihood, regimes[("S", "E9")].exception_likelihood)
+        portfolio = build_candidate_portfolio(model, ("S", "E7"), regime=regime)
+        repaired = next(
+            row for row in portfolio
+            if normalized_formula(row.candidate.formula) == normalized_formula("=AVERAGE(B7:D7)")
+        )
+        self.assertIn("periodic_slot_consensus", repaired.candidate.sources)
+        self.assertGreaterEqual(repaired.family_support, 0.80)
+
     def test_api_dispatches_both_new_heads(self):
         rule = localize(family_model(), "formulaguard_v5_core_rule")
         learned = localize(family_model(), "formulaguard_v5_core_learned")
-        self.assertEqual(rule[0].evidence["model_version"], "v5-core-dev-r1")
+        self.assertEqual(rule[0].evidence["model_version"], "v5-core-dev-r2")
         self.assertEqual(learned[0].evidence["head"], "learned")
 
     def test_pairwise_ranker_enforces_weight_signs(self):

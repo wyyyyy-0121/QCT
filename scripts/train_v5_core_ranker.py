@@ -217,7 +217,7 @@ def main() -> None:
     error_learned = [ranking_top_margin(shard["rankings"]["v5_rule"], learned_config=learned) for shard in shards.values()]
     clean_learned = [ranking_top_margin(shard["rankings"]["v5_rule"], learned_config=learned) for shard in clean_shards.values()]
     rule_config = {
-        "model_version": "v5-core-dev-r1",
+        "model_version": "v5-core-dev-r2",
         "head": "rule",
         **calibrate(error_rule, clean_rule),
         "training_manifest": str((args.benchmark / "instances.jsonl").resolve()),

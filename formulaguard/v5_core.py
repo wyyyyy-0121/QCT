@@ -51,7 +51,7 @@ from .v6 import (
 from .workbook import CellKey, DependencyGraph, WorkbookModel
 
 
-MODEL_VERSION = "v5-core-dev-r1"
+MODEL_VERSION = "v5-core-dev-r2"
 DEFAULT_CANDIDATE_LIMIT = 32
 DEFAULT_BASE_INTERVENTIONS = 2
 DEFAULT_DEEP_CELL_LIMIT = 120
@@ -189,8 +189,23 @@ def _periodic_pattern(signatures: Sequence[str]) -> tuple[int, float]:
     for period in (2, 3):
         if len(signatures) < period * 2:
             continue
-        matches = sum(signatures[index] == signatures[index - period] for index in range(period, len(signatures)))
-        ratio = matches / max(1, len(signatures) - period)
+        # Use slot consensus instead of adjacent pair agreement.  A single
+        # corrupted formula breaks two pair comparisons and used to push a
+        # genuine 2-period family below the 0.80 threshold (7/9 for an
+        # eleven-formula line).  Slot consensus is robust to that one outlier
+        # while still requiring distinct modal signatures across the slots,
+        # so a uniform copy family is not mislabeled as periodic.
+        slot_modes: list[str] = []
+        matched = 0
+        for slot in range(period):
+            values = list(signatures[slot::period])
+            counts = Counter(values)
+            mode, count = max(counts.items(), key=lambda item: (item[1], item[0]))
+            slot_modes.append(mode)
+            matched += count
+        if len(set(slot_modes)) < 2:
+            continue
+        ratio = matched / len(signatures)
         if ratio > best_ratio:
             best_period, best_ratio = period, ratio
     return (best_period, best_ratio) if best_ratio >= 0.80 else (0, best_ratio)
@@ -228,9 +243,15 @@ def discover_formula_regimes(model: WorkbookModel) -> dict[CellKey, RegimeEviden
             except Exception:
                 signatures.append("unsupported")
         period, periodic_ratio = _periodic_pattern(signatures)
+        periodic_member = False
         if period:
             regime_type = "periodic"
-            periodic_position = f"period_{period}_slot_{ordered_line.index(cell) % period}"
+            cell_index = ordered_line.index(cell)
+            slot = cell_index % period
+            periodic_position = f"period_{period}_slot_{slot}"
+            slot_signatures = signatures[slot::period]
+            slot_mode = Counter(slot_signatures).most_common(1)[0][0]
+            periodic_member = signatures[cell_index] == slot_mode
         else:
             periodic_position = "none"
 
@@ -265,8 +286,12 @@ def discover_formula_regimes(model: WorkbookModel) -> dict[CellKey, RegimeEviden
             exception += 0.35
         elif boundary_role == "edge":
             exception += 0.15
-        if period:
-            exception += 0.25 * periodic_ratio
+        if period and periodic_member:
+            # Periodicity is only evidence for a legitimate exception when
+            # the current formula matches the consensus of its own slot.  A
+            # blanket periodicity bonus protected the corrupted member too,
+            # which is exactly the opposite of exception-aware localization.
+            exception += 0.50 * periodic_ratio
         if translated_total and consistency >= 0.60:
             # A formula that is reproduced by its local copy family is a
             # legitimate member, even when alternative edits happen to reduce
@@ -366,6 +391,7 @@ def build_candidate_portfolio(
     cell: CellKey,
     *,
     candidate_limit: int = DEFAULT_CANDIDATE_LIMIT,
+    regime: RegimeEvidence | None = None,
 ) -> list[PortfolioCandidate]:
     """Generate the bounded V5 portfolio before any cell ranking is created."""
     if candidate_limit < 1:
@@ -391,6 +417,66 @@ def build_candidate_portfolio(
             directions=available_directions[: item.direction_count],
             source_families=families,
         ))
+
+    # A corrupted member of an alternating/periodic family must be compared
+    # with peers in the same periodic slot, not with the immediately adjacent
+    # (different-slot) formulas.  This is a separate label-free source: the
+    # period and phase come only from surrounding relative-AST signatures.
+    if regime is not None and regime.regime_type == "periodic":
+        try:
+            period = int(regime.periodic_position.split("_", 2)[1])
+        except (IndexError, ValueError):
+            period = 0
+        if period in {2, 3}:
+            anchor = parse_address(cell[1])
+            formula_set = set(model.formula_cells)
+            periodic_votes: dict[str, list[tuple[str, str]]] = defaultdict(list)
+            for sign, direction in ((-1, "up"), (1, "down")):
+                for multiple in range(1, 3):
+                    row = anchor.row + sign * period * multiple
+                    if row < 1:
+                        continue
+                    peer = (cell[0], f"{num_to_col(anchor.col)}{row}")
+                    if peer not in formula_set:
+                        continue
+                    try:
+                        proposal = translate_formula(model.formulas[peer], peer[1], cell[1])
+                        parse_formula(proposal)
+                    except Exception:
+                        continue
+                    if normalized_formula(proposal) == normalized_formula(original):
+                        continue
+                    periodic_votes[normalized_formula(proposal)].append((proposal, direction))
+            vote_counts = sorted((len(rows) for rows in periodic_votes.values()), reverse=True)
+            second_count = vote_counts[1] if len(vote_counts) > 1 else 0
+            total_votes = sum(vote_counts)
+            for rows in periodic_votes.values():
+                if len(rows) < 2:
+                    continue
+                proposal = sorted(item[0] for item in rows)[0]
+                directions = tuple(sorted({f"periodic_{item[1]}" for item in rows}))
+                sources = tuple(sorted({"periodic_slot_consensus", *directions}))
+                edit_kinds = ["copy_pattern"]
+                if _outer_class(proposal) != _outer_class(original):
+                    edit_kinds.append("aggregate_function")
+                support = len(rows) / max(1, total_votes)
+                margin = (len(rows) - second_count) / max(1, total_votes)
+                candidate = RepairCandidate(
+                    proposal,
+                    len(rows),
+                    sources,
+                    tuple(edit_kinds),
+                    edit_cost(original, proposal),
+                    1.0,
+                    min(1.0, 0.60 + 0.10 * len(rows) + 0.15 * support),
+                )
+                _merge_portfolio_entry(merged, PortfolioCandidate(
+                    candidate=candidate,
+                    family_support=support,
+                    family_margin=max(0.0, margin),
+                    directions=directions,
+                    source_families=("peer_family",),
+                ))
 
     # Two-dimensional peers supplement the row/column-only semantic generator.
     anchor = parse_address(cell[1])
@@ -778,7 +864,12 @@ def _prepare_v5_core(
     graph_scores = graph_anomaly_scores(model)
     behavior_scores = behavior_anomaly_scores(model)
     portfolios = {
-        cell: build_candidate_portfolio(model, cell, candidate_limit=candidate_limit)
+        cell: build_candidate_portfolio(
+            model,
+            cell,
+            candidate_limit=candidate_limit,
+            regime=regimes[cell],
+        )
         for cell in model.formula_cells
     }
     preliminary: dict[CellKey, float] = {}
