@@ -19,7 +19,7 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 - V4.1-PCG（历史代码名v5-pcg-r1）：直接重排实验已被否决；它在Enron安全回归中使MRR低于V4。
 - V4.2-Review-B（历史代码名v5.2-B）：冻结的安全辅助审查位，不改变V4 Top-5。
 - V4.3-Semantic（历史代码名v6）：FFC/BSS语义重排机制实验；定位机制有效，但未通过正确表格误报等冻结门槛。
-- V5-Core：版本号保留给不再以`v4_scores`为最终排序底座的候选中心核心重构，目前尚未实现。
+- V5-Core：候选中心的多证据责任主排序器；不调用`v4_scores()`取得基础排名，当前已完成核心实现、数据协议、锁定评测和短测试框架，尚未经过240例pilot及后续大型验证。
 
 正式命名、历史目录和复现别名的完整映射见
 `research\VERSION_LINEAGE_AND_NAMING_POLICY.md`。旧源码、冻结配置和结果目录保持原名，
@@ -48,6 +48,31 @@ run_pipeline.cmd smoke -BenchmarkVersion v2 -Ablations
 ```
 
 smoke只检查工程链路，不写入论文主结论。
+
+V5-Core 的工程 smoke 命令为：
+
+```bat
+run_v5_core_smoke.cmd --workers 24
+```
+
+它覆盖24个错误工作簿、24份干净控制、V4/V4.3对照、规则头与学习头、候选覆盖、标签隔离，以及Markdown/CSV/XLSX证据导出。该结果只用于工程验收。
+
+## V5-Core 大型实验（由用户运行）
+
+必须按顺序执行；Codex检查上一阶段结果后才进入下一阶段：
+
+```bat
+run_v5_core_pilot.cmd --workers 24
+run_v5_core_development.cmd --workers 24
+run_v5_core_validation_lock.cmd --workers 24
+run_v5_core_validation_score.cmd
+run_v5_core_freeze.cmd
+run_v5_core_performance.cmd --workers 24
+run_v5_core_blind_lock.cmd --workers 24
+run_v5_core_blind_score.cmd
+```
+
+预测阶段与评分阶段物理分离；锁定预测完成前，评分脚本不得读取验证标签。冻结前的开发和内部验证结果不能作为第三方独立结论。
 
 V4.1-PCG（历史代码名V5）的62项单元、协议和真实性测试，以及单错误表、单干净表工程smoke均由Codex运行；用户不需要重复执行。
 

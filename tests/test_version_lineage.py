@@ -22,7 +22,8 @@ class VersionLineageTests(unittest.TestCase):
         self.assertEqual(VERSION_ALIASES["v4.1"]["legacy_id"], "v5-pcg-r1")
         self.assertEqual(VERSION_ALIASES["v4.2"]["legacy_id"], "v5.2-b")
         self.assertEqual(VERSION_ALIASES["v4.3"]["legacy_id"], "v6-semantic-r1")
-        self.assertEqual(VERSION_ALIASES["v5"]["status"], "reserved")
+        self.assertEqual(VERSION_ALIASES["v5"]["status"], "development")
+        self.assertEqual(VERSION_ALIASES["v5"]["canonical_id"], "v5-core-dev-r1")
         self.assertEqual(v4_1_default_parameters()["model_version"], "v4.1-pcg-r1")
         self.assertEqual(v4_3_default_parameters("b")["model_version"], "v4.3-semantic-b")
 

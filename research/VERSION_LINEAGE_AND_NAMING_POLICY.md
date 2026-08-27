@@ -21,7 +21,7 @@
 | FormulaGuard V4.1-PCG | legacy V5 / `v5-pcg-r1` | 模式—反事实直接重排 | Enron安全回归下降，否决 |
 | FormulaGuard V4.2-Review-B | legacy V5.2-B / `v5.2-b` | 不干扰V4 Top-5的第六复核位 | 冻结辅助模块 |
 | FormulaGuard V4.3-Semantic | legacy V6 / `v6-semantic-r1` | FFC/BSS语义候选与单格受限重排 | 机制有效，未通过主模型冻结门槛 |
-| FormulaGuard V5-Core | 无历史对应 | 候选中心、多证据责任的核心重构 | 预留，尚未实现 |
+| FormulaGuard V5-Core | `formulaguard_v5_core_*` | 候选中心、多证据责任的核心重构 | 开发中，尚未冻结 |
 
 V4.3的A/B/C只是同一机制实验的预登记变体，不再写成三个模型版本。
 
@@ -80,4 +80,5 @@ formulaguard_v6_b     -> V4.3-Semantic-B的历史别名
 4. 不依靠固定“插入第3/第5名”覆盖V4结果；
 5. 使用全新开发和锁定验证数据，旧85例与V4.3内部360例只作回顾性诊断。
 
-只有达到以上条件，论文才将其称为FormulaGuard V5。
+当前`formulaguard/v5_core.py`已经满足以上架构边界，但只有通过全新锁定验证并
+完成冻结，论文才将它作为正式主模型；开发失败时仍保留V4为主模型。
