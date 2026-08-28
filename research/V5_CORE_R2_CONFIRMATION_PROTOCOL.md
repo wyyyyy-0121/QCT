@@ -51,6 +51,7 @@ labels_csv_sha256
 exceptions_csv_sha256
 design_ledger_csv_sha256
 provenance_csv_sha256
+declaration_json_sha256
 ```
 
 `PUBLIC.zip` contains only:
@@ -68,12 +69,31 @@ labels.csv
 exceptions.csv
 design_ledger.csv
 provenance.csv
+originals/*.xlsx
+third_party_declaration.json
 ```
 
 The secret `labels.csv` has one row per public identifier.  Required fields
 are `instance_id,case_kind,challenge_stratum`.  Error rows also provide
 `source_cells`; clean rows leave it empty.  Traditional errors provide
 `error_type`; repair-evaluable rows may provide `correct_formula`.
+
+The independent preparer can validate and package an already-created dataset
+without running FormulaGuard by using:
+
+```bat
+run_v5_core_r2_prepare_third_party.cmd --input D:\outside\raw --output D:\outside\pack
+```
+
+Both directories must stay outside the repository.  This tool does not
+generate cases or call a localization method.  It verifies event-table grain,
+original/mutant formula agreement, single injection except declared ambiguous
+events, silent numeric behavior, downstream propagation, workbook uniqueness,
+translation-invariant formula-pair separation from development, permissions,
+anonymization, and the real/manual construction floors before writing hashes.
+It also rejects an exact match to development in either a source-relative
+correct-to-mutant transformation or the combined graph/formula signature.  Its
+output directory must be empty and may not overlap the raw input directory.
 
 ## Lock order
 

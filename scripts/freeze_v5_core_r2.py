@@ -104,6 +104,7 @@ def main() -> None:
         ROOT / "scripts/run_v5_core_r2_pressure.py",
         ROOT / "scripts/audit_v5_core_r2_pressure.py",
         ROOT / "scripts/run_v5_core_r2_predictions.py",
+        ROOT / "scripts/prepare_v5_core_r2_confirmation_pack.py",
         ROOT / "scripts/freeze_v5_core_r2.py",
         ROOT / "scripts/lock_v5_core_r2_confirmation.py",
         ROOT / "scripts/score_v5_core_r2_confirmation.py",

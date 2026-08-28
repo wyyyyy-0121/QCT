@@ -88,6 +88,8 @@ def main() -> None:
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     precommit = json.loads(args.precommit.read_text(encoding="utf-8"))
+    if precommit.get("protocol") != "v5_core_r2_third_party_precommit_v1":
+        raise SystemExit("Confirmation lock refused: unknown third-party precommit protocol")
     required_counts = {"total_cases": 780, "error_cases": 600, "clean_cases": 180}
     if any(int(precommit.get(key, -1)) != value for key, value in required_counts.items()):
         raise SystemExit("Confirmation lock refused: third-party counts differ from the protocol")
@@ -97,6 +99,12 @@ def main() -> None:
         raise SystemExit("Confirmation lock refused: development-overlap audit was not certified")
     if precommit.get("independent_preparer") is not True:
         raise SystemExit("Confirmation lock refused: independent-preparer declaration is missing")
+    if precommit.get("single_injection_and_propagation_audit_passed") is not True:
+        raise SystemExit("Confirmation lock refused: data-construction audit did not pass")
+    if int(precommit.get("real_structure_cases", 0)) < 150:
+        raise SystemExit("Confirmation lock refused: fewer than 150 real-structure cases")
+    if int(precommit.get("manual_error_cases", 0)) < 120:
+        raise SystemExit("Confirmation lock refused: fewer than 120 manual/semi-manual errors")
     if precommit.get("public_zip_sha256") != sha256(args.public_zip):
         raise SystemExit("Confirmation lock refused: PUBLIC.zip differs from its pre-freeze hash")
     frozen = json.loads(args.frozen_config.read_text(encoding="utf-8"))
@@ -139,7 +147,7 @@ def main() -> None:
     commitments = parse_commitments(commitments_bytes.decode("utf-8"))
     for key in (
         "secret_zip_sha256", "labels_csv_sha256", "exceptions_csv_sha256",
-        "design_ledger_csv_sha256", "provenance_csv_sha256",
+        "design_ledger_csv_sha256", "provenance_csv_sha256", "declaration_json_sha256",
     ):
         if commitments.get(key) != precommit.get(key):
             raise SystemExit(f"Public/third-party secret commitment differs for {key}")

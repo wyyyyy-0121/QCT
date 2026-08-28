@@ -9,11 +9,18 @@ import io
 import json
 import random
 import statistics
+import sys
 import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from formulaguard.formula import normalized_formula
+from formulaguard.v5_core import build_candidate_portfolio, discover_formula_regimes
+from formulaguard.workbook import WorkbookModel
 ERROR_STRATA = {
     "traditional": 420,
     "withheld_mutation": 90,
@@ -164,7 +171,10 @@ def main() -> None:
         names = {item.filename for item in archive.infolist() if not item.is_dir()}
         if any("\\" in name or ".." in PurePosixPath(name).parts for name in names):
             raise SystemExit("SECRET.zip contains unsafe member names")
-        required = {"labels.csv", "exceptions.csv", "design_ledger.csv", "provenance.csv"}
+        required = {
+            "labels.csv", "exceptions.csv", "design_ledger.csv", "provenance.csv",
+            "third_party_declaration.json",
+        }
         if not required <= names:
             raise SystemExit(f"SECRET.zip lacks required files: {sorted(required-names)}")
         content = {name: archive.read(name) for name in required}
@@ -173,10 +183,21 @@ def main() -> None:
         "exceptions.csv": "exceptions_csv_sha256",
         "design_ledger.csv": "design_ledger_csv_sha256",
         "provenance.csv": "provenance_csv_sha256",
+        "third_party_declaration.json": "declaration_json_sha256",
     }
     for name, key in hash_keys.items():
         if hash_bytes(content[name]) != commitments.get(key):
             raise SystemExit(f"{name} differs from the precommitted hash")
+    declaration = json.loads(content["third_party_declaration.json"].decode("utf-8"))
+    required_declarations = (
+        "prepared_by_independent_person", "project_model_results_not_seen",
+        "templates_unseen_by_project", "all_valid_cases_retained",
+        "secret_labels_withheld", "development_overlap_checked",
+    )
+    if any(declaration.get(key) is not True for key in required_declarations):
+        raise SystemExit("Independent-preparer declarations are incomplete or false")
+    if not str(declaration.get("preparer_role", "")).strip():
+        raise SystemExit("Independent-preparer role is missing")
     labels = read_csv_bytes(content["labels.csv"])
     ledger = read_csv_bytes(content["design_ledger.csv"])
     provenance = read_csv_bytes(content["provenance.csv"])
@@ -210,6 +231,12 @@ def main() -> None:
         ids = [row.get("instance_id") for row in rows]
         if len(rows) != 780 or set(ids) != label_ids or len(set(ids)) != 780:
             raise SystemExit(f"{name}.csv must cover every public identifier exactly once")
+    if any(
+        not row.get("license_or_permission", "").strip()
+        or row.get("anonymized", "").lower() not in {"1", "true", "yes"}
+        for row in provenance
+    ):
+        raise SystemExit("Provenance lacks permission or anonymization confirmation")
     ledger_by_id = {row["instance_id"]: row for row in ledger}
     real_count = sum(row.get("real_structure", "").lower() in {"1", "true", "yes"} for row in ledger)
     manual_error_count = sum(
@@ -223,6 +250,44 @@ def main() -> None:
         )
 
     label_by_id = {row["instance_id"]: row for row in labels}
+    shard_by_id = {}
+    for path in shards:
+        record = json.loads(path.read_text(encoding="utf-8"))
+        shard_by_id[record["instance_id"]] = record
+    candidate_absent_checks = []
+    for label in errors:
+        if label["challenge_stratum"] != "candidate_absent":
+            continue
+        sources = parse_sources(label["source_cells"])
+        correct = label.get("correct_formula", "")
+        if len(sources) != 1 or not correct:
+            candidate_absent_checks.append(False)
+            continue
+        shard = shard_by_id[label["instance_id"]]
+        workbook = args.public_root / shard["workbook"]
+        if not workbook.is_file() or sha256(workbook) != shard.get("workbook_sha256"):
+            raise SystemExit(
+                f"Public workbook changed after prediction lock: {shard['workbook']}"
+            )
+        model = WorkbookModel.from_xlsx(workbook)
+        source_label = next(iter(sources))
+        source_sheet, source_address = source_label.rsplit("!", 1)
+        source = (source_sheet, source_address)
+        if source not in model.formulas:
+            candidate_absent_checks.append(False)
+            continue
+        try:
+            regimes = discover_formula_regimes(model)
+            portfolio = build_candidate_portfolio(
+                model, source, candidate_limit=24, regime=regimes.get(source),
+            )
+            correct_key = normalized_formula(correct)
+            candidate_absent_checks.append(all(
+                normalized_formula(candidate.formula) != correct_key for candidate in portfolio
+            ))
+        except Exception:
+            candidate_absent_checks.append(False)
+    candidate_absent_verified_rate = mean(candidate_absent_checks)
     raw_error: list[dict] = []
     raw_clean: list[dict] = []
     for shard_path in shards:
@@ -336,6 +401,7 @@ def main() -> None:
             mean(row["top5"] for row in candidate_absent["r2_source"]) + 0.05
             >= mean(row["top5"] for row in candidate_absent["v4"])
         ),
+        "candidate_absent_design_verified": candidate_absent_verified_rate == 1.0,
         "clean_false_alarm_at_most_0_10": clean_summary["r2_full"]["false_alarm_rate"] <= 0.10,
         "selective_localization_coverage_at_least_0_10": selective["localized_coverage"] >= 0.10,
         "selective_top1_risk_below_forced_top1": (
@@ -361,6 +427,7 @@ def main() -> None:
                      "mrr": mean(row["mrr"] for row in rows)}
             for method, rows in candidate_absent.items()
         },
+        "candidate_absent_verified_rate": candidate_absent_verified_rate,
         "selective_diagnosis": selective,
         "benefit_strata": benefit_strata,
         "gates": gates,

@@ -24,6 +24,9 @@ pressure = load_script("r2_pressure_runner", "scripts/run_v5_core_r2_pressure.py
 audit = load_script("r2_pressure_audit", "scripts/audit_v5_core_r2_pressure.py")
 predictions = load_script("r2_confirmation_predictions", "scripts/run_v5_core_r2_predictions.py")
 scoring = load_script("r2_confirmation_scoring", "scripts/score_v5_core_r2_confirmation.py")
+packing = load_script(
+    "r2_confirmation_packing", "scripts/prepare_v5_core_r2_confirmation_pack.py",
+)
 
 
 class R2PressureProtocolTests(unittest.TestCase):
@@ -129,6 +132,23 @@ class R2PressureProtocolTests(unittest.TestCase):
         second = scoring.bootstrap_comparison(events, "r2_full", "v4", iterations=100)
         self.assertEqual(first, second)
         self.assertGreater(first["mrr_ci95"][0], 0)
+
+    def test_third_party_packager_rejects_nonportable_and_escaping_paths(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            workbook = root / "case.xlsx"
+            workbook.write_bytes(b"placeholder")
+            self.assertEqual(packing.safe_file(root, "case.xlsx"), workbook.resolve())
+            with self.assertRaises(ValueError):
+                packing.safe_file(root, r"workbooks\case.xlsx")
+            with self.assertRaises(ValueError):
+                packing.safe_file(root, "../case.xlsx")
+
+    def test_third_party_packager_normalizes_formula_spelling(self):
+        self.assertEqual(
+            packing.canonical_formula(" =sum( 'Data'!A1 : A2 ) "),
+            "=SUM(DATA!A1:A2)",
+        )
 
 
 if __name__ == "__main__":
