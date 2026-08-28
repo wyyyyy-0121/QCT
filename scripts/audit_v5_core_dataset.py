@@ -24,13 +24,34 @@ def read_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def translation_invariant_formula_pair(
+    correct_formula: str,
+    mutant_formula: str,
+    source: str,
+) -> tuple[str, str]:
+    """Return a source-relative repair signature for cross-split leakage checks.
+
+    ``normalized_formula`` deliberately preserves A1 row and column numbers, so
+    moving an otherwise identical generated case from E24 to E82 used to evade
+    the split audit.  Formula fingerprints express relative references against
+    the source coordinate and therefore identify that translated copy as the
+    same repair mechanism.
+    """
+
+    _, address = source.rsplit("!", 1)
+    return (
+        formula_fingerprint(correct_formula, address),
+        formula_fingerprint(mutant_formula, address),
+    )
+
+
 def graph_formula_signature(model: WorkbookModel, source: str) -> str:
     graph = model.dependency_graph()
     sheet, address = source.rsplit("!", 1)
     cell = (sheet, address)
     payload = {
         "formula_count": len(model.formulas),
-        "source_formula": normalized_formula(model.formulas[cell]),
+        "source_formula": formula_fingerprint(model.formulas[cell], address),
         "source_in": len(graph.precedents.get(cell, ())),
         "source_out": len(graph.dependents.get(cell, ())),
         "descendants": len(graph.descendants(cell)),
@@ -72,7 +93,9 @@ def within_root(root: Path, relative: str) -> Path | None:
     return candidate if root.resolve() in candidate.parents else None
 
 
-def audit_root(root: Path) -> tuple[dict, set[tuple[str, str]], set[str]]:
+def audit_root(
+    root: Path,
+) -> tuple[dict, set[tuple[str, str]], set[tuple[str, str]], set[str]]:
     manifest = json.loads((root / "dataset_manifest.json").read_text(encoding="utf-8"))
     profile = manifest["profile"]
     full_expected = PROFILE_COUNTS[profile]
@@ -83,6 +106,7 @@ def audit_root(root: Path) -> tuple[dict, set[tuple[str, str]], set[str]]:
     if manifest["actual_count"] != expected:
         reasons.append(f"count {manifest['actual_count']} != {expected}")
     formula_pairs: set[tuple[str, str]] = set()
+    semantic_formula_pairs: set[tuple[str, str]] = set()
     signatures: set[str] = set()
     clean_probe_signatures: dict[str, set[str]] = {}
     if profile == "clean":
@@ -208,6 +232,11 @@ def audit_root(root: Path) -> tuple[dict, set[tuple[str, str]], set[str]]:
             if correct == mutant:
                 reasons.append(f"equivalent mutation {instance_id}")
             formula_pairs.add((correct, mutant))
+            semantic_formula_pairs.add(translation_invariant_formula_pair(
+                label["correct_formula"],
+                label["mutated_formula"],
+                label["source_cell"],
+            ))
             signature = graph_formula_signature(model, label["source_cell"])
             signatures.add(signature)
     if len(ids) != len(set(ids)):
@@ -226,7 +255,7 @@ def audit_root(root: Path) -> tuple[dict, set[tuple[str, str]], set[str]]:
         "clean_control_partition_counts": dict(partition_counts) if profile == "clean" else {},
         "hard_gate_passed": not reasons,
         "reasons": reasons[:100],
-    }, formula_pairs, signatures)
+    }, formula_pairs, semantic_formula_pairs, signatures)
 
 
 def main() -> None:
@@ -236,13 +265,15 @@ def main() -> None:
     args = parser.parse_args()
     audits = []
     split_pairs: dict[str, set[tuple[str, str]]] = {}
+    split_semantic_pairs: dict[str, set[tuple[str, str]]] = {}
     split_signatures: dict[str, set[str]] = {}
     split_templates: dict[str, set[str]] = {}
     split_seeds: dict[str, set[int]] = {}
     for root in args.roots:
-        audit, pairs, signatures = audit_root(root)
+        audit, pairs, semantic_pairs, signatures = audit_root(root)
         audits.append(audit)
         split_pairs[audit["profile"]] = pairs
+        split_semantic_pairs[audit["profile"]] = semantic_pairs
         split_signatures[audit["profile"]] = signatures
         manifest = json.loads((root / "dataset_manifest.json").read_text(encoding="utf-8"))
         cases = manifest.get("cases", [])
@@ -259,19 +290,27 @@ def main() -> None:
             if left in {"clean"} or right in {"clean"}:
                 continue
             pair_overlap = split_pairs[left] & split_pairs[right]
+            semantic_pair_overlap = split_semantic_pairs[left] & split_semantic_pairs[right]
             signature_overlap = split_signatures[left] & split_signatures[right]
             template_overlap = split_templates[left] & split_templates[right]
             seed_overlap = split_seeds[left] & split_seeds[right]
-            if pair_overlap or signature_overlap or template_overlap or seed_overlap:
+            if (
+                pair_overlap
+                or semantic_pair_overlap
+                or signature_overlap
+                or template_overlap
+                or seed_overlap
+            ):
                 leakage.append({
                     "left": left, "right": right,
                     "formula_pair_overlap": len(pair_overlap),
+                    "translation_invariant_formula_pair_overlap": len(semantic_pair_overlap),
                     "graph_formula_overlap": len(signature_overlap),
                     "template_family_overlap": len(template_overlap),
                     "seed_overlap": len(seed_overlap),
                 })
     payload = {
-        "protocol": "v5_core_dataset_audit_v1",
+        "protocol": "v5_core_dataset_audit_v2",
         "datasets": audits,
         "cross_split_passed": not leakage,
         "cross_split_leakage": leakage,

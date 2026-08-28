@@ -26,7 +26,7 @@ from scripts import (
     train_v5_core_ranker,
 )
 from scripts.score_v5_core_predictions import hash_file, verify_prediction_completion
-from scripts.audit_v5_core_dataset import audit_root
+from scripts.audit_v5_core_dataset import audit_root, translation_invariant_formula_pair
 from scripts.build_v5_core_dataset import (
     PROFILE_COUNTS,
     build_case,
@@ -135,6 +135,19 @@ class V5CoreProtocolTests(unittest.TestCase):
             for right in profiles[index + 1:]:
                     self.assertFalse(pairs[left] & pairs[right], (left, right))
 
+    def test_split_audit_detects_row_translated_formula_pair(self):
+        development = translation_invariant_formula_pair(
+            "=SUM(B24:D24)", "=SUM(B24:C24)", "Model!E24",
+        )
+        validation = translation_invariant_formula_pair(
+            "=SUM(B82:D82)", "=SUM(B82:C82)", "Model!E82",
+        )
+        different_mutation = translation_invariant_formula_pair(
+            "=SUM(B82:D82)", "=MIN(B82:D82)", "Model!E82",
+        )
+        self.assertEqual(development, validation)
+        self.assertNotEqual(development, different_mutation)
+
     def test_dataset_audit_proves_single_injection_original_and_sink_change(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "smoke"
@@ -146,7 +159,7 @@ class V5CoreProtocolTests(unittest.TestCase):
                 ],
                 stdout=subprocess.DEVNULL,
             )
-            audit, _, _ = audit_root(root)
+            audit, _, _, _ = audit_root(root)
             self.assertTrue(audit["hard_gate_passed"], audit["reasons"])
             public_row = json.loads((root / "instances.jsonl").read_text(encoding="utf-8"))
             labels_path = root / "evaluation_labels.jsonl"
@@ -159,7 +172,7 @@ class V5CoreProtocolTests(unittest.TestCase):
             self.assertIsInstance(non_neighbor, bool)
             label["correct_formula"] = "=1+1"
             labels_path.write_text(json.dumps(label) + "\n", encoding="utf-8")
-            tampered, _, _ = audit_root(root)
+            tampered, _, _, _ = audit_root(root)
             self.assertFalse(tampered["hard_gate_passed"])
             self.assertTrue(any(
                 "changed build artifact" in reason or "correct formula disagrees" in reason
