@@ -27,6 +27,9 @@ scoring = load_script("r2_confirmation_scoring", "scripts/score_v5_core_r2_confi
 packing = load_script(
     "r2_confirmation_packing", "scripts/prepare_v5_core_r2_confirmation_pack.py",
 )
+completion = load_script(
+    "r2_completion_audit", "scripts/audit_v5_core_r2_completion.py",
+)
 
 
 class R2PressureProtocolTests(unittest.TestCase):
@@ -149,6 +152,36 @@ class R2PressureProtocolTests(unittest.TestCase):
             packing.canonical_formula(" =sum( 'Data'!A1 : A2 ) "),
             "=SUM(DATA!A1:A2)",
         )
+
+    def test_completion_audit_requires_exact_development_failure_receipt(self):
+        value = {
+            "protocol": "v5_core_r2_retrospective_audit_v2",
+            "development_only": True,
+            "independent_evidence": False,
+            "errors": 480,
+            "clean": 360,
+            "workers": 24,
+            "gates": {
+                "hard_gate_passed": False,
+                "failed_gates": ["improvement_spans_at_least_four_error_types"],
+            },
+        }
+        self.assertTrue(completion.valid_development_receipt(value))
+        value["independent_evidence"] = True
+        self.assertFalse(completion.valid_development_receipt(value))
+
+    def test_completion_audit_distinguishes_pressure_receipt_from_scores(self):
+        value = {
+            "protocol": "v5_core_r2_r1_pressure_safety_decision_v1",
+            "development_only": True,
+            "independent_evidence": False,
+            "gates": {},
+            "pressure_safety_passed": True,
+            "eligible_for_new_independent_confirmation": True,
+        }
+        self.assertTrue(completion.valid_pressure_receipt(value))
+        value["independent_evidence"] = True
+        self.assertFalse(completion.valid_pressure_receipt(value))
 
 
 if __name__ == "__main__":
