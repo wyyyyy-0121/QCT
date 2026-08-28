@@ -193,6 +193,66 @@ class V5CoreR2Tests(unittest.TestCase):
         with self.assertRaises(ValueError):
             v5_core_r2_scores(model, candidate_keep_fraction=1.01)
 
+    def test_protection_profile_is_configurable_and_traceable(self):
+        results = v5_core_r2_scores(
+            propagation_family(),
+            config={"boundary_protection": False, "role_replication": False},
+        )
+        self.assertTrue(all(not row.evidence["boundary_protection"] for row in results))
+        self.assertTrue(all(not row.evidence["role_replication"] for row in results))
+        ablation = v5_core_r2_scores(propagation_family(), ablation="no_boundary_no_role")
+        self.assertTrue(all(not row.evidence["boundary_protection"] for row in ablation))
+        self.assertTrue(all(not row.evidence["role_replication"] for row in ablation))
+
+    def test_adaptive_exception_release_is_candidate_independent_and_traceable(self):
+        model = propagation_family()
+        with mock.patch.object(
+            r2_module,
+            "build_candidate_portfolio",
+            side_effect=AssertionError("candidate generation entered source stage"),
+        ):
+            results = v5_core_r2_scores(
+                model,
+                stage="source",
+                config={"adaptive_exception_release": True, "exception_release_tail": 0.25},
+            )
+        self.assertTrue(all(
+            row.evidence["adaptive_exception_release"]
+            and 0.0 <= row.evidence["propagation_empirical_tail"] <= 1.0
+            for row in results
+        ))
+
+    def test_conservative_wcn_can_use_protected_global_residual(self):
+        model = propagation_family()
+        results = v5_core_r2_scores(
+            model,
+            config={
+                "adaptive_exception_release": True,
+                "wcn_variant": "rcr",
+                "wcn_protected_global_max": True,
+            },
+        )
+        self.assertTrue(all(row.evidence["wcn_protected_global_max"] for row in results))
+        self.assertEqual(
+            results[0].evidence["workbook_null_statistic"],
+            max(row.evidence["alarm_regime_conditioned_residual"] for row in results),
+        )
+
+    def test_safe_counterfactual_reorder_rejects_non_significant_treatment(self):
+        model = propagation_family()
+        source = [row.cell for row in v5_core_r2_scores(model, stage="source")]
+        with mock.patch.object(
+            r2_module,
+            "matched_placebo_evidence",
+            return_value={},
+        ):
+            results = v5_core_r2_scores(
+                model,
+                config={"safe_counterfactual_reorder": True, "uncertainty_rank_cap": 12},
+            )
+        self.assertEqual([row.cell for row in results], source)
+        self.assertTrue(all(row.evidence["safe_counterfactual_reorder"] for row in results))
+
 
 if __name__ == "__main__":
     unittest.main()

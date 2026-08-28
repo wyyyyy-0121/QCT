@@ -103,13 +103,13 @@ def serial_result(result, rank: int, *, compact: bool = False) -> dict:
     }
 
 
-def prediction_task(payload: tuple[str, str, str, str, bool]) -> str:
-    dataset_text, output_text, instance_id, workbook_rel, with_ablations = payload
+def prediction_task(payload: tuple[str, str, str, str, bool, dict]) -> str:
+    dataset_text, output_text, instance_id, workbook_rel, with_ablations, config = payload
     dataset, output = Path(dataset_text), Path(output_text)
     workbook = dataset / workbook_rel
     model = WorkbookModel.from_xlsx(workbook)
     started = time.perf_counter()
-    full = v5_core_r2_scores(model, stage="full")
+    full = v5_core_r2_scores(model, stage="full", config=config)
     source = sorted(full, key=lambda row: int(row.evidence["observational_rank"]))
     rankings = {
         "r2_source": [serial_result(item, rank) for rank, item in enumerate(source, 1)],
@@ -117,12 +117,14 @@ def prediction_task(payload: tuple[str, str, str, str, bool]) -> str:
     }
     if with_ablations:
         for method, ablation in ABLATIONS.items():
-            results = v5_core_r2_scores(model, stage="full", ablation=ablation)
+            results = v5_core_r2_scores(model, stage="full", config=config, ablation=ablation)
             rankings[method] = [
                 serial_result(item, rank, compact=True) for rank, item in enumerate(results, 1)
             ]
         for method, fraction in DROPOUTS.items():
-            results = v5_core_r2_scores(model, stage="full", candidate_keep_fraction=fraction)
+            results = v5_core_r2_scores(
+                model, stage="full", config=config, candidate_keep_fraction=fraction,
+            )
             rankings[method] = [
                 serial_result(item, rank, compact=True) for rank, item in enumerate(results, 1)
             ]
@@ -160,7 +162,7 @@ def audit_shard(path: Path, dataset: Path, row: dict, workbook_key: str, id_key:
 
 
 def prediction_receipt(*, dataset: Path, rows: list[dict], workers: int,
-                       with_ablations: bool) -> dict:
+                       with_ablations: bool, config: dict, config_path: Path | None) -> dict:
     manifest = dataset / ("instances.jsonl" if (dataset / "instances.jsonl").exists() else "clean_manifest.json")
     files = {
         "model_source": ROOT / "formulaguard/v5_core_r2.py",
@@ -168,6 +170,8 @@ def prediction_receipt(*, dataset: Path, rows: list[dict], workers: int,
         "method_spec": ROOT / "research/V5_CORE_R2_METHOD_SPEC.md",
         "public_manifest": manifest,
     }
+    if config_path:
+        files["experiment_config"] = config_path
     return {
         "protocol": "v5_core_r2_retrospective_predictions_v2",
         "development_only": True,
@@ -175,6 +179,7 @@ def prediction_receipt(*, dataset: Path, rows: list[dict], workers: int,
         "instances": len(rows),
         "workers_requested": workers,
         "ablations_included": with_ablations,
+        "model_config": config,
         "labels_read_by_prediction_workers": [],
         "git_commit": git_commit(),
         "hashes": {name: sha256(path) for name, path in files.items()},
@@ -182,7 +187,8 @@ def prediction_receipt(*, dataset: Path, rows: list[dict], workers: int,
 
 
 def run_group(dataset: Path, output: Path, rows: list[dict], *, workbook_key: str,
-              id_key: str, workers: int, resume: bool, with_ablations: bool) -> None:
+              id_key: str, workers: int, resume: bool, with_ablations: bool,
+              config: dict, config_path: Path | None) -> None:
     output.mkdir(parents=True, exist_ok=True)
     (output / "shards").mkdir(parents=True, exist_ok=True)
     expected_methods = ERROR_METHODS if with_ablations else BASE_METHODS
@@ -194,7 +200,9 @@ def run_group(dataset: Path, output: Path, rows: list[dict], *, workbook_key: st
             continue
         if shard.exists():
             raise SystemExit(f"Output exists; pass --resume: {shard}")
-        pending.append((str(dataset), str(output), row[id_key], row[workbook_key], with_ablations))
+        pending.append((
+            str(dataset), str(output), row[id_key], row[workbook_key], with_ablations, config,
+        ))
     active_workers = max(1, min(workers, len(pending))) if pending else 1
     if pending:
         with concurrent.futures.ProcessPoolExecutor(max_workers=active_workers) as pool:
@@ -206,6 +214,7 @@ def run_group(dataset: Path, output: Path, rows: list[dict], *, workbook_key: st
                     workbook_key, id_key, expected_methods)
     write_json(output / "prediction_complete.json", prediction_receipt(
         dataset=dataset, rows=rows, workers=workers, with_ablations=with_ablations,
+        config=config, config_path=config_path,
     ))
 
 
@@ -300,26 +309,31 @@ def summarize_clean_group(output: Path, rows: list[dict]) -> dict:
     return summary
 
 
-def _top_evidence(path: Path) -> dict:
-    record = json.loads(path.read_text(encoding="utf-8"))
-    return record["rankings"]["r2_full"][0]["evidence"]
-
-
 def cross_workbook_null_summary(error_output: Path, error_rows: list[dict],
-                                clean_output: Path, clean_rows: list[dict]) -> dict:
+                                clean_output: Path, clean_rows: list[dict], *,
+                                protected_global_max: bool = False) -> dict:
     """Evaluate and select the three preregistered workbook-null statistics."""
-    def features(path: Path) -> tuple[float, float, float]:
-        evidence = _top_evidence(path)
-        return (float(evidence["regime_conditioned_residual"]),
-                float(evidence["observational_raw_score"]),
-                float(evidence["placebo_treatment"]))
+    def features(path: Path) -> list[tuple[float, float, float]]:
+        record = json.loads(path.read_text(encoding="utf-8"))
+        rows = record["rankings"]["r2_full"]
+        if not protected_global_max:
+            rows = rows[:1]
+        return [(
+            float(item["evidence"].get(
+                "alarm_regime_conditioned_residual" if protected_global_max
+                else "regime_conditioned_residual",
+                item["evidence"]["regime_conditioned_residual"],
+            )),
+            float(item["evidence"]["observational_raw_score"]),
+            float(item["evidence"]["placebo_treatment"]),
+        ) for item in rows]
 
     error_features = [features(error_output / "shards" / f"{row['instance_id']}.json") for row in error_rows]
     clean_features = [features(clean_output / "shards" / f"{row['clean_id']}.json") for row in clean_rows]
     variants: dict[str, dict] = {}
     for name, (config_name, formula, statistic) in WCN_VARIANTS.items():
-        clean_values = [statistic(row) for row in clean_features]
-        error_values = [statistic(row) for row in error_features]
+        clean_values = [max((statistic(row) for row in rows), default=0.0) for rows in clean_features]
+        error_values = [max((statistic(row) for row in rows), default=0.0) for rows in error_features]
         clean_tails = [
             (1 + sum(other >= value for index, other in enumerate(clean_values) if index != own))
             / max(1, len(clean_values)) for own, value in enumerate(clean_values)
@@ -342,6 +356,7 @@ def cross_workbook_null_summary(error_output: Path, error_rows: list[dict],
     ), default=None)
     return {
         "selection_rule": "FPR<=0.10; max error recall; min FPR; simplest RCR",
+        "protected_global_max": protected_global_max,
         "selected": selected,
         "selected_config_name": variants[selected]["config_name"] if selected else None,
         "ablation_no_wcn": {
@@ -432,8 +447,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", type=Path, default=Path("results/v5_core_r2_retrospective"))
     parser.add_argument("--workers", type=int, default=24)
     parser.add_argument("--error-limit", type=int)
+    parser.add_argument("--error-offset", type=int, default=0,
+                        help="Use a contiguous public-manifest slice for short regression checks")
     parser.add_argument("--clean-limit", type=int)
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--config", type=Path, help="Label-free, versioned R2 experiment configuration")
     parser.add_argument("--allow-dirty", action="store_true", help="Only for Codex short smoke tests")
     return parser.parse_args()
 
@@ -442,23 +460,36 @@ def main() -> int:
     args = parse_args()
     if args.workers < 1:
         raise SystemExit("--workers must be positive")
+    if args.error_offset < 0:
+        raise SystemExit("--error-offset must be non-negative")
     if git_dirty() and not args.allow_dirty:
         raise SystemExit("Tracked or untracked changes exist. Commit and push before the large R2 run.")
+    config = json.loads(args.config.read_text(encoding="utf-8")) if args.config else {}
+    forbidden = {"source_cell", "error_type", "correct_formula", "labels", "instance_id", "workbook_filename"}
+    if forbidden & set(config):
+        raise SystemExit("R2 configuration contains forbidden label or identity fields")
     started = time.perf_counter()
     error_rows = read_jsonl(args.errors / "instances.jsonl")
     clean_rows = json.loads((args.clean / "clean_manifest.json").read_text(encoding="utf-8"))
     if args.error_limit is not None:
-        error_rows = error_rows[:args.error_limit]
+        error_rows = error_rows[args.error_offset:args.error_offset + args.error_limit]
+    elif args.error_offset:
+        error_rows = error_rows[args.error_offset:]
     if args.clean_limit is not None:
         clean_rows = clean_rows[:args.clean_limit]
     error_output, clean_output = args.output / "errors", args.output / "clean"
     run_group(args.errors, error_output, error_rows, workbook_key="mutant_workbook",
-              id_key="instance_id", workers=args.workers, resume=args.resume, with_ablations=True)
+              id_key="instance_id", workers=args.workers, resume=args.resume, with_ablations=True,
+              config=config, config_path=args.config)
     run_group(args.clean, clean_output, clean_rows, workbook_key="workbook",
-              id_key="clean_id", workers=args.workers, resume=args.resume, with_ablations=False)
+              id_key="clean_id", workers=args.workers, resume=args.resume, with_ablations=False,
+              config=config, config_path=args.config)
     error_summary = summarize_error_group(args.errors, error_output, error_rows)
     clean_summary = summarize_clean_group(clean_output, clean_rows)
-    workbook_null = cross_workbook_null_summary(error_output, error_rows, clean_output, clean_rows)
+    workbook_null = cross_workbook_null_summary(
+        error_output, error_rows, clean_output, clean_rows,
+        protected_global_max=bool(config.get("wcn_protected_global_max", False)),
+    )
     gates = evaluate_gates(error_summary, workbook_null)
     input_hashes = {
         "error_public_manifest": sha256(args.errors / "instances.jsonl"),
@@ -468,20 +499,22 @@ def main() -> int:
         "runner_source": sha256(ROOT / "scripts/run_v5_core_r2_retrospective.py"),
         "method_spec": sha256(ROOT / "research/V5_CORE_R2_METHOD_SPEC.md"),
     }
+    if args.config:
+        input_hashes["experiment_config"] = sha256(args.config)
     selected_name = workbook_null["selected"]
     write_json(args.output / "selected_wcn.json", {
         "development_only": True, "selected": selected_name,
         "selected_config_name": workbook_null["selected_config_name"],
         "selection_rule": workbook_null["selection_rule"],
         "selected_evidence": workbook_null["variants"].get(selected_name),
-        "git_commit": git_commit(), "hashes": input_hashes,
+        "git_commit": git_commit(), "hashes": input_hashes, "model_config": config,
     })
     write_tables(args.output, error_summary, workbook_null)
     audit = {
         "protocol": "v5_core_r2_retrospective_audit_v2", "development_only": True,
         "independent_evidence": False, "errors": len(error_rows), "clean": len(clean_rows),
         "workers": args.workers, "wall_seconds": time.perf_counter() - started,
-        "git_commit": git_commit(), "hashes": input_hashes,
+        "git_commit": git_commit(), "hashes": input_hashes, "model_config": config,
         "error_metrics": error_summary["metrics"], "clean_metrics": clean_summary,
         "cross_workbook_null": workbook_null, "gates": gates,
         "next_use": "mechanism diagnosis and bounded tuning only",

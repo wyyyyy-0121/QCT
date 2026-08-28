@@ -78,6 +78,9 @@ class ObservationalEvidence:
     descendant_count: int
     complexity: tuple[str, int, int]
     matched_controls: tuple[CellKey, ...] = ()
+    propagation_empirical_tail: float = 1.0
+    exception_release: bool = False
+    alarm_regime_conditioned_residual: float = 0.0
 
 
 @dataclass
@@ -108,6 +111,13 @@ def v5_core_r2_default_parameters() -> dict[str, object]:
         "clean_null_tail": DEFAULT_CLEAN_NULL_TAIL,
         "wcn_variant": "rcr_observational",
         "ancestor_weight": 0.75,
+        "boundary_protection": True,
+        "role_replication": True,
+        "adaptive_exception_release": False,
+        "exception_release_tail": 0.25,
+        "wcn_protected_global_max": False,
+        "safe_counterfactual_reorder": False,
+        "uncertainty_rank_cap": None,
         "candidate_independent_source_ranking": True,
         "counterfactual_scope": "observational_uncertainty_set_only",
     }
@@ -387,10 +397,14 @@ def observational_source_evidence(
     use_boundary_protection: bool = True,
     use_role_replication: bool = True,
     ancestor_weight: float = 0.75,
+    adaptive_exception_release: bool = False,
+    exception_release_tail: float = 0.25,
 ) -> tuple[dict[CellKey, ObservationalEvidence], dict[CellKey, RegimeEvidence]]:
     """Build candidate-independent source evidence and matched empirical tails."""
     if not 0.0 <= ancestor_weight <= 1.0:
         raise ValueError("ancestor_weight must be between 0 and 1")
+    if not 0.0 <= exception_release_tail <= 1.0:
+        raise ValueError("exception_release_tail must be between 0 and 1")
     cache = getattr(model, "_fg_v5_core_r2_observation_cache", None)
     cache_key = (
         matched_controls,
@@ -398,12 +412,14 @@ def observational_source_evidence(
         use_boundary_protection,
         use_role_replication,
         round(float(ancestor_weight), 8),
+        adaptive_exception_release,
+        round(float(exception_release_tail), 8),
     )
     if cache is not None and cache_key in cache:
         return cache[cache_key]
     regimes = discover_formula_regimes(model)
     formula = formula_anomaly_scores(model)
-    regime_residual = (
+    protected_residual = (
         _regime_conditioned_residuals(
             model,
             use_boundary_protection=use_boundary_protection,
@@ -411,49 +427,80 @@ def observational_source_evidence(
         )
         if use_rcr else dict(formula)
     )
+    unprotected_residual = (
+        _regime_conditioned_residuals(
+            model,
+            use_boundary_protection=False,
+            use_role_replication=False,
+        )
+        if use_rcr and adaptive_exception_release else protected_residual
+    )
     behavior = behavior_anomaly_scores(model)
     graph_residual = graph_anomaly_scores(model)
     graph = model.dependency_graph()
     formula_cells = set(model.formula_cells)
-    structural_signal = {
-        cell: _clamp(0.80 * regime_residual.get(cell, 0.0) + 0.20 * formula.get(cell, 0.0))
-        for cell in model.formula_cells
-    }
-    node_signal = {
-        cell: max(structural_signal[cell], behavior.get(cell, 0.0), graph_residual.get(cell, 0.0))
-        for cell in model.formula_cells
-    }
-    provisional: dict[CellKey, ObservationalEvidence] = {}
-    for cell in model.formula_cells:
-        signals = sorted((
-            float(structural_signal[cell]),
-            float(behavior.get(cell, 0.0)),
-            float(graph_residual.get(cell, 0.0)),
-        ), reverse=True)
-        potential, coverage, spread, descendants = _propagation_potential(
-            graph, cell, behavior, formula_cells,
-        )
-        ancestor = _ancestor_penalty(graph, cell, node_signal)
-        raw = _clamp(
-            (0.55 * signals[0] + 0.20 * signals[1] + 0.25 * potential)
-            * (1.0 - ancestor_weight * ancestor)
-        )
-        provisional[cell] = ObservationalEvidence(
-            cell=cell,
-            raw_score=raw,
-            empirical_tail=1.0,
-            formula_residual=float(formula.get(cell, 0.0)),
-            regime_conditioned_residual=float(regime_residual.get(cell, 0.0)),
-            behavior_residual=float(behavior.get(cell, 0.0)),
-            graph_residual=float(graph_residual.get(cell, 0.0)),
-            propagation_potential=potential,
-            descendant_anomaly_coverage=coverage,
-            branch_spread=spread,
-            ancestor_penalty=ancestor,
-            indegree=len(graph.precedents.get(cell, ())),
-            outdegree=len(graph.dependents.get(cell, ())),
-            descendant_count=descendants,
-            complexity=_formula_complexity(model.formulas[cell]),
+    def build_provisional(residuals: Mapping[CellKey, float], *, releases: Mapping[CellKey, bool] | None = None,
+                          propagation_tails: Mapping[CellKey, float] | None = None) -> dict[CellKey, ObservationalEvidence]:
+        structural_signal = {
+            cell: _clamp(0.80 * residuals.get(cell, 0.0) + 0.20 * formula.get(cell, 0.0))
+            for cell in model.formula_cells
+        }
+        node_signal = {
+            cell: max(structural_signal[cell], behavior.get(cell, 0.0), graph_residual.get(cell, 0.0))
+            for cell in model.formula_cells
+        }
+        rows: dict[CellKey, ObservationalEvidence] = {}
+        for cell in model.formula_cells:
+            signals = sorted((
+                float(structural_signal[cell]),
+                float(behavior.get(cell, 0.0)),
+                float(graph_residual.get(cell, 0.0)),
+            ), reverse=True)
+            potential, coverage, spread, descendants = _propagation_potential(
+                graph, cell, behavior, formula_cells,
+            )
+            ancestor = _ancestor_penalty(graph, cell, node_signal)
+            raw = _clamp(
+                (0.55 * signals[0] + 0.20 * signals[1] + 0.25 * potential)
+                * (1.0 - ancestor_weight * ancestor)
+            )
+            rows[cell] = ObservationalEvidence(
+                cell=cell, raw_score=raw, empirical_tail=1.0,
+                formula_residual=float(formula.get(cell, 0.0)),
+                regime_conditioned_residual=float(residuals.get(cell, 0.0)),
+                behavior_residual=float(behavior.get(cell, 0.0)),
+                graph_residual=float(graph_residual.get(cell, 0.0)),
+                propagation_potential=potential, descendant_anomaly_coverage=coverage,
+                branch_spread=spread, ancestor_penalty=ancestor,
+                indegree=len(graph.precedents.get(cell, ())),
+                outdegree=len(graph.dependents.get(cell, ())),
+                descendant_count=descendants, complexity=_formula_complexity(model.formulas[cell]),
+                propagation_empirical_tail=(propagation_tails or {}).get(cell, 1.0),
+                exception_release=(releases or {}).get(cell, False),
+                alarm_regime_conditioned_residual=float(protected_residual.get(cell, 0.0)),
+            )
+        return rows
+
+    provisional = build_provisional(protected_residual)
+    if adaptive_exception_release:
+        propagation_tails: dict[CellKey, float] = {}
+        releases: dict[CellKey, bool] = {}
+        for cell, row in provisional.items():
+            controls = _matched_cells(cell, provisional, regimes, matched_controls)
+            tail = (1 + sum(
+                provisional[item].propagation_potential >= row.propagation_potential for item in controls
+            )) / (1 + len(controls))
+            propagation_tails[cell] = tail
+            releases[cell] = (
+                unprotected_residual.get(cell, 0.0) > protected_residual.get(cell, 0.0)
+                and tail <= exception_release_tail
+            )
+        effective_residual = {
+            cell: unprotected_residual[cell] if releases[cell] else protected_residual[cell]
+            for cell in model.formula_cells
+        }
+        provisional = build_provisional(
+            effective_residual, releases=releases, propagation_tails=propagation_tails,
         )
     completed: dict[CellKey, ObservationalEvidence] = {}
     for cell, row in provisional.items():
@@ -484,6 +531,7 @@ def observational_uncertainty_set(
     evidence: Mapping[CellKey, ObservationalEvidence],
     *,
     limit: int = DEFAULT_UNCERTAINTY_LIMIT,
+    rank_cap: int | None = None,
 ) -> list[CellKey]:
     if not ranking or limit <= 0:
         return []
@@ -493,8 +541,9 @@ def observational_uncertainty_set(
     band = max(0.05, 1.4826 * mad)
     best = evidence[ranking[0]]
     tail_limit = max(0.25, best.empirical_tail + 0.10)
+    considered = list(ranking if rank_cap is None else ranking[:max(1, rank_cap)])
     selected = [
-        cell for cell in ranking
+        cell for cell in considered
         if evidence[cell].empirical_tail <= tail_limit
         and evidence[cell].raw_score >= best.raw_score - band
     ]
@@ -666,6 +715,10 @@ def _rerank_uncertainty(
     uncertainty: Sequence[CellKey],
     placebo: Mapping[CellKey, PlaceboEvidence],
     observations: Mapping[CellKey, ObservationalEvidence],
+    *,
+    safe_counterfactual_reorder: bool = False,
+    minimum_treatment: float = DEFAULT_MIN_TREATMENT,
+    counterfactual_tail: float = DEFAULT_CF_TAIL,
 ) -> list[CellKey]:
     uncertain = set(uncertainty)
     slots = [index for index, cell in enumerate(observational) if cell in uncertain]
@@ -676,6 +729,18 @@ def _rerank_uncertainty(
         -observations[cell].raw_score,
         observational.index(cell),
     ))
+    if safe_counterfactual_reorder:
+        eligible = [
+            cell for cell in ordered
+            if placebo.get(cell, PlaceboEvidence(cell)).candidate_coverage
+            and placebo.get(cell, PlaceboEvidence(cell)).treatment >= minimum_treatment
+            and placebo.get(cell, PlaceboEvidence(cell)).empirical_tail <= counterfactual_tail
+        ]
+        if not eligible:
+            return list(observational)
+        ineligible = [cell for cell in uncertainty if cell not in set(eligible)]
+        ineligible.sort(key=observational.index)
+        ordered = eligible + ineligible
     result = list(observational)
     for slot, cell in zip(slots, ordered):
         result[slot] = cell
@@ -732,15 +797,20 @@ def _workbook_null_statistic(
     placebo: Mapping[CellKey, PlaceboEvidence],
     *,
     variant: str,
+    use_alarm_residual: bool = False,
 ) -> float:
     row = observations[cell]
+    residual = (
+        row.alarm_regime_conditioned_residual
+        if use_alarm_residual else row.regime_conditioned_residual
+    )
     if variant == "rcr":
-        return _clamp(row.regime_conditioned_residual)
+        return _clamp(residual)
     if variant == "rcr_observational":
-        return _clamp(0.80 * row.regime_conditioned_residual + 0.20 * row.raw_score)
+        return _clamp(0.80 * residual + 0.20 * row.raw_score)
     if variant == "rcr_directional":
         directional = placebo.get(cell, PlaceboEvidence(cell)).treatment
-        return _clamp(0.70 * row.regime_conditioned_residual + 0.30 * directional)
+        return _clamp(0.70 * residual + 0.30 * directional)
     raise ValueError(f"Unknown WCN variant: {variant}")
 
 
@@ -777,27 +847,44 @@ def v5_core_r2_scores(
         "additive_dcf",
         "no_placebo",
         "unrestricted_rerank",
+        "no_boundary_no_role",
     }
     if ablation not in allowed_ablations:
         raise ValueError(f"Unknown V5-Core R2 ablation: {ablation}")
     if not 0.0 <= candidate_keep_fraction <= 1.0:
         raise ValueError("candidate_keep_fraction must be between 0 and 1")
     parameters = {**v5_core_r2_default_parameters(), **dict(config or {})}
+    if parameters.get("uncertainty_rank_cap") is not None and int(parameters["uncertainty_rank_cap"]) < 1:
+        raise ValueError("uncertainty_rank_cap must be positive or null")
+    use_boundary_protection = bool(parameters.get("boundary_protection", True))
+    use_role_replication = bool(parameters.get("role_replication", True))
+    if ablation in {"no_boundary", "no_boundary_no_role"}:
+        use_boundary_protection = False
+    if ablation in {"no_role_replication", "no_boundary_no_role"}:
+        use_role_replication = False
     started = time.perf_counter()
     observations, regimes = observational_source_evidence(
         model,
         matched_controls=matched_controls,
         use_rcr=ablation != "no_rcr",
-        use_boundary_protection=ablation != "no_boundary",
-        use_role_replication=ablation != "no_role_replication",
+        use_boundary_protection=use_boundary_protection,
+        use_role_replication=use_role_replication,
         ancestor_weight=(
             0.0 if ablation == "no_ancestor"
             else float(parameters.get("ancestor_weight", 0.75))
         ),
+        adaptive_exception_release=bool(parameters.get("adaptive_exception_release", False)),
+        exception_release_tail=float(parameters.get("exception_release_tail", 0.25)),
     )
     source_ranking = observational_ranking(observations)
     uncertainty = observational_uncertainty_set(
-        source_ranking, observations, limit=uncertainty_limit,
+        source_ranking,
+        observations,
+        limit=uncertainty_limit,
+        rank_cap=(
+            int(parameters["uncertainty_rank_cap"])
+            if parameters.get("uncertainty_rank_cap") is not None else None
+        ),
     )
     intervention_cells = uncertainty
     if ablation == "unrestricted_rerank":
@@ -821,14 +908,31 @@ def v5_core_r2_scores(
             with_placebo=ablation != "no_placebo",
         )
     ranking = (
-        _rerank_uncertainty(source_ranking, intervention_cells, placebo, observations)
+        _rerank_uncertainty(
+            source_ranking,
+            intervention_cells,
+            placebo,
+            observations,
+            safe_counterfactual_reorder=bool(parameters.get("safe_counterfactual_reorder", False)),
+            minimum_treatment=float(parameters["minimum_treatment"]),
+            counterfactual_tail=float(parameters["counterfactual_tail"]),
+        )
         if stage == "full" else list(source_ranking)
     )
     wcn_variant = str(parameters.get("wcn_variant", "rcr_observational"))
+    wcn_protected_global_max = bool(parameters.get("wcn_protected_global_max", False))
     workbook_statistic = (
-        _workbook_null_statistic(
-            ranking[0], observations, placebo, variant=wcn_variant,
-        ) if ranking else 0.0
+        max(
+            _workbook_null_statistic(
+                cell, observations, placebo, variant=wcn_variant,
+                use_alarm_residual=wcn_protected_global_max,
+            )
+            for cell in ranking
+        ) if wcn_protected_global_max and ranking else (
+            _workbook_null_statistic(
+                ranking[0], observations, placebo, variant=wcn_variant,
+            ) if ranking else 0.0
+        )
     )
     clean_null_scores = [float(item) for item in parameters.get("clean_null_scores", [])]
     cross_workbook_tail = (
@@ -857,7 +961,7 @@ def v5_core_r2_scores(
         cf = placebo.get(cell)
         best = cf.best if cf else None
         evidence = {
-            "model_version": MODEL_VERSION,
+            "model_version": str(parameters["model_version"]),
             "architecture": "dual_null_causal_attribution",
             "stage": stage,
             "rank": rank,
@@ -865,12 +969,15 @@ def v5_core_r2_scores(
             "diagnostic_status": status,
             "workbook_null_statistic": workbook_statistic,
             "wcn_variant": wcn_variant,
+            "wcn_protected_global_max": wcn_protected_global_max,
             "cross_workbook_clean_tail": cross_workbook_tail if cross_workbook_tail is not None else -1.0,
             "clean_null_calibrated": bool(clean_null_scores),
             "candidate_independent_source_ranking": True,
             "in_uncertainty_set": cell in uncertainty_set,
             "in_intervention_set": cell in intervention_set,
             "uncertainty_set_size": len(uncertainty),
+            "uncertainty_rank_cap": parameters.get("uncertainty_rank_cap"),
+            "safe_counterfactual_reorder": bool(parameters.get("safe_counterfactual_reorder", False)),
             "observational_raw_score": obs.raw_score,
             "observational_empirical_tail": obs.empirical_tail,
             "observational_controls": [f"{s}!{a}" for s, a in obs.matched_controls],
@@ -905,6 +1012,13 @@ def v5_core_r2_scores(
             "propagation_path": list(best.propagation_path) if best else [],
             "localization_seconds": elapsed,
             "ablation": ablation or "full",
+            "boundary_protection": use_boundary_protection,
+            "role_replication": use_role_replication,
+            "adaptive_exception_release": bool(parameters.get("adaptive_exception_release", False)),
+            "exception_release_tail": float(parameters.get("exception_release_tail", 0.25)),
+            "propagation_empirical_tail": obs.propagation_empirical_tail,
+            "exception_release": obs.exception_release,
+            "alarm_regime_conditioned_residual": obs.alarm_regime_conditioned_residual,
         }
         results.append(LocalizationResult(
             cell=cell,

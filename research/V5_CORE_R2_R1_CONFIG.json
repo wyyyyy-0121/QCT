@@ -1,0 +1,12 @@
+{
+  "model_version": "v5-core-r2-r1-acr",
+  "architecture": "dual_null_causal_attribution_with_adaptive_exception_release",
+  "boundary_protection": true,
+  "role_replication": true,
+  "adaptive_exception_release": true,
+  "exception_release_tail": 0.25,
+  "safe_counterfactual_reorder": true,
+  "uncertainty_rank_cap": 12,
+  "wcn_variant": "rcr",
+  "wcn_protected_global_max": true
+}
