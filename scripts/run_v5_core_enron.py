@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.localize import v4_scores
+from formulaguard.formula import parse_formula
+from formulaguard.localize import LocalizationResult, v4_scores
 from formulaguard.v5_core import v5_core_scores
 from formulaguard.workbook import WorkbookModel
 
@@ -38,16 +39,60 @@ def parse_sources(text: str) -> set[tuple[str, str]]:
     return result
 
 
+def compatible_v5_core_scores(model: WorkbookModel, *, head: str, config: dict):
+    """Run V5-Core on its declared syntax subset without dropping formulas.
+
+    The historical Enron corpus contains external-workbook links, named ranges,
+    array formulas, and functions outside the bounded FormulaGuard parser.  The
+    frozen V5-Core model is intentionally not changed after its development
+    predictions.  For this retrospective adapter, unsupported formulas retain
+    their cached workbook values, receive no repair evidence, and remain at the
+    end of the complete ranking.  Every parser-supported formula still follows
+    the exact V5-Core code path used by the controlled experiments.
+    """
+    supported = {}
+    unsupported = []
+    for cell, formula in model.formulas.items():
+        try:
+            parse_formula(formula)
+        except Exception:
+            unsupported.append(cell)
+        else:
+            supported[cell] = formula
+    compatible_model = WorkbookModel(model.cells, supported, source=model.source)
+    ranked = v5_core_scores(compatible_model, head=head, config=config) if supported else []
+    for cell in sorted(unsupported):
+        ranked.append(LocalizationResult(
+            cell=cell,
+            score=0.0,
+            candidate_formula=None,
+            evidence={
+                "model_version": "v5-core-dev-r2",
+                "head": head,
+                "regime_type": "unsupported_external_syntax",
+                "candidate_formula": "",
+                "candidate_portfolio_size": 0,
+                "evidence_tier": "unsupported_no_candidate",
+                "compatibility_adapter": "enron_cached_value_and_complete_ranking",
+            },
+        ))
+    return ranked, tuple(sorted(unsupported))
+
+
 def task(payload):
     root_text, relative, rule_config, learned_config, shard_text = payload
     root, shard = Path(root_text), Path(shard_text)
     path = root / relative
     model = WorkbookModel.from_xlsx(path)
     rankings = {}
+    rule_values, unsupported = compatible_v5_core_scores(model, head="rule", config=rule_config)
+    learned_values, learned_unsupported = compatible_v5_core_scores(model, head="learned", config=learned_config)
+    if unsupported != learned_unsupported:
+        raise RuntimeError("Rule and learned compatibility subsets differ")
     methods = (
         ("v4", v4_scores(model, candidate_limit=15)),
-        ("v5_rule", v5_core_scores(model, head="rule", config=rule_config)),
-        ("v5_learned", v5_core_scores(model, head="learned", config=learned_config)),
+        ("v5_rule", rule_values),
+        ("v5_learned", learned_values),
     )
     for method, values in methods:
         rankings[method] = [
@@ -58,6 +103,8 @@ def task(payload):
         "workbook": relative,
         "sha256": sha256(path),
         "formula_count": len(model.formulas),
+        "unsupported_formula_count": len(unsupported),
+        "unsupported_formula_cells": [f"{sheet}!{address}" for sheet, address in unsupported],
         "rankings": rankings,
     }
     temporary = shard.with_suffix(".json.tmp")
@@ -95,6 +142,22 @@ def main() -> None:
         "workers_requested": args.workers,
         "retrospective_only": True,
     }
+    compatibility_policy = {
+        "protocol": "v5_core_enron_unsupported_formula_adapter_v1",
+        "policy": "cached_value_no_candidate_complete_ranking_tail",
+        "v5_core_source_sha256": sha256(ROOT / "formulaguard/v5_core.py"),
+        "adapter_source_sha256": sha256(Path(__file__)),
+        "changes_v5_core_source": False,
+        "retrospective_only": True,
+    }
+    policy_path = args.output / "compatibility_policy.json"
+    if policy_path.exists():
+        if json.loads(policy_path.read_text(encoding="utf-8")) != compatibility_policy:
+            raise SystemExit("Enron resume refused: compatibility policy changed")
+    else:
+        policy_path.write_text(
+            json.dumps(compatibility_policy, ensure_ascii=False, indent=2), encoding="utf-8",
+        )
     metadata_path = args.output / "enron_metadata.json"
     if metadata_path.exists():
         if json.loads(metadata_path.read_text(encoding="utf-8")) != metadata:
@@ -147,6 +210,13 @@ def main() -> None:
     payload = {
         "retrospective_only": True,
         "summary": summary,
+        "unsupported_formula_policy": compatibility_policy["policy"],
+        "unsupported_formula_count": sum(
+            int(record.get("unsupported_formula_count", 0)) for record in records.values()
+        ),
+        "workbooks_with_unsupported_formulas": sum(
+            bool(record.get("unsupported_formula_count", 0)) for record in records.values()
+        ),
         "rule_mrr_not_below_v4_by_more_than_001": summary["v5_rule"]["mrr"] + 0.01 >= summary["v4"]["mrr"],
         "learned_mrr_not_below_v4_by_more_than_001": summary["v5_learned"]["mrr"] + 0.01 >= summary["v4"]["mrr"],
     }

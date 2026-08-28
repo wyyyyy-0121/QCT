@@ -53,6 +53,25 @@ class V5CoreProtocolTests(unittest.TestCase):
         )
         self.assertEqual(set(Counter(case.regime for case in cases).values()), {90})
 
+    def test_enron_adapter_preserves_unsupported_formulas_without_candidate_evidence(self):
+        from scripts.run_v5_core_enron import compatible_v5_core_scores
+
+        model = WorkbookModel.from_cells(
+            {("S", "A1"): 2, ("S", "A2"): 3, ("S", "B1"): 7},
+            {
+                ("S", "B1"): "=[1]Report!$AZ$66",
+                ("S", "B2"): "=A2*2",
+            },
+        )
+        for head in ("rule", "learned"):
+            ranking, unsupported = compatible_v5_core_scores(model, head=head, config={})
+            self.assertEqual({row.cell for row in ranking}, set(model.formula_cells))
+            self.assertEqual(unsupported, (("S", "B1"),))
+            external = next(row for row in ranking if row.cell == ("S", "B1"))
+            self.assertEqual(external.score, 0.0)
+            self.assertIsNone(external.candidate_formula)
+            self.assertEqual(external.evidence["evidence_tier"], "unsupported_no_candidate")
+
     def test_project_builder_refuses_to_create_its_own_independent_final_set(self):
         source = inspect.getsource(__import__(
             "scripts.build_v5_core_dataset", fromlist=["main"],
