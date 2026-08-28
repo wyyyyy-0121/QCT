@@ -22,6 +22,8 @@ def load_script(name: str, relative: str):
 
 pressure = load_script("r2_pressure_runner", "scripts/run_v5_core_r2_pressure.py")
 audit = load_script("r2_pressure_audit", "scripts/audit_v5_core_r2_pressure.py")
+predictions = load_script("r2_confirmation_predictions", "scripts/run_v5_core_r2_predictions.py")
+scoring = load_script("r2_confirmation_scoring", "scripts/score_v5_core_r2_confirmation.py")
 
 
 class R2PressureProtocolTests(unittest.TestCase):
@@ -91,6 +93,42 @@ class R2PressureProtocolTests(unittest.TestCase):
         self.assertFalse(receipt["pressure_safety_passed"])
         self.assertFalse(receipt["eligible_for_new_independent_confirmation"])
         self.assertFalse(receipt["gates"]["enron_r2_full_mrr_not_below_v4_by_more_than_0_01"])
+
+    def test_confirmation_public_manifest_rejects_label_columns(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "manifest.csv"
+            path.write_text(
+                "instance_id,workbook,source_cell\ncase_1,workbooks/one.xlsx,S!A1\n",
+                encoding="utf-8",
+            )
+            with self.assertRaises(SystemExit):
+                predictions.read_manifest(path)
+
+    def test_confirmation_unsupported_formula_remains_in_complete_ranking(self):
+        values = predictions.append_unsupported([], (("Sheet", "A1"),), method="r2_full")
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].cell_label, "Sheet!A1")
+        self.assertEqual(values[0].evidence["diagnostic_status"], "unsupported_coverage")
+
+    def test_confirmation_cell_normalization_handles_multi_source_events(self):
+        self.assertEqual(
+            scoring.parse_sources("'Sheet One'!$a$1;Sheet2!b3"),
+            {"Sheet One!A1", "Sheet2!B3"},
+        )
+
+    def test_confirmation_bootstrap_is_deterministic(self):
+        def row(method: str, value: float, stratum: str) -> dict:
+            return {"method": method, "mrr": value, "top5": int(value >= 1),
+                    "analysis_stratum": stratum}
+
+        events = {
+            "one": {"r2_full": row("r2_full", 1.0, "a"), "v4": row("v4", 0.5, "a")},
+            "two": {"r2_full": row("r2_full", 0.5, "b"), "v4": row("v4", 0.25, "b")},
+        }
+        first = scoring.bootstrap_comparison(events, "r2_full", "v4", iterations=100)
+        second = scoring.bootstrap_comparison(events, "r2_full", "v4", iterations=100)
+        self.assertEqual(first, second)
+        self.assertGreater(first["mrr_ci95"][0], 0)
 
 
 if __name__ == "__main__":

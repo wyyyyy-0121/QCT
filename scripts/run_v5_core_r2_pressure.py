@@ -19,6 +19,7 @@ import csv
 import hashlib
 import json
 import os
+import shutil
 import statistics
 import subprocess
 import sys
@@ -132,8 +133,19 @@ def read_rows(path: Path) -> list[dict[str, str]]:
 
 
 def git_commit() -> str:
+    bundled = (
+        Path.home()
+        / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
+    )
+    executable = shutil.which("git") or (str(bundled) if bundled.is_file() else None)
+    if executable is None:
+        return "unavailable"
     completed = subprocess.run(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False,
+        [executable, "rev-parse", "HEAD"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
     )
     return completed.stdout.strip() if completed.returncode == 0 else "unavailable"
 
