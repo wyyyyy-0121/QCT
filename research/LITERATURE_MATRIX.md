@@ -16,6 +16,10 @@
 | L10 | FLAME, 2023 | 大规模公式语料 | 预训练模型生成电子表格公式 | 作为学习式修复背景，不作为CPU主算法 |
 | L11 | FoRepBench, 2025 | 表格上下文、错误/正确公式、用户意图 | 上下文公式修复基准 | 仅作候选修复补充，错误多为显式运行时错误 |
 | L12 | Yang et al., SEDMR, IST 2026 | 输入扰动与蜕变关系 | 七类蜕变关系检测电子表格错误 | 实现 behavior/SEDMR-like 信号；FormulaGuard输出源错误排名 |
+| L13 | CUSTODES, ICSE 2016 | 无输出真值 | AST/依赖强特征与布局/样式弱特征的两阶段聚类和气味检测 | 聚类与离群检测不作为原创；R2增加匹配观测空模型和安慰剂干预 |
+| L14 | CACheck, ICSE 2017 | 无输出真值/程序分析 | 以程序分析检查聚合公式的一致性 | 聚合范围一致性是相关静态检查，不等同传播源因果归因 |
+| L15 | Metallaxis-FL, STVR 2013 | 通过/失败测试 | 以变异体杀死信息定位程序语句 | 证明变异式故障定位一般概念已有；R2不使用测试真值并构造匹配安慰剂空模型 |
+| L16 | Causality-Guided Adaptive Interventional Debugging, 2020 | 多次失败/通过执行 | 对运行谓词做自适应因果干预和群组测试 | 因果干预调试不是首创；R2研究单工作簿、无输出真值的公式源归因 |
 
 ## B. 数据与实验方法
 
@@ -45,6 +49,9 @@
 14. Spreadsheet corpora comparison. https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-comparison/
 15. ExceLint source code. https://github.com/ExceLint/ExceLint
 16. SpreadsheetBench. https://spreadsheetbench.github.io/
+17. J. Li et al. CUSTODES: Automatic Spreadsheet Cell Clustering and Smell Detection. ICSE 2016. https://sqlab-sustech.github.io/files/paper/ICSE2016.pdf
+18. Metallaxis-FL: Mutation-Based Fault Localization. Software Testing, Verification and Reliability. https://orbilu.uni.lu/bitstream/10993/15363/1/10.1002-stvr.1509.pdf
+19. Causality-Guided Adaptive Interventional Debugging. 2020. https://arxiv.org/abs/2003.09539
 
 ## D. 引用纪律
 
