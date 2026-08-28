@@ -11,7 +11,12 @@ from pathlib import Path
 from formulaguard.a1 import parse_address
 from formulaguard.formula import formula_fingerprint, normalized_formula
 from formulaguard.workbook import WorkbookModel
-from scripts import freeze_v5_core, run_v5_core_predictions, run_v5_core_stage
+from scripts import (
+    analyze_v5_core_enron_failure,
+    freeze_v5_core,
+    run_v5_core_predictions,
+    run_v5_core_stage,
+)
 from scripts import audit_v5_core_public_inputs
 from scripts import (
     audit_v5_core_validation,
@@ -33,6 +38,35 @@ from scripts.build_v5_core_dataset import (
 
 
 class V5CoreProtocolTests(unittest.TestCase):
+    def test_enron_failure_diagnostic_normalizes_sources_and_recomputes_metrics(self):
+        self.assertEqual(
+            analyze_v5_core_enron_failure.parse_sources(
+                "'Real Time'!$V$23;Sheet1!f28;Sheet1!F28"
+            ),
+            {"Real Time!V23", "Sheet1!F28"},
+        )
+        rows = [
+            {
+                "v4_top5": 1, "v4_mrr": 1.0, "v4_exam": 0.0,
+                "v5_rule_top5": 0, "v5_rule_mrr": 0.25, "v5_rule_exam": 0.2,
+                "v5_learned_top5": 1, "v5_learned_mrr": 0.5, "v5_learned_exam": 0.1,
+                "rule_minus_v4_mrr": -0.75,
+                "learned_minus_v4_mrr": -0.5,
+            },
+            {
+                "v4_top5": 0, "v4_mrr": 0.2, "v4_exam": 0.5,
+                "v5_rule_top5": 1, "v5_rule_mrr": 1.0, "v5_rule_exam": 0.0,
+                "v5_learned_top5": 0, "v5_learned_mrr": 0.1, "v5_learned_exam": 0.7,
+                "rule_minus_v4_mrr": 0.8,
+                "learned_minus_v4_mrr": -0.1,
+            },
+        ]
+        summary = analyze_v5_core_enron_failure.summarize(rows)
+        self.assertEqual(summary["events"], 2)
+        self.assertAlmostEqual(summary["v4"]["mrr"], 0.6)
+        self.assertAlmostEqual(summary["v5_rule"]["top5"], 0.5)
+        self.assertAlmostEqual(summary["rule_minus_v4_mrr"], 0.025)
+
     def test_preregistered_internal_counts_are_exact(self):
         for profile in ("smoke", "pilot", "development", "redteam", "validation", "third_party"):
             self.assertEqual(len(enumerate_cases(profile)), PROFILE_COUNTS[profile])
