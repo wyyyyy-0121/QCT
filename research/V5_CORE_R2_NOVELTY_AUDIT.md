@@ -41,6 +41,10 @@
 - Metallaxis-FL: <https://orbilu.uni.lu/bitstream/10993/15363/1/10.1002-stvr.1509.pdf>
 - Causality-Guided Adaptive Interventional Debugging: <https://arxiv.org/abs/2003.09539>
 
+可直接用于 LaTeX 的书目条目见 `research/REFERENCES_R2.bib`；逐项主张的
+引用边界见 `research/R2_RELATED_WORK_EVIDENCE.md`。这两个文件不替代原论文，
+而是防止正文把已有组件写成单独原创。
+
 ## 4. 明确不主张原创的部分
 
 1. 用依赖图表示公式传播；
@@ -84,4 +88,3 @@
 禁止：
 
 > 我们首次发明了反事实调试/变异定位/公式依赖图。
-

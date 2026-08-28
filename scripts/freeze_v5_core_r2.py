@@ -111,6 +111,8 @@ def main() -> None:
         ROOT / "scripts/run_v5_core_r2_performance.py",
         ROOT / "research/V5_CORE_R2_METHOD_SPEC.md",
         ROOT / "research/V5_CORE_R2_NOVELTY_AUDIT.md",
+        ROOT / "research/R2_RELATED_WORK_EVIDENCE.md",
+        ROOT / "research/REFERENCES_R2.bib",
         ROOT / "research/V5_CORE_R2_R1_GATE_INTERPRETATION.md",
         ROOT / "research/V5_CORE_R2_CONFIRMATION_PROTOCOL.md",
     ]
