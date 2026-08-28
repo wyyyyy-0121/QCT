@@ -108,6 +108,7 @@ def main() -> None:
         ROOT / "scripts/freeze_v5_core_r2.py",
         ROOT / "scripts/lock_v5_core_r2_confirmation.py",
         ROOT / "scripts/score_v5_core_r2_confirmation.py",
+        ROOT / "scripts/run_v5_core_r2_performance.py",
         ROOT / "research/V5_CORE_R2_METHOD_SPEC.md",
         ROOT / "research/V5_CORE_R2_NOVELTY_AUDIT.md",
         ROOT / "research/V5_CORE_R2_R1_GATE_INTERPRETATION.md",

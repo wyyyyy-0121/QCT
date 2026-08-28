@@ -95,6 +95,12 @@ It also rejects an exact match to development in either a source-relative
 correct-to-mutant transformation or the combined graph/formula signature.  Its
 output directory must be empty and may not overlap the raw input directory.
 
+After a successful immutable freeze, performance is measured separately from
+the confirmation cohort with `run_v5_core_r2_performance.cmd`.  Isolated
+latency remains serial, aggregate throughput uses 24 independent processes,
+and Python allocation peaks use a separate `tracemalloc` pass so those three
+quantities are not conflated.
+
 ## Lock order
 
 1. Pressure safety passes.

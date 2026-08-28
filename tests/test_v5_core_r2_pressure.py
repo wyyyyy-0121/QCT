@@ -30,6 +30,9 @@ packing = load_script(
 completion = load_script(
     "r2_completion_audit", "scripts/audit_v5_core_r2_completion.py",
 )
+performance = load_script(
+    "r2_performance", "scripts/run_v5_core_r2_performance.py",
+)
 
 
 class R2PressureProtocolTests(unittest.TestCase):
@@ -182,6 +185,12 @@ class R2PressureProtocolTests(unittest.TestCase):
         self.assertTrue(completion.valid_pressure_receipt(value))
         value["independent_evidence"] = True
         self.assertFalse(completion.valid_pressure_receipt(value))
+
+    def test_r2_performance_sizes_and_percentile_are_deterministic(self):
+        self.assertEqual(performance.parse_sizes("100,500,100"), (100, 500))
+        self.assertEqual(performance.percentile95([1.0, 2.0, 3.0]), 3.0)
+        with self.assertRaises(ValueError):
+            performance.parse_sizes("0")
 
 
 if __name__ == "__main__":
