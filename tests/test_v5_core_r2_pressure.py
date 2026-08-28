@@ -1,0 +1,97 @@
+from __future__ import annotations
+
+import importlib.util
+import json
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_script(name: str, relative: str):
+    spec = importlib.util.spec_from_file_location(name, ROOT / relative)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
+pressure = load_script("r2_pressure_runner", "scripts/run_v5_core_r2_pressure.py")
+audit = load_script("r2_pressure_audit", "scripts/audit_v5_core_r2_pressure.py")
+
+
+class R2PressureProtocolTests(unittest.TestCase):
+    def test_source_parser_normalizes_quotes_dollars_and_case(self):
+        self.assertEqual(
+            pressure.parse_sources("'Sheet One'!$a$1;Sheet2!b3"),
+            {("Sheet One", "A1"), ("Sheet2", "B3")},
+        )
+
+    def _pressure_payload(self, events: int, *, r2_mrr: float = 0.51) -> dict:
+        metrics = {
+            "v4": {"events": events, "top5": 0.50, "mrr": 0.50},
+            "r2_source": {"events": events, "top5": 0.55, "mrr": r2_mrr},
+            "r2_full": {"events": events, "top5": 0.55, "mrr": r2_mrr},
+        }
+        return {
+            "protocol": "v5_core_r2_revealed_retrospective_pressure_v1",
+            "retrospective_only": True,
+            "not_for_model_selection": True,
+            "events": events,
+            "summary": metrics,
+            "paired_full_vs_source": {
+                "improved_events": 0, "harmed_events": 0,
+                "unchanged_events": events, "harmed_rate": 0.0, "mean_rank_gain": 0.0,
+            },
+            "quality_checks": {
+                "unique_instance_ids": True,
+                "all_workbooks_present": True,
+                "complete_rankings": True,
+                "raw_rows": events * 3,
+            },
+        }
+
+    def _run_audit(self, *, enron_mrr: float = 0.51) -> dict:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            historical_path = root / "historical.json"
+            enron_path = root / "enron.json"
+            development_path = root / "development.json"
+            output_path = root / "audit.json"
+            historical_path.write_text(json.dumps(self._pressure_payload(100)), encoding="utf-8")
+            enron_path.write_text(json.dumps(self._pressure_payload(30, r2_mrr=enron_mrr)), encoding="utf-8")
+            development_path.write_text(json.dumps({
+                "error_metrics": {"r2_source": {"macro_top5": 0.95, "weakest_top5": 0.80}},
+                "gates": {"hard_gate_passed": False, "failed_gates": ["legacy_breadth_gate"]},
+            }), encoding="utf-8")
+            arguments = [
+                "audit_v5_core_r2_pressure.py",
+                "--historical-100", str(historical_path),
+                "--enron", str(enron_path),
+                "--development-audit", str(development_path),
+                "--output", str(output_path),
+            ]
+            with patch.object(sys, "argv", arguments):
+                audit.main()
+            return json.loads(output_path.read_text(encoding="utf-8"))
+
+    def test_audit_preserves_original_failure_but_can_allow_confirmation(self):
+        receipt = self._run_audit()
+        self.assertFalse(receipt["original_preregistered_development_gate_passed"])
+        self.assertEqual(receipt["original_failed_gates_preserved"], ["legacy_breadth_gate"])
+        self.assertTrue(receipt["pressure_safety_passed"])
+        self.assertTrue(receipt["eligible_for_new_independent_confirmation"])
+
+    def test_audit_rejects_real_corpus_mrr_regression(self):
+        receipt = self._run_audit(enron_mrr=0.40)
+        self.assertFalse(receipt["pressure_safety_passed"])
+        self.assertFalse(receipt["eligible_for_new_independent_confirmation"])
+        self.assertFalse(receipt["gates"]["enron_r2_full_mrr_not_below_v4_by_more_than_0_01"])
+
+
+if __name__ == "__main__":
+    unittest.main()

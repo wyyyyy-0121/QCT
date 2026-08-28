@@ -23,4 +23,11 @@ if errorlevel 1 exit /b %ERRORLEVEL%
   --output results\v5_core_r2_r1_pressure\enron ^
   --workers 24 ^
   --resume
+if errorlevel 1 exit /b %ERRORLEVEL%
+
+"%FG_PYTHON%" scripts\audit_v5_core_r2_pressure.py ^
+  --historical-100 results\v5_core_r2_r1_pressure\historical_100\pressure_summary.json ^
+  --enron results\v5_core_r2_r1_pressure\enron\pressure_summary.json ^
+  --development-audit results\v5_core_r2_r1_retrospective_full\r2_retrospective_audit.json ^
+  --output results\v5_core_r2_r1_pressure\pressure_safety_audit.json
 exit /b %ERRORLEVEL%

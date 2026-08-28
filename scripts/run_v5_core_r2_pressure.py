@@ -20,6 +20,7 @@ import hashlib
 import json
 import os
 import statistics
+import subprocess
 import sys
 from pathlib import Path
 
@@ -130,6 +131,13 @@ def read_rows(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def git_commit() -> str:
+    completed = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False,
+    )
+    return completed.stdout.strip() if completed.returncode == 0 else "unavailable"
+
+
 def write_csv(path: Path, rows: list[dict[str, object]], columns: list[str]) -> None:
     with path.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=columns)
@@ -167,6 +175,17 @@ def main() -> None:
         raise SystemExit("Every event must provide workbook directly or through --workbook-manifest")
     if not any("source_cells" in row or "source_cell" in row for row in events):
         raise SystemExit("Events CSV needs source_cells or source_cell")
+    instance_ids = [row["instance_id"] for row in events]
+    if len(set(instance_ids)) != len(instance_ids):
+        raise SystemExit("Events CSV contains duplicate instance_id values")
+    for row in events:
+        workbook_path = (args.root / row["workbook"]).resolve()
+        try:
+            workbook_path.relative_to(args.root.resolve())
+        except ValueError as exc:
+            raise SystemExit(f"Workbook path escapes public root: {row['workbook']}") from exc
+        if not workbook_path.is_file():
+            raise SystemExit(f"Workbook is missing: {workbook_path}")
     config = json.loads(args.config.read_text(encoding="utf-8"))
     workbooks = sorted({row["workbook"] for row in events})
     args.output.mkdir(parents=True, exist_ok=True)
@@ -183,6 +202,8 @@ def main() -> None:
         "workbook_manifest_sha256": sha256(args.workbook_manifest) if args.workbook_manifest else None,
         "config_sha256": sha256(args.config),
         "model_source_sha256": sha256(ROOT / "formulaguard" / "v5_core_r2.py"),
+        "runner_source_sha256": sha256(Path(__file__)),
+        "git_commit": git_commit(),
     }
     metadata_path = args.output / "metadata.json"
     if metadata_path.exists():
@@ -212,6 +233,15 @@ def main() -> None:
             print(f"[{index}/{len(futures)}] {future.result()}", flush=True)
 
     records = {relative: json.loads(path.read_text(encoding="utf-8")) for relative, path in shards.items()}
+    for relative, record in records.items():
+        expected_cells = int(record["formula_count"])
+        for method, ranking in record["rankings"].items():
+            cells = [str(row["cell"]) for row in ranking]
+            ranks = [int(row["rank"]) for row in ranking]
+            if len(cells) != expected_cells or len(set(cells)) != expected_cells:
+                raise SystemExit(f"Incomplete or duplicate {method} ranking: {relative}")
+            if ranks != list(range(1, expected_cells + 1)):
+                raise SystemExit(f"Non-contiguous {method} ranks: {relative}")
     raw: list[dict[str, object]] = []
     for event in events:
         record = records[event["workbook"]]
@@ -251,10 +281,28 @@ def main() -> None:
             "unchanged_events": sum(value == 0 for value in deltas),
             "mean_rank_gain": statistics.fmean(deltas),
         }
+    source_ranks = {str(row["instance_id"]): int(row["rank"]) for row in raw if row["method"] == "r2_source"}
+    full_ranks = {str(row["instance_id"]): int(row["rank"]) for row in raw if row["method"] == "r2_full"}
+    dcf_deltas = [source_ranks[key] - full_ranks[key] for key in sorted(source_ranks)]
+    paired_full_vs_source = {
+        "improved_events": sum(value > 0 for value in dcf_deltas),
+        "harmed_events": sum(value < 0 for value in dcf_deltas),
+        "unchanged_events": sum(value == 0 for value in dcf_deltas),
+        "harmed_rate": sum(value < 0 for value in dcf_deltas) / len(dcf_deltas),
+        "mean_rank_gain": statistics.fmean(dcf_deltas),
+    }
     report = {
         **metadata,
         "summary": summary,
         "paired_vs_v4": paired,
+        "paired_full_vs_source": paired_full_vs_source,
+        "quality_checks": {
+            "unique_instance_ids": len(set(instance_ids)) == len(instance_ids),
+            "all_workbooks_present": True,
+            "complete_rankings": True,
+            "methods_per_event": 3,
+            "raw_rows": len(raw),
+        },
         "r2_full_mrr_not_below_v4_by_more_than_001": summary["r2_full"]["mrr"] + 0.01 >= summary["v4"]["mrr"],
         "compatibility_policy": "parser-supported formulas use R2 unchanged; unsupported formulas append at ranking tail",
     }
