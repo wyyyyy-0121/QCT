@@ -5,12 +5,43 @@ from __future__ import annotations
 from .localize import LocalizationResult, localize as _legacy_localize
 from .v4x import v4_1_scores, v4_3_scores
 from .v5_core import v5_core_scores
+from .v5_core_r2 import v5_core_r2_scores
 from .v6 import v6_scores
 from .workbook import WorkbookModel
 
 
 def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> list[LocalizationResult]:
     normalized = method.lower().replace("-", "_")
+    if normalized in {
+        "formulaguard_v5_core_r2", "v5_core_r2", "v5_core_r2_full",
+        "v5_core_r2_source", "v5_core_r2_placebo",
+    }:
+        stage = kwargs.pop(
+            "stage",
+            "source" if normalized.endswith("_source") else (
+                "placebo" if normalized.endswith("_placebo") else "full"
+            ),
+        )
+        config = kwargs.pop("config", None)
+        candidate_limit = int(kwargs.pop("candidate_limit", 24))
+        intervention_limit = int(kwargs.pop("intervention_limit", 4))
+        matched_controls = int(kwargs.pop("matched_controls", 8))
+        uncertainty_limit = int(kwargs.pop("uncertainty_limit", 12))
+        ablation = kwargs.pop("ablation", None)
+        candidate_keep_fraction = float(kwargs.pop("candidate_keep_fraction", 1.0))
+        if kwargs:
+            raise TypeError(f"Unsupported V5-Core R2 arguments: {', '.join(sorted(kwargs))}")
+        return v5_core_r2_scores(
+            model,
+            stage=str(stage),
+            config=config,
+            candidate_limit=candidate_limit,
+            intervention_limit=intervention_limit,
+            matched_controls=matched_controls,
+            uncertainty_limit=uncertainty_limit,
+            ablation=ablation,
+            candidate_keep_fraction=candidate_keep_fraction,
+        )
     if normalized in {
         "formulaguard_v5_core", "formulaguard_v5_core_rule", "v5_core", "v5_core_rule",
         "formulaguard_v5_core_learned", "v5_core_learned",
@@ -75,5 +106,5 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
 
 __all__ = [
     "LocalizationResult", "localize", "v4_1_scores", "v4_3_scores",
-    "v5_core_scores", "v6_scores",
+    "v5_core_scores", "v5_core_r2_scores", "v6_scores",
 ]

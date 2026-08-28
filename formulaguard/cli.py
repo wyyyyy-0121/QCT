@@ -37,6 +37,10 @@ def main(argv=None):
         "formulaguard_v5_core", "formulaguard_v5_core_rule", "v5_core", "v5_core_rule",
         "formulaguard_v5_core_learned", "v5_core_learned",
     }
+    v5_core_r2_methods = {
+        "formulaguard_v5_core_r2", "v5_core_r2", "v5_core_r2_full",
+        "v5_core_r2_source", "v5_core_r2_placebo",
+    }
     v6_methods = {
         "v6", "formulaguard_v6", "formulaguard_v6_a",
         "formulaguard_v6_b", "formulaguard_v6_c",
@@ -45,7 +49,15 @@ def main(argv=None):
         "v4.3", "v4_3", "formulaguard_v4_3", "formulaguard_v4_3_a",
         "formulaguard_v4_3_b", "formulaguard_v4_3_c",
     }
-    if args.method.lower() in v5_core_methods:
+    if args.method.lower() in v5_core_r2_methods:
+        r2_config = json.loads(args.config.read_text(encoding="utf-8")) if args.config else None
+        results = localize(
+            model,
+            args.method,
+            config=r2_config,
+            candidate_limit=24 if args.candidate_limit == 15 else args.candidate_limit,
+        )
+    elif args.method.lower() in v5_core_methods:
         # The historical --config format is passed through for V5-Core.  V5
         # chooses its own candidate default unless the user explicitly changed
         # the legacy CLI default.

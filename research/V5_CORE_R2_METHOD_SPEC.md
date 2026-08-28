@@ -1,6 +1,6 @@
 # FormulaGuard V5-Core R2 方法规格
 
-状态：开发前预登记草案  
+状态：阶段B回顾性大型实验前锁定规格
 方法名：Dual-Null Causal Attribution（DNCA）  
 接口名：`formulaguard_v5_core_r2`
 
@@ -28,7 +28,7 @@ R2不调用V4排名，也不以“正确修复进入候选池”为公式能够�
 
 \[
 q(v)=\left(0.55a_1(v)+0.20a_2(v)+0.25P(v)\right)
-\left(1-0.35A(v)\right),
+\left(1-0.75A(v)\right),
 \]
 
 其中 \(a_1,a_2\) 是公式、行为和局部图残差中最大及第二大值；\(P\) 是后代恢复潜势；\(A\) 是异常祖先强度。
@@ -59,11 +59,13 @@ p_{obs}(v)=\frac{1+\#\{u\in M(v):q(u)\ge q(v)\}}
 对公式 \(v\) 的最佳候选计算：
 
 \[
-T(v)=\max_c\left[\max(0,D(v,c))(1-H(v,c))
-(0.25\times G(v,c))\right],
+T(v)=\max_c\left[
+\sqrt{\operatorname{clip}(D(v,c)/0.10)\,
+\operatorname{clip}(G(v,c)/0.10)}(1-H(v,c))
+\right],
 \]
 
-其中 \(D\) 是局部净能量改善，\(H\) 是局部或全局副作用，\(G\) 是后代恢复覆盖。
+其中 \(D\) 是局部净能量改善，\(H\) 是局部或全局副作用，\(G\) 是后代恢复覆盖。几何平均要求局部改善和有向下游恢复同时存在，避免单一的“把特殊公式改得更整齐”或大型扇出节点主导统计量。
 
 安慰剂对照不是同一公式的其他修复，而是观测上匹配的公式，优先执行与最佳候选相同编辑类型的合理候选。得到：
 
@@ -128,3 +130,37 @@ template_id, instance_id, workbook_filename
 
 允许输入只有内存工作簿、候选预算、匹配对照数和已冻结配置。旧V4、V4.x及V5-Core源码与历史结果保持不变。
 
+## 9. 固定消融、候选移除与WCN选择
+
+阶段B一次性输出以下固定比较，不在看到480例结果后临时增删：
+
+1. 无RCR；
+2. 无局部边界保护；
+3. 无远距离角色复现；
+4. 无异常祖先惩罚；
+5. DCF改回加法干预；
+6. 无匹配安慰剂；
+7. 允许反事实在受限计算预算内越过观测不确定集合；
+8. 无WCN，强制对每张表给出报警；
+9. 候选池保留75%、50%和0%，分别对应移除25%、50%和100%。
+
+WCN只比较`RCR`、`0.80*RCR+0.20*O`和`0.70*RCR+0.30*DCF`。先排除留一法干净误报超过10%的方案，再依次按错误召回更高、干净误报更低和机制更简单选择；最终并列时固定选择`RCR`。
+
+## 10. 阶段B可复现输出
+
+预测进程只读取公开清单和工作簿，完整分片全部写入并通过数量、唯一性和输入SHA-256检查后，父进程才能读取`evaluation_labels.jsonl`。流水线固定生成：
+
+```text
+errors/prediction_complete.json
+clean/prediction_complete.json
+errors/retrospective_summary.json
+clean/clean_summary.json
+summary.csv
+by_error.csv
+failure_cases.csv
+wcn_summary.csv
+selected_wcn.json
+r2_retrospective_audit.json
+```
+
+完成回执与总审计记录Git提交、模型源码、运行脚本、方法规格及三个输入清单的SHA-256。大型运行要求工作区清洁；`--allow-dirty`只保留给Codex的小型工程测试，不能用于论文实验。
