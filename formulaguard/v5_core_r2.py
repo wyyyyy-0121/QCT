@@ -712,6 +712,7 @@ def observational_uncertainty_set(
     *,
     limit: int = DEFAULT_UNCERTAINTY_LIMIT,
     rank_cap: int | None = None,
+    empirical_tie_rank_cap: int = 0,
 ) -> list[CellKey]:
     if not ranking or limit <= 0:
         return []
@@ -727,6 +728,16 @@ def observational_uncertainty_set(
         if evidence[cell].empirical_tail <= tail_limit
         and evidence[cell].raw_score >= best.raw_score - band
     ]
+    if empirical_tie_rank_cap > 0:
+        tied = {
+            cell for cell in ranking[:empirical_tie_rank_cap]
+            if math.isclose(
+                evidence[cell].empirical_tail,
+                best.empirical_tail,
+                abs_tol=1e-12,
+            )
+        }
+        selected = [cell for cell in ranking if cell in set(selected) | tied]
     return selected[:limit] or [ranking[0]]
 
 
@@ -794,6 +805,27 @@ def _treatment(evidence: CandidateEvidence | None, *, mode: str = "directional")
     local_causal = _clamp(max(0.0, evidence.counterfactual_delta) / 0.10)
     downstream = _clamp(evidence.graph_recovery_evidence / 0.10)
     return math.sqrt(local_causal * downstream) * (1.0 - _clamp(harm))
+
+
+def _candidate_source_family(source: str) -> str:
+    """Collapse correlated candidate generators into independent evidence families."""
+    if source.startswith("peer_") or source in {"family_consensus", "matrix_translation"}:
+        return "peer_family"
+    if "boundary" in source:
+        return "range_boundary"
+    if "cross_sheet" in source:
+        return "cross_sheet"
+    if source == "bounded_edit":
+        return "bounded_edit"
+    return source.split("_", 1)[0]
+
+
+def _independent_candidate_support(row: PlaceboEvidence | None) -> int:
+    if row is None or row.best is None:
+        return 0
+    candidate = getattr(row.best, "candidate", None)
+    sources = getattr(candidate, "sources", ()) if candidate is not None else ()
+    return len({_candidate_source_family(str(source)) for source in sources})
 
 
 def _evaluate_cell(
@@ -947,11 +979,18 @@ def _rerank_uncertainty(
     minimum_treatment: float = DEFAULT_MIN_TREATMENT,
     counterfactual_tail: float = DEFAULT_CF_TAIL,
     protect_observational_top1: bool = False,
+    independent_support_tiebreak: bool = False,
+    release_tied_top1_with_dcf: bool = False,
+    minimum_independent_support: int = 2,
 ) -> list[CellKey]:
     uncertain = set(uncertainty)
     slots = [index for index, cell in enumerate(observational) if cell in uncertain]
+    def independent_support(cell: CellKey) -> int:
+        return _independent_candidate_support(placebo.get(cell)) if independent_support_tiebreak else 0
+
     ordered = sorted(uncertainty, key=lambda cell: (
         placebo.get(cell, PlaceboEvidence(cell)).empirical_tail,
+        -independent_support(cell),
         -placebo.get(cell, PlaceboEvidence(cell)).treatment,
         observations[cell].empirical_tail,
         -observations[cell].raw_score,
@@ -973,8 +1012,41 @@ def _rerank_uncertainty(
     for slot, cell in zip(slots, ordered):
         result[slot] = cell
     if protect_observational_top1 and result and result[0] != observational[0]:
-        result.remove(observational[0])
-        result.insert(0, observational[0])
+        challenger, leader = result[0], observational[0]
+        challenger_row = placebo.get(challenger, PlaceboEvidence(challenger))
+        leader_row = placebo.get(leader, PlaceboEvidence(leader))
+        challenger_harm = (
+            max(challenger_row.best.local_harm, challenger_row.best.global_harm)
+            if challenger_row.best else 1.0
+        )
+        challenger_eligible = (
+            challenger_row.candidate_coverage
+            and challenger_row.treatment >= minimum_treatment
+            and challenger_row.empirical_tail <= counterfactual_tail
+            and challenger_harm <= 0.05
+        )
+        leader_eligible = (
+            leader_row.candidate_coverage
+            and leader_row.treatment >= minimum_treatment
+            and leader_row.empirical_tail <= counterfactual_tail
+        )
+        release = (
+            release_tied_top1_with_dcf
+            and challenger_eligible
+            and independent_support(challenger) >= minimum_independent_support
+            and math.isclose(
+                observations[challenger].empirical_tail,
+                observations[leader].empirical_tail,
+                abs_tol=1e-12,
+            )
+            and (
+                not leader_eligible
+                or independent_support(challenger) > independent_support(leader)
+            )
+        )
+        if not release:
+            result.remove(leader)
+            result.insert(0, leader)
     return result
 
 
@@ -1211,6 +1283,7 @@ def v5_core_r2_scores(
             int(parameters["uncertainty_rank_cap"])
             if parameters.get("uncertainty_rank_cap") is not None else None
         ),
+        empirical_tie_rank_cap=int(parameters.get("empirical_tie_rank_cap", 0)),
     )
     probe = observational_probe_set(
         source_ranking,
@@ -1253,6 +1326,9 @@ def v5_core_r2_scores(
             minimum_treatment=float(parameters["minimum_treatment"]),
             counterfactual_tail=float(parameters["counterfactual_tail"]),
             protect_observational_top1=bool(parameters.get("protect_observational_top1", False)),
+            independent_support_tiebreak=bool(parameters.get("independent_support_tiebreak", False)),
+            release_tied_top1_with_dcf=bool(parameters.get("release_tied_top1_with_dcf", False)),
+            minimum_independent_support=int(parameters.get("minimum_independent_support", 2)),
         )
         if stage == "full" else list(source_ranking)
     )
@@ -1338,8 +1414,12 @@ def v5_core_r2_scores(
             "evidence_probe_minimum_treatment": float(parameters.get("evidence_probe_minimum_treatment", 0.05)),
             "evidence_probe_harm_limit": float(parameters.get("evidence_probe_harm_limit", 0.05)),
             "uncertainty_rank_cap": parameters.get("uncertainty_rank_cap"),
+            "empirical_tie_rank_cap": int(parameters.get("empirical_tie_rank_cap", 0)),
             "safe_counterfactual_reorder": bool(parameters.get("safe_counterfactual_reorder", False)),
             "protect_observational_top1": bool(parameters.get("protect_observational_top1", False)),
+            "independent_support_tiebreak": bool(parameters.get("independent_support_tiebreak", False)),
+            "release_tied_top1_with_dcf": bool(parameters.get("release_tied_top1_with_dcf", False)),
+            "minimum_independent_support": int(parameters.get("minimum_independent_support", 2)),
             "relative_ancestor_penalty": bool(parameters.get("relative_ancestor_penalty", False)),
             "ancestor_dominance_margin": float(parameters.get("ancestor_dominance_margin", 0.10)),
             "observational_primary_weight": float(parameters.get("observational_primary_weight", 0.55)),

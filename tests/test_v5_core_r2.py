@@ -267,6 +267,57 @@ class V5CoreR2Tests(unittest.TestCase):
         self.assertEqual([row.cell for row in results], source)
         self.assertTrue(all(row.evidence["safe_counterfactual_reorder"] for row in results))
 
+    def test_top1_release_requires_independent_candidate_support(self):
+        cells = [("S", "A1"), ("S", "A2"), ("S", "A3")]
+        observations = {
+            cell: ObservationalEvidence(
+                **{**self.observation(cell, formula=0.8).__dict__, "empirical_tail": 1 / 9}
+            )
+            for cell in cells
+        }
+        candidate = SimpleNamespace(sources=("boundary_consensus", "peer_up"))
+        placebo = {
+            cells[0]: PlaceboEvidence(cell=cells[0]),
+            cells[1]: PlaceboEvidence(
+                cell=cells[1], treatment=0.8, empirical_tail=1 / 9,
+                best=SimpleNamespace(
+                    local_harm=0.0, global_harm=0.0, candidate=candidate,
+                ),
+                candidate_coverage=True,
+            ),
+        }
+        ranked = r2_module._rerank_uncertainty(
+            cells, cells[:2], placebo, observations,
+            safe_counterfactual_reorder=True,
+            counterfactual_tail=0.125,
+            minimum_treatment=0.05,
+            protect_observational_top1=True,
+            independent_support_tiebreak=True,
+            release_tied_top1_with_dcf=True,
+            minimum_independent_support=2,
+        )
+        self.assertEqual(ranked[0], cells[1])
+
+        correlated = SimpleNamespace(sources=("peer_up", "peer_down"))
+        placebo[cells[1]] = PlaceboEvidence(
+            cell=cells[1], treatment=0.8, empirical_tail=1 / 9,
+            best=SimpleNamespace(
+                local_harm=0.0, global_harm=0.0, candidate=correlated,
+            ),
+            candidate_coverage=True,
+        )
+        protected = r2_module._rerank_uncertainty(
+            cells, cells[:2], placebo, observations,
+            safe_counterfactual_reorder=True,
+            counterfactual_tail=0.125,
+            minimum_treatment=0.05,
+            protect_observational_top1=True,
+            independent_support_tiebreak=True,
+            release_tied_top1_with_dcf=True,
+            minimum_independent_support=2,
+        )
+        self.assertEqual(protected[0], cells[0])
+
     def test_relative_ancestor_penalty_requires_strict_upstream_dominance(self):
         graph = SimpleNamespace(ancestors=lambda _cell: {("S", "A1")})
         signals = {("S", "A1"): 1.0, ("S", "B1"): 1.0}
@@ -329,6 +380,25 @@ class V5CoreR2Tests(unittest.TestCase):
             observational_probe_set(cells, evidence, per_signal=2, small_workbook_limit=4),
             cells,
         )
+
+    def test_uncertainty_includes_bounded_empirical_tail_equivalence_class(self):
+        cells = [("S", f"A{index}") for index in range(1, 8)]
+        evidence = {}
+        for index, cell in enumerate(cells):
+            row = self.observation(cell, formula=max(0.0, 1.0 - index / 5))
+            evidence[cell] = ObservationalEvidence(
+                **{
+                    **row.__dict__,
+                    "raw_score": 1.0 if index == 0 else 0.1,
+                    "empirical_tail": 1 / 9 if index < 5 else 2 / 9,
+                }
+            )
+        ordinary = r2_module.observational_uncertainty_set(cells, evidence, limit=12)
+        tied = r2_module.observational_uncertainty_set(
+            cells, evidence, limit=12, empirical_tie_rank_cap=5,
+        )
+        self.assertEqual(ordinary, [cells[0]])
+        self.assertEqual(tied, cells[:5])
 
     def test_probe_promotion_is_bounded_and_preserves_source_top1(self):
         cells = [("S", f"A{index}") for index in range(1, 8)]
