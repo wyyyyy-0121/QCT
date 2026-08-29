@@ -36,6 +36,22 @@ performance = load_script(
 
 
 class R2PressureProtocolTests(unittest.TestCase):
+    def test_inventory_include_flag_excludes_unavailable_events(self):
+        rows = [
+            {"instance_id": "included", "include": "1", "workbook": "workbooks/01.xlsx"},
+            {"instance_id": "label", "include": "0", "workbook": ""},
+            {"instance_id": "unavailable", "include": "0", "workbook": ""},
+        ]
+        selected, excluded = pressure.evaluation_events(rows)
+        self.assertEqual([row["instance_id"] for row in selected], ["included"])
+        self.assertEqual(excluded, 2)
+
+    def test_inventory_without_include_flag_retains_every_event(self):
+        rows = [{"instance_id": "historical", "workbook": "workbooks/01.xlsx"}]
+        selected, excluded = pressure.evaluation_events(rows)
+        self.assertEqual(selected, rows)
+        self.assertEqual(excluded, 0)
+
     def test_source_parser_normalizes_quotes_dollars_and_case(self):
         self.assertEqual(
             pressure.parse_sources("'Sheet One'!$a$1;Sheet2!b3"),

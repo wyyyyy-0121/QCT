@@ -132,6 +132,26 @@ def read_rows(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def evaluation_events(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]], int]:
+    """Return events explicitly admitted by an external inventory.
+
+    Historical revealed cohorts do not have an ``include`` field and therefore
+    retain all rows.  The Enron inventory records all 36 reported events but
+    explicitly marks four as out of scope or unavailable.  Treating those
+    exclusions as runnable events silently changes the published 30-event
+    protocol and fails before any ranking is meaningful.
+    """
+    if not rows or "include" not in rows[0]:
+        return rows, 0
+    admitted = [
+        row for row in rows
+        if str(row.get("include") or "").strip().lower() in {"1", "true", "yes"}
+    ]
+    if not admitted:
+        raise SystemExit("Events CSV has an include column but admits no evaluation events")
+    return admitted, len(rows) - len(admitted)
+
+
 def git_commit() -> str:
     bundled = (
         Path.home()
@@ -170,7 +190,8 @@ def main() -> None:
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
-    events = read_rows(args.events)
+    input_events = read_rows(args.events)
+    events, excluded_events = evaluation_events(input_events)
     required = {"instance_id"}
     missing = required - set(events[0] if events else {})
     if missing:
@@ -208,6 +229,8 @@ def main() -> None:
         "retrospective_only": True,
         "not_for_model_selection": True,
         "events": len(events),
+        "input_events": len(input_events),
+        "excluded_inventory_events": excluded_events,
         "workbooks": len(workbooks),
         "workers_requested": args.workers,
         "events_sha256": sha256(args.events),
