@@ -7,7 +7,10 @@ from formulaguard.api import localize
 import formulaguard.v5_core_r2 as r2_module
 from formulaguard.v5_core_r2 import (
     MODEL_VERSION,
+    ObservationalEvidence,
+    PlaceboEvidence,
     observational_ranking,
+    observational_probe_set,
     observational_source_evidence,
     observational_uncertainty_set,
     regime_conditioned_residuals,
@@ -31,6 +34,17 @@ def propagation_family(error_formula="=MIN(B5:D5)"):
 
 
 class V5CoreR2Tests(unittest.TestCase):
+    @staticmethod
+    def observation(cell, *, formula=0.0, regime=0.0, behavior=0.0, graph=0.0, propagation=0.0):
+        return ObservationalEvidence(
+            cell=cell, raw_score=max(formula, regime, behavior, graph, propagation),
+            empirical_tail=0.5, formula_residual=formula,
+            regime_conditioned_residual=regime, behavior_residual=behavior,
+            graph_residual=graph, propagation_potential=propagation,
+            descendant_anomaly_coverage=0.0, branch_spread=0.0, ancestor_penalty=0.0,
+            indegree=0, outdegree=0, descendant_count=0, complexity=("ref", 1, 1),
+        )
+
     def test_public_interface_has_no_label_or_identity_fields(self):
         parameters = set(inspect.signature(v5_core_r2_scores).parameters)
         forbidden = {
@@ -252,6 +266,160 @@ class V5CoreR2Tests(unittest.TestCase):
             )
         self.assertEqual([row.cell for row in results], source)
         self.assertTrue(all(row.evidence["safe_counterfactual_reorder"] for row in results))
+
+    def test_relative_ancestor_penalty_requires_strict_upstream_dominance(self):
+        graph = SimpleNamespace(ancestors=lambda _cell: {("S", "A1")})
+        signals = {("S", "A1"): 1.0, ("S", "B1"): 1.0}
+        self.assertEqual(
+            r2_module._ancestor_penalty(
+                graph, ("S", "B1"), signals, relative=True, dominance_margin=0.10,
+            ),
+            0.0,
+        )
+        signals[("S", "B1")] = 0.45
+        self.assertGreater(
+            r2_module._ancestor_penalty(
+                graph, ("S", "B1"), signals, relative=True, dominance_margin=0.10,
+            ),
+            0.0,
+        )
+
+    def test_r2_r2_context_controls_are_traceable(self):
+        results = v5_core_r2_scores(
+            propagation_family(),
+            config={
+                "relative_ancestor_penalty": True,
+                "ancestor_dominance_margin": 0.10,
+                "protect_observational_top1": True,
+                "observational_primary_weight": 0.60,
+                "observational_secondary_weight": 0.30,
+                "observational_propagation_weight": 0.10,
+            },
+        )
+        self.assertTrue(all(row.evidence["relative_ancestor_penalty"] for row in results))
+        self.assertTrue(all(row.evidence["protect_observational_top1"] for row in results))
+        self.assertTrue(all(
+            row.evidence["ancestor_dominance_margin"] == 0.10 for row in results
+        ))
+        self.assertTrue(all(row.evidence["observational_primary_weight"] == 0.60 for row in results))
+        with self.assertRaises(ValueError):
+            v5_core_r2_scores(
+                propagation_family(),
+                stage="source",
+                config={
+                    "observational_primary_weight": 0.60,
+                    "observational_secondary_weight": 0.30,
+                    "observational_propagation_weight": 0.20,
+                },
+            )
+
+    def test_evidence_probe_refuses_address_based_cutoff_ties(self):
+        cells = [("S", f"A{index}") for index in range(1, 5)]
+        evidence = {
+            cells[0]: self.observation(cells[0], formula=1.0),
+            cells[1]: self.observation(cells[1], formula=0.5),
+            cells[2]: self.observation(cells[2], formula=0.5),
+            cells[3]: self.observation(cells[3], formula=0.0),
+        }
+        self.assertEqual(
+            observational_probe_set(cells, evidence, per_signal=2),
+            [cells[0]],
+        )
+        self.assertEqual(
+            observational_probe_set(cells, evidence, per_signal=2, small_workbook_limit=4),
+            cells,
+        )
+
+    def test_probe_promotion_is_bounded_and_preserves_source_top1(self):
+        cells = [("S", f"A{index}") for index in range(1, 8)]
+        observations = {
+            cell: self.observation(cell, formula=1.0 - index / 10)
+            for index, cell in enumerate(cells)
+        }
+        probe = cells[-1]
+        placebo = {
+            probe: PlaceboEvidence(
+                cell=probe, treatment=0.8, empirical_tail=1 / 9,
+                best=SimpleNamespace(local_harm=0.0, global_harm=0.0),
+                candidate_coverage=True,
+            ),
+        }
+        promoted, selected = r2_module._promote_probe_candidate(
+            cells, [probe], placebo, observations,
+        )
+        self.assertEqual(promoted[0], cells[0])
+        self.assertEqual(promoted[4], probe)
+        self.assertEqual(selected, (probe,))
+
+    def test_rank_fusion_can_preserve_the_pre_fusion_leader(self):
+        cells = [("S", "A1"), ("S", "A2"), ("S", "A3")]
+        evidence = {
+            cells[0]: ObservationalEvidence(
+                **{**self.observation(cells[0], formula=0.0).__dict__, "empirical_tail": 0.1}
+            ),
+            cells[1]: ObservationalEvidence(
+                **{**self.observation(cells[1], formula=1.0).__dict__, "empirical_tail": 0.2}
+            ),
+            cells[2]: ObservationalEvidence(
+                **{**self.observation(cells[2], formula=0.5).__dict__, "empirical_tail": 0.3}
+            ),
+        }
+        unprotected = observational_ranking(
+            evidence, formula_rank_fusion_weight=1.0,
+            formula_rank_fusion_method="reciprocal_rank",
+        )
+        protected = observational_ranking(
+            evidence, formula_rank_fusion_weight=1.0,
+            formula_rank_fusion_method="reciprocal_rank",
+            protect_pre_fusion_top1=True,
+        )
+        self.assertEqual(unprotected[0], cells[1])
+        self.assertEqual(protected[0], cells[0])
+
+    def test_bounded_formula_probe_only_changes_two_slots(self):
+        cells = [("S", f"A{index}") for index in range(1, 7)]
+        evidence = {}
+        for index, cell in enumerate(cells):
+            row = self.observation(
+                cell,
+                formula=(0.9 if index == 4 else 0.8 if index == 5 else 0.1),
+                graph=(0.5 if index in {4, 5} else 0.0),
+            )
+            evidence[cell] = ObservationalEvidence(
+                **{**row.__dict__, "empirical_tail": 0.1 + index * 0.1}
+            )
+        ranked = observational_ranking(
+            evidence,
+            formula_rank_fusion_weight=0.7,
+            formula_rank_fusion_method="reciprocal_rank",
+            formula_rank_fusion_scope="bounded_probe",
+            formula_probe_limit=2,
+            formula_probe_start_rank=2,
+        )
+        self.assertEqual(ranked[:3], [cells[0], cells[4], cells[5]])
+        self.assertEqual([cell for cell in ranked if cell in cells[1:4]], cells[1:4])
+        unique_top = observational_ranking(
+            evidence,
+            formula_rank_fusion_weight=0.7,
+            formula_rank_fusion_method="reciprocal_rank",
+            formula_rank_fusion_scope="bounded_probe",
+            formula_probe_limit=2,
+            formula_probe_start_rank=2,
+            formula_probe_allow_unique_top1=True,
+            formula_probe_top1_margin=0.04,
+        )
+        self.assertEqual(unique_top[:3], [cells[4], cells[5], cells[0]])
+
+    def test_r2_r2_probe_configuration_is_traceable(self):
+        results = v5_core_r2_scores(
+            propagation_family(),
+            config={
+                "evidence_probe_per_signal": 2,
+                "evidence_probe_small_workbook_limit": 64,
+            },
+        )
+        self.assertTrue(all(row.evidence["in_evidence_probe_set"] for row in results))
+        self.assertTrue(all(row.evidence["evidence_probe_per_signal"] == 2 for row in results))
 
 
 if __name__ == "__main__":

@@ -37,6 +37,7 @@ ABLATIONS = {
     "ablate_additive_dcf": "additive_dcf",
     "ablate_no_placebo": "no_placebo",
     "ablate_unrestricted_rerank": "unrestricted_rerank",
+    "ablate_no_formula_probe": "no_formula_probe",
 }
 DROPOUTS = {"dropout_25": 0.75, "dropout_50": 0.50, "dropout_100": 0.0}
 ERROR_METHODS = BASE_METHODS + tuple(ABLATIONS) + tuple(DROPOUTS)

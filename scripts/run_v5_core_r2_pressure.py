@@ -96,6 +96,16 @@ def ranking_rows(values: list[LocalizationResult]) -> list[dict[str, object]]:
             "cell": item.cell_label,
             "candidate_formula": item.candidate_formula or "",
             "status": str(item.evidence.get("diagnostic_status", "")),
+            "observational_rank": item.evidence.get("observational_rank"),
+            "in_evidence_probe_set": bool(item.evidence.get("in_evidence_probe_set", False)),
+            "probe_promotion": bool(item.evidence.get("probe_promotion", False)),
+            "counterfactual_tail": item.evidence.get("counterfactual_empirical_tail"),
+            "placebo_treatment": item.evidence.get("placebo_treatment"),
+            "candidate_coverage": bool(item.evidence.get("candidate_coverage", False)),
+            "candidate_sources": item.evidence.get("candidate_sources", []),
+            "candidate_edit_kinds": item.evidence.get("candidate_edit_kinds", []),
+            "local_harm": item.evidence.get("local_harm"),
+            "global_harm": item.evidence.get("global_harm"),
         }
         for rank, item in enumerate(values, 1)
     ]
@@ -187,11 +197,26 @@ def main() -> None:
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--workers", type=int, default=24)
+    parser.add_argument(
+        "--instance-ids",
+        help="Comma-separated revealed-development ids for a bounded diagnostic subset.",
+    )
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
     input_events = read_rows(args.events)
     events, excluded_events = evaluation_events(input_events)
+    requested_ids = {
+        item.strip() for item in (args.instance_ids or "").split(",") if item.strip()
+    }
+    if requested_ids:
+        available_ids = {row.get("instance_id", "") for row in events}
+        missing_ids = requested_ids - available_ids
+        if missing_ids:
+            raise SystemExit(
+                "Requested diagnostic event ids are absent: " + ", ".join(sorted(missing_ids))
+            )
+        events = [row for row in events if row.get("instance_id") in requested_ids]
     required = {"instance_id"}
     missing = required - set(events[0] if events else {})
     if missing:
@@ -231,6 +256,7 @@ def main() -> None:
         "events": len(events),
         "input_events": len(input_events),
         "excluded_inventory_events": excluded_events,
+        "diagnostic_subset_ids": sorted(requested_ids),
         "workbooks": len(workbooks),
         "workers_requested": args.workers,
         "events_sha256": sha256(args.events),

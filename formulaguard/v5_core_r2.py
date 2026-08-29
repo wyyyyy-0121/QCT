@@ -111,12 +111,36 @@ def v5_core_r2_default_parameters() -> dict[str, object]:
         "clean_null_tail": DEFAULT_CLEAN_NULL_TAIL,
         "wcn_variant": "rcr_observational",
         "ancestor_weight": 0.75,
+        "observational_primary_weight": 0.55,
+        "observational_secondary_weight": 0.20,
+        "observational_propagation_weight": 0.25,
+        "formula_rank_fusion_weight": 0.0,
+        "formula_rank_fusion_method": "linear_percentile",
+        "formula_rank_fusion_k": 10.0,
+        "protect_pre_fusion_top1": False,
+        "formula_rank_fusion_scope": "global",
+        "formula_probe_limit": 2,
+        "formula_probe_start_rank": 2,
+        "formula_probe_minimum_residual": 0.50,
+        "formula_probe_minimum_corroboration": 0.10,
+        "formula_probe_allow_unique_top1": False,
+        "formula_probe_top1_margin": 0.04,
+        "relative_ancestor_penalty": False,
+        "ancestor_dominance_margin": 0.10,
         "boundary_protection": True,
         "role_replication": True,
         "adaptive_exception_release": False,
         "exception_release_tail": 0.25,
         "wcn_protected_global_max": False,
         "safe_counterfactual_reorder": False,
+        "protect_observational_top1": False,
+        "evidence_probe_per_signal": 0,
+        "evidence_probe_small_workbook_limit": 0,
+        "evidence_probe_promotion_rank": 5,
+        "evidence_probe_counterfactual_tail": 0.125,
+        "evidence_probe_minimum_treatment": 0.05,
+        "evidence_probe_harm_limit": 0.05,
+        "evidence_probe_max_promotions": 1,
         "uncertainty_rank_cap": None,
         "candidate_independent_source_ranking": True,
         "counterfactual_scope": "observational_uncertainty_set_only",
@@ -350,11 +374,20 @@ def _ancestor_penalty(
     graph: DependencyGraph,
     cell: CellKey,
     node_signal: Mapping[CellKey, float],
+    *,
+    relative: bool = False,
+    dominance_margin: float = 0.10,
 ) -> float:
     ancestors = graph.ancestors(cell)
     if not ancestors:
         return 0.0
-    return _clamp(max((node_signal.get(item, 0.0) for item in ancestors), default=0.0))
+    strongest = max((node_signal.get(item, 0.0) for item in ancestors), default=0.0)
+    if not relative:
+        return _clamp(strongest)
+    if not 0.0 <= dominance_margin < 1.0:
+        raise ValueError("ancestor dominance margin must be in [0, 1)")
+    current = node_signal.get(cell, 0.0)
+    return _clamp((strongest - current - dominance_margin) / (1.0 - dominance_margin))
 
 
 def _control_distance(
@@ -397,12 +430,26 @@ def observational_source_evidence(
     use_boundary_protection: bool = True,
     use_role_replication: bool = True,
     ancestor_weight: float = 0.75,
+    observational_primary_weight: float = 0.55,
+    observational_secondary_weight: float = 0.20,
+    observational_propagation_weight: float = 0.25,
+    relative_ancestor_penalty: bool = False,
+    ancestor_dominance_margin: float = 0.10,
     adaptive_exception_release: bool = False,
     exception_release_tail: float = 0.25,
 ) -> tuple[dict[CellKey, ObservationalEvidence], dict[CellKey, RegimeEvidence]]:
     """Build candidate-independent source evidence and matched empirical tails."""
     if not 0.0 <= ancestor_weight <= 1.0:
         raise ValueError("ancestor_weight must be between 0 and 1")
+    observational_weights = (
+        float(observational_primary_weight),
+        float(observational_secondary_weight),
+        float(observational_propagation_weight),
+    )
+    if any(value < 0.0 for value in observational_weights) or not math.isclose(
+        sum(observational_weights), 1.0, abs_tol=1e-9,
+    ):
+        raise ValueError("observational evidence weights must be non-negative and sum to 1")
     if not 0.0 <= exception_release_tail <= 1.0:
         raise ValueError("exception_release_tail must be between 0 and 1")
     cache = getattr(model, "_fg_v5_core_r2_observation_cache", None)
@@ -412,6 +459,9 @@ def observational_source_evidence(
         use_boundary_protection,
         use_role_replication,
         round(float(ancestor_weight), 8),
+        tuple(round(value, 8) for value in observational_weights),
+        relative_ancestor_penalty,
+        round(float(ancestor_dominance_margin), 8),
         adaptive_exception_release,
         round(float(exception_release_tail), 8),
     )
@@ -459,9 +509,19 @@ def observational_source_evidence(
             potential, coverage, spread, descendants = _propagation_potential(
                 graph, cell, behavior, formula_cells,
             )
-            ancestor = _ancestor_penalty(graph, cell, node_signal)
+            ancestor = _ancestor_penalty(
+                graph,
+                cell,
+                node_signal,
+                relative=relative_ancestor_penalty,
+                dominance_margin=ancestor_dominance_margin,
+            )
             raw = _clamp(
-                (0.55 * signals[0] + 0.20 * signals[1] + 0.25 * potential)
+                (
+                    observational_weights[0] * signals[0]
+                    + observational_weights[1] * signals[1]
+                    + observational_weights[2] * potential
+                )
                 * (1.0 - ancestor_weight * ancestor)
             )
             rows[cell] = ObservationalEvidence(
@@ -517,13 +577,133 @@ def observational_source_evidence(
     return result
 
 
-def observational_ranking(evidence: Mapping[CellKey, ObservationalEvidence]) -> list[CellKey]:
+def observational_ranking(
+    evidence: Mapping[CellKey, ObservationalEvidence],
+    *,
+    formula_rank_fusion_weight: float = 0.0,
+    formula_rank_fusion_method: str = "linear_percentile",
+    formula_rank_fusion_k: float = 10.0,
+    protect_pre_fusion_top1: bool = False,
+    formula_rank_fusion_scope: str = "global",
+    formula_probe_limit: int = 2,
+    formula_probe_start_rank: int = 2,
+    formula_probe_minimum_residual: float = 0.50,
+    formula_probe_minimum_corroboration: float = 0.10,
+    formula_probe_allow_unique_top1: bool = False,
+    formula_probe_top1_margin: float = 0.04,
+) -> list[CellKey]:
+    if not 0.0 <= formula_rank_fusion_weight <= 1.0:
+        raise ValueError("formula rank fusion weight must be between 0 and 1")
+    if formula_rank_fusion_method not in {"linear_percentile", "reciprocal_rank"}:
+        raise ValueError("unknown formula rank fusion method")
+    if formula_rank_fusion_k <= 0.0:
+        raise ValueError("formula rank fusion k must be positive")
+    if formula_rank_fusion_scope not in {"global", "bounded_probe"}:
+        raise ValueError("unknown formula rank fusion scope")
     stable = {cell: index for index, cell in enumerate(sorted(evidence))}
-    return sorted(evidence, key=lambda cell: (
+    baseline = sorted(evidence, key=lambda cell: (
         evidence[cell].empirical_tail,
         -evidence[cell].raw_score,
         stable[cell],
     ))
+    if formula_rank_fusion_weight == 0.0 or len(baseline) <= 1:
+        return baseline
+    count = len(baseline)
+    observational_rank: dict[CellKey, int] = {}
+    formula_rank: dict[CellKey, int] = {}
+    for cell in baseline:
+        row = evidence[cell]
+        obs_better = sum(
+            other.empirical_tail < row.empirical_tail
+            or (
+                math.isclose(other.empirical_tail, row.empirical_tail, abs_tol=1e-12)
+                and other.raw_score > row.raw_score
+            )
+            for other in evidence.values()
+        )
+        formula_better = sum(
+            other.formula_residual > row.formula_residual for other in evidence.values()
+        )
+        observational_rank[cell] = 1 + obs_better
+        formula_rank[cell] = 1 + formula_better
+    weight = formula_rank_fusion_weight
+    baseline_rank = {cell: index for index, cell in enumerate(baseline)}
+    if formula_rank_fusion_method == "reciprocal_rank":
+        fused = {
+            cell: (
+                (1.0 - weight) / (formula_rank_fusion_k + observational_rank[cell])
+                + weight / (formula_rank_fusion_k + formula_rank[cell])
+            )
+            for cell in baseline
+        }
+    else:
+        fused = {
+            cell: (
+                (1.0 - weight) * (1.0 - (observational_rank[cell] - 1) / (count - 1))
+                + weight * (1.0 - (formula_rank[cell] - 1) / (count - 1))
+            )
+            for cell in baseline
+        }
+    result = sorted(baseline, key=lambda cell: (
+        -fused[cell],
+        baseline_rank[cell],
+    ))
+    if formula_rank_fusion_scope == "bounded_probe":
+        if formula_probe_limit <= 0 or formula_probe_start_rank < 2:
+            return baseline
+        formula_values = sorted(
+            ((row.formula_residual, cell) for cell, row in evidence.items() if row.formula_residual > 0.0),
+            key=lambda item: -item[0],
+        )
+        selected: set[CellKey] = set()
+        if len(formula_values) <= formula_probe_limit:
+            selected.update(cell for _, cell in formula_values)
+        elif formula_values:
+            cutoff = formula_values[formula_probe_limit - 1][0]
+            above = [cell for value, cell in formula_values if value > cutoff]
+            tied = [cell for value, cell in formula_values if math.isclose(value, cutoff, abs_tol=1e-12)]
+            selected.update(above)
+            if len(above) + len(tied) <= formula_probe_limit:
+                selected.update(tied)
+        selected = {
+            cell for cell in selected
+            if evidence[cell].formula_residual >= formula_probe_minimum_residual
+            and max(
+                evidence[cell].regime_conditioned_residual,
+                evidence[cell].behavior_residual,
+                evidence[cell].graph_residual,
+                evidence[cell].propagation_potential,
+            ) >= formula_probe_minimum_corroboration
+        }
+        top_formula_margin = (
+            formula_values[0][0] - formula_values[1][0]
+            if len(formula_values) > 1 else (formula_values[0][0] if formula_values else 0.0)
+        )
+        effective_start_rank = (
+            1 if formula_probe_allow_unique_top1 and top_formula_margin >= formula_probe_top1_margin
+            else formula_probe_start_rank
+        )
+        fused_rank = {cell: index for index, cell in enumerate(result)}
+        ordered_probe = sorted(
+            (
+                cell for cell in selected
+                if effective_start_rank == 1 or cell != baseline[0]
+            ),
+            key=lambda cell: (-evidence[cell].formula_residual, fused_rank[cell]),
+        )
+        bounded = list(baseline)
+        for offset, cell in enumerate(ordered_probe[:formula_probe_limit]):
+            target = min(effective_start_rank - 1 + offset, len(bounded) - 1)
+            current = bounded.index(cell)
+            if current <= target:
+                continue
+            bounded.remove(cell)
+            bounded.insert(target, cell)
+        return bounded
+    if protect_pre_fusion_top1 and result[0] != baseline[0]:
+        result.remove(baseline[0])
+        result.insert(0, baseline[0])
+    return result
 
 
 def observational_uncertainty_set(
@@ -548,6 +728,53 @@ def observational_uncertainty_set(
         and evidence[cell].raw_score >= best.raw_score - band
     ]
     return selected[:limit] or [ranking[0]]
+
+
+_PROBE_COMPONENTS = (
+    "formula_residual",
+    "regime_conditioned_residual",
+    "behavior_residual",
+    "graph_residual",
+    "propagation_potential",
+)
+
+
+def observational_probe_set(
+    ranking: Sequence[CellKey],
+    evidence: Mapping[CellKey, ObservationalEvidence],
+    *,
+    per_signal: int = 0,
+    small_workbook_limit: int = 0,
+) -> list[CellKey]:
+    """Select a bounded candidate-independent intervention probe set.
+
+    The selector never sees repair candidates or labels.  At a cutoff tie it
+    refuses to choose by cell address: only values strictly above the tied
+    boundary are retained.  Small workbooks may be exhaustively probed because
+    that is a compute-budget decision rather than an anomaly ranking decision.
+    """
+    if not ranking or per_signal <= 0:
+        return []
+    if small_workbook_limit > 0 and len(ranking) <= small_workbook_limit:
+        return list(ranking)
+    selected: set[CellKey] = set()
+    for component in _PROBE_COMPONENTS:
+        values = [
+            (float(getattr(evidence[cell], component)), cell)
+            for cell in ranking
+            if float(getattr(evidence[cell], component)) > 0.0
+        ]
+        values.sort(key=lambda item: -item[0])
+        if len(values) <= per_signal:
+            selected.update(cell for _, cell in values)
+            continue
+        cutoff = values[per_signal - 1][0]
+        above = [cell for value, cell in values if value > cutoff]
+        tied = [cell for value, cell in values if math.isclose(value, cutoff, abs_tol=1e-12)]
+        selected.update(above)
+        if len(above) + len(tied) <= per_signal:
+            selected.update(tied)
+    return [cell for cell in ranking if cell in selected]
 
 
 def _treatment(evidence: CandidateEvidence | None, *, mode: str = "directional") -> float:
@@ -719,6 +946,7 @@ def _rerank_uncertainty(
     safe_counterfactual_reorder: bool = False,
     minimum_treatment: float = DEFAULT_MIN_TREATMENT,
     counterfactual_tail: float = DEFAULT_CF_TAIL,
+    protect_observational_top1: bool = False,
 ) -> list[CellKey]:
     uncertain = set(uncertainty)
     slots = [index for index, cell in enumerate(observational) if cell in uncertain]
@@ -744,7 +972,79 @@ def _rerank_uncertainty(
     result = list(observational)
     for slot, cell in zip(slots, ordered):
         result[slot] = cell
+    if protect_observational_top1 and result and result[0] != observational[0]:
+        result.remove(observational[0])
+        result.insert(0, observational[0])
     return result
+
+
+def _promote_probe_candidate(
+    ranking: Sequence[CellKey],
+    probe_cells: Sequence[CellKey],
+    placebo: Mapping[CellKey, PlaceboEvidence],
+    observations: Mapping[CellKey, ObservationalEvidence],
+    *,
+    promotion_rank: int = 5,
+    counterfactual_tail: float = 0.125,
+    minimum_treatment: float = 0.05,
+    harm_limit: float = 0.05,
+    max_promotions: int = 1,
+) -> tuple[list[CellKey], tuple[CellKey, ...]]:
+    """Promote at most a few independently probed cells under strict DCF gates."""
+    if promotion_rank < 2:
+        raise ValueError("probe promotion rank must be at least 2")
+    if max_promotions <= 0 or not ranking:
+        return list(ranking), ()
+
+    def harm(cell: CellKey) -> float:
+        row = placebo.get(cell)
+        return max(row.best.local_harm, row.best.global_harm) if row and row.best else 1.0
+
+    eligible = [
+        cell for cell in probe_cells
+        if cell in placebo
+        and placebo[cell].candidate_coverage
+        and placebo[cell].treatment >= minimum_treatment
+        and placebo[cell].empirical_tail <= counterfactual_tail
+        and harm(cell) <= harm_limit
+        and ranking.index(cell) + 1 > promotion_rank
+    ]
+    eligible.sort(key=lambda cell: (
+        placebo[cell].empirical_tail,
+        -placebo[cell].treatment,
+        harm(cell),
+        observations[cell].empirical_tail,
+        -observations[cell].raw_score,
+        ranking.index(cell),
+    ))
+    if len(eligible) > 1:
+        first, second = eligible[:2]
+        first_signature = (
+            placebo[first].empirical_tail,
+            placebo[first].treatment,
+            harm(first),
+            observations[first].empirical_tail,
+            observations[first].raw_score,
+        )
+        second_signature = (
+            placebo[second].empirical_tail,
+            placebo[second].treatment,
+            harm(second),
+            observations[second].empirical_tail,
+            observations[second].raw_score,
+        )
+        if all(math.isclose(a, b, abs_tol=1e-12) for a, b in zip(first_signature, second_signature)):
+            return list(ranking), ()
+
+    result = list(ranking)
+    promoted: list[CellKey] = []
+    for cell in eligible[:max_promotions]:
+        if cell not in result or result.index(cell) + 1 <= promotion_rank:
+            continue
+        result.remove(cell)
+        result.insert(min(promotion_rank - 1, len(result)), cell)
+        promoted.append(cell)
+    return result, tuple(promoted)
 
 
 def _diagnostic_status(
@@ -848,6 +1148,7 @@ def v5_core_r2_scores(
         "no_placebo",
         "unrestricted_rerank",
         "no_boundary_no_role",
+        "no_formula_probe",
     }
     if ablation not in allowed_ablations:
         raise ValueError(f"Unknown V5-Core R2 ablation: {ablation}")
@@ -856,6 +1157,10 @@ def v5_core_r2_scores(
     parameters = {**v5_core_r2_default_parameters(), **dict(config or {})}
     if parameters.get("uncertainty_rank_cap") is not None and int(parameters["uncertainty_rank_cap"]) < 1:
         raise ValueError("uncertainty_rank_cap must be positive or null")
+    if int(parameters.get("evidence_probe_per_signal", 0)) < 0:
+        raise ValueError("evidence probe per signal must be non-negative")
+    if int(parameters.get("evidence_probe_small_workbook_limit", 0)) < 0:
+        raise ValueError("evidence probe small workbook limit must be non-negative")
     use_boundary_protection = bool(parameters.get("boundary_protection", True))
     use_role_replication = bool(parameters.get("role_replication", True))
     if ablation in {"no_boundary", "no_boundary_no_role"}:
@@ -873,10 +1178,31 @@ def v5_core_r2_scores(
             0.0 if ablation == "no_ancestor"
             else float(parameters.get("ancestor_weight", 0.75))
         ),
+        observational_primary_weight=float(parameters.get("observational_primary_weight", 0.55)),
+        observational_secondary_weight=float(parameters.get("observational_secondary_weight", 0.20)),
+        observational_propagation_weight=float(parameters.get("observational_propagation_weight", 0.25)),
+        relative_ancestor_penalty=bool(parameters.get("relative_ancestor_penalty", False)),
+        ancestor_dominance_margin=float(parameters.get("ancestor_dominance_margin", 0.10)),
         adaptive_exception_release=bool(parameters.get("adaptive_exception_release", False)),
         exception_release_tail=float(parameters.get("exception_release_tail", 0.25)),
     )
-    source_ranking = observational_ranking(observations)
+    source_ranking = observational_ranking(
+        observations,
+        formula_rank_fusion_weight=(
+            0.0 if ablation == "no_formula_probe"
+            else float(parameters.get("formula_rank_fusion_weight", 0.0))
+        ),
+        formula_rank_fusion_method=str(parameters.get("formula_rank_fusion_method", "linear_percentile")),
+        formula_rank_fusion_k=float(parameters.get("formula_rank_fusion_k", 10.0)),
+        protect_pre_fusion_top1=bool(parameters.get("protect_pre_fusion_top1", False)),
+        formula_rank_fusion_scope=str(parameters.get("formula_rank_fusion_scope", "global")),
+        formula_probe_limit=int(parameters.get("formula_probe_limit", 2)),
+        formula_probe_start_rank=int(parameters.get("formula_probe_start_rank", 2)),
+        formula_probe_minimum_residual=float(parameters.get("formula_probe_minimum_residual", 0.50)),
+        formula_probe_minimum_corroboration=float(parameters.get("formula_probe_minimum_corroboration", 0.10)),
+        formula_probe_allow_unique_top1=bool(parameters.get("formula_probe_allow_unique_top1", False)),
+        formula_probe_top1_margin=float(parameters.get("formula_probe_top1_margin", 0.04)),
+    )
     uncertainty = observational_uncertainty_set(
         source_ranking,
         observations,
@@ -886,13 +1212,23 @@ def v5_core_r2_scores(
             if parameters.get("uncertainty_rank_cap") is not None else None
         ),
     )
-    intervention_cells = uncertainty
+    probe = observational_probe_set(
+        source_ranking,
+        observations,
+        per_signal=int(parameters.get("evidence_probe_per_signal", 0)),
+        small_workbook_limit=int(parameters.get("evidence_probe_small_workbook_limit", 0)),
+    )
+    uncertainty_set = set(uncertainty)
+    probe_only = [cell for cell in probe if cell not in uncertainty_set]
+    intervention_cells = list(uncertainty) + probe_only
+    rerank_cells = list(uncertainty)
     if ablation == "unrestricted_rerank":
         # Budget-matched unsafe comparison: counterfactual evidence may act
         # outside the statistical uncertainty band, but is still capped so
         # the ablation remains computationally comparable.
         expanded = min(len(source_ranking), max(24, uncertainty_limit * 2))
         intervention_cells = list(source_ranking[:expanded])
+        rerank_cells = list(intervention_cells)
     placebo: dict[CellKey, PlaceboEvidence] = {}
     if stage in {"placebo", "full"} and intervention_cells:
         placebo = matched_placebo_evidence(
@@ -910,15 +1246,29 @@ def v5_core_r2_scores(
     ranking = (
         _rerank_uncertainty(
             source_ranking,
-            intervention_cells,
+            rerank_cells,
             placebo,
             observations,
             safe_counterfactual_reorder=bool(parameters.get("safe_counterfactual_reorder", False)),
             minimum_treatment=float(parameters["minimum_treatment"]),
             counterfactual_tail=float(parameters["counterfactual_tail"]),
+            protect_observational_top1=bool(parameters.get("protect_observational_top1", False)),
         )
         if stage == "full" else list(source_ranking)
     )
+    promoted_probe_cells: tuple[CellKey, ...] = ()
+    if stage == "full" and probe_only and ablation != "unrestricted_rerank":
+        ranking, promoted_probe_cells = _promote_probe_candidate(
+            ranking,
+            probe_only,
+            placebo,
+            observations,
+            promotion_rank=int(parameters.get("evidence_probe_promotion_rank", 5)),
+            counterfactual_tail=float(parameters.get("evidence_probe_counterfactual_tail", 0.125)),
+            minimum_treatment=float(parameters.get("evidence_probe_minimum_treatment", 0.05)),
+            harm_limit=float(parameters.get("evidence_probe_harm_limit", 0.05)),
+            max_promotions=int(parameters.get("evidence_probe_max_promotions", 1)),
+        )
     wcn_variant = str(parameters.get("wcn_variant", "rcr_observational"))
     wcn_protected_global_max = bool(parameters.get("wcn_protected_global_max", False))
     workbook_statistic = (
@@ -951,8 +1301,9 @@ def v5_core_r2_scores(
         clean_null_tail=float(parameters["clean_null_tail"]),
     )
     source_rank = {cell: index for index, cell in enumerate(source_ranking, 1)}
-    uncertainty_set = set(uncertainty)
     intervention_set = set(intervention_cells)
+    probe_set = set(probe)
+    promoted_probe_set = set(promoted_probe_cells)
     elapsed = time.perf_counter() - started
     total = max(1, len(ranking))
     results: list[LocalizationResult] = []
@@ -974,10 +1325,35 @@ def v5_core_r2_scores(
             "clean_null_calibrated": bool(clean_null_scores),
             "candidate_independent_source_ranking": True,
             "in_uncertainty_set": cell in uncertainty_set,
+            "in_evidence_probe_set": cell in probe_set,
+            "probe_promotion": cell in promoted_probe_set,
             "in_intervention_set": cell in intervention_set,
             "uncertainty_set_size": len(uncertainty),
+            "evidence_probe_set_size": len(probe),
+            "evidence_probe_only_size": len(probe_only),
+            "evidence_probe_per_signal": int(parameters.get("evidence_probe_per_signal", 0)),
+            "evidence_probe_small_workbook_limit": int(parameters.get("evidence_probe_small_workbook_limit", 0)),
+            "evidence_probe_promotion_rank": int(parameters.get("evidence_probe_promotion_rank", 5)),
+            "evidence_probe_counterfactual_tail": float(parameters.get("evidence_probe_counterfactual_tail", 0.125)),
+            "evidence_probe_minimum_treatment": float(parameters.get("evidence_probe_minimum_treatment", 0.05)),
+            "evidence_probe_harm_limit": float(parameters.get("evidence_probe_harm_limit", 0.05)),
             "uncertainty_rank_cap": parameters.get("uncertainty_rank_cap"),
             "safe_counterfactual_reorder": bool(parameters.get("safe_counterfactual_reorder", False)),
+            "protect_observational_top1": bool(parameters.get("protect_observational_top1", False)),
+            "relative_ancestor_penalty": bool(parameters.get("relative_ancestor_penalty", False)),
+            "ancestor_dominance_margin": float(parameters.get("ancestor_dominance_margin", 0.10)),
+            "observational_primary_weight": float(parameters.get("observational_primary_weight", 0.55)),
+            "observational_secondary_weight": float(parameters.get("observational_secondary_weight", 0.20)),
+            "observational_propagation_weight": float(parameters.get("observational_propagation_weight", 0.25)),
+            "formula_rank_fusion_weight": float(parameters.get("formula_rank_fusion_weight", 0.0)),
+            "formula_rank_fusion_method": str(parameters.get("formula_rank_fusion_method", "linear_percentile")),
+            "formula_rank_fusion_k": float(parameters.get("formula_rank_fusion_k", 10.0)),
+            "protect_pre_fusion_top1": bool(parameters.get("protect_pre_fusion_top1", False)),
+            "formula_rank_fusion_scope": str(parameters.get("formula_rank_fusion_scope", "global")),
+            "formula_probe_limit": int(parameters.get("formula_probe_limit", 2)),
+            "formula_probe_start_rank": int(parameters.get("formula_probe_start_rank", 2)),
+            "formula_probe_allow_unique_top1": bool(parameters.get("formula_probe_allow_unique_top1", False)),
+            "formula_probe_top1_margin": float(parameters.get("formula_probe_top1_margin", 0.04)),
             "observational_raw_score": obs.raw_score,
             "observational_empirical_tail": obs.empirical_tail,
             "observational_controls": [f"{s}!{a}" for s, a in obs.matched_controls],
@@ -1035,6 +1411,7 @@ __all__ = [
     "PlaceboEvidence",
     "matched_placebo_evidence",
     "observational_ranking",
+    "observational_probe_set",
     "observational_source_evidence",
     "observational_uncertainty_set",
     "v5_core_r2_default_parameters",

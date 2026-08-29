@@ -33,9 +33,27 @@ completion = load_script(
 performance = load_script(
     "r2_performance", "scripts/run_v5_core_r2_performance.py",
 )
+failure_diagnosis = load_script(
+    "r2_pressure_failure_diagnosis", "scripts/analyze_v5_core_r2_pressure_failures.py",
+)
+weight_calibration = load_script(
+    "r2_weight_calibration", "scripts/calibrate_v5_core_r2_context_weights.py",
+)
 
 
 class R2PressureProtocolTests(unittest.TestCase):
+    def test_weight_calibration_keeps_template_family_in_one_fold(self):
+        first = weight_calibration.fold_for("family-a", 5)
+        self.assertEqual(first, weight_calibration.fold_for("family-a", 5))
+        self.assertIn(first, range(5))
+        self.assertEqual(weight_calibration.normalize_cell("'Sheet One'!$a$1"), "Sheet One!A1")
+
+    def test_pressure_failure_diagnosis_source_parser_is_normalized(self):
+        self.assertEqual(
+            failure_diagnosis.parse_sources("'Sheet One'!$a$1;S!b2"),
+            {("Sheet One", "A1"), ("S", "B2")},
+        )
+
     def test_inventory_include_flag_excludes_unavailable_events(self):
         rows = [
             {"instance_id": "included", "include": "1", "workbook": "workbooks/01.xlsx"},
