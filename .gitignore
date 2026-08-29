@@ -6,9 +6,10 @@ __pycache__/
 htmlcov/
 .venv/
 venv/
+*.egg-info/
 
 # Node dependencies supplied by the local Codex runtime
-node_modules/
+node_modules
 npm-debug.log*
 
 # Generated benchmarks and experiment outputs

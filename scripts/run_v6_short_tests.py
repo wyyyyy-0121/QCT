@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -41,7 +42,22 @@ def git_commit() -> str:
 
 
 def main():
-    tests_code, tests_output = run_stream(["cmd.exe", "/d", "/c", "run_tests.cmd"])
+    test_command = (
+        ["cmd.exe", "/d", "/c", "run_tests.cmd"]
+        if os.name == "nt"
+        else [
+            sys.executable,
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_*.py",
+            "-v",
+        ]
+    )
+    tests_code, tests_output = run_stream(test_command)
     match = re.search(r"Ran\s+(\d+)\s+tests?", tests_output)
     tests_count = int(match.group(1)) if match else 0
     smoke_code = -1

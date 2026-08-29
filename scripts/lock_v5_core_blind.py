@@ -6,6 +6,7 @@ import argparse
 import csv
 import hashlib
 import json
+import shutil
 import subprocess
 import sys
 import zipfile
@@ -32,7 +33,7 @@ def archive_member_sha256(archive: zipfile.ZipFile, name: str) -> str:
 
 def bundled_git() -> str:
     path = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
-    return "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(path)
+    return shutil.which("git") or str(path)
 
 
 def tagged_freeze_bytes() -> bytes:

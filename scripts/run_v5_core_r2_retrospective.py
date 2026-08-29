@@ -14,6 +14,7 @@ import hashlib
 import json
 import math
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -74,7 +75,7 @@ def sha256(path: Path) -> str:
 
 def git_executable() -> str:
     bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
-    return "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(bundled)
+    return shutil.which("git") or str(bundled)
 
 
 def git_commit() -> str:

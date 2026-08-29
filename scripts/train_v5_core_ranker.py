@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import math
+import shutil
 import statistics
 import subprocess
 import sys
@@ -28,7 +29,7 @@ def sha256(path: Path) -> str:
 
 def git_commit() -> str:
     bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
-    executable = "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(bundled)
+    executable = shutil.which("git") or str(bundled)
     return subprocess.check_output([executable, "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
 

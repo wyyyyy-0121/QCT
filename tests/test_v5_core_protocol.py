@@ -321,7 +321,7 @@ class V5CoreProtocolTests(unittest.TestCase):
         self.assertIn("outside the project repository", prepare_source)
         self.assertEqual(
             freeze_v5_core.manifest_key(
-                Path("D:/code/QCT/results/v5_core_validation/summary.json")
+                freeze_v5_core.ROOT / "results/v5_core_validation/summary.json"
             ),
             "results/v5_core_validation/summary.json",
         )
