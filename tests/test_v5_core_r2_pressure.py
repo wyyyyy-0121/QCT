@@ -106,7 +106,9 @@ class R2PressureProtocolTests(unittest.TestCase):
             },
         }
 
-    def _run_audit(self, *, enron_mrr: float = 0.51) -> dict:
+    def _run_audit(
+        self, *, enron_mrr: float = 0.51, method_label: str | None = None,
+    ) -> dict:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             historical_path = root / "historical.json"
@@ -126,6 +128,11 @@ class R2PressureProtocolTests(unittest.TestCase):
                 "--development-audit", str(development_path),
                 "--output", str(output_path),
             ]
+            if method_label is not None:
+                arguments.extend([
+                    "--method-label", method_label,
+                    "--protocol", "v5_core_r2_structural_guard_pressure_safety_decision_v1",
+                ])
             with patch.object(sys, "argv", arguments):
                 audit.main()
             return json.loads(output_path.read_text(encoding="utf-8"))
@@ -148,6 +155,14 @@ class R2PressureProtocolTests(unittest.TestCase):
         self.assertFalse(receipt["pressure_safety_passed"])
         self.assertFalse(receipt["eligible_for_new_independent_confirmation"])
         self.assertFalse(receipt["gates"]["enron_r2_full_mrr_not_below_v4_by_more_than_0_01"])
+
+    def test_audit_can_issue_a_versioned_structural_guard_receipt(self):
+        receipt = self._run_audit(method_label="R2 structural-guard")
+        self.assertEqual(
+            receipt["protocol"], "v5_core_r2_structural_guard_pressure_safety_decision_v1",
+        )
+        self.assertEqual(receipt["method_label"], "R2 structural-guard")
+        self.assertIn("R2 structural-guard", receipt["interpretation"])
 
     def test_confirmation_public_manifest_rejects_label_columns(self):
         with tempfile.TemporaryDirectory() as temporary:

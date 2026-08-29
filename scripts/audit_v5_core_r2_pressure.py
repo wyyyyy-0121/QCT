@@ -1,4 +1,4 @@
-"""Combine the two revealed-data R2-R1 pressure cohorts into one safety receipt."""
+"""Combine two revealed-data R2 pressure cohorts into an auditable safety receipt."""
 
 from __future__ import annotations
 
@@ -26,6 +26,14 @@ def main() -> None:
     parser.add_argument("--enron", type=Path, required=True)
     parser.add_argument("--development-audit", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--method-label", default="R2-R1",
+        help="Human-readable model label stored in the retrospective receipt.",
+    )
+    parser.add_argument(
+        "--protocol", default="v5_core_r2_r1_pressure_safety_decision_v1",
+        help="Versioned receipt protocol; historical R2-R1 remains the default.",
+    )
     args = parser.parse_args()
 
     historical = load(args.historical_100)
@@ -93,7 +101,8 @@ def main() -> None:
         == cohort_provenance["enron"]["runner_source_sha256"]
     )
     receipt = {
-        "protocol": "v5_core_r2_r1_pressure_safety_decision_v1",
+        "protocol": args.protocol,
+        "method_label": args.method_label,
         "development_only": True,
         "independent_evidence": False,
         "original_preregistered_development_gate_passed": bool(
@@ -115,9 +124,9 @@ def main() -> None:
             "while evaluating the 30 admitted formula events and recording six exclusions."
         ),
         "interpretation": (
-            "Safety pressure passed; R2-R1 may be frozen for a genuinely new independent confirmation set."
+            f"Safety pressure passed; {args.method_label} may be frozen for a genuinely new independent confirmation set."
             if passed else
-            "Safety pressure failed; R2-R1 must remain a development mechanism and cannot be promoted."
+            f"Safety pressure failed; {args.method_label} must remain a development mechanism and cannot be promoted."
         ),
         "hashes": {
             "historical_100_summary": sha256(args.historical_100),
@@ -128,7 +137,7 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding="utf-8")
     print(args.output)
-    print(f"R2-R1 pressure safety passed: {passed}")
+    print(f"{args.method_label} pressure safety passed: {passed}")
     if not passed:
         print("Failed gates: " + ", ".join(name for name, value in gates.items() if not value))
 
