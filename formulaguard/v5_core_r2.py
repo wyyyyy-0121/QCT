@@ -134,6 +134,7 @@ def v5_core_r2_default_parameters() -> dict[str, object]:
         "wcn_protected_global_max": False,
         "safe_counterfactual_reorder": False,
         "protect_observational_top1": False,
+        "structural_priority_in_uncertainty": False,
         "evidence_probe_per_signal": 0,
         "evidence_probe_small_workbook_limit": 0,
         "evidence_probe_promotion_rank": 5,
@@ -982,32 +983,50 @@ def _rerank_uncertainty(
     independent_support_tiebreak: bool = False,
     release_tied_top1_with_dcf: bool = False,
     minimum_independent_support: int = 2,
+    structural_priority_in_uncertainty: bool = False,
 ) -> list[CellKey]:
     uncertain = set(uncertainty)
     slots = [index for index, cell in enumerate(observational) if cell in uncertain]
     def independent_support(cell: CellKey) -> int:
         return _independent_candidate_support(placebo.get(cell)) if independent_support_tiebreak else 0
 
-    ordered = sorted(uncertainty, key=lambda cell: (
-        placebo.get(cell, PlaceboEvidence(cell)).empirical_tail,
-        -independent_support(cell),
-        -placebo.get(cell, PlaceboEvidence(cell)).treatment,
-        observations[cell].empirical_tail,
-        -observations[cell].raw_score,
-        observational.index(cell),
-    ))
+    def eligible(cell: CellKey) -> bool:
+        row = placebo.get(cell, PlaceboEvidence(cell))
+        return bool(
+            row.candidate_coverage
+            and row.treatment >= minimum_treatment
+            and row.empirical_tail <= counterfactual_tail
+        )
+
+    def ordinary_key(cell: CellKey) -> tuple[float, int, float, float, float, int]:
+        row = placebo.get(cell, PlaceboEvidence(cell))
+        return (
+            row.empirical_tail,
+            -independent_support(cell),
+            -row.treatment,
+            observations[cell].empirical_tail,
+            -observations[cell].raw_score,
+            observational.index(cell),
+        )
+    ordered = sorted(uncertainty, key=ordinary_key)
     if safe_counterfactual_reorder:
-        eligible = [
-            cell for cell in ordered
-            if placebo.get(cell, PlaceboEvidence(cell)).candidate_coverage
-            and placebo.get(cell, PlaceboEvidence(cell)).treatment >= minimum_treatment
-            and placebo.get(cell, PlaceboEvidence(cell)).empirical_tail <= counterfactual_tail
-        ]
-        if not eligible:
+        eligible_cells = [cell for cell in ordered if eligible(cell)]
+        if not eligible_cells:
             return list(observational)
-        ineligible = [cell for cell in uncertainty if cell not in set(eligible)]
-        ineligible.sort(key=observational.index)
-        ordered = eligible + ineligible
+        if structural_priority_in_uncertainty:
+            # Candidate interventions may resolve an observational tie, but they
+            # must not overrule stronger candidate-independent regime evidence.
+            # DCF therefore orders cells only after the structural residual.
+            ordered = sorted(uncertainty, key=lambda cell: (
+                -observations[cell].regime_conditioned_residual,
+                0 if eligible(cell) else 1,
+                *ordinary_key(cell),
+            ))
+        else:
+            eligible_set = set(eligible_cells)
+            ineligible = [cell for cell in uncertainty if cell not in eligible_set]
+            ineligible.sort(key=observational.index)
+            ordered = eligible_cells + ineligible
     result = list(observational)
     for slot, cell in zip(slots, ordered):
         result[slot] = cell
@@ -1329,6 +1348,9 @@ def v5_core_r2_scores(
             independent_support_tiebreak=bool(parameters.get("independent_support_tiebreak", False)),
             release_tied_top1_with_dcf=bool(parameters.get("release_tied_top1_with_dcf", False)),
             minimum_independent_support=int(parameters.get("minimum_independent_support", 2)),
+            structural_priority_in_uncertainty=bool(
+                parameters.get("structural_priority_in_uncertainty", False)
+            ),
         )
         if stage == "full" else list(source_ranking)
     )
@@ -1420,6 +1442,9 @@ def v5_core_r2_scores(
             "independent_support_tiebreak": bool(parameters.get("independent_support_tiebreak", False)),
             "release_tied_top1_with_dcf": bool(parameters.get("release_tied_top1_with_dcf", False)),
             "minimum_independent_support": int(parameters.get("minimum_independent_support", 2)),
+            "structural_priority_in_uncertainty": bool(
+                parameters.get("structural_priority_in_uncertainty", False)
+            ),
             "relative_ancestor_penalty": bool(parameters.get("relative_ancestor_penalty", False)),
             "ancestor_dominance_margin": float(parameters.get("ancestor_dominance_margin", 0.10)),
             "observational_primary_weight": float(parameters.get("observational_primary_weight", 0.55)),

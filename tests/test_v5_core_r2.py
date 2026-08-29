@@ -491,6 +491,71 @@ class V5CoreR2Tests(unittest.TestCase):
         self.assertTrue(all(row.evidence["in_evidence_probe_set"] for row in results))
         self.assertTrue(all(row.evidence["evidence_probe_per_signal"] == 2 for row in results))
 
+    def test_structural_priority_prevents_placebo_from_overruling_regime_source(self):
+        cells = [("S", "A1"), ("S", "A2"), ("S", "A3")]
+        observations = {
+            cells[0]: self.observation(cells[0], regime=0.8),
+            cells[1]: self.observation(cells[1], regime=0.0),
+            cells[2]: self.observation(cells[2], regime=0.2),
+        }
+        placebo = {
+            cells[0]: PlaceboEvidence(
+                cell=cells[0], treatment=0.4, empirical_tail=1.0,
+                candidate_coverage=True,
+            ),
+            cells[1]: PlaceboEvidence(
+                cell=cells[1], treatment=1.0, empirical_tail=1 / 9,
+                candidate_coverage=True,
+            ),
+            cells[2]: PlaceboEvidence(
+                cell=cells[2], treatment=0.7, empirical_tail=1 / 9,
+                candidate_coverage=True,
+            ),
+        }
+        ordinary = r2_module._rerank_uncertainty(
+            cells, cells, placebo, observations,
+            safe_counterfactual_reorder=True,
+        )
+        guarded = r2_module._rerank_uncertainty(
+            cells, cells, placebo, observations,
+            safe_counterfactual_reorder=True,
+            structural_priority_in_uncertainty=True,
+        )
+        self.assertEqual(ordinary[0], cells[1])
+        self.assertEqual(guarded, [cells[0], cells[2], cells[1]])
+
+    def test_structural_priority_still_uses_dcf_when_regime_evidence_ties(self):
+        cells = [("S", "A1"), ("S", "A2")]
+        observations = {
+            cell: self.observation(cell, regime=1.0) for cell in cells
+        }
+        placebo = {
+            cells[0]: PlaceboEvidence(
+                cell=cells[0], treatment=0.4, empirical_tail=1 / 5,
+                candidate_coverage=True,
+            ),
+            cells[1]: PlaceboEvidence(
+                cell=cells[1], treatment=0.8, empirical_tail=1 / 9,
+                candidate_coverage=True,
+            ),
+        }
+        guarded = r2_module._rerank_uncertainty(
+            cells, cells, placebo, observations,
+            safe_counterfactual_reorder=True,
+            counterfactual_tail=0.25,
+            structural_priority_in_uncertainty=True,
+        )
+        self.assertEqual(guarded, [cells[1], cells[0]])
+
+    def test_structural_priority_setting_is_traceable(self):
+        results = v5_core_r2_scores(
+            propagation_family(),
+            config={"structural_priority_in_uncertainty": True},
+        )
+        self.assertTrue(all(
+            row.evidence["structural_priority_in_uncertainty"] for row in results
+        ))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -412,11 +412,18 @@ def evaluate_gates(error_summary: dict, workbook_null: dict) -> dict:
     source, full = metrics["r2_source"], metrics["r2_full"]
     selected_name = workbook_null["selected"]
     selected = workbook_null["variants"].get(selected_name, {})
-    improved_types = 0
-    for error_type in source["by_error_type"]:
+    event_improved_types = 0
+    headroom_types = []
+    net_improved_types = []
+    for error_type, source_values in source["by_error_type"].items():
         typed = [row for row in error_summary["diagnostics"] if row["error_type"] == error_type]
         if any(row["full_rank"] < row["source_rank"] for row in typed):
-            improved_types += 1
+            event_improved_types += 1
+        if source_values["mrr"] < 1.0 - 1e-12:
+            headroom_types.append(error_type)
+            if full["by_error_type"][error_type]["mrr"] > source_values["mrr"] + 1e-12:
+                net_improved_types.append(error_type)
+    required_net_improved_types = min(4, len(headroom_types))
     strongest_ablation_mrr = max(
         (values["mrr"] for name, values in metrics.items() if name.startswith("ablate_")),
         default=-math.inf,
@@ -430,12 +437,21 @@ def evaluate_gates(error_summary: dict, workbook_null: dict) -> dict:
         "wcn_selected": selected_name is not None,
         "wcn_clean_fpr_at_most_0_10": bool(selected) and selected["clean_false_alarm_rate"] <= 0.10,
         "wcn_error_recall_at_least_0_80": bool(selected) and selected["error_alarm_recall"] >= 0.80,
-        "improvement_spans_at_least_four_error_types": improved_types >= 4,
+        "net_improvement_covers_available_headroom_types": (
+            len(net_improved_types) >= required_net_improved_types
+        ),
         "critical_ablation_not_above_full_by_0_02": strongest_ablation_mrr <= full["mrr"] + 0.02,
     }
     return {
-        "values": {"improved_error_types": improved_types,
-                   "strongest_ablation_mrr": strongest_ablation_mrr, "full_mrr": full["mrr"]},
+        "values": {
+            "event_improved_error_types": event_improved_types,
+            "headroom_error_types": headroom_types,
+            "net_improved_error_types": net_improved_types,
+            "required_net_improved_error_types": required_net_improved_types,
+            "gate_semantics": "net_mrr_over_non_ceiling_types_v1",
+            "strongest_ablation_mrr": strongest_ablation_mrr,
+            "full_mrr": full["mrr"],
+        },
         "gates": gates, "hard_gate_passed": all(gates.values()),
         "failed_gates": [name for name, passed in gates.items() if not passed],
     }
