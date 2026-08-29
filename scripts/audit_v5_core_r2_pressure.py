@@ -45,6 +45,10 @@ def main() -> None:
             raise SystemExit(f"Data-quality checks failed for {name}")
         if int(checks.get("raw_rows", -1)) != expected * 3:
             raise SystemExit(f"Unexpected event-method grain for {name}")
+    if int(enron.get("input_events", -1)) != 36:
+        raise SystemExit("Enron pressure input must preserve all 36 inventory records")
+    if int(enron.get("excluded_inventory_events", -1)) != 6:
+        raise SystemExit("Enron pressure input must record exactly six excluded inventory events")
 
     cohorts = {"historical_100": historical, "enron": enron}
     gates: dict[str, bool] = {
@@ -72,6 +76,22 @@ def main() -> None:
         gates[f"{name}_dcf_harmed_rate_at_most_0_02"] = full_vs_source["harmed_rate"] <= 0.02
 
     passed = all(gates.values())
+    cohort_provenance = {
+        name: {
+            "git_commit": payload.get("git_commit"),
+            "runner_source_sha256": payload.get("runner_source_sha256"),
+            "model_source_sha256": payload.get("model_source_sha256"),
+            "events_sha256": payload.get("events_sha256"),
+            "input_events": payload.get("input_events", payload.get("events")),
+            "evaluated_events": payload.get("events"),
+            "excluded_inventory_events": payload.get("excluded_inventory_events", 0),
+        }
+        for name, payload in cohorts.items()
+    }
+    runner_hashes_equal = (
+        cohort_provenance["historical_100"]["runner_source_sha256"]
+        == cohort_provenance["enron"]["runner_source_sha256"]
+    )
     receipt = {
         "protocol": "v5_core_r2_r1_pressure_safety_decision_v1",
         "development_only": True,
@@ -84,6 +104,16 @@ def main() -> None:
         "gates": gates,
         "pressure_safety_passed": passed,
         "eligible_for_new_independent_confirmation": passed,
+        "cohort_execution_provenance": cohort_provenance,
+        "runner_source_hashes_equal": runner_hashes_equal,
+        "runner_difference_disclosure": (
+            "Both cohorts used the same pressure-runner source."
+            if runner_hashes_equal else
+            "The completed historical-100 receipt is reused from the pre-adapter runner. "
+            "The later runner change only filters an explicit include field, which the "
+            "historical cohort does not contain; Enron preserves all 36 inventory rows "
+            "while evaluating the 30 admitted formula events and recording six exclusions."
+        ),
         "interpretation": (
             "Safety pressure passed; R2-R1 may be frozen for a genuinely new independent confirmation set."
             if passed else

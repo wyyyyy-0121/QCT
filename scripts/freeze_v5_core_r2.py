@@ -78,6 +78,18 @@ def main() -> None:
         raise SystemExit("Freeze refused: pressure receipt does not permit independent confirmation")
     if pressure.get("independent_evidence") is not False:
         raise SystemExit("Freeze refused: pressure receipt misstates its evidence tier")
+    provenance = pressure.get("cohort_execution_provenance", {})
+    enron_provenance = provenance.get("enron", {})
+    if int(enron_provenance.get("input_events", -1)) != 36:
+        raise SystemExit("Freeze refused: pressure receipt does not preserve the 36-event Enron inventory")
+    if int(enron_provenance.get("evaluated_events", -1)) != 30:
+        raise SystemExit("Freeze refused: pressure receipt does not evaluate exactly 30 Enron events")
+    if int(enron_provenance.get("excluded_inventory_events", -1)) != 6:
+        raise SystemExit("Freeze refused: pressure receipt does not disclose six Enron exclusions")
+    for cohort in ("historical_100", "enron"):
+        values = provenance.get(cohort, {})
+        if not values.get("runner_source_sha256") or not values.get("git_commit"):
+            raise SystemExit(f"Freeze refused: {cohort} execution provenance is incomplete")
     workbook_null = development.get("cross_workbook_null", {})
     selected_name = workbook_null.get("selected")
     selected = workbook_null.get("variants", {}).get(selected_name, {})
@@ -149,6 +161,9 @@ def main() -> None:
         ),
         "original_failed_gates_preserved": development.get("gates", {}).get("failed_gates", []),
         "pressure_safety_passed": True,
+        "pressure_execution_provenance": provenance,
+        "pressure_runner_source_hashes_equal": pressure.get("runner_source_hashes_equal"),
+        "pressure_runner_difference_disclosure": pressure.get("runner_difference_disclosure"),
         "source_sha256": {key(path): sha256(path) for path in source_paths},
         "data_manifest_sha256": {key(path): sha256(path) for path in data_paths},
         "evidence_sha256": {key(path): sha256(path) for path in evidence_paths},

@@ -69,6 +69,12 @@ class R2PressureProtocolTests(unittest.TestCase):
             "retrospective_only": True,
             "not_for_model_selection": True,
             "events": events,
+            "input_events": 36 if events == 30 else events,
+            "excluded_inventory_events": 6 if events == 30 else 0,
+            "git_commit": f"commit-{events}",
+            "runner_source_sha256": f"runner-{events}",
+            "model_source_sha256": "same-model",
+            "events_sha256": f"events-{events}",
             "summary": metrics,
             "paired_full_vs_source": {
                 "improved_events": 0, "harmed_events": 0,
@@ -112,6 +118,12 @@ class R2PressureProtocolTests(unittest.TestCase):
         self.assertEqual(receipt["original_failed_gates_preserved"], ["legacy_breadth_gate"])
         self.assertTrue(receipt["pressure_safety_passed"])
         self.assertTrue(receipt["eligible_for_new_independent_confirmation"])
+        self.assertFalse(receipt["runner_source_hashes_equal"])
+        self.assertEqual(
+            receipt["cohort_execution_provenance"]["enron"]["excluded_inventory_events"],
+            6,
+        )
+        self.assertIn("pre-adapter runner", receipt["runner_difference_disclosure"])
 
     def test_audit_rejects_real_corpus_mrr_regression(self):
         receipt = self._run_audit(enron_mrr=0.40)
