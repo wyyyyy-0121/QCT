@@ -113,6 +113,19 @@ class PeerCandidate:
     nearest_distance: int
 
 
+def formula_prefix_key(prefix: FormulaPrefix) -> str:
+    """Return the exact public ForTaP prediction key for a parsed formula."""
+    normalized_tokens = [
+        "C-NUM" if token_type == "NUMBER" else token.upper()
+        for token, token_type in zip(prefix.tokens, prefix.token_types, strict=True)
+    ]
+    return " ".join(normalized_tokens)
+
+
+def formula_prediction_key(formula: str) -> str:
+    return formula_prefix_key(formula_to_prefix(formula))
+
+
 def _plain_ref(ref: Ref) -> str:
     if ref.sheet is not None:
         raise FCRLAdapterError("cross_sheet_reference")
@@ -345,13 +358,18 @@ def build_table_input(model: WorkbookModel, target: CellKey) -> FCRLTableInput:
     )
 
 
-def translated_peer_candidates(model: WorkbookModel, target: CellKey) -> tuple[PeerCandidate, ...]:
+def translated_peer_candidates(
+    model: WorkbookModel,
+    target: CellKey,
+    *,
+    exclude_observed: bool = True,
+) -> tuple[PeerCandidate, ...]:
     """Return deterministic peer proposals with contiguous formula blocks deduplicated."""
     if target not in model.formulas:
         raise FCRLAdapterError("target_not_formula")
     component = component_bounds(model, target)
     target_address = parse_address(target[1])
-    observed = normalized_formula(model.formulas[target])
+    observed = normalized_formula(model.formulas[target]) if exclude_observed else None
 
     records: list[tuple[str, int, int, str, str, int]] = []
     for peer in model.formula_cells:
@@ -375,7 +393,7 @@ def translated_peer_candidates(model: WorkbookModel, target: CellKey) -> tuple[P
         except (FormulaSyntaxError, ValueError, FCRLAdapterError):
             continue
         normalized = normalized_formula(translated)
-        if normalized == observed:
+        if observed is not None and normalized == observed:
             continue
         distance = abs(address.row - target_address.row) + abs(address.col - target_address.col)
         records.append((orientation, fixed, axis, normalized, translated, distance))
@@ -416,6 +434,24 @@ def translated_peer_candidates(model: WorkbookModel, target: CellKey) -> tuple[P
         for normalized, item in support.items()
     ]
     return tuple(sorted(candidates, key=lambda item: (item.nearest_distance, item.normalized)))
+
+
+def local_peer_completion_keys(model: WorkbookModel, target: CellKey) -> tuple[str, ...]:
+    """Top-5 U1 peer completions computed without inspecting the target formula."""
+    candidates = translated_peer_candidates(model, target, exclude_observed=False)
+    keyed: dict[str, tuple[int, int]] = {}
+    for candidate in candidates:
+        try:
+            key = formula_prediction_key(candidate.formula)
+        except FCRLAdapterError:
+            continue
+        ordering = (-len(candidate.block_ids), candidate.nearest_distance)
+        if key not in keyed or ordering < keyed[key]:
+            keyed[key] = ordering
+    return tuple(
+        key
+        for key, _ in sorted(keyed.items(), key=lambda item: (*item[1], item[0]))[:5]
+    )
 
 
 def independently_supported_alternatives(

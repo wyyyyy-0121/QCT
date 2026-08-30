@@ -13,6 +13,7 @@ from typing import Sequence
 
 import torch
 from torch import Tensor, nn
+from torch.nn import functional as F
 
 from .fcrl import (
     FCRLTableInput,
@@ -72,10 +73,14 @@ class FCRLTensorBatch:
 
 
 @dataclass(frozen=True)
-class FCRLRuntime:
+class FCRLTokenizerRuntime:
     args: SimpleNamespace
     official: OfficialModules
     tokenizer: object
+
+
+@dataclass(frozen=True)
+class FCRLRuntime(FCRLTokenizerRuntime):
     model: "FCRLModel"
     checkpoint_sha256: str
     checkpoint_bytes: int
@@ -105,6 +110,14 @@ class _Prepared:
     encoder_hash: str
     reachable_references: int
     total_references: int
+
+
+@dataclass(frozen=True)
+class BeamPrediction:
+    key: str
+    sketch_token_ids: tuple[int, ...]
+    range_token_indices: tuple[int, ...]
+    normalized_log_probability: float
 
 
 def sha256_file(path: str | Path) -> str:
@@ -227,15 +240,39 @@ class FCRLModel(nn.Module):
         if selected.numel() != batch_size * 2 * self.hidden_size:
             raise FCRLTorchError("formula_marker_count_changed")
         formula_states = selected.view(batch_size, 2, self.hidden_size)[:, 0, :]
-        sketch_loss, range_loss = self.decoder(
-            encoded_states=encoded,
-            formula_cell_states=formula_states,
-            src_sketch=batch.src_sketch,
-            tgt_sketch=batch.tgt_sketch,
-            candi_cell_token_mask=batch.candi_cell_token_mask,
-            range_label=batch.range_label,
+        sketch_logits, sketch_hidden = self.decoder.sketch_logits(
+            batch.src_sketch, encoded, formula_states
         )
+        sketch_loss = F.nll_loss(
+            F.log_softmax(sketch_logits, dim=-1).view(-1, sketch_logits.size(-1)),
+            batch.tgt_sketch.view(-1),
+            reduction="mean",
+            ignore_index=self.decoder.padding_idx,
+        )
+        range_logits, _ = self.decoder.range_logits(
+            sketch_hidden, encoded, batch.candi_cell_token_mask, formula_states
+        )
+        flat_labels = batch.range_label.view(-1)
+        valid_ranges = flat_labels != 0
+        if bool(valid_ranges.any()):
+            flat_log_probs = F.log_softmax(range_logits, dim=-1).view(-1, range_logits.size(-1))
+            range_loss = F.nll_loss(
+                flat_log_probs[valid_ranges],
+                flat_labels[valid_ranges],
+                reduction="mean",
+            )
+        else:
+            range_loss = range_logits.sum() * 0.0
         return sketch_loss + range_loss, sketch_loss, range_loss
+
+
+def load_tokenizer_runtime(source_root: str | Path) -> FCRLTokenizerRuntime:
+    source_root = Path(source_root).resolve()
+    official = import_official_fortap(source_root)
+    args = fixed_config(source_root / "fortap" / "vocab" / "bert_vocab.txt")
+    tokenizer = official.tokenizer.FPTokenizer(args)
+    args.tokenizer = tokenizer
+    return FCRLTokenizerRuntime(args=args, official=official, tokenizer=tokenizer)
 
 
 def load_runtime(source_root: str | Path, checkpoint_path: str | Path) -> FCRLRuntime:
@@ -244,10 +281,10 @@ def load_runtime(source_root: str | Path, checkpoint_path: str | Path) -> FCRLRu
     checkpoint_hash = sha256_file(checkpoint_path)
     if checkpoint_hash != EXPECTED_CHECKPOINT_SHA256:
         raise FCRLTorchError("checkpoint_hash_mismatch_or_forbidden_checkpoint")
-    official = import_official_fortap(source_root)
-    args = fixed_config(source_root / "fortap" / "vocab" / "bert_vocab.txt")
-    tokenizer = official.tokenizer.FPTokenizer(args)
-    args.tokenizer = tokenizer
+    tokenizer_runtime = load_tokenizer_runtime(source_root)
+    official = tokenizer_runtime.official
+    args = tokenizer_runtime.args
+    tokenizer = tokenizer_runtime.tokenizer
 
     backbone = official.backbones.BbForTuta(args)
     checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
@@ -309,7 +346,7 @@ def _encoder_hash(values: dict[str, object]) -> str:
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
 
 
-def _prepare(table: FCRLTableInput, runtime: FCRLRuntime) -> _Prepared:
+def _prepare(table: FCRLTableInput, runtime: FCRLTokenizerRuntime) -> _Prepared:
     tokenizer = runtime.tokenizer
     token_matrix, number_matrix = tokenizer.tokenize_string_matrix(
         table.string_matrix,
@@ -361,6 +398,11 @@ def _prepare(table: FCRLTableInput, runtime: FCRLRuntime) -> _Prepared:
     indicator: list[int] = []
     formula_label: list[int] = []
     candidate_mask: list[int] = []
+    full_range_map: dict[int, str] = {}
+    top_left = table.table_range.split(":", 1)[0]
+    from .a1 import parse_address, num_to_col
+
+    top_left_address = parse_address(top_left)
     for tokens, numbers, position, fmt, cell_indicator, cell_formula, cell_candidate in zip(
         token_cells,
         number_cells,
@@ -372,6 +414,7 @@ def _prepare(table: FCRLTableInput, runtime: FCRLRuntime) -> _Prepared:
         strict=True,
     ):
         cell_len = len(tokens)
+        sequence_start = len(token_id)
         token_id.extend(tokens)
         token_order.extend(range(cell_len))
         num_mag.extend(number[0] for number in numbers)
@@ -389,6 +432,17 @@ def _prepare(table: FCRLTableInput, runtime: FCRLRuntime) -> _Prepared:
         indicator.extend(cell_indicator)
         formula_label.extend(cell_formula)
         candidate_mask.extend(cell_candidate)
+        row, col, _top, _left = position
+        if (
+            cell_candidate
+            and cell_candidate[0] == 1
+            and sequence_start < MAX_INPUT_TOKENS - 1
+            and row < runtime.args.row_size
+            and col < runtime.args.column_size
+        ):
+            full_range_map[sequence_start] = (
+                f"{num_to_col(top_left_address.col + col)}{top_left_address.row + row}"
+            )
 
     encoder_values = {
         "token_id": token_id[:MAX_INPUT_TOKENS],
@@ -420,11 +474,7 @@ def _prepare(table: FCRLTableInput, runtime: FCRLRuntime) -> _Prepared:
         if token_type == "CELL"
     ]
     reachable = sum(retained_range[index] != official_null for index in cell_positions)
-    retained_map = {
-        int(index): address
-        for index, address in range_map.items()
-        if 0 < int(index) < MAX_INPUT_TOKENS - 1
-    }
+    retained_map = full_range_map
     return _Prepared(
         token_id=encoder_values["token_id"],  # type: ignore[arg-type]
         num_mag=encoder_values["num_mag"],  # type: ignore[arg-type]
@@ -450,7 +500,9 @@ def _prepare(table: FCRLTableInput, runtime: FCRLRuntime) -> _Prepared:
     )
 
 
-def tensorize_tables(tables: Sequence[FCRLTableInput], runtime: FCRLRuntime) -> FCRLTensorBatch:
+def tensorize_tables(
+    tables: Sequence[FCRLTableInput], runtime: FCRLTokenizerRuntime
+) -> FCRLTensorBatch:
     if not tables:
         raise FCRLTorchError("empty_batch")
     prepared = [_prepare(table, runtime) for table in tables]
@@ -490,3 +542,136 @@ def tensorize_tables(tables: Sequence[FCRLTableInput], runtime: FCRLRuntime) -> 
         reachable_references=tuple(item.reachable_references for item in prepared),
         total_references=tuple(item.total_references for item in prepared),
     )
+
+
+@torch.no_grad()
+def generate_prefix_beam(
+    runtime: FCRLRuntime,
+    batch: FCRLTensorBatch,
+    *,
+    sample_index: int = 0,
+    encoded_states: Tensor | None = None,
+) -> tuple[BeamPrediction, ...]:
+    """Deterministic beam-5 decoding through the official LSTMLM primitives."""
+    model = runtime.model
+    model.eval()
+    if sample_index < 0 or sample_index >= batch.token_id.size(0):
+        raise FCRLTorchError("beam_sample_index_out_of_range")
+
+    def one(tensor: Tensor) -> Tensor:
+        return tensor[sample_index : sample_index + 1]
+
+    single = FCRLTensorBatch(
+        **{
+            field.name: (
+                one(getattr(batch, field.name))
+                if isinstance(getattr(batch, field.name), Tensor)
+                else (getattr(batch, field.name)[sample_index],)
+            )
+            for field in fields(batch)
+        }
+    )
+    encoded = (
+        model.encode(single)
+        if encoded_states is None
+        else encoded_states[sample_index : sample_index + 1]
+    )
+    selected = encoded[single.formula_label == 1]
+    if selected.numel() != 2 * model.hidden_size:
+        raise FCRLTorchError("formula_marker_count_changed")
+    formula_state = selected.view(1, 2, model.hidden_size)[:, 0, :]
+    start_id = runtime.tokenizer.fp_tok2id("<START>")
+    end_id = runtime.tokenizer.fp_tok2id("<END>")
+    beam_size = runtime.args.beam_size
+    active: list[tuple[tuple[int, ...], float]] = [((start_id,), 0.0)]
+    completed: list[tuple[tuple[int, ...], float, float]] = []
+
+    for _ in range(1, runtime.args.max_length):
+        if not active or len(completed) >= beam_size:
+            break
+        sequences = torch.tensor([ids for ids, _ in active], dtype=torch.long, device=encoded.device)
+        repeated_encoded = encoded.repeat(len(active), 1, 1)
+        repeated_formula = formula_state.repeat(len(active), 1)
+        logits, _ = model.decoder.sketch_logits(
+            sequences,
+            repeated_encoded,
+            repeated_formula,
+            last_token=True,
+        )
+        log_probs = F.log_softmax(logits[:, -1, :], dim=-1)
+        prior = torch.tensor([score for _, score in active], device=encoded.device).unsqueeze(1)
+        combined = log_probs + prior
+        values, flat_indices = torch.topk(combined.reshape(-1), k=min(beam_size, combined.numel()))
+        next_active: list[tuple[tuple[int, ...], float]] = []
+        vocab_size = combined.size(1)
+        for value, flat_index in zip(values.tolist(), flat_indices.tolist(), strict=True):
+            parent_index, token_id = divmod(flat_index, vocab_size)
+            ids = (*active[parent_index][0], int(token_id))
+            normalized_score = float(value) / ((len(ids) + 1) ** runtime.args.beam_alpha)
+            if token_id == end_id:
+                completed.append((ids, float(value), normalized_score))
+            else:
+                next_active.append((ids, float(value)))
+        active = next_active
+
+    if not completed:
+        completed = [
+            (ids, score, score / ((len(ids) + 1) ** runtime.args.beam_alpha))
+            for ids, score in active
+        ]
+    completed.sort(key=lambda item: (-item[2], item[0]))
+    range_map = single.range_maps[0]
+    predictions: list[BeamPrediction] = []
+    seen_keys: set[str] = set()
+    reverse_vocab = runtime.official.generation.REV_FP_VOCAB
+    range_id = runtime.tokenizer.fp_tok2id("<RANGE>")
+    for ids, _raw_score, normalized_score in completed:
+        source_ids = ids[:-1] if ids and ids[-1] == end_id else ids
+        source = torch.tensor([source_ids], dtype=torch.long, device=encoded.device)
+        _, sketch_hidden = model.decoder.sketch_logits(source, encoded, formula_state)
+        range_logits, _ = model.decoder.range_logits(
+            sketch_hidden,
+            encoded,
+            single.candi_cell_token_mask,
+            formula_state,
+        )
+        key_tokens: list[str] = []
+        pointer_indices: list[int] = []
+        valid = True
+        for token_index, token_id in enumerate(source_ids):
+            if token_id == start_id:
+                continue
+            if token_id == range_id:
+                if token_index == 0:
+                    valid = False
+                    break
+                pointer = int(torch.argmax(range_logits[0, token_index - 1]).item())
+                address = range_map.get(pointer)
+                if address is None:
+                    valid = False
+                    break
+                key_tokens.append(address.upper())
+                pointer_indices.append(pointer)
+            else:
+                token = reverse_vocab.get(int(token_id))
+                if token is None or token in {"<START>", "<END>"}:
+                    valid = False
+                    break
+                key_tokens.append(token.upper())
+        if not valid:
+            continue
+        key = " ".join(key_tokens)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        predictions.append(
+            BeamPrediction(
+                key=key,
+                sketch_token_ids=tuple(source_ids),
+                range_token_indices=tuple(pointer_indices),
+                normalized_log_probability=normalized_score,
+            )
+        )
+        if len(predictions) == beam_size:
+            break
+    return tuple(predictions)

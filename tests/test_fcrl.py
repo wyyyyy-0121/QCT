@@ -3,8 +3,10 @@ import unittest
 from formulaguard.fcrl import (
     FCRLAdapterError,
     build_table_input,
+    formula_prefix_key,
     formula_to_prefix,
     independently_supported_alternatives,
+    local_peer_completion_keys,
     translated_peer_candidates,
 )
 from formulaguard.workbook import WorkbookModel
@@ -47,6 +49,12 @@ class FCRLFormulaPrefixTests(unittest.TestCase):
         with self.assertRaisesRegex(FCRLAdapterError, "formula_without_reference"):
             formula_to_prefix("=1+2")
 
+    def test_prefix_key_collapses_numeric_literals(self):
+        self.assertEqual(
+            formula_prefix_key(formula_to_prefix("=A1*2.5+17")),
+            "+ * A1 C-NUM C-NUM",
+        )
+
 
 class FCRLTableAdapterTests(unittest.TestCase):
     def test_target_formula_and_cached_value_do_not_change_encoder_material(self):
@@ -73,6 +81,31 @@ class FCRLTableAdapterTests(unittest.TestCase):
 
 
 class FCRLPeerSupportTests(unittest.TestCase):
+    def test_local_peer_completion_does_not_read_target_formula(self):
+        cells = {
+            ("Sheet", f"{column}{row}"): row
+            for column in ("A", "B")
+            for row in range(1, 7)
+        }
+        peers = {
+            ("Sheet", "B2"): "=A2",
+            ("Sheet", "B3"): "=A3",
+            ("Sheet", "B5"): "=A5",
+            ("Sheet", "B6"): "=A6",
+        }
+        first = WorkbookModel.from_cells(
+            cells,
+            {**peers, ("Sheet", "B4"): "=A4+1"},
+        )
+        second = WorkbookModel.from_cells(
+            cells,
+            {**peers, ("Sheet", "B4"): "=SUM(A1:A4)"},
+        )
+        self.assertEqual(
+            local_peer_completion_keys(first, ("Sheet", "B4")),
+            local_peer_completion_keys(second, ("Sheet", "B4")),
+        )
+
     def test_contiguous_translated_peers_count_as_one_block(self):
         cells = {}
         for row in range(1, 9):
