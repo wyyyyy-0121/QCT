@@ -10,9 +10,16 @@ from scripts.acquire_cwrp_sheetjs import acquire, collect_workbooks, parse_tree_
 from scripts.build_v6_dataset import write_xlsx
 from scripts.convert_cwrp_sheetjs import convert, install_converted
 from scripts.build_cwrp_corpus import cluster_profiles, read_targets
+from scripts.run_cwrp_self_supervised import (
+    _validate_example,
+    HierarchicalRolePrior,
+    permute_training_targets,
+    select_support_threshold,
+)
 from formulaguard.cwrp import (
     formula_count_ratio_eligible,
     formula_role_fingerprint,
+    masked_formula_examples,
     weighted_jaccard,
     workbook_profile,
 )
@@ -299,6 +306,158 @@ class CWRPStructuralProfileTests(unittest.TestCase):
         self.assertFalse(by_id["c"]["excluded_target_overlap_component"])
         self.assertEqual(by_id["a"]["template_group_id"], by_id["b"]["template_group_id"])
         self.assertEqual(audit["excluded_component_workbooks"], 2)
+
+    def test_masked_context_does_not_change_when_only_target_formula_changes(self):
+        cells = {("S", "A1"): 1, ("S", "B1"): 2}
+        shared = {("S", "D1"): "=C1*2", ("S", "C2"): "=A2+B2"}
+        left = WorkbookModel.from_cells(cells, {**shared, ("S", "C1"): "=A1+B1"})
+        right = WorkbookModel.from_cells(cells, {**shared, ("S", "C1"): "=A1-B1"})
+        left_rows = masked_formula_examples(
+            left, workbook_id="w", template_group_id="g", outer_fold=0,
+        )
+        right_rows = masked_formula_examples(
+            right, workbook_id="w", template_group_id="g", outer_fold=0,
+        )
+        left_by_id = {row["example_id"]: row for row in left_rows}
+        right_by_id = {row["example_id"]: row for row in right_rows}
+        changed_id = next(
+            example_id for example_id in left_by_id
+            if left_by_id[example_id]["target_fingerprint"]
+            != right_by_id[example_id]["target_fingerprint"]
+        )
+        self.assertEqual(
+            left_by_id[changed_id]["context_keys"],
+            right_by_id[changed_id]["context_keys"],
+        )
+        self.assertEqual(
+            left_by_id[changed_id]["local_peer_candidates"],
+            right_by_id[changed_id]["local_peer_candidates"],
+        )
+        self.assertEqual(left_by_id[changed_id]["target_formula_features"], 0)
+
+    def test_sparse_mask_requires_no_same_role_axis_peer(self):
+        model = WorkbookModel.from_cells(
+            {("S", "A1"): 1, ("S", "B1"): 2, ("S", "A2"): 3, ("S", "B2"): 4},
+            {
+                ("S", "C1"): "=A1+B1",
+                ("S", "C2"): "=A2+B2",
+                ("S", "D5"): "=A1*B1",
+            },
+        )
+        rows = masked_formula_examples(
+            model, workbook_id="w", template_group_id="g", outer_fold=0,
+        )
+        self.assertEqual(sum(not row["locally_unsupported"] for row in rows), 2)
+        self.assertEqual(sum(row["locally_unsupported"] for row in rows), 1)
+
+    def test_context_excludes_raw_values_and_identity_text(self):
+        left = WorkbookModel.from_cells(
+            {
+                ("Private 2025", "A1"): "customer alpha",
+                ("Private 2025", "B1"): 17,
+                ("Private 2025", "A2"): "internal note",
+                ("Private 2025", "B2"): 31,
+            },
+            {
+                ("Private 2025", "C1"): "=B1*2",
+                ("Private 2025", "C2"): "=B2+2",
+            },
+        )
+        right = WorkbookModel.from_cells(
+            {
+                ("Renamed", "A1"): "different confidential text",
+                ("Renamed", "B1"): 999999,
+                ("Renamed", "A2"): "another value",
+                ("Renamed", "B2"): -42,
+            },
+            {
+                ("Renamed", "C1"): "=B1*2",
+                ("Renamed", "C2"): "=B2+2",
+            },
+        )
+        left_rows = masked_formula_examples(
+            left, workbook_id="private-filename", template_group_id="g", outer_fold=0,
+        )
+        right_rows = masked_formula_examples(
+            right, workbook_id="different-filename", template_group_id="g", outer_fold=0,
+        )
+        left_contexts = {
+            row["target_fingerprint"]: (row["context_keys"], row["local_peer_candidates"])
+            for row in left_rows
+        }
+        right_contexts = {
+            row["target_fingerprint"]: (row["context_keys"], row["local_peer_candidates"])
+            for row in right_rows
+        }
+        self.assertEqual(left_contexts, right_contexts)
+
+    def test_masked_example_validator_rejects_unregistered_fields(self):
+        model = WorkbookModel.from_cells(
+            {("S", "A1"): 1}, {("S", "B1"): "=A1+1"},
+        )
+        example = masked_formula_examples(
+            model, workbook_id="w", template_group_id="g", outer_fold=0,
+        )[0]
+        expected = {"workbook_id": "w", "template_group_id": "g", "outer_fold": 0}
+        _validate_example(example, expected)
+        with self.assertRaisesRegex(ValueError, "schema mismatch"):
+            _validate_example({**example, "raw_formula": "=A1+1"}, expected)
+
+
+class CWRPSelfSupervisedTests(unittest.TestCase):
+    @staticmethod
+    def example(example_id, group, target, *, exact="e", role="r", coarse="c"):
+        return {
+            "example_id": example_id,
+            "template_group_id": group,
+            "target_fingerprint": target,
+            "context_keys": {"exact": exact, "role": role, "coarse": coarse},
+        }
+
+    def test_hierarchical_prior_requires_independent_group_support(self):
+        rows = [
+            self.example("1", "g1", "SUM", exact="shared"),
+            self.example("2", "g2", "SUM", exact="shared"),
+            self.example("3", "g3", "SUM", exact="shared"),
+            self.example("4", "g1", "SUM", exact="shared"),
+            self.example("5", "g2", "MAX", exact="shared"),
+        ]
+        model = HierarchicalRolePrior(rows)
+        prediction = model.predict(self.example("x", "held", "SUM", exact="shared"))
+        self.assertEqual(prediction["level"], "exact")
+        self.assertEqual(prediction["support_groups"], 3)
+        self.assertEqual(prediction["top5"][0], "SUM")
+        fallback = model.predict(self.example("y", "held", "SUM", exact="unseen", role="unseen", coarse="unseen"))
+        self.assertEqual(fallback["level"], "global_fallback")
+        self.assertEqual(fallback["support_groups"], 0)
+
+    def test_support_threshold_maximizes_coverage_at_target_accuracy(self):
+        rows = [
+            {"candidate": {"support_groups": 3}, "candidate_hit": 0},
+            {"candidate": {"support_groups": 4}, "candidate_hit": 1},
+            {"candidate": {"support_groups": 5}, "candidate_hit": 1},
+        ]
+        selected = select_support_threshold(rows, target_accuracy=0.60)
+        self.assertTrue(selected["feasible"])
+        self.assertEqual(selected["threshold"], 3)
+        self.assertEqual(selected["calibration_selected"], 3)
+
+    def test_target_permutation_is_deterministic_and_preserves_distribution(self):
+        rows = [
+            self.example(str(index), f"g{index}", f"target-{index}")
+            for index in range(8)
+        ]
+        first = permute_training_targets(rows, seed="fixed")
+        second = permute_training_targets(rows, seed="fixed")
+        self.assertEqual(first, second)
+        self.assertCountEqual(
+            [row["target_fingerprint"] for row in first],
+            [row["target_fingerprint"] for row in rows],
+        )
+        self.assertTrue(any(
+            left["target_fingerprint"] != right["target_fingerprint"]
+            for left, right in zip(sorted(rows, key=lambda row: row["example_id"]), first)
+        ))
 
 
 if __name__ == "__main__":
