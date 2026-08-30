@@ -115,6 +115,36 @@ V6 不复用已揭晓 100 例做选择。其内部数据由
 SECRET.zip。该集合才是 V6 的最终独立证据。完整协议见
 `research/V6_THIRD_PARTY_PROTOCOL.md`。
 
+## 4.2 V5-PSL-dev1 公开压力层与独立确认层
+
+V5-PSL不再把同源合成生成器的高分当作晋级依据。公开压力层固定为六个来源，
+其注册表是`data/external/v5_psl/corpus_registry.json`：
+
+| 数据 | 固定版本 | 只允许的用途 |
+|---|---|---|
+| Modified EUSES | `EUSES_modified.zip`, SHA-256 `3701d4d3...c3d4` | 已揭晓注入故障开发与控制压力 |
+| Info1 | `Info1.zip`, SHA-256 `b889174a...f9e3` | 已揭晓真实故障回顾性开发 |
+| Integer Corpus | `Integer.zip`, SHA-256 `47d6950a...9aec` | 整数域注入故障压力 |
+| Enron Error Corpus | `Error_ENRON.zip`, SHA-256 `4f23c7cb...4450` | 已揭晓真实错误安全回归 |
+| FoRepBench | Git `d17e278092c59ec6faaa2d88730bdcbe48bb95f2` | 618项显式错误修复公式对；定位准确率为0项 |
+| SpreadsheetBench | Git `49b73a94775fb489063f60ca1865e3a650079a79` | 复杂XLSX解析、无标签诊断和有记录拒绝 |
+
+前三个SFL语料使用工作表序号坐标和旧`.xls`格式。适配器只保留原始坐标和哈希，
+不会自动猜工作表名；转换、单/多源可识别性和纳入决定必须人工复核。FoRepBench和
+SpreadsheetBench有专用角色审计，硬性禁止把其修复/操作标签计入静默源定位指标。
+许可不清的数据只在本地使用，原始文件统一位于Git忽略的
+`data/external/v5_psl/raw/`。
+
+公开压力结果仍是已揭晓开发证据，只允许一次有根因、证据哈希和源码提交记录的
+机制修订。候选锁前还必须完成主论文核对；模板中的`passed=false`不能手工当作通过
+回执。
+
+真正的独立确认由六名未参与开发的制题人和一名独立保管人准备：30个未见模板，
+240错误和120控制；其中180个可识别错误、60个歧义错误、60普通控制和60合法例外
+控制。保管人在候选锁前只公布PUBLIC与SECRET归档哈希；候选锁后释放无标签PUBLIC，
+完整排名锁后才释放SECRET并评分一次。原始数据和当前仓库中都没有这360例，因此
+当前不能报告独立结果或使用`V5-R1`名称。
+
 ## 5. 每次数据构建必须保留的审计产物
 
 1. `dataset_manifest.json`：数据版本、生成时间、种子、结构声明和文件哈希；

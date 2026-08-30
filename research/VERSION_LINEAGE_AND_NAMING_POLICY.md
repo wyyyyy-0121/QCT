@@ -1,6 +1,6 @@
 # FormulaGuard 版本沿革与命名迁移规则
 
-状态：2026-08-27起生效。本文定义论文、演示和新公共接口使用的正式版本名。
+状态：2026-08-30更新。本文定义论文、演示和新公共接口使用的正式版本名。
 旧源码、冻结配置、Git标签、结果目录和预测锁中的历史标识不得改写。
 
 ## 1. 为什么重新编号
@@ -21,7 +21,9 @@
 | FormulaGuard V4.1-PCG | legacy V5 / `v5-pcg-r1` | 模式—反事实直接重排 | Enron安全回归下降，否决 |
 | FormulaGuard V4.2-Review-B | legacy V5.2-B / `v5.2-b` | 不干扰V4 Top-5的第六复核位 | 冻结辅助模块 |
 | FormulaGuard V4.3-Semantic | legacy V6 / `v6-semantic-r1` | FFC/BSS语义候选与单格受限重排 | 机制有效，未通过主模型冻结门槛 |
-| FormulaGuard V5-Core | `formulaguard_v5_core_*` | 候选中心、多证据责任的核心重构 | 开发中，尚未冻结 |
+| FormulaGuard V5-Core candidate-centric | `formulaguard_v5_core_*` | 候选中心、多证据责任的核心重构 | 已实现；锁定验证与Enron安全门失败，否决 |
+| FormulaGuard V5-Core R2 | `formulaguard_v5_core_r2_*` | DNCA及其R2-R1/R2-R2内部修订 | 制度证据支配版压力失败，冻结路径终止 |
+| FormulaGuard V5-PSL-dev1 | `formulaguard_v5_psl_*` | 角色条件扰动响应与选择性定位 | 已实现开发线；未冻结，不得称正式V5 |
 
 V4.3的A/B/C只是同一机制实验的预登记变体，不再写成三个模型版本。
 
@@ -75,10 +77,24 @@ formulaguard_v6_b     -> V4.3-Semantic-B的历史别名
 新V5必须同时满足：
 
 1. 不调用`v4_scores`取得最终基础排序；
-2. 在公式排名前生成并评估候选修复；
+2. 由新核心独立生成完整公式排名；若使用候选修复，只允许把它作为解释性探针，
+   不能反向决定基础排名；
 3. 统一建模结构、图传播、反事实特异性和合法例外；
 4. 不依靠固定“插入第3/第5名”覆盖V4结果；
 5. 使用全新开发和锁定验证数据，旧85例与V4.3内部360例只作回顾性诊断。
 
-当前`formulaguard/v5_core.py`已经满足以上架构边界，但只有通过全新锁定验证并
-完成冻结，论文才将它作为正式主模型；开发失败时仍保留V4为主模型。
+`formulaguard/v5_core.py`满足架构边界，但已经因验证机制重合和真实语料安全回归
+否决。后续R2研究线同样未通过压力安全门。二者都作为可复现的开发性负结果保留。
+
+新的`V5-PSL-dev1`必须在不调用`v4_scores`取得基础排名的前提下，使用可见数值
+输入的扰动响应建立独立源排名，并把`localized`、`review`、
+`abstain_unidentifiable`和`unsupported`作为排名之外的正式决策。只有全新第三方
+确认集一次性通过预登记门槛时，才在同一锁定提交上增加正式`V5-R1`名称。
+
+## 7. V5-Core内部研究轮次的写法
+
+- `R2-0`至`R2-3`是DNCA构建阶段，不是四个模型版本；
+- `R2-R1`是自适应例外释放修正；
+- `R2-R2`、祖先修复和制度证据支配保护是压力失败后的公开协议修订；
+- 最终结论以`V5_CORE_R2_STRUCTURAL_GUARD_PRESSURE_FAILURE.md`为准，不得用中间
+  480例开发满分覆盖最终失败。

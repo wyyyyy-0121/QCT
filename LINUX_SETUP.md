@@ -32,10 +32,30 @@ python -m pip install --editable .
 ```bash
 ./run_tests.sh
 ./diagnose.sh /path/to/workbook.xlsx --top 10
+python -m formulaguard.cli /path/to/workbook.xlsx --method v5_psl --json /tmp/v5_psl.json
 ```
 
 Windows 的 `.cmd` 和 `.ps1` 入口作为历史复现材料保留。Linux 下可直接使用
 `.venv/bin/python scripts/<script>.py` 和 `.venv/bin/node scripts/<script>.mjs`。
+
+`V5-PSL-dev1`在内部求值覆盖不足时会自动启动隔离、禁用宏的LibreOffice进程。
+候选冻结会拒绝未安装LibreOffice的环境，先核对当前安装：
+
+```bash
+libreoffice --version
+python scripts/prepare_v5_psl_public_corpora.py show --json
+```
+
+六语料下载、清点、补充角色审计和公开压力重审的完整Linux命令见
+`research/V5_PSL_PUBLIC_PRESSURE_PROTOCOL.md`。正式SpreadsheetBench审计不得限制
+总清单，并须成功诊断最多25个可解析且含公式的工作簿。
+
+公开语料下载到`data/external/v5_psl/raw/`，该目录已被Git忽略。许可不清的语料
+即使可以下载，也只能在本机做研究审计，不能随仓库或第三方PUBLIC包再分发。
+
+第三方确认阶段使用三个相互分离的目录：保管人生成的`PUBLIC/`、本地只含无标签
+分片的`results/v5_psl_independent_predictions/`，以及预测锁成功后才取得的
+`FormulaGuard_V5_PSL_SECRET_360.zip`。不要提前把SECRET解压到项目目录。
 
 ## 实验结果
 

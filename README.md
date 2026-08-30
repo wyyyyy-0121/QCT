@@ -19,7 +19,11 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 - V4.1-PCG（历史代码名v5-pcg-r1）：直接重排实验已被否决；它在Enron安全回归中使MRR低于V4。
 - V4.2-Review-B（历史代码名v5.2-B）：冻结的安全辅助审查位，不改变V4 Top-5。
 - V4.3-Semantic（历史代码名v6）：FFC/BSS语义重排机制实验；定位机制有效，但未通过正确表格误报等冻结门槛。
-- V5-Core：候选中心的多证据责任主排序器；不调用`v4_scores()`取得基础排名，当前已完成核心实现、数据协议、锁定评测和短测试框架，尚未经过240例pilot及后续大型验证。
+- V5-Core / V5-Core R2：候选中心重构的历史开发线；均已实现并完成相应评测，
+  但分别因锁定验证重合/Enron回归和最终压力安全门失败而否决。
+- V5-PSL-dev1：当前新开发线，以角色条件扰动响应指纹和显式可识别性门控产生
+  `localized`、`review`、`abstain_unidentifiable`或`unsupported`。代码与协议工具
+  已实现，但文献门、公开压力门和第三方240+120确认均未完成，因此不是正式V5。
 
 正式命名、历史目录和复现别名的完整映射见
 `research\VERSION_LINEAGE_AND_NAMING_POLICY.md`。旧源码、冻结配置和结果目录保持原名，
@@ -57,9 +61,80 @@ run_v5_core_smoke.cmd --workers 24
 
 它覆盖24个错误工作簿、24份干净控制、V4/V4.3对照、规则头与学习头、候选覆盖、标签隔离，以及Markdown/CSV/XLSX证据导出。该结果只用于工程验收。
 
-## V5-Core 大型实验（由用户运行）
+## V5-PSL-dev1 当前流程
 
-必须按顺序执行；Codex检查上一阶段结果后才进入下一阶段：
+先检查固定的六语料来源、哈希和许可边界：
+
+```bash
+python scripts/prepare_v5_psl_public_corpora.py show --json
+```
+
+原始数据只保存在`data/external/v5_psl/raw/`，不得提交。完成逐项转换、标签映射和
+排除复核后，使用`research/V5_PSL_PUBLIC_PRESSURE_MANIFEST_TEMPLATE.csv`运行默认
+方法和四项消融：
+
+```bash
+python scripts/run_v5_psl_public_pressure.py \
+  --manifest /path/to/public_pressure_manifest.csv \
+  --output results/v5_psl_public_pressure --workers 24
+python scripts/audit_v5_psl_public_pressure.py \
+  --registry data/external/v5_psl/corpus_registry.json \
+  --inventory-audits results/v5_psl_inventories/*/inventory_audit.json \
+  --role-audits results/v5_psl_roles/*/role_audit.json \
+  --manifest /path/to/public_pressure_manifest.csv \
+  --run results/v5_psl_public_pressure \
+  --revision-log research/V5_PSL_MECHANISM_REVISION_LOG.json \
+  --output results/v5_psl_public_pressure_audit.json
+```
+
+候选锁必须同时取得真实文献门和公开压力审计回执。脚本只冻结开发候选，不创建
+正式版本、不提交、不打标签、不推送。文献门中的`claim_matrix_sha256`必须是当前
+`research/V5_PSL_CLAIM_MATRIX.md`的真实SHA-256；冻结还要求干净Git工作区和可用的
+LibreOffice：
+
+```bash
+python scripts/freeze_v5_psl_candidate.py \
+  --literature-gate /path/to/literature_gate.json \
+  --pressure-audit results/v5_psl_public_pressure_audit.json \
+  --development-signatures results/v5_psl_public_pressure/development_formula_change_signatures.txt \
+  --public-archive-sha256 <保管人预提交的PUBLIC_SHA256> \
+  --secret-archive-sha256 <保管人预提交的SECRET_SHA256> \
+  --output results/v5_psl_candidate_lock.json
+```
+
+候选锁之后才可由独立保管人释放PUBLIC。四个预声明方法在同一批工作簿上写入完整
+排名，独立锁成功后才能释放SECRET并评分一次：
+
+```bash
+python scripts/run_v5_psl_predictions.py --public /path/to/PUBLIC \
+  --candidate-lock results/v5_psl_candidate_lock.json \
+  --output results/v5_psl_independent_predictions --workers 24
+python scripts/verify_v5_psl_prediction_lock.py --public /path/to/PUBLIC \
+  --candidate-lock results/v5_psl_candidate_lock.json \
+  --predictions results/v5_psl_independent_predictions
+python scripts/score_v5_psl_blind.py --public /path/to/PUBLIC \
+  --candidate-lock results/v5_psl_candidate_lock.json \
+  --predictions results/v5_psl_independent_predictions \
+  --secret-zip /path/to/FormulaGuard_V5_PSL_SECRET_360.zip \
+  --output results/v5_psl_independent_scored
+```
+
+公开开发的逐步命令和审计边界见`research/V5_PSL_PUBLIC_PRESSURE_PROTOCOL.md`；
+具体字段、统计口径和晋级门槛见`research/V5_PSL_METHOD_SPEC.md`与
+`research/V5_PSL_THIRD_PARTY_PROTOCOL.md`。在真实评分回执全部通过前，版本始终是
+`V5-PSL-dev1`。
+
+完整协议入口可用纯合成360例做一次显式工程回归；它不会保留测试结果，也不能作为
+公开压力或第三方证据：
+
+```bash
+FORMULAGUARD_RUN_V5_PSL_E2E=1 python -m unittest \
+  tests.test_v5_psl_end_to_end.V5PSLSyntheticEndToEndTests
+```
+
+## V5-Core 历史复现入口（冻结路径已停止）
+
+以下命令只保留旧证据复现用途，不是当前迭代计划：
 
 ```bat
 run_v5_core_pilot.cmd --workers 24

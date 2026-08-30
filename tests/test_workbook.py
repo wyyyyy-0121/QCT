@@ -48,6 +48,22 @@ class WorkbookTests(unittest.TestCase):
         self.assertFalse(changed_errors)
         self.assertNotEqual(base[("Model", "E1")], changed[("Model", "E1")])
 
+    def test_value_override_changes_inputs_without_mutating_model(self):
+        model = simple_model()
+        base, base_errors = model.evaluate()
+        changed, changed_errors = model.evaluate(value_overrides={("Model", "A1"): 20})
+        repeated, repeated_errors = model.evaluate()
+        self.assertFalse(base_errors)
+        self.assertFalse(changed_errors)
+        self.assertFalse(repeated_errors)
+        self.assertNotEqual(base[("Model", "C1")], changed[("Model", "C1")])
+        self.assertEqual(base, repeated)
+
+    def test_value_override_rejects_formula_cell(self):
+        model = simple_model()
+        with self.assertRaisesRegex(ValueError, "formula cells"):
+            model.evaluate(value_overrides={("Model", "C1"): 99})
+
 
 if __name__ == "__main__":
     unittest.main()

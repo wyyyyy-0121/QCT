@@ -10,12 +10,17 @@
 ## 外部数据
 
 - PropagationBench-Synthetic 是本项目代码生成的合成数据，随本项目 MIT 代码许可证发布时应单独标注其合成性质。
-- Enron Error Corpus、Modified EUSES、FoRepBench 和 SpreadsheetBench 均由各自作者或机构发布，不受本项目 MIT 许可证覆盖。
+- Enron Error Corpus、Modified EUSES、Info1、Integer Corpus、FoRepBench 和
+  SpreadsheetBench 均由各自作者或机构发布，不受本项目 MIT 许可证覆盖。
 - 在确认具体许可和再分发条件前，不把第三方工作簿提交到公开仓库；只提交下载说明、文件哈希和排除清单。
+- V5-PSL注册表固定了2026-08-30复核的三个TUGraz压缩包SHA-256、Enron
+  压缩包SHA-256、FoRepBench提交`d17e2780...`和SpreadsheetBench提交
+  `49b73a94...`。固定哈希只证明取得内容一致，不代表自动获得再分发许可。
+- FoRepBench只用于修复公式对审计，SpreadsheetBench只用于解析与安全拒绝压力；
+  两者结果不得混入静默源错误定位准确率。
 
 ## 思想级基线
 
 `excelint_like`、`warder_like`、`behavior` 等名称表示基于论文思想的透明简化复现，不是原作者官方代码，也不应在论文或答辩中表述为完整复现。
 
 具体论文和数据链接见 `research/LITERATURE_MATRIX.md` 与 `research/DATA_SOURCES.md`。
-

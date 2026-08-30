@@ -40,11 +40,25 @@ VERSION_ALIASES = {
         "status": "rejected_for_main_freeze",
     },
     "v5": {
-        "canonical_id": "v5-core-dev-r2",
+        "canonical_id": "v5-psl-dev1",
         "legacy_id": None,
         "legacy_module": None,
-        "role": "reserved_for_candidate_centric_core_redesign",
-        "status": "development",
+        "role": "role_conditioned_perturbation_selective_localization",
+        "status": "implemented_development_not_frozen",
+    },
+    "v5-core-cc": {
+        "canonical_id": "v5-core-candidate-centric-dev",
+        "legacy_id": None,
+        "legacy_module": "formulaguard.v5_core",
+        "role": "candidate_centric_core_reconstruction",
+        "status": "rejected_locked_validation",
+    },
+    "v5-core-r2": {
+        "canonical_id": "v5-core-r2-dnca-dev",
+        "legacy_id": None,
+        "legacy_module": "formulaguard.v5_core_r2",
+        "role": "dual_null_causal_attribution_research_line",
+        "status": "rejected_pressure_safety",
     },
 }
 

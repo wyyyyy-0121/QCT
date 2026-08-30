@@ -1,0 +1,17 @@
+{
+  "independent_custodian": true,
+  "model_was_run": false,
+  "labels_withheld_until_prediction_lock": true,
+  "permissions_and_anonymization_checked": true,
+  "all_cases_recalculated_without_runtime_errors": true,
+  "reviewers_worked_independently": true,
+  "creators_did_not_serve_as_reviewers": true,
+  "creators_and_reviewers_received_no_model_outputs": true,
+  "custodian_id": null,
+  "calculation_engine": null,
+  "calculation_engine_version": null,
+  "permission_evidence_sha256": null,
+  "anonymization_evidence_sha256": null,
+  "public_release_channel": "private_to_evaluation_team_unless_redistribution_is_authorized",
+  "notes": "Use a stable pseudonymous custodian ID; hashes must bind external permission and anonymization evidence notes."
+}

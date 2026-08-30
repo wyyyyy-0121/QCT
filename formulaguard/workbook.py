@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable, Mapping
 
-from .a1 import Address, iter_rect, parse_address, plain_address
+from .a1 import iter_rect, parse_address, plain_address
 from .formula import (
     Binary,
     FormulaSyntaxError,
@@ -36,6 +36,25 @@ NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 NS_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 NS_PKG_REL = "http://schemas.openxmlformats.org/package/2006/relationships"
 NS = {"x": NS_MAIN, "r": NS_REL}
+
+
+BUILTIN_NUMBER_FORMATS = {
+    0: "General",
+    1: "0",
+    2: "0.00",
+    9: "0%",
+    10: "0.00%",
+    14: "mm-dd-yy",
+    15: "d-mmm-yy",
+    16: "d-mmm",
+    17: "mmm-yy",
+    18: "h:mm AM/PM",
+    19: "h:mm:ss AM/PM",
+    20: "h:mm",
+    21: "h:mm:ss",
+    22: "m/d/yy h:mm",
+    49: "@",
+}
 
 
 @dataclass
@@ -116,10 +135,33 @@ class DependencyGraph:
 
 
 class WorkbookModel:
-    def __init__(self, cells: Mapping[CellKey, object], formulas: Mapping[CellKey, str], source: str = ""):
+    def __init__(
+        self,
+        cells: Mapping[CellKey, object],
+        formulas: Mapping[CellKey, str],
+        source: str = "",
+        *,
+        cell_visibility: Mapping[CellKey, bool] | None = None,
+        number_formats: Mapping[CellKey, str] | None = None,
+        sheet_visibility: Mapping[str, bool] | None = None,
+    ):
         self.cells = dict(cells)
         self.formulas = {key: value if value.startswith("=") else "=" + value for key, value in formulas.items()}
         self.source = source
+        all_cells = set(self.cells) | set(self.formulas)
+        self.cell_visibility = {
+            key: bool((cell_visibility or {}).get(key, True))
+            for key in all_cells
+        }
+        self.number_formats = {
+            key: str(value)
+            for key, value in (number_formats or {}).items()
+            if key in all_cells
+        }
+        self.sheet_visibility = {
+            str(sheet): bool(visible)
+            for sheet, visible in (sheet_visibility or {}).items()
+        }
         self._ast_cache: dict[str, Node] = {}
 
     @classmethod
@@ -137,42 +179,83 @@ class WorkbookModel:
                 rel.attrib["Id"]: rel.attrib["Target"]
                 for rel in rel_root.findall(f"{{{NS_PKG_REL}}}Relationship")
             }
-            sheet_paths: list[tuple[str, str]] = []
+            sheet_paths: list[tuple[str, str, bool]] = []
             for sheet in workbook_root.findall("x:sheets/x:sheet", NS):
                 name = sheet.attrib["name"]
                 rel_id = sheet.attrib[f"{{{NS_REL}}}id"]
                 target = rels[rel_id]
                 target_path = target.lstrip("/") if target.startswith("/") else posixpath.normpath(posixpath.join("xl", target))
-                sheet_paths.append((name, target_path))
+                sheet_paths.append((name, target_path, sheet.attrib.get("state", "visible") == "visible"))
+
+            style_formats = cls._read_number_formats(zf)
 
             cells: dict[CellKey, object] = {}
             formulas: dict[CellKey, str] = {}
-            for sheet_name, sheet_path in sheet_paths:
+            cell_visibility: dict[CellKey, bool] = {}
+            number_formats: dict[CellKey, str] = {}
+            sheet_visibility = {name: visible for name, _, visible in sheet_paths}
+            for sheet_name, sheet_path, sheet_visible in sheet_paths:
                 root = ET.fromstring(zf.read(sheet_path))
+                hidden_columns = [
+                    (int(col.attrib.get("min", "0")), int(col.attrib.get("max", "0")))
+                    for col in root.findall("x:cols/x:col", NS)
+                    if col.attrib.get("hidden") in {"1", "true"}
+                ]
                 shared_formulas: dict[str, tuple[str, str]] = {}
                 pending_shared: list[tuple[str, str]] = []
-                for cell in root.findall(".//x:sheetData/x:row/x:c", NS):
-                    address = plain_address(cell.attrib["r"])
-                    f_node = cell.find("x:f", NS)
-                    if f_node is not None:
-                        formula_text = f_node.text or ""
-                        shared_index = f_node.attrib.get("si")
-                        if formula_text:
-                            formula = "=" + formula_text
-                            formulas[(sheet_name, address)] = formula
-                            if shared_index is not None:
-                                shared_formulas[shared_index] = (address, formula)
-                        elif shared_index is not None:
-                            pending_shared.append((address, shared_index))
-                    value = cls._cell_value(cell, shared_strings)
-                    if value is not None:
-                        cells[(sheet_name, address)] = value
+                for row in root.findall(".//x:sheetData/x:row", NS):
+                    row_visible = row.attrib.get("hidden") not in {"1", "true"}
+                    for cell in row.findall("x:c", NS):
+                        address = plain_address(cell.attrib["r"])
+                        key = (sheet_name, address)
+                        column = parse_address(address).col
+                        column_visible = not any(start <= column <= end for start, end in hidden_columns)
+                        cell_visibility[key] = sheet_visible and row_visible and column_visible
+                        style_index = int(cell.attrib.get("s", "0"))
+                        if style_index in style_formats:
+                            number_formats[key] = style_formats[style_index]
+                        f_node = cell.find("x:f", NS)
+                        if f_node is not None:
+                            formula_text = f_node.text or ""
+                            shared_index = f_node.attrib.get("si")
+                            if formula_text:
+                                formula = "=" + formula_text
+                                formulas[key] = formula
+                                if shared_index is not None:
+                                    shared_formulas[shared_index] = (address, formula)
+                            elif shared_index is not None:
+                                pending_shared.append((address, shared_index))
+                        value = cls._cell_value(cell, shared_strings)
+                        if value is not None:
+                            cells[key] = value
                 for address, shared_index in pending_shared:
                     if shared_index not in shared_formulas:
                         continue
                     source_addr, source_formula = shared_formulas[shared_index]
                     formulas[(sheet_name, address)] = translate_formula(source_formula, source_addr, address)
-        return cls(cells, formulas, source=str(path))
+        return cls(
+            cells,
+            formulas,
+            source=str(path),
+            cell_visibility=cell_visibility,
+            number_formats=number_formats,
+            sheet_visibility=sheet_visibility,
+        )
+
+    @staticmethod
+    def _read_number_formats(zf: zipfile.ZipFile) -> dict[int, str]:
+        if "xl/styles.xml" not in zf.namelist():
+            return {}
+        root = ET.fromstring(zf.read("xl/styles.xml"))
+        custom = {
+            int(item.attrib["numFmtId"]): item.attrib.get("formatCode", "")
+            for item in root.findall("x:numFmts/x:numFmt", NS)
+        }
+        result: dict[int, str] = {}
+        for index, style in enumerate(root.findall("x:cellXfs/x:xf", NS)):
+            format_id = int(style.attrib.get("numFmtId", "0"))
+            result[index] = custom.get(format_id, BUILTIN_NUMBER_FORMATS.get(format_id, f"builtin:{format_id}"))
+        return result
 
     @staticmethod
     def _read_shared_strings(zf: zipfile.ZipFile) -> list[str]:
@@ -208,6 +291,20 @@ class WorkbookModel:
     @property
     def formula_cells(self) -> list[CellKey]:
         return sorted(self.formulas)
+
+    @property
+    def visible_text_cells(self) -> dict[CellKey, str]:
+        return {
+            key: value
+            for key, value in self.cells.items()
+            if isinstance(value, str) and self.is_visible(key)
+        }
+
+    def is_visible(self, key: CellKey) -> bool:
+        return self.cell_visibility.get(key, self.sheet_visibility.get(key[0], True))
+
+    def number_format(self, key: CellKey) -> str:
+        return self.number_formats.get(key, "General")
 
     def ast(self, formula: str) -> Node:
         if formula not in self._ast_cache:
@@ -253,9 +350,20 @@ class WorkbookModel:
             dependents.setdefault(key, set())
         return DependencyGraph(dict(precedents), dict(dependents))
 
-    def evaluate(self, overrides: Mapping[CellKey, str] | None = None):
+    def evaluate(
+        self,
+        overrides: Mapping[CellKey, str] | None = None,
+        *,
+        value_overrides: Mapping[CellKey, object] | None = None,
+    ):
         overrides = overrides or {}
+        value_overrides = value_overrides or {}
+        overlap = set(value_overrides) & (set(self.formulas) | set(overrides))
+        if overlap:
+            labels = ", ".join(f"{sheet}!{address}" for sheet, address in sorted(overlap))
+            raise ValueError(f"Value overrides cannot replace formula cells: {labels}")
         values: dict[CellKey, object] = dict(self.cells)
+        values.update(value_overrides)
         errors: dict[CellKey, str] = {}
         visiting: set[CellKey] = set()
         computed: set[CellKey] = set()
@@ -267,7 +375,7 @@ class WorkbookModel:
                 return values[key]
             formula = overrides.get(key, self.formulas.get(key))
             if formula is None:
-                return self.cells.get(key, 0.0)
+                return values.get(key, 0.0)
             # Cached XLSX values are not trusted for formulas; force evaluation.
             values.pop(key, None)
             if key in visiting:

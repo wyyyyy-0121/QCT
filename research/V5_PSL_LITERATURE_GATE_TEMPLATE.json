@@ -1,0 +1,83 @@
+{
+  "protocol": "v5_psl_literature_gate_v1",
+  "passed": false,
+  "primary_sources_verified": 0,
+  "claim_matrix_sha256": null,
+  "reviewed_sources": [
+    {
+      "claim_area": "spreadsheet ambiguity",
+      "citation_key": null,
+      "title": null,
+      "stable_locator": null,
+      "primary_source_checked": false,
+      "checked_on": null,
+      "overlap_assessment": null,
+      "permitted_claim": null,
+      "evidence_sha256": null
+    },
+    {
+      "claim_area": "metamorphic spreadsheet testing",
+      "citation_key": null,
+      "title": null,
+      "stable_locator": null,
+      "primary_source_checked": false,
+      "checked_on": null,
+      "overlap_assessment": null,
+      "permitted_claim": null,
+      "evidence_sha256": null
+    },
+    {
+      "claim_area": "invariant-based spreadsheet debugging",
+      "citation_key": null,
+      "title": null,
+      "stable_locator": null,
+      "primary_source_checked": false,
+      "checked_on": null,
+      "overlap_assessment": null,
+      "permitted_claim": null,
+      "evidence_sha256": null
+    },
+    {
+      "claim_area": "spreadsheet formula-role outlier detection",
+      "citation_key": null,
+      "title": null,
+      "stable_locator": null,
+      "primary_source_checked": false,
+      "checked_on": null,
+      "overlap_assessment": null,
+      "permitted_claim": null,
+      "evidence_sha256": null
+    },
+    {
+      "claim_area": "interventional debugging",
+      "citation_key": null,
+      "title": null,
+      "stable_locator": null,
+      "primary_source_checked": false,
+      "checked_on": null,
+      "overlap_assessment": null,
+      "permitted_claim": null,
+      "evidence_sha256": null
+    },
+    {
+      "claim_area": "selective prediction",
+      "citation_key": null,
+      "title": null,
+      "stable_locator": null,
+      "primary_source_checked": false,
+      "checked_on": null,
+      "overlap_assessment": null,
+      "permitted_claim": null,
+      "evidence_sha256": null
+    }
+  ],
+  "unresolved_claims": [
+    "spreadsheet ambiguity",
+    "metamorphic spreadsheet testing",
+    "invariant-based spreadsheet debugging",
+    "spreadsheet formula-role outlier detection",
+    "interventional debugging",
+    "selective prediction"
+  ],
+  "note": "Do not set passed=true until each primary paper and the claim matrix have been independently checked."
+}

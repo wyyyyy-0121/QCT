@@ -6,7 +6,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .api import localize
+from .api import diagnose, localize
 from .v5 import v5_scores
 from .v4x import v4_1_scores
 from .workbook import WorkbookModel
@@ -27,11 +27,13 @@ def build_parser():
 def main(argv=None):
     args = build_parser().parse_args(argv)
     gir_weights = (0.35, 0.50, 0.10, 0.05)
+    loaded_config = None
     if args.config:
-        config = json.loads(args.config.read_text(encoding="utf-8"))
-        args.candidate_limit = int(config["candidate_limit"])
-        if "gir_weights" in config:
-            gir_weights = tuple(float(value) for value in config["gir_weights"])
+        loaded_config = json.loads(args.config.read_text(encoding="utf-8"))
+        if "candidate_limit" in loaded_config:
+            args.candidate_limit = int(loaded_config["candidate_limit"])
+        if "gir_weights" in loaded_config:
+            gir_weights = tuple(float(value) for value in loaded_config["gir_weights"])
     model = WorkbookModel.from_xlsx(args.workbook)
     v5_core_methods = {
         "formulaguard_v5_core", "formulaguard_v5_core_rule", "v5_core", "v5_core_rule",
@@ -49,8 +51,17 @@ def main(argv=None):
         "v4.3", "v4_3", "formulaguard_v4_3", "formulaguard_v4_3_a",
         "formulaguard_v4_3_b", "formulaguard_v4_3_c",
     }
-    if args.method.lower() in v5_core_r2_methods:
-        r2_config = json.loads(args.config.read_text(encoding="utf-8")) if args.config else None
+    psl_methods = {"v5_psl", "v5-psl", "formulaguard_v5_psl", "v5_psl_dev1"}
+    diagnosis = None
+    if args.method.lower() in psl_methods:
+        diagnosis = diagnose(model, "v5_psl", config=loaded_config)
+        results = list(diagnosis.ranking)
+        print(f"state={diagnosis.state.value} review_cells={len(diagnosis.review_cells)} "
+              f"support={diagnosis.support.valid_scenarios}/{diagnosis.support.requested_scenarios}")
+        if diagnosis.reason_codes:
+            print(f"reason={','.join(diagnosis.reason_codes)}")
+    elif args.method.lower() in v5_core_r2_methods:
+        r2_config = loaded_config
         results = localize(
             model,
             args.method,
@@ -113,7 +124,8 @@ def main(argv=None):
         print(f"    affected={row['affected_formula_count']} impact={path_text}")
     if args.json_path:
         args.json_path.parent.mkdir(parents=True, exist_ok=True)
-        args.json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        output = diagnosis.as_dict() if diagnosis is not None else payload
+        args.json_path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0
 
 

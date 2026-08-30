@@ -6,12 +6,19 @@ from .localize import LocalizationResult, localize as _legacy_localize
 from .v4x import v4_1_scores, v4_3_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
+from .v5_psl import SelectiveDiagnosis, diagnose_v5_psl, v5_psl_scores
 from .v6 import v6_scores
 from .workbook import WorkbookModel
 
 
 def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> list[LocalizationResult]:
     normalized = method.lower().replace("-", "_")
+    if normalized in {"v5_psl", "formulaguard_v5_psl", "v5_psl_dev1"}:
+        config = kwargs.pop("config", None)
+        ablation = kwargs.pop("ablation", None)
+        if kwargs:
+            raise TypeError(f"Unsupported V5-PSL arguments: {', '.join(sorted(kwargs))}")
+        return v5_psl_scores(model, config=config, ablation=ablation)
     if normalized in {
         "formulaguard_v5_core_r2", "v5_core_r2", "v5_core_r2_full",
         "v5_core_r2_source", "v5_core_r2_placebo",
@@ -104,7 +111,20 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
     return _legacy_localize(model, method, **kwargs)
 
 
+def diagnose(model: WorkbookModel, method: str = "v5_psl", **kwargs) -> SelectiveDiagnosis:
+    """Return a workbook-level selective decision plus the complete ranking."""
+    normalized = method.lower().replace("-", "_")
+    if normalized not in {"v5_psl", "formulaguard_v5_psl", "v5_psl_dev1"}:
+        raise ValueError("Selective diagnosis is currently defined only for V5-PSL")
+    config = kwargs.pop("config", None)
+    ablation = kwargs.pop("ablation", None)
+    if kwargs:
+        raise TypeError(f"Unsupported V5-PSL arguments: {', '.join(sorted(kwargs))}")
+    return diagnose_v5_psl(model, config=config, ablation=ablation)
+
+
 __all__ = [
-    "LocalizationResult", "localize", "v4_1_scores", "v4_3_scores",
-    "v5_core_scores", "v5_core_r2_scores", "v6_scores",
+    "LocalizationResult", "SelectiveDiagnosis", "diagnose", "localize",
+    "v4_1_scores", "v4_3_scores", "v5_core_scores", "v5_core_r2_scores",
+    "v5_psl_scores", "v6_scores",
 ]
