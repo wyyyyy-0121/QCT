@@ -9,6 +9,14 @@ from unittest.mock import patch
 from scripts.acquire_cwrp_sheetjs import acquire, collect_workbooks, parse_tree_snapshot
 from scripts.build_v6_dataset import write_xlsx
 from scripts.convert_cwrp_sheetjs import convert, install_converted
+from scripts.build_cwrp_corpus import cluster_profiles, read_targets
+from formulaguard.cwrp import (
+    formula_count_ratio_eligible,
+    formula_role_fingerprint,
+    weighted_jaccard,
+    workbook_profile,
+)
+from formulaguard.workbook import WorkbookModel
 
 
 def digest(path: Path) -> str:
@@ -211,6 +219,86 @@ class CWRPConversionTests(unittest.TestCase):
                     libreoffice=str(converter),
                     timeout_seconds=10,
                 )
+
+
+class CWRPStructuralProfileTests(unittest.TestCase):
+    def test_target_profile_reader_rejects_fault_label_columns(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "targets.csv"
+            path.write_text(
+                "unit_id,cohort,structure_cluster_id,path,workbook_sha256,source_cell\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(ValueError, "forbidden=.*source_cell"):
+                read_targets(path)
+
+    def test_role_fingerprint_removes_numbers_and_sheet_names(self):
+        left = formula_role_fingerprint("=SUM('Inputs'!A1:A3)+10", "C5", "Model")
+        right = formula_role_fingerprint("=SUM('Private Data'!A1:A3)+999", "C5", "Output")
+        self.assertEqual(left, right)
+        self.assertNotIn("INPUTS", left.upper())
+        self.assertNotIn("999", right)
+        local = formula_role_fingerprint("=A1", "C5", "Model")
+        external = formula_role_fingerprint("=Other!A1", "C5", "Model")
+        self.assertNotEqual(local, external)
+
+    def test_workbook_profile_is_translation_and_sheet_rename_invariant(self):
+        first = WorkbookModel.from_cells(
+            {("Private", "A1"): "Alice", ("Private", "B1"): 10},
+            {("Private", "C1"): "=B1*2", ("Private", "C2"): "=B1+5"},
+        )
+        translated = WorkbookModel.from_cells(
+            {("Renamed", "D7"): "Bob", ("Renamed", "E7"): 999},
+            {("Renamed", "F7"): "=E7*8", ("Renamed", "F8"): "=E7+42"},
+        )
+        left = workbook_profile(first)
+        right = workbook_profile(translated)
+        self.assertEqual(left["structural_signature"], right["structural_signature"])
+        self.assertEqual(left["role_fingerprint_counts"], right["role_fingerprint_counts"])
+        serialized = json.dumps(left)
+        self.assertNotIn("Alice", serialized)
+        self.assertNotIn("Private", serialized)
+        self.assertNotIn("10", json.dumps(left["role_fingerprint_counts"]))
+        self.assertEqual(left["sensitive_text_features"], 0)
+
+    def test_weighted_jaccard_and_formula_count_ratio_are_fixed(self):
+        self.assertAlmostEqual(weighted_jaccard({"a": 2, "b": 1}, {"a": 1, "c": 1}), 0.25)
+        self.assertTrue(formula_count_ratio_eligible(10, 20))
+        self.assertTrue(formula_count_ratio_eligible(20, 10))
+        self.assertFalse(formula_count_ratio_eligible(4, 10))
+
+    def test_target_overlap_excludes_entire_internal_template_component(self):
+        def row(workbook_id, fingerprint_counts, signature):
+            counts = [
+                {"fingerprint": key, "count": value}
+                for key, value in sorted(fingerprint_counts.items())
+            ]
+            return {
+                "workbook_id": workbook_id,
+                "workbook_sha256": workbook_id * 64,
+                "relative_path": f"nuix/{workbook_id}.xlsx",
+                "profile": {
+                    "formula_count": sum(fingerprint_counts.values()),
+                    "parseable_formula_count": sum(fingerprint_counts.values()),
+                    "role_fingerprint_counts": counts,
+                    "formula_multiset_sha256": hashlib.sha256(workbook_id.encode()).hexdigest(),
+                    "structural_signature": signature,
+                },
+            }
+
+        corpus = [
+            row("a", {"SUM": 10}, "structure-a"),
+            row("b", {"SUM": 9, "MAX": 1}, "structure-b"),
+            row("c", {"OTHER": 10}, "structure-c"),
+        ]
+        targets = [row("t", {"SUM": 10}, "target-structure")]
+        manifest, audit = cluster_profiles(corpus, targets)
+        by_id = {item["workbook_id"]: item for item in manifest}
+        self.assertTrue(by_id["a"]["excluded_target_overlap_component"])
+        self.assertTrue(by_id["b"]["excluded_target_overlap_component"])
+        self.assertFalse(by_id["c"]["excluded_target_overlap_component"])
+        self.assertEqual(by_id["a"]["template_group_id"], by_id["b"]["template_group_id"])
+        self.assertEqual(audit["excluded_component_workbooks"], 2)
 
 
 if __name__ == "__main__":
