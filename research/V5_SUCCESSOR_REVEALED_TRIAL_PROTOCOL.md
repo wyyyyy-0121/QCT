@@ -33,6 +33,20 @@ templates, formula-set preservation, license declarations and overlap with all
 revealed development data. Failed design checks downgrade the package further
 to interface smoke data; cases are not silently deleted to satisfy quotas.
 
+The immutable intake command is:
+
+```bash
+python scripts/audit_v5_successor_revealed_trial.py \
+  --package-root data/external/v5_psl/revealed_trial/FormulaGuard_V5_PSL_240+120_六制题人最终交付 \
+  --output results/v5_successor_revealed_trial_intake.json
+```
+
+It recognizes the historical v1 PUBLIC/SECRET format from Git history, verifies
+both archive hashes and the PUBLIC-to-SECRET precommit, audits member paths and
+schemas without extraction, and records a recursive directory hash inventory.
+It does not invoke FormulaGuard. Declared creator/reviewer counts are checked as
+package structure, but personnel identity and independence remain unverified.
+
 ## Single fixed replication
 
 The only successor signal evaluated is the already observed rule:
