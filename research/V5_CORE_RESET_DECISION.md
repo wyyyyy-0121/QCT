@@ -1,5 +1,9 @@
 # FormulaGuard 主模型核心重置判定
 
+> 2026-08-31 后续复盘：本文保留为 `core-reset-a` 的历史提出记录，但其实现授权已在
+> `V5_CORE_REASSESSMENT_AND_CORE_RESET_B_PLAN.md` 中撤回。尚未产生
+> `core-reset-a` 正式审计结果；当前研究命令以 `core-reset-b` 计划为准。
+
 日期：2026-08-31
 状态：在继任模型预注册和实现之前固定
 

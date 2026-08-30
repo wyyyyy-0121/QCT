@@ -1,5 +1,9 @@
 # FormulaGuard core-reset-a 信息上限审计协议
 
+> 2026-08-31 后续复盘：本协议在正式评分前被
+> `V5_CORE_REASSESSMENT_AND_CORE_RESET_B_PLAN.md` 替代。三通道、RRF、固定
+> `2/2/1` 和深度 2 选择器只保留为未来诊断参照，不再授权实现 `core-reset-a`。
+
 固定日期：2026-08-31
 状态：在审计实现和继任模型实现之前固定
 
