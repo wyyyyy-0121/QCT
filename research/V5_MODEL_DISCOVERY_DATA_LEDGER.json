@@ -120,8 +120,10 @@
       "role": "final_blind_confirmation",
       "allowed_claim": "only after prediction lock and one-time scoring",
       "forbidden_claim": "development, tuning, or pre-lock inspection",
-      "path": "outside_repository_owner_supplied",
-      "unlock_condition": "complete_prediction_lock_committed"
+      "path": "/home/ayaka/code/FormulaGuard_240_120/",
+      "path_status": "owner_placed_uninspected",
+      "execution_authorization": "one_time_direct_run_without_additional_owner_confirmation",
+      "unlock_condition": "candidate_spec_source_config_frozen_and_committed_and_complete_prediction_lock_committed"
     },
     {
       "id": "forepbench",

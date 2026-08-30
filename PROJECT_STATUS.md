@@ -17,9 +17,11 @@
 - CWRP 首份 v1 回执错误使用等宽 ECE；原回执永久保留。提交 `674b6df` 只把统计
   修正为预注册的等频 ECE，校正 v2 的逐目标预测哈希与 v1 完全相同，因此不是结果后
   调参。完整记录见 `research/V5_CWRP_RESULT.md`。
-- 保密 `240+120` 已由用户放在仓库外 `/home/ayaka/code/FormulaGuard_240_120/`；当前未
-  列目录、未哈希、未读取。只有新候选规格、源码冻结和预测锁全部完成后才允许一次性
-  使用。CWRP 已失败，未达到该条件，因此保密数据继续封存。
+- 新保管人保密 `240+120` 已由用户放在仓库外
+  `/home/ayaka/code/FormulaGuard_240_120/`；当前未列目录、未哈希、未读取。用户已授权：
+  当新候选规格、源码与配置均已提交冻结，且完整预测锁已生成并提交后，Codex 可直接
+  执行一次受保护集验证，无需再次等待用户确认或要求用户手工投喂。CWRP 已失败，未达到
+  这些解锁条件，因此该目录继续封存。
 - Phase 0 产物：
   `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`、
   `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`、
