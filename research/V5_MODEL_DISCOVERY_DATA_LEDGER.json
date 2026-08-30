@@ -1,0 +1,164 @@
+{
+  "protocol": "formulaguard_model_discovery_data_ledger_v1",
+  "date": "2026-08-31",
+  "plan": "research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md",
+  "status": "phase_0_freeze_in_progress",
+  "source_audit": {
+    "path": "results/core_reset_b_phase0/data_audit.json",
+    "protocol": "core_reset_b_phase0_data_audit_v1",
+    "gate_0_passed": true,
+    "events": 220,
+    "provenance_units": 147,
+    "structure_groups": 137,
+    "forbidden_inputs_read": []
+  },
+  "prediction_contract": {
+    "labels_allowed_during_prediction": false,
+    "forbidden_fields": [
+      "correct_formula",
+      "source_cells",
+      "error_type",
+      "case_kind",
+      "corpus_id",
+      "template_id",
+      "filename_semantics",
+      "secret_labels"
+    ],
+    "outer_group_key": "structure_group",
+    "review_budget": 5,
+    "unread_trial_prefixes": [
+      "data/external/v5_psl/revealed_trial",
+      "data/external/v5_psl/custodian",
+      "data/external/v5_psl/final_blind"
+    ]
+  },
+  "cohorts": [
+    {
+      "id": "enron",
+      "evidence_level": "N1_natural_error",
+      "event_count": 30,
+      "independent_units": 25,
+      "unit": "workbook_group",
+      "label_status": "revealed",
+      "role": "development_and_migration_safety",
+      "allowed_claim": "limited natural-error failure analysis and safety evidence",
+      "forbidden_claim": "independent confirmation or universal natural-error superiority",
+      "path": "data/external/enron/manifest.csv"
+    },
+    {
+      "id": "info1",
+      "evidence_level": "N1_limited_real_fault",
+      "event_count": 2,
+      "independent_units": 2,
+      "unit": "workbook_group",
+      "label_status": "revealed",
+      "role": "supplemental_development_only",
+      "allowed_claim": "small supplemental real-fault case evidence",
+      "forbidden_claim": "standalone generalization",
+      "path": "results/v5_psl_pressure_inputs/public_pressure_manifest.csv"
+    },
+    {
+      "id": "public_pressure",
+      "evidence_level": "N2_injected_fault",
+      "event_count": 90,
+      "error_count": 60,
+      "control_count": 30,
+      "independent_units": 22,
+      "control_units": 11,
+      "unit": "original_workbook_group",
+      "label_status": "revealed",
+      "role": "type_and_structure_pressure_development",
+      "allowed_claim": "injected-fault localization and control safety on the registered subset",
+      "forbidden_claim": "natural-error prevalence or six independent corpus confirmations",
+      "path": "results/v5_psl_pressure_inputs/public_pressure_manifest.csv"
+    },
+    {
+      "id": "historical_100",
+      "evidence_level": "N2_human_constructed_fault",
+      "event_count": 100,
+      "independent_units": 100,
+      "structure_groups": 95,
+      "unit": "workbook_group",
+      "label_status": "revealed",
+      "role": "retrospective_structure_development",
+      "allowed_claim": "reported structural stress and failure analysis",
+      "forbidden_claim": "100 verified independent producer templates",
+      "path": "results/core_reset_b_phase0/scoring_groups.csv"
+    },
+    {
+      "id": "existing_synthetic",
+      "evidence_level": "N3_same_generator_synthetic",
+      "event_count": null,
+      "independent_units": null,
+      "unit": "generator_structure_group",
+      "label_status": "revealed",
+      "role": "engineering_regression_and_mechanism_tests",
+      "allowed_claim": "implementation, regression and controlled mechanism behavior",
+      "forbidden_claim": "real-workbook generalization",
+      "path": "data/propagationbench_full/"
+    },
+    {
+      "id": "old_trial_240_120",
+      "evidence_level": "N2_external_template_trial",
+      "event_count": 360,
+      "independent_units": null,
+      "unit": "custodian_template_group",
+      "label_status": "unread",
+      "role": "frozen_revealed_trial_after_candidate_lock",
+      "allowed_claim": "frozen revealed-trial replication only",
+      "forbidden_claim": "external validation before candidate lock or tuning evidence",
+      "path": "outside_repository_owner_supplied",
+      "unlock_condition": "candidate_lock_committed"
+    },
+    {
+      "id": "new_custodian_240_120",
+      "evidence_level": "N2_external_template_blind",
+      "event_count": 360,
+      "independent_units": 30,
+      "unit": "unseen_template_group",
+      "label_status": "unread",
+      "role": "final_blind_confirmation",
+      "allowed_claim": "only after prediction lock and one-time scoring",
+      "forbidden_claim": "development, tuning, or pre-lock inspection",
+      "path": "outside_repository_owner_supplied",
+      "unlock_condition": "complete_prediction_lock_committed"
+    },
+    {
+      "id": "forepbench",
+      "evidence_level": "U_repair_only",
+      "event_count": 618,
+      "independent_units": null,
+      "unit": "repair_item",
+      "label_status": "revealed",
+      "role": "repair_interface_pressure",
+      "allowed_claim": "repair-task behavior and parser compatibility",
+      "forbidden_claim": "silent-source localization accuracy",
+      "path": "data/external/v5_psl/raw/forepbench/"
+    },
+    {
+      "id": "spreadsheetbench",
+      "evidence_level": "U_unlabeled_parser_stress",
+      "event_count": null,
+      "independent_units": null,
+      "unit": "workbook",
+      "label_status": "unlabeled",
+      "role": "parser_coverage_and_safe_abstention",
+      "allowed_claim": "parsing coverage, runtime and explicit refusal",
+      "forbidden_claim": "root-cause localization accuracy",
+      "path": "data/external/v5_psl/raw/spreadsheetbench/"
+    }
+  ],
+  "grouping_rules": {
+    "public_pressure": "original_workbook_content_sha256",
+    "historical_100": "workbook_sha256_then_fixed_structural_near_duplicate_cluster",
+    "enron": "workbook_content_sha256",
+    "outer_split": "structure_cluster_when_available_else_provenance_group",
+    "paired_error_control": "same_original_workbook_group_and_same_outer_fold"
+  },
+  "claim_policy": {
+    "formal_v5_name": "only branch_A_after_final_blind_pass",
+    "auxiliary_name": "branch_B_remains_V4_series",
+    "natural_error_claim": "requires separately identified and partially unseen natural-error evidence",
+    "academic_baseline_claim": "requires original_or_validated_implementation_on_compatible_inputs"
+  }
+}

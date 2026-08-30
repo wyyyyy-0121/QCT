@@ -12,7 +12,22 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 
 正确公式和源错误标签只用于离线评价，不传给定位器。
 
-## 当前版本
+## 当前权威状态
+
+`V4-R1` 仍是唯一冻结主排序器；`V4.2-Review-B` 仅是 V4 系辅助复核位。
+`V4.1-PCG`、`V4.3-Semantic`、`V5-Core`、`V5-Core R2` 和 `V5-PSL` 都是已经结束的
+历史机制研究或负结果。当前研究代号是 `model-discovery`，在 Phase 0/1/2 的证据门
+通过前不会实现新的继任模型，也不会读取两套 `240+120` 数据。
+
+当前计划、任务契约、数据账本和功效报告见：
+
+- `research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md`
+- `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`
+- `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`
+- `research/V5_MODEL_DISCOVERY_DATA_LEDGER.json`
+- `research/V5_MODEL_DISCOVERY_POWER_REPORT.md`
+
+## 历史版本
 
 - v1：已冻结并完成864例full，保留为工程基线；其测试族结构重复，不作为最终跨结构结论。
 - v4-r1：当前冻结模型；代码、配置和历史证据保持不变。
@@ -21,9 +36,9 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 - V4.3-Semantic（历史代码名v6）：FFC/BSS语义重排机制实验；定位机制有效，但未通过正确表格误报等冻结门槛。
 - V5-Core / V5-Core R2：候选中心重构的历史开发线；均已实现并完成相应评测，
   但分别因锁定验证重合/Enron回归和最终压力安全门失败而否决。
-- V5-PSL-dev1：当前新开发线，以角色条件扰动响应指纹和显式可识别性门控产生
-  `localized`、`review`、`abstain_unidentifiable`或`unsupported`。代码与协议工具
-  已实现，但文献门、公开压力门和第三方240+120确认均未完成，因此不是正式V5。
+- V5-PSL-dev1：已终止的历史开发线，以角色条件扰动响应指纹和显式可识别性门控产生
+  `localized`、`review`、`abstain_unidentifiable`或`unsupported`。公开压力及唯一结构
+  修订均未通过，不能继续候选锁或第三方确认。
 
 正式命名、历史目录和复现别名的完整映射见
 `research\VERSION_LINEAGE_AND_NAMING_POLICY.md`。旧源码、冻结配置和结果目录保持原名，
