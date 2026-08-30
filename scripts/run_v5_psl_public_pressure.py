@@ -20,6 +20,7 @@ if str(ROOT) not in sys.path:
 from formulaguard.v5_psl import ABLATIONS, diagnose_v5_psl, v5_psl_default_parameters
 from formulaguard.v5_psl_corpora import LOCALIZATION_CORPORA
 from formulaguard.v5_psl_protocol import (
+    DEFAULT_WORKERS,
     DIAGNOSTIC_STATES,
     canonical_cell,
     combined_shards_sha256,
@@ -268,7 +269,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run V5-PSL public pressure and ablations")
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--workers", type=int, default=min(24, os.cpu_count() or 1))
+    parser.add_argument(
+        "--workers", type=int, default=min(DEFAULT_WORKERS, os.cpu_count() or 1),
+    )
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     if args.workers < 1:
@@ -299,6 +302,7 @@ def main() -> None:
         "excluded_cases": len(rows) - len(included),
         "git_commit": git_commit,
         "source_sha256": source_sha256,
+        "worker_processes_requested": args.workers,
         "clean_git_worktree_before_prediction": True,
         "methods": list(PRESSURE_METHODS),
         "parameters": json.loads(json.dumps(v5_psl_default_parameters())),
@@ -329,6 +333,11 @@ def main() -> None:
         else:
             pending.append(row)
     workers = min(args.workers, max(1, len(pending)))
+    print(
+        f"V5-PSL public pressure scheduling: workers={workers}; "
+        f"pending={len(pending)}; resumed={len(included) - len(pending)}",
+        flush=True,
+    )
     payloads = [(str(root), str(output), row["instance_id"], row["workbook"]) for row in pending]
     if workers == 1:
         for index, payload in enumerate(payloads, 1):

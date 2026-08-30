@@ -148,7 +148,11 @@ def workbook_pair(root: Path) -> tuple[Path, Path]:
     return original, changed
 
 
-def pressure_run(root: Path) -> tuple[Path, Path, dict[str, str]]:
+def pressure_run(
+    root: Path,
+    *,
+    case_count: int = 1,
+) -> tuple[Path, Path, dict[str, str]]:
     original, changed = workbook_pair(root)
     row = {
         "instance_id": "pressure_001",
@@ -163,22 +167,37 @@ def pressure_run(root: Path) -> tuple[Path, Path, dict[str, str]]:
         "exclusion_reason": "",
         "license_id": "unit-test",
     }
+    rows = [
+        {
+            **row,
+            "instance_id": f"pressure_{index:03d}",
+            "workbook": f"changed_{index:03d}.xlsx",
+        }
+        for index in range(1, case_count + 1)
+    ]
+    for current in rows:
+        (root / current["workbook"]).write_bytes(changed.read_bytes())
     manifest = root / "manifest.csv"
     with manifest.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=PRESSURE_FIELDS)
         writer.writeheader()
-        writer.writerow(row)
+        writer.writerows(rows)
     run = root / "run"
     (run / "shards").mkdir(parents=True)
-    shard = run / "shards/pressure_001.json"
-    shard.write_text(
-        json.dumps(predict_pressure_workbook(changed, row["instance_id"], row["workbook"])),
-        encoding="utf-8",
-    )
+    shards = []
+    for current in rows:
+        shard = run / "shards" / f"{current['instance_id']}.json"
+        shard.write_text(
+            json.dumps(predict_pressure_workbook(
+                root / current["workbook"], current["instance_id"], current["workbook"],
+            )),
+            encoding="utf-8",
+        )
+        shards.append(shard)
     metadata = {
         "protocol": "v5_psl_public_pressure_run_v1",
         "manifest_sha256": sha256(manifest),
-        "included_cases": 1,
+        "included_cases": len(rows),
         "excluded_cases": 0,
         "git_commit": git_head(),
         "source_sha256": {
@@ -196,15 +215,15 @@ def pressure_run(root: Path) -> tuple[Path, Path, dict[str, str]]:
     }
     metadata_path = run / "public_pressure_metadata.json"
     metadata_path.write_text(json.dumps(metadata), encoding="utf-8")
-    events = _write_events(run, [row])
-    signatures = _write_development_signatures(manifest, [row], run)
+    events = _write_events(run, rows)
+    signatures = _write_development_signatures(manifest, rows, run)
     completion = {
         "protocol": "v5_psl_public_pressure_completion_v1",
         "complete": True,
-        "cases": 1,
+        "cases": len(rows),
         "method_events": len(events),
         "methods": list(PRESSURE_METHODS),
-        "combined_shards_sha256": combined_shards_sha256([shard]),
+        "combined_shards_sha256": combined_shards_sha256(shards),
         "events_sha256": sha256(run / "public_pressure_events.csv"),
         "development_signatures": len(signatures),
         "development_signatures_sha256": sha256(
@@ -678,8 +697,8 @@ class V5PSLToolTests(unittest.TestCase):
     def test_public_pressure_audit_recomputes_events_and_action_budgets(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            manifest, run, row = pressure_run(root)
-            _audit_pressure_run(manifest, run)
+            manifest, run, row = pressure_run(root, case_count=2)
+            _audit_pressure_run(manifest, run, workers=2)
 
             events_path = run / "public_pressure_events.csv"
             with events_path.open("r", encoding="utf-8-sig", newline="") as handle:

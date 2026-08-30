@@ -21,6 +21,7 @@ from formulaguard.localize import LocalizationResult, v4_scores
 from formulaguard.v4x import v4_3_scores
 from formulaguard.v5_psl import diagnose_v5_psl, v5_psl_default_parameters
 from formulaguard.v5_psl_protocol import (
+    DEFAULT_WORKERS,
     DIAGNOSTIC_STATES,
     PREDICTION_METHODS,
     aggregate_file_sha256,
@@ -447,7 +448,9 @@ def main() -> None:
     parser.add_argument("--public", type=Path, required=True)
     parser.add_argument("--candidate-lock", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--workers", type=int, default=min(24, os.cpu_count() or 1))
+    parser.add_argument(
+        "--workers", type=int, default=min(DEFAULT_WORKERS, os.cpu_count() or 1),
+    )
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     if args.workers < 1:
@@ -475,6 +478,7 @@ def main() -> None:
         "candidate_lock_sha256": sha256(args.candidate_lock.resolve()),
         "candidate_id": candidate["candidate_id"],
         "git_commit": git_head(),
+        "worker_processes_requested": args.workers,
         "prediction_methods": list(PREDICTION_METHODS),
         "v5_psl_parameters": json.loads(json.dumps(v5_psl_default_parameters())),
         "v4_candidate_limit": 15,

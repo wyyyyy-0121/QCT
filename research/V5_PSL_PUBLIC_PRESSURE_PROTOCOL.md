@@ -65,7 +65,8 @@ python scripts/audit_v5_psl_public_pressure.py \
   --manifest /path/to/public_pressure_manifest.csv \
   --run results/v5_psl_public_pressure \
   --revision-log research/V5_PSL_MECHANISM_REVISION_LOG.json \
-  --output results/v5_psl_public_pressure_audit.json
+  --output results/v5_psl_public_pressure_audit.json \
+  --workers 24
 ```
 
 审计器要求运行目录文件集合精确匹配协议，逐个重算完整排名和`1/5/0`行动预算，

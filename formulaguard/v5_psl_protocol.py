@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Iterable, Mapping, Sequence
 
 
+DEFAULT_WORKERS = 24
 PUBLIC_FIELDS = ("instance_id", "workbook")
 CASE_FIELDS = (
     "instance_id",
@@ -422,7 +423,7 @@ def combined_shards_sha256(paths: Iterable[Path]) -> str:
 
 
 __all__ = [
-    "ACTION_STATES", "CASE_FIELDS", "DIAGNOSTIC_STATES", "ERROR_TYPES",
+    "ACTION_STATES", "CASE_FIELDS", "DEFAULT_WORKERS", "DIAGNOSTIC_STATES", "ERROR_TYPES",
     "EXPECTED_COUNTS", "PREDICTION_METHODS", "PUBLIC_FIELDS",
     "aggregate_file_sha256", "audit_design", "canonical_cell",
     "canonical_json_sha256", "combined_shards_sha256", "deterministic_zip",

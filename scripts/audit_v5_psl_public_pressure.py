@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import csv
 import hashlib
 import json
+import os
 import statistics
 import subprocess
 import sys
@@ -25,7 +27,12 @@ from formulaguard.v5_psl_corpora import (
     adapt_corpus,
     load_registry,
 )
-from formulaguard.v5_psl_protocol import canonical_json_sha256, combined_shards_sha256, sha256
+from formulaguard.v5_psl_protocol import (
+    DEFAULT_WORKERS,
+    canonical_json_sha256,
+    combined_shards_sha256,
+    sha256,
+)
 from scripts.run_v5_psl_public_pressure import (
     PRESSURE_EVENT_FIELDS,
     PRESSURE_METHODS,
@@ -75,6 +82,8 @@ def _read_signatures(path: Path) -> list[str]:
 def _audit_pressure_run(
     manifest_path: Path,
     run: Path,
+    *,
+    workers: int = DEFAULT_WORKERS,
 ) -> tuple[
     dict[str, object], dict[str, object], list[dict[str, str]], list[dict[str, str]]
 ]:
@@ -159,9 +168,26 @@ def _audit_pressure_run(
     for path in shard_paths:
         if path.is_symlink():
             raise ValueError(f"Public pressure shard must not be a symlink: {path.name}")
-        audit_shard(
-            path, rows_by_id[path.stem], manifest_path.parent, recompute=True,
+        audit_shard(path, rows_by_id[path.stem], manifest_path.parent)
+    if workers < 1:
+        raise ValueError("Public pressure audit workers must be positive")
+    recomputation_tasks = [
+        (str(path), dict(rows_by_id[path.stem]), str(manifest_path.parent))
+        for path in shard_paths
+    ]
+    if len(recomputation_tasks) == 1 or workers == 1:
+        for task in recomputation_tasks:
+            _recompute_pressure_shard(task)
+    else:
+        print(
+            f"V5-PSL audit scheduling: workers={min(workers, len(recomputation_tasks))}; "
+            f"shards={len(recomputation_tasks)}",
+            flush=True,
         )
+        with concurrent.futures.ProcessPoolExecutor(
+            max_workers=min(workers, len(recomputation_tasks)),
+        ) as executor:
+            list(executor.map(_recompute_pressure_shard, recomputation_tasks))
     combined = combined_shards_sha256(shard_paths)
     if completion.get("combined_shards_sha256") != combined:
         raise ValueError("Public pressure shard aggregate changed after completion")
@@ -184,6 +210,13 @@ def _audit_pressure_run(
     if completion.get("development_signatures_sha256") != sha256(signatures_path):
         raise ValueError("Development formula-change signatures changed")
     return metadata, completion, events, included
+
+
+def _recompute_pressure_shard(payload: tuple[str, dict[str, str], str]) -> str:
+    path_text, row, root_text = payload
+    path = Path(path_text)
+    audit_shard(path, row, Path(root_text), recompute=True)
+    return path.name
 
 
 def _summarize(rows: Sequence[Mapping[str, str]]) -> dict[str, object]:
@@ -500,7 +533,12 @@ def main() -> None:
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--revision-log", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--workers", type=int, default=min(DEFAULT_WORKERS, os.cpu_count() or 1),
+    )
     args = parser.parse_args()
+    if args.workers < 1:
+        parser.error("--workers must be positive")
     run = args.run.resolve()
     manifest_path = args.manifest.resolve()
     completion_path = run / "public_pressure_complete.json"
@@ -514,7 +552,9 @@ def main() -> None:
         )
         roles = _audit_supplemental_roles([path.resolve() for path in args.role_audits])
         revision_count = _revision_count(args.revision_log.resolve())
-        metadata, completion, events, _included = _audit_pressure_run(manifest_path, run)
+        metadata, completion, events, _included = _audit_pressure_run(
+            manifest_path, run, workers=args.workers,
+        )
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
         raise SystemExit(f"V5-PSL public pressure audit refused: {exc}") from exc
 
@@ -562,6 +602,7 @@ def main() -> None:
     }
     payload = {
         "protocol": "v5_psl_public_pressure_audit_v1",
+        "audit_worker_processes_requested": args.workers,
         "hard_gate_passed": all(gates.values()),
         "gates": gates,
         "corpora_audited": list(CORPUS_IDS),
