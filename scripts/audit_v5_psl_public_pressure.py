@@ -42,6 +42,7 @@ from scripts.run_v5_psl_public_pressure import (
     read_manifest,
 )
 from scripts.freeze_v5_psl_candidate import _git, candidate_source_files
+from scripts.tune_v5_psl_parameters import FOLD_COUNT, assign_group_folds
 
 
 def _mean(values: Iterable[float | int]) -> float:
@@ -221,6 +222,8 @@ def _recompute_pressure_shard(payload: tuple[str, dict[str, str], str]) -> str:
 
 def _summarize(rows: Sequence[Mapping[str, str]]) -> dict[str, object]:
     errors = [row for row in rows if row["case_kind"] == "error"]
+    identifiable = [row for row in errors if row["identifiability"] == "identifiable"]
+    localized = [row for row in identifiable if row["state"] == "localized"]
     controls = [row for row in rows if row["case_kind"] == "control"]
     inspected = sum(int(row["inspected_cells"]) for row in rows)
     found = sum(int(row["action_hit"]) for row in errors)
@@ -234,10 +237,34 @@ def _summarize(rows: Sequence[Mapping[str, str]]) -> dict[str, object]:
         "error_top1": _mean(int(row["top1"]) for row in errors),
         "error_top5": _mean(int(row["top5"]) for row in errors),
         "error_mrr": _mean(float(row["mrr"]) for row in errors),
+        "localized_coverage": len(localized) / max(1, len(identifiable)),
+        "localized_top1": _mean(int(row["top1"]) for row in localized),
+        "localized_top5": _mean(int(row["top5"]) for row in localized),
         "control_actionable_rate": _mean(int(row["actionable"]) for row in controls),
+        "control_localized_rate": _mean(
+            int(row["state"] == "localized") for row in controls
+        ),
         "inspected_cells": inspected,
         "source_cases_found": found,
         "review_efficiency_per_100_cells": 100 * found / inspected if inspected else 0.0,
+    }
+
+
+def _revision_gates(
+    summary: Mapping[str, object],
+    fold_summaries: Sequence[Mapping[str, object]],
+) -> dict[str, bool]:
+    stable_folds = sum(
+        float(row["error_top5"]) >= 0.50
+        and float(row["control_actionable_rate"]) <= 0.25
+        for row in fold_summaries
+    )
+    return {
+        "revision_localized_coverage_at_least_30_percent": float(summary["localized_coverage"]) >= 0.30,
+        "revision_localized_top1_at_least_75_percent": float(summary["localized_top1"]) >= 0.75,
+        "revision_localized_top5_at_least_95_percent": float(summary["localized_top5"]) >= 0.95,
+        "revision_localized_control_rate_at_most_5_percent": float(summary["control_localized_rate"]) <= 0.05,
+        "revision_at_least_four_stable_folds": stable_folds >= 4,
     }
 
 
@@ -552,7 +579,7 @@ def main() -> None:
         )
         roles = _audit_supplemental_roles([path.resolve() for path in args.role_audits])
         revision_count = _revision_count(args.revision_log.resolve())
-        metadata, completion, events, _included = _audit_pressure_run(
+        metadata, completion, events, included = _audit_pressure_run(
             manifest_path, run, workers=args.workers,
         )
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
@@ -578,6 +605,22 @@ def main() -> None:
     error_count = sum(row["case_kind"] == "error" for row in full_rows)
     control_count = sum(row["case_kind"] == "control" for row in full_rows)
     localization_corpora = sorted({row["corpus_id"] for row in full_rows})
+    _groups, fold_by_instance = assign_group_folds(included, manifest_path.parent)
+    fold_summaries = [
+        _summarize([
+            row for row in full_rows
+            if fold_by_instance[row["instance_id"]] == fold
+        ])
+        for fold in range(FOLD_COUNT)
+    ]
+    stable_folds = sum(
+        float(row["error_top5"]) >= 0.50
+        and float(row["control_actionable_rate"]) <= 0.25
+        for row in fold_summaries
+    )
+    revision_run = (
+        metadata.get("parameters", {}).get("model_version") == "v5-psl-dev1-rev1"
+    )
     gates = {
         "six_corpus_inventories_complete": set(inventories) == set(CORPUS_IDS),
         "six_pinned_acquisitions_reopened": all(
@@ -598,8 +641,11 @@ def main() -> None:
         "default_efficiency_not_below_no_perturbation": float(full["review_efficiency_per_100_cells"]) >= float(no_perturbation["review_efficiency_per_100_cells"]),
         "identifiability_gate_does_not_increase_control_actions": float(full["control_actionable_rate"]) <= float(no_gate["control_actionable_rate"]),
         "mechanism_revision_count_at_most_one": revision_count <= 1,
+        "revision_one_recorded_for_rev1_output": not revision_run or revision_count == 1,
         "third_party_confirmation_files_untouched": metadata.get("third_party_confirmation_files_read") == [],
     }
+    if revision_run:
+        gates.update(_revision_gates(full, fold_summaries))
     payload = {
         "protocol": "v5_psl_public_pressure_audit_v1",
         "audit_worker_processes_requested": args.workers,
@@ -643,6 +689,8 @@ def main() -> None:
         },
         "ablations_complete": ablations_complete,
         "mechanism_revision_count": revision_count,
+        "revision_fold_summaries": fold_summaries if revision_run else [],
+        "revision_stable_folds": stable_folds if revision_run else None,
         "third_party_confirmation_files_read": [],
         "data_are_revealed_public_development_evidence": True,
         "independent_or_blind_claim_forbidden": True,

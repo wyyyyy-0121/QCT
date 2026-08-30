@@ -10,17 +10,18 @@
 
 ## 1. 先固定 V5-PSL 的研究任务
 
-V5-PSL-dev1 的输入是一个可计算工作簿及其可见公式和值，不接受以下信息：
+V5-PSL-dev1-rev1 的输入是一个可计算工作簿及其可见公式和值，不接受以下信息：
 
 - 期望输出值；
 - 输出正确/错误标记或通过/失败测试；
 - 用户指定的失败单元格、源错误格、正确公式或错误类型；
 - 第三方确认集的标签。
 
-它输出所有公式单元格的完整源排名，以及 `localized`、`review`、
-`abstain_unidentifiable`、`unsupported` 四种行动状态。它研究的是固定输入扰动下
-的角色条件响应、定向下游恢复和显式非行动规则。它不是通用公式修复器、形式因果
-识别器，也不能仅凭内部一致性证明某个公式在业务语义上错误。
+它输出所有公式单元格的静态异常完整排名，以及 `localized`、`review`、
+`abstain_unidentifiable`、`unsupported` 四种行动状态。候选修复只在静态Top-5内
+接受固定输入扰动、定向下游恢复和匹配安慰剂验证，用于决定1/5/0行动，不能改变
+完整排名。它不是通用公式修复器、形式因果识别器，也不能仅凭内部一致性证明某个
+公式在业务语义上错误。
 
 ## 2. 逐篇主文献矩阵
 
@@ -32,7 +33,7 @@ V5-PSL-dev1 的输入是一个可计算工作簿及其可见公式和值，不�
 | Invariant-based testing | Roy, van Deursen, Hermans 2018，DOI `10.1109/QRS-C.2018.00046`，已核全文 | 用 Daikon 推断不变量，将其变成条件公式测试，在 8 个表上检测回归变异；召回随表和故障类型显著变化 | 不得声称表格不变量、内部关系、违反一致性或不变量测试是新方法 | V5-PSL 不从历史正确版本训练 Daikon 不变量，也不增加 test sheet；可把响应一致性限定为固定证据族之一 |
 | Domain invariants | Wang, Zhao 2021，DOI `10.1109/APR52552.2021.00012`，全文不可得披露 | IEEE、Crossref 和 OpenAlex 确认该两页论文为封闭访问；出版方摘要确认其把领域不变量与形式/预测方法结合，用于表格错误检测和修复 | 不得声称领域不变量用于表格调试是新方法，也不得用无法取得全文来支持 V5-PSL 的原创或优越性 | Roy 2018 作为该方向的必核全文锚点；除非以后取得合法全文，否则不允许与 Wang 2021 作实现级差异比较 |
 | Formula-role outliers | Cheung et al. 2016，DOI `10.1145/2884781.2884796`，已核全文 | CUSTODES 以公式 AST、引用等强特征和布局、标签、样式等弱特征做两阶段聚类，把少数离群单元格排序为 smell | 不得声称公式角色、AST/引用聚类、布局特征、少数派离群或 smell 排名是新方法 | 可比较静态 cluster outlier 与固定扰动后的角色条件响应，但静态角色稀有度只能作为既有先验 |
-| Formula-role outliers | Barowy, Berger, Zorn 2018，DOI `10.1145/3276518`，已核全文 | ExceLint 用相对 reference vectors/fingerprints、矩形区域和熵变化，在无用户真值下排序疑似公式及候选修复 | 不得声称无真值公式检测、相对引用指纹、矩形公式区域、候选修复或人工审查排名是新方法 | 可检验动态响应与定向传播证据相对 ExceLint 类静态排名是否增加源定位信息 |
+| Formula-role outliers | Barowy, Berger, Zorn 2018，DOI `10.1145/3276518`，已核全文 | ExceLint 用相对 reference vectors/fingerprints、矩形区域和熵变化，在无用户真值下排序疑似公式及候选修复 | 不得声称无真值公式检测、相对引用指纹、矩形公式区域、候选修复或人工审查排名是新方法 | rev1不再声称动态响应改善静态排名；只能检验静态Top-5内的修复特异性验证是否相对固定Top-5复核减少有害行动并提高人工效率 |
 | Formula-role outliers | Li et al. 2019，DOI `10.1109/QRS.2019.00030`，已核全文 | WARDER 以单格、多格、整簇 validity properties 修正 CUSTODES 聚类，再检测 missing/inconsistent formulas | 不得声称 validity-based 聚类修正、缺失公式检测或不一致公式检测是新方法 | 可把 WARDER 类证据作为静态基线，检验响应条件化和选择性行动的增量，而非重命名其 validity |
 | Spreadsheet fault localization | Hofer et al. 2013，DOI `10.1007/978-3-642-37057-1_6`，已核全文 | 将 SFL、SENDYS 和 constraint debugging 适配到表格；用依赖锥和输出正确性/期望输出定位并排名可疑单元格 | 不得声称 spreadsheet fault localization、依赖锥根因排名、suspiciousness ranking 或“定位而非检测”本身是新任务 | V5-PSL 的可检验输入差异是完全不接收 expected output、pass/fail token 或用户标记的失败格 |
 | Spreadsheet fault localization | Jannach et al. 2019，DOI `10.1007/s10515-018-0250-9`，已核全文 | 把表格分成 fragments，生成/标注较小测试，按故障概率代理排序，并把带期望结果的测试交给 model-based debugging | 不得声称通过排序减少人工检查、fragment review 或 human-in-the-loop debugging 是新方法 | 可比较无输出标签的单格完整排名与需要用户给出正确/错误结果的 fragment 测试，并单独报告人工审查成本 |
@@ -59,16 +60,17 @@ V5-PSL-dev1 的输入是一个可计算工作簿及其可见公式和值，不�
 
 门禁完成后仍只建议使用可证伪、非排他的表述：
 
-> 我们预注册并评估一种用于静默公式源定位的组合：在不提供期望输出、通过/失败
-> 标记或用户指定失败格的条件下，比较同角色公式对固定输入扰动的响应，结合定向
-> 下游恢复生成完整源排名，并在证据不足时进入复核、弃权或不支持状态。
+> 我们预注册并评估一种用于静默公式源定位的选择性组合：在不提供期望输出、通过/
+> 失败标记或用户指定失败格的条件下，先生成候选无关的静态完整排名，再在静态
+> Top-5内以固定输入扰动、定向下游恢复和匹配安慰剂验证候选修复；验证只决定
+> 1/5/0行动，在证据不足时弃权或声明不支持。
 
 这句话描述研究对象，不声称该组合必然原创或优于已有方法。论文贡献必须落在实际
 通过的比较和消融上，例如：
 
 1. **输入契约**：与 Hofer/Jannach 的 truth-assisted debugging 分开报告；
-2. **证据对象**：与 CUSTODES/ExceLint/WARDER 的静态角色离群、与 SEDMR 的 MR
-   关系检测逐项比较；
+2. **证据对象**：完整排名不声称超过 CUSTODES/ExceLint/WARDER 的静态范式；只把
+   Top-5内的修复验证与 SEDMR 的 MR 关系检测及固定Top-5复核逐项比较；
 3. **决策契约**：把完整排名与 1/5/0 行动预算分开，报告 coverage、selective risk、
    有害行动率和人工成本；
 4. **失败边界**：公开 `abstain_unidentifiable`、`unsupported`、合法例外和求值

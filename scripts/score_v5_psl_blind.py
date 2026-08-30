@@ -150,8 +150,16 @@ def summarize_method(rows: Sequence[Mapping[str, object]]) -> dict[str, object]:
         "overall_error_mrr": _mean(float(row["mrr"]) for row in errors),
         "identifiable_error_denominator": len(identifiable),
         "localized_coverage": len(localized_identifiable) / max(1, len(identifiable)),
-        "localized_top1": sum(int(row["top1"]) for row in supported_identifiable) / max(1, len(identifiable)),
-        "localized_top5": sum(int(row["top5"]) for row in supported_identifiable) / max(1, len(identifiable)),
+        "localized_top1": _mean(int(row["top1"]) for row in localized_identifiable),
+        "localized_top5": _mean(int(row["top5"]) for row in localized_identifiable),
+        "overall_identifiable_top1": sum(
+            int(row["top1"])
+            for row in supported_identifiable
+        ) / max(1, len(identifiable)),
+        "overall_identifiable_top5": sum(
+            int(row["top5"])
+            for row in supported_identifiable
+        ) / max(1, len(identifiable)),
         "actionable_control_fpr": _mean(int(row["actionable"]) for row in controls),
         "localized_control_fpr": _mean(
             int(row["state"] == "localized") for row in controls
@@ -194,6 +202,8 @@ def promotion_metrics(summary: Mapping[str, Mapping[str, object]]) -> dict[str, 
         "localized_coverage": float(psl["localized_coverage"]),
         "localized_top1": float(psl["localized_top1"]),
         "localized_top5": float(psl["localized_top5"]),
+        "overall_identifiable_top1": float(psl["overall_identifiable_top1"]),
+        "overall_identifiable_top5": float(psl["overall_identifiable_top5"]),
         "actionable_control_fpr": float(psl["actionable_control_fpr"]),
         "localized_control_fpr": float(psl["localized_control_fpr"]),
         "legal_exception_actionable_fpr": float(psl["legal_exception_actionable_fpr"]),

@@ -26,6 +26,7 @@ import scripts.freeze_v5_psl_candidate as freeze_candidate
 from scripts.audit_v5_psl_public_pressure import (
     _audit_inventories,
     _audit_pressure_run,
+    _revision_gates,
     _audit_supplemental_roles,
     _verify_acquisition,
 )
@@ -249,6 +250,25 @@ def pressure_run(
 
 
 class V5PSLToolTests(unittest.TestCase):
+    def test_revision_gates_require_selective_accuracy_and_four_stable_folds(self):
+        summary = {
+            "localized_coverage": 0.30,
+            "localized_top1": 0.75,
+            "localized_top5": 0.95,
+            "control_localized_rate": 0.05,
+        }
+        folds = [
+            {"error_top5": 0.50, "control_actionable_rate": 0.25}
+            for _ in range(4)
+        ] + [{"error_top5": 0.49, "control_actionable_rate": 0.0}]
+        self.assertTrue(all(_revision_gates(summary, folds).values()))
+        summary["localized_coverage"] = 0.29
+        self.assertFalse(
+            _revision_gates(summary, folds)[
+                "revision_localized_coverage_at_least_30_percent"
+            ]
+        )
+
     def test_bounded_tuning_grid_and_grouped_selection_are_fixed(self):
         profiles = tuning_profiles()
         self.assertEqual(len(profiles), 12)
@@ -617,7 +637,7 @@ class V5PSLToolTests(unittest.TestCase):
                 "protocol": "v5_psl_public_pressure_audit_v1",
                 "hard_gate_passed": True,
                 "ablations_complete": True,
-                "mechanism_revision_count": 0,
+                "mechanism_revision_count": 1,
                 "corpora_audited": list(freeze_candidate.REQUIRED_CORPORA),
                 "third_party_confirmation_files_read": [],
                 "development_signatures_sha256": sha256(signatures),
@@ -870,7 +890,7 @@ class V5PSLToolTests(unittest.TestCase):
         self.assertGreater(metrics["review_efficiency_relative_improvement"], 0.15)
         self.assertTrue(all(promotion_gates(metrics).values()))
 
-    def test_identifiable_ranking_metrics_use_full_denominator_and_unsupported_misses(self):
+    def test_selective_and_overall_identifiable_ranking_metrics_use_distinct_denominators(self):
         rows = [
             {
                 "case_kind": "error",
@@ -893,8 +913,10 @@ class V5PSLToolTests(unittest.TestCase):
         summary = summarize_method(rows)
         self.assertEqual(summary["identifiable_error_denominator"], 3)
         self.assertAlmostEqual(summary["localized_coverage"], 1 / 3)
-        self.assertAlmostEqual(summary["localized_top1"], 2 / 3)
-        self.assertAlmostEqual(summary["localized_top5"], 2 / 3)
+        self.assertEqual(summary["localized_top1"], 1.0)
+        self.assertEqual(summary["localized_top5"], 1.0)
+        self.assertAlmostEqual(summary["overall_identifiable_top1"], 2 / 3)
+        self.assertAlmostEqual(summary["overall_identifiable_top5"], 2 / 3)
 
     def test_registry_and_info1_adapter_preserve_license_and_pending_conversion(self):
         registry = load_registry(ROOT / "data/external/v5_psl/corpus_registry.json")

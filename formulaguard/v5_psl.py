@@ -24,7 +24,8 @@ from .v5_core import build_candidate_portfolio
 from .workbook import CellKey, DependencyGraph, WorkbookModel
 
 
-MODEL_VERSION = "v5-psl-dev1"
+MODEL_VERSION = "v5-psl-dev1-rev1"
+ARCHITECTURE = "static_anchor_repair_verified_selective_localization"
 RANDOM_SEED = 20260830
 ABLATIONS = (
     "no_perturbation",
@@ -51,8 +52,9 @@ class PSLConfig:
     matched_controls: int = 12
     candidate_cells: int = 12
     candidate_formulas: int = 2
-    explanatory_cells: int = 2
-    placebo_controls: int = 8
+    explanatory_cells: int = 5
+    placebo_controls: int = 12
+    minimum_placebo_controls: int = 8
     strong_tail: float = 0.10
     strong_effect: float = 0.20
     strong_stability: float = 0.75
@@ -71,7 +73,7 @@ class PSLConfig:
         allowed = set(cls.__dataclass_fields__)
         metadata = {
             "model_version": MODEL_VERSION,
-            "architecture": "role_conditioned_perturbation_selective_localization",
+            "architecture": ARCHITECTURE,
             "diagnostic_states": [state.value for state in DiagnosticState],
             "label_inputs": [],
             "filename_features": False,
@@ -92,6 +94,10 @@ class PSLConfig:
             raise ValueError("V5-PSL requires exactly 12 paired perturbation scenarios")
         if config.minimum_valid_scenarios > config.scenario_count:
             raise ValueError("minimum_valid_scenarios exceeds scenario_count")
+        if config.explanatory_cells != 5:
+            raise ValueError("V5-PSL revision 1 verifies exactly the static Top-5")
+        if config.placebo_controls < config.minimum_placebo_controls:
+            raise ValueError("placebo_controls is below the minimum evidence count")
         return config
 
 
@@ -108,7 +114,7 @@ class EvidenceFamily:
     def as_dict(self) -> dict[str, object]:
         payload = asdict(self)
         payload["cells"] = [f"{sheet}!{address}" for sheet, address in self.cells]
-        return payload
+        return _stable_payload(payload)  # type: ignore[return-value]
 
 
 @dataclass(frozen=True)
@@ -128,7 +134,7 @@ class SupportReport:
         payload["unsupported_formula_cells"] = [
             f"{sheet}!{address}" for sheet, address in self.unsupported_formula_cells
         ]
-        return payload
+        return _stable_payload(payload)  # type: ignore[return-value]
 
 
 @dataclass(frozen=True)
@@ -143,7 +149,7 @@ class SelectiveDiagnosis:
     provenance: Mapping[str, object] = field(default_factory=dict)
 
     def as_dict(self) -> dict[str, object]:
-        return {
+        return _stable_payload({
             "model_version": self.model_version,
             "state": self.state.value,
             "review_cells": [f"{sheet}!{address}" for sheet, address in self.review_cells],
@@ -161,7 +167,7 @@ class SelectiveDiagnosis:
                 }
                 for rank, row in enumerate(self.ranking, 1)
             ],
-        }
+        })  # type: ignore[return-value]
 
 
 @dataclass(frozen=True)
@@ -221,7 +227,7 @@ def v5_psl_default_parameters() -> dict[str, object]:
     config = PSLConfig()
     return {
         "model_version": MODEL_VERSION,
-        "architecture": "role_conditioned_perturbation_selective_localization",
+        "architecture": ARCHITECTURE,
         **asdict(config),
         "diagnostic_states": [state.value for state in DiagnosticState],
         "label_inputs": [],
@@ -229,6 +235,23 @@ def v5_psl_default_parameters() -> dict[str, object]:
         "hidden_label_features": False,
         "development_ablations": list(ABLATIONS),
     }
+
+
+def _stable_metric(value: float) -> float:
+    rounded = round(float(value), 12)
+    return 0.0 if rounded == 0 else rounded
+
+
+def _stable_payload(value: object) -> object:
+    if isinstance(value, bool) or value is None or isinstance(value, (str, int)):
+        return value
+    if isinstance(value, float):
+        return _stable_metric(value)
+    if isinstance(value, Mapping):
+        return {str(key): _stable_payload(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_stable_payload(item) for item in value]
+    return value
 
 
 def _clamp(value: float) -> float:
@@ -631,15 +654,24 @@ def _family_strength(
     stability: float,
     controls: int,
     config: PSLConfig,
+    minimum_weak_controls: int = 0,
 ) -> str:
+    tail = _stable_metric(tail)
+    effect = _stable_metric(effect)
+    stability = _stable_metric(stability)
     if (
-        controls >= 8
+        controls >= max(8, minimum_weak_controls)
         and tail <= config.strong_tail
         and effect >= config.strong_effect
         and stability >= config.strong_stability
     ):
         return "strong"
-    if tail <= config.weak_tail and effect >= config.weak_effect and stability >= config.weak_stability:
+    if (
+        controls >= minimum_weak_controls
+        and tail <= config.weak_tail
+        and effect >= config.weak_effect
+        and stability >= config.weak_stability
+    ):
         return "weak"
     return "none"
 
@@ -797,7 +829,9 @@ def _candidate_probe(
     descendants = sorted(
         (graph.descendants(key) - checks - set(peers)) & set(model.formula_cells)
     )
-    best: tuple[tuple[float, float, float], str, dict[str, object], EvidenceFamily] | None = None
+    best: tuple[
+        tuple[float, float, float, float], str, dict[str, object], EvidenceFamily,
+    ] | None = None
     for item in portfolio[: config.candidate_formulas]:
         candidate = item.candidate.formula
         try:
@@ -874,9 +908,10 @@ def _candidate_probe(
         strength = _family_strength(
             tail=tail, effect=effect, stability=stability,
             controls=len(placebo_gains), config=config,
+            minimum_weak_controls=config.minimum_placebo_controls,
         )
         family = EvidenceFamily(
-            "downstream_placebo", effect, tail, stability, strength,
+            "repair_specificity", effect, tail, stability, strength,
             supported_descendants, "directed_recovery_vs_matched_formula_edits",
         )
         detail = {
@@ -894,7 +929,13 @@ def _candidate_probe(
             "joint_stability": stability,
             "supported_descendants": len(supported_descendants),
         }
-        ordering = (effect, -tail, item.candidate.quality)
+        strength_rank = {"none": 0.0, "weak": 1.0, "strong": 2.0}
+        ordering = (
+            strength_rank[strength],
+            _stable_metric(effect),
+            -_stable_metric(tail),
+            _stable_metric(item.candidate.quality),
+        )
         if best is None or ordering > best[0]:
             best = (ordering, candidate, detail, family)
     if best is None:
@@ -928,7 +969,10 @@ def _no_perturbation_diagnosis(
     unsupported = tuple(sorted(set(errors) & formula_set))
     coverage = 1.0 - len(unsupported) / max(1, len(formula_set))
     static_scores = _fallback_static_scores(model)
-    ordered = sorted(model.formula_cells, key=lambda key: (-static_scores.get(key, 0.0), key))
+    ordered = sorted(
+        model.formula_cells,
+        key=lambda key: (-_stable_metric(static_scores.get(key, 0.0)), key),
+    )
     ranking = tuple(
         LocalizationResult(
             cell=key,
@@ -936,9 +980,12 @@ def _no_perturbation_diagnosis(
             evidence={
                 "model_version": MODEL_VERSION,
                 "ablation": "no_perturbation",
+                "ranking_basis": "static_formula_graph_anchor",
                 "static_fallback_score": static_scores.get(key, 0.0),
                 "strong_evidence_families": 0,
                 "weak_evidence_families": 0,
+                "repair_verified": False,
+                "repair_strength": "none",
                 "families": [],
             },
         )
@@ -1124,15 +1171,11 @@ def diagnose_v5_psl(
             matched_peers=peers_by_cell[key],
         )
 
-    preliminary = sorted(assessments.values(), key=lambda row: (
-        -row.strong_count,
-        -row.weak_count,
-        -row.median_effect,
-        -row.propagation_score,
-        -row.static_score,
+    ordered = sorted(assessments.values(), key=lambda row: (
+        -_stable_metric(row.static_score),
         row.cell,
     ))
-    for assessment in preliminary[: resolved.explanatory_cells]:
+    for assessment in ordered[: resolved.explanatory_cells]:
         if ablation == "no_downstream_placebo":
             assessment.candidate_detail = {"status": "ablation_no_downstream_placebo"}
             continue
@@ -1144,38 +1187,19 @@ def diagnose_v5_psl(
         assessment.candidate_formula = candidate
         assessment.candidate_detail = detail
         if family is not None:
-            downstream_index = next(
-                (index for index, row in enumerate(assessment.families) if row.name == "downstream_response"),
-                None,
-            )
-            if downstream_index is not None:
-                current = assessment.families[downstream_index]
-                strength_rank = {"none": 0, "weak": 1, "strong": 2}
-                if (strength_rank[family.strength], family.effect, -family.empirical_tail) > (
-                    strength_rank[current.strength], current.effect, -current.empirical_tail
-                ):
-                    assessment.families[downstream_index] = EvidenceFamily(
-                        "downstream_response_placebo",
-                        family.effect,
-                        family.empirical_tail,
-                        family.stability,
-                        family.strength,
-                        family.cells,
-                        family.detail,
-                    )
+            assessment.families.append(family)
 
-    ordered = sorted(assessments.values(), key=lambda row: (
-        -row.strong_count,
-        -row.weak_count,
-        -row.median_effect,
-        -row.propagation_score,
-        -row.static_score,
-        row.cell,
-    ))
+    def repair_family(assessment: CellAssessment) -> EvidenceFamily | None:
+        return next(
+            (family for family in assessment.families if family.name == "repair_specificity"),
+            None,
+        )
+
     ranking: list[LocalizationResult] = []
     total = max(1, len(ordered))
     for rank, assessment in enumerate(ordered, 1):
         score = 1.0 - (rank - 1) / total
+        repair = repair_family(assessment)
         ranking.append(LocalizationResult(
             cell=assessment.cell,
             score=score,
@@ -1183,6 +1207,7 @@ def diagnose_v5_psl(
             evidence={
                 "model_version": MODEL_VERSION,
                 "base_ranking_is_candidate_independent": True,
+                "ranking_basis": "static_formula_graph_anchor",
                 "strong_evidence_families": assessment.strong_count,
                 "weak_evidence_families": assessment.weak_count,
                 "median_effect": assessment.median_effect,
@@ -1190,6 +1215,10 @@ def diagnose_v5_psl(
                 "static_fallback_score": assessment.static_score,
                 "propagation_response": assessment.propagation_score,
                 "matched_role_controls": len(assessment.matched_peers),
+                "repair_verified": bool(
+                    repair is not None and repair.strength in {"weak", "strong"}
+                ),
+                "repair_strength": repair.strength if repair is not None else "none",
                 "families": [row.as_dict() for row in assessment.families],
                 "candidate_probe": assessment.candidate_detail,
             },
@@ -1221,10 +1250,15 @@ def diagnose_v5_psl(
 
     top = ordered[0] if ordered else None
     second = ordered[1] if len(ordered) > 1 else None
-    margin = 1.0 if top and second is None else (
-        (top.identifiability_index - second.identifiability_index) / max(1.0, top.identifiability_index)
-        if top and second else 0.0
+    margin = 1.0 if top and second is None else _stable_metric(
+        top.static_score - second.static_score if top and second else 0.0
     )
+    verified = [
+        (assessment, family)
+        for assessment in ordered[: resolved.explanatory_cells]
+        if (family := repair_family(assessment)) is not None
+        and family.strength in {"weak", "strong"}
+    ]
     if support_reasons or top is None:
         state = DiagnosticState.UNSUPPORTED
         reason_codes = tuple(support_reasons or ["no_formula_cells"])
@@ -1233,19 +1267,29 @@ def diagnose_v5_psl(
         state = DiagnosticState.REVIEW
         reason_codes = ("ablation_fixed_top5_without_identifiability_gate",)
         review_cells = tuple(row.cell for row in ordered[:5])
-    elif top.strong_count >= 2 and margin >= resolved.localization_margin:
+    elif (
+        len(verified) == 1
+        and verified[0][0].cell == top.cell
+        and (
+            verified[0][1].strength == "strong"
+            or margin >= resolved.localization_margin
+        )
+    ):
         state = DiagnosticState.LOCALIZED
-        reason_codes = ("two_independent_strong_families", "identifiability_margin_passed")
+        reason_codes = (
+            "unique_verified_static_leader",
+            "strong_repair_specificity"
+            if verified[0][1].strength == "strong"
+            else "weak_repair_with_static_margin",
+        )
         review_cells = (top.cell,)
-    elif (top.strong_count >= 1 and top.weak_count >= 1) or top.weak_count >= 2:
+    elif verified:
         state = DiagnosticState.REVIEW
-        reason_codes = ("bounded_evidence_requires_review",)
+        reason_codes = ("verified_repair_requires_bounded_review",)
         review_cells = tuple(row.cell for row in ordered[:5])
     else:
         state = DiagnosticState.ABSTAIN_UNIDENTIFIABLE
-        reason_codes = (
-            "top_hypothesis_not_separated" if margin < resolved.localization_margin else "insufficient_independent_evidence",
-        )
+        reason_codes = ("no_verified_repair_in_static_top5",)
         review_cells = ()
 
     return SelectiveDiagnosis(

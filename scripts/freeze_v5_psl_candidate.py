@@ -291,8 +291,8 @@ def build_candidate_lock(
         raise ValueError("Public pressure audit protocol is invalid")
     if pressure.get("hard_gate_passed") is not True or pressure.get("ablations_complete") is not True:
         raise ValueError("Public pressure and four-ablation gates have not passed")
-    if int(pressure.get("mechanism_revision_count", -1)) not in {0, 1}:
-        raise ValueError("Public development permits at most one recorded mechanism revision")
+    if int(pressure.get("mechanism_revision_count", -1)) != 1:
+        raise ValueError("V5-PSL revision 1 requires exactly one recorded mechanism revision")
     observed_corpora = set(pressure.get("corpora_audited", []))
     if not REQUIRED_CORPORA <= observed_corpora:
         raise ValueError(f"Public corpus audit is incomplete: {sorted(REQUIRED_CORPORA - observed_corpora)}")

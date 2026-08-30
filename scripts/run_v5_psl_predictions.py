@@ -299,7 +299,7 @@ def audit_prediction_shard(
         "v4_r1": "v4-dev-r1",
         "v4_2_review_b": "v4.2-review-b",
         "v4_3_semantic_c": "v4.3-semantic-c",
-        "v5_psl_dev1": "v5-psl-dev1",
+        "v5_psl_dev1": "v5-psl-dev1-rev1",
     }
     if any(
         methods[name].get("model_version") != version

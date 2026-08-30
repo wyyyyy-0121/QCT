@@ -23,7 +23,7 @@ class VersionLineageTests(unittest.TestCase):
         self.assertEqual(VERSION_ALIASES["v4.2"]["legacy_id"], "v5.2-b")
         self.assertEqual(VERSION_ALIASES["v4.3"]["legacy_id"], "v6-semantic-r1")
         self.assertEqual(VERSION_ALIASES["v5"]["status"], "implemented_development_not_frozen")
-        self.assertEqual(VERSION_ALIASES["v5"]["canonical_id"], "v5-psl-dev1")
+        self.assertEqual(VERSION_ALIASES["v5"]["canonical_id"], "v5-psl-dev1-rev1")
         self.assertEqual(VERSION_ALIASES["v5-core-cc"]["status"], "rejected_locked_validation")
         self.assertEqual(VERSION_ALIASES["v5-core-r2"]["status"], "rejected_pressure_safety")
         self.assertEqual(v4_1_default_parameters()["model_version"], "v4.1-pcg-r1")

@@ -40,10 +40,10 @@ VERSION_ALIASES = {
         "status": "rejected_for_main_freeze",
     },
     "v5": {
-        "canonical_id": "v5-psl-dev1",
+        "canonical_id": "v5-psl-dev1-rev1",
         "legacy_id": None,
         "legacy_module": None,
-        "role": "role_conditioned_perturbation_selective_localization",
+        "role": "static_anchor_repair_verified_selective_localization",
         "status": "implemented_development_not_frozen",
     },
     "v5-core-cc": {

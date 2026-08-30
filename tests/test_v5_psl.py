@@ -98,10 +98,47 @@ class V5PSLTests(unittest.TestCase):
             report.ranking[0].evidence["strong_evidence_families"], 2,
         )
         self.assertEqual(report.review_cells, (("Model", "C6"),))
-        cell_sets = [set(family.cells) for family in report.evidence_families]
+        self.assertTrue(report.ranking[0].evidence["repair_verified"])
+        cell_sets = [
+            set(family.cells) for family in report.evidence_families
+            if family.name != "repair_specificity"
+        ]
         for index, cells in enumerate(cell_sets):
             for other in cell_sets[index + 1:]:
                 self.assertFalse(cells & other)
+
+    def test_revision_ranking_matches_static_ablation_exactly(self):
+        model = repeated_model(corrupt=True)
+        full = diagnose_v5_psl(model)
+        static = diagnose_v5_psl(model, ablation="no_perturbation")
+        self.assertEqual(
+            [(row.cell, row.score) for row in full.ranking],
+            [(row.cell, row.score) for row in static.ranking],
+        )
+        self.assertTrue(all(
+            row.evidence["ranking_basis"] == "static_formula_graph_anchor"
+            for row in full.ranking
+        ))
+        self.assertTrue(all(
+            row.evidence["candidate_probe"].get("status")
+            for row in full.ranking[:5]
+        ))
+        self.assertTrue(all(
+            not row.evidence["candidate_probe"]
+            for row in full.ranking[5:]
+        ))
+
+    def test_repair_strength_requires_eight_placebo_controls(self):
+        config = PSLConfig()
+        common = {
+            "tail": 0.05,
+            "effect": 0.90,
+            "stability": 1.0,
+            "config": config,
+            "minimum_weak_controls": config.minimum_placebo_controls,
+        }
+        self.assertEqual(psl._family_strength(controls=7, **common), "none")
+        self.assertEqual(psl._family_strength(controls=8, **common), "strong")
 
     def test_uniform_workbook_does_not_force_a_localization(self):
         report = diagnose_v5_psl(repeated_model())

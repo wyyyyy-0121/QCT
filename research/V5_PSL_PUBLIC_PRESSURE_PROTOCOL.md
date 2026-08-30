@@ -24,6 +24,11 @@ FoRepBench只做618项公式修复角色审计；SpreadsheetBench只做完整工
 不得从消融结果选择阈值。公开压力失败后最多允许一次有根因、证据哈希和源码提交
 记录的机制修订；第二次失败即停止，不读取第三方确认集。
 
+首轮失败、有界调参失败和唯一结构修订的后续权威边界分别见
+`V5_PSL_PUBLIC_PRESSURE_FAILURE_1.md`、`V5_PSL_PARAMETER_TUNING_FAILURE_1.md`和
+`V5_PSL_MECHANISM_REVISION_1.md`。修订输出必须额外通过其中固定的localized覆盖、
+选择性准确率、localized控制误报和五折稳定性门；任何一项失败都属于第二次失败。
+
 ## 命令
 
 先验证注册表，再按语料逐个下载和清点：
