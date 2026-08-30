@@ -28,8 +28,11 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 - `research/V5_MODEL_DISCOVERY_DATA_LEDGER.json`
 - `research/V5_MODEL_DISCOVERY_POWER_REPORT.md`
 
-Phase 0 和 Gate 1 已通过；Gate 2 的无标签原子信号审计尚未开始。通过这两道门不代表
-已有 V5 或已经超过 V4，只代表研究设计和可比较基线已具备进入下一步的条件。
+Phase 0 和 Gate 1 已通过；Gate 2 已完成且完整排名与选择性辅助均未通过，随后完成了
+RQ-C 最小附加信息测量。当前没有获授权的 `V5-R1`：`V4-R1` 仍是唯一冻结主排序器，
+Branch C 的交互式结果只用于论文中的可识别性边界，不得改写成无标签继任模型。
+权威回执和结果说明见 `research/V5_MODEL_DISCOVERY_GATE2_RESULT.md`、
+`research/V5_MODEL_DISCOVERY_BRANCH_C_RESULT.md` 及对应的 `results/` 本地回执。
 
 ## 历史版本
 

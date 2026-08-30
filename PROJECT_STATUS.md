@@ -7,8 +7,9 @@
 - `V4-R1` 是唯一冻结主排序器；`V4.2-Review-B` 只保留为 V4 系辅助复核位。
 - `V4.1-PCG`、`V4.3-Semantic`、`V5-Core`、`V5-Core R2` 和 `V5-PSL` 均已结束，
   其正负结果和原始哈希保留为历史证据，不再调参或改名恢复。
-- 当前唯一授权研究线是 `model-discovery`。Phase 0 和 Gate 1 已通过，下一步是 Gate 2
-  无标签原子信号审计；在 Gate 2 分支选择前不得实现继任模型。
+- 当前研究线 `model-discovery` 已完成 Phase 0、Gate 1、Gate 2 评分和 RQ-C；Gate 2A
+  与 Gate 2B 均未通过，Branch C 也未形成可部署的无标签继任模型。`V4-R1` 仍是唯一
+  冻结主排序器，不得在同一批揭晓标签上继续调参或创建 `V5-R1`。
 - 旧 `240+120` 只能在候选锁后作为一次 `revealed-trial`，新保管人 `240+120` 只能
   在完整预测锁后评分；两者当前均未读取。
 - Phase 0 产物：
@@ -16,6 +17,11 @@
   `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`、
   `research/V5_MODEL_DISCOVERY_DATA_LEDGER.json`、
   `research/V5_MODEL_DISCOVERY_POWER_REPORT.md`。
+
+- Gate 2 与 Branch C 结果：
+  `research/V5_MODEL_DISCOVERY_GATE2_RESULT.md`、
+  `research/V5_MODEL_DISCOVERY_BRANCH_C_RESULT.md`；机器回执保存在
+  `results/model_discovery_gate2_final_v3/` 和 `results/model_discovery_branch_c/`。
 - 当前功效审计显示，25 个 Enron 结构组或 30 个最终模板组不足以可靠检出 5 个百分
   点的确认性 Top-5 改善；正式盲测前需要增加独立模板，或降低论文结论为探索性估计。
 

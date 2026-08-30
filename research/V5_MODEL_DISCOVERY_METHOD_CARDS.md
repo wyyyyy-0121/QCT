@@ -166,4 +166,5 @@
 方法卡完整，官方当前 ExceLint-core 的 Linux headless CLI 已构建并在样例和
 两个项目工作簿上重复运行一致。其他方法没有已确认可直接运行的原始 runner，
 因此只能作为相关工作或后续明确标注的复现/代理；不得声称已超过这些原工具。
-下一步是 Gate 2 的无标签失败图谱和原子信号审计。
+以上‘下一步’记录的是 Gate 1 当日的预登记计划；当前 Gate 2 已评分，A/B 均未通过，
+RQ-C 已完成，详见 `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`。

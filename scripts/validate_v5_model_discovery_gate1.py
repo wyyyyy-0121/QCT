@@ -203,7 +203,8 @@ def render_cards(cards: dict[str, Any]) -> str:
         "方法卡完整，官方当前 ExceLint-core 的 Linux headless CLI 已构建并在样例和",
         "两个项目工作簿上重复运行一致。其他方法没有已确认可直接运行的原始 runner，",
         "因此只能作为相关工作或后续明确标注的复现/代理；不得声称已超过这些原工具。",
-        "下一步是 Gate 2 的无标签失败图谱和原子信号审计。",
+        "以上‘下一步’记录的是 Gate 1 当日的预登记计划；当前 Gate 2 已评分，A/B 均未通过，",
+        "RQ-C 已完成，详见 `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`。",
         "",
     ])
     return "\n".join(lines)
@@ -235,10 +236,12 @@ def render_result(result: dict[str, Any]) -> str:
         "2. 没有共同输入和指标时，不写“超过 CUSTODES/WARDER/SEDMR”等。",
         "3. 修复准确率、检测 F1 和源定位 MRR 不合并为单一准确率。",
         "",
-        "## 下一步",
+        "## Gate 1 当时的下一步",
         "",
         "进入 Gate 2：用无标签原子探针建立失败图谱，先判断是否有可迁移的新增信号，",
         "再决定完整排名、选择性辅助或最小附加信息分支。",
+        "",
+        "当前状态已由后续回执更新：Gate 2A/2B 均未通过，RQ-C 已完成，未授权 `V5-R1`。",
         "",
     ]
     return "\n".join(lines)

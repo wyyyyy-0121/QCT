@@ -64,3 +64,33 @@
 - 可复核依据：`research/FORMULAGUARD_MODEL_DISCOVERY_PLAN_V3.md`、
   `research/V5_MODEL_DISCOVERY_GATE1_RESULT.json`、
   `research/V5_SUCCESSOR_BASELINE_DIAGNOSTIC_RESULT.md`。
+
+## D0006：Gate 2 分支判定
+
+- 日期：2026-08-31
+- 依据：`results/model_discovery_gate2_final_v3/gate2_receipt.json`；196 个观测工作簿
+  的无标签信号和 V4 基线均完整后才读取 220 个揭晓开发事件。
+- 观察：固定 selector 的结构组宏 Top-5 在 Enron 为 38.67%（V4 为 52.00%），在
+  Integer corpus 为 46.30%（V4 为 41.67%），在 Modified EUSES 为 71.67%（V4 为
+  82.50%），在历史 100 为 84.74%（V4 为 62.11%）。选择性行动精度 62.93%、错误源
+  行动覆盖 38.42%、控制行动率 36.67%。
+- 决定：Gate 2A 和 2B 均不通过，选择分支 C；停止同一批标签上的连续权重、通道、
+  Top-k 和规则搜索，进入四种最小附加信息的独立测量。
+- 没有决定：没有创建 `V5-R1`，没有把 oracle selector 当成模型，没有把不同输入的
+  旧 V4.2 输出伪造成同输入比较，也没有读取任何保管人 SECRET 数据。
+- 论文边界：在 RQ-C 完成前只保留 `V4-R1` 为主模型；若 RQ-C 也不能形成安全增量，
+  主结论应写为无标签可识别性边界与最小信息需求。
+
+## D0007：RQ-C 最小附加信息结果
+
+- 日期：2026-08-31
+- 依据：`results/model_discovery_branch_c/branch_c_receipt.json` 和
+  `research/V5_MODEL_DISCOVERY_BRANCH_C_RESULT.md`。
+- 观察：一个输出格的依赖锥在 220 个事件上错误行动精度为 29.47%，控制行动率为
+  100%；加入一个通过/失败位把控制行动率降为 0%，但错误源覆盖仍为 29.47%。在有
+  核验历史版本的 90 个公开压力事件上，公式差异和单格精确约束均达到 100% 事件命中，
+  这属于输入本身携带差异的上限。
+- 决定：RQ-C 完成；不创建无标签继任模型，不把交互式上限改名为 `V5-R1`。论文主线
+  保留 `V4-R1`，新增“无输出真值可识别性边界与最小信息需求”结果。
+- 没有决定：没有读取保管人目录，没有把历史版本/约束上限与无标签成绩合并，没有在
+  Gate 2 标签上继续搜规则或调参。
