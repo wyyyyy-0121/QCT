@@ -175,3 +175,22 @@
 - 没有决定：没有生成候选模型、没有计算 Top-1/Top-5、没有超过 V4 或公开方法的证据，
   没有授权 `V5-R1`。
 - 受保护数据：未列目录、未哈希、未读取；此次运行只使用冻结的公开 input-only 语料。
+
+## D0014：V4 残差上限通过与 V4-RRC 预注册
+
+- 日期：2026-08-31
+- 依据：`results/v4_residual_headroom_v0/receipt.json` 和
+  `research/V5_V4_RESIDUAL_HEADROOM_RESULT.md`。
+- 观察：保持 V4 前四位、只在第五位保留或替换时，单独 peer 候选的结构组宏 oracle
+  空间总体为 +31.18pp、Enron 为 +22.67pp；全部四通道只再增加约 1.09pp。强制 peer
+  Top-1 诊断总体为 +10.55pp，但 oracle 和强制规则均未回答交叉组控制风险。
+- 决定：授权一个新的 `V4-RRC` 揭晓开发实验。它只能用 peer Top-5 候选、线性岭回归、
+  五折结构组交叉拟合和风险阈值，V4 前四位不可改变；协议在任何实现和评分前提交。
+- 修订边界：只有总体增益已过门而单独安全门失败时，允许一次预先写定的共识保护加严；
+  不得增加特征/通道、改 Top-k、搜超参数或降低门槛。
+- 没有决定：没有恢复 Gate 2A/2B，没有产生可部署成绩，没有授权 `V5-R1`，没有声称
+  selective prediction、risk control、ridge 或 RRF 是本项目原创。
+- 受保护数据：未列目录、未哈希、未读取。只有开发、旧 revealed-trial 和
+  SpreadsheetBench 2 全部通过且完整公开预测锁已提交后，才使用用户已授权的一次
+  保密评估。
+- 可复核依据：`research/V5_V4_RESIDUAL_CONTROLLER_PREREGISTRATION.md` 和同名 JSON。
