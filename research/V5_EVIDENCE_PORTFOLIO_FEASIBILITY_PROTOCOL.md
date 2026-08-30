@@ -3,9 +3,11 @@
 > 2026-08-31 后续复盘：本协议在正式评分前被
 > `V5_CORE_REASSESSMENT_AND_CORE_RESET_B_PLAN.md` 替代。三通道、RRF、固定
 > `2/2/1` 和深度 2 选择器只保留为未来诊断参照，不再授权实现 `core-reset-a`。
+> `core-reset-b` 的实现授权随后又被
+> `V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md` 撤回；本文继续只作历史协议。
 
 固定日期：2026-08-31
-状态：在审计实现和继任模型实现之前固定
+状态：历史 `core-reset-a` 审计协议；未正式评分，不再授权继任模型
 
 ## 1. 目的
 
