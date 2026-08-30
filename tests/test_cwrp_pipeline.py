@@ -4,10 +4,11 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.acquire_cwrp_sheetjs import acquire, collect_workbooks, parse_tree_snapshot
 from scripts.build_v6_dataset import write_xlsx
-from scripts.convert_cwrp_sheetjs import convert
+from scripts.convert_cwrp_sheetjs import convert, install_converted
 
 
 def digest(path: Path) -> str:
@@ -104,6 +105,30 @@ class CWRPAcquisitionTests(unittest.TestCase):
 
 
 class CWRPConversionTests(unittest.TestCase):
+    def test_install_uses_target_filesystem_before_atomic_replace(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source_dir = root / "source"
+            target_dir = root / "target"
+            source_dir.mkdir()
+            target_dir.mkdir()
+            source = source_dir / "converted.xlsx"
+            target = target_dir / "final.xlsx"
+            source.write_bytes(b"converted")
+            actual_replace = __import__("os").replace
+            calls = []
+
+            def inspect_replace(left, right):
+                calls.append((Path(left), Path(right)))
+                return actual_replace(left, right)
+
+            with patch("scripts.convert_cwrp_sheetjs.os.replace", side_effect=inspect_replace):
+                install_converted(source, target)
+            self.assertEqual(target.read_bytes(), b"converted")
+            self.assertEqual(len(calls), 1)
+            self.assertEqual(calls[0][0].parent, target.parent)
+            self.assertEqual(calls[0][1], target)
+
     def test_conversion_verifies_source_and_emits_formula_counts_only(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

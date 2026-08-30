@@ -30,11 +30,11 @@ from scripts.acquire_cwrp_sheetjs import (  # noqa: E402
 )
 
 
-PROTOCOL = "formulaguard_cwrp_sheetjs_conversion_v1"
+PROTOCOL = "formulaguard_cwrp_sheetjs_conversion_v2"
 DEFAULT_SOURCE = ROOT / "data/external/model_discovery/raw/sheetjs_enron"
 DEFAULT_ACQUISITION = ROOT / "results/cwrp_sheetjs_acquisition_v1"
 DEFAULT_DESTINATION = ROOT / "data/external/model_discovery/converted/sheetjs_enron"
-DEFAULT_OUTPUT = ROOT / "results/cwrp_sheetjs_conversion_v1"
+DEFAULT_OUTPUT = ROOT / "results/cwrp_sheetjs_conversion_v2"
 MIN_PARSEABLE_FRACTION = 0.5
 MAX_WORKERS = 24
 DEFAULT_TIMEOUT_SECONDS = 180
@@ -161,6 +161,17 @@ def _inspect_converted(path: Path) -> dict[str, object]:
     }
 
 
+def install_converted(source: Path, target: Path) -> None:
+    """Install a converted file atomically even when source is on another FS."""
+
+    temporary = target.with_name(f".{target.name}.{os.getpid()}.tmp")
+    try:
+        shutil.copyfile(source, temporary)
+        os.replace(temporary, target)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
 def _convert_one(
     payload: tuple[dict[str, object], str, str, str, int],
 ) -> dict[str, object]:
@@ -211,7 +222,7 @@ def _convert_one(
             outputs = sorted(converted.glob("*.xlsx"))
             if len(outputs) != 1:
                 raise ValueError(f"LibreOffice produced {len(outputs)} xlsx files")
-            os.replace(outputs[0], target)
+            install_converted(outputs[0], target)
         inspection = _inspect_converted(target)
         return {
             **base,
@@ -219,6 +230,7 @@ def _convert_one(
             "converted_sha256": sha256(target),
             "converted_bytes": target.stat().st_size,
             "failure_type": "",
+            "failure_errno": None,
         }
     except Exception as exc:
         target.unlink(missing_ok=True)
@@ -233,6 +245,7 @@ def _convert_one(
             "converted_sha256": "",
             "converted_bytes": 0,
             "failure_type": type(exc).__name__,
+            "failure_errno": getattr(exc, "errno", None),
         }
 
 
