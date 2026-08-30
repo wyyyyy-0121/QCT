@@ -230,7 +230,7 @@ class V5PSLToolTests(unittest.TestCase):
             if row["primary_source_checked"] is True
         }
         unresolved = set(freeze_candidate.REQUIRED_LITERATURE_SOURCES) - verified
-        self.assertEqual(len(verified), 9)
+        self.assertEqual(len(verified), 11)
         self.assertEqual(progress["primary_sources_verified"], len(verified))
         self.assertEqual(set(progress["unresolved_sources"]), unresolved)
         self.assertEqual(

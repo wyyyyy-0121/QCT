@@ -1,7 +1,7 @@
 # V5-PSL 原创性与主张边界
 
 状态：候选冻结前硬门，**尚未通过**。截至 2026-08-30，13 篇预登记主文献中
-9 篇已完成全文核对，4 篇只有出版方页面或元数据，不能计为全文核对。进度和外部
+11 篇已完成全文核对，2 篇只有出版方页面或元数据，不能计为全文核对。进度和外部
 审阅笔记哈希见 `V5_PSL_LITERATURE_GATE_PROGRESS.json`。
 
 本矩阵只约束可说和不可说的内容，不用“没有检索到”证明原创，也不把多个已有部件
@@ -26,8 +26,8 @@ V5-PSL-dev1 的输入是一个可计算工作簿及其可见公式和值，不�
 | 研究线 | 主文献与全文状态 | 原文已建立的内容 | V5-PSL 重叠与禁止表述 | 仍可检验的窄差异 |
 |---|---|---|---|---|
 | Spreadsheet ambiguity | Dou, Cheung, Wei 2014，DOI `10.1145/2568225.2568316`，已核全文 | AmCheck 识别 cell array，以约束和现有值/公式恢复共同 formula pattern，检测 ambiguous computation smells 并生成修复 | 不得声称表格歧义、公式模式恢复、cell-array 异常或合成修复是新发现 | AmCheck 的歧义是同一 cell array 内公式语义不一致；可检验 V5-PSL 的非行动状态是否能表示“扰动证据无法隔离单一源”，但不能据此声称首次形式化歧义 |
-| Metamorphic spreadsheet testing | Poon, Liu, Chen 2017，DOI `10.4018/JOEUC.2017040102`，**待全文** | 出版方页面确认其比较 error trapping 与 metamorphic testing，并把两者用于 spreadsheet failure detection；完整关系、实验和限制仍待原文 | 已足以禁止“首次把蜕变测试用于电子表格”；全文前不得写更细的方法比较 | 只能暂记为任务邻居；取得全文后再判断其输入变换、输出关系和定位粒度 |
-| Metamorphic spreadsheet testing | Yang, Hu, Ma 2026，DOI `10.1016/j.infsof.2026.108074`，**待全文** | 出版方主页面公开了七类值/公式模式 MR、输入值变换、关系投票、错误格标记，以及 EUSES/Enron 实验片段 | 不得声称无 oracle 表格检测、输入扰动、蜕变关系、关系投票或错误格标记是新方法；摘要和页面片段不能把门判为通过 | 待全文核对 SEDMR 的完整候选集合与排名定义；当前可检验差异是角色条件完整源排名、定向下游恢复和显式弃权 |
+| Metamorphic spreadsheet testing | Poon, Liu, Chen 2017，DOI `10.4018/JOEUC.2017040102`，已核全文（作者接受稿） | 以应用特定 MR 从源输入生成后续输入，不依赖两次执行的期望输出，以 MR 违背检测表格失败；五个含真实开发错误的 EUSES 表覆盖六类错误，实验含五名参与者、43 个 MR 和 570 次执行 | 不得声称首次把蜕变测试、源/后续测试对、无期望输出检测或输入变换用于电子表格 | 该研究由参与者为每个应用识别 MR 并评估是否暴露失败；可检验 V5-PSL 的固定角色条件扰动、完整源排名、定向下游恢复和显式 1/5/0 行动契约 |
+| Metamorphic spreadsheet testing | Yang, Hu, Ma 2026，DOI `10.1016/j.infsof.2026.108074`，已核全文（SSRN 完整预印本） | SEDMR 提取 cell array，定义七类值/公式模式 MR 和十种检测方法，组合 CACheck 并标记错误格；在 100 个 EUSES 与 60 个 Enron 表、2,894 个真实及注入错误格上报告 precision/recall/F1 | 不得声称无 oracle 表格检测、输入或公式模式扰动、蜕变关系组合、cell-array 角色结构、错误格标记或 EUSES/Enron 蜕变评测是新方法 | 可检验 V5-PSL 的完整源排名、定向下游恢复、可识别性状态和固定复核预算；这些差异必须由匹配比较证明，不能仅从术语推断 |
 | Invariant-based testing | Roy, van Deursen, Hermans 2018，DOI `10.1109/QRS-C.2018.00046`，已核全文 | 用 Daikon 推断不变量，将其变成条件公式测试，在 8 个表上检测回归变异；召回随表和故障类型显著变化 | 不得声称表格不变量、内部关系、违反一致性或不变量测试是新方法 | V5-PSL 不从历史正确版本训练 Daikon 不变量，也不增加 test sheet；可把响应一致性限定为固定证据族之一 |
 | Domain invariants | Wang, Zhao 2021，DOI `10.1109/APR52552.2021.00012`，**待全文** | 出版方摘要确认其把领域不变量与形式/预测方法结合，用于表格错误检测和修复 | 不得声称领域不变量用于表格调试是新方法；全文前不能判断具体约束和修复机制 | 取得两页原文后再确定 V5-PSL 的角色参照是否与其领域不变量发生更直接重合 |
 | Formula-role outliers | Cheung et al. 2016，DOI `10.1145/2884781.2884796`，已核全文 | CUSTODES 以公式 AST、引用等强特征和布局、标签、样式等弱特征做两阶段聚类，把少数离群单元格排序为 smell | 不得声称公式角色、AST/引用聚类、布局特征、少数派离群或 smell 排名是新方法 | 可比较静态 cluster outlier 与固定扰动后的角色条件响应，但静态角色稀有度只能作为既有先验 |
@@ -75,15 +75,13 @@ V5-PSL-dev1 的输入是一个可计算工作簿及其可见公式和值，不�
 
 ## 5. 文献门完成条件
 
-当前不能通过的原因是以下四篇尚无合法全文核对：
+当前不能通过的原因是以下两篇尚无合法全文核对：
 
-- Poon, Liu, Chen 2017；
-- Yang, Hu, Ma 2026（SEDMR）；
 - Wang, Zhao 2021；
 - Hofer, Wotawa 2013。
 
 取得合法全文后，必须分别生成外部审阅笔记及 SHA-256，重新检查本矩阵，并把进度
-回执中的 `primary_sources_verified` 从 9 更新为 13。只有全部记录均为
+回执中的 `primary_sources_verified` 从 11 更新为 13。只有全部记录均为
 `evidence_scope=full_text`、`unresolved_sources=[]`、`unresolved_claims=[]`，
 且回执绑定本文件当前 SHA-256 时，才允许设置 `passed=true`。
 

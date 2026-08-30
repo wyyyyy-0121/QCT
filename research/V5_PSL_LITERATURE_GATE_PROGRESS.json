@@ -25,8 +25,8 @@
     "wang2021_domain_invariants",
     "yang2026_sedmr"
   ],
-  "primary_sources_verified": 9,
-  "claim_matrix_sha256": "3971a1771c9fa793ffa43ebdd4a8c73441419e593f489a7450105daffbe94752",
+  "primary_sources_verified": 11,
+  "claim_matrix_sha256": "c18646d6720dfb7086526f35c996425bc1d73a9622b7f49959ea0acc9647c538",
   "reviewed_sources": [
     {
       "claim_area": "spreadsheet ambiguity",
@@ -47,28 +47,28 @@
       "citation_key": "poon2017_metamorphic",
       "title": "Error Trapping and Metamorphic Testing for Spreadsheet Failure Detection",
       "stable_locator": "doi:10.4018/JOEUC.2017040102",
-      "primary_source_checked": false,
-      "evidence_scope": "publisher_partial_text",
-      "checked_on": null,
-      "overlap_assessment": "pending_full_text",
-      "permitted_claim": null,
-      "forbidden_claim": "Metamorphic testing for spreadsheet failure detection is new.",
-      "source_sha256": "0c1e3d27f38ee288b24d0fe8f643df47ad6e123eb8bc70bfac0184a55ce69149",
-      "evidence_sha256": null
+      "primary_source_checked": true,
+      "evidence_scope": "full_text",
+      "checked_on": "2026-08-30",
+      "overlap_assessment": "establishes_oracle_free_metamorphic_spreadsheet_failure_detection",
+      "permitted_claim": "Evaluate a fixed role-conditioned perturbation protocol, complete source ranking, directed downstream recovery, and explicit selective action against preregistered baselines.",
+      "forbidden_claim": "Applying metamorphic testing to spreadsheets, detecting failures without expected outputs, or using source/follow-up input transformations is new.",
+      "source_sha256": "4217cb72485ff82c9443aa264f31446b0175e25851d9f1ca8d0259113e648347",
+      "evidence_sha256": "16af40298b168342cb2ea27c713ca46a05c0158aa71660a8fffd2ce4eab861dc"
     },
     {
       "claim_area": "metamorphic spreadsheet testing",
       "citation_key": "yang2026_sedmr",
       "title": "SEDMR: A Spreadsheet Error Detection Approach Based on Metamorphic Testing",
       "stable_locator": "doi:10.1016/j.infsof.2026.108074",
-      "primary_source_checked": false,
-      "evidence_scope": "publisher_partial_text",
-      "checked_on": null,
-      "overlap_assessment": "direct_neighbor_pending_full_text",
-      "permitted_claim": null,
-      "forbidden_claim": "Oracle-free spreadsheet detection, input perturbation, metamorphic relations, relation voting, or error-cell marking is new.",
-      "source_sha256": "cb978b27d1c088af567d27ae37d2ff942c1254929a745eb282e538457932a7bf",
-      "evidence_sha256": null
+      "primary_source_checked": true,
+      "evidence_scope": "full_text",
+      "checked_on": "2026-08-30",
+      "overlap_assessment": "direct_neighbor_establishes_value_and_formula_pattern_metamorphic_error_marking",
+      "permitted_claim": "Compare V5-PSL's complete source ranking, directed downstream recovery, identifiability states, and fixed review budget with SEDMR's relation-based error marking.",
+      "forbidden_claim": "Oracle-free spreadsheet detection, input or formula-pattern perturbation, metamorphic relation combination, cell-array role structure, or error-cell marking is new.",
+      "source_sha256": "c45997e1e86687640a3c8aadefbe06ad456532b0e35c2bd6019a9b31817fab6b",
+      "evidence_sha256": "a511c8da63e05ab1d60473cdc9e96d639407b544601837e8dfb8751fdab9e105"
     },
     {
       "claim_area": "invariant-based spreadsheet debugging",
@@ -213,14 +213,11 @@
   ],
   "unresolved_sources": [
     "hofer2013_mutation_debugging",
-    "poon2017_metamorphic",
-    "wang2021_domain_invariants",
-    "yang2026_sedmr"
+    "wang2021_domain_invariants"
   ],
   "unresolved_claims": [
     "interventional debugging",
-    "invariant-based spreadsheet debugging",
-    "metamorphic spreadsheet testing"
+    "invariant-based spreadsheet debugging"
   ],
   "note": "Progress only. Copyrighted source artifacts and review notes are stored outside Git. Abstracts and publisher snippets are discovery evidence, not completed primary-source reviews."
 }
