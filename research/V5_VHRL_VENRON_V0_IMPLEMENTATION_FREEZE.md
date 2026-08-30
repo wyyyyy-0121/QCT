@@ -41,6 +41,13 @@ requires the filename token to match exactly, left-pads the token with zeroes to
 characters, and verifies that reconstructed MD5 against the extracted file bytes.
 No nonhex token or shorter identity is accepted.
 
+The second pre-extraction parser run exposed seven long group names whose worksheet
+titles are truncated by Excel's 31-character sheet-name limit while column F retains
+the full directory. The parser therefore uses a group sheet title only for its numeric
+group ID and declared version count. It derives the full group name from column F,
+requires every version row in that sheet to have the same parent, and revalidates the
+parent's group ID and declared count. This does not change order or group membership.
+
 ## 3. Conversion and formula-only profile
 
 - engine: the installed LibreOffice version recorded in the run metadata;

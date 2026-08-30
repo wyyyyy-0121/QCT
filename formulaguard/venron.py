@@ -28,7 +28,7 @@ def _integer(value: object) -> int | None:
     return None
 
 
-def normalize_order_path(value: object, group_name: str) -> str:
+def normalize_order_path(value: object, group_id: int) -> str:
     if not isinstance(value, str) or not value:
         raise ValueError("VEnron order path is not a string")
     candidate = value.replace("\\", "/")
@@ -37,7 +37,12 @@ def normalize_order_path(value: object, group_name: str) -> str:
     parts = candidate[3:].split("/")
     if len(parts) != 2 or any(part in {"", ".", ".."} for part in parts):
         raise ValueError(f"VEnron order path has an unsafe shape: {value!r}")
-    if parts[0] != group_name or not parts[1].lower().endswith(".xls"):
+    group_match = GROUP_PATTERN.fullmatch(parts[0])
+    if (
+        not group_match
+        or int(group_match.group(1)) != group_id
+        or not parts[1].lower().endswith(".xls")
+    ):
         raise ValueError(f"VEnron order path/group mismatch: {value!r}")
     relative = PurePosixPath("VEnron1.0", *parts)
     return relative.as_posix()
@@ -68,6 +73,7 @@ def parse_order_workbook(
             declared_count = int(match.group(2))
             seen_group_ids.add(group_id)
             group_rows: list[dict[str, object]] = []
+            full_group_names: set[str] = set()
             # Only A, E, and F are retained. Interleaved email rows have no file path in F.
             for row in sheet.iter_rows(min_col=1, max_col=6, values_only=True):
                 order = _integer(row[0])
@@ -78,7 +84,9 @@ def parse_order_workbook(
                 if not MD5_TOKEN_PATTERN.fullmatch(md5_token):
                     raise ValueError(f"invalid VEnron source MD5 in group {group_id}")
                 md5 = md5_token.zfill(32)
-                relative = normalize_order_path(file_path, sheet.title)
+                relative = normalize_order_path(file_path, group_id)
+                full_group_name = PurePosixPath(relative).parent.name
+                full_group_names.add(full_group_name)
                 if relative not in expected_members or relative in seen_paths:
                     raise ValueError(f"VEnron order path is absent or duplicated: {relative!r}")
                 if not PurePosixPath(relative).name.lower().endswith(f"_{md5_token}.xls"):
@@ -86,16 +94,26 @@ def parse_order_workbook(
                 seen_paths.add(relative)
                 group_rows.append({
                     "group_id": group_id,
-                    "group_name": sheet.title,
+                    "group_name": full_group_name,
                     "version_order": order,
                     "source_md5": md5,
                     "source_md5_token": md5_token,
                     "source_relative_path": relative,
                 })
             group_rows.sort(key=lambda row: int(row["version_order"]))
-            if len(group_rows) != declared_count or [
+            full_group_match = (
+                GROUP_PATTERN.fullmatch(next(iter(full_group_names)))
+                if len(full_group_names) == 1
+                else None
+            )
+            if (
+                not full_group_match
+                or int(full_group_match.group(2)) != declared_count
+                or len(group_rows) != declared_count
+                or [
                 int(row["version_order"]) for row in group_rows
-            ] != list(range(1, declared_count + 1)):
+                ] != list(range(1, declared_count + 1))
+            ):
                 raise ValueError(f"VEnron version order is incomplete for group {group_id}")
             records.extend(group_rows)
     finally:
