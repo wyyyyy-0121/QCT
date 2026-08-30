@@ -41,6 +41,7 @@
     "fold_roles": {"train": 3, "calibration": 1, "test": 1},
     "max_targets_per_workbook": 200,
     "review_budget": 5,
+    "min_parseable_formula_fraction_per_workbook": 0.5,
     "primary_metric": "workbook_macro_top5",
     "baselines": ["global_frequency", "local_peer", "context_frequency"],
     "local_peer_axis_radius": 12
