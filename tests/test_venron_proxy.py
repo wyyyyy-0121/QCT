@@ -30,13 +30,22 @@ class VEnronProxyTests(unittest.TestCase):
             sheet["A1"].data_type = "e"
             sheet["A2"] = 123456
             sheet["A3"] = "private text"
+            sheet["Z100"] = "#N/A"
+            sheet["Z100"].data_type = "e"
             workbook.save(path)
             workbook.close()
             result = explicit_formula_errors(
                 path,
-                profile([("Sheet", "A1", "=BAD()"), ("Sheet", "A2", "=1")]),
+                profile([
+                    ("Sheet", "A1", "=BAD()"),
+                    ("Sheet", "A2", "=1"),
+                    ("Sheet", "Z100", "=NA()"),
+                ]),
             )
-            self.assertEqual(result, [{"sheet": "Sheet", "address": "A1", "error": "#REF!"}])
+            self.assertEqual(result, [
+                {"sheet": "Sheet", "address": "A1", "error": "#REF!"},
+                {"sheet": "Sheet", "address": "Z100", "error": "#N/A"},
+            ])
             self.assertNotIn("123456", str(result))
             self.assertNotIn("private text", str(result))
 

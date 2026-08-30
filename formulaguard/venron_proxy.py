@@ -61,6 +61,9 @@ def explicit_formula_errors(
     formula_profile: Mapping[str, object],
 ) -> list[dict[str, str]]:
     formula_keys = set(formula_map(formula_profile))
+    keys_by_sheet: dict[str, list[str]] = {}
+    for sheet, address in sorted(formula_keys):
+        keys_by_sheet.setdefault(sheet, []).append(address)
     workbook = openpyxl.load_workbook(
         path,
         read_only=True,
@@ -69,19 +72,19 @@ def explicit_formula_errors(
     )
     errors: list[dict[str, str]] = []
     try:
-        for sheet in workbook.worksheets:
-            for row in sheet.iter_rows():
-                for cell in row:
-                    key = (sheet.title, cell.coordinate)
-                    if key not in formula_keys:
-                        continue
-                    value = str(cell.value).upper() if cell.value is not None else ""
-                    if value in EXPLICIT_ERROR_TOKENS:
-                        errors.append({
-                            "sheet": sheet.title,
-                            "address": cell.coordinate,
-                            "error": value,
-                        })
+        for sheet_name, addresses in keys_by_sheet.items():
+            if sheet_name not in workbook.sheetnames:
+                raise ValueError(f"cached VEnron workbook lost sheet: {sheet_name!r}")
+            sheet = workbook[sheet_name]
+            for address in addresses:
+                cell = sheet[address]
+                value = str(cell.value).upper() if cell.value is not None else ""
+                if value in EXPLICIT_ERROR_TOKENS:
+                    errors.append({
+                        "sheet": sheet_name,
+                        "address": address,
+                        "error": value,
+                    })
     finally:
         workbook.close()
     errors.sort(key=lambda row: (row["sheet"], row["address"], row["error"]))
