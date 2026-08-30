@@ -41,6 +41,7 @@ MIN_CONTEXT_GROUP_SUPPORT = 3
 MIN_CONTEXT_EXAMPLES = 5
 SMOOTHING_ALPHA = 1.0
 CALIBRATION_TARGET_TOP5 = 0.60
+ECE_BINS = 10
 EXAMPLE_FIELDS = {
     "protocol",
     "example_id",
@@ -466,15 +467,25 @@ def _method_metrics(rows: Sequence[Mapping[str, object]], hit_key: str) -> dict[
 def _ece(rows: Sequence[Mapping[str, object]]) -> float:
     if not rows:
         return 1.0
-    bins: dict[int, list[tuple[float, int]]] = defaultdict(list)
-    for row in rows:
-        confidence = float(row["candidate"]["top5_probability"])  # type: ignore[index]
-        index = min(9, max(0, int(confidence * 10)))
-        bins[index].append((confidence, int(row["candidate_hit"])))
+    ordered = sorted(
+        rows,
+        key=lambda row: (
+            float(row["candidate"]["top5_probability"]),  # type: ignore[index]
+            str(row["example_id"]),
+        ),
+    )
+    bins = [
+        ordered[index * len(ordered) // ECE_BINS:(index + 1) * len(ordered) // ECE_BINS]
+        for index in range(ECE_BINS)
+    ]
     return sum(
-        len(values) / len(rows)
-        * abs(fmean(value[0] for value in values) - fmean(value[1] for value in values))
-        for values in bins.values()
+        len(values) / len(ordered)
+        * abs(
+            fmean(float(value["candidate"]["top5_probability"]) for value in values)  # type: ignore[index]
+            - fmean(int(value["candidate_hit"]) for value in values)
+        )
+        for values in bins
+        if values
     )
 
 
@@ -566,7 +577,7 @@ def summarize(
             "selected": len(selected),
             "coverage": selected_coverage,
             "top5": selected_accuracy,
-            "ece_10_bins": selected_ece,
+            "ece_10_equal_frequency_bins": selected_ece,
         },
         "sparse_selective": {
             "selected": len(sparse_selected),
@@ -620,6 +631,8 @@ def run(
         "min_context_examples": MIN_CONTEXT_EXAMPLES,
         "smoothing_alpha": SMOOTHING_ALPHA,
         "calibration_target_top5": CALIBRATION_TARGET_TOP5,
+        "ece_bins": ECE_BINS,
+        "ece_binning": "equal_frequency",
         "source_hashes": {
             "formulaguard/cwrp.py": sha256(ROOT / "formulaguard/cwrp.py"),
             "scripts/run_cwrp_self_supervised.py": sha256(Path(__file__).resolve()),

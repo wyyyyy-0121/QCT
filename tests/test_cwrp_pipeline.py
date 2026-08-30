@@ -11,6 +11,7 @@ from scripts.build_v6_dataset import write_xlsx
 from scripts.convert_cwrp_sheetjs import convert, install_converted
 from scripts.build_cwrp_corpus import cluster_profiles, read_targets
 from scripts.run_cwrp_self_supervised import (
+    _ece,
     _validate_example,
     HierarchicalRolePrior,
     permute_training_targets,
@@ -458,6 +459,17 @@ class CWRPSelfSupervisedTests(unittest.TestCase):
             left["target_fingerprint"] != right["target_fingerprint"]
             for left, right in zip(sorted(rows, key=lambda row: row["example_id"]), first)
         ))
+
+    def test_ece_uses_equal_frequency_not_equal_width_bins(self):
+        rows = [
+            {
+                "example_id": f"{index:02d}",
+                "candidate": {"top5_probability": 0.5},
+                "candidate_hit": int(index >= 10),
+            }
+            for index in range(20)
+        ]
+        self.assertAlmostEqual(_ece(rows), 0.5)
 
 
 if __name__ == "__main__":
