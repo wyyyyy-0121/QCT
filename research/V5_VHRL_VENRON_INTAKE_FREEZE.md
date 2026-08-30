@@ -132,8 +132,11 @@ pinned download once and retain its SHA-256 receipt. V0 then has two ordered sta
 1. write, test, commit, and push a manifest-only audit before enumerating archive
    members; it may record path structure and extensions but may not extract or open a
    workbook;
-2. use that immutable manifest to write, test, commit, and push the conversion and
-   adjacent-transition audit before extraction.
+2. use that immutable manifest to identify the single order-metadata workbook, then
+   write, test, commit, and push a schema-only intake before reading it; no evolution-
+   group workbook may be opened in this substage;
+3. use the observed order schema to write, test, commit, and push the full extraction,
+   conversion, and adjacent-transition audit before opening group workbooks.
 
 This staging fixes the safety checks without guessing the unpublished archive layout.
 An archive reader and its version must be recorded in each receipt. Protected data
