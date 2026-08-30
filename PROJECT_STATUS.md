@@ -10,8 +10,16 @@
 - 当前研究线 `model-discovery` 已完成 Phase 0、Gate 1、Gate 2 评分和 RQ-C；Gate 2A
   与 Gate 2B 均未通过，Branch C 也未形成可部署的无标签继任模型。`V4-R1` 仍是唯一
   冻结主排序器，不得在同一批揭晓标签上继续调参或创建 `V5-R1`。
-- 旧 `240+120` 只能在候选锁后作为一次 `revealed-trial`，新保管人 `240+120` 只能
-  在完整预测锁后评分；两者当前均未读取。
+- 后续预注册的 `CWRP` 跨工作簿角色先验已在 303 个去重真实工作簿、30,875 个遮蔽
+  目标上完成五折自监督检验。U0 通过，但 U1/U2 失败：工作簿宏 Top-5 为 7.81%，
+  低于 `context_frequency` 的 21.58%；选择性 Top-5 为 69.83%，覆盖仅 5.23%，
+  等频 10 桶 ECE 为 20.23%。该研究线按预注册停止，不实现定位候选、不创建 `V5-R1`。
+- CWRP 首份 v1 回执错误使用等宽 ECE；原回执永久保留。提交 `674b6df` 只把统计
+  修正为预注册的等频 ECE，校正 v2 的逐目标预测哈希与 v1 完全相同，因此不是结果后
+  调参。完整记录见 `research/V5_CWRP_RESULT.md`。
+- 保密 `240+120` 已由用户放在仓库外 `/home/ayaka/code/FormulaGuard_240_120/`；当前未
+  列目录、未哈希、未读取。只有新候选规格、源码冻结和预测锁全部完成后才允许一次性
+  使用。CWRP 已失败，未达到该条件，因此保密数据继续封存。
 - Phase 0 产物：
   `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`、
   `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`、
@@ -22,6 +30,9 @@
   `research/V5_MODEL_DISCOVERY_GATE2_RESULT.md`、
   `research/V5_MODEL_DISCOVERY_BRANCH_C_RESULT.md`；机器回执保存在
   `results/model_discovery_gate2_final_v3/` 和 `results/model_discovery_branch_c/`。
+- CWRP 负结果：`research/V5_CWRP_RESULT.md` 和
+  `research/V5_CWRP_RESULT.json`；本地不可变回执保存在
+  `results/cwrp_self_supervised_v1/` 与 `results/cwrp_self_supervised_v2/`。
 - 当前功效审计显示，25 个 Enron 结构组或 30 个最终模板组不足以可靠检出 5 个百分
   点的确认性 Top-5 改善；正式盲测前需要增加独立模板，或降低论文结论为探索性估计。
 
