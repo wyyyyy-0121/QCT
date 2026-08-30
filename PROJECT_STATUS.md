@@ -22,11 +22,19 @@
   219 个结构组和 74,570 个可解析公式。工作簿覆盖 22.93%（门为 80%）、公式数低于
   100,000，两项 U0 失败。DRFV 按预注册在训练前停止，未读取 answer、未接收
   SpreadsheetBench 2、未产生模型权重。完整记录见 `research/V5_DRFV_U0_RESULT.md`。
+- DRFV 后的公开模型审计已完成：HERMES 公共仓库不可运行；ForTaP 的 MIT 代码和基础
+  权重可用，但其 Enron 微调权重禁止用于本项目。新的 `FCRL` 研究线已在获取权重、
+  安装 Torch 和实现前预注册，固定为冻结 ForTaP 骨干加反事实后悔值定位头。它通过
+  U0-U4 前不是 `V5-R1`，详见
+  `research/V5_FCRL_MECHANISM_SELECTION_AND_PREREGISTRATION.md`。
 - 新保管人保密 `240+120` 已由用户放在仓库外
-  `/home/ayaka/code/FormulaGuard_240_120/`；当前未列目录、未哈希、未读取。用户已授权：
+  `/home/ayaka/code/FormulaGuard_240_120/`；当前未列文件、未哈希、未读取内容。用户已授权：
   当新候选规格、源码与配置均已提交冻结，且完整预测锁已生成并提交后，Codex 可直接
   执行一次受保护集验证，无需再次等待用户确认或要求用户手工投喂。CWRP 已失败，未达到
   这些解锁条件，因此该目录继续封存。
+- 2026-08-31 公共源码目录发现命令曾意外枚举保密路径和两个一级目录项，但未列文件、
+  未哈希、未读取内容或标签；偏差已记录于
+  `research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`，保密评测仍保持锁定。
 - Phase 0 产物：
   `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`、
   `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`、

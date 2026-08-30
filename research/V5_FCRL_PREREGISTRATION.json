@@ -1,0 +1,126 @@
+{
+  "protocol": "formulaguard_fcrl_preregistration_v1",
+  "date": "2026-08-31",
+  "status": "frozen_before_checkpoint_acquisition_torch_installation_or_model_implementation",
+  "research_name": "FCRL",
+  "formal_model_name_authorized": false,
+  "backbone": {
+    "name": "ForTaP-base",
+    "repository": "https://github.com/microsoft/TUTA_table_understanding",
+    "commit": "4de8bba4e9bf6a89b2e131bfb471b4db2c45b951",
+    "license": "MIT",
+    "checkpoint_role": "base_formula_pretrained_encoder",
+    "checkpoint_sha256": null,
+    "checkpoint_sha256_set_by": "post_commit_acquisition_receipt",
+    "parameters_frozen": true,
+    "forbidden_checkpoint": "enron_formula_prediction_finetuned"
+  },
+  "training_source": {
+    "dataset": "SpreadsheetBench-v1-input-only-retained-DRFV-corpus",
+    "workbooks": 607,
+    "structure_groups": 219,
+    "parseable_formulas": 74570,
+    "answers_allowed": false,
+    "instructions_allowed": false,
+    "split_percent_by_sorted_structure_group": [70, 15, 15],
+    "max_targets_per_workbook": 128
+  },
+  "forbidden_training_sources": [
+    "all_formulaguard_localization_labels",
+    "sheetjs_nuix",
+    "sheetjs_edrm",
+    "spreadsheetbench_v2",
+    "old_240_120",
+    "new_custodian_240_120"
+  ],
+  "transient_context_inputs": [
+    "cell_text",
+    "numeric_values",
+    "formatting",
+    "position",
+    "non_target_formulas"
+  ],
+  "forbidden_model_inputs": [
+    "target_formula_in_context_encoder",
+    "target_cached_value",
+    "fault_source_cells",
+    "correct_formulas",
+    "error_types",
+    "expected_outputs",
+    "v4_rankings",
+    "protected_data"
+  ],
+  "model": {
+    "input_max_tokens": 512,
+    "formula_max_tokens": 64,
+    "beam_size": 5,
+    "decoder_dropout": 0.1,
+    "backbone_trainable": false,
+    "score": "positive_length_normalized_log_probability_regret_over_independently_supported_alternatives",
+    "stable_tie_break": "observed_surprisal_then_sheet_cell_order"
+  },
+  "training": {
+    "seed": 260831,
+    "deterministic": true,
+    "batch_size": 8,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "max_epochs": 15,
+    "early_stopping_metric": "calibration_group_top5_exact_formula_accuracy",
+    "early_stopping_patience": 2,
+    "hyperparameter_search": false
+  },
+  "alternative_support": {
+    "candidate_sources": ["decoder_beam", "translated_local_peers"],
+    "minimum_independent_peer_cells": 2,
+    "or_decoder_and_peer_agreement": true,
+    "same_translated_formula_block_counts_once": true
+  },
+  "u1": {
+    "min_top5_exact_formula_accuracy": 0.5,
+    "min_top1_exact_formula_accuracy": 0.25,
+    "min_top5_gain_vs_global_frequency_pp": 10.0,
+    "min_top5_gain_vs_local_peer_pp": 5.0,
+    "min_gold_reference_reachability": 0.7,
+    "require_repeat_hash_match": true
+  },
+  "u2": {
+    "min_top5_gain_vs_v4_pp": 5.0,
+    "min_top5_gain_vs_local_peer_pp": 5.0,
+    "min_top5_gain_vs_raw_surprisal_pp": 3.0,
+    "min_nonnegative_corruption_families_vs_v4": 7,
+    "max_single_family_regression_vs_v4_pp": 5.0,
+    "min_selective_precision": 0.75,
+    "min_error_coverage": 0.3,
+    "max_clean_action_rate": 0.15,
+    "min_formula_only_ablation_drop_pp": 5.0,
+    "min_context_shuffle_ablation_drop_pp": 5.0
+  },
+  "u3": {
+    "min_enron_top5_gain_vs_v4_pp": 5.0,
+    "min_enron_mrr_gain": 0.0,
+    "max_public_pressure_top5_regression_pp": 5.0,
+    "max_historical_top5_regression_pp": 5.0,
+    "max_public_control_action_rate": 0.15,
+    "require_regret_gain_vs_surprisal_on_enron": true,
+    "require_regret_gain_vs_surprisal_on_one_n2_queue": true
+  },
+  "u4": {
+    "protocol": "reuse_drfv_u2_locked_spreadsheetbench_v2_definitions_and_thresholds",
+    "gold_access_condition": "candidate_frozen_and_complete_input_prediction_lock_committed"
+  },
+  "ablations": [
+    "raw_surprisal",
+    "local_peer",
+    "formula_only",
+    "context_shuffled",
+    "no_alternative_support_gate",
+    "random_init_backbone"
+  ],
+  "failure_policy": "stop_fcrl_without_post_test_architecture_feature_split_threshold_gate_or_checkpoint_changes",
+  "protected_data_access_condition": "u0_u1_u2_u3_u4_passed_and_final_candidate_spec_source_config_weights_environment_and_complete_public_prediction_lock_committed",
+  "protected_data_access_authorized_without_new_user_message": true,
+  "protected_data_accessed": []
+}

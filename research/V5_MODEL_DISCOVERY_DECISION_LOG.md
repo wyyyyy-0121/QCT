@@ -119,3 +119,30 @@
   比例固定为 50%，并要求至少有一个公式。该阈值不得依据 U0 结果修改。
 - 没有决定：没有观察转换成功率、公式数量、公式语法或任何自监督成绩。
 - 受保护数据：未访问；SheetJS 工作簿内容也尚未物化。
+
+## D0010：DRFV 语料门失败
+
+- 日期：2026-08-31
+- 依据：`research/V5_DRFV_U0_RESULT.md` 和不可变 U0 回执。
+- 观察：607 个去重工作簿和 219 个结构组达到门槛，但 74,570 个可解析公式低于
+  100,000，且合格工作簿比例 22.93% 低于 80%。
+- 决定：DRFV 在训练前终止，不降低 U0，不读取答案或 SpreadsheetBench 2。
+- 没有决定：没有训练密度比模型，没有生成权重，没有授权 `V5-R1`。
+- 受保护数据：未用于 U0。
+
+## D0011：公开上下文模型审计与 FCRL 选择
+
+- 日期：2026-08-31
+- 依据：HERMES 提交 `e8a9f6c`、TUTA/ForTaP 提交 `4de8bba`、ACL 2023 HERMES
+  论文、ACL 2022 ForTaP 论文及 SheetJS 固定树元数据。
+- 观察：HERMES 公共仓库只有 README 和演示视频；ForTaP 有 MIT 代码与基础检查点，
+  但预训练语料不公开且 Enron 微调权重与本项目安全集重合；EDRM 有 20,256 份原始
+  工作簿但存在个人信息和 Enron 重合风险。
+- 决定：预注册 FCRL。只允许冻结的 ForTaP 基础权重、SpreadsheetBench v1 input-only
+  训练和新的反事实后悔值定位头；禁止 Enron 微调权重，暂不下载 EDRM 内容。
+- 没有决定：没有声称 HERMES 可复现，没有把 ForTaP/Transformer/公式生成写成原创，
+  没有恢复 DRFV，也没有授权正式 `V5-R1`。
+- 受保护数据：公共来源审计期间发生一次路径级枚举偏差；没有读取文件、内容、标签或
+  哈希。完整记录见 `research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`。
+- 可复核依据：`research/V5_FCRL_MECHANISM_SELECTION_AND_PREREGISTRATION.md` 和
+  `research/V5_FCRL_PREREGISTRATION.json`。
