@@ -92,9 +92,10 @@ python scripts/audit_v5_psl_public_pressure.py \
 `research/V5_PSL_CLAIM_MATRIX.md`的真实SHA-256；冻结还要求干净Git工作区和可用的
 LibreOffice：
 
-文献门v2预登记七个研究方向和13篇必读主文献，允许同一方向追加多篇，但只接受
-全文核对记录。当前进度见`research/V5_PSL_LITERATURE_GATE_PROGRESS.json`；在其中
-`passed=false`或仍有`unresolved_sources`时，下面的冻结命令会按设计拒绝执行。
+文献门v3覆盖七个研究方向：11篇可获得主文献必须完成全文核对，另有2篇封闭访问
+直接邻居必须保留检索证据和保守禁止主张。该访问修订发生在公开压力运行前，详见
+`research/V5_PSL_LITERATURE_GATE_AMENDMENT_V3.md`。当前回执为11篇全文加2篇披露，
+不是13/13全文；`passed=false`、披露缺失或仍有`unresolved_sources`时冻结会拒绝。
 
 ```bash
 python scripts/freeze_v5_psl_candidate.py \
@@ -106,7 +107,12 @@ python scripts/freeze_v5_psl_candidate.py \
   --output results/v5_psl_candidate_lock.json
 ```
 
-候选锁之后才可由独立保管人释放PUBLIC。四个预声明方法在同一批工作簿上写入完整
+第三方确认协议v2只要求一名未参与模型开发的独立保管评测人，不再要求六名制题人
+和两名逐例复核者。保留30个未见模板、240错误+120控制、模板簇统计和完整盲锁；
+证据只能称为“单保管人盲持的外部模板确认”，不能称为六人或多中心验证。具体任务
+清单与无外部人员时的降级边界见`research/V5_PSL_THIRD_PARTY_PROTOCOL.md`。
+
+候选锁之后才可由该保管人释放PUBLIC。四个预声明方法在同一批工作簿上写入完整
 排名，独立锁成功后才能释放SECRET并评分一次：
 
 ```bash

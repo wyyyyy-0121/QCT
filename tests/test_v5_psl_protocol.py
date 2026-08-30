@@ -9,7 +9,6 @@ from formulaguard.v5_psl_protocol import (
     CASE_FIELDS,
     ERROR_TYPES,
     PUBLIC_FIELDS,
-    REVIEW_FIELDS,
     audit_design,
     model_output_projection,
     read_sha256_commitments,
@@ -20,36 +19,40 @@ from formulaguard.v5_psl_protocol import (
 
 DECLARATION = {
     "independent_custodian": True,
+    "custodian_not_in_model_development": True,
+    "custodian_prepared_or_supervised_all_cases": True,
     "model_was_run": False,
     "labels_withheld_until_prediction_lock": True,
     "permissions_and_anonymization_checked": True,
     "all_cases_recalculated_without_runtime_errors": True,
-    "reviewers_worked_independently": True,
-    "creators_did_not_serve_as_reviewers": True,
-    "creators_and_reviewers_received_no_model_outputs": True,
+    "case_plan_fixed_before_third_party_predictions": True,
+    "templates_withheld_until_candidate_lock": True,
+    "no_development_template_overlap": True,
+    "custodian_received_no_model_outputs": True,
+    "single_custodian_design_acknowledged": True,
     "custodian_id": "custodian_external_01",
     "calculation_engine": "LibreOffice Calc",
     "calculation_engine_version": "unit-test",
     "permission_evidence_sha256": "a" * 64,
     "anonymization_evidence_sha256": "b" * 64,
+    "case_plan_sha256": "c" * 64,
+    "template_overlap_evidence_sha256": "d" * 64,
 }
 
 
-def complete_design() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+def complete_design() -> list[dict[str, str]]:
     cases: list[dict[str, str]] = []
-    reviews: list[dict[str, str]] = []
     error_index = 0
     for template_index in range(30):
         template_id = f"template_{template_index + 1:02d}"
-        creator_id = f"creator_{template_index // 5 + 1}"
-        origin = "self_authored" if template_index < 20 else "licensed_public"
+        origin = "steward_owned" if template_index < 20 else "licensed_public"
         license_id = f"permission_{template_index + 1:02d}"
         for case_index in range(12):
             instance_id = f"case_{template_index + 1:02d}_{case_index + 1:02d}"
             common = {
                 "instance_id": instance_id,
                 "template_id": template_id,
-                "creator_id": creator_id,
+                "steward_id": DECLARATION["custodian_id"],
                 "workbook": f"workbooks/{instance_id}.xlsx",
                 "original_workbook": f"originals/{instance_id}.xlsx",
                 "template_origin": origin,
@@ -70,17 +73,12 @@ def complete_design() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                     "identifiability": "identifiable" if identifiable else "ambiguous",
                     "control_subtype": "",
                     "challenge_stratum": challenge,
+                    "adjudication_rationale": (
+                        "Objective ambiguity stratum recorded before model output."
+                        if not identifiable else ""
+                    ),
                 }
                 error_index += 1
-                for reviewer in ("reviewer_a", "reviewer_b"):
-                    reviews.append({
-                        "instance_id": instance_id,
-                        "reviewer_id": reviewer,
-                        "source_guess": sources.split(";", 1)[0],
-                        "unique_source": "1" if identifiable else "0",
-                        "confidence": "high",
-                        "notes": "",
-                    })
             else:
                 row = {
                     **common,
@@ -90,9 +88,13 @@ def complete_design() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                     "identifiability": "",
                     "control_subtype": "regular" if case_index < 10 else "legal_exception",
                     "challenge_stratum": "",
+                    "adjudication_rationale": (
+                        "Valid formula exception retained as a clean control."
+                        if case_index >= 10 else ""
+                    ),
                 }
             cases.append({field: row[field] for field in CASE_FIELDS})
-    return cases, [{field: row[field] for field in REVIEW_FIELDS} for row in reviews]
+    return cases
 
 
 def write_csv(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -> None:
@@ -155,43 +157,55 @@ class V5PSLProtocolTests(unittest.TestCase):
             self.assertNotEqual(projection, model_output_projection(semantic_change))
 
     def test_exact_240_error_120_control_design_passes(self):
-        cases, reviews = complete_design()
-        result = audit_design(cases, reviews, DECLARATION)
+        cases = complete_design()
+        result = audit_design(cases, DECLARATION)
         self.assertTrue(result["passed"])
         self.assertEqual(result["counts"]["total"], 360)
         self.assertEqual(result["counts"]["errors"], 240)
         self.assertEqual(result["counts"]["controls"], 120)
-        self.assertEqual(result["counts"]["reviews"], 480)
+        self.assertEqual(result["counts"]["stewards"], 1)
+        self.assertEqual(result["counts"]["manual_adjudication_rationales"], 120)
         self.assertEqual(result["error_types"], {name: 40 for name in ERROR_TYPES})
 
-    def test_design_rejects_nonindependent_duplicate_reviewer(self):
-        cases, reviews = complete_design()
-        reviews[1]["reviewer_id"] = reviews[0]["reviewer_id"]
-        with self.assertRaisesRegex(ValueError, "distinct reviewers"):
-            audit_design(cases, reviews, DECLARATION)
+    def test_design_rejects_multiple_stewards(self):
+        cases = complete_design()
+        cases[0]["steward_id"] = "second_steward"
+        with self.assertRaisesRegex(ValueError, "one independent steward"):
+            audit_design(cases, DECLARATION)
 
-    def test_design_rejects_creator_serving_as_reviewer(self):
-        cases, reviews = complete_design()
-        reviews[0]["reviewer_id"] = cases[0]["creator_id"]
-        with self.assertRaisesRegex(ValueError, "disjoint identities"):
-            audit_design(cases, reviews, DECLARATION)
-
-    def test_design_requires_disjoint_documented_custodian(self):
-        cases, reviews = complete_design()
-        declaration = {**DECLARATION, "custodian_id": cases[0]["creator_id"]}
-        with self.assertRaisesRegex(ValueError, "Custodian.*disjoint"):
-            audit_design(cases, reviews, declaration)
+    def test_design_requires_documented_matching_custodian(self):
+        cases = complete_design()
+        declaration = {**DECLARATION, "custodian_id": "different_custodian"}
+        with self.assertRaisesRegex(ValueError, "steward_id"):
+            audit_design(cases, declaration)
 
         declaration = {**DECLARATION, "calculation_engine_version": ""}
         with self.assertRaisesRegex(ValueError, "calculation engine"):
-            audit_design(cases, reviews, declaration)
+            audit_design(cases, declaration)
+
+        declaration = {**DECLARATION, "case_plan_sha256": "not-a-hash"}
+        with self.assertRaisesRegex(ValueError, "case_plan_sha256"):
+            audit_design(cases, declaration)
+
+        declaration = dict(DECLARATION)
+        declaration.pop("single_custodian_design_acknowledged")
+        declaration["reviewers_worked_independently"] = True
+        with self.assertRaisesRegex(ValueError, "single_custodian_design_acknowledged"):
+            audit_design(cases, declaration)
 
     def test_design_rejects_ambiguous_source_count_mismatch(self):
-        cases, reviews = complete_design()
+        cases = complete_design()
         row = next(item for item in cases if item["challenge_stratum"] == "symmetric_multi_source")
         row["source_cells"] = "Model!C6"
         with self.assertRaisesRegex(ValueError, "2 to 5 sources"):
-            audit_design(cases, reviews, DECLARATION)
+            audit_design(cases, DECLARATION)
+
+    def test_design_requires_rationale_for_subjective_strata(self):
+        cases = complete_design()
+        row = next(item for item in cases if item["identifiability"] == "ambiguous")
+        row["adjudication_rationale"] = ""
+        with self.assertRaisesRegex(ValueError, "adjudication rationale"):
+            audit_design(cases, DECLARATION)
 
     def test_public_manifest_accepts_only_exact_label_free_fields_and_safe_paths(self):
         with tempfile.TemporaryDirectory() as directory:

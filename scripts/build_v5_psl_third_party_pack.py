@@ -26,7 +26,6 @@ from formulaguard.formula import FormulaSyntaxError, formula_fingerprint, normal
 from formulaguard.v5_psl_protocol import (
     CASE_FIELDS,
     PUBLIC_FIELDS,
-    REVIEW_FIELDS,
     aggregate_file_sha256,
     audit_design,
     canonical_cell,
@@ -40,10 +39,9 @@ from formulaguard.v5_psl_protocol import (
 from formulaguard.workbook import CellKey, WorkbookModel
 
 
-PACKAGE_VERSION = "v5_psl_third_party_pack_v1"
+PACKAGE_VERSION = "v5_psl_single_custodian_pack_v2"
 SECRET_COMPONENTS = (
     "cases.csv",
-    "reviews.csv",
     "third_party_declaration.json",
     "design_audit.json",
     "case_validation.csv",
@@ -240,14 +238,13 @@ def build_packages(
         raise ValueError(f"Refusing to overwrite an existing package stage: {output}")
 
     cases = read_csv(raw_root / "cases.csv", exact_fields=CASE_FIELDS)
-    reviews = read_csv(raw_root / "reviews.csv", exact_fields=REVIEW_FIELDS)
     declaration_value = json.loads(
         (raw_root / "third_party_declaration.json").read_text(encoding="utf-8")
     )
     if not isinstance(declaration_value, dict):
         raise ValueError("third_party_declaration.json must contain a JSON object")
     declaration: dict[str, object] = declaration_value
-    design_audit = audit_design(cases, reviews, declaration)
+    design_audit = audit_design(cases, declaration)
     mapping = _opaque_ids(cases, pseudonym_key)
 
     public_root = stage / "PUBLIC"
@@ -255,7 +252,6 @@ def build_packages(
     (public_root / "workbooks").mkdir(parents=True)
     (secret_root / "originals").mkdir(parents=True)
     packaged_cases: list[dict[str, str]] = []
-    packaged_reviews: list[dict[str, str]] = []
     public_rows: list[dict[str, str]] = []
     public_hash_rows: list[dict[str, str]] = []
     validation_rows: list[dict[str, object]] = []
@@ -293,12 +289,7 @@ def build_packages(
         if index % 25 == 0 or index == len(cases):
             print(f"[{index}/{len(cases)}] external workbook pairs validated", flush=True)
 
-    for row in reviews:
-        packaged = dict(row)
-        packaged["instance_id"] = mapping[row["instance_id"]]
-        packaged_reviews.append(packaged)
     packaged_cases.sort(key=lambda row: row["instance_id"])
-    packaged_reviews.sort(key=lambda row: (row["instance_id"], row["reviewer_id"]))
     public_rows.sort(key=lambda row: row["instance_id"])
     public_hash_rows.sort(key=lambda row: row["instance_id"])
     validation_rows.sort(key=lambda row: str(row["instance_id"]))
@@ -310,7 +301,6 @@ def build_packages(
         public_hash_rows,
     )
     write_csv(secret_root / "cases.csv", CASE_FIELDS, packaged_cases)
-    write_csv(secret_root / "reviews.csv", REVIEW_FIELDS, packaged_reviews)
     write_json(secret_root / "third_party_declaration.json", declaration)
     write_json(secret_root / "design_audit.json", design_audit)
     write_csv(
@@ -381,7 +371,7 @@ def build_packages(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Package an externally authored V5-PSL 240+120 confirmation corpus",
+        description="Package a single-custodian V5-PSL 240+120 confirmation corpus",
     )
     parser.add_argument("--raw", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)

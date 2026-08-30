@@ -42,7 +42,7 @@ from scripts.freeze_v5_psl_candidate import BASELINE_POLICY, candidate_source_fi
 
 
 FORBIDDEN_SECRET_NAMES = {
-    "cases.csv", "reviews.csv", "third_party_declaration.json",
+    "cases.csv", "third_party_declaration.json",
     "design_audit.json", "case_validation.csv", "custodian_id_mapping.csv",
     "SECRET.zip",
 }
@@ -371,7 +371,7 @@ def _task(payload: tuple[str, str, str, str]) -> str:
 def _validate_public_metadata(public_root: Path, rows: Sequence[Mapping[str, str]]) -> dict[str, object]:
     metadata_path = public_root / "public_metadata.json"
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    if metadata.get("protocol") != "v5_psl_third_party_pack_v1":
+    if metadata.get("protocol") != "v5_psl_single_custodian_pack_v2":
         raise ValueError("Public package metadata protocol is invalid")
     if metadata.get("manifest_sha256") != sha256(public_root / "manifest.csv"):
         raise ValueError("Public manifest differs from package metadata")

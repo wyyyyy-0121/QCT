@@ -86,6 +86,33 @@ def passed_literature_gate() -> dict[str, object]:
             sorted(freeze_candidate.REQUIRED_LITERATURE_SOURCES.items()), 1
         )
     ]
+    reviewed.extend(
+        {
+            "claim_area": area,
+            "citation_key": citation_key,
+            "title": f"Unit unavailable source {index}",
+            "stable_locator": f"https://example.test/unavailable/{index}",
+            "primary_source_checked": False,
+            "evidence_scope": "full_text_unavailable_disclosed",
+            "checked_on": None,
+            "availability_checked_on": "2026-08-30",
+            "retrieval_status": "closed_no_legal_full_text_found",
+            "retrieval_attempts": sorted(
+                freeze_candidate.REQUIRED_AVAILABILITY_CHECKS
+            ),
+            "overlap_assessment": "known_component_full_text_unavailable",
+            "permitted_claim": "availability disclosure only",
+            "forbidden_claim": "unavailable source supports novelty",
+            "source_sha256": f"{index:x}" * 64,
+            "evidence_sha256": f"{index:x}" * 64,
+        }
+        for index, (citation_key, area) in enumerate(
+            sorted(
+                freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES.items()
+            ),
+            len(reviewed) + 1,
+        )
+    )
     return {
         "protocol": freeze_candidate.LITERATURE_PROTOCOL,
         "passed": True,
@@ -93,9 +120,18 @@ def passed_literature_gate() -> dict[str, object]:
         "required_citation_keys": sorted(
             freeze_candidate.REQUIRED_LITERATURE_SOURCES
         ),
-        "primary_sources_verified": len(reviewed),
+        "disclosed_unavailable_citation_keys": sorted(
+            freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+        ),
+        "amendment": dict(freeze_candidate.LITERATURE_AMENDMENT),
+        "primary_sources_verified": len(
+            freeze_candidate.REQUIRED_LITERATURE_SOURCES
+        ),
         "claim_matrix_sha256": sha256(ROOT / "research/V5_PSL_CLAIM_MATRIX.md"),
         "reviewed_sources": reviewed,
+        "disclosed_unavailable_sources": sorted(
+            freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+        ),
         "unresolved_sources": [],
         "unresolved_claims": [],
     }
@@ -202,20 +238,28 @@ class V5PSLToolTests(unittest.TestCase):
             sorted(freeze_candidate.REQUIRED_LITERATURE_SOURCES),
         )
         self.assertEqual(
+            template["disclosed_unavailable_citation_keys"],
+            sorted(freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES),
+        )
+        self.assertEqual(template["amendment"], freeze_candidate.LITERATURE_AMENDMENT)
+        self.assertEqual(
             {
                 row["citation_key"]: row["claim_area"]
                 for row in template["reviewed_sources"]
             },
-            freeze_candidate.REQUIRED_LITERATURE_SOURCES,
+            {
+                **freeze_candidate.REQUIRED_LITERATURE_SOURCES,
+                **freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES,
+            },
         )
 
-    def test_literature_progress_binds_claim_matrix_and_unresolved_full_texts(self):
+    def test_literature_progress_binds_claim_matrix_and_unavailable_disclosures(self):
         progress = json.loads(
             (ROOT / "research/V5_PSL_LITERATURE_GATE_PROGRESS.json").read_text(
                 encoding="utf-8"
             )
         )
-        self.assertFalse(progress["passed"])
+        self.assertTrue(progress["passed"])
         self.assertEqual(progress["protocol"], freeze_candidate.LITERATURE_PROTOCOL)
         self.assertEqual(
             progress["claim_matrix_sha256"],
@@ -229,16 +273,13 @@ class V5PSLToolTests(unittest.TestCase):
             for citation_key, row in reviewed.items()
             if row["primary_source_checked"] is True
         }
-        unresolved = set(freeze_candidate.REQUIRED_LITERATURE_SOURCES) - verified
-        self.assertEqual(len(verified), 11)
+        self.assertEqual(verified, set(freeze_candidate.REQUIRED_LITERATURE_SOURCES))
         self.assertEqual(progress["primary_sources_verified"], len(verified))
-        self.assertEqual(set(progress["unresolved_sources"]), unresolved)
+        self.assertEqual(progress["unresolved_sources"], [])
+        self.assertEqual(progress["unresolved_claims"], [])
         self.assertEqual(
-            set(progress["unresolved_claims"]),
-            {
-                freeze_candidate.REQUIRED_LITERATURE_SOURCES[citation_key]
-                for citation_key in unresolved
-            },
+            set(progress["disclosed_unavailable_sources"]),
+            set(freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES),
         )
         for citation_key, row in reviewed.items():
             if citation_key in verified:
@@ -246,8 +287,15 @@ class V5PSLToolTests(unittest.TestCase):
                 self.assertEqual(len(row["source_sha256"]), 64)
                 self.assertEqual(len(row["evidence_sha256"]), 64)
             else:
-                self.assertNotEqual(row["evidence_scope"], "full_text")
-                self.assertIsNone(row["evidence_sha256"])
+                self.assertIn(
+                    citation_key,
+                    freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES,
+                )
+                self.assertEqual(
+                    row["evidence_scope"], "full_text_unavailable_disclosed"
+                )
+                self.assertEqual(len(row["source_sha256"]), 64)
+                self.assertEqual(len(row["evidence_sha256"]), 64)
 
     def test_literature_gate_allows_multiple_sources_but_requires_preregistered_full_texts(self):
         payload = passed_literature_gate()
@@ -260,7 +308,9 @@ class V5PSLToolTests(unittest.TestCase):
         payload["primary_sources_verified"] += 1
         self.assertEqual(
             len(freeze_candidate._validate_literature_gate(payload)),
-            len(freeze_candidate.REQUIRED_LITERATURE_SOURCES) + 1,
+            len(freeze_candidate.REQUIRED_LITERATURE_SOURCES)
+            + len(freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES)
+            + 1,
         )
 
         payload = passed_literature_gate()
@@ -271,7 +321,43 @@ class V5PSLToolTests(unittest.TestCase):
         payload = passed_literature_gate()
         payload["reviewed_sources"].pop(0)
         payload["primary_sources_verified"] -= 1
-        with self.assertRaisesRegex(ValueError, "missing required primary sources"):
+        with self.assertRaisesRegex(ValueError, "missing protocol sources"):
+            freeze_candidate._validate_literature_gate(payload)
+
+        payload = passed_literature_gate()
+        unavailable = next(
+            row for row in payload["reviewed_sources"]
+            if row["citation_key"]
+            in freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+        )
+        payload["reviewed_sources"].remove(unavailable)
+        with self.assertRaisesRegex(ValueError, "missing protocol sources"):
+            freeze_candidate._validate_literature_gate(payload)
+
+        payload = passed_literature_gate()
+        unavailable = next(
+            row for row in payload["reviewed_sources"]
+            if row["citation_key"]
+            in freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+        )
+        unavailable["primary_source_checked"] = True
+        payload["primary_sources_verified"] += 1
+        with self.assertRaisesRegex(ValueError, "represented as full text"):
+            freeze_candidate._validate_literature_gate(payload)
+
+        payload = passed_literature_gate()
+        unavailable = next(
+            row for row in payload["reviewed_sources"]
+            if row["citation_key"]
+            in freeze_candidate.DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+        )
+        unavailable["retrieval_attempts"] = ["publisher_access_page"]
+        with self.assertRaisesRegex(ValueError, "retrieval checks are incomplete"):
+            freeze_candidate._validate_literature_gate(payload)
+
+        payload = passed_literature_gate()
+        payload["amendment"]["public_pressure_results_seen"] = True
+        with self.assertRaisesRegex(ValueError, "access amendment"):
             freeze_candidate._validate_literature_gate(payload)
 
     def test_external_pair_validator_matches_real_formula_difference_and_blocks_overlap(self):

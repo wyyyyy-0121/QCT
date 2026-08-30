@@ -23,7 +23,6 @@ if str(ROOT) not in sys.path:
 from formulaguard.v5_psl_protocol import (
     CASE_FIELDS,
     PREDICTION_METHODS,
-    REVIEW_FIELDS,
     audit_design,
     canonical_cell,
     parse_source_cells,
@@ -345,7 +344,7 @@ def main() -> None:
 
     output.mkdir(parents=True, exist_ok=True)
     started = {
-        "protocol": "v5_psl_one_time_scoring_start_v1",
+        "protocol": "v5_psl_one_time_scoring_start_v2",
         "prediction_lock_sha256": sha256(prediction_lock_path),
         "candidate_lock_sha256": sha256(candidate_lock_path),
         "secret_archive_sha256": sha256(args.secret_zip.resolve()),
@@ -363,10 +362,9 @@ def main() -> None:
     try:
         archive, components = _verify_secret(args.secret_zip.resolve(), commitments)
         cases = _read_csv_bytes(components["cases.csv"], CASE_FIELDS)
-        reviews = _read_csv_bytes(components["reviews.csv"], REVIEW_FIELDS)
         declaration = json.loads(components["third_party_declaration.json"].decode("utf-8"))
         recorded_design = json.loads(components["design_audit.json"].decode("utf-8"))
-        design = audit_design(cases, reviews, declaration)
+        design = audit_design(cases, declaration)
         if recorded_design != design:
             raise ValueError("Secret design audit does not reproduce")
         public_pairs = {(row["instance_id"], row["workbook"]) for row in public_rows}
@@ -428,7 +426,7 @@ def main() -> None:
         promotion_allowed = all(gates.values())
         _write_events(output / "independent_360_events.csv", events)
         result = {
-            "protocol": "v5_psl_third_party_240_120_scored_once_v1",
+            "protocol": "v5_psl_single_custodian_240_120_scored_once_v2",
             "candidate_id": candidate["candidate_id"],
             "current_model_name": "V5-PSL-dev1",
             "formal_name_authorized_if_promoted": "V5-R1" if promotion_allowed else None,
@@ -459,7 +457,7 @@ def main() -> None:
             json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
         )
         receipt = {
-            "protocol": "v5_psl_one_time_score_receipt_v1",
+            "protocol": "v5_psl_one_time_score_receipt_v2",
             "summary_sha256": sha256(result_path),
             "events_sha256": sha256(output / "independent_360_events.csv"),
             "promotion_allowed": promotion_allowed,
@@ -472,7 +470,7 @@ def main() -> None:
         if archive is not None:
             archive.close()
         failure = {
-            "protocol": "v5_psl_one_time_scoring_failure_v1",
+            "protocol": "v5_psl_one_time_scoring_failure_v2",
             "error_type": type(exc).__name__,
             "message": str(exc),
             "rerun_without_custodian_review_forbidden": True,

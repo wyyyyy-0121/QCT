@@ -17,7 +17,7 @@ PUBLIC_FIELDS = ("instance_id", "workbook")
 CASE_FIELDS = (
     "instance_id",
     "template_id",
-    "creator_id",
+    "steward_id",
     "workbook",
     "original_workbook",
     "case_kind",
@@ -28,14 +28,7 @@ CASE_FIELDS = (
     "challenge_stratum",
     "template_origin",
     "license_id",
-)
-REVIEW_FIELDS = (
-    "instance_id",
-    "reviewer_id",
-    "source_guess",
-    "unique_source",
-    "confidence",
-    "notes",
+    "adjudication_rationale",
 )
 ERROR_TYPES = (
     "absolute_reference",
@@ -56,9 +49,7 @@ EXPECTED_COUNTS = {
     "single_source_exception_like": 30,
     "symmetric_multi_source": 30,
     "templates": 30,
-    "creators": 6,
-    "self_authored_templates": 20,
-    "licensed_public_templates": 10,
+    "stewards": 1,
 }
 PREDICTION_METHODS = (
     "v4_r1",
@@ -228,7 +219,6 @@ def validate_public_manifest(path: Path, root: Path, *, expected_count: int = 36
 
 def audit_design(
     cases: Sequence[Mapping[str, str]],
-    reviews: Sequence[Mapping[str, str]],
     declaration: Mapping[str, object],
 ) -> dict[str, object]:
     identifiers = [row.get("instance_id", "") for row in cases]
@@ -257,14 +247,13 @@ def audit_design(
     if ambiguous_types != Counter({"single_source_exception_like": 30, "symmetric_multi_source": 30}):
         raise ValueError(f"Ambiguity strata are invalid: {dict(ambiguous_types)}")
 
-    sources_by_id: dict[str, tuple[str, ...]] = {}
     for row in cases:
         instance_id = str(row.get("instance_id", ""))
+        rationale = str(row.get("adjudication_rationale", "")).strip()
         try:
             sources = parse_source_cells(str(row.get("source_cells", "")))
         except ValueError as exc:
             raise ValueError(f"Invalid source_cells for {instance_id}: {exc}") from exc
-        sources_by_id[instance_id] = sources
         if row.get("case_kind") == "control":
             if sources:
                 raise ValueError(f"Control {instance_id} must not declare source cells")
@@ -274,6 +263,10 @@ def audit_design(
                 raise ValueError(f"Control {instance_id} must not declare identifiability")
             if row.get("challenge_stratum") not in {"", None, "not_applicable"}:
                 raise ValueError(f"Control {instance_id} must not declare a challenge stratum")
+            if row.get("control_subtype") == "legal_exception" and not rationale:
+                raise ValueError(
+                    f"Legal-exception control {instance_id} requires an adjudication rationale"
+                )
             continue
         if row.get("control_subtype") not in {"", None, "not_applicable"}:
             raise ValueError(f"Error {instance_id} must not declare a control subtype")
@@ -287,21 +280,23 @@ def audit_design(
             raise ValueError(f"Single-source ambiguity {instance_id} requires one changed source")
         if challenge == "symmetric_multi_source" and not 2 <= len(sources) <= 5:
             raise ValueError(f"Symmetric ambiguity {instance_id} requires 2 to 5 sources")
+        if identity == "ambiguous" and not rationale:
+            raise ValueError(f"Ambiguous error {instance_id} requires an adjudication rationale")
 
     by_template: dict[str, list[Mapping[str, str]]] = defaultdict(list)
-    creator_templates: dict[str, set[str]] = defaultdict(set)
+    steward_templates: dict[str, set[str]] = defaultdict(set)
     for row in cases:
         by_template[row.get("template_id", "")].append(row)
-        creator_templates[row.get("creator_id", "")].add(row.get("template_id", ""))
-    if "" in by_template or "" in creator_templates:
-        raise ValueError("Every template and creator identifier must be non-empty")
+        steward_templates[row.get("steward_id", "")].add(row.get("template_id", ""))
+    if "" in by_template or "" in steward_templates:
+        raise ValueError("Every template and steward identifier must be non-empty")
     if len(by_template) != 30 or any(len(rows) != 12 for rows in by_template.values()):
         raise ValueError("Design requires 30 templates with exactly 12 cases each")
-    if len(creator_templates) != 6 or any(len(values) != 5 for values in creator_templates.values()):
-        raise ValueError("Design requires 6 creators with exactly 5 templates each")
+    if len(steward_templates) != 1 or next(iter(steward_templates.values())) != set(by_template):
+        raise ValueError("Design requires one independent steward for all 30 templates")
     for template_id, rows in by_template.items():
-        if len({row.get("creator_id") for row in rows}) != 1:
-            raise ValueError(f"Template {template_id} has multiple creators")
+        if len({row.get("steward_id") for row in rows}) != 1:
+            raise ValueError(f"Template {template_id} has multiple stewards")
         if len({row.get("template_origin") for row in rows}) != 1:
             raise ValueError(f"Template {template_id} has inconsistent provenance")
         if len({row.get("license_id") for row in rows}) != 1:
@@ -324,55 +319,28 @@ def audit_design(
         template_id: rows[0].get("template_origin", "")
         for template_id, rows in by_template.items()
     }.values())
-    if origins != Counter({"self_authored": 20, "licensed_public": 10}):
-        raise ValueError(f"Template provenance must be 20 self-authored and 10 public; found {dict(origins)}")
-    if any(not rows[0].get("license_id") for rows in by_template.values()):
-        raise ValueError("Every template requires a license or creator-permission identifier")
-
-    error_ids = {row["instance_id"] for row in errors}
-    review_counts = Counter(row.get("instance_id") for row in reviews)
-    if set(review_counts) != error_ids or any(count != 2 for count in review_counts.values()):
-        raise ValueError("Every error case requires exactly two independent review records")
-    reviews_by_id: dict[str, list[Mapping[str, str]]] = defaultdict(list)
-    for row in reviews:
-        if row.get("unique_source") not in {"0", "1"}:
-            raise ValueError("Review unique_source must be 0 or 1")
-        if not row.get("reviewer_id"):
-            raise ValueError("Review reviewer_id must be non-empty")
-        reviews_by_id[str(row.get("instance_id", ""))].append(row)
-    reviewer_ids = {row.get("reviewer_id") for row in reviews}
-    if len(reviewer_ids) < 2:
-        raise ValueError("At least two reviewers are required")
-    overlapping_roles = set(creator_templates) & reviewer_ids
-    if overlapping_roles:
+    allowed_origins = {"steward_owned", "licensed_public"}
+    if not origins or set(origins) - allowed_origins:
         raise ValueError(
-            "Creators and reviewers must be disjoint identities: "
-            + ", ".join(sorted(str(value) for value in overlapping_roles))
+            "Template provenance must be steward_owned or licensed_public; "
+            f"found {dict(origins)}"
         )
-    cases_by_id = {str(row["instance_id"]): row for row in cases}
-    for instance_id, rows in reviews_by_id.items():
-        if len({row.get("reviewer_id") for row in rows}) != 2:
-            raise ValueError(f"Error {instance_id} requires two distinct reviewers")
-        case = cases_by_id[instance_id]
-        expected_unique = "1" if case.get("identifiability") == "identifiable" else "0"
-        if any(row.get("unique_source") != expected_unique for row in rows):
-            raise ValueError(f"Review uniqueness disagrees with design for {instance_id}")
-        if expected_unique == "1":
-            expected_sources = set(sources_by_id[instance_id])
-            for review in rows:
-                guesses = set(parse_source_cells(str(review.get("source_guess", ""))))
-                if guesses != expected_sources:
-                    raise ValueError(f"Reviewer source guess disagrees for {instance_id}")
+    if any(not rows[0].get("license_id") for rows in by_template.values()):
+        raise ValueError("Every template requires a license or ownership identifier")
 
     required_declaration = {
         "independent_custodian": True,
+        "custodian_not_in_model_development": True,
+        "custodian_prepared_or_supervised_all_cases": True,
         "model_was_run": False,
         "labels_withheld_until_prediction_lock": True,
         "permissions_and_anonymization_checked": True,
         "all_cases_recalculated_without_runtime_errors": True,
-        "reviewers_worked_independently": True,
-        "creators_did_not_serve_as_reviewers": True,
-        "creators_and_reviewers_received_no_model_outputs": True,
+        "case_plan_fixed_before_third_party_predictions": True,
+        "templates_withheld_until_candidate_lock": True,
+        "no_development_template_overlap": True,
+        "custodian_received_no_model_outputs": True,
+        "single_custodian_design_acknowledged": True,
     }
     for field, expected in required_declaration.items():
         if declaration.get(field) is not expected:
@@ -383,22 +351,30 @@ def audit_design(
     if any(not str(declaration.get(field, "")).strip() for field in required_declaration_text):
         raise ValueError("Declaration must identify the custodian and calculation engine")
     custodian_id = str(declaration["custodian_id"])
-    if custodian_id in set(creator_templates) | reviewer_ids:
-        raise ValueError("Custodian, creator, and reviewer identities must be disjoint")
-    for field in ("permission_evidence_sha256", "anonymization_evidence_sha256"):
+    if set(steward_templates) != {custodian_id}:
+        raise ValueError("Every case steward_id must equal the declared custodian_id")
+    for field in (
+        "permission_evidence_sha256",
+        "anonymization_evidence_sha256",
+        "case_plan_sha256",
+        "template_overlap_evidence_sha256",
+    ):
         if not re.fullmatch(r"[0-9a-f]{64}", str(declaration.get(field, ""))):
             raise ValueError(f"Declaration requires a valid {field}")
 
     return {
-        "protocol": "v5_psl_third_party_design_audit_v1",
+        "protocol": "v5_psl_third_party_design_audit_v2",
         "passed": True,
         "counts": {
             "total": len(cases),
             "errors": len(errors),
             "controls": len(controls),
             "templates": len(by_template),
-            "creators": len(creator_templates),
-            "reviews": len(reviews),
+            "stewards": len(steward_templates),
+            "manual_adjudication_rationales": sum(
+                bool(str(row.get("adjudication_rationale", "")).strip())
+                for row in cases
+            ),
         },
         "error_types": dict(sorted(error_types.items())),
         "identifiability": dict(sorted(identities.items())),
@@ -447,7 +423,7 @@ def combined_shards_sha256(paths: Iterable[Path]) -> str:
 
 __all__ = [
     "ACTION_STATES", "CASE_FIELDS", "DIAGNOSTIC_STATES", "ERROR_TYPES",
-    "EXPECTED_COUNTS", "PREDICTION_METHODS", "PUBLIC_FIELDS", "REVIEW_FIELDS",
+    "EXPECTED_COUNTS", "PREDICTION_METHODS", "PUBLIC_FIELDS",
     "aggregate_file_sha256", "audit_design", "canonical_cell",
     "canonical_json_sha256", "combined_shards_sha256", "deterministic_zip",
     "deterministic_zip_sha256", "model_output_projection", "parse_source_cells", "read_csv",

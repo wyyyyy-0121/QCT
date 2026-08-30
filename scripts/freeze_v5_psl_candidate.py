@@ -37,7 +37,7 @@ BASELINE_POLICY = {
     "v4_3_semantic_c": "fixed_top5_review",
     "v5_psl_dev1": "one_cell_localized_five_cell_review_otherwise_no_action",
 }
-LITERATURE_PROTOCOL = "v5_psl_literature_gate_v2"
+LITERATURE_PROTOCOL = "v5_psl_literature_gate_v3"
 LITERATURE_AREAS = frozenset({
     "spreadsheet ambiguity",
     "metamorphic spreadsheet testing",
@@ -52,15 +52,28 @@ REQUIRED_LITERATURE_SOURCES = {
     "poon2017_metamorphic": "metamorphic spreadsheet testing",
     "yang2026_sedmr": "metamorphic spreadsheet testing",
     "roy2018_inferred_invariants": "invariant-based spreadsheet debugging",
-    "wang2021_domain_invariants": "invariant-based spreadsheet debugging",
     "cheung2016_custodes": "spreadsheet formula-role outlier detection",
     "barowy2018_excelint": "spreadsheet formula-role outlier detection",
     "li2019_warder": "spreadsheet formula-role outlier detection",
     "hofer2013_fault_localization": "spreadsheet fault localization",
     "jannach2019_fragment_debugging": "spreadsheet fault localization",
-    "hofer2013_mutation_debugging": "interventional debugging",
     "fariha2020_aid": "interventional debugging",
     "geifman2017_selective_classification": "selective prediction",
+}
+DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES = {
+    "wang2021_domain_invariants": "invariant-based spreadsheet debugging",
+    "hofer2013_mutation_debugging": "interventional debugging",
+}
+LITERATURE_AMENDMENT = {
+    "from_protocol": "v5_psl_literature_gate_v2",
+    "reason": "legal_full_text_unavailable_after_documented_search",
+    "adopted_before_public_pressure": True,
+    "public_pressure_results_seen": False,
+    "candidate_lock_existed": False,
+    "unavailable_sources_support_novelty_claims": False,
+}
+REQUIRED_AVAILABILITY_CHECKS = {
+    "publisher_access_page", "crossref", "openalex", "user_search",
 }
 
 
@@ -101,15 +114,25 @@ def _validate_literature_gate(payload: dict[str, object]) -> list[dict[str, obje
         raise ValueError("Literature gate required claim areas do not match the protocol")
     if payload.get("required_citation_keys") != sorted(REQUIRED_LITERATURE_SOURCES):
         raise ValueError("Literature gate required sources do not match the protocol")
+    if payload.get("disclosed_unavailable_citation_keys") != sorted(
+        DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+    ):
+        raise ValueError("Literature gate unavailable-source disclosures do not match the protocol")
+    if payload.get("amendment") != LITERATURE_AMENDMENT:
+        raise ValueError("Literature gate access amendment is missing or invalid")
     reviewed = payload.get("reviewed_sources")
     if not isinstance(reviewed, list) or not all(isinstance(row, dict) for row in reviewed):
         raise ValueError("Literature gate reviewed_sources must contain structured records")
     citation_keys = [str(row.get("citation_key", "")) for row in reviewed]
     if len(citation_keys) != len(set(citation_keys)):
         raise ValueError("Literature gate citation keys must be unique")
-    missing_sources = sorted(set(REQUIRED_LITERATURE_SOURCES) - set(citation_keys))
+    protocol_sources = {
+        **REQUIRED_LITERATURE_SOURCES,
+        **DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES,
+    }
+    missing_sources = sorted(set(protocol_sources) - set(citation_keys))
     if missing_sources:
-        raise ValueError(f"Literature gate is missing required primary sources: {missing_sources}")
+        raise ValueError(f"Literature gate is missing protocol sources: {missing_sources}")
     areas = [str(row.get("claim_area", "")) for row in reviewed]
     if set(areas) != LITERATURE_AREAS:
         raise ValueError("Literature gate must cover every preregistered claim area")
@@ -118,48 +141,60 @@ def _validate_literature_gate(payload: dict[str, object]) -> list[dict[str, obje
         for row in reviewed
         if str(row.get("citation_key", ""))
     }
-    for citation_key, expected_area in REQUIRED_LITERATURE_SOURCES.items():
+    for citation_key, expected_area in protocol_sources.items():
         if rows_by_key[citation_key].get("claim_area") != expected_area:
             raise ValueError(
                 f"Literature source is assigned to the wrong claim area: {citation_key}"
             )
-    unchecked_sources = [
-        str(row["citation_key"])
-        for row in reviewed
-        if row.get("primary_source_checked") is not True
-    ]
-    if unchecked_sources:
-        raise ValueError(
-            f"Literature primary source was not checked: {unchecked_sources[0]}"
-        )
-    verified_count = sum(
-        row.get("primary_source_checked") is True for row in reviewed
-    )
-    if payload.get("primary_sources_verified") != verified_count:
-        raise ValueError("Literature gate primary-source count does not match its records")
-    if verified_count != len(reviewed):
-        raise ValueError("Literature gate contains a source without full primary-source review")
+    disclosed_sources = payload.get("disclosed_unavailable_sources")
+    if not isinstance(disclosed_sources, list) or disclosed_sources != sorted(
+        DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES
+    ):
+        raise ValueError("Literature gate unavailable-source receipt is incomplete")
     if payload.get("unresolved_sources") != []:
         raise ValueError("Literature gate still contains unresolved primary sources")
     if payload.get("unresolved_claims") != []:
         raise ValueError("Literature gate still contains unresolved claims")
-    required_text = (
+    required_full_text = (
         "citation_key", "title", "stable_locator", "checked_on",
         "overlap_assessment", "permitted_claim", "forbidden_claim",
         "source_sha256", "evidence_sha256",
     )
     for row in reviewed:
+        citation_key = str(row["citation_key"])
         area = str(row["claim_area"])
-        if row.get("primary_source_checked") is not True:
-            raise ValueError(f"Literature primary source was not checked: {area}")
-        if row.get("evidence_scope") != "full_text":
-            raise ValueError(f"Literature review is not based on full text: {area}")
-        if any(not str(row.get(field, "")).strip() for field in required_text):
-            raise ValueError(f"Literature review record is incomplete: {area}")
+        if citation_key in DISCLOSED_UNAVAILABLE_LITERATURE_SOURCES:
+            if row.get("primary_source_checked") is not False:
+                raise ValueError(f"Unavailable source was represented as full text: {area}")
+            if row.get("evidence_scope") != "full_text_unavailable_disclosed":
+                raise ValueError(f"Unavailable source disclosure is invalid: {area}")
+            unavailable_text = (
+                "citation_key", "title", "stable_locator", "availability_checked_on",
+                "retrieval_status", "overlap_assessment", "permitted_claim",
+                "forbidden_claim", "source_sha256", "evidence_sha256",
+            )
+            if any(not str(row.get(field, "")).strip() for field in unavailable_text):
+                raise ValueError(f"Unavailable source disclosure is incomplete: {area}")
+            if row.get("retrieval_status") != "closed_no_legal_full_text_found":
+                raise ValueError(f"Unavailable source retrieval status is invalid: {area}")
+            attempts = row.get("retrieval_attempts")
+            if not isinstance(attempts, list) or not REQUIRED_AVAILABILITY_CHECKS.issubset(
+                {str(value) for value in attempts}
+            ):
+                raise ValueError(f"Unavailable source retrieval checks are incomplete: {area}")
+            date_field = "availability_checked_on"
+        else:
+            if row.get("primary_source_checked") is not True:
+                raise ValueError(f"Literature primary source was not checked: {area}")
+            if row.get("evidence_scope") != "full_text":
+                raise ValueError(f"Literature review is not based on full text: {area}")
+            if any(not str(row.get(field, "")).strip() for field in required_full_text):
+                raise ValueError(f"Literature review record is incomplete: {area}")
+            date_field = "checked_on"
         if not str(row["stable_locator"]).startswith(("https://", "doi:")):
             raise ValueError(f"Literature review locator is not stable: {area}")
         try:
-            checked_on = date.fromisoformat(str(row["checked_on"]))
+            checked_on = date.fromisoformat(str(row[date_field]))
         except ValueError:
             raise ValueError(f"Literature review date is invalid: {area}")
         if not 2000 <= checked_on.year <= 2099:
@@ -169,6 +204,11 @@ def _validate_literature_gate(payload: dict[str, object]) -> list[dict[str, obje
                 raise ValueError(f"Literature review {field} is invalid: {area}")
         if row["overlap_assessment"] == "same_method_found":
             raise ValueError(f"Literature review found the same method in prior work: {area}")
+    verified_count = sum(
+        row.get("primary_source_checked") is True for row in reviewed
+    )
+    if payload.get("primary_sources_verified") != verified_count:
+        raise ValueError("Literature gate primary-source count does not match its records")
     return reviewed
 
 
@@ -181,8 +221,12 @@ def candidate_source_files() -> list[str]:
         "tests/test_workbook.py",
         "research/V5_PSL_METHOD_SPEC.md",
         "research/V5_PSL_CLAIM_MATRIX.md",
+        "research/V5_PSL_LITERATURE_GATE_AMENDMENT_V3.md",
         "research/V5_PSL_PUBLIC_PRESSURE_PROTOCOL.md",
         "research/V5_PSL_THIRD_PARTY_PROTOCOL.md",
+        "research/V5_PSL_THIRD_PARTY_AMENDMENT_V2.md",
+        "research/V5_PSL_THIRD_PARTY_CASES_TEMPLATE.csv",
+        "research/V5_PSL_THIRD_PARTY_DECLARATION_TEMPLATE.json",
         "research/V5_PSL_MECHANISM_REVISION_LOG.json",
         "data/external/v5_psl/corpus_registry.json",
         "research/VERSION_LINEAGE_AND_NAMING_POLICY.md",

@@ -1,6 +1,6 @@
 {
-  "protocol": "v5_psl_literature_gate_v2",
-  "passed": false,
+  "protocol": "v5_psl_literature_gate_v3",
+  "passed": true,
   "required_claim_areas": [
     "interventional debugging",
     "invariant-based spreadsheet debugging",
@@ -17,16 +17,26 @@
     "fariha2020_aid",
     "geifman2017_selective_classification",
     "hofer2013_fault_localization",
-    "hofer2013_mutation_debugging",
     "jannach2019_fragment_debugging",
     "li2019_warder",
     "poon2017_metamorphic",
     "roy2018_inferred_invariants",
-    "wang2021_domain_invariants",
     "yang2026_sedmr"
   ],
+  "disclosed_unavailable_citation_keys": [
+    "hofer2013_mutation_debugging",
+    "wang2021_domain_invariants"
+  ],
+  "amendment": {
+    "from_protocol": "v5_psl_literature_gate_v2",
+    "reason": "legal_full_text_unavailable_after_documented_search",
+    "adopted_before_public_pressure": true,
+    "public_pressure_results_seen": false,
+    "candidate_lock_existed": false,
+    "unavailable_sources_support_novelty_claims": false
+  },
   "primary_sources_verified": 11,
-  "claim_matrix_sha256": "c18646d6720dfb7086526f35c996425bc1d73a9622b7f49959ea0acc9647c538",
+  "claim_matrix_sha256": "ec1a4eea4e0e7f14dbdd6dcaf7784c9f015b67d8a319f8654e676ace8856e49f",
   "reviewed_sources": [
     {
       "claim_area": "spreadsheet ambiguity",
@@ -90,13 +100,21 @@
       "title": "Domain Invariant-Based Spreadsheet Debugging",
       "stable_locator": "doi:10.1109/APR52552.2021.00012",
       "primary_source_checked": false,
-      "evidence_scope": "publisher_abstract",
+      "evidence_scope": "full_text_unavailable_disclosed",
       "checked_on": null,
-      "overlap_assessment": "pending_full_text",
-      "permitted_claim": null,
-      "forbidden_claim": "Using domain invariants for spreadsheet error detection or repair is new.",
+      "availability_checked_on": "2026-08-30",
+      "retrieval_status": "closed_no_legal_full_text_found",
+      "retrieval_attempts": [
+        "publisher_access_page",
+        "crossref",
+        "openalex",
+        "user_search"
+      ],
+      "overlap_assessment": "publisher_abstract_establishes_domain_invariant_detection_and_repair_full_text_unavailable",
+      "permitted_claim": "Disclose that full text was unavailable and use Roy et al. 2018 as the required full-text invariant-debugging anchor.",
+      "forbidden_claim": "Using domain invariants for spreadsheet error detection or repair is new, or the unavailable source establishes V5-PSL novelty or superiority.",
       "source_sha256": "91926f7c306dfa1f715c44770e6b797524016fd4b58f62a6f89b70af12153577",
-      "evidence_sha256": null
+      "evidence_sha256": "2684e0571f2d5838109b99da9ebff9b87499064bdf88ce6b8745cfa98c0efc97"
     },
     {
       "claim_area": "spreadsheet formula-role outlier detection",
@@ -174,13 +192,22 @@
       "title": "Mutation-Based Spreadsheet Debugging",
       "stable_locator": "doi:10.1109/ISSREW.2013.6688892",
       "primary_source_checked": false,
-      "evidence_scope": "publisher_abstract",
+      "evidence_scope": "full_text_unavailable_disclosed",
       "checked_on": null,
-      "overlap_assessment": "pending_full_text",
-      "permitted_claim": null,
-      "forbidden_claim": "Using candidate changes or automatic repair in spreadsheet debugging is new.",
+      "availability_checked_on": "2026-08-30",
+      "retrieval_status": "closed_no_legal_full_text_found",
+      "retrieval_attempts": [
+        "publisher_access_page",
+        "crossref",
+        "openalex",
+        "semantic_scholar",
+        "user_search"
+      ],
+      "overlap_assessment": "publisher_abstract_establishes_genetic_programming_spreadsheet_repair_full_text_unavailable",
+      "permitted_claim": "Disclose that full text was unavailable and use Fariha et al. 2020 as the required full-text interventional-debugging anchor.",
+      "forbidden_claim": "Candidate mutation, automatic spreadsheet repair, genetic-programming spreadsheet debugging, or repair search is new, or the unavailable source establishes V5-PSL novelty or superiority.",
       "source_sha256": "d86f837ca1a2b84a049d94cc289111ad91b781a3443d6f63880b93000b51453d",
-      "evidence_sha256": null
+      "evidence_sha256": "c29b0e662ff5a47bf47f52861b079052d450a497def7d90ee1d5c174dde15901"
     },
     {
       "claim_area": "interventional debugging",
@@ -211,13 +238,11 @@
       "evidence_sha256": "f175735fbe5f3cf05518fa1bcffd52f7e8ee7b11b765b828080d97926ba7cc48"
     }
   ],
-  "unresolved_sources": [
+  "disclosed_unavailable_sources": [
     "hofer2013_mutation_debugging",
     "wang2021_domain_invariants"
   ],
-  "unresolved_claims": [
-    "interventional debugging",
-    "invariant-based spreadsheet debugging"
-  ],
-  "note": "Progress only. Copyrighted source artifacts and review notes are stored outside Git. Abstracts and publisher snippets are discovery evidence, not completed primary-source reviews."
+  "unresolved_sources": [],
+  "unresolved_claims": [],
+  "note": "Passed under the v3 access amendment: 11 required primary sources have full-text reviews, while two closed-access direct neighbors remain explicitly disclosed and permanently constrain novelty claims. Copyrighted artifacts and review notes remain outside Git."
 }

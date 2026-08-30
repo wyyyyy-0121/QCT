@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from formulaguard.v5_psl_protocol import CASE_FIELDS, ERROR_TYPES, REVIEW_FIELDS
+from formulaguard.v5_psl_protocol import CASE_FIELDS, ERROR_TYPES
 from scripts.build_v6_dataset import write_xlsx
 import scripts.build_v5_psl_third_party_pack as packer
 import scripts.run_v5_psl_predictions as predictor
@@ -42,12 +42,10 @@ def _formula_pair(error_type: str) -> tuple[str, str]:
 
 def _build_synthetic_raw(root: Path) -> None:
     cases: list[dict[str, str]] = []
-    reviews: list[dict[str, str]] = []
     error_index = 0
     for template_index in range(30):
         template_id = f"template_{template_index + 1:02d}"
-        creator_id = f"creator_{template_index // 5 + 1}"
-        origin = "self_authored" if template_index < 20 else "licensed_public"
+        origin = "steward_owned" if template_index < 20 else "licensed_public"
         for case_index in range(12):
             instance_id = f"synthetic_{template_index + 1:02d}_{case_index + 1:02d}"
             workbook_name = f"workbooks/{instance_id}.xlsx"
@@ -55,7 +53,7 @@ def _build_synthetic_raw(root: Path) -> None:
             common = {
                 "instance_id": instance_id,
                 "template_id": template_id,
-                "creator_id": creator_id,
+                "steward_id": "synthetic_custodian",
                 "workbook": workbook_name,
                 "original_workbook": original_name,
                 "template_origin": origin,
@@ -92,16 +90,11 @@ def _build_synthetic_raw(root: Path) -> None:
                     "identifiability": identity,
                     "control_subtype": "",
                     "challenge_stratum": challenge,
+                    "adjudication_rationale": (
+                        "Synthetic objective ambiguity fixture."
+                        if identity == "ambiguous" else ""
+                    ),
                 }
-                for reviewer in ("reviewer_a", "reviewer_b"):
-                    reviews.append({
-                        "instance_id": instance_id,
-                        "reviewer_id": reviewer,
-                        "source_guess": "Model!C6",
-                        "unique_source": "1" if identity == "identifiable" else "0",
-                        "confidence": "high",
-                        "notes": "synthetic engineering fixture",
-                    })
                 error_index += 1
             else:
                 original_formulas = {"C6": "=A1+B1", "C7": "=C6*2"}
@@ -114,27 +107,36 @@ def _build_synthetic_raw(root: Path) -> None:
                     "identifiability": "",
                     "control_subtype": "regular" if case_index < 10 else "legal_exception",
                     "challenge_stratum": "",
+                    "adjudication_rationale": (
+                        "Synthetic valid-formula exception fixture."
+                        if case_index >= 10 else ""
+                    ),
                 }
             write_xlsx(root / original_name, [("Model", values, original_formulas)])
             write_xlsx(root / workbook_name, [("Model", values, changed_formulas)])
             cases.append({field: row[field] for field in CASE_FIELDS})
 
     _write_csv(root / "cases.csv", CASE_FIELDS, cases)
-    _write_csv(root / "reviews.csv", REVIEW_FIELDS, reviews)
     declaration = {
         "independent_custodian": True,
+        "custodian_not_in_model_development": True,
+        "custodian_prepared_or_supervised_all_cases": True,
         "model_was_run": False,
         "labels_withheld_until_prediction_lock": True,
         "permissions_and_anonymization_checked": True,
         "all_cases_recalculated_without_runtime_errors": True,
-        "reviewers_worked_independently": True,
-        "creators_did_not_serve_as_reviewers": True,
-        "creators_and_reviewers_received_no_model_outputs": True,
+        "case_plan_fixed_before_third_party_predictions": True,
+        "templates_withheld_until_candidate_lock": True,
+        "no_development_template_overlap": True,
+        "custodian_received_no_model_outputs": True,
+        "single_custodian_design_acknowledged": True,
         "custodian_id": "synthetic_custodian",
         "calculation_engine": "FormulaGuard synthetic fixture writer",
         "calculation_engine_version": "engineering-test-v1",
         "permission_evidence_sha256": "a" * 64,
         "anonymization_evidence_sha256": "b" * 64,
+        "case_plan_sha256": "c" * 64,
+        "template_overlap_evidence_sha256": "d" * 64,
         "fixture_scope": "synthetic_engineering_test_only",
     }
     (root / "third_party_declaration.json").write_text(
