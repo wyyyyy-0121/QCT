@@ -146,3 +146,18 @@
   哈希。完整记录见 `research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`。
 - 可复核依据：`research/V5_FCRL_MECHANISM_SELECTION_AND_PREREGISTRATION.md` 和
   `research/V5_FCRL_PREREGISTRATION.json`。
+
+## D0012：FCRL U0 工件与适配门通过
+
+- 日期：2026-08-31
+- 依据：`research/V5_FCRL_ADAPTER_IMPLEMENTATION_FREEZE.md`、
+  `research/V5_FCRL_U0_RESULT.md` 和不可变 U0 回执。
+- 观察：官方 base checkpoint 的 205/205 个骨干张量逐键/逐形状匹配；目标公式和缓存
+  值改变不影响 encoder 哈希，两个独立进程哈希一致；冻结骨干 GPU 前向与官方 LSTM
+  解码器反向均产生有限值。
+- 兼容边界：官方 `FPTUTA` 因未声明 `torch_scatter` 不可直接导入；官方 LSTM attention
+  存在 query 与 key/value 布局不一致，已在任何语料样本构造前固定为只转置 key/value。
+- 决定：U0 通过，允许按预注册构建 SpreadsheetBench v1 input-only 训练样本并执行 U1。
+- 没有决定：没有证明公式预测有效，没有运行定位、没有超过 V4、没有授权 `V5-R1`。
+- 受保护数据：未列目录、未哈希、未读取、未用于 U0；U1-U4 和完整公开预测锁前继续
+  不可访问。
