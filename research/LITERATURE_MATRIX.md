@@ -55,7 +55,7 @@
 17. J. Li et al. CUSTODES: Automatic Spreadsheet Cell Clustering and Smell Detection. ICSE 2016. https://sqlab-sustech.github.io/files/paper/ICSE2016.pdf
 18. Metallaxis-FL: Mutation-Based Fault Localization. Software Testing, Verification and Reliability. https://orbilu.uni.lu/bitstream/10993/15363/1/10.1002-stvr.1509.pdf
 19. Causality-Guided Adaptive Interventional Debugging. 2020. https://arxiv.org/abs/2003.09539
-20. Dou, W.; Xu, L.; Cheung, S.-C.; Gao, C.; Wei, J.; Huang, T. VEnron. ICSE-SEIP 2016, pp. 162-171. DOI: 10.1145/2889160.2889238. Dataset DOI: 10.6084/m9.figshare.4797943.v1.
+20. Dou, W.; Xu, L.; Cheung, S.-C.; Gao, C.; Wei, J.; Huang, T. VEnron: A Versioned Spreadsheet Corpus and Related Evolution Analysis. ICSE-SEIP 2016, pp. 162-171. DOI: 10.1145/2889160.2889238. Dataset DOI: 10.6084/m9.figshare.4797943.v1.
 21. Jansen, B.; Hermans, F.; Tazelaar, E. Detecting and Predicting Evolution in Spreadsheets - A Case Study in an Energy Network Company. ICSME 2018, pp. 645-654. DOI: 10.1109/ICSME.2018.00074.
 22. Roy, S.; van Deursen, A.; Hermans, F. On the Effectiveness of Automatically Inferred Invariants in Detecting Regression Faults in Spreadsheets. QRS-C 2018, pp. 199-206. DOI: 10.1109/QRS-C.2018.00046.
 

@@ -127,6 +127,14 @@ Git. This authorization does not lower any public gate.
 ## 7. Next authorized operation
 
 After this protocol, acquisition code, and tests are committed and pushed, run the
-pinned download once and retain its SHA-256 receipt. Install an archive reader if
-needed, then write and commit a separate V0 audit implementation before enumerating
-archive members. Protected data remains untouched.
+pinned download once and retain its SHA-256 receipt. V0 then has two ordered stages:
+
+1. write, test, commit, and push a manifest-only audit before enumerating archive
+   members; it may record path structure and extensions but may not extract or open a
+   workbook;
+2. use that immutable manifest to write, test, commit, and push the conversion and
+   adjacent-transition audit before extraction.
+
+This staging fixes the safety checks without guessing the unpublished archive layout.
+An archive reader and its version must be recorded in each receipt. Protected data
+remains untouched.
