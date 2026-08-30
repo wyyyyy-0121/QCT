@@ -1,0 +1,377 @@
+{
+  "protocol": "formulaguard_v4_residual_headroom_v1",
+  "complete": true,
+  "input": {
+    "path": "results/model_discovery_gate2_final_v3/event_scores.jsonl",
+    "sha256": "c68e2436957a83f6e8e80e6de6c5a3d45ca35b71e162ebc928275352ba90dd34"
+  },
+  "aggregation": "structure_group_macro_over_error_events",
+  "review_budget": 5,
+  "channels": [
+    "combined",
+    "peer",
+    "role",
+    "impact"
+  ],
+  "overall": {
+    "events": 220,
+    "errors": 190,
+    "controls": 30,
+    "structure_groups": 137,
+    "v4_top5": 0.589051094890511,
+    "methods": {
+      "combined": {
+        "retained_or_replaced_v5_oracle_top5": 0.7712895377128954,
+        "recoverable_headroom": 0.18223844282238444,
+        "forced_channel_top1_top5": 0.6148418491484186,
+        "forced_channel_top1_difference": 0.025790754257907555,
+        "event_gains": 34,
+        "event_losses": 0,
+        "unchanged_hits": 110,
+        "unchanged_misses": 46
+      },
+      "peer": {
+        "retained_or_replaced_v5_oracle_top5": 0.9008515815085159,
+        "recoverable_headroom": 0.31180048661800486,
+        "forced_channel_top1_top5": 0.6945255474452555,
+        "forced_channel_top1_difference": 0.10547445255474452,
+        "event_gains": 54,
+        "event_losses": 0,
+        "unchanged_hits": 110,
+        "unchanged_misses": 26
+      },
+      "role": {
+        "retained_or_replaced_v5_oracle_top5": 0.8805352798053528,
+        "recoverable_headroom": 0.29148418491484185,
+        "forced_channel_top1_top5": 0.6934306569343066,
+        "forced_channel_top1_difference": 0.10437956204379562,
+        "event_gains": 49,
+        "event_losses": 0,
+        "unchanged_hits": 110,
+        "unchanged_misses": 31
+      },
+      "impact": {
+        "retained_or_replaced_v5_oracle_top5": 0.6998783454987835,
+        "recoverable_headroom": 0.11082725060827248,
+        "forced_channel_top1_top5": 0.545985401459854,
+        "forced_channel_top1_difference": -0.043065693430657026,
+        "event_gains": 20,
+        "event_losses": 0,
+        "unchanged_hits": 110,
+        "unchanged_misses": 60
+      },
+      "all_channels": {
+        "retained_or_replaced_v5_oracle_top5": 0.911800486618005,
+        "recoverable_headroom": 0.32274939172749395,
+        "event_gains": 56,
+        "event_losses": 0,
+        "unchanged_hits": 110,
+        "unchanged_misses": 24
+      }
+    }
+  },
+  "by_cohort": {
+    "enron": {
+      "events": 30,
+      "errors": 30,
+      "controls": 0,
+      "structure_groups": 25,
+      "v4_top5": 0.52,
+      "methods": {
+        "combined": {
+          "retained_or_replaced_v5_oracle_top5": 0.6666666666666667,
+          "recoverable_headroom": 0.14666666666666672,
+          "forced_channel_top1_top5": 0.5333333333333333,
+          "forced_channel_top1_difference": 0.013333333333333308,
+          "event_gains": 5,
+          "event_losses": 0,
+          "unchanged_hits": 15,
+          "unchanged_misses": 10
+        },
+        "peer": {
+          "retained_or_replaced_v5_oracle_top5": 0.7466666666666667,
+          "recoverable_headroom": 0.22666666666666668,
+          "forced_channel_top1_top5": 0.6,
+          "forced_channel_top1_difference": 0.07999999999999996,
+          "event_gains": 7,
+          "event_losses": 0,
+          "unchanged_hits": 15,
+          "unchanged_misses": 8
+        },
+        "role": {
+          "retained_or_replaced_v5_oracle_top5": 0.6533333333333333,
+          "recoverable_headroom": 0.1333333333333333,
+          "forced_channel_top1_top5": 0.56,
+          "forced_channel_top1_difference": 0.040000000000000036,
+          "event_gains": 4,
+          "event_losses": 0,
+          "unchanged_hits": 15,
+          "unchanged_misses": 11
+        },
+        "impact": {
+          "retained_or_replaced_v5_oracle_top5": 0.6733333333333333,
+          "recoverable_headroom": 0.15333333333333332,
+          "forced_channel_top1_top5": 0.52,
+          "forced_channel_top1_difference": 0.0,
+          "event_gains": 5,
+          "event_losses": 0,
+          "unchanged_hits": 15,
+          "unchanged_misses": 10
+        },
+        "all_channels": {
+          "retained_or_replaced_v5_oracle_top5": 0.8066666666666668,
+          "recoverable_headroom": 0.28666666666666674,
+          "event_gains": 9,
+          "event_losses": 0,
+          "unchanged_hits": 15,
+          "unchanged_misses": 6
+        }
+      }
+    },
+    "historical_100": {
+      "events": 100,
+      "errors": 100,
+      "controls": 0,
+      "structure_groups": 95,
+      "v4_top5": 0.6210526315789474,
+      "methods": {
+        "combined": {
+          "retained_or_replaced_v5_oracle_top5": 0.8315789473684211,
+          "recoverable_headroom": 0.21052631578947367,
+          "forced_channel_top1_top5": 0.6473684210526316,
+          "forced_channel_top1_difference": 0.02631578947368418,
+          "event_gains": 23,
+          "event_losses": 0,
+          "unchanged_hits": 61,
+          "unchanged_misses": 16
+        },
+        "peer": {
+          "retained_or_replaced_v5_oracle_top5": 0.9894736842105263,
+          "recoverable_headroom": 0.36842105263157887,
+          "forced_channel_top1_top5": 0.7368421052631579,
+          "forced_channel_top1_difference": 0.11578947368421044,
+          "event_gains": 38,
+          "event_losses": 0,
+          "unchanged_hits": 61,
+          "unchanged_misses": 1
+        },
+        "role": {
+          "retained_or_replaced_v5_oracle_top5": 0.9894736842105263,
+          "recoverable_headroom": 0.36842105263157887,
+          "forced_channel_top1_top5": 0.7578947368421053,
+          "forced_channel_top1_difference": 0.13684210526315788,
+          "event_gains": 38,
+          "event_losses": 0,
+          "unchanged_hits": 61,
+          "unchanged_misses": 1
+        },
+        "impact": {
+          "retained_or_replaced_v5_oracle_top5": 0.7315789473684211,
+          "recoverable_headroom": 0.1105263157894737,
+          "forced_channel_top1_top5": 0.5631578947368421,
+          "forced_channel_top1_difference": -0.05789473684210533,
+          "event_gains": 11,
+          "event_losses": 0,
+          "unchanged_hits": 61,
+          "unchanged_misses": 28
+        },
+        "all_channels": {
+          "retained_or_replaced_v5_oracle_top5": 0.9894736842105263,
+          "recoverable_headroom": 0.36842105263157887,
+          "event_gains": 38,
+          "event_losses": 0,
+          "unchanged_hits": 61,
+          "unchanged_misses": 1
+        }
+      }
+    },
+    "public:info1": {
+      "events": 2,
+      "errors": 2,
+      "controls": 0,
+      "structure_groups": 2,
+      "v4_top5": 0.0,
+      "methods": {
+        "combined": {
+          "retained_or_replaced_v5_oracle_top5": 0.0,
+          "recoverable_headroom": 0.0,
+          "forced_channel_top1_top5": 0.0,
+          "forced_channel_top1_difference": 0.0,
+          "event_gains": 0,
+          "event_losses": 0,
+          "unchanged_hits": 0,
+          "unchanged_misses": 2
+        },
+        "peer": {
+          "retained_or_replaced_v5_oracle_top5": 0.0,
+          "recoverable_headroom": 0.0,
+          "forced_channel_top1_top5": 0.0,
+          "forced_channel_top1_difference": 0.0,
+          "event_gains": 0,
+          "event_losses": 0,
+          "unchanged_hits": 0,
+          "unchanged_misses": 2
+        },
+        "role": {
+          "retained_or_replaced_v5_oracle_top5": 0.0,
+          "recoverable_headroom": 0.0,
+          "forced_channel_top1_top5": 0.0,
+          "forced_channel_top1_difference": 0.0,
+          "event_gains": 0,
+          "event_losses": 0,
+          "unchanged_hits": 0,
+          "unchanged_misses": 2
+        },
+        "impact": {
+          "retained_or_replaced_v5_oracle_top5": 0.0,
+          "recoverable_headroom": 0.0,
+          "forced_channel_top1_top5": 0.0,
+          "forced_channel_top1_difference": 0.0,
+          "event_gains": 0,
+          "event_losses": 0,
+          "unchanged_hits": 0,
+          "unchanged_misses": 2
+        },
+        "all_channels": {
+          "retained_or_replaced_v5_oracle_top5": 0.0,
+          "recoverable_headroom": 0.0,
+          "event_gains": 0,
+          "event_losses": 0,
+          "unchanged_hits": 0,
+          "unchanged_misses": 2
+        }
+      }
+    },
+    "public:integer_corpus": {
+      "events": 44,
+      "errors": 29,
+      "controls": 15,
+      "structure_groups": 9,
+      "v4_top5": 0.4166666666666667,
+      "methods": {
+        "combined": {
+          "retained_or_replaced_v5_oracle_top5": 0.4444444444444444,
+          "recoverable_headroom": 0.027777777777777735,
+          "forced_channel_top1_top5": 0.4444444444444444,
+          "forced_channel_top1_difference": 0.027777777777777735,
+          "event_gains": 1,
+          "event_losses": 0,
+          "unchanged_hits": 10,
+          "unchanged_misses": 18
+        },
+        "peer": {
+          "retained_or_replaced_v5_oracle_top5": 0.5277777777777778,
+          "recoverable_headroom": 0.1111111111111111,
+          "forced_channel_top1_top5": 0.5277777777777778,
+          "forced_channel_top1_difference": 0.1111111111111111,
+          "event_gains": 4,
+          "event_losses": 0,
+          "unchanged_hits": 10,
+          "unchanged_misses": 15
+        },
+        "role": {
+          "retained_or_replaced_v5_oracle_top5": 0.5,
+          "recoverable_headroom": 0.08333333333333331,
+          "forced_channel_top1_top5": 0.4444444444444444,
+          "forced_channel_top1_difference": 0.027777777777777735,
+          "event_gains": 3,
+          "event_losses": 0,
+          "unchanged_hits": 10,
+          "unchanged_misses": 16
+        },
+        "impact": {
+          "retained_or_replaced_v5_oracle_top5": 0.4166666666666667,
+          "recoverable_headroom": 0.0,
+          "forced_channel_top1_top5": 0.4166666666666667,
+          "forced_channel_top1_difference": 0.0,
+          "event_gains": 0,
+          "event_losses": 0,
+          "unchanged_hits": 10,
+          "unchanged_misses": 19
+        },
+        "all_channels": {
+          "retained_or_replaced_v5_oracle_top5": 0.5277777777777778,
+          "recoverable_headroom": 0.1111111111111111,
+          "event_gains": 4,
+          "event_losses": 0,
+          "unchanged_hits": 10,
+          "unchanged_misses": 15
+        }
+      }
+    },
+    "public:modified_euses": {
+      "events": 44,
+      "errors": 29,
+      "controls": 15,
+      "structure_groups": 6,
+      "v4_top5": 0.8250000000000001,
+      "methods": {
+        "combined": {
+          "retained_or_replaced_v5_oracle_top5": 1.0,
+          "recoverable_headroom": 0.17499999999999993,
+          "forced_channel_top1_top5": 0.9,
+          "forced_channel_top1_difference": 0.07499999999999996,
+          "event_gains": 5,
+          "event_losses": 0,
+          "unchanged_hits": 24,
+          "unchanged_misses": 0
+        },
+        "peer": {
+          "retained_or_replaced_v5_oracle_top5": 1.0,
+          "recoverable_headroom": 0.17499999999999993,
+          "forced_channel_top1_top5": 0.9,
+          "forced_channel_top1_difference": 0.07499999999999996,
+          "event_gains": 5,
+          "event_losses": 0,
+          "unchanged_hits": 24,
+          "unchanged_misses": 0
+        },
+        "role": {
+          "retained_or_replaced_v5_oracle_top5": 0.9666666666666667,
+          "recoverable_headroom": 0.1416666666666666,
+          "forced_channel_top1_top5": 0.8333333333333334,
+          "forced_channel_top1_difference": 0.008333333333333304,
+          "event_gains": 4,
+          "event_losses": 0,
+          "unchanged_hits": 24,
+          "unchanged_misses": 1
+        },
+        "impact": {
+          "retained_or_replaced_v5_oracle_top5": 0.9666666666666667,
+          "recoverable_headroom": 0.1416666666666666,
+          "forced_channel_top1_top5": 0.7583333333333333,
+          "forced_channel_top1_difference": -0.06666666666666676,
+          "event_gains": 4,
+          "event_losses": 0,
+          "unchanged_hits": 24,
+          "unchanged_misses": 1
+        },
+        "all_channels": {
+          "retained_or_replaced_v5_oracle_top5": 1.0,
+          "recoverable_headroom": 0.17499999999999993,
+          "event_gains": 5,
+          "event_losses": 0,
+          "unchanged_hits": 24,
+          "unchanged_misses": 0
+        }
+      }
+    }
+  },
+  "decision": {
+    "best_single_channel": "peer",
+    "best_single_channel_overall_headroom": 0.31180048661800486,
+    "best_single_channel_enron_headroom": 0.22666666666666668,
+    "overall_recoverable_headroom_at_least_5pp": true,
+    "enron_recoverable_headroom_nonnegative": true,
+    "fixed_budget_union_equivalence_verified": true,
+    "eligible_for_residual_controller_preregistration": true
+  },
+  "evidence_role": {
+    "revealed_development_labels_used": true,
+    "deployable_model_result": false,
+    "independent_validation_result": false,
+    "control_risk_estimated_by_oracle": false,
+    "protected_data_inputs": []
+  },
+  "receipt_sha256": "ca49754e668ba1514236a6be5aa7d2a8276d61bd41ad82329336d61511ea6d63"
+}
