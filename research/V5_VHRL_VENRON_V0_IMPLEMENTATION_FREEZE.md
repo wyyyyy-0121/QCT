@@ -29,8 +29,8 @@ Verbose archive types must contain regular files and directories only.
 Exactly the 7,294 paths referenced by the 360 group sheets are extracted into the
 ignored VEnron raw root. `FileOrder.xls`, `readme.txt`, and directory entries are not
 included. After extraction, the regular-file set must match the ordered manifest
-exactly and each file's MD5 must equal column E. Symlinks, hard links, devices, extra
-files, path traversal, duplicates, or identity mismatches fail V0.
+exactly. Symlinks, hard links, devices, extra files, path traversal, or duplicate
+paths fail V0.
 
 The first pre-extraction parser run exposed a publisher metadata encoding defect:
 column E contains 6,862 32-character, 400 31-character, 26 30-character, and six
@@ -40,6 +40,17 @@ MD5 text. The repaired parser accepts only 29-32 lowercase hexadecimal character
 requires the filename token to match exactly, left-pads the token with zeroes to 32
 characters, and verifies that reconstructed MD5 against the extracted file bytes.
 No nonhex token or shorter identity is accepted.
+
+The first byte-identity run then found 7,232 members whose extracted bytes match the
+reconstructed publisher MD5 and 62 mismatches across 29 groups. All 62 are recognized
+OLE/Excel files; none of their actual MD5 values equals another member's publisher
+token, and none of their publisher tokens equals another member's actual MD5. The
+fixed archive SHA-256, exact member path, and order row still bind these public bytes.
+Column E is therefore recorded as `publisher_md5`, not asserted to be the post-
+packaging byte hash. Every member receives independently computed archive-member MD5
+and SHA-256, the 62 discrepancies and their stable identity-set hash are reported,
+and no mismatch is hidden or used as a feature. This metadata correction was frozen
+before any group workbook formula or cell content was parsed.
 
 The second pre-extraction parser run exposed seven long group names whose worksheet
 titles are truncated by Excel's 31-character sheet-name limit while column F retains

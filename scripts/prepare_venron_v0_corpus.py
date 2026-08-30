@@ -108,12 +108,12 @@ def _hash_record(payload: tuple[dict[str, object], str]) -> dict[str, object]:
     relative = PurePosixPath(str(record["source_relative_path"]))
     path = Path(root_text).joinpath(*relative.parts)
     size, md5, digest = file_hashes(path)
-    if md5 != record["source_md5"]:
-        raise ValueError(f"VEnron source MD5 mismatch: {relative.as_posix()}")
     return {
         **record,
         "source_bytes": size,
         "source_sha256": digest,
+        "archive_member_md5": md5,
+        "publisher_md5_matches_archive_bytes": md5 == record["source_md5"],
     }
 
 
@@ -233,6 +233,25 @@ def prepare(
         }
         version_manifest_path = staging_output / "version_manifest.json"
         _write_json(version_manifest_path, manifest)
+        publisher_mismatches = [
+            row for row in enriched if not row["publisher_md5_matches_archive_bytes"]
+        ]
+        mismatch_identity = [
+            {
+                "source_relative_path": row["source_relative_path"],
+                "publisher_md5": row["source_md5"],
+                "archive_member_md5": row["archive_member_md5"],
+            }
+            for row in publisher_mismatches
+        ]
+        mismatch_identity_sha256 = hashlib.sha256(
+            json.dumps(
+                mismatch_identity,
+                ensure_ascii=True,
+                sort_keys=True,
+                separators=(",", ":"),
+            ).encode("ascii")
+        ).hexdigest()
         receipt = {
             "protocol": PROTOCOL,
             "implementation_commit": commit,
@@ -248,6 +267,12 @@ def prepare(
             "evolution_groups": len({int(row["group_id"]) for row in enriched}),
             "group_workbooks": len(enriched),
             "source_bytes": sum(int(row["source_bytes"]) for row in enriched),
+            "publisher_md5_matches": len(enriched) - len(publisher_mismatches),
+            "publisher_md5_mismatches": len(publisher_mismatches),
+            "publisher_md5_mismatch_groups": len(
+                {int(row["group_id"]) for row in publisher_mismatches}
+            ),
+            "publisher_md5_mismatch_identity_sha256": mismatch_identity_sha256,
             "group_workbook_bytes_hashed": len(enriched),
             "group_workbook_contents_parsed": 0,
             "fault_label_inputs": [],

@@ -11,6 +11,7 @@ from formulaguard.venron import (
     parse_order_workbook,
 )
 from scripts.prepare_venron_v0_corpus import validate_verbose_listing
+from scripts.prepare_venron_v0_corpus import _hash_record
 from scripts.score_venron_v0_gate import evaluate_gates
 
 
@@ -24,6 +25,21 @@ def profile(entries: list[tuple[str, str, str]]) -> dict[str, object]:
 
 
 class VEnronV0Tests(unittest.TestCase):
+    def test_source_hash_keeps_publisher_and_archive_md5_separate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            relative = "VEnron1.0/1_1_alpha/v1.xls"
+            source = root / relative
+            source.parent.mkdir(parents=True)
+            source.write_bytes(b"archive member bytes")
+            result = _hash_record(({
+                "source_relative_path": relative,
+                "source_md5": "a" * 32,
+            }, str(root)))
+            self.assertFalse(result["publisher_md5_matches_archive_bytes"])
+            self.assertEqual(len(result["archive_member_md5"]), 32)
+            self.assertEqual(len(result["source_sha256"]), 64)
+
     def test_archive_types_reject_links_and_devices(self):
         self.assertEqual(
             validate_verbose_listing("drwx group/\n-rw- group/file.xls\n", 2),
