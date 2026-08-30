@@ -44,7 +44,7 @@ VERSION_ALIASES = {
         "legacy_id": None,
         "legacy_module": None,
         "role": "static_anchor_repair_verified_selective_localization",
-        "status": "implemented_development_not_frozen",
+        "status": "rejected_public_pressure_revision",
     },
     "v5-core-cc": {
         "canonical_id": "v5-core-candidate-centric-dev",

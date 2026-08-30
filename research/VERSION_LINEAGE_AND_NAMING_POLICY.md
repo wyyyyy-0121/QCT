@@ -23,7 +23,7 @@
 | FormulaGuard V4.3-Semantic | legacy V6 / `v6-semantic-r1` | FFC/BSS语义候选与单格受限重排 | 机制有效，未通过主模型冻结门槛 |
 | FormulaGuard V5-Core candidate-centric | `formulaguard_v5_core_*` | 候选中心、多证据责任的核心重构 | 已实现；锁定验证与Enron安全门失败，否决 |
 | FormulaGuard V5-Core R2 | `formulaguard_v5_core_r2_*` | DNCA及其R2-R1/R2-R2内部修订 | 制度证据支配版压力失败，冻结路径终止 |
-| FormulaGuard V5-PSL-dev1-rev1 | `formulaguard_v5_psl_*` | 静态排名锚定与修复特异性验证的选择性定位 | 唯一结构修订已实现；未冻结，不得称正式V5 |
+| FormulaGuard V5-PSL-dev1-rev1 | `formulaguard_v5_psl_*` | 静态排名锚定与修复特异性验证的选择性定位 | 唯一结构修订未通过公开开发门槛，研究线终止 |
 
 V4.3的A/B/C只是同一机制实验的预登记变体，不再写成三个模型版本。
 
@@ -87,10 +87,10 @@ formulaguard_v6_b     -> V4.3-Semantic-B的历史别名
 否决。后续R2研究线同样未通过压力安全门。二者都作为可复现的开发性负结果保留。
 
 首轮`V5-PSL-dev1`让一般扰动响应支配排名，公开压力和有界调参均失败。唯一结构
-修订`V5-PSL-dev1-rev1`仍不调用`v4_scores`，但以自身公式/图静态异常建立完整排名，
-只在静态Top-5内用扰动响应和匹配安慰剂验证候选修复，并把`localized`、`review`、
-`abstain_unidentifiable`和`unsupported`作为排名之外的正式决策。只有全新第三方
-确认集一次性通过预登记门槛时，才在同一锁定提交上增加正式`V5-R1`名称。
+修订`V5-PSL-dev1-rev1`以自身公式/图静态异常建立完整排名，只在静态Top-5内用扰动
+响应和匹配安慰剂验证候选修复。该修订虽恢复静态Top-5，却未通过localized覆盖、
+控制行动、效率和五折稳定门槛，已按`V5_PSL_PUBLIC_PRESSURE_FAILURE_2.md`终止。
+它不能增加正式`V5-R1`名称，也不能继续使用同一研究线的外部确认协议。
 
 ## 7. V5-Core内部研究轮次的写法
 
