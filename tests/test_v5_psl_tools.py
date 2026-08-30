@@ -60,6 +60,14 @@ from scripts.score_v5_psl_blind import (
     summarize_all,
     summarize_method,
 )
+from scripts.tune_v5_psl_parameters import (
+    BASELINE_ID,
+    _audit_case as audit_tuning_case,
+    _case_task as run_tuning_case,
+    assign_group_folds,
+    select_profile,
+    tuning_profiles,
+)
 from scripts.verify_v5_psl_prediction_lock import _validate_prediction_inventory
 
 
@@ -241,6 +249,76 @@ def pressure_run(
 
 
 class V5PSLToolTests(unittest.TestCase):
+    def test_bounded_tuning_grid_and_grouped_selection_are_fixed(self):
+        profiles = tuning_profiles()
+        self.assertEqual(len(profiles), 12)
+        for values in profiles.values():
+            self.assertGreaterEqual(values["strong_effect"], 0.20)
+            self.assertGreaterEqual(values["strong_stability"], 0.75)
+            self.assertGreaterEqual(values["weak_effect"], 0.10)
+            self.assertGreaterEqual(values["weak_stability"], 0.60)
+            self.assertLessEqual(values["weak_tail"], 0.20)
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest, _run, _row = pressure_run(root, case_count=2)
+            rows = read_pressure_manifest(manifest)
+            rows[1]["corpus_id"] = "modified_euses"
+            groups, folds = assign_group_folds(rows, root)
+            self.assertEqual(len(set(groups.values())), 1)
+            self.assertEqual(len(set(folds.values())), 1)
+
+        summary = {
+            "supported_rate": 1.0,
+            "error_top5": 0.60,
+            "control_actionable_rate": 0.10,
+            "review_efficiency_per_100_cells": 9.0,
+        }
+        summaries = {profile_id: dict(summary) for profile_id in profiles}
+        summaries[BASELINE_ID] = {"review_efficiency_per_100_cells": 8.0}
+        fold_rows = [{
+            "case_kind": "error", "state": "review", "top1": 1, "top5": 1,
+            "mrr": 1.0, "actionable": 1, "inspected_cells": 1, "action_hit": 1,
+        }, {
+            "case_kind": "control", "state": "abstain_unidentifiable",
+            "top1": "", "top5": "", "mrr": "", "actionable": 0,
+            "inspected_cells": 0, "action_hit": 0,
+        }]
+        folds = {
+            profile_id: [list(fold_rows) for _ in range(5)]
+            for profile_id in profiles
+        }
+        selected, decisions = select_profile(summaries, folds)
+        self.assertEqual(selected, min(profiles))
+        self.assertTrue(all(row["eligible"] for row in decisions.values()))
+
+        summaries[next(iter(profiles))]["error_top5"] = 0.59
+        for profile_id in list(profiles)[1:]:
+            summaries[profile_id]["control_actionable_rate"] = 0.20
+        selected, _decisions = select_profile(summaries, folds)
+        self.assertIsNone(selected)
+
+    def test_bounded_tuning_audit_binds_provenance_and_action_budget(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest, _run, row = pressure_run(root)
+            output = root / "tuning"
+            profiles = tuning_profiles()
+            for profile_id in (*profiles, BASELINE_ID):
+                (output / "shards" / profile_id).mkdir(parents=True)
+            run_tuning_case((
+                str(root), str(output), row["instance_id"], row["workbook"],
+            ))
+            audit_tuning_case(output, root, row, profiles)
+
+            shard = output / "shards" / "default_m15" / "pressure_001.json"
+            record = json.loads(shard.read_text(encoding="utf-8"))
+            record["result"]["state"] = "localized"
+            record["result"]["review_cells"] = []
+            shard.write_text(json.dumps(record), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "action budget"):
+                audit_tuning_case(output, root, row, profiles)
+
     def test_literature_template_matches_preregistered_protocol_and_source_areas(self):
         template = json.loads(
             (ROOT / "research/V5_PSL_LITERATURE_GATE_TEMPLATE.json").read_text(
@@ -623,6 +701,7 @@ class V5PSLToolTests(unittest.TestCase):
             "tests/test_version_lineage.py",
             "research/V5_PSL_THIRD_PARTY_DECLARATION_TEMPLATE.json",
             "research/V5_PSL_LITERATURE_GATE_TEMPLATE.json",
+            "research/V5_PSL_DEVELOPMENT_AMENDMENT_1.md",
         } <= REQUIRED_CANDIDATE_SOURCES)
 
     def test_public_archive_and_secret_commitments_are_bound_to_candidate(self):

@@ -220,6 +220,7 @@ def candidate_source_files() -> list[str]:
         "tests/test_version_lineage.py",
         "tests/test_workbook.py",
         "research/V5_PSL_METHOD_SPEC.md",
+        "research/V5_PSL_DEVELOPMENT_AMENDMENT_1.md",
         "research/V5_PSL_CLAIM_MATRIX.md",
         "research/V5_PSL_LITERATURE_GATE_AMENDMENT_V3.md",
         "research/V5_PSL_PUBLIC_PRESSURE_PROTOCOL.md",

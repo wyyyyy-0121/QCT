@@ -3,5 +3,10 @@
   "candidate": "V5-PSL-dev1",
   "maximum_revisions": 1,
   "revisions": [],
-  "note": "Add an entry only for the single permitted root-cause mechanism revision. Threshold tuning after a revealed pressure failure is forbidden."
+  "post_failure_development_amendment": {
+    "document": "research/V5_PSL_DEVELOPMENT_AMENDMENT_1.md",
+    "scope": "revealed_public_development_only",
+    "mechanism_revision_consumed": false
+  },
+  "note": "The original dev1 preregistration forbade threshold tuning after failure. Amendment 1 does not alter that failed result; it permits one fixed bounded comparison only on data explicitly downgraded to revealed development evidence. Add a revision entry only for the single permitted root-cause mechanism revision."
 }
