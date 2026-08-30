@@ -100,6 +100,8 @@
   不用于训练或调参；专家注入错误不能被描述为自然发生错误。
 - 固定 revision、接收隔离和停止门见
   `research/V5_DRFV_MECHANISM_SELECTION_AND_PREREGISTRATION.md`。
+- 当前结果：DRFV 的 SpreadsheetBench v1 input-only 语料门已失败，因而没有接收或
+  读取 SpreadsheetBench 2；详见 `research/V5_DRFV_U0_RESULT.md`。
 
 ## 4. 数据证据分层
 

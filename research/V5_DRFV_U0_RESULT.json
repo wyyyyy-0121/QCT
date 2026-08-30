@@ -1,0 +1,44 @@
+{
+  "protocol": "formulaguard_drfv_preregistration_v1",
+  "stage": "u0",
+  "date": "2026-08-31",
+  "decision": "failed_stop_before_training",
+  "source_archive_sha256": "9cf7228b54f1edcdd4b372eb736774adf29cb4f804c9920229bac6c154833399",
+  "intake_git_commit": "0cb6a4daba79ae17b38d9993618bc48314b71c89",
+  "corpus_git_commit": "c1e4610e3896d393ac8e6f5334b52a292b259251",
+  "source_workbooks": 2726,
+  "status_counts": {
+    "eligible": 625,
+    "excluded_low_parse_coverage": 508,
+    "excluded_no_formula": 1593
+  },
+  "eligible_fraction": 0.229273661042,
+  "retained_unique_byte_workbooks": 607,
+  "retained_structure_groups": 219,
+  "retained_unique_parseable_formulas": 74570,
+  "u0_checks": {
+    "min_300_unique_workbooks": true,
+    "min_100_structure_groups": true,
+    "min_100000_parseable_formulas": false,
+    "min_80_percent_workbooks_parseable_fraction_ge_50_percent": false,
+    "known_overlap_components_removed": true,
+    "zero_sensitive_text_features": true,
+    "zero_raw_numeric_features": true,
+    "zero_sheet_name_features": true,
+    "zero_fault_label_inputs": true,
+    "zero_v4_feature_inputs": true,
+    "zero_protected_inputs": true
+  },
+  "hashes": {
+    "intake_manifest_sha256": "bb01edd4a58f80a7f26f6b3051f3bdbc6983b2a5a47a23d185bcd07cf2a4f42d",
+    "intake_receipt_sha256": "82e1aeb41d9c3acd8c5554d9d0f86a6dc8c3bf90e6bce54c26521ea3e1b0e97a",
+    "corpus_manifest_sha256": "0e1228992fccf6b13961e397b944133db83dcde72b5372af5c36cd54306e71ed",
+    "profile_shards_sha256": "ab990c7fe386abd0dafafcf746e0992617bc7d65dd482705d483eabc66e5e9d6",
+    "corpus_receipt_sha256": "743461a31faf9734d38cbcb43dbf2a23cc1cf30076b8d83ffe22d3d7d6d5e789"
+  },
+  "model_trained": false,
+  "answer_workbook_inputs": [],
+  "fault_label_inputs": [],
+  "v4_rank_inputs": [],
+  "protected_data_inputs": []
+}
