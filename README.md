@@ -19,13 +19,17 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 历史机制研究或负结果。当前研究代号是 `model-discovery`，在 Phase 0/1/2 的证据门
 通过前不会实现新的继任模型，也不会读取两套 `240+120` 数据。
 
-当前计划、任务契约、数据账本和功效报告见：
+当前执行计划、任务契约、数据账本和功效报告见：
 
+- `research/FORMULAGUARD_MODEL_DISCOVERY_PLAN_V3.md`
 - `research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md`
 - `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`
 - `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`
 - `research/V5_MODEL_DISCOVERY_DATA_LEDGER.json`
 - `research/V5_MODEL_DISCOVERY_POWER_REPORT.md`
+
+Phase 0 和 Gate 1 已通过；Gate 2 的无标签原子信号审计尚未开始。通过这两道门不代表
+已有 V5 或已经超过 V4，只代表研究设计和可比较基线已具备进入下一步的条件。
 
 ## 历史版本
 

@@ -1,7 +1,8 @@
 # FormulaGuard 当前研究状态表
 
 日期：2026-08-31
-权威计划：`research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md`
+权威计划：`research/FORMULAGUARD_MODEL_DISCOVERY_PLAN_V3.md`
+基础协议：`research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md`
 
 ## 冻结与研究身份
 
@@ -14,7 +15,7 @@
 | `V5-Core` | 候选中心核心重构 | 锁定合成集机制重合，Enron 安全失败 | 已实现的负结果 |
 | `V5-Core R2` | 候选无关源排名及修订 | 压力安全失败 | 已终止负结果 |
 | `V5-PSL` | 静态锚与修复响应研究线 | 唯一结构修订后终止 | 已终止负结果 |
-| `model-discovery` | 新研究线开发代号 | Phase 0 进行中 | 尚未授权模型实现 |
+| `model-discovery` | 新研究线开发代号 | Phase 0、Gate 1 已通过；Gate 2 待开始 | 尚未授权继任模型实现 |
 | `V5-R1` | 保留的正式名称 | 未授权 | 只有分支 A 盲测通过后可使用 |
 
 ## 已确认的数量与数据角色
@@ -37,9 +38,9 @@
 | 门 | 状态 | 原因 |
 | --- | --- | --- |
 | Gate 0 数据分组 | 通过 | `results/core_reset_b_phase0/data_audit.json` 已复算 |
-| Gate 0 任务/功效冻结 | 进行中 | 本文件、任务契约、账本和功效报告尚待同一提交锁定 |
-| Gate 1 文献与基线 | 未开始 | ExceLint Linux CLI 仍需最小构建验证 |
-| Gate 2 原子信号 | 未授权 | 尚未生成无标签信号分片 |
+| Gate 0 任务/功效冻结 | 通过 | 任务契约、账本、功效报告和 Gate 0 回执已提交 |
+| Gate 1 文献与基线 | 通过 | 9 张方法卡完成；官方当前 ExceLint-core Linux CLI 已验证 |
+| Gate 2 原子信号 | 待开始 | 尚未生成无标签信号分片；仍禁止继任模型实现 |
 | Gate 3 候选开发 | 未授权 | Gate 2 前禁止实现继任模型 |
 | 旧 `240+120` | 不可读 | 尚未有候选锁 |
 | 新保管人 `240+120` | 不可读 | 尚未有完整预测锁 |

@@ -7,8 +7,8 @@
 - `V4-R1` 是唯一冻结主排序器；`V4.2-Review-B` 只保留为 V4 系辅助复核位。
 - `V4.1-PCG`、`V4.3-Semantic`、`V5-Core`、`V5-Core R2` 和 `V5-PSL` 均已结束，
   其正负结果和原始哈希保留为历史证据，不再调参或改名恢复。
-- 当前唯一授权研究线是 `model-discovery`。Phase 0 正在冻结任务单位、数据角色和
-  统计功效；在证据门通过前不得实现继任模型。
+- 当前唯一授权研究线是 `model-discovery`。Phase 0 和 Gate 1 已通过，下一步是 Gate 2
+  无标签原子信号审计；在 Gate 2 分支选择前不得实现继任模型。
 - 旧 `240+120` 只能在候选锁后作为一次 `revealed-trial`，新保管人 `240+120` 只能
   在完整预测锁后评分；两者当前均未读取。
 - Phase 0 产物：
@@ -19,7 +19,8 @@
 - 当前功效审计显示，25 个 Enron 结构组或 30 个最终模板组不足以可靠检出 5 个百分
   点的确认性 Top-5 改善；正式盲测前需要增加独立模板，或降低论文结论为探索性估计。
 
-当前权威计划见 `research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md`。下方内容按日期
+当前执行计划见 `research/FORMULAGUARD_MODEL_DISCOVERY_PLAN_V3.md`，基础协议见
+`research/V5_CORE_FIRST_PRINCIPLES_DISCOVERY_PLAN.md`。下方内容按日期
 保留，只用于复现历史过程，不覆盖上述当前状态。
 
 ## 历史记录：2026-08-30 及更早
