@@ -20,6 +20,8 @@
 | L14 | CACheck, ICSE 2017 | 无输出真值/程序分析 | 以程序分析检查聚合公式的一致性 | 聚合范围一致性是相关静态检查，不等同传播源因果归因 |
 | L15 | Metallaxis-FL, STVR 2013 | 通过/失败测试 | 以变异体杀死信息定位程序语句 | 证明变异式故障定位一般概念已有；R2不使用测试真值并构造匹配安慰剂空模型 |
 | L16 | Causality-Guided Adaptive Interventional Debugging, 2020 | 多次失败/通过执行 | 对运行谓词做自适应因果干预和群组测试 | 因果干预调试不是首创；R2研究单工作簿、无输出真值的公式源归因 |
+| L17 | Jansen et al., Detecting and Predicting Evolution in Spreadsheets, ICSME 2018 | 企业工作簿版本历史 | 检测并预测公式和工作簿的演化 | 版本历史和公式演化预测不是 VHRL 首创；VHRL只检验多编辑变化内的回归代理责任排序 |
+| L18 | Roy et al., Inferred Invariants for Spreadsheet Regression Faults, QRS-C 2018 | 历史版本与推断不变量 | 用自动推断的不变量检测电子表格回归故障 | 不变量与回归检测不是 VHRL 首创；若用作标签，只能称机械代理而非作者意图真值 |
 
 ## B. 数据与实验方法
 
@@ -30,6 +32,7 @@
 | D03 | EUSES Spreadsheet Corpus | 真实来源工作簿与高度复制公式结构，适合公式族方法 |
 | D04 | SpreadsheetBench | 真实复杂工作簿压力测试，不作为源错误准确率真值 |
 | D05 | FoRepBench | 合成生成后仍需要执行验证和人工抽查，支持本项目的数据审计设计 |
+| D06 | VEnron 1.0 | 360 个演化组、7,294 个工作簿的 CC0 版本语料；无作者意图错误真值，只能先审计多公式编辑和可重算回归代理的覆盖 |
 
 ## C. 当前采用的正式引用条目
 
@@ -52,6 +55,9 @@
 17. J. Li et al. CUSTODES: Automatic Spreadsheet Cell Clustering and Smell Detection. ICSE 2016. https://sqlab-sustech.github.io/files/paper/ICSE2016.pdf
 18. Metallaxis-FL: Mutation-Based Fault Localization. Software Testing, Verification and Reliability. https://orbilu.uni.lu/bitstream/10993/15363/1/10.1002-stvr.1509.pdf
 19. Causality-Guided Adaptive Interventional Debugging. 2020. https://arxiv.org/abs/2003.09539
+20. Dou, W.; Xu, L.; Cheung, S.-C.; Gao, C.; Wei, J.; Huang, T. VEnron. ICSE-SEIP 2016, pp. 162-171. DOI: 10.1145/2889160.2889238. Dataset DOI: 10.6084/m9.figshare.4797943.v1.
+21. Jansen, B.; Hermans, F.; Tazelaar, E. Detecting and Predicting Evolution in Spreadsheets - A Case Study in an Energy Network Company. ICSME 2018, pp. 645-654. DOI: 10.1109/ICSME.2018.00074.
+22. Roy, S.; van Deursen, A.; Hermans, F. On the Effectiveness of Automatically Inferred Invariants in Detecting Regression Faults in Spreadsheets. QRS-C 2018, pp. 199-206. DOI: 10.1109/QRS-C.2018.00046.
 
 ## D. 引用纪律
 
