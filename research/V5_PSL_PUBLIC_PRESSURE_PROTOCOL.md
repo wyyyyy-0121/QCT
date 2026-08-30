@@ -74,9 +74,12 @@ python scripts/audit_v5_psl_public_pressure.py \
 ## 候选锁前检查
 
 `research/V5_PSL_LITERATURE_GATE_TEMPLATE.json`的`claim_matrix_sha256`必须等于当前
-`research/V5_PSL_CLAIM_MATRIX.md`的SHA-256。六个预登记研究方向必须各有一条完整的
-主文献核对记录，包含稳定链接、核对日期、重叠判断、允许主张和外部核对笔记哈希；
-只有`unresolved_claims=[]`后才能设置`passed=true`。正式公开压力从干净Git提交启动，
+`research/V5_PSL_CLAIM_MATRIX.md`的SHA-256。v2门禁覆盖七个预登记研究方向和13篇
+必读主文献；同一方向允许追加多篇，但不能删除必读来源。每条通过记录必须来自全文，
+并包含稳定链接、核对日期、重叠判断、允许/禁止主张、原文哈希和外部核对笔记哈希。
+摘要、元数据、出版方片段和二手综述不能计为全文核对。只有
+`unresolved_sources=[]`且`unresolved_claims=[]`后才能设置`passed=true`。正式公开压力
+从干净Git提交启动，
 每个纳入案例必须有可复核原表；压力审计、候选锁和当前提交的源码清单必须逐项一致。
 候选冻结还要求公开压力签名文件哈希与审计回执一致，并能执行
 `libreoffice --version`。独立保管人须在冻结前只提供PUBLIC与SECRET归档SHA-256，

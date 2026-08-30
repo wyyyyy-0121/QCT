@@ -70,23 +70,33 @@ def passed_literature_gate() -> dict[str, object]:
     reviewed = [
         {
             "claim_area": area,
-            "citation_key": f"unit_{index}",
+            "citation_key": citation_key,
             "title": f"Unit primary source {index}",
             "stable_locator": f"https://example.test/source/{index}",
             "primary_source_checked": True,
+            "evidence_scope": "full_text",
             "checked_on": "2026-08-30",
             "overlap_assessment": "known_component",
             "permitted_claim": "bounded combination claim",
+            "forbidden_claim": "unbounded novelty claim",
+            "source_sha256": f"{index:x}" * 64,
             "evidence_sha256": f"{index:x}" * 64,
         }
-        for index, area in enumerate(sorted(freeze_candidate.LITERATURE_AREAS), 1)
+        for index, (citation_key, area) in enumerate(
+            sorted(freeze_candidate.REQUIRED_LITERATURE_SOURCES.items()), 1
+        )
     ]
     return {
-        "protocol": "v5_psl_literature_gate_v1",
+        "protocol": freeze_candidate.LITERATURE_PROTOCOL,
         "passed": True,
+        "required_claim_areas": sorted(freeze_candidate.LITERATURE_AREAS),
+        "required_citation_keys": sorted(
+            freeze_candidate.REQUIRED_LITERATURE_SOURCES
+        ),
         "primary_sources_verified": len(reviewed),
         "claim_matrix_sha256": sha256(ROOT / "research/V5_PSL_CLAIM_MATRIX.md"),
         "reviewed_sources": reviewed,
+        "unresolved_sources": [],
         "unresolved_claims": [],
     }
 
@@ -176,6 +186,94 @@ def pressure_run(root: Path) -> tuple[Path, Path, dict[str, str]]:
 
 
 class V5PSLToolTests(unittest.TestCase):
+    def test_literature_template_matches_preregistered_protocol_and_source_areas(self):
+        template = json.loads(
+            (ROOT / "research/V5_PSL_LITERATURE_GATE_TEMPLATE.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(template["protocol"], freeze_candidate.LITERATURE_PROTOCOL)
+        self.assertEqual(
+            template["required_claim_areas"],
+            sorted(freeze_candidate.LITERATURE_AREAS),
+        )
+        self.assertEqual(
+            template["required_citation_keys"],
+            sorted(freeze_candidate.REQUIRED_LITERATURE_SOURCES),
+        )
+        self.assertEqual(
+            {
+                row["citation_key"]: row["claim_area"]
+                for row in template["reviewed_sources"]
+            },
+            freeze_candidate.REQUIRED_LITERATURE_SOURCES,
+        )
+
+    def test_literature_progress_binds_claim_matrix_and_unresolved_full_texts(self):
+        progress = json.loads(
+            (ROOT / "research/V5_PSL_LITERATURE_GATE_PROGRESS.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertFalse(progress["passed"])
+        self.assertEqual(progress["protocol"], freeze_candidate.LITERATURE_PROTOCOL)
+        self.assertEqual(
+            progress["claim_matrix_sha256"],
+            sha256(ROOT / "research/V5_PSL_CLAIM_MATRIX.md"),
+        )
+        reviewed = {
+            row["citation_key"]: row for row in progress["reviewed_sources"]
+        }
+        verified = {
+            citation_key
+            for citation_key, row in reviewed.items()
+            if row["primary_source_checked"] is True
+        }
+        unresolved = set(freeze_candidate.REQUIRED_LITERATURE_SOURCES) - verified
+        self.assertEqual(len(verified), 9)
+        self.assertEqual(progress["primary_sources_verified"], len(verified))
+        self.assertEqual(set(progress["unresolved_sources"]), unresolved)
+        self.assertEqual(
+            set(progress["unresolved_claims"]),
+            {
+                freeze_candidate.REQUIRED_LITERATURE_SOURCES[citation_key]
+                for citation_key in unresolved
+            },
+        )
+        for citation_key, row in reviewed.items():
+            if citation_key in verified:
+                self.assertEqual(row["evidence_scope"], "full_text")
+                self.assertEqual(len(row["source_sha256"]), 64)
+                self.assertEqual(len(row["evidence_sha256"]), 64)
+            else:
+                self.assertNotEqual(row["evidence_scope"], "full_text")
+                self.assertIsNone(row["evidence_sha256"])
+
+    def test_literature_gate_allows_multiple_sources_but_requires_preregistered_full_texts(self):
+        payload = passed_literature_gate()
+        extra = dict(payload["reviewed_sources"][0])
+        extra["citation_key"] = "supplemental_primary_source"
+        extra["title"] = "Supplemental primary source"
+        extra["source_sha256"] = "e" * 64
+        extra["evidence_sha256"] = "f" * 64
+        payload["reviewed_sources"].append(extra)
+        payload["primary_sources_verified"] += 1
+        self.assertEqual(
+            len(freeze_candidate._validate_literature_gate(payload)),
+            len(freeze_candidate.REQUIRED_LITERATURE_SOURCES) + 1,
+        )
+
+        payload = passed_literature_gate()
+        payload["reviewed_sources"][0]["evidence_scope"] = "abstract"
+        with self.assertRaisesRegex(ValueError, "not based on full text"):
+            freeze_candidate._validate_literature_gate(payload)
+
+        payload = passed_literature_gate()
+        payload["reviewed_sources"].pop(0)
+        payload["primary_sources_verified"] -= 1
+        with self.assertRaisesRegex(ValueError, "missing required primary sources"):
+            freeze_candidate._validate_literature_gate(payload)
+
     def test_external_pair_validator_matches_real_formula_difference_and_blocks_overlap(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

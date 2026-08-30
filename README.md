@@ -92,6 +92,10 @@ python scripts/audit_v5_psl_public_pressure.py \
 `research/V5_PSL_CLAIM_MATRIX.md`的真实SHA-256；冻结还要求干净Git工作区和可用的
 LibreOffice：
 
+文献门v2预登记七个研究方向和13篇必读主文献，允许同一方向追加多篇，但只接受
+全文核对记录。当前进度见`research/V5_PSL_LITERATURE_GATE_PROGRESS.json`；在其中
+`passed=false`或仍有`unresolved_sources`时，下面的冻结命令会按设计拒绝执行。
+
 ```bash
 python scripts/freeze_v5_psl_candidate.py \
   --literature-gate /path/to/literature_gate.json \
