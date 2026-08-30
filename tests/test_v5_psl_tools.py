@@ -702,6 +702,8 @@ class V5PSLToolTests(unittest.TestCase):
             "research/V5_PSL_THIRD_PARTY_DECLARATION_TEMPLATE.json",
             "research/V5_PSL_LITERATURE_GATE_TEMPLATE.json",
             "research/V5_PSL_DEVELOPMENT_AMENDMENT_1.md",
+            "research/V5_PSL_PARAMETER_TUNING_FAILURE_1.md",
+            "research/V5_PSL_MECHANISM_REVISION_1.md",
         } <= REQUIRED_CANDIDATE_SOURCES)
 
     def test_public_archive_and_secret_commitments_are_bound_to_candidate(self):
