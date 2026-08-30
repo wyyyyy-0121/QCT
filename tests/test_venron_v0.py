@@ -38,14 +38,15 @@ class VEnronV0Tests(unittest.TestCase):
             workbook = openpyxl.Workbook()
             workbook.active.title = "Group List"
             sheet = workbook.create_sheet("1_2_alpha")
-            md5_a = "a" * 32
+            md5_a_token = "a" * 31
+            md5_a = "0" + md5_a_token
             md5_b = "b" * 32
-            file_a = f"v1.xls_2001-01-01-00-00_{md5_a}.xls"
+            file_a = f"v1.xls_2001-01-01-00-00_{md5_a_token}.xls"
             file_b = f"v2.xls_2001-01-02-00-00_{md5_b}.xls"
             sheet.append(["1", "File Name", "Sending Time", "Sender", "File MD5", "File Path"])
             sheet.append([2, "v2.xls", None, "ignored", md5_b, f"..\\1_2_alpha\\{file_b}"])
             sheet.append([None, 1, "email fields are ignored", None, None, None])
-            sheet.append([1, "v1.xls", None, "ignored", md5_a, f"..\\1_2_alpha\\{file_a}"])
+            sheet.append([1, "v1.xls", None, "ignored", md5_a_token, f"..\\1_2_alpha\\{file_a}"])
             workbook.save(path)
             workbook.close()
             members = {
@@ -61,6 +62,7 @@ class VEnronV0Tests(unittest.TestCase):
             )
             self.assertEqual([row["version_order"] for row in rows], [1, 2])
             self.assertEqual([row["source_md5"] for row in rows], [md5_a, md5_b])
+            self.assertEqual(rows[0]["source_md5_token"], md5_a_token)
 
     def test_formula_inspection_exports_formulas_not_constants(self):
         with tempfile.TemporaryDirectory() as directory:

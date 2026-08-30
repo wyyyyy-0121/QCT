@@ -13,7 +13,7 @@ import openpyxl
 
 ORDER_MEMBER = "VEnron1.0/Version/FileOrder.xls"
 GROUP_PATTERN = re.compile(r"^(\d+)_(\d+)_(.+)$")
-MD5_PATTERN = re.compile(r"^[0-9a-f]{32}$")
+MD5_TOKEN_PATTERN = re.compile(r"^[0-9a-f]{29,32}$")
 
 
 def _integer(value: object) -> int | None:
@@ -71,16 +71,17 @@ def parse_order_workbook(
             # Only A, E, and F are retained. Interleaved email rows have no file path in F.
             for row in sheet.iter_rows(min_col=1, max_col=6, values_only=True):
                 order = _integer(row[0])
-                md5 = str(row[4]).lower() if row[4] is not None else ""
+                md5_token = str(row[4]).lower() if row[4] is not None else ""
                 file_path = row[5]
                 if order is None or not isinstance(file_path, str) or not file_path.lower().endswith(".xls"):
                     continue
-                if not MD5_PATTERN.fullmatch(md5):
+                if not MD5_TOKEN_PATTERN.fullmatch(md5_token):
                     raise ValueError(f"invalid VEnron source MD5 in group {group_id}")
+                md5 = md5_token.zfill(32)
                 relative = normalize_order_path(file_path, sheet.title)
                 if relative not in expected_members or relative in seen_paths:
                     raise ValueError(f"VEnron order path is absent or duplicated: {relative!r}")
-                if not PurePosixPath(relative).name.lower().endswith(f"_{md5}.xls"):
+                if not PurePosixPath(relative).name.lower().endswith(f"_{md5_token}.xls"):
                     raise ValueError(f"VEnron order path/MD5 mismatch: {relative!r}")
                 seen_paths.add(relative)
                 group_rows.append({
@@ -88,6 +89,7 @@ def parse_order_workbook(
                     "group_name": sheet.title,
                     "version_order": order,
                     "source_md5": md5,
+                    "source_md5_token": md5_token,
                     "source_relative_path": relative,
                 })
             group_rows.sort(key=lambda row: int(row["version_order"]))

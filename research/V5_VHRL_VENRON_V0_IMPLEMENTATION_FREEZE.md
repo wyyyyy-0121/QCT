@@ -32,6 +32,15 @@ included. After extraction, the regular-file set must match the ordered manifest
 exactly and each file's MD5 must equal column E. Symlinks, hard links, devices, extra
 files, path traversal, duplicates, or identity mismatches fail V0.
 
+The first pre-extraction parser run exposed a publisher metadata encoding defect:
+column E contains 6,862 32-character, 400 31-character, 26 30-character, and six
+29-character hexadecimal tokens. The archive filename carries the same shortened
+token. This is the expected distribution of omitted leading zeroes in fixed-width
+MD5 text. The repaired parser accepts only 29-32 lowercase hexadecimal characters,
+requires the filename token to match exactly, left-pads the token with zeroes to 32
+characters, and verifies that reconstructed MD5 against the extracted file bytes.
+No nonhex token or shorter identity is accepted.
+
 ## 3. Conversion and formula-only profile
 
 - engine: the installed LibreOffice version recorded in the run metadata;
