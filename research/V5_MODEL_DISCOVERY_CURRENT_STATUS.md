@@ -42,6 +42,7 @@
 | Gate 1 文献与基线 | 通过 | 9 张方法卡完成；官方当前 ExceLint-core Linux CLI 已验证 |
 | Gate 2 原子信号 | 已完成，A/B 不通过 | `results/model_discovery_gate2_final_v3/gate2_receipt.json`；转分支 C |
 | Gate 3 候选开发 | 不适用（分支 C） | 不授权在同一标签上继续调参或增加通道 |
+| CWRP U0-U2 | 已预注册，尚未摄入语料 | 检验独立无标签工作簿是否提供新的跨工作簿角色信息 |
 | 旧 `240+120` | 不可读 | 尚未有候选锁 |
 | 新保管人 `240+120` | 不可读 | 尚未有完整预测锁 |
 
@@ -52,3 +53,7 @@
 无标签四通道在历史 N2 上有提升，但在 Enron 和 Modified EUSES 发生退化，控制行动率
 也不安全。当前不能写：已有正式 V5、已超过 ExceLint 原工具、已证明自然错误普遍泛化、
 或六个公开语料构成六份独立定位验证。
+
+RQ-C 之后的新授权仅限 `research/V5_CROSS_WORKBOOK_ROLE_PRIOR_PLAN.md`：先在完全无
+故障标签的 SheetJS `nuix/` 语料上运行模板外公式遮蔽门。只有 U0/U1/U2 全部通过，
+才允许另写跨工作簿定位候选；在此之前 `CWRP` 不是模型版本，也不能称为 V5。
