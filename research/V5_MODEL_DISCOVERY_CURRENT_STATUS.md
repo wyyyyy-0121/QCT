@@ -15,7 +15,8 @@
 | `V5-Core` | 候选中心核心重构 | 锁定合成集机制重合，Enron 安全失败 | 已实现的负结果 |
 | `V5-Core R2` | 候选无关源排名及修订 | 压力安全失败 | 已终止负结果 |
 | `V5-PSL` | 静态锚与修复响应研究线 | 唯一结构修订后终止 | 已终止负结果 |
-| `model-discovery` | 新研究线开发代号 | Phase 0、Gate 1 通过；Gate 2 A/B 均失败；RQ-C 已完成 | 停止无真值继任模型搜索，保留可识别性边界 |
+| `model-discovery` | 已结束的原子信号研究线 | Phase 0、Gate 1 通过；Gate 2 A/B 均失败；RQ-C 已完成 | 停止在原揭晓数据上搜索，保留可识别性边界 |
+| `DRFV` | 新语料上的密度比公式验证研究 | 已预注册，尚未接收工作簿或训练 | 仅在 U0/U1/U2 全通过后讨论主模型身份 |
 | `V5-R1` | 保留的正式名称 | 未授权 | 只有分支 A 盲测通过后可使用 |
 
 ## 已确认的数量与数据角色
@@ -42,7 +43,8 @@
 | Gate 1 文献与基线 | 通过 | 9 张方法卡完成；官方当前 ExceLint-core Linux CLI 已验证 |
 | Gate 2 原子信号 | 已完成，A/B 不通过 | `results/model_discovery_gate2_final_v3/gate2_receipt.json`；转分支 C |
 | Gate 3 候选开发 | 不适用（分支 C） | 不授权在同一标签上继续调参或增加通道 |
-| CWRP U0-U2 | 已预注册，尚未摄入语料 | 检验独立无标签工作簿是否提供新的跨工作簿角色信息 |
+| CWRP U0-U2 | 已完成，U0 通过、U1/U2 失败 | 低复杂度跨工作簿角色先验已按预注册终止 |
+| DRFV U0-U2 | 已预注册，尚未接收工作簿 | 在新语料上先检验密度比公式验证，再做锁后独立 Debugging 测试 |
 | 旧 `240+120` | 不可读 | 尚未有候选锁 |
 | 新保管人 `240+120` | 不可读 | 已就位；尚未有已提交的完整预测锁 |
 
@@ -54,6 +56,7 @@
 也不安全。当前不能写：已有正式 V5、已超过 ExceLint 原工具、已证明自然错误普遍泛化、
 或六个公开语料构成六份独立定位验证。
 
-RQ-C 之后的新授权仅限 `research/V5_CROSS_WORKBOOK_ROLE_PRIOR_PLAN.md`：先在完全无
-故障标签的 SheetJS `nuix/` 语料上运行模板外公式遮蔽门。只有 U0/U1/U2 全部通过，
-才允许另写跨工作簿定位候选；在此之前 `CWRP` 不是模型版本，也不能称为 V5。
+CWRP 已按 `research/V5_CROSS_WORKBOOK_ROLE_PRIOR_PLAN.md` 完成并因 U1/U2 失败终止。
+当前唯一新授权是 `research/V5_DRFV_MECHANISM_SELECTION_AND_PREREGISTRATION.md`；它使用
+新的 SpreadsheetBench v1 input 语料，并把 SpreadsheetBench 2 Debugging 完整保留为
+锁后外部测试。DRFV 在 U0/U1/U2 全通过前不是模型版本，也不能称为 V5。

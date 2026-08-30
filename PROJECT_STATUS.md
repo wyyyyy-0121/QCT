@@ -17,6 +17,12 @@
 - CWRP 首份 v1 回执错误使用等宽 ECE；原回执永久保留。提交 `674b6df` 只把统计
   修正为预注册的等频 ECE，校正 v2 的逐目标预测哈希与 v1 完全相同，因此不是结果后
   调参。完整记录见 `research/V5_CWRP_RESULT.md`。
+- CWRP 失败后已完成新公开数据与直接先例审计，并在读取新工作簿内容前预注册 `DRFV`
+  密度比公式验证器。它只使用 SpreadsheetBench v1 的 input 工作簿做自监督训练，
+  SpreadsheetBench 2 的 100 个 Debugging 任务完整保留为预测锁后外部测试；固定机制、
+  基线、消融和 U0/U1/U2 停止门见
+  `research/V5_DRFV_MECHANISM_SELECTION_AND_PREREGISTRATION.md`。DRFV 当前只是研究代号，
+  尚未接收数据、训练或获得正式模型身份。
 - 新保管人保密 `240+120` 已由用户放在仓库外
   `/home/ayaka/code/FormulaGuard_240_120/`；当前未列目录、未哈希、未读取。用户已授权：
   当新候选规格、源码与配置均已提交冻结，且完整预测锁已生成并提交后，Codex 可直接

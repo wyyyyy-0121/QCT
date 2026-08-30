@@ -87,6 +87,20 @@
 - 用途：复杂、多表和非标准布局的解析鲁棒性及安全跳过压力测试。
 - 限制：它不是带源错误标签的根因定位数据集，不进入主准确率。
 
+### SpreadsheetBench 2
+
+- 论文：<https://arxiv.org/abs/2606.29955>
+- 数据：<https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2>
+- 代码：<https://github.com/RUCKBReasoning/SpreadsheetBench-2>
+- 公开规模：321 个端到端任务，其中 100 个 Debugging；每个 Debugging 输入不在指令中
+  公布错误类型或目标格，金标准工作簿可机械定义需修改格。
+- 许可：论文正文声明数据 CC BY-SA 4.0、代码 MIT；数据卡顶层 MIT 标记与正文冲突，
+  本项目按更严格的数据许可处理，不再分发原始工作簿。
+- DRFV 用途：100 个 Debugging 任务完整保留为候选冻结和预测锁后的外部公式源格测试，
+  不用于训练或调参；专家注入错误不能被描述为自然发生错误。
+- 固定 revision、接收隔离和停止门见
+  `research/V5_DRFV_MECHANISM_SELECTION_AND_PREREGISTRATION.md`。
+
 ## 4. 数据证据分层
 
 | 层级 | 数据 | 可以支持的结论 |
