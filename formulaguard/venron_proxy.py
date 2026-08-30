@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import hashlib
+import posixpath
+import zipfile
 from pathlib import Path
 from typing import Mapping, Sequence
-
-import openpyxl
-
+from xml.etree import ElementTree
 
 EXPLICIT_ERROR_TOKENS = frozenset({
     "#NULL!",
@@ -21,6 +21,9 @@ EXPLICIT_ERROR_TOKENS = frozenset({
     "#SPILL!",
     "#CALC!",
 })
+MAIN_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+DOCUMENT_REL_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+PACKAGE_REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
 
 
 def formula_map(profile: Mapping[str, object]) -> dict[tuple[str, str], str]:
@@ -64,29 +67,61 @@ def explicit_formula_errors(
     keys_by_sheet: dict[str, list[str]] = {}
     for sheet, address in sorted(formula_keys):
         keys_by_sheet.setdefault(sheet, []).append(address)
-    workbook = openpyxl.load_workbook(
-        path,
-        read_only=True,
-        data_only=True,
-        keep_links=False,
-    )
     errors: list[dict[str, str]] = []
-    try:
+    with zipfile.ZipFile(path) as archive:
+        members = set(archive.namelist())
+        workbook_root = ElementTree.fromstring(archive.read("xl/workbook.xml"))
+        relations_root = ElementTree.fromstring(
+            archive.read("xl/_rels/workbook.xml.rels")
+        )
+        targets = {
+            relation.attrib["Id"]: relation.attrib["Target"]
+            for relation in relations_root.findall(f"{{{PACKAGE_REL_NS}}}Relationship")
+            if "Id" in relation.attrib and "Target" in relation.attrib
+        }
+        sheet_members: dict[str, str] = {}
+        for sheet in workbook_root.findall(f".//{{{MAIN_NS}}}sheet"):
+            name = sheet.attrib.get("name", "")
+            relation_id = sheet.attrib.get(f"{{{DOCUMENT_REL_NS}}}id", "")
+            target = targets.get(relation_id, "").replace("\\", "/")
+            if target.startswith("/"):
+                member = target.lstrip("/")
+            else:
+                member = posixpath.normpath(posixpath.join("xl", target))
+            if (
+                not name
+                or not member.startswith("xl/worksheets/")
+                or member not in members
+            ):
+                raise ValueError("cached VEnron workbook has an unsafe sheet relation")
+            sheet_members[name] = member
+        if not set(keys_by_sheet).issubset(sheet_members):
+            missing = sorted(set(keys_by_sheet) - set(sheet_members))
+            raise ValueError(f"cached VEnron workbook lost sheets: {missing!r}")
+
+        cell_tag = f"{{{MAIN_NS}}}c"
+        value_tag = f"{{{MAIN_NS}}}v"
         for sheet_name, addresses in keys_by_sheet.items():
-            if sheet_name not in workbook.sheetnames:
-                raise ValueError(f"cached VEnron workbook lost sheet: {sheet_name!r}")
-            sheet = workbook[sheet_name]
-            for address in addresses:
-                cell = sheet[address]
-                value = str(cell.value).upper() if cell.value is not None else ""
-                if value in EXPLICIT_ERROR_TOKENS:
-                    errors.append({
-                        "sheet": sheet_name,
-                        "address": address,
-                        "error": value,
-                    })
-    finally:
-        workbook.close()
+            wanted = set(addresses)
+            with archive.open(sheet_members[sheet_name]) as handle:
+                for _, cell in ElementTree.iterparse(handle, events=("end",)):
+                    if cell.tag != cell_tag:
+                        continue
+                    address = cell.attrib.get("r", "")
+                    if address in wanted and cell.attrib.get("t") == "e":
+                        value_node = cell.find(value_tag)
+                        value = (
+                            value_node.text.upper()
+                            if value_node is not None and value_node.text
+                            else ""
+                        )
+                        if value in EXPLICIT_ERROR_TOKENS:
+                            errors.append({
+                                "sheet": sheet_name,
+                                "address": address,
+                                "error": value,
+                            })
+                    cell.clear()
     errors.sort(key=lambda row: (row["sheet"], row["address"], row["error"]))
     return errors
 
