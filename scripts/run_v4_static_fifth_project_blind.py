@@ -156,6 +156,17 @@ def _prediction_task(task: tuple[str, str, str, str]) -> str:
     return instance_id
 
 
+def _reproduction_task(task: tuple[str, str, str, str]) -> str:
+    raw_text, shard_text, instance_id, workbook_label = task
+    audit_prediction_shard(
+        Path(shard_text),
+        {"instance_id": instance_id, "workbook": workbook_label},
+        Path(raw_text),
+        recompute=True,
+    )
+    return instance_id
+
+
 def predict_run(
     release_root: Path,
     candidate_lock_path: Path,
@@ -234,6 +245,7 @@ def verify_prediction_run(
     predictions: Path,
     *,
     recompute: bool,
+    workers: int = DEFAULT_WORKERS,
 ) -> dict[str, object]:
     candidate = verify_candidate_lock(candidate_lock_path)
     entries = _release_inventory(release_root, verify_all=False)
@@ -274,12 +286,29 @@ def verify_prediction_run(
         raise ValueError("prediction file inventory differs")
     rows_by_id = {row["instance_id"]: row for row in rows}
     shards = sorted((predictions / "shards").glob("*.json"))
-    for index, path in enumerate(shards, start=1):
-        audit_prediction_shard(
-            path, rows_by_id[path.stem], release_root / "raw_360", recompute=recompute,
-        )
-        if recompute and (index % 25 == 0 or index == len(shards)):
-            print(f"project blind lock reproduction {index}/{len(shards)}", flush=True)
+    if recompute:
+        tasks = [
+            (
+                str(release_root / "raw_360"),
+                str(path),
+                path.stem,
+                rows_by_id[path.stem]["workbook"],
+            )
+            for path in shards
+        ]
+        with concurrent.futures.ProcessPoolExecutor(
+            max_workers=min(workers, len(tasks)),
+        ) as executor:
+            futures = [executor.submit(_reproduction_task, task) for task in tasks]
+            for index, future in enumerate(concurrent.futures.as_completed(futures), start=1):
+                future.result()
+                if index % 25 == 0 or index == len(tasks):
+                    print(f"project blind lock reproduction {index}/{len(tasks)}", flush=True)
+    else:
+        for path in shards:
+            audit_prediction_shard(
+                path, rows_by_id[path.stem], release_root / "raw_360", recompute=False,
+            )
     combined = combined_shards_sha256(shards)
     expected_completion = {
         "protocol": COMPLETION_PROTOCOL,
@@ -320,11 +349,13 @@ def write_prediction_lock(
     candidate_lock_path: Path,
     predictions: Path,
     output: Path,
+    *,
+    workers: int,
 ) -> Path:
     if output.exists():
         raise ValueError("prediction lock already exists")
     payload = verify_prediction_run(
-        release_root, candidate_lock_path, predictions, recompute=True,
+        release_root, candidate_lock_path, predictions, recompute=True, workers=workers,
     )
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return output
@@ -504,6 +535,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     lock_parser.add_argument("--candidate-lock", type=Path, required=True)
     lock_parser.add_argument("--predictions", type=Path, required=True)
     lock_parser.add_argument("--output", type=Path, required=True)
+    lock_parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS)
     score_parser = subparsers.add_parser("score")
     score_parser.add_argument("--release", type=Path, required=True)
     score_parser.add_argument("--candidate-lock", type=Path, required=True)
@@ -524,7 +556,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         elif args.command == "lock":
             path = write_prediction_lock(
                 args.release.resolve(), args.candidate_lock.resolve(),
-                args.predictions.resolve(), args.output.resolve(),
+                args.predictions.resolve(), args.output.resolve(), workers=args.workers,
             )
         else:
             path = score_once(
