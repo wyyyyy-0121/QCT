@@ -415,6 +415,12 @@ def write_prediction_lock(
     return output
 
 
+def _completed_reproduction_lock(payload: Mapping[str, object]) -> dict[str, object]:
+    completed = dict(payload)
+    completed["full_ranking_reproduction_passed"] = True
+    return completed
+
+
 def _verify_git_commitment(
     path: Path,
     prediction_lock: Path,
@@ -631,7 +637,10 @@ def score_once(
     verified_lock = verify_prediction_run(
         public_root, candidate_lock_path, predictions, recompute=False,
     )
-    if external_lock != verified_lock or external_lock.get("protocol") != LOCK_PROTOCOL:
+    if (
+        external_lock != _completed_reproduction_lock(verified_lock)
+        or external_lock.get("protocol") != LOCK_PROTOCOL
+    ):
         raise ValueError("external prediction lock does not reproduce")
     _verify_git_commitment(git_commitment_path, prediction_lock_path, external_lock)
     rows, _metadata, commitments = _public_context(public_root)

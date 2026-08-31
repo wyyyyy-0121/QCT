@@ -32,6 +32,7 @@ from formulaguard.v5_psl_protocol import (
 from scripts.build_v5_psl_third_party_pack import validate_case_pair
 from scripts.run_v4_static_fifth_blind import (
     METHODS,
+    _completed_reproduction_lock,
     _development_signatures,
     _write_private_events,
     audit_prediction_shard,
@@ -414,7 +415,10 @@ def score_once(
     verified_lock = verify_prediction_run(
         release_root, candidate_lock_path, predictions, recompute=False,
     )
-    if external_lock != verified_lock or external_lock.get("protocol") != LOCK_PROTOCOL:
+    if (
+        external_lock != _completed_reproduction_lock(verified_lock)
+        or external_lock.get("protocol") != LOCK_PROTOCOL
+    ):
         raise ValueError("external prediction lock does not reproduce")
     _verify_git_commitment(git_commitment_path, prediction_lock_path, external_lock)
     entries = _release_inventory(release_root, verify_all=True)

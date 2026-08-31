@@ -3,6 +3,7 @@ from pathlib import Path
 
 from scripts.run_v4_static_fifth_blind import (
     METHODS,
+    _completed_reproduction_lock,
     _validate_method_inventory,
     score_rows,
     verify_candidate_lock,
@@ -13,6 +14,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class V4StaticFifthBlindTests(unittest.TestCase):
+    def test_scoring_preserves_the_completed_reproduction_receipt(self):
+        runtime_verification = {
+            "locked": True,
+            "full_ranking_reproduction_passed": False,
+        }
+        self.assertEqual(
+            _completed_reproduction_lock(runtime_verification),
+            {"locked": True, "full_ranking_reproduction_passed": True},
+        )
+        self.assertFalse(runtime_verification["full_ranking_reproduction_passed"])
+
     def test_prediction_method_inventory_is_order_independent(self):
         methods = {name: {} for name in reversed(METHODS)}
         self.assertEqual(_validate_method_inventory(methods, "test.json"), methods)
