@@ -118,7 +118,7 @@ def _validate_shard(path: Path, source: Mapping[str, object]) -> dict[str, objec
         or payload.get("split") != source["split"]
         or not isinstance(targets, list)
         or payload.get("selected_targets") != len(targets)
-        or not 1 <= len(targets) <= MAX_TARGETS_PER_WORKBOOK
+        or not 0 <= len(targets) <= MAX_TARGETS_PER_WORKBOOK
         or payload.get("raw_cell_text_persisted") is not False
         or payload.get("raw_numeric_values_persisted") is not False
         or payload.get("raw_formula_strings_persisted") is not False
@@ -245,7 +245,7 @@ def build(
         "selected_targets": len(targets),
         "split_targets": dict(sorted(split_counts.items())),
         "split_structure_groups": observed_groups,
-        "workbooks_with_targets": len(payloads),
+        "workbooks_with_targets": sum(bool(payload["targets"]) for payload in payloads),
         "fallback_roles": sum(int(payload["fallback_roles"]) for payload in payloads),
         "local_candidate_count_distribution": dict(sorted(Counter(
             len(target["local_candidate_roles"]) for target in targets

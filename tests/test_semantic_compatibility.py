@@ -1,5 +1,8 @@
+import hashlib
+import json
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -14,6 +17,7 @@ from formulaguard.semantic_compatibility import (
 )
 from formulaguard.semantic_compatibility_torch import SemanticCompatibilityHead
 from formulaguard.workbook import WorkbookModel
+from scripts.build_semantic_compatibility_corpus import PROTOCOL, _validate_shard
 
 
 class SemanticFormulaRoleTests(unittest.TestCase):
@@ -90,6 +94,28 @@ class SemanticCompatibilityHeadTests(unittest.TestCase):
 
 
 class SemanticCorpusEntrypointTests(unittest.TestCase):
+    def test_shard_without_visible_formulas_is_valid(self):
+        source = {
+            "workbook_id": "fcrl-wb:empty",
+            "source_sha256": hashlib.sha256(b"empty").hexdigest(),
+            "structure_group": "template-group:empty",
+            "split": "calibration",
+        }
+        payload = {
+            "protocol": PROTOCOL,
+            **source,
+            "selected_targets": 0,
+            "targets": [],
+            "raw_cell_text_persisted": False,
+            "raw_numeric_values_persisted": False,
+            "raw_formula_strings_persisted": False,
+            "fault_labels_read": [],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "empty.json"
+            path.write_text(json.dumps(payload), encoding="ascii")
+            self.assertEqual(_validate_shard(path, source), payload)
+
     def test_corpus_builder_runs_directly_outside_repository(self):
         script = Path(__file__).resolve().parents[1] / "scripts/build_semantic_compatibility_corpus.py"
         completed = subprocess.run(
