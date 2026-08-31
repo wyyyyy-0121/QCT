@@ -22,6 +22,12 @@ from scripts.build_semantic_compatibility_corpus import (
     _structure_group_audit,
     _validate_shard,
 )
+from scripts.extract_semantic_compatibility_embeddings import (
+    CONTEXT_SIZE,
+    PROTOCOL as EMBEDDING_PROTOCOL,
+    _resolve_target_key,
+    _validate_embedding_payload,
+)
 
 
 class SemanticFormulaRoleTests(unittest.TestCase):
@@ -152,6 +158,46 @@ class SemanticCorpusEntrypointTests(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("--workers", completed.stdout)
+
+
+class SemanticEmbeddingTests(unittest.TestCase):
+    def test_resolves_sheet_ordinal_without_persisting_sheet_name(self):
+        model = WorkbookModel(
+            {("First", "A1"): 1, ("Second", "B2"): 2},
+            {("Second", "B2"): "=1+1"},
+            sheet_visibility={"First": True, "Second": True},
+        )
+        self.assertEqual(
+            _resolve_target_key(model, {"sheet_index": 1, "address": "B2"}),
+            ("Second", "B2"),
+        )
+
+    def test_embedding_payload_is_float16_and_context_only(self):
+        target_ids = ("semantic-target:a", "semantic-target:b")
+        states = torch.zeros((2, CONTEXT_SIZE), dtype=torch.float16)
+        payload = {
+            "protocol": EMBEDDING_PROTOCOL,
+            "target_ids": target_ids,
+            "context_states": states,
+        }
+        self.assertIs(_validate_embedding_payload(payload, target_ids), states)
+        with self.assertRaisesRegex(ValueError, "fields changed"):
+            _validate_embedding_payload({**payload, "role": "forbidden"}, target_ids)
+
+    def test_embedding_extractor_runs_directly_outside_repository(self):
+        script = (
+            Path(__file__).resolve().parents[1]
+            / "scripts/extract_semantic_compatibility_embeddings.py"
+        )
+        completed = subprocess.run(
+            (sys.executable, str(script), "--help"),
+            cwd="/tmp",
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn("--resume", completed.stdout)
 
 
 if __name__ == "__main__":
