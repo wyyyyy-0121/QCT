@@ -34,6 +34,13 @@ from scripts.train_semantic_compatibility import (
     evaluate_gates,
     group_bootstrap_interval,
 )
+from scripts.score_semantic_compatibility_selective import (
+    SelectiveRow,
+    calibration_gates,
+    internal_gates,
+    select_threshold,
+    wilson_interval,
+)
 
 
 class SemanticFormulaRoleTests(unittest.TestCase):
@@ -283,6 +290,60 @@ class SemanticTrainingTests(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("--embedding-receipt", completed.stdout)
+
+
+class SelectiveSemanticTests(unittest.TestCase):
+    def test_wilson_interval_bounds_observed_fraction(self):
+        lower, upper = wilson_interval(80, 100)
+        self.assertLess(lower, 0.8)
+        self.assertGreater(upper, 0.8)
+
+    def test_threshold_selection_maximizes_passing_coverage(self):
+        rows = []
+        for index in range(125):
+            rows.append(SelectiveRow(
+                structure_group=f"g{index % 10}",
+                margin=3.0 - index / 1000,
+                model_correct=index < 100,
+                frequency_correct=index < 25,
+            ))
+        for index in range(875):
+            rows.append(SelectiveRow(
+                structure_group=f"g{index % 10}",
+                margin=1.0 - index / 1000,
+                model_correct=False,
+                frequency_correct=False,
+            ))
+        summary, gates = select_threshold(rows)
+        self.assertTrue(all(gates.values()))
+        self.assertEqual(summary["actions"], 128)
+
+    def test_internal_gate_is_stricly_independent(self):
+        summary = {
+            "actions": 100,
+            "coverage": 0.10,
+            "accuracy": 0.72,
+            "accuracy_wilson_95ci": [0.61, 0.80],
+            "accuracy_delta_over_train_frequency": 0.15,
+            "structure_groups": 9,
+        }
+        self.assertTrue(all(internal_gates(summary).values()))
+        self.assertFalse(all(calibration_gates(summary).values()))
+
+    def test_selective_script_runs_directly_outside_repository(self):
+        script = (
+            Path(__file__).resolve().parents[1]
+            / "scripts/score_semantic_compatibility_selective.py"
+        )
+        completed = subprocess.run(
+            (sys.executable, str(script), "--help"),
+            cwd="/tmp",
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn("--selected-model", completed.stdout)
 
 
 if __name__ == "__main__":
