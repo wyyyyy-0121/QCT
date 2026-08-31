@@ -194,3 +194,17 @@
   SpreadsheetBench 2 全部通过且完整公开预测锁已提交后，才使用用户已授权的一次
   保密评估。
 - 可复核依据：`research/V5_V4_RESIDUAL_CONTROLLER_PREREGISTRATION.md` 和同名 JSON。
+
+## D0015：V4-RRC D0 交叉拟合失败
+
+- 日期：2026-08-31
+- 依据：`results/v4_rrc_d0/receipt.json`、
+  `results/v4_rrc_d0_failure_analysis.json` 和 `research/V5_V4_RRC_D0_RESULT.md`。
+- 观察：五个校准折均无合格阈值；至少恢复 3 例时的最高正残差行动精度依次为
+  25.00%、40.00%、31.82%、27.27% 和 57.14%，全部低于 75%。两进程投影哈希一致。
+- 决定：D0 不通过；零行动使总体/Enron增益和恢复覆盖失败。由于失败不只属于允许
+  加严的安全门，`single_revision_allowed=false`，不运行 D1，本研究线停止。
+- 没有决定：没有把 oracle 上限写成模型结果，没有放宽精度/控制/损失门，没有生成
+  候选或授权 `V5-R1`。同输入学术/历史基线按预注册另写补充回执，但不能改变 D0。
+- 受保护数据：未列目录、未哈希、未读取；旧 revealed-trial、SpreadsheetBench 2 和
+  保密 `240+120` 均未进入输入。
