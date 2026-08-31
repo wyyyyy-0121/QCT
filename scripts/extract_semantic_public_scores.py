@@ -52,7 +52,7 @@ from scripts.train_semantic_compatibility import (
 )
 from scripts.train_semantic_compatibility import PROTOCOL as TRAINING_PROTOCOL
 
-PROTOCOL = "formulaguard_semantic_public_scores_v2"
+PROTOCOL = "formulaguard_semantic_public_scores_v3"
 MAX_WORKERS = 24
 GPU_BATCH_SIZE = 16
 V4_SCOPE = 100
@@ -60,7 +60,7 @@ DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/observation_profiles.csv"
 DEFAULT_V4 = ROOT / "results/model_discovery_v4_baseline"
 DEFAULT_TRAINING_RECEIPT = ROOT / "results/semantic_compatibility_training_v2/receipt.json"
 DEFAULT_SELECTED_MODEL = ROOT / "results/semantic_compatibility_training_v2/selected_model.pt"
-DEFAULT_OUTPUT = ROOT / "results/semantic_public_scores_v2"
+DEFAULT_OUTPUT = ROOT / "results/semantic_public_scores_v3"
 
 _TOKENIZER_RUNTIME: FCRLTokenizerRuntime | None = None
 
@@ -273,6 +273,8 @@ def _validate_score_shard(
         "v4_rank",
         "candidate_count",
         "semantic_anomaly_margin",
+        "semantic_anomaly_confidence",
+        "semantic_decision_margin",
         "semantic_observed_score",
         "semantic_best_alternative_score",
         "semantic_prefers_alternative",
@@ -286,6 +288,12 @@ def _validate_score_shard(
         candidate_count = row.get("candidate_count") if isinstance(row, Mapping) else None
         cell = row.get("cell") if isinstance(row, Mapping) else None
         margin = row.get("semantic_anomaly_margin") if isinstance(row, Mapping) else None
+        anomaly_confidence = (
+            row.get("semantic_anomaly_confidence") if isinstance(row, Mapping) else None
+        )
+        decision_margin = (
+            row.get("semantic_decision_margin") if isinstance(row, Mapping) else None
+        )
         observed_score = row.get("semantic_observed_score") if isinstance(row, Mapping) else None
         alternative_score = (
             row.get("semantic_best_alternative_score") if isinstance(row, Mapping) else None
@@ -308,7 +316,13 @@ def _validate_score_shard(
                 isinstance(value, (int, float))
                 and not isinstance(value, bool)
                 and math.isfinite(float(value))
-                for value in (margin, observed_score, alternative_score)
+                for value in (
+                    margin,
+                    anomaly_confidence,
+                    decision_margin,
+                    observed_score,
+                    alternative_score,
+                )
             )
             or not math.isclose(
                 float(margin),
@@ -316,8 +330,39 @@ def _validate_score_shard(
                 rel_tol=1e-12,
                 abs_tol=1e-12,
             )
+            or float(decision_margin) < 0.0
             or not isinstance(row["semantic_prefers_alternative"], bool)
             or row["semantic_prefers_alternative"] is not (float(margin) > 0.0)
+            or not math.isclose(
+                float(anomaly_confidence),
+                float(decision_margin)
+                if row["semantic_prefers_alternative"]
+                else -float(decision_margin),
+                rel_tol=1e-12,
+                abs_tol=1e-12,
+            )
+            or (
+                row["semantic_prefers_alternative"]
+                and float(decision_margin) > float(margin) + 1e-12
+            )
+            or (
+                not row["semantic_prefers_alternative"]
+                and not math.isclose(
+                    float(decision_margin),
+                    -float(margin),
+                    rel_tol=1e-12,
+                    abs_tol=1e-12,
+                )
+            )
+            or (
+                candidate_count == 2
+                and not math.isclose(
+                    float(decision_margin),
+                    abs(float(margin)),
+                    rel_tol=1e-12,
+                    abs_tol=1e-12,
+                )
+            )
             or not isinstance(row["fallback_role"], bool)
         ):
             raise ValueError("semantic public score row is invalid")
@@ -459,21 +504,32 @@ def extract(
                         for index, record in enumerate(records):
                             count = len(record["candidate_roles"])
                             observed_index = int(record["observed_index"])
-                            observed_score = float(logits[index, observed_index].item())
-                            alternative_score = max(
+                            candidate_scores = [
                                 float(logits[index, position].item())
                                 for position in range(count)
+                            ]
+                            observed_score = candidate_scores[observed_index]
+                            alternative_score = max(
+                                score
+                                for position, score in enumerate(candidate_scores)
                                 if position != observed_index
                             )
                             margin = alternative_score - observed_score
+                            ordered_scores = sorted(candidate_scores, reverse=True)
+                            decision_margin = ordered_scores[0] - ordered_scores[1]
+                            prefers_alternative = margin > 0.0
                             score_rows.append({
                                 "cell": record["cell"],
                                 "v4_rank": record["v4_rank"],
                                 "candidate_count": count,
                                 "semantic_anomaly_margin": margin,
+                                "semantic_anomaly_confidence": (
+                                    decision_margin if prefers_alternative else -decision_margin
+                                ),
+                                "semantic_decision_margin": decision_margin,
                                 "semantic_observed_score": observed_score,
                                 "semantic_best_alternative_score": alternative_score,
-                                "semantic_prefers_alternative": margin > 0.0,
+                                "semantic_prefers_alternative": prefers_alternative,
                                 "fallback_role": record["fallback_role"],
                             })
                 score_rows.sort(key=lambda row: int(row["v4_rank"]))

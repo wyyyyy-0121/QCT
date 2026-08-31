@@ -28,6 +28,8 @@ class SemanticPublicScoreTests(unittest.TestCase):
             "v4_rank": 1,
             "candidate_count": 2,
             "semantic_anomaly_margin": 0.5,
+            "semantic_anomaly_confidence": 0.5,
+            "semantic_decision_margin": 0.5,
             "semantic_observed_score": 0.1,
             "semantic_best_alternative_score": 0.6,
             "semantic_prefers_alternative": True,
@@ -72,9 +74,13 @@ class SemanticPublicScoreTests(unittest.TestCase):
         profile, payload = self.valid_shard()
         for field, value in (
             ("semantic_anomaly_margin", math.inf),
+            ("semantic_anomaly_confidence", math.nan),
+            ("semantic_decision_margin", -math.inf),
             ("semantic_observed_score", math.nan),
             ("semantic_best_alternative_score", -math.inf),
             ("semantic_anomaly_margin", 0.4),
+            ("semantic_anomaly_confidence", 0.4),
+            ("semantic_decision_margin", 0.4),
             ("semantic_prefers_alternative", False),
         ):
             invalid = copy.deepcopy(payload)
@@ -82,7 +88,16 @@ class SemanticPublicScoreTests(unittest.TestCase):
             with self.subTest(field=field, value=value), self.assertRaisesRegex(
                 ValueError, "row is invalid"
             ):
-                _validate_score_shard(invalid, profile, ("S!A1",))
+                    _validate_score_shard(invalid, profile, ("S!A1",))
+
+    def test_multi_candidate_decision_margin_can_be_smaller_than_raw_margin(self):
+        profile, payload = self.valid_shard()
+        payload["scores"][0].update({
+            "candidate_count": 3,
+            "semantic_anomaly_confidence": 0.2,
+            "semantic_decision_margin": 0.2,
+        })
+        _validate_score_shard(payload, profile, ("S!A1",))
 
     def test_score_shard_binds_cell_to_frozen_v4_rank(self):
         profile, payload = self.valid_shard()
