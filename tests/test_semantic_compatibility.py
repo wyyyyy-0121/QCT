@@ -17,7 +17,11 @@ from formulaguard.semantic_compatibility import (
 )
 from formulaguard.semantic_compatibility_torch import SemanticCompatibilityHead
 from formulaguard.workbook import WorkbookModel
-from scripts.build_semantic_compatibility_corpus import PROTOCOL, _validate_shard
+from scripts.build_semantic_compatibility_corpus import (
+    PROTOCOL,
+    _structure_group_audit,
+    _validate_shard,
+)
 
 
 class SemanticFormulaRoleTests(unittest.TestCase):
@@ -105,6 +109,7 @@ class SemanticCorpusEntrypointTests(unittest.TestCase):
             "protocol": PROTOCOL,
             **source,
             "selected_targets": 0,
+            "visible_formula_count": 0,
             "targets": [],
             "raw_cell_text_persisted": False,
             "raw_numeric_values_persisted": False,
@@ -115,6 +120,26 @@ class SemanticCorpusEntrypointTests(unittest.TestCase):
             path = Path(directory) / "empty.json"
             path.write_text(json.dumps(payload), encoding="ascii")
             self.assertEqual(_validate_shard(path, source), payload)
+
+    def test_structure_group_audit_allows_formula_free_group(self):
+        payloads = []
+        for split, count in (("train", 153), ("calibration", 33), ("internal_test", 33)):
+            for index in range(count):
+                formula_free = split == "calibration" and index == count - 1
+                group = f"{split}:{index}"
+                payloads.append({
+                    "split": split,
+                    "structure_group": group,
+                    "visible_formula_count": 0 if formula_free else 1,
+                    "targets": [] if formula_free else [{
+                        "split": split,
+                        "structure_group": group,
+                    }],
+                })
+        source_counts, target_counts, formula_free = _structure_group_audit(payloads)
+        self.assertEqual(source_counts, {"train": 153, "calibration": 33, "internal_test": 33})
+        self.assertEqual(target_counts, {"train": 153, "calibration": 32, "internal_test": 33})
+        self.assertEqual(formula_free["calibration"], ["calibration:32"])
 
     def test_corpus_builder_runs_directly_outside_repository(self):
         script = Path(__file__).resolve().parents[1] / "scripts/build_semantic_compatibility_corpus.py"

@@ -110,6 +110,7 @@ def _shard_name(workbook_id: str) -> str:
 def _validate_shard(path: Path, source: Mapping[str, object]) -> dict[str, object]:
     payload = json.loads(path.read_text(encoding="ascii"))
     targets = payload.get("targets")
+    visible_formula_count = payload.get("visible_formula_count")
     if (
         payload.get("protocol") != PROTOCOL
         or payload.get("workbook_id") != source["workbook_id"]
@@ -118,7 +119,9 @@ def _validate_shard(path: Path, source: Mapping[str, object]) -> dict[str, objec
         or payload.get("split") != source["split"]
         or not isinstance(targets, list)
         or payload.get("selected_targets") != len(targets)
-        or not 0 <= len(targets) <= MAX_TARGETS_PER_WORKBOOK
+        or not isinstance(visible_formula_count, int)
+        or visible_formula_count < 0
+        or len(targets) != min(visible_formula_count, MAX_TARGETS_PER_WORKBOOK)
         or payload.get("raw_cell_text_persisted") is not False
         or payload.get("raw_numeric_values_persisted") is not False
         or payload.get("raw_formula_strings_persisted") is not False
@@ -128,6 +131,9 @@ def _validate_shard(path: Path, source: Mapping[str, object]) -> dict[str, objec
     for target in targets:
         if (
             not str(target.get("target_id", "")).startswith("semantic-target:")
+            or target.get("workbook_id") != source["workbook_id"]
+            or target.get("structure_group") != source["structure_group"]
+            or target.get("split") != source["split"]
             or not isinstance(target.get("role"), str)
             or hashlib.sha256(str(target["role"]).encode("utf-8")).hexdigest()
             != target.get("role_sha256")
@@ -138,6 +144,34 @@ def _validate_shard(path: Path, source: Mapping[str, object]) -> dict[str, objec
         ):
             raise ValueError(f"semantic target is invalid: {path.name}")
     return payload
+
+
+def _structure_group_audit(
+    payloads: Sequence[Mapping[str, object]],
+) -> tuple[dict[str, int], dict[str, int], dict[str, list[str]]]:
+    source_groups: dict[str, set[str]] = defaultdict(set)
+    applicable_groups: dict[str, set[str]] = defaultdict(set)
+    target_groups: dict[str, set[str]] = defaultdict(set)
+    for payload in payloads:
+        split = str(payload["split"])
+        group = str(payload["structure_group"])
+        source_groups[split].add(group)
+        if int(payload["visible_formula_count"]) > 0:
+            applicable_groups[split].add(group)
+        for target in payload["targets"]:  # type: ignore[union-attr]
+            target_groups[str(target["split"])].add(str(target["structure_group"]))
+
+    source_counts = {split: len(source_groups[split]) for split in EXPECTED_GROUPS}
+    target_counts = {split: len(target_groups[split]) for split in EXPECTED_GROUPS}
+    if source_counts != EXPECTED_GROUPS:
+        raise ValueError(f"semantic corpus lost source structure groups: {source_counts}")
+    if any(target_groups[split] != applicable_groups[split] for split in EXPECTED_GROUPS):
+        raise ValueError(f"semantic corpus lost formula-bearing structure groups: {target_counts}")
+    formula_free = {
+        split: sorted(source_groups[split] - applicable_groups[split])
+        for split in EXPECTED_GROUPS
+    }
+    return source_counts, target_counts, formula_free
 
 
 def build(
@@ -216,12 +250,7 @@ def build(
     if len({str(target["target_id"]) for target in targets}) != len(targets):
         raise ValueError("semantic target IDs are not unique")
     split_counts = Counter(str(target["split"]) for target in targets)
-    split_groups: dict[str, set[str]] = defaultdict(set)
-    for target in targets:
-        split_groups[str(target["split"])].add(str(target["structure_group"]))
-    observed_groups = {split: len(split_groups[split]) for split in EXPECTED_GROUPS}
-    if observed_groups != EXPECTED_GROUPS:
-        raise ValueError(f"semantic corpus lost structure groups: {observed_groups}")
+    source_groups, target_groups, formula_free_groups = _structure_group_audit(payloads)
 
     train_roles = [str(target["role"]) for target in targets if target["split"] == "train"]
     vocabulary = FormulaVocabulary.build(train_roles)
@@ -244,7 +273,9 @@ def build(
         "complete": True,
         "selected_targets": len(targets),
         "split_targets": dict(sorted(split_counts.items())),
-        "split_structure_groups": observed_groups,
+        "source_split_structure_groups": source_groups,
+        "split_structure_groups": target_groups,
+        "formula_free_structure_groups": formula_free_groups,
         "workbooks_with_targets": sum(bool(payload["targets"]) for payload in payloads),
         "fallback_roles": sum(int(payload["fallback_roles"]) for payload in payloads),
         "local_candidate_count_distribution": dict(sorted(Counter(
