@@ -1,4 +1,7 @@
+import subprocess
+import sys
 import unittest
+from pathlib import Path
 
 import torch
 
@@ -84,6 +87,20 @@ class SemanticCompatibilityHeadTests(unittest.TestCase):
         rows, lengths = pad_token_ids(((1, 2), (3,)))
         self.assertEqual(rows, [[1, 2], [3, 0]])
         self.assertEqual(lengths, [2, 1])
+
+
+class SemanticCorpusEntrypointTests(unittest.TestCase):
+    def test_corpus_builder_runs_directly_outside_repository(self):
+        script = Path(__file__).resolve().parents[1] / "scripts/build_semantic_compatibility_corpus.py"
+        completed = subprocess.run(
+            (sys.executable, str(script), "--help"),
+            cwd="/tmp",
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn("--workers", completed.stdout)
 
 
 if __name__ == "__main__":
