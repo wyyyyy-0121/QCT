@@ -100,6 +100,60 @@ class SemanticCompatibilityHead(nn.Module):
             (log_probabilities * positives).sum(dim=1) / positive_counts
         ).mean()
 
+    def candidate_logits(
+        self,
+        context_states: Tensor,
+        token_ids: Tensor,
+        lengths: Tensor,
+        candidate_mask: Tensor,
+    ) -> Tensor:
+        if (
+            token_ids.ndim != 3
+            or lengths.ndim != 2
+            or candidate_mask.ndim != 2
+            or token_ids.shape[:2] != lengths.shape
+            or lengths.shape != candidate_mask.shape
+            or context_states.size(0) != token_ids.size(0)
+            or not bool(candidate_mask.any(dim=1).all())
+        ):
+            raise ValueError("formula candidate batch shape differs")
+        batch_size, candidate_count, sequence_length = token_ids.shape
+        formulas = self.encode_formulas(
+            token_ids.reshape(batch_size * candidate_count, sequence_length),
+            lengths.reshape(batch_size * candidate_count),
+        ).reshape(batch_size, candidate_count, -1)
+        contexts = self.encode_context(context_states)
+        logits = torch.einsum("bd,bcd->bc", contexts, formulas) / self.temperature
+        return logits.masked_fill(~candidate_mask, float("-inf"))
+
+    def candidate_loss(
+        self,
+        context_states: Tensor,
+        token_ids: Tensor,
+        lengths: Tensor,
+        candidate_mask: Tensor,
+        gold_indices: Tensor,
+    ) -> Tensor:
+        logits = self.candidate_logits(
+            context_states,
+            token_ids,
+            lengths,
+            candidate_mask,
+        )
+        if gold_indices.ndim != 1 or gold_indices.size(0) != logits.size(0):
+            raise ValueError("formula candidate labels differ")
+        rows = torch.arange(logits.size(0), device=logits.device)
+        if (
+            bool((gold_indices < 0).any())
+            or bool((gold_indices >= logits.size(1)).any())
+            or not bool(candidate_mask[rows, gold_indices].all())
+        ):
+            raise ValueError("formula candidate gold index is invalid")
+        eligible = candidate_mask.sum(dim=1) > 1
+        if not bool(eligible.any()):
+            return logits[eligible].sum()
+        return F.cross_entropy(logits[eligible], gold_indices[eligible])
+
 
 @torch.no_grad()
 def frozen_context_states(runtime: FCRLRuntime, batch: FCRLTensorBatch) -> Tensor:

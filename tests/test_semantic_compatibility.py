@@ -28,6 +28,12 @@ from scripts.extract_semantic_compatibility_embeddings import (
     _resolve_target_key,
     _validate_embedding_payload,
 )
+from scripts.train_semantic_compatibility import (
+    EvaluationRow,
+    _candidate_roles,
+    evaluate_gates,
+    group_bootstrap_interval,
+)
 
 
 class SemanticFormulaRoleTests(unittest.TestCase):
@@ -101,6 +107,26 @@ class SemanticCompatibilityHeadTests(unittest.TestCase):
         rows, lengths = pad_token_ids(((1, 2), (3,)))
         self.assertEqual(rows, [[1, 2], [3, 0]])
         self.assertEqual(lengths, [2, 1])
+
+    def test_candidate_loss_masks_padding_and_has_gradients(self):
+        head = SemanticCompatibilityHead(32, context_size=12, output_size=8)
+        context = torch.randn(2, 12)
+        token_ids = torch.tensor([
+            [[2, 4, 3], [2, 5, 3], [2, 4, 3]],
+            [[2, 6, 3], [2, 7, 3], [2, 8, 3]],
+        ])
+        lengths = torch.full((2, 3), 3)
+        mask = torch.tensor([[True, True, False], [True, True, True]])
+        labels = torch.tensor([0, 2])
+        logits = head.candidate_logits(context, token_ids, lengths, mask)
+        self.assertTrue(torch.isneginf(logits[0, 2]))
+        loss = head.candidate_loss(context, token_ids, lengths, mask, labels)
+        self.assertTrue(torch.isfinite(loss))
+        loss.backward()
+        self.assertTrue(all(
+            parameter.grad is not None and torch.isfinite(parameter.grad).all()
+            for parameter in head.parameters()
+        ))
 
 
 class SemanticCorpusEntrypointTests(unittest.TestCase):
@@ -198,6 +224,52 @@ class SemanticEmbeddingTests(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertIn("--resume", completed.stdout)
+
+
+class SemanticTrainingTests(unittest.TestCase):
+    def test_candidate_order_does_not_place_gold_first(self):
+        roles, gold_index = _candidate_roles("Z", ("A", "Y"))
+        self.assertEqual(roles, ("A", "Y", "Z"))
+        self.assertEqual(gold_index, 2)
+
+    def test_group_bootstrap_is_reproducible(self):
+        rows = [
+            EvaluationRow("g1", True, True, False, 2, False, False),
+            EvaluationRow("g1", True, True, True, 3, False, False),
+            EvaluationRow("g2", False, False, False, 2, True, True),
+            EvaluationRow("g2", True, True, False, 4, True, True),
+        ]
+        first = group_bootstrap_interval(rows, samples=200, seed=7)
+        second = group_bootstrap_interval(rows, samples=200, seed=7)
+        self.assertEqual(first, second)
+
+    def test_internal_gate_requires_positive_bootstrap_bound(self):
+        metrics = {
+            "eligible_hard_negative_cases": 1200,
+            "candidate_accuracy": 0.70,
+            "train_frequency_accuracy": 0.60,
+            "nearest_local_alternative_accuracy": 0.0,
+            "random_expected_accuracy": 0.25,
+            "accuracy_delta_over_train_frequency": 0.10,
+            "group_macro_delta_over_train_frequency": 0.08,
+            "group_bootstrap_delta_95ci": [-0.01, 0.20],
+        }
+        gates = evaluate_gates(metrics, require_bootstrap=True)
+        self.assertFalse(gates["group_bootstrap_delta_lower_bound_above_zero"])
+        metrics["group_bootstrap_delta_95ci"] = [0.01, 0.20]
+        self.assertTrue(all(evaluate_gates(metrics, require_bootstrap=True).values()))
+
+    def test_training_script_runs_directly_outside_repository(self):
+        script = Path(__file__).resolve().parents[1] / "scripts/train_semantic_compatibility.py"
+        completed = subprocess.run(
+            (sys.executable, str(script), "--help"),
+            cwd="/tmp",
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertIn("--embedding-receipt", completed.stdout)
 
 
 if __name__ == "__main__":
