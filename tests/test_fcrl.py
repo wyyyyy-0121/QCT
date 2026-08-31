@@ -2,6 +2,7 @@ import unittest
 
 from formulaguard.fcrl import (
     FCRLAdapterError,
+    build_masked_context_input,
     build_table_input,
     formula_prefix_key,
     formula_to_prefix,
@@ -78,6 +79,27 @@ class FCRLTableAdapterTests(unittest.TestCase):
         self.assertEqual(table.top_positions[1], (-1, -1, -1, 1))
         self.assertEqual(table.left_positions[0], (-1, -1, -1, 0))
         self.assertEqual(table.left_positions[-1], (-1, -1, -1, 3))
+
+    def test_masked_context_does_not_parse_or_follow_target_formula(self):
+        first = build_masked_context_input(simple_workbook("=MEDIAN(Z1:Z9)", 24), ("Sheet", "B4"))
+        second = build_masked_context_input(simple_workbook("=1+2", 999), ("Sheet", "B4"))
+        self.assertEqual(first.encoder_material_hash(), second.encoder_material_hash())
+        self.assertEqual(first.table_range, second.table_range)
+        self.assertEqual(first.formula_prefix.tokens, ("B4",))
+        self.assertEqual(first.string_matrix[3][1], "")
+
+    def test_masked_context_bounds_target_position_and_shape(self):
+        cells = {
+            ("Sheet", f"{column}{row}"): row
+            for column in ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L")
+            for row in range(1, 13)
+        }
+        workbook = WorkbookModel.from_cells(cells, {("Sheet", "L12"): "=A1"})
+        table = build_masked_context_input(workbook, ("Sheet", "L12"))
+        self.assertLessEqual(table.shape[0], 10)
+        self.assertLessEqual(table.shape[1], 10)
+        self.assertLessEqual(table.target_row, 5)
+        self.assertLessEqual(table.target_column, 5)
 
 
 class FCRLPeerSupportTests(unittest.TestCase):

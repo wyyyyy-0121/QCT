@@ -29,6 +29,7 @@ from .workbook import CellKey, WorkbookModel
 FCRL_PROTOCOL = "formulaguard_fcrl_adapter_v1"
 MAX_TABLE_DIMENSION = 256
 CONTEXT_DIMENSION = 32
+SEMANTIC_CONTEXT_DIMENSION = 10
 MAX_INPUT_TOKENS = 512
 MAX_CELL_TOKENS = 8
 MAX_FORMULA_TOKENS = 64
@@ -355,6 +356,87 @@ def build_table_input(model: WorkbookModel, target: CellKey) -> FCRLTableInput:
         formula_prefix=prefix,
         target_row=target_address.row - crop.min_row,
         target_column=target_address.col - crop.min_col,
+    )
+
+
+def build_masked_context_input(model: WorkbookModel, target: CellKey) -> FCRLTableInput:
+    """Build a target-formula-independent table input for semantic compatibility.
+
+    Unlike ``build_table_input``, this adapter never parses the observed target
+    formula and does not expand the crop around its references.  The fixed dummy
+    prefix is used only to make the official ForTaP tokenizer emit the two target
+    marker tokens; it is not part of the encoder material.
+    """
+
+    if target not in model.formulas:
+        raise FCRLAdapterError("target_not_formula")
+    component = component_bounds(model, target)
+    address = parse_address(target[1])
+
+    # At most five rows/columns precede the target.  Even when every preceding
+    # cell reaches MAX_CELL_TOKENS, the two target markers remain before the
+    # official 512-token encoder limit.
+    before_rows = min(
+        SEMANTIC_CONTEXT_DIMENSION // 2,
+        address.row - component.min_row,
+    )
+    after_rows = min(
+        SEMANTIC_CONTEXT_DIMENSION - before_rows - 1,
+        component.max_row - address.row,
+    )
+    before_cols = min(
+        SEMANTIC_CONTEXT_DIMENSION // 2,
+        address.col - component.min_col,
+    )
+    after_cols = min(
+        SEMANTIC_CONTEXT_DIMENSION - before_cols - 1,
+        component.max_col - address.col,
+    )
+    min_row, max_row = address.row - before_rows, address.row + after_rows
+    min_col, max_col = address.col - before_cols, address.col + after_cols
+    crop = ComponentBounds(min_row, max_row, min_col, max_col)
+
+    strings: list[tuple[str, ...]] = []
+    formats: list[tuple[tuple[float, ...], ...]] = []
+    for row in range(crop.min_row, crop.max_row + 1):
+        string_row: list[str] = []
+        format_row: list[tuple[float, ...]] = []
+        for col in range(crop.min_col, crop.max_col + 1):
+            key = (target[0], f"{num_to_col(col)}{row}")
+            string_row.append("" if key == target else _cell_string(model.cells.get(key)))
+            format_row.append(_format_vector(model, key))
+        strings.append(tuple(string_row))
+        formats.append(tuple(format_row))
+
+    row_count = crop.max_row - crop.min_row + 1
+    column_count = crop.max_col - crop.min_col + 1
+    top_positions = tuple(
+        (-1, -1, -1, col)
+        for _row in range(row_count)
+        for col in range(column_count)
+    )
+    left_positions = tuple(
+        (-1, -1, -1, row)
+        for row in range(row_count)
+        for _col in range(column_count)
+    )
+    table_range = (
+        f"{num_to_col(crop.min_col)}{crop.min_row}:"
+        f"{num_to_col(crop.max_col)}{crop.max_row}"
+    )
+    dummy_prefix = FormulaPrefix((target[1],), ("CELL",), (target[1],))
+    return FCRLTableInput(
+        target=target,
+        table_range=table_range,
+        string_matrix=tuple(strings),
+        format_matrix=tuple(formats),
+        top_positions=top_positions,
+        left_positions=left_positions,
+        header_rows=int(crop.min_row == component.min_row),
+        header_columns=int(crop.min_col == component.min_col),
+        formula_prefix=dummy_prefix,
+        target_row=address.row - crop.min_row,
+        target_column=address.col - crop.min_col,
     )
 
 
