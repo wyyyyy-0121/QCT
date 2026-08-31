@@ -4,13 +4,17 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest import mock
 
 import torch
 
 from formulaguard.semantic_compatibility import FormulaVocabulary
+from scripts import extract_semantic_public_scores as public_scores
 from scripts.extract_semantic_public_scores import (
     PROTOCOL,
     _candidate_tensors,
+    _process_profile,
     _split_cell_key,
     _validate_score_shard,
 )
@@ -34,6 +38,7 @@ class SemanticPublicScoreTests(unittest.TestCase):
             **profile,
             "v4_scope_cells": 1,
             "scored_cells": 1,
+            "skipped_invisible": 0,
             "skipped_without_alternatives": 0,
             "scores": [row],
             "label_inputs": [],
@@ -90,6 +95,21 @@ class SemanticPublicScoreTests(unittest.TestCase):
         payload["skipped_without_alternatives"] = 1
         with self.assertRaisesRegex(ValueError, "shard is invalid"):
             _validate_score_shard(payload, profile, ("S!A1",))
+
+    def test_invisible_v4_formula_is_counted_without_context_encoding(self):
+        model = SimpleNamespace(
+            formulas={("S", "A1"): "=1"},
+            is_visible=lambda _key: False,
+        )
+        profile = {"unit_id": "u", "workbook_sha256": "a" * 64, "path": "unused"}
+        with (
+            mock.patch.object(public_scores, "_TOKENIZER_RUNTIME", object()),
+            mock.patch.object(public_scores.WorkbookModel, "from_xlsx", return_value=model),
+        ):
+            result = _process_profile(profile, ("S!A1",))
+        self.assertEqual(result["skipped_invisible"], 1)
+        self.assertEqual(result["skipped_without_alternatives"], 0)
+        self.assertEqual(result["batches"], [])
 
     def test_script_runs_directly_outside_repository(self):
         script = Path(__file__).resolve().parents[1] / "scripts/extract_semantic_public_scores.py"

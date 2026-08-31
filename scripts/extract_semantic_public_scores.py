@@ -52,7 +52,7 @@ from scripts.train_semantic_compatibility import (
 )
 from scripts.train_semantic_compatibility import PROTOCOL as TRAINING_PROTOCOL
 
-PROTOCOL = "formulaguard_semantic_public_scores_v1"
+PROTOCOL = "formulaguard_semantic_public_scores_v2"
 MAX_WORKERS = 24
 GPU_BATCH_SIZE = 16
 V4_SCOPE = 100
@@ -60,7 +60,7 @@ DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/observation_profiles.csv"
 DEFAULT_V4 = ROOT / "results/model_discovery_v4_baseline"
 DEFAULT_TRAINING_RECEIPT = ROOT / "results/semantic_compatibility_training_v2/receipt.json"
 DEFAULT_SELECTED_MODEL = ROOT / "results/semantic_compatibility_training_v2/selected_model.pt"
-DEFAULT_OUTPUT = ROOT / "results/semantic_public_scores_v1"
+DEFAULT_OUTPUT = ROOT / "results/semantic_public_scores_v2"
 
 _TOKENIZER_RUNTIME: FCRLTokenizerRuntime | None = None
 
@@ -147,11 +147,18 @@ def _process_profile(
     tables = []
     records: list[dict[str, object]] = []
     batches: list[tuple[tuple[dict[str, object], ...], FCRLTensorBatch]] = []
+    skipped_invisible = 0
     skipped_without_alternatives = 0
     for rank, cell in enumerate(v4_cells, 1):
         key = _split_cell_key(cell)
-        if key not in model.formulas or not model.is_visible(key):
-            raise ValueError("frozen V4 candidate is no longer a visible formula")
+        if key not in model.formulas:
+            raise ValueError(
+                f"frozen V4 candidate is no longer a formula: "
+                f"{profile['unit_id']} rank={rank} cell={cell}"
+            )
+        if not model.is_visible(key):
+            skipped_invisible += 1
+            continue
         observed_role = canonical_formula_role(model.formulas[key], key[1], key[0])
         alternatives = semantic_candidate_roles(model, key)
         if not alternatives:
@@ -177,6 +184,7 @@ def _process_profile(
         "unit_id": profile["unit_id"],
         "workbook_sha256": profile["workbook_sha256"],
         "v4_scope_cells": len(v4_cells),
+        "skipped_invisible": skipped_invisible,
         "skipped_without_alternatives": skipped_without_alternatives,
         "batches": batches,
     }
@@ -227,6 +235,7 @@ def _validate_score_shard(
         "workbook_sha256",
         "v4_scope_cells",
         "scored_cells",
+        "skipped_invisible",
         "skipped_without_alternatives",
         "scores",
         "label_inputs",
@@ -247,10 +256,15 @@ def _validate_score_shard(
         or not isinstance(payload.get("scored_cells"), int)
         or isinstance(payload.get("scored_cells"), bool)
         or payload.get("scored_cells") != len(scores)
+        or not isinstance(payload.get("skipped_invisible"), int)
+        or isinstance(payload.get("skipped_invisible"), bool)
+        or int(payload["skipped_invisible"]) < 0
         or not isinstance(payload.get("skipped_without_alternatives"), int)
         or isinstance(payload.get("skipped_without_alternatives"), bool)
         or int(payload["skipped_without_alternatives"]) < 0
-        or len(scores) + int(payload["skipped_without_alternatives"])
+        or len(scores)
+        + int(payload["skipped_invisible"])
+        + int(payload["skipped_without_alternatives"])
         != len(expected_v4_cells)
     ):
         raise ValueError("semantic public score shard is invalid")
@@ -469,6 +483,7 @@ def extract(
                     "workbook_sha256": result["workbook_sha256"],
                     "v4_scope_cells": result["v4_scope_cells"],
                     "scored_cells": len(score_rows),
+                    "skipped_invisible": result["skipped_invisible"],
                     "skipped_without_alternatives": result["skipped_without_alternatives"],
                     "scores": score_rows,
                     "label_inputs": [],
@@ -499,6 +514,9 @@ def extract(
         "workbooks": len(payloads),
         "v4_scope_cells": sum(int(payload["v4_scope_cells"]) for payload in payloads),
         "scored_cells": sum(int(payload["scored_cells"]) for payload in payloads),
+        "skipped_invisible": sum(
+            int(payload["skipped_invisible"]) for payload in payloads
+        ),
         "skipped_without_alternatives": sum(
             int(payload["skipped_without_alternatives"]) for payload in payloads
         ),
