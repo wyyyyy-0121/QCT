@@ -1,0 +1,237 @@
+{
+  "protocol": "formulaguard_v4_peer_evidence_allocator_exploratory_v1",
+  "complete": true,
+  "source_lock_git_commit": "f245ae5396953077f3ba70cb0b9fdf68ace0af7d",
+  "model": {
+    "version": "v4-peer-evidence-allocator-exploratory-v1",
+    "architecture": "evidence_dominance_v4_peer_review_budget_allocator",
+    "review_budget": 5,
+    "default_v4_prefix": 4,
+    "minimum_v4_prefix": 3,
+    "supported_peer_tier": 3,
+    "weak_v4_statuses": [
+      "no_candidate",
+      "not_intervened",
+      "pattern_only"
+    ],
+    "learned_weights": 0,
+    "new_numeric_thresholds": 0,
+    "formal_v5_authorized": false
+  },
+  "parameter_selection_disclosure": {
+    "role": "exploratory_public_development",
+    "allocation_principle": "peer_second_slot_requires_discrete_evidence_dominance_over_v4_rank_four",
+    "observed_labels_used_for_architecture_selection": true,
+    "held_out_public_revisions_used_for_selection": false
+  },
+  "inputs": {
+    "events_for_scoring_only": {
+      "path": "results/model_discovery_gate2_final_v3/event_scores.jsonl",
+      "sha256": "c68e2436957a83f6e8e80e6de6c5a3d45ca35b71e162ebc928275352ba90dd34"
+    },
+    "v4": {
+      "path": "results/model_discovery_v4_baseline",
+      "combined_shards_sha256": "b6ad4b46058e7c5b966bd8faa4b790f52c33a87fa03631fa744fe4a1df28d1f6"
+    },
+    "peer_signals": {
+      "path": "results/model_discovery_signal_audit_observed",
+      "combined_shards_sha256": "17fab17b109376e22d339a25d3861aa8c72e5c05a2c410cceab1845938a93890",
+      "label_inputs": []
+    }
+  },
+  "counts": {
+    "units": 196,
+    "events": 220,
+    "error_events": 190,
+    "changed_units": 109,
+    "allocation_reasons": {
+      "peer_top1_outside_v4_top5": 72,
+      "preserve_v4": 87,
+      "evidence_supported_fallback": 14,
+      "supported_second_peer_dominates_weak_v4_fourth": 23
+    },
+    "v4_prefix_allocations": {
+      "4": 173,
+      "3": 23
+    }
+  },
+  "summary": {
+    "overall": {
+      "events": 190,
+      "structure_groups": 137,
+      "v4_top5": 0.5890510948905109,
+      "candidate_top5": 0.7558394160583941,
+      "top5_delta_pp": 16.67883211678832,
+      "v4_mrr": 0.39606661465135806,
+      "candidate_mrr": 0.41634604539416675,
+      "mrr_delta": 0.02027943074280869,
+      "recovered_events": 33,
+      "lost_events": 1,
+      "v4_miss_recovery_rate": 0.4125,
+      "v4_hit_loss_rate": 0.00909090909090909
+    },
+    "by_cohort": {
+      "enron": {
+        "events": 30,
+        "structure_groups": 25,
+        "v4_top5": 0.52,
+        "candidate_top5": 0.64,
+        "top5_delta_pp": 12.0,
+        "v4_mrr": 0.4006004242892056,
+        "candidate_mrr": 0.41647002816541323,
+        "mrr_delta": 0.015869603876207616,
+        "recovered_events": 3,
+        "lost_events": 0
+      },
+      "historical_100": {
+        "events": 100,
+        "structure_groups": 95,
+        "v4_top5": 0.6210526315789474,
+        "candidate_top5": 0.8105263157894737,
+        "top5_delta_pp": 18.947368421052623,
+        "v4_mrr": 0.3897437590087324,
+        "candidate_mrr": 0.41197509300253166,
+        "mrr_delta": 0.02223133399379923,
+        "recovered_events": 21,
+        "lost_events": 0
+      },
+      "public:info1": {
+        "events": 2,
+        "structure_groups": 2,
+        "v4_top5": 0.0,
+        "candidate_top5": 0.0,
+        "top5_delta_pp": 0.0,
+        "v4_mrr": 0.04339677047289504,
+        "candidate_mrr": 0.04018567639257295,
+        "mrr_delta": -0.003211094080322087,
+        "recovered_events": 0,
+        "lost_events": 0
+      },
+      "public:integer_corpus": {
+        "events": 29,
+        "structure_groups": 9,
+        "v4_top5": 0.4166666666666667,
+        "candidate_top5": 0.5277777777777778,
+        "top5_delta_pp": 11.11111111111111,
+        "v4_mrr": 0.35998369826875926,
+        "candidate_mrr": 0.3764163961038961,
+        "mrr_delta": 0.016432697835136845,
+        "recovered_events": 4,
+        "lost_events": 0
+      },
+      "public:modified_euses": {
+        "events": 29,
+        "structure_groups": 6,
+        "v4_top5": 0.8249999999999998,
+        "candidate_top5": 0.9666666666666667,
+        "top5_delta_pp": 14.166666666666682,
+        "v4_mrr": 0.6489686114686114,
+        "candidate_mrr": 0.6703174603174603,
+        "mrr_delta": 0.02134884884884891,
+        "recovered_events": 5,
+        "lost_events": 1
+      }
+    },
+    "by_structure_fold": {
+      "0": {
+        "events": 27,
+        "structure_groups": 26,
+        "v4_top5": 0.7884615384615384,
+        "candidate_top5": 0.9615384615384616,
+        "top5_delta_pp": 17.307692307692314,
+        "v4_mrr": 0.5394206487956488,
+        "candidate_mrr": 0.5610042735042734,
+        "mrr_delta": 0.021583624708624627,
+        "recovered_events": 5,
+        "lost_events": 0
+      },
+      "1": {
+        "events": 57,
+        "structure_groups": 32,
+        "v4_top5": 0.5734375,
+        "candidate_top5": 0.75,
+        "top5_delta_pp": 17.656249999999996,
+        "v4_mrr": 0.37599470519483086,
+        "candidate_mrr": 0.3959619501209575,
+        "mrr_delta": 0.019967244926126615,
+        "recovered_events": 8,
+        "lost_events": 0
+      },
+      "2": {
+        "events": 40,
+        "structure_groups": 25,
+        "v4_top5": 0.634,
+        "candidate_top5": 0.8420000000000001,
+        "top5_delta_pp": 20.800000000000008,
+        "v4_mrr": 0.46060979772032673,
+        "candidate_mrr": 0.49102042279243363,
+        "mrr_delta": 0.0304106250721069,
+        "recovered_events": 10,
+        "lost_events": 1
+      },
+      "3": {
+        "events": 37,
+        "structure_groups": 31,
+        "v4_top5": 0.4838709677419355,
+        "candidate_top5": 0.6612903225806451,
+        "top5_delta_pp": 17.741935483870964,
+        "v4_mrr": 0.30527800999950594,
+        "candidate_mrr": 0.32615120042914797,
+        "mrr_delta": 0.02087319042964203,
+        "recovered_events": 7,
+        "lost_events": 0
+      },
+      "4": {
+        "events": 29,
+        "structure_groups": 23,
+        "v4_top5": 0.4782608695652174,
+        "candidate_top5": 0.5652173913043478,
+        "top5_delta_pp": 8.695652173913038,
+        "v4_mrr": 0.3141519791009427,
+        "candidate_mrr": 0.32157899656107075,
+        "mrr_delta": 0.007427017460128027,
+        "recovered_events": 3,
+        "lost_events": 0
+      }
+    },
+    "structure_group_bootstrap": {
+      "seed": 20260831,
+      "samples": 20000,
+      "groups": 137,
+      "mean_delta_pp": 16.67883211678832,
+      "ci95_delta_pp": [
+        10.948905109489052,
+        22.846715328467152
+      ],
+      "positive_groups": 28,
+      "zero_groups": 109,
+      "negative_groups": 0
+    },
+    "exploratory_gates": {
+      "overall_top5_gain_at_least_5pp": true,
+      "enron_top5_nonnegative": true,
+      "all_main_n2_regressions_within_2pp": true,
+      "v4_miss_recovery_at_least_15pct": true,
+      "v4_hit_loss_at_most_2pct": true,
+      "at_least_four_nonnegative_folds": true,
+      "structure_bootstrap_lower_bound_positive": true,
+      "mrr_nonnegative": true
+    },
+    "all_exploratory_gates_passed": true
+  },
+  "artifacts": {
+    "event_scores": {
+      "path": "results/v4_peer_evidence_allocator_exploratory/event_scores.jsonl",
+      "sha256": "707c51e5cbb0f936505225a5e29fd5db245f3aa0bbe9023ef49d1aec211d010b"
+    },
+    "combined_shards_sha256": "719e1f23ee023dc79e8fdd3624d8a303006c2719c57b2f0fc893a509c88935d4"
+  },
+  "label_boundary": {
+    "prediction_label_inputs": [],
+    "labels_opened_after_all_prediction_shards": true
+  },
+  "protected_data_inputs": [],
+  "project_generated_240_120_used_for_selection": false,
+  "next_confirmation_requires_unseen_task_aligned_data": true,
+  "receipt_sha256": "95e7f1e6dcef69ccbe4cc4b759177763e9be5af1660f2641ddb533386838ca80"
+}
