@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from .localize import LocalizationResult, localize as _legacy_localize
+from .v4_peer_fifth import v4_peer_fifth_scores
 from .v4_static_allocator import v4_static_allocator_scores
 from .v4_static_fifth import v4_static_fifth_scores
 from .v4x import v4_1_scores, v4_3_scores
@@ -76,6 +77,15 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             deep_candidate_limit=deep_candidate_limit,
         )
     if normalized in {
+        "v4_peer_fifth_experimental", "formulaguard_v4_peer_fifth",
+    }:
+        candidate_limit = int(kwargs.pop("candidate_limit", 15))
+        if kwargs:
+            raise TypeError(
+                f"Unsupported V4 peer-fifth arguments: {', '.join(sorted(kwargs))}"
+            )
+        return v4_peer_fifth_scores(model, candidate_limit=candidate_limit)
+    if normalized in {
         "v4_static_allocator_experimental", "formulaguard_v4_static_allocator",
     }:
         candidate_limit = int(kwargs.pop("candidate_limit", 15))
@@ -145,7 +155,8 @@ def diagnose(model: WorkbookModel, method: str = "v5_psl", **kwargs) -> Selectiv
 
 __all__ = [
     "LocalizationResult", "SelectiveDiagnosis", "diagnose", "localize",
-    "v4_1_scores", "v4_3_scores", "v4_static_allocator_scores", "v4_static_fifth_scores",
+    "v4_1_scores", "v4_3_scores", "v4_peer_fifth_scores",
+    "v4_static_allocator_scores", "v4_static_fifth_scores",
     "v5_core_scores", "v5_core_r2_scores",
     "v5_psl_scores", "v6_scores",
 ]
