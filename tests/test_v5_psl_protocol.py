@@ -167,6 +167,38 @@ class V5PSLProtocolTests(unittest.TestCase):
         self.assertEqual(result["counts"]["manual_adjudication_rationales"], 120)
         self.assertEqual(result["error_types"], {name: 40 for name in ERROR_TYPES})
 
+    def test_project_generated_profile_preserves_non_external_claim(self):
+        cases = complete_design()
+        declaration = {
+            "independent_custodian": False,
+            "model_was_run": False,
+            "dataset_origin": "project_generated",
+            "creator_id": "project_generator_v1",
+            "custodian_id": DECLARATION["custodian_id"],
+            "custodian_is_creator": False,
+        }
+        result = audit_design(
+            cases, declaration, declaration_profile="project_generated",
+        )
+        self.assertEqual(
+            result["protocol"], "formulaguard_project_generated_design_audit_v1",
+        )
+
+    def test_project_generated_profile_rejects_external_claim(self):
+        cases = complete_design()
+        declaration = {
+            "independent_custodian": True,
+            "model_was_run": False,
+            "dataset_origin": "project_generated",
+            "creator_id": "project_generator_v1",
+            "custodian_id": DECLARATION["custodian_id"],
+            "custodian_is_creator": False,
+        }
+        with self.assertRaisesRegex(ValueError, "independent_custodian=False"):
+            audit_design(
+                cases, declaration, declaration_profile="project_generated",
+            )
+
     def test_design_rejects_multiple_stewards(self):
         cases = complete_design()
         cases[0]["steward_id"] = "second_steward"

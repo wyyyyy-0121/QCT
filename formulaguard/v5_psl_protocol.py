@@ -221,6 +221,8 @@ def validate_public_manifest(path: Path, root: Path, *, expected_count: int = 36
 def audit_design(
     cases: Sequence[Mapping[str, str]],
     declaration: Mapping[str, object],
+    *,
+    declaration_profile: str = "external_custodian",
 ) -> dict[str, object]:
     identifiers = [row.get("instance_id", "") for row in cases]
     if len(cases) != EXPECTED_COUNTS["total"] or len(set(identifiers)) != len(cases):
@@ -329,42 +331,59 @@ def audit_design(
     if any(not rows[0].get("license_id") for rows in by_template.values()):
         raise ValueError("Every template requires a license or ownership identifier")
 
-    required_declaration = {
-        "independent_custodian": True,
-        "custodian_not_in_model_development": True,
-        "custodian_prepared_or_supervised_all_cases": True,
-        "model_was_run": False,
-        "labels_withheld_until_prediction_lock": True,
-        "permissions_and_anonymization_checked": True,
-        "all_cases_recalculated_without_runtime_errors": True,
-        "case_plan_fixed_before_third_party_predictions": True,
-        "templates_withheld_until_candidate_lock": True,
-        "no_development_template_overlap": True,
-        "custodian_received_no_model_outputs": True,
-        "single_custodian_design_acknowledged": True,
-    }
-    for field, expected in required_declaration.items():
-        if declaration.get(field) is not expected:
-            raise ValueError(f"Declaration requires {field}={expected}")
-    required_declaration_text = (
-        "custodian_id", "calculation_engine", "calculation_engine_version",
-    )
-    if any(not str(declaration.get(field, "")).strip() for field in required_declaration_text):
-        raise ValueError("Declaration must identify the custodian and calculation engine")
+    if declaration_profile == "external_custodian":
+        required_declaration = {
+            "independent_custodian": True,
+            "custodian_not_in_model_development": True,
+            "custodian_prepared_or_supervised_all_cases": True,
+            "model_was_run": False,
+            "labels_withheld_until_prediction_lock": True,
+            "permissions_and_anonymization_checked": True,
+            "all_cases_recalculated_without_runtime_errors": True,
+            "case_plan_fixed_before_third_party_predictions": True,
+            "templates_withheld_until_candidate_lock": True,
+            "no_development_template_overlap": True,
+            "custodian_received_no_model_outputs": True,
+            "single_custodian_design_acknowledged": True,
+        }
+        for field, expected in required_declaration.items():
+            if declaration.get(field) is not expected:
+                raise ValueError(f"Declaration requires {field}={expected}")
+        required_declaration_text = (
+            "custodian_id", "calculation_engine", "calculation_engine_version",
+        )
+        if any(not str(declaration.get(field, "")).strip() for field in required_declaration_text):
+            raise ValueError("Declaration must identify the custodian and calculation engine")
+        for field in (
+            "permission_evidence_sha256",
+            "anonymization_evidence_sha256",
+            "case_plan_sha256",
+            "template_overlap_evidence_sha256",
+        ):
+            if not re.fullmatch(r"[0-9a-f]{64}", str(declaration.get(field, ""))):
+                raise ValueError(f"Declaration requires a valid {field}")
+        protocol = "v5_psl_third_party_design_audit_v2"
+    elif declaration_profile == "project_generated":
+        required_declaration = {
+            "independent_custodian": False,
+            "model_was_run": False,
+            "dataset_origin": "project_generated",
+            "custodian_is_creator": False,
+        }
+        for field, expected in required_declaration.items():
+            if declaration.get(field) != expected:
+                raise ValueError(f"Project-generated declaration requires {field}={expected}")
+        if not str(declaration.get("creator_id", "")).strip():
+            raise ValueError("Project-generated declaration must identify its creator")
+        protocol = "formulaguard_project_generated_design_audit_v1"
+    else:
+        raise ValueError(f"Unknown declaration profile: {declaration_profile}")
     custodian_id = str(declaration["custodian_id"])
     if set(steward_templates) != {custodian_id}:
         raise ValueError("Every case steward_id must equal the declared custodian_id")
-    for field in (
-        "permission_evidence_sha256",
-        "anonymization_evidence_sha256",
-        "case_plan_sha256",
-        "template_overlap_evidence_sha256",
-    ):
-        if not re.fullmatch(r"[0-9a-f]{64}", str(declaration.get(field, ""))):
-            raise ValueError(f"Declaration requires a valid {field}")
 
     return {
-        "protocol": "v5_psl_third_party_design_audit_v2",
+        "protocol": protocol,
         "passed": True,
         "counts": {
             "total": len(cases),
