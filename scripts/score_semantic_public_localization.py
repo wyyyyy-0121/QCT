@@ -35,7 +35,7 @@ from scripts.score_model_discovery_signals import (
     write_immutable,
 )
 
-PROTOCOL = "formulaguard_semantic_public_localization_score_v1"
+PROTOCOL = "formulaguard_semantic_public_localization_score_v2"
 SELECTIVE_PROTOCOL = "formulaguard_semantic_compatibility_selective_v1"
 REVIEW_BUDGET = 5
 BOOTSTRAP_SAMPLES = 10_000
@@ -50,7 +50,7 @@ DEFAULT_SEMANTIC = ROOT / "results/semantic_public_scores_v3"
 DEFAULT_SELECTIVE_RECEIPT = (
     ROOT / "results/semantic_compatibility_selective_v1/receipt.json"
 )
-DEFAULT_OUTPUT = ROOT / "results/semantic_public_localization_v1"
+DEFAULT_OUTPUT = ROOT / "results/semantic_public_localization_v2"
 
 
 def git_commit() -> str:
@@ -211,13 +211,21 @@ def _validate_selective_receipt(
 def semantic_ranking(
     v4_cells: Sequence[str],
     scores: Sequence[Mapping[str, object]],
+    *,
+    score_field: str = "semantic_anomaly_confidence",
 ) -> list[str]:
-    """Return a complete label-free ranking by signed decision confidence."""
+    """Return a complete label-free ranking by a persisted semantic score."""
+
+    if score_field not in {
+        "semantic_anomaly_margin",
+        "semantic_anomaly_confidence",
+    }:
+        raise ValueError("semantic ranking score field is not allowed")
 
     ordered = sorted(
         scores,
         key=lambda row: (
-            -float(row["semantic_anomaly_confidence"]),
+            -float(row[score_field]),
             int(row["v4_rank"]),
             str(row["cell"]),
         ),
@@ -288,14 +296,24 @@ def attach_events(
         scores = payload["scores"]
         if not isinstance(scores, list):
             raise TypeError(f"semantic scores are malformed for {unit_id}")
-        semantic = semantic_ranking(v4, scores)
+        semantic_margin = semantic_ranking(
+            v4,
+            scores,
+            score_field="semantic_anomaly_margin",
+        )
+        semantic_confidence = semantic_ranking(
+            v4,
+            scores,
+            score_field="semantic_anomaly_confidence",
+        )
         actions = action_cells(scores, threshold)
         source_cells = [str(cell) for cell in event["source_cells"]]
         v4_set = set(v4)
         source_formula_cells = [cell for cell in source_cells if cell in v4_set]
         metrics = {
             "v4": _metric(v4, source_formula_cells),
-            "semantic_confidence": _metric(semantic, source_formula_cells),
+            "semantic_margin": _metric(semantic_margin, source_formula_cells),
+            "semantic_confidence": _metric(semantic_confidence, source_formula_cells),
         }
         positions = {cell: rank for rank, cell in enumerate(v4, 1)}
         score_cells = {str(row["cell"]) for row in scores}
@@ -491,13 +509,23 @@ def score(
             "requires an alternative role to win"
         ),
         "review_budget": REVIEW_BUDGET,
-        "ranking_score": "signed top1_minus_runner_up semantic decision confidence",
+        "ranking_scores": {
+            "semantic_margin": "best_alternative_minus_observed_role_score",
+            "semantic_confidence": (
+                "signed top1_minus_runner_up semantic decision confidence"
+            ),
+        },
         "bootstrap_samples": BOOTSTRAP_SAMPLES,
         "bootstrap_seed": BOOTSTRAP_SEED,
         "prediction_label_inputs": [],
         "protected_data_inputs": [],
         "source_model_gate_passed": False,
-        "status": "exploratory_revealed_public_localization_score",
+        "status": "exploratory_revealed_public_localization_audit_correction",
+        "audit_correction": (
+            "v1 reported decision confidence ranking only; v2 also reports the "
+            "originally specified best-alternative anomaly margin on the same "
+            "already revealed development labels"
+        ),
     }
     output.mkdir(parents=True)
     write_json_atomic(output / "metadata.json", metadata)
@@ -530,25 +558,47 @@ def score(
         cohort_controls = [row for row in cohort_rows if row["case_kind"] == "control"]
         by_cohort[cohort] = {
             "v4": metric_summary(cohort_rows, "v4") if cohort_errors else None,
+            "semantic_margin": (
+                metric_summary(cohort_rows, "semantic_margin")
+                if cohort_errors
+                else None
+            ),
             "semantic_confidence": (
                 metric_summary(cohort_rows, "semantic_confidence")
                 if cohort_errors
                 else None
             ),
-            "paired_top5": paired_summary(cohort_rows, "top5") if cohort_errors else None,
-            "paired_mrr": paired_summary(cohort_rows, "mrr") if cohort_errors else None,
+            "paired_margin_top5": (
+                paired_summary(cohort_rows, "top5", method="semantic_margin")
+                if cohort_errors
+                else None
+            ),
+            "paired_margin_mrr": (
+                paired_summary(cohort_rows, "mrr", method="semantic_margin")
+                if cohort_errors
+                else None
+            ),
+            "paired_confidence_top5": (
+                paired_summary(cohort_rows, "top5") if cohort_errors else None
+            ),
+            "paired_confidence_mrr": (
+                paired_summary(cohort_rows, "mrr") if cohort_errors else None
+            ),
             "error_action": action_summary(cohort_errors),
             "control_action": action_summary(cohort_controls),
         }
 
     v4_top5_misses = [row for row in errors if not row["metrics"]["v4"]["top5"]]
     top100_headroom = [row for row in v4_top5_misses if row["source_in_v4_top100"]]
-    semantic_losses = [
-        row
-        for row in errors
-        if row["metrics"]["v4"]["top5"]
-        and not row["metrics"]["semantic_confidence"]["top5"]
-    ]
+    semantic_losses = {
+        method: [
+            row
+            for row in errors
+            if row["metrics"]["v4"]["top5"]
+            and not row["metrics"][method]["top5"]
+        ]
+        for method in ("semantic_margin", "semantic_confidence")
+    }
     receipt = {
         **metadata,
         "complete": True,
@@ -595,9 +645,20 @@ def score(
         },
         "overall": {
             "v4": metric_summary(rows, "v4"),
+            "semantic_margin": metric_summary(rows, "semantic_margin"),
             "semantic_confidence": metric_summary(rows, "semantic_confidence"),
-            "paired_top5": paired_summary(rows, "top5"),
-            "paired_mrr": paired_summary(rows, "mrr"),
+            "paired_margin_top5": paired_summary(
+                rows,
+                "top5",
+                method="semantic_margin",
+            ),
+            "paired_margin_mrr": paired_summary(
+                rows,
+                "mrr",
+                method="semantic_margin",
+            ),
+            "paired_confidence_top5": paired_summary(rows, "top5"),
+            "paired_confidence_mrr": paired_summary(rows, "mrr"),
             "error_action": action_summary(errors),
             "control_action": action_summary(controls),
         },
@@ -605,11 +666,17 @@ def score(
         "v4_top5_headroom": {
             "v4_top5_miss_events": len(v4_top5_misses),
             "source_in_v4_top100_events": len(top100_headroom),
-            "semantic_top5_rescues": sum(
+            "semantic_margin_top5_rescues": sum(
+                row["metrics"]["semantic_margin"]["top5"] for row in top100_headroom
+            ),
+            "semantic_margin_top5_losses": len(semantic_losses["semantic_margin"]),
+            "semantic_confidence_top5_rescues": sum(
                 row["metrics"]["semantic_confidence"]["top5"]
                 for row in top100_headroom
             ),
-            "semantic_top5_losses": len(semantic_losses),
+            "semantic_confidence_top5_losses": len(
+                semantic_losses["semantic_confidence"]
+            ),
         },
         "model_eligibility": {
             "source_semantic_gate_passed": False,

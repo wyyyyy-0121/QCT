@@ -46,13 +46,36 @@ class SemanticPublicLocalizationTests(unittest.TestCase):
     def test_semantic_ranking_uses_signed_confidence_and_retains_inventory(self):
         v4 = ["S!A1", "S!A2", "S!A3", "S!A4"]
         scores = [
-            {"cell": "S!A1", "v4_rank": 1, "semantic_anomaly_confidence": -0.2},
-            {"cell": "S!A3", "v4_rank": 3, "semantic_anomaly_confidence": 0.8},
-            {"cell": "S!A2", "v4_rank": 2, "semantic_anomaly_confidence": 0.8},
+            {
+                "cell": "S!A1",
+                "v4_rank": 1,
+                "semantic_anomaly_margin": 0.9,
+                "semantic_anomaly_confidence": -0.2,
+            },
+            {
+                "cell": "S!A3",
+                "v4_rank": 3,
+                "semantic_anomaly_margin": 0.1,
+                "semantic_anomaly_confidence": 0.8,
+            },
+            {
+                "cell": "S!A2",
+                "v4_rank": 2,
+                "semantic_anomaly_margin": 0.2,
+                "semantic_anomaly_confidence": 0.8,
+            },
         ]
         self.assertEqual(
             semantic_ranking(v4, scores),
             ["S!A2", "S!A3", "S!A1", "S!A4"],
+        )
+        self.assertEqual(
+            semantic_ranking(
+                v4,
+                scores,
+                score_field="semantic_anomaly_margin",
+            ),
+            ["S!A1", "S!A2", "S!A3", "S!A4"],
         )
 
     def test_actions_require_alternative_win_frozen_threshold_and_budget(self):
