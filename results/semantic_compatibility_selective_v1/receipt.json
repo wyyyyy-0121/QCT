@@ -1,0 +1,64 @@
+{
+  "calibration": {
+    "accuracy": 0.8106060606060606,
+    "accuracy_delta_over_train_frequency": 0.5757575757575757,
+    "accuracy_wilson_95ci": [
+      0.7353494963093856,
+      0.8682953755278424
+    ],
+    "actions": 132,
+    "coverage": 0.10161662817551963,
+    "eligible_cases": 1299,
+    "structure_groups": 12,
+    "threshold": 2.985100030899048,
+    "train_frequency_accuracy": 0.23484848484848486
+  },
+  "calibration_gates": {
+    "accuracy_at_least_75pct": true,
+    "at_least_100_actions": true,
+    "at_least_8_structure_groups": true,
+    "coverage_at_least_8pct": true,
+    "delta_over_train_frequency_at_least_20pp": true,
+    "wilson_lower_bound_at_least_70pct": true
+  },
+  "calibration_passed": true,
+  "complete": true,
+  "embedding_receipt_sha256": "53449a1f9325464d67b36bb505e41a825cf68d898c496d27c4d3edbc86a61f52",
+  "embeddings_sha256": "fe4305d6eac09bfe720f4230fa8befc4911341d1d9f7af3487089dc06b0849f1",
+  "fault_label_inputs": [],
+  "git_commit": "54ca346481eba70f88a54fd3780003ade32220d5",
+  "internal_test": {
+    "accuracy": 0.6692913385826772,
+    "accuracy_delta_over_train_frequency": 0.17322834645669294,
+    "accuracy_wilson_95ci": [
+      0.5835547922987626,
+      0.7450872175624043
+    ],
+    "actions": 127,
+    "coverage": 0.10478547854785479,
+    "eligible_cases": 1212,
+    "structure_groups": 14,
+    "threshold": 2.985100030899048,
+    "train_frequency_accuracy": 0.49606299212598426
+  },
+  "internal_test_evaluated": true,
+  "internal_test_gates": {
+    "accuracy_at_least_70pct": false,
+    "at_least_80_actions": true,
+    "at_least_8_structure_groups": true,
+    "coverage_at_least_5pct": true,
+    "delta_over_train_frequency_at_least_10pp": true,
+    "wilson_lower_bound_at_least_60pct": false
+  },
+  "per_target_predictions_persisted": false,
+  "protected_data_inputs": [],
+  "protocol": "formulaguard_semantic_compatibility_selective_v1",
+  "selected_model_sha256": "896594f10a1997248ec46a408131cc5377c4cb70ca0ce5df351799aed55db123",
+  "selective_semantic_passed": false,
+  "target_manifest_sha256": "ee379c0fa2ab82a3d8573b89ce1c9658aa05d3070cd268e2ff9a6ebe463af1d6",
+  "target_receipt_sha256": "7689449e5d2f9a78b5a29e83fef011b8848c546af042543cb419b86a6b40fd93",
+  "threshold_selection": "maximum_calibration_coverage_passing_all_fixed_gates",
+  "training_receipt_sha256": "e46b7fef2c6b61a9fbaf290725f22b27a722ab147bf3320fcb300689643bb85e",
+  "v4_rank_inputs": [],
+  "vocabulary_sha256": "ea094670421a90089597cf773a4246d3f4ff9ce294ec5e5fa47bef59b91dc113"
+}
