@@ -1,0 +1,27 @@
+{
+  "protocol": "v4_static_fifth_project_blind_public_result_v1",
+  "candidate_id": "v4_static_fifth_exploratory_v1",
+  "claim_scope": "project_generated_blind_confirmation",
+  "prediction_lock_sha256": "789189c32e8866eb936583d2f935736ffe049a59e2e38389d5fee2f79fe704bb",
+  "private_summary_sha256": "e18f12ce59240e0ab99050ef66e10fb3d9142821171033ca7101288f9cd3407d",
+  "private_score_receipt_sha256": "2dfdb57175ae715d0bdbafc4ab130f40726dcd300349a151d5230e0d4f29638e",
+  "pre_metric_receiver_failure_sha256": "cf4225f7e32204177b9032951c69111728c14f03c9c25a5f25e3955fc8c14c65",
+  "pre_metric_receiver_failure_reason": "project_generated provenance was initially rejected by the external-custodian origin whitelist",
+  "error_cases": 240,
+  "control_cases": 120,
+  "v4_top5": 1.0,
+  "candidate_top5": 1.0,
+  "top5_delta_pp": 0.0,
+  "mrr_delta": 0.0,
+  "recovered_events": 0,
+  "lost_events": 0,
+  "bootstrap_delta_pp_ci95": [
+    0.0,
+    0.0
+  ],
+  "all_frozen_gates_passed": false,
+  "candidate_promoted": false,
+  "formal_external_validation_claimed": false,
+  "interpretation": "The corpus is saturated at V4 Top-5 and cannot establish comparative improvement.",
+  "post_result_tuning_on_this_corpus_forbidden": true
+}
