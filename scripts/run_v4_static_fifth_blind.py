@@ -139,6 +139,12 @@ def _ranking(cells: Sequence[str]) -> list[dict[str, object]]:
     return [{"rank": rank, "cell": cell} for rank, cell in enumerate(cells, start=1)]
 
 
+def _validate_method_inventory(methods: object, shard_name: str) -> dict[str, object]:
+    if not isinstance(methods, dict) or set(methods) != set(METHODS):
+        raise ValueError(f"prediction method inventory differs: {shard_name}")
+    return methods
+
+
 def predict_workbook(workbook: Path, instance_id: str, workbook_label: str) -> dict[str, object]:
     model = WorkbookModel.from_xlsx(workbook)
     candidate = v4_static_fifth_scores(model, candidate_limit=15)
@@ -195,9 +201,7 @@ def audit_prediction_shard(
     formula_cells = [f"{sheet}!{address}" for sheet, address in model.formula_cells]
     if record.get("formula_count") != len(formula_cells):
         raise ValueError(f"prediction formula count differs: {path.name}")
-    methods = record.get("methods")
-    if not isinstance(methods, dict) or tuple(methods) != METHODS:
-        raise ValueError(f"prediction method inventory differs: {path.name}")
+    methods = _validate_method_inventory(record.get("methods"), path.name)
     expected_versions = {
         "v4_r1": "v4-dev-r1",
         "static_anchor": "formulaguard-static-v1",

@@ -1,13 +1,22 @@
 import unittest
 from pathlib import Path
 
-from scripts.run_v4_static_fifth_blind import score_rows, verify_candidate_lock
+from scripts.run_v4_static_fifth_blind import (
+    METHODS,
+    _validate_method_inventory,
+    score_rows,
+    verify_candidate_lock,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class V4StaticFifthBlindTests(unittest.TestCase):
+    def test_prediction_method_inventory_is_order_independent(self):
+        methods = {name: {} for name in reversed(METHODS)}
+        self.assertEqual(_validate_method_inventory(methods, "test.json"), methods)
+
     def test_frozen_candidate_lock_matches_implementation_and_public_predictions(self):
         payload = verify_candidate_lock(
             ROOT / "research" / "V4_STATIC_FIFTH_CANDIDATE_LOCK.json"
