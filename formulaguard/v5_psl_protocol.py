@@ -322,10 +322,15 @@ def audit_design(
         template_id: rows[0].get("template_origin", "")
         for template_id, rows in by_template.items()
     }.values())
-    allowed_origins = {"steward_owned", "licensed_public"}
+    if declaration_profile == "external_custodian":
+        allowed_origins = {"steward_owned", "licensed_public"}
+    elif declaration_profile == "project_generated":
+        allowed_origins = {"project_generated"}
+    else:
+        raise ValueError(f"Unknown declaration profile: {declaration_profile}")
     if not origins or set(origins) - allowed_origins:
         raise ValueError(
-            "Template provenance must be steward_owned or licensed_public; "
+            f"Template provenance is invalid for {declaration_profile}; "
             f"found {dict(origins)}"
         )
     if any(not rows[0].get("license_id") for rows in by_template.values()):
@@ -376,8 +381,6 @@ def audit_design(
         if not str(declaration.get("creator_id", "")).strip():
             raise ValueError("Project-generated declaration must identify its creator")
         protocol = "formulaguard_project_generated_design_audit_v1"
-    else:
-        raise ValueError(f"Unknown declaration profile: {declaration_profile}")
     custodian_id = str(declaration["custodian_id"])
     if set(steward_templates) != {custodian_id}:
         raise ValueError("Every case steward_id must equal the declared custodian_id")

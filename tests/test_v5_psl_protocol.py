@@ -169,6 +169,8 @@ class V5PSLProtocolTests(unittest.TestCase):
 
     def test_project_generated_profile_preserves_non_external_claim(self):
         cases = complete_design()
+        for case in cases:
+            case["template_origin"] = "project_generated"
         declaration = {
             "independent_custodian": False,
             "model_was_run": False,
@@ -186,6 +188,8 @@ class V5PSLProtocolTests(unittest.TestCase):
 
     def test_project_generated_profile_rejects_external_claim(self):
         cases = complete_design()
+        for case in cases:
+            case["template_origin"] = "project_generated"
         declaration = {
             "independent_custodian": True,
             "model_was_run": False,
