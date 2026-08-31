@@ -37,10 +37,10 @@ from scripts.build_fcrl_u1_corpus import (
 )
 
 
-PROTOCOL = "formulaguard_semantic_compatibility_corpus_v1"
+PROTOCOL = "formulaguard_semantic_compatibility_corpus_v2"
 MAX_TARGETS_PER_WORKBOOK = 32
 MAX_WORKERS = 24
-DEFAULT_OUTPUT = ROOT / "results/semantic_compatibility_corpus_v1"
+DEFAULT_OUTPUT = ROOT / "results/semantic_compatibility_corpus_v2"
 
 
 def git_commit() -> str:

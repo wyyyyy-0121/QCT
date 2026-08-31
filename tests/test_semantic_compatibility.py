@@ -61,7 +61,20 @@ class SemanticFormulaRoleTests(unittest.TestCase):
         self.assertIn(first.token_to_id["<UNK>"], encoded)
 
     def test_role_tokenizer_preserves_relative_reference(self):
-        self.assertIn("SELF!R[-1]C[+0]", role_tokens("FSUM(SELF!R[-1]C[+0])"))
+        tokens = role_tokens("FSUM(SELF!R[-12]C[+3])")
+        self.assertEqual(tokens[:2], ("FSUM", "("))
+        self.assertIn("REF_SELF", tokens)
+        self.assertIn("ROW_REL", tokens)
+        self.assertIn("COL_REL", tokens)
+        self.assertIn("DELTA_NEG", tokens)
+        self.assertIn("DELTA_POS", tokens)
+        self.assertIn("DIGIT_2", tokens)
+        self.assertNotIn("SELF!R[-12]C[+3]", tokens)
+
+    def test_reference_tokens_compose_across_unseen_offsets(self):
+        first = set(role_tokens("FSUM(SELF!R[-12]C[+3])"))
+        second = set(role_tokens("FSUM(SELF!R[-21]C[+8])"))
+        self.assertGreaterEqual(len(first & second), 7)
 
     def test_candidate_roles_translate_axis_peers_to_target(self):
         cells = {

@@ -55,14 +55,14 @@ from scripts.build_semantic_compatibility_corpus import (
 )
 
 
-PROTOCOL = "formulaguard_semantic_compatibility_embeddings_v1"
+PROTOCOL = "formulaguard_semantic_compatibility_embeddings_v2"
 MAX_WORKERS = 24
 GPU_BATCH_SIZE = 16
 CONTEXT_SIZE = 768
-DEFAULT_TARGET_MANIFEST = ROOT / "results/semantic_compatibility_corpus_v1/target_manifest.json"
-DEFAULT_TARGET_RECEIPT = ROOT / "results/semantic_compatibility_corpus_v1/corpus_receipt.json"
+DEFAULT_TARGET_MANIFEST = ROOT / "results/semantic_compatibility_corpus_v2/target_manifest.json"
+DEFAULT_TARGET_RECEIPT = ROOT / "results/semantic_compatibility_corpus_v2/corpus_receipt.json"
 DEFAULT_CHECKPOINT = ROOT / "data/external/model_discovery/raw/fcrl_checkpoints/fortap.bin"
-DEFAULT_OUTPUT = ROOT / "results/semantic_compatibility_embeddings_v1"
+DEFAULT_OUTPUT = ROOT / "results/semantic_compatibility_embeddings_v2"
 
 _TOKENIZER_RUNTIME: FCRLTokenizerRuntime | None = None
 

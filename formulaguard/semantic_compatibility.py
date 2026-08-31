@@ -12,8 +12,8 @@ from .formula import REF_RE, translate_formula
 from .workbook import CellKey, WorkbookModel
 
 
-MODEL_VERSION = "semantic-formula-compatibility-pilot-v1"
-ROLE_PROTOCOL = "formulaguard_semantic_formula_role_v1"
+MODEL_VERSION = "semantic-formula-compatibility-pilot-v2"
+ROLE_PROTOCOL = "formulaguard_semantic_formula_role_v2"
 SPECIAL_TOKENS = ("<PAD>", "<UNK>", "<START>", "<END>")
 TOKEN_RE = re.compile(
     r"(?:SELF|OTHER)!R(?:\[-?\+?\d+\]|\d+)C(?:\[-?\+?\d+\]|\d+)"
@@ -21,6 +21,9 @@ TOKEN_RE = re.compile(
 )
 NUMBER_RE = re.compile(r"(?<![A-Z0-9_.])(?:\d+(?:\.\d*)?|\.\d+)(?:E[+\-]?\d+)?", re.I)
 STRING_RE = re.compile(r'"(?:[^"]|"")*"')
+ROLE_REFERENCE_RE = re.compile(
+    r"^(SELF|OTHER)!R(\[-?\+?\d+\]|\d+)C(\[-?\+?\d+\]|\d+)$"
+)
 
 
 def _fallback_reference(match: re.Match[str], anchor_text: str, current_sheet: str) -> str:
@@ -61,8 +64,23 @@ def canonical_formula_role(formula: str, anchor_text: str, current_sheet: str) -
 
 
 def role_tokens(role: str) -> tuple[str, ...]:
-    tokens = tuple(TOKEN_RE.findall(role.upper()))
-    return tokens or ("<UNK>",)
+    tokens: list[str] = []
+    for token in TOKEN_RE.findall(role.upper()):
+        reference = ROLE_REFERENCE_RE.fullmatch(token)
+        if reference is None:
+            tokens.append(token)
+            continue
+        tokens.append("REF_" + reference.group(1))
+        for axis, coordinate in (("ROW", reference.group(2)), ("COL", reference.group(3))):
+            relative = coordinate.startswith("[")
+            tokens.append(f"{axis}_{'REL' if relative else 'ABS'}")
+            value = int(coordinate.strip("[]"))
+            if relative:
+                tokens.append(
+                    "DELTA_ZERO" if value == 0 else "DELTA_POS" if value > 0 else "DELTA_NEG"
+                )
+            tokens.extend(f"DIGIT_{digit}" for digit in str(abs(value)))
+    return tuple(tokens) or ("<UNK>",)
 
 
 @dataclass(frozen=True)

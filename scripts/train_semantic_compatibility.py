@@ -38,7 +38,7 @@ from scripts.extract_semantic_compatibility_embeddings import (
 )
 
 
-PROTOCOL = "formulaguard_semantic_compatibility_training_v1"
+PROTOCOL = "formulaguard_semantic_compatibility_training_v2"
 SEED = 260831
 BATCH_SIZE = 128
 LEARNING_RATE = 3e-4
@@ -53,12 +53,12 @@ MIN_CANDIDATE_ACCURACY = 0.55
 MIN_ACCURACY_DELTA = 0.03
 MIN_GROUP_MACRO_DELTA = 0.02
 
-DEFAULT_TARGET_MANIFEST = ROOT / "results/semantic_compatibility_corpus_v1/target_manifest.json"
-DEFAULT_TARGET_RECEIPT = ROOT / "results/semantic_compatibility_corpus_v1/corpus_receipt.json"
-DEFAULT_VOCABULARY = ROOT / "results/semantic_compatibility_corpus_v1/vocabulary.json"
-DEFAULT_EMBEDDINGS = ROOT / "results/semantic_compatibility_embeddings_v1/embeddings.pt"
-DEFAULT_EMBEDDING_RECEIPT = ROOT / "results/semantic_compatibility_embeddings_v1/receipt.json"
-DEFAULT_OUTPUT = ROOT / "results/semantic_compatibility_training_v1"
+DEFAULT_TARGET_MANIFEST = ROOT / "results/semantic_compatibility_corpus_v2/target_manifest.json"
+DEFAULT_TARGET_RECEIPT = ROOT / "results/semantic_compatibility_corpus_v2/corpus_receipt.json"
+DEFAULT_VOCABULARY = ROOT / "results/semantic_compatibility_corpus_v2/vocabulary.json"
+DEFAULT_EMBEDDINGS = ROOT / "results/semantic_compatibility_embeddings_v2/embeddings.pt"
+DEFAULT_EMBEDDING_RECEIPT = ROOT / "results/semantic_compatibility_embeddings_v2/receipt.json"
+DEFAULT_OUTPUT = ROOT / "results/semantic_compatibility_training_v2"
 
 
 @dataclass(frozen=True)
