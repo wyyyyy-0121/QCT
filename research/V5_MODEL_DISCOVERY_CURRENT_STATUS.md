@@ -43,7 +43,7 @@
 | --- | --- | --- |
 | Gate 0 数据分组 | 通过 | `results/core_reset_b_phase0/data_audit.json` 已复算 |
 | Gate 0 任务/功效冻结 | 通过 | 任务契约、账本、功效报告和 Gate 0 回执已提交 |
-| Gate 1 文献与基线 | 通过 | 9 张方法卡完成；官方当前 ExceLint-core Linux CLI 已验证 |
+| Gate 1 文献与基线 | 通过 | 9 张方法卡完成；官方当前 ExceLint-core 已在 196/196 个共同公开工作簿上按原生区域契约运行 |
 | Gate 2 原子信号 | 已完成，A/B 不通过 | `results/model_discovery_gate2_final_v3/gate2_receipt.json`；转分支 C |
 | Gate 3 候选开发 | 不适用（分支 C） | 不授权在同一标签上继续调参或增加通道 |
 | CWRP U0-U2 | 已完成，U0 通过、U1/U2 失败 | 低复杂度跨工作簿角色先验已按预注册终止 |
@@ -59,8 +59,10 @@
 当前可以写：V4-R1 是冻结主模型；V5-Core、R2、PSL 和 model-discovery Gate 2 是
 保留的失败/边界结果；RQ-C 量化了历史版本、输出格、失败位和单格约束的附加信息价值。
 无标签四通道在历史 N2 上有提升，但在 Enron 和 Modified EUSES 发生退化，控制行动率
-也不安全。当前不能写：已有正式 V5、已超过 ExceLint 原工具、已证明自然错误普遍泛化、
-或六个公开语料构成六份独立定位验证。
+也不安全。official current ExceLint-core 的共同输入原生区域命中为 44.16%，平均审查
+21.15 格，control 工作簿非空区域率为 72.73%；该指标不是 Top-5，不能伪装成逐格排名。
+当前不能写：已有正式 V5、已在原论文数据和指标上超过 ExceLint、已证明自然错误普遍
+泛化、或六个公开语料构成六份独立定位验证。
 
 CWRP 已按 `research/V5_CROSS_WORKBOOK_ROLE_PRIOR_PLAN.md` 完成并因 U1/U2 失败终止。
 随后预注册的 DRFV 也已因 U0 语料规模/覆盖失败而在训练前终止；SpreadsheetBench 2
@@ -75,5 +77,6 @@ input-only 语料构建后，FCRL 只在 219 个冻结结构组中的 125 组保
 VHRL 随后在 VEnron 资源门通过，但固定三版本代理只覆盖 29 个正结构组，低于 30 组
 门并在训练前停止。V4 残差上限审计证明 peer 候选确实存在明显可恢复空间；但随后
 冻结的 `V4-RRC` 五折均找不到达到 75% 精度并满足控制/V4 保留约束的阈值，D0 按协议
-失败且 D1 不获授权。它进一步把边界定位为“候选可用但责任不可安全识别”。旧试用、
-SpreadsheetBench 2 和保密 240+120 均未访问。
+失败且 D1 不获授权。它进一步把边界定位为“候选可用但责任不可安全识别”。D0 后补充
+基线只完成报告义务，不改变该决定。旧试用、SpreadsheetBench 2 和保密 240+120 均未
+访问。

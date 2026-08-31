@@ -53,8 +53,10 @@
 - Gate 2 fixed selector 仍复现总体增益同时伴随 Enron/Modified EUSES 退化和高损失。
 
 这些结果解释了 oracle 上限为何不能转化为安全模型：候选可用，但对“该工作簿是否应
-替换”缺少可靠信息。V4.2、static anchor 和 ExceLint 的同输入重跑按协议只在 D0
-通过时继续；D0 已失败，未用额外计算包装负结果。
+替换”缺少可靠信息。D0 判定和停止决定提交后，为履行第 9 节的完整基线报告义务，另行
+运行了不参与候选选择的 V4.2、static anchor 和 official current ExceLint 同输入补充
+基线。结果见 `research/V5_V4_RRC_REQUIRED_BASELINES_RESULT.md`；它们不重开 D0，
+也不授权模型修订或访问后续数据。
 
 ## 决定
 
