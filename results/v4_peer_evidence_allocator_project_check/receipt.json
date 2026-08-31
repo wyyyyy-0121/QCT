@@ -1,0 +1,51 @@
+{
+  "protocol": "formulaguard_v4_peer_evidence_allocator_project_safety_receipt_v1",
+  "complete": true,
+  "candidate": {
+    "id": "v4_peer_evidence_allocator_exploratory_v1",
+    "formal_version": null,
+    "candidate_lock_git_commit": "fe860962525aacec6411eeb471fb3313e79e481f",
+    "prediction_commitment_git_commit": "d84eaec025689f114b56be7866f43257572ccf11"
+  },
+  "data_boundary": {
+    "origin": "project_generated",
+    "error_cases": 240,
+    "control_cases": 120,
+    "templates": 30,
+    "protected_labels_in_git": false,
+    "per_case_predictions_in_git": false,
+    "prediction_lock_sha256": "f76ad2b2586a6376402c4a46894874198f78354b47ec3d160b11def9695946ee",
+    "labels_parsed_only_after_git_commitment": true,
+    "post_result_tuning_on_this_corpus_forbidden": true
+  },
+  "aggregate_result": {
+    "review_budget": 5,
+    "v4_top5": 1.0,
+    "candidate_top5": 0.8958333333333334,
+    "top5_delta_pp": -10.416666666666663,
+    "v4_mrr": 0.7622222222222222,
+    "candidate_mrr": 0.7538591269841269,
+    "mrr_delta": -0.008363095238095308,
+    "recoveries": 0,
+    "losses": 25,
+    "template_cluster_bootstrap_delta_pp_ci95": [
+      -12.5,
+      -8.333333333333337
+    ],
+    "by_error_type_delta_pp": {
+      "absolute_reference": 0.0,
+      "copy_offset": 0.0,
+      "function_replacement": 0.0,
+      "operator_replacement": 0.0,
+      "range_boundary": -62.5,
+      "reference_shift": 0.0
+    }
+  },
+  "decision": {
+    "safety_check_passed": false,
+    "comparative_improvement_established": false,
+    "formal_model_promotion_allowed": false,
+    "candidate_rejected": true,
+    "claim_scope": "project_generated_saturated_safety_check_only"
+  }
+}
