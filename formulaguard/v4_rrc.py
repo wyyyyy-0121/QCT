@@ -304,31 +304,56 @@ class Preprocessor:
     medians: tuple[float, ...]
     means: tuple[float, ...]
     scales: tuple[float, ...]
+    continuous_features: tuple[str, ...] = CONTINUOUS_FEATURES
+    binary_features: tuple[str, ...] = BINARY_FEATURES
 
     def transform_one(self, values: Mapping[str, float]) -> np.ndarray:
-        continuous = np.asarray([values[name] for name in CONTINUOUS_FEATURES], dtype=np.float64)
+        continuous = np.asarray(
+            [values[name] for name in self.continuous_features], dtype=np.float64,
+        )
         missing = ~np.isfinite(continuous)
         imputed = np.where(missing, np.asarray(self.medians), continuous)
         standardized = (imputed - np.asarray(self.means)) / np.asarray(self.scales)
-        binary = np.asarray([values[name] for name in BINARY_FEATURES], dtype=np.float64)
+        binary = np.asarray(
+            [values[name] for name in self.binary_features], dtype=np.float64,
+        )
         return np.concatenate((standardized, binary, missing.astype(np.float64)))
 
     def to_dict(self) -> dict[str, object]:
+        model_features = (
+            *self.continuous_features,
+            *self.binary_features,
+            *(f"missing_{name}" for name in self.continuous_features),
+        )
         return {
-            "continuous_features": list(CONTINUOUS_FEATURES),
-            "binary_features": list(BINARY_FEATURES),
-            "model_features": list(MODEL_FEATURES),
+            "continuous_features": list(self.continuous_features),
+            "binary_features": list(self.binary_features),
+            "model_features": list(model_features),
             "medians": list(self.medians),
             "means": list(self.means),
             "scales": list(self.scales),
         }
 
 
-def fit_preprocessor(rows: Sequence[Mapping[str, float]]) -> Preprocessor:
+def fit_preprocessor(
+    rows: Sequence[Mapping[str, float]],
+    *,
+    continuous_features: Sequence[str] = CONTINUOUS_FEATURES,
+    binary_features: Sequence[str] = BINARY_FEATURES,
+) -> Preprocessor:
     if not rows:
         raise ValueError("cannot fit preprocessor without rows")
+    continuous_features = tuple(continuous_features)
+    binary_features = tuple(binary_features)
+    if (
+        not continuous_features
+        or len(continuous_features) != len(set(continuous_features))
+        or len(binary_features) != len(set(binary_features))
+        or set(continuous_features) & set(binary_features)
+    ):
+        raise ValueError("ridge feature names must be unique, disjoint, and include continuous data")
     matrix = np.asarray(
-        [[row[name] for name in CONTINUOUS_FEATURES] for row in rows],
+        [[row[name] for name in continuous_features] for row in rows],
         dtype=np.float64,
     )
     medians = []
@@ -339,7 +364,13 @@ def fit_preprocessor(rows: Sequence[Mapping[str, float]]) -> Preprocessor:
     means = imputed.mean(axis=0)
     scales = imputed.std(axis=0)
     scales[scales == 0.0] = 1.0
-    return Preprocessor(tuple(medians), tuple(means.tolist()), tuple(scales.tolist()))
+    return Preprocessor(
+        tuple(medians),
+        tuple(means.tolist()),
+        tuple(scales.tolist()),
+        continuous_features=continuous_features,
+        binary_features=binary_features,
+    )
 
 
 @dataclass(frozen=True)
@@ -369,10 +400,16 @@ def fit_ridge(
     weights: Sequence[float],
     *,
     ridge_lambda: float = 1.0,
+    continuous_features: Sequence[str] = CONTINUOUS_FEATURES,
+    binary_features: Sequence[str] = BINARY_FEATURES,
 ) -> RidgeModel:
     if not (len(feature_rows) == len(targets) == len(weights)) or not feature_rows:
         raise ValueError("ridge inputs must be nonempty and equally sized")
-    preprocessor = fit_preprocessor(feature_rows)
+    preprocessor = fit_preprocessor(
+        feature_rows,
+        continuous_features=continuous_features,
+        binary_features=binary_features,
+    )
     x = np.vstack([preprocessor.transform_one(row) for row in feature_rows])
     x = np.column_stack((np.ones(len(x), dtype=np.float64), x))
     y = np.asarray(targets, dtype=np.float64)
