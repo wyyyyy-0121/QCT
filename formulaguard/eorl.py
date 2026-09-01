@@ -48,6 +48,34 @@ def _cell_sort(cell: CellKey) -> tuple[str, int, int, str]:
     return cell[0], address.row, address.col, cell[1]
 
 
+def source_formula_descendants(
+    model: WorkbookModel,
+    source_formula_cells: Sequence[CellKey],
+) -> dict[str, object]:
+    """Summarize formula descendants of recorded source formulas."""
+
+    formula_set = set(model.formula_cells)
+    missing = [cell_label(cell) for cell in source_formula_cells if cell not in formula_set]
+    if missing:
+        raise ValueError(f"recorded sources are not formulas: {missing}")
+    graph = model.dependency_graph()
+    by_source: dict[str, list[str]] = {}
+    combined: set[CellKey] = set()
+    for source in source_formula_cells:
+        descendants = graph.descendants(source) & formula_set
+        combined.update(descendants)
+        by_source[cell_label(source)] = [
+            cell_label(cell) for cell in sorted(descendants, key=_cell_sort)
+        ]
+    return {
+        "source_formula_count": len(source_formula_cells),
+        "sources_with_formula_descendants": sum(bool(cells) for cells in by_source.values()),
+        "formula_descendant_count": len(combined),
+        "formula_descendants": [cell_label(cell) for cell in sorted(combined, key=_cell_sort)],
+        "formula_descendants_by_source": by_source,
+    }
+
+
 def select_output_task(
     observed: WorkbookModel,
     reference: WorkbookModel,

@@ -6,6 +6,7 @@ from pathlib import Path
 from formulaguard.eorl import (
     residual,
     select_output_task,
+    source_formula_descendants,
     source_repair_recoverability,
 )
 from formulaguard.workbook import WorkbookModel
@@ -91,6 +92,18 @@ class EorlTests(unittest.TestCase):
     def test_residual_is_scale_normalized(self):
         self.assertEqual(residual(8, 10), 0.2)
         self.assertEqual(residual(0.25, 0.5), 0.25)
+
+    def test_source_formula_descendants_excludes_nonformula_dependents(self):
+        observed, _ = pair()
+        result = source_formula_descendants(observed, [("Model", "C2")])
+        self.assertEqual(result["source_formula_count"], 1)
+        self.assertEqual(result["sources_with_formula_descendants"], 1)
+        self.assertEqual(result["formula_descendants"], ["Model!D1", "Model!E1"])
+
+    def test_source_formula_descendants_rejects_nonformula_source(self):
+        observed, _ = pair()
+        with self.assertRaisesRegex(ValueError, "not formulas"):
+            source_formula_descendants(observed, [("Model", "A1")])
 
     def test_prediction_task_rejects_scoring_label(self):
         task = {
