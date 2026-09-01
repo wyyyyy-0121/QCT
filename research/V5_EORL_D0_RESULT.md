@@ -5,6 +5,7 @@ Protocol: `formulaguard_eorl_d0_v1`
 Preregistration lock: `ab22ec2`  
 Implementation lock and correction: `b31bef1`, `f942b0b`  
 Reproduction receipt: `results/eorl_d0/reproduction_receipt.json`
+Posthoc topology audit: `9a673de`, `results/eorl_d0/topology_followup_receipt.json`
 
 ## Scope
 
@@ -65,6 +66,28 @@ This is evidence that expected-output residual can validate a peer repair when t
 task topology is present. It is not evidence of cross-corpus localization: every
 recoverable error comes from one public corpus and only six structures.
 
+## Posthoc topology boundary
+
+After the preregistered failure was locked, a separate read-only audit removed the
+sink condition and asked the broader question: does any recorded source have any
+formula descendant at all? The audit used the same frozen public manifest, 24 workers,
+and no protected input.
+
+| Public cohort | Error events | With any formula descendant | Without formula descendants |
+| --- | ---: | ---: | ---: |
+| Info1 | 2 | 0 | 2 |
+| Integer corpus | 29 | 0 | 29 |
+| Modified EUSES | 29 | 26 | 3 |
+| **Total** | **60** | **26** | **34** |
+
+The receipt SHA-256 is
+`7cf2025f3de8ec5febe6d9140bd8abd19481b5ec282c02a2a283aa11f0ed6119`.
+This is a posthoc topology diagnosis, not a revised gate or model result. It shows that
+removing only the formula-sink restriction cannot recover any Info1 or Integer error:
+those 31 sources have no downstream formula cell that could serve as an intermediate
+output. The 26/60 EORL availability ceiling is therefore already the broader
+source-to-formula-descendant ceiling on these public pairs.
+
 ## Decision
 
 EORL v1 fails D0 and stops before full-ranking implementation. The `40/12/24/8`
@@ -74,8 +97,8 @@ and formal `V5-R1` naming are not authorized.
 
 The result distinguishes a benchmark-contract failure from a total mechanism failure:
 peer residual correction is strong in the one eligible corpus, while the fixed sink
-proxy has insufficient public task coverage. A future route may model a user-selected
-intermediate output rather than infer a structural sink, but it must be separately
-preregistered and independently confirmed. It cannot retroactively rescue EORL v1 or
-report the 18 recoverable source events as localization accuracy.
-
+proxy has insufficient public task coverage. The follow-up audit also closes a simple
+"use an intermediate formula output" continuation on the current public pairs, because
+Info1 and Integer provide no downstream formula at all. A future model must use a
+different learning target and be separately preregistered; it cannot retroactively
+rescue EORL v1 or report the 18 recoverable source events as localization accuracy.
