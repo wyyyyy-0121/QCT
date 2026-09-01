@@ -365,7 +365,7 @@ def run(
         raise ValueError("frozen signal shard hash mismatch")
 
     profiles = read_profiles(profiles_path)
-    profile_by_hash = {row["workbook_sha256"]: row for row in profiles}
+    profile_by_unit = {row["unit_id"]: row for row in profiles}
     events = _read_events(events_path)
     manifest = _read_manifest(manifest_path)
     payloads: list[dict[str, object]] = []
@@ -380,10 +380,11 @@ def run(
         _reject_protected(reference_path)
         observed_hash = sha256(observed_path)
         reference_hash = sha256(reference_path)
-        profile = profile_by_hash.get(observed_hash)
-        if profile is None or Path(ROOT / profile["path"]).resolve() != observed_path:
+        event_unit = str(event.get("unit_id", ""))
+        profile = profile_by_unit.get(event_unit)
+        if profile is None or profile["workbook_sha256"] != observed_hash:
             raise ValueError(f"observed workbook absent from frozen profiles: {row['instance_id']}")
-        if event.get("workbook_sha256") != observed_hash or event.get("unit_id") != profile["unit_id"]:
+        if event.get("workbook_sha256") != observed_hash:
             raise ValueError(f"event/profile identity mismatch: {row['instance_id']}")
         sources = _source_cells(event.get("source_formula_cells"))
         manifest_sources = [
