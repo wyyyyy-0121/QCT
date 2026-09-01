@@ -50,6 +50,27 @@
           "evidence_quote": "2024-combined.xlsx - Correct formulas referencing W2"
         }
       ]
+    },
+    {
+      "repository": "eoframework/eof-solutions",
+      "canonical_url": "https://github.com/eoframework/eof-solutions",
+      "local_directory": "eof_solutions",
+      "pinned_head": "2eb16a552d70368acada4cc16b9cd5dc018f24e8",
+      "license_spdx": "BUSL-1.1",
+      "license_path": "LICENSE",
+      "license_sha256": "b3ee221011b1451851174f97d8bbd17b2ebc7caf661325cb005ef30da729766c",
+      "license_covers_workbooks": true,
+      "candidates": [
+        {
+          "candidate_id": "eof-2025-cisco-loe-circular-references",
+          "source_kind": "correction",
+          "commit_sha": "858a03921c12b1f7e23992a35f7bab888641c8a5",
+          "parent_sha": "ea28b09957fb0bdc0684b482408ff404aaecc676",
+          "workbook_path": "solutions/cisco/ai/network-analytics/presales/level-of-effort-estimate.xlsx",
+          "evidence_scope": "workbook",
+          "evidence_quote": "Fix Cisco presales issues: circular references, architecture diagrams, and PPTX note"
+        }
+      ]
     }
   ],
   "protected_data_inputs": [],
