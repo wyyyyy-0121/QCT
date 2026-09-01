@@ -516,7 +516,7 @@ def run(
         for cohort in LOCO_COHORTS
     }
 
-    v4, v4_complete = _load_sources(v4_dir, profiles, kind="V4 scoring comparison")
+    v4, v4_complete = _load_sources(v4_dir, profiles, kind="V4")
     if v4_complete.get("combined_shards_sha256") != EXPECTED_V4_SHARDS_SHA256:
         raise ValueError("AETR V4 scoring shards differ from preregistration")
     v4_rankings = _v4_rankings(v4)
