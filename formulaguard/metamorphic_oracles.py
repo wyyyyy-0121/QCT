@@ -1,4 +1,4 @@
-"""Deterministic, label-free metamorphic checks for spreadsheet formulas.
+"""Deterministic, label-free metamorphic characterizations for formulas.
 
 The checks in this module do not compare a formula with its peers and do not
 consume a defect label or an expected answer.  They first prove a narrow
@@ -6,11 +6,11 @@ applicability condition from the formula AST, then perturb numeric workbook
 inputs and record the observed relation.  Unsupported, conditional, and
 data-dependent nonlinear formulas are deliberately abstained from.
 
-These are selective consistency oracles, not a completeness claim.  Affine
-scaling is explicitly a support-only characterization: an affine formula can
-be wrong and still satisfy it.  The two detector relations use evidence that
-is not the target expression's own algebraic prediction: a declared aggregate
-domain, or two independent aggregate paths connected by an explicit residual.
+These relations characterize internal behavior; they are not correctness
+oracles.  A formula can be correct or incorrect whether a relation holds or
+breaks.  In particular, an aggregate domain or a zero residual inferred from
+the workbook is not an external assertion of author intent.  Relation breaks
+are therefore reported as ambiguous and never as formula violations.
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ from .a1 import iter_rect, parse_address
 from .formula import Binary, FormulaSyntaxError, Func, Node, Number, Range, Ref, Unary
 from .workbook import CellKey, WorkbookModel
 
-PROTOCOL = "formulaguard_label_free_metamorphic_oracles_v1"
+PROTOCOL = "formulaguard_label_free_metamorphic_characterization_v2"
 RELATIONS = (
     "affine_scaling",
     "aggregate_conservation",
@@ -31,8 +31,8 @@ RELATIONS = (
 )
 RELATION_ROLES = {
     "affine_scaling": "characterization",
-    "aggregate_conservation": "detector",
-    "redundant_path_invariance": "detector",
+    "aggregate_conservation": "characterization",
+    "redundant_path_invariance": "characterization",
 }
 
 
@@ -287,24 +287,32 @@ def _abstain(
         "role": RELATION_ROLES[relation],
         "applicability": False,
         "outcome": "abstain",
-        "support": False,
+        "relation_holds": False,
+        "ambiguous": False,
         "violation": False,
+        "ambiguity_reason": None,
         "rejection_reason": reason,
         "rejection_detail": detail,
         "witness": dict(witness) if witness is not None else None,
     }
 
 
-def _result(
-    relation: str, violation: bool, witness: Mapping[str, object]
+def _characterization_result(
+    relation: str,
+    relation_holds: bool,
+    witness: Mapping[str, object],
+    ambiguity_reason: str = "relation_break_without_external_assertion",
 ) -> dict[str, object]:
+    ambiguous = not relation_holds
     return {
         "relation": relation,
         "role": RELATION_ROLES[relation],
         "applicability": True,
-        "outcome": "violation" if violation else "support",
-        "support": not violation,
-        "violation": violation,
+        "outcome": "relation_holds" if relation_holds else "ambiguous",
+        "relation_holds": relation_holds,
+        "ambiguous": ambiguous,
+        "violation": False,
+        "ambiguity_reason": ambiguity_reason if ambiguous else None,
         "rejection_reason": None,
         "rejection_detail": None,
         "witness": dict(witness),
@@ -360,7 +368,9 @@ def _scaling_relation(
     witness = {
         "cell": _label(target),
         "formula": formula,
-        "interpretation": "support_only_affine_characterization",
+        "interpretation": "affine_relation_characterization",
+        "evidence_basis": "target_formula_ast_only",
+        "external_assertion_source": None,
         "can_identify_formula_error": False,
         "factor": config.scale_factor,
         "affine_intercept": affine.intercept,
@@ -369,10 +379,11 @@ def _scaling_relation(
         },
         "input_values_after": {_label(key): value for key, value in overrides.items()},
         "baseline_output": baseline,
-        "expected_output": expected,
+        "target_ast_predicted_output": expected,
         "observed_output": observed,
-        "absolute_error": abs(observed - expected),
+        "absolute_difference_from_target_ast_prediction": abs(observed - expected),
         "tolerance": tolerance,
+        "relation_held": abs(observed - expected) <= tolerance,
     }
     if abs(observed - expected) > tolerance:
         # The expectation and intervention are derived from this same AST.  A
@@ -382,7 +393,7 @@ def _scaling_relation(
             "execution_inconsistency_not_formula_evidence",
             witness=witness,
         )
-    return _result(relation, False, witness)
+    return _characterization_result(relation, True, witness)
 
 
 def _aggregate_cells(node: Func, current_sheet: str) -> tuple[CellKey, ...]:
@@ -505,9 +516,11 @@ def _conservation_relation(
         step = max(config.minimum_step, magnitude * config.step_fraction)
         probes: list[dict[str, object]] = []
         for partner in anchor.cells[1:]:
+            pivot_delta = step / anchor.occurrences[pivot]
+            partner_delta = -step / anchor.occurrences[partner]
             overrides = {
-                pivot: values[pivot] + step,
-                partner: values[partner] - step,
+                pivot: values[pivot] + pivot_delta,
+                partner: values[partner] + partner_delta,
             }
             if any(not math.isfinite(value) for value in overrides.values()):
                 return _abstain(relation, "non_finite_intervention", anchor.anchor_id)
@@ -519,12 +532,16 @@ def _conservation_relation(
                     f"{anchor.anchor_id}: {error}",
                 )
             tolerance = _tolerance(config, baseline, observed)
-            passed = abs(observed - baseline) <= tolerance
+            relation_held = abs(observed - baseline) <= tolerance
             probes.append(
                 {
                     "positive_cell": _label(pivot),
                     "negative_cell": _label(partner),
-                    "transfer": step,
+                    "aggregate_numerator_transfer": step,
+                    "positive_occurrences": anchor.occurrences[pivot],
+                    "negative_occurrences": anchor.occurrences[partner],
+                    "positive_delta": pivot_delta,
+                    "negative_delta": partner_delta,
                     "input_values_before": {
                         _label(pivot): values[pivot],
                         _label(partner): values[partner],
@@ -533,11 +550,11 @@ def _conservation_relation(
                         _label(pivot): overrides[pivot],
                         _label(partner): overrides[partner],
                     },
-                    "expected_output": baseline,
+                    "baseline_output_reference": baseline,
                     "observed_output": observed,
-                    "absolute_error": abs(observed - baseline),
+                    "absolute_change_from_baseline": abs(observed - baseline),
                     "tolerance": tolerance,
-                    "passed": passed,
+                    "relation_held": relation_held,
                 }
             )
         anchor_witnesses.append(
@@ -552,18 +569,21 @@ def _conservation_relation(
             }
         )
 
-    violation = any(
-        not bool(probe["passed"])
+    relation_holds = all(
+        bool(probe["relation_held"])
         for anchor in anchor_witnesses
         for probe in anchor["probes"]  # type: ignore[union-attr]
     )
-    return _result(
+    return _characterization_result(
         relation,
-        violation,
+        relation_holds,
         {
             "cell": _label(target),
             "formula": formula,
-            "baseline_output": baseline,
+            "evidence_basis": "target_formula_ast_only",
+            "external_assertion_source": None,
+            "can_identify_formula_error": False,
+            "baseline_output_reference": baseline,
             "anchors": anchor_witnesses,
             "rejected_anchors": rejected,
         },
@@ -737,29 +757,31 @@ def _redundant_path_relation(
                 relation, "intervention_evaluation_error", f"{_label(key)}: {error}"
             )
         tolerance = _tolerance(config, baseline, observed)
-        passed = abs(observed - baseline) <= tolerance
+        relation_held = abs(observed - baseline) <= tolerance
         probes.append(
             {
                 "input_cell": _label(key),
                 "input_before": before,
                 "input_after": after,
                 "step": step,
-                "expected_residual": baseline,
+                "baseline_residual_reference": baseline,
                 "observed_residual": observed,
-                "absolute_error": abs(observed - baseline),
+                "absolute_change_from_baseline": abs(observed - baseline),
                 "tolerance": tolerance,
-                "passed": passed,
+                "relation_held": relation_held,
             }
         )
 
-    violation = any(not bool(probe["passed"]) for probe in probes)
-    return _result(
+    relation_holds = all(bool(probe["relation_held"]) for probe in probes)
+    return _characterization_result(
         relation,
-        violation,
+        relation_holds,
         {
             "cell": _label(target),
             "formula": formula,
-            "evidence_basis": "explicit_zero_residual_between_independent_near_equivalent_aggregate_paths",
+            "evidence_basis": "target_formula_and_baseline_only",
+            "external_assertion_source": None,
+            "can_identify_formula_error": False,
             "localization": "ambiguous_between_paths",
             "left_path": {
                 "cell": _label(left_key),
@@ -777,7 +799,7 @@ def _redundant_path_relation(
             },
             "matching_sensitivity_cells": [_label(key) for key in matching],
             "mismatched_sensitivity_cells": [_label(key) for key in mismatches],
-            "baseline_residual": baseline,
+            "baseline_residual_reference": baseline,
             "probes": probes,
         },
     )
@@ -842,16 +864,15 @@ def audit_metamorphic_oracles(
                         _abstain(relation, reason, detail) for relation in RELATIONS
                     ]
 
-        support_count = sum(result["support"] is True for result in relations)
-        violation_count = sum(
-            result["violation"] is True and result["role"] == "detector"
-            for result in relations
+        relation_holds_count = sum(
+            result["relation_holds"] is True for result in relations
         )
+        ambiguity_count = sum(result["ambiguous"] is True for result in relations)
         applicable_count = sum(result["applicability"] is True for result in relations)
         status = (
-            "violation"
-            if violation_count
-            else ("supported" if support_count else "abstained")
+            "ambiguous"
+            if ambiguity_count
+            else ("characterized" if relation_holds_count else "abstained")
         )
         records.append(
             {
@@ -859,8 +880,9 @@ def audit_metamorphic_oracles(
                 "formula": formula,
                 "status": status,
                 "applicable_relations": applicable_count,
-                "support_count": support_count,
-                "violation_count": violation_count,
+                "relation_holds_count": relation_holds_count,
+                "ambiguity_count": ambiguity_count,
+                "violation_count": 0,
                 "relations": relations,
             }
         )
@@ -870,34 +892,35 @@ def audit_metamorphic_oracles(
         "applicable_relations": sum(
             int(record["applicable_relations"]) for record in records
         ),
-        "supports": sum(int(record["support_count"]) for record in records),
-        "violations": sum(int(record["violation_count"]) for record in records),
+        "relations_holding": sum(
+            int(record["relation_holds_count"]) for record in records
+        ),
+        "ambiguities": sum(int(record["ambiguity_count"]) for record in records),
+        "violations": 0,
         "abstentions": sum(
             len(RELATIONS) - int(record["applicable_relations"]) for record in records
         ),
-        "cells_with_violations": sum(
-            record["status"] == "violation" for record in records
+        "cells_characterized": sum(
+            record["status"] == "characterized" for record in records
         ),
-        "characterization_supports": sum(
-            relation["support"] is True and relation["role"] == "characterization"
-            for record in records
-            for relation in record["relations"]  # type: ignore[union-attr]
+        "cells_with_ambiguities": sum(
+            record["status"] == "ambiguous" for record in records
         ),
-        "detector_violations": sum(
-            relation["violation"] is True and relation["role"] == "detector"
-            for record in records
-            for relation in record["relations"]  # type: ignore[union-attr]
-        ),
+        "cells_abstained": sum(record["status"] == "abstained" for record in records),
+        "cells_with_violations": 0,
     }
     return {
         "protocol": PROTOCOL,
         "label_free": True,
         "peer_comparison": False,
+        "external_assertion_source": None,
+        "can_identify_formula_error": False,
         "config": config.as_dict(),
         "summary": summary,
-        "violation_cells": [
-            record["cell"] for record in records if record["status"] == "violation"
+        "ambiguous_cells": [
+            record["cell"] for record in records if record["status"] == "ambiguous"
         ],
+        "violation_cells": [],
         "records": records,
     }
 
@@ -912,13 +935,28 @@ def validate_metamorphic_output(payload: Mapping[str, object]) -> list[str]:
         errors.append("result is not marked label-free")
     if payload.get("peer_comparison") is not False:
         errors.append("peer comparison must be disabled")
+    if "external_assertion_source" not in payload:
+        errors.append("external assertion source must be stated")
+    elif payload.get("external_assertion_source") is not None:
+        errors.append("external assertion source must be absent")
+    if payload.get("can_identify_formula_error") is not False:
+        errors.append("formula error identifiability must be false")
+    if payload.get("violation_cells") != []:
+        errors.append("violation_cells must be empty for characterization output")
     records = payload.get("records")
     if not isinstance(records, list):
         return errors + ["records must be a list"]
+    calculated_applicable = 0
+    calculated_holding = 0
+    calculated_ambiguities = 0
+    calculated_abstentions = 0
+    calculated_ambiguous_cells: list[object] = []
     for index, record in enumerate(records):
         if not isinstance(record, Mapping):
             errors.append(f"record {index} is not an object")
             continue
+        if record.get("violation_count") != 0:
+            errors.append(f"record {index} has a nonzero violation count")
         relations = record.get("relations")
         if not isinstance(relations, list) or len(relations) != len(RELATIONS):
             errors.append(f"record {index} has an invalid relation list")
@@ -929,26 +967,120 @@ def validate_metamorphic_output(payload: Mapping[str, object]) -> list[str]:
         )
         if names != RELATIONS:
             errors.append(f"record {index} relation order is not deterministic")
+        relation_holds_count = 0
+        ambiguity_count = 0
+        applicable_count = 0
         for relation in relations:
             if not isinstance(relation, Mapping):
+                errors.append(f"record {index} relation is not an object")
                 continue
+            state_names = ("applicability", "relation_holds", "ambiguous", "violation")
+            if any(not isinstance(relation.get(name), bool) for name in state_names):
+                errors.append(f"record {index} relation has a missing or invalid state")
             applicable = relation.get("applicability") is True
-            support = relation.get("support") is True
+            relation_holds = relation.get("relation_holds") is True
+            ambiguous = relation.get("ambiguous") is True
             violation = relation.get("violation") is True
-            if support and violation:
-                errors.append(f"record {index} relation has both support and violation")
+            outcome = relation.get("outcome")
             if relation.get("role") != RELATION_ROLES.get(
                 str(relation.get("relation"))
             ):
                 errors.append(f"record {index} relation has an invalid role")
-            if relation.get("role") == "characterization" and violation:
+            if relation.get("role") != "characterization":
+                errors.append(f"record {index} relation is not a characterization")
+            if violation:
                 errors.append(f"record {index} characterization claims a violation")
-            if applicable != (support or violation):
-                errors.append(f"record {index} relation has inconsistent applicability")
-            if applicable and relation.get("witness") is None:
+            expected_state = {
+                "relation_holds": (True, True, False),
+                "ambiguous": (True, False, True),
+                "abstain": (False, False, False),
+            }.get(str(outcome))
+            if expected_state is None:
+                errors.append(f"record {index} relation has an invalid outcome")
+            elif (applicable, relation_holds, ambiguous) != expected_state:
+                errors.append(f"record {index} relation has inconsistent outcome state")
+            if relation_holds and ambiguous:
+                errors.append(f"record {index} relation both holds and is ambiguous")
+            ambiguity_reason = relation.get("ambiguity_reason")
+            if ambiguous and (
+                not isinstance(ambiguity_reason, str) or not ambiguity_reason
+            ):
+                errors.append(f"record {index} ambiguity lacks a reason")
+            if not ambiguous and ambiguity_reason is not None:
+                errors.append(f"record {index} non-ambiguity has an ambiguity reason")
+            witness = relation.get("witness")
+            if applicable and not isinstance(witness, Mapping):
                 errors.append(f"record {index} applicable relation lacks a witness")
+            if isinstance(witness, Mapping) and applicable:
+                if (
+                    "external_assertion_source" not in witness
+                    or witness.get("external_assertion_source") is not None
+                ):
+                    errors.append(
+                        f"record {index} witness has an external assertion source"
+                    )
+                if witness.get("can_identify_formula_error") is not False:
+                    errors.append(
+                        f"record {index} witness claims formula error identification"
+                    )
             if not applicable and not relation.get("rejection_reason"):
                 errors.append(f"record {index} abstention lacks a rejection reason")
+            if applicable and relation.get("rejection_reason") is not None:
+                errors.append(
+                    f"record {index} applicable relation has a rejection reason"
+                )
+            applicable_count += int(applicable)
+            relation_holds_count += int(relation_holds)
+            ambiguity_count += int(ambiguous)
+
+        if record.get("applicable_relations") != applicable_count:
+            errors.append(f"record {index} has an inconsistent applicable count")
+        if record.get("relation_holds_count") != relation_holds_count:
+            errors.append(f"record {index} has an inconsistent relation-holds count")
+        if record.get("ambiguity_count") != ambiguity_count:
+            errors.append(f"record {index} has an inconsistent ambiguity count")
+        expected_status = (
+            "ambiguous"
+            if ambiguity_count
+            else ("characterized" if relation_holds_count else "abstained")
+        )
+        if record.get("status") != expected_status:
+            errors.append(f"record {index} has an inconsistent status")
+        calculated_applicable += applicable_count
+        calculated_holding += relation_holds_count
+        calculated_ambiguities += ambiguity_count
+        calculated_abstentions += len(RELATIONS) - applicable_count
+        if ambiguity_count:
+            calculated_ambiguous_cells.append(record.get("cell"))
+
+    if payload.get("ambiguous_cells") != calculated_ambiguous_cells:
+        errors.append("ambiguous_cells does not match relation outcomes")
+    summary = payload.get("summary")
+    if not isinstance(summary, Mapping):
+        errors.append("summary must be an object")
+    else:
+        expected_summary = {
+            "formula_cells": len(records),
+            "applicable_relations": calculated_applicable,
+            "relations_holding": calculated_holding,
+            "ambiguities": calculated_ambiguities,
+            "violations": 0,
+            "abstentions": calculated_abstentions,
+            "cells_characterized": sum(
+                isinstance(record, Mapping)
+                and record.get("status") == "characterized"
+                for record in records
+            ),
+            "cells_with_ambiguities": len(calculated_ambiguous_cells),
+            "cells_abstained": sum(
+                isinstance(record, Mapping) and record.get("status") == "abstained"
+                for record in records
+            ),
+            "cells_with_violations": 0,
+        }
+        for name, expected in expected_summary.items():
+            if summary.get(name) != expected:
+                errors.append(f"summary has an inconsistent {name}")
     return errors
 
 
