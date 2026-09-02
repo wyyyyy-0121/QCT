@@ -167,6 +167,31 @@ class BehavioralConsistencyTests(unittest.TestCase):
         self.assertEqual(response.reason, "ambiguous_relative_input_keys")
         self.assertEqual(response.influences, ())
 
+    def test_two_peer_majority_abstains_on_legal_rate_switch_and_summary(self):
+        cells = {("S", f"A{row}"): row for row in range(1, 4)}
+        cases = {
+            "rate_switch": {
+                ("S", "B1"): "=A1*2",
+                ("S", "B2"): "=A2*2",
+                ("S", "B3"): "=A3*3",
+            },
+            "summary": {
+                ("S", "B1"): "=A1*2",
+                ("S", "B2"): "=A2*2",
+                ("S", "B3"): "=SUM(A1:A3)",
+            },
+        }
+
+        for name, formulas in cases.items():
+            with self.subTest(name=name):
+                record = audit_behavioral_consistency(
+                    WorkbookModel.from_cells(cells, formulas),
+                    targets=[("S", "B3")],
+                )["records"][0]
+                self.assertEqual(record["status"], "abstained")
+                self.assertEqual(record["reason"], "no_coherent_peer_axis")
+                self.assertEqual(record["score"], 0.0)
+
     def test_wrong_reference_is_exposed_by_relative_input_support(self):
         model = WorkbookModel.from_cells(
             {("S", f"A{row}"): row for row in range(1, 5)},
@@ -258,9 +283,11 @@ class BehavioralConsistencyTests(unittest.TestCase):
             },
         )
 
-        record = audit_behavioral_consistency(model, targets=[("S", "B3")])[
-            "records"
-        ][0]
+        record = audit_behavioral_consistency(
+            model,
+            targets=[("S", "B3")],
+            config=BehavioralConsistencyConfig(min_peers=2),
+        )["records"][0]
 
         self.assertIsNotNone(record["witness"])
         self.assertEqual(record["witness"]["peers"], ["S!B1", "S!B5"])

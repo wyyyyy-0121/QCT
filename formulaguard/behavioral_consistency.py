@@ -55,7 +55,7 @@ class BehavioralConsistencyConfig:
     """Fixed engineering bounds for the response-neighborhood audit."""
 
     axis_radius: int = 8
-    min_peers: int = 2
+    min_peers: int = 3
     max_peers: int = 8
     max_peer_coherence: float = 0.35
     minimum_excess: float = 0.01
