@@ -134,6 +134,13 @@ def formula_tokens(formula: str, anchor_text: str, current_sheet: str) -> tuple[
     return tuple(tokens[:MAX_FORMULA_TOKENS])
 
 
+def _context_formula_tokens(formula: str, anchor_text: str, current_sheet: str) -> tuple[str, ...]:
+    try:
+        return formula_tokens(formula, anchor_text, current_sheet)
+    except (TypeError, ValueError):
+        return ("UNSUPPORTED_FORMULA",)
+
+
 def _format_class(value: str) -> str:
     upper = value.upper()
     if "%" in upper:
@@ -239,7 +246,7 @@ def masked_context_tokens(model: WorkbookModel, target: CellKey) -> tuple[str, .
     for direction in ("UP", "DOWN", "LEFT", "RIGHT"):
         for distance, peer in sorted(directions[direction], key=lambda item: (item[0], _cell_sort(item[1])))[:DIRECTIONAL_PEERS]:
             tokens.extend(("PEER_START", f"DIR_{direction}", _distance_bucket(distance)))
-            tokens.extend(formula_tokens(model.formulas[peer], peer[1], peer[0]))
+            tokens.extend(_context_formula_tokens(model.formulas[peer], peer[1], peer[0]))
             tokens.append("PEER_END")
 
     graph = model.dependency_graph()
@@ -252,7 +259,7 @@ def masked_context_tokens(model: WorkbookModel, target: CellKey) -> tuple[str, .
         dependents.append((dependent[0] != sheet, distance, dependent))
     for cross_sheet, distance, dependent in sorted(dependents, key=lambda item: (item[0], item[1], _cell_sort(item[2])))[:DEPENDENT_FORMULAS]:
         tokens.extend(("DEPENDENT_START", "CROSS_SHEET" if cross_sheet else "SAME_SHEET", _distance_bucket(distance)))
-        tokens.extend(formula_tokens(model.formulas[dependent], dependent[1], dependent[0]))
+        tokens.extend(_context_formula_tokens(model.formulas[dependent], dependent[1], dependent[0]))
         tokens.append("DEPENDENT_END")
     tokens.append("CTX_END")
     return tuple(tokens[:MAX_CONTEXT_TOKENS])

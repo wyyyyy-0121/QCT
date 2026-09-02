@@ -53,6 +53,17 @@ class PCRCTests(unittest.TestCase):
         self.assertEqual(left, right)
         self.assertIn("TOPO_2_2_MASK", left)
 
+    def test_unsupported_context_formula_maps_to_one_token(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 1, ("Model", "B1"): "-"},
+            {
+                ("Model", "C1"): "=A1+1",
+                ("Model", "D1"): '=IF(B1="-",0,1)',
+            },
+        )
+        tokens = masked_context_tokens(model, ("Model", "C1"))
+        self.assertIn("UNSUPPORTED_FORMULA", tokens)
+
     def test_workbook_examples_use_peer_hypotheses_without_raw_formulas(self):
         examples = workbook_examples(
             workbook(),
