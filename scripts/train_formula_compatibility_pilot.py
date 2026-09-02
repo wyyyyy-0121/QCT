@@ -172,11 +172,72 @@ def _accuracy(values: Sequence[bool]) -> float:
     return sum(values) / len(values) if values else 0.0
 
 
+def frequency_baseline_prediction(
+    example: Example,
+    frequency: Mapping[str, int],
+) -> int:
+    """Select by train frequency without using the candidate's list position."""
+    return max(
+        range(len(example.candidate_ids)),
+        key=lambda position: (
+            int(frequency.get(_encoded_key(example.candidate_ids[position]), 0)),
+            _encoded_key(example.candidate_ids[position]),
+        ),
+    )
+
+
+def peer_support_counts(
+    example: Example,
+    vocabulary: PCRCVocabulary,
+) -> tuple[int, ...]:
+    """Count exact masked-context peer support for each candidate formula."""
+    try:
+        peer_start = vocabulary.ids["PEER_START"]
+        peer_end = vocabulary.ids["PEER_END"]
+    except KeyError as exc:
+        raise ValueError("formula compatibility vocabulary lacks peer markers") from exc
+    peers: list[tuple[int, ...]] = []
+    context = example.context_ids
+    position = 0
+    while position < len(context):
+        if context[position] != peer_start:
+            position += 1
+            continue
+        try:
+            end = context.index(peer_end, position + 1)
+        except ValueError:
+            break
+        # PEER_START is followed by direction and distance metadata.
+        if end > position + 3:
+            peers.append(tuple(context[position + 3 : end]))
+        position = end + 1
+    candidate_bodies = [tuple(candidate[1:-1]) for candidate in example.candidate_ids]
+    return tuple(sum(candidate == peer for peer in peers) for candidate in candidate_bodies)
+
+
+def peer_frequency_baseline_prediction(
+    example: Example,
+    frequency: Mapping[str, int],
+    vocabulary: PCRCVocabulary,
+) -> int:
+    """Select by local peer support, then train frequency and content hash."""
+    support = peer_support_counts(example, vocabulary)
+    return max(
+        range(len(example.candidate_ids)),
+        key=lambda position: (
+            support[position],
+            int(frequency.get(_encoded_key(example.candidate_ids[position]), 0)),
+            _encoded_key(example.candidate_ids[position]),
+        ),
+    )
+
+
 @torch.no_grad()
 def evaluate(
     model: FormulaCompatibilityPilot,
     examples: Sequence[Example],
     frequency: Mapping[str, int],
+    vocabulary: PCRCVocabulary,
     device: torch.device,
     *,
     formula_only: bool = False,
@@ -194,18 +255,33 @@ def evaluate(
         predictions = logits.argmax(dim=1).tolist()
         for index, example in enumerate(batch):
             correct = predictions[index] == 0
-            frequency_prediction = max(
-                range(len(example.candidate_ids)),
-                key=lambda position: (
-                    int(frequency.get(_encoded_key(example.candidate_ids[position]), 0)),
-                    -position,
-                ),
+            frequency_counts = tuple(
+                int(frequency.get(_encoded_key(candidate), 0))
+                for candidate in example.candidate_ids
             )
+            frequency_prediction = frequency_baseline_prediction(example, frequency)
+            peer_prediction = peer_frequency_baseline_prediction(
+                example, frequency, vocabulary
+            )
+            maximum_frequency = max(frequency_counts)
+            frequency_winners = sum(
+                value == maximum_frequency for value in frequency_counts
+            )
+            peer_support = peer_support_counts(example, vocabulary)
             row = {
                 "group": example.structure_group,
                 "workbook": example.workbook_id,
                 "correct": correct,
                 "frequency_correct": frequency_prediction == 0,
+                "frequency_fractional_correct": (
+                    1.0 / frequency_winners
+                    if frequency_counts[0] == maximum_frequency
+                    else 0.0
+                ),
+                "frequency_tied": frequency_winners > 1,
+                "frequency_all_zero": maximum_frequency == 0,
+                "peer_frequency_correct": peer_prediction == 0,
+                "observed_has_exact_peer": peer_support[0] > 0,
                 "candidate_count": len(example.candidate_ids),
             }
             rows.append(row)
@@ -223,6 +299,9 @@ def evaluate(
         groups[str(row["group"])].append(row)
     accuracy = _accuracy([bool(row["correct"]) for row in rows])
     frequency_accuracy = _accuracy([bool(row["frequency_correct"]) for row in rows])
+    peer_frequency_accuracy = _accuracy([
+        bool(row["peer_frequency_correct"]) for row in rows
+    ])
     return {
         "targets": len(rows),
         "structure_groups": len(groups),
@@ -230,11 +309,29 @@ def evaluate(
         "candidate_accuracy": accuracy,
         "frequency_accuracy": frequency_accuracy,
         "accuracy_delta_over_frequency": accuracy - frequency_accuracy,
+        "frequency_fractional_tie_accuracy": sum(
+            float(row["frequency_fractional_correct"]) for row in rows
+        ) / len(rows),
+        "frequency_tie_rate": _accuracy([
+            bool(row["frequency_tied"]) for row in rows
+        ]),
+        "frequency_all_zero_rate": _accuracy([
+            bool(row["frequency_all_zero"]) for row in rows
+        ]),
+        "peer_frequency_accuracy": peer_frequency_accuracy,
+        "accuracy_delta_over_peer_frequency": accuracy - peer_frequency_accuracy,
+        "observed_exact_peer_coverage": _accuracy([
+            bool(row["observed_has_exact_peer"]) for row in rows
+        ]),
         "group_macro_accuracy": sum(
             _accuracy([bool(row["correct"]) for row in values]) for values in groups.values()
         ) / len(groups),
         "frequency_group_macro_accuracy": sum(
             _accuracy([bool(row["frequency_correct"]) for row in values]) for values in groups.values()
+        ) / len(groups),
+        "peer_frequency_group_macro_accuracy": sum(
+            _accuracy([bool(row["peer_frequency_correct"]) for row in values])
+            for values in groups.values()
         ) / len(groups),
         "mean_cross_entropy": sum(losses) / len(rows),
         "accuracy_by_candidate_count": {
@@ -261,6 +358,7 @@ def train_one(
     *,
     learning_rate: float,
     vocabulary_size: int,
+    vocabulary: PCRCVocabulary,
     train_examples: Sequence[Example],
     calibration_examples: Sequence[Example],
     frequency: Mapping[str, int],
@@ -294,7 +392,7 @@ def train_one(
             optimizer.step()
             total_loss += float(loss.item()) * len(batch)
             trained += len(batch)
-        metrics = evaluate(model, calibration_examples, frequency, device)
+        metrics = evaluate(model, calibration_examples, frequency, vocabulary, device)
         score = (
             float(metrics["group_macro_accuracy"]),
             float(metrics["candidate_accuracy"]),
@@ -381,6 +479,7 @@ def train(*, corpus: Path, output: Path) -> Path:
         run, state = train_one(
             learning_rate=learning_rate,
             vocabulary_size=len(vocabulary.tokens),
+            vocabulary=vocabulary,
             train_examples=train_examples,
             calibration_examples=calibration_examples,
             frequency=frequency,
@@ -397,10 +496,12 @@ def train(*, corpus: Path, output: Path) -> Path:
     )
     selected = FormulaCompatibilityPilot(len(vocabulary.tokens)).to(device)
     selected.load_state_dict(states[selected_index], strict=True)
-    calibration_metrics = evaluate(selected, calibration_examples, frequency, device)
-    internal_metrics = evaluate(selected, internal_examples, frequency, device)
+    calibration_metrics = evaluate(
+        selected, calibration_examples, frequency, vocabulary, device
+    )
+    internal_metrics = evaluate(selected, internal_examples, frequency, vocabulary, device)
     formula_only_metrics = evaluate(
-        selected, internal_examples, frequency, device, formula_only=True
+        selected, internal_examples, frequency, vocabulary, device, formula_only=True
     )
     model_path = output / "selected_model.pt"
     atomic_torch_save({
@@ -423,7 +524,7 @@ def train(*, corpus: Path, output: Path) -> Path:
         "selected_model_sha256": sha256_file(model_path),
         "model_development_result": "promising" if (
             float(internal_metrics["candidate_accuracy"]) >= 0.60
-            and float(internal_metrics["accuracy_delta_over_frequency"]) >= 0.05
+            and float(internal_metrics["accuracy_delta_over_peer_frequency"]) >= 0.02
             and float(internal_metrics["group_macro_accuracy"]) >= 0.55
         ) else "insufficient",
         "public_localization_authorized": False,

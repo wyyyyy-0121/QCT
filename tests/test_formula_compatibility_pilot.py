@@ -4,6 +4,12 @@ import torch
 
 from formulaguard.formula_compatibility_pilot import candidate_rows, token_mutations
 from formulaguard.formula_compatibility_pilot_torch import FormulaCompatibilityPilot
+from formulaguard.pcrc import PCRCVocabulary
+from scripts.train_formula_compatibility_pilot import (
+    Example,
+    frequency_baseline_prediction,
+    peer_frequency_baseline_prediction,
+)
 
 
 class FormulaCompatibilityPilotTests(unittest.TestCase):
@@ -46,6 +52,43 @@ class FormulaCompatibilityPilotTests(unittest.TestCase):
         )
         self.assertEqual(tuple(logits.shape), (2, 2))
         self.assertTrue(torch.isneginf(logits[1, 1]))
+
+    def test_baselines_do_not_use_candidate_position_as_a_tiebreak(self):
+        vocabulary = PCRCVocabulary((
+            "<PAD>", "<UNK>", "<START>", "<END>",
+            "CTX", "PEER_START", "DIR_UP", "DIST_1", "PEER_END", "CTX_END",
+            "FORMULA_A", "FORMULA_B",
+        ))
+        context = vocabulary.encode((
+            "CTX", "PEER_START", "DIR_UP", "DIST_1", "FORMULA_A", "PEER_END",
+            "CTX_END",
+        ), maximum=32)
+        candidates = (
+            vocabulary.encode(("FORMULA_A",), maximum=8),
+            vocabulary.encode(("FORMULA_B",), maximum=8),
+        )
+
+        def example(rows):
+            return Example(
+                target_id="target",
+                workbook_id="workbook",
+                structure_group="group",
+                context_ids=context,
+                candidate_ids=rows,
+                candidate_kinds=("observed", "operator"),
+                observed_key="unused",
+            )
+
+        forward = example(candidates)
+        reverse = example(tuple(reversed(candidates)))
+        forward_frequency = frequency_baseline_prediction(forward, {})
+        reverse_frequency = frequency_baseline_prediction(reverse, {})
+        self.assertEqual(
+            forward.candidate_ids[forward_frequency],
+            reverse.candidate_ids[reverse_frequency],
+        )
+        self.assertEqual(peer_frequency_baseline_prediction(forward, {}, vocabulary), 0)
+        self.assertEqual(peer_frequency_baseline_prediction(reverse, {}, vocabulary), 1)
 
 
 if __name__ == "__main__":
