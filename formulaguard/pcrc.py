@@ -78,7 +78,7 @@ def numeric_category(value: float) -> str:
     if value == -1:
         return "NUM_NEG_ONE"
     prefix = "NUM_NEG_" if value < 0 else "NUM_"
-    magnitude = abs(value)
+    magnitude = float(abs(value))
     if not magnitude.is_integer():
         return prefix + "FRACTION"
     if magnitude < 10:
