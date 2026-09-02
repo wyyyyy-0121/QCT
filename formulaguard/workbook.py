@@ -433,11 +433,16 @@ class WorkbookModel:
                     return numeric(left) >= numeric(right)
                 raise ValueError(f"Unsupported operator {node.op}")
             if isinstance(node, Func):
-                args = [eval_node(arg, current_sheet) for arg in node.args]  # type: ignore[arg-type]
                 if node.name == "IF":
-                    if len(args) not in (2, 3):
+                    if len(node.args) not in (2, 3):
                         raise ValueError("IF expects two or three arguments")
-                    return args[1] if bool(args[0]) else (args[2] if len(args) == 3 else False)
+                    condition = eval_node(node.args[0], current_sheet)  # type: ignore[arg-type]
+                    if bool(condition):
+                        return eval_node(node.args[1], current_sheet)  # type: ignore[arg-type]
+                    if len(node.args) == 3:
+                        return eval_node(node.args[2], current_sheet)  # type: ignore[arg-type]
+                    return False
+                args = [eval_node(arg, current_sheet) for arg in node.args]  # type: ignore[arg-type]
                 flat = [numeric(value) for value in flatten_values(args) if value not in (None, "")]
                 if node.name == "SUM":
                     return sum(flat)

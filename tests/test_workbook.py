@@ -64,6 +64,21 @@ class WorkbookTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "formula cells"):
             model.evaluate(value_overrides={("Model", "C1"): 99})
 
+    def test_if_only_evaluates_the_selected_branch(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 1, ("Model", "B1"): 0},
+            {
+                ("Model", "C1"): "=IF(A1>0,1,1/B1)",
+                ("Model", "C2"): "=IF(A1<0,1/B1,2)",
+            },
+        )
+
+        values, errors = model.evaluate()
+
+        self.assertFalse(errors)
+        self.assertEqual(values[("Model", "C1")], 1)
+        self.assertEqual(values[("Model", "C2")], 2)
+
 
 if __name__ == "__main__":
     unittest.main()
