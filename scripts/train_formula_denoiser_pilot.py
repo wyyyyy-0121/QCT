@@ -34,7 +34,7 @@ from formulaguard.pcrc import (
 from formulaguard.v5_psl_protocol import sha256 as sha256_file
 
 
-PROTOCOL = "formulaguard_formula_denoiser_pilot_v2"
+PROTOCOL = "formulaguard_formula_denoiser_pilot_v3"
 SEED = 260902
 MASK_TOKEN = "<MASK>"
 MUTATION_FAMILIES = (
@@ -47,7 +47,7 @@ MUTATION_FAMILIES = (
 )
 MAX_SOURCE_TOKENS = MAX_CONTEXT_TOKENS + MAX_FORMULA_TOKENS
 DEFAULT_CORPUS = ROOT / "results/pcrc_corpus_v1"
-DEFAULT_OUTPUT = ROOT / "results/formula_denoiser_pilot_v2"
+DEFAULT_OUTPUT = ROOT / "results/formula_denoiser_pilot_v3"
 
 
 def write_json_atomic(path: Path, payload: object) -> None:
@@ -475,7 +475,8 @@ def train(
     *,
     corpus: Path,
     output: Path,
-    held_out_family: str,
+    held_out_family: str | None,
+    evaluation_family: str,
     epochs: int,
     batch_size: int,
     workers: int,
@@ -483,8 +484,10 @@ def train(
     final_beam_size: int,
 ) -> Path:
     require_clean_tracked_worktree()
-    if held_out_family not in MUTATION_FAMILIES:
+    if held_out_family is not None and held_out_family not in MUTATION_FAMILIES:
         raise ValueError("unknown formula denoiser held-out family")
+    if evaluation_family not in MUTATION_FAMILIES:
+        raise ValueError("unknown formula denoiser evaluation family")
     if not torch.cuda.is_available():
         raise ValueError("formula denoiser training requires CUDA")
     if epochs < 1 or batch_size < 1 or workers < 0 or workers > 24:
@@ -510,18 +513,18 @@ def train(
     ) + ("masked_reference",)
     training = DenoisingDataset(train_bases, train_families, include_clean=True)
     calibration_recovery = DenoisingDataset(
-        calibration_bases, (held_out_family,), include_clean=False
+        calibration_bases, (evaluation_family,), include_clean=False
     )
     calibration_controls = DenoisingDataset(
         calibration_bases, (), include_clean=True
     )
     internal_recovery = DenoisingDataset(
-        internal_bases, (held_out_family,), include_clean=False
+        internal_bases, (evaluation_family,), include_clean=False
     )
     internal_controls = DenoisingDataset(internal_bases, (), include_clean=True)
     selection_bases = calibration_bases[: min(512, len(calibration_bases))]
     selection_recovery = DenoisingDataset(
-        selection_bases, (held_out_family,), include_clean=False
+        selection_bases, (evaluation_family,), include_clean=False
     )
     selection_controls = DenoisingDataset(selection_bases, (), include_clean=True)
     if not all((len(training), len(calibration_recovery), len(internal_recovery))):
@@ -547,8 +550,9 @@ def train(
             "\0".join(vocabulary.tokens).encode("ascii")
         ).hexdigest(),
         "held_out_explicit_mutation_family": held_out_family,
+        "evaluation_mutation_family": evaluation_family,
         "training_mutation_families": list(train_families),
-        "explicit_mutation_family_entered_training": False,
+        "evaluation_mutation_family_entered_training": evaluation_family in train_families,
         "reference_structure_self_supervision": "single_token_masking",
         "train_bases": len(train_bases),
         "training_rows": len(training),
@@ -705,6 +709,7 @@ def train(
         "protocol": PROTOCOL,
         "git_commit": metadata["git_commit"],
         "held_out_explicit_mutation_family": held_out_family,
+        "evaluation_mutation_family": evaluation_family,
         "best_epoch": best_epoch,
         "vocabulary_sha256": metadata["vocabulary_sha256"],
         "model_vocabulary_sha256": metadata["model_vocabulary_sha256"],
@@ -745,7 +750,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--corpus", type=Path, default=DEFAULT_CORPUS)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument(
-        "--held-out-family", choices=MUTATION_FAMILIES, default="reference_offset"
+        "--held-out-family", choices=("none", *MUTATION_FAMILIES), default="none"
+    )
+    parser.add_argument(
+        "--evaluation-family", choices=MUTATION_FAMILIES, default="reference_offset"
     )
     parser.add_argument("--epochs", type=int, default=12)
     parser.add_argument("--batch-size", type=int, default=192)
@@ -757,7 +765,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(train(
             corpus=args.corpus.resolve(),
             output=args.output.resolve(),
-            held_out_family=args.held_out_family,
+            held_out_family=(
+                None if args.held_out_family == "none" else args.held_out_family
+            ),
+            evaluation_family=args.evaluation_family,
             epochs=args.epochs,
             batch_size=args.batch_size,
             workers=args.workers,
