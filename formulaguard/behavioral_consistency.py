@@ -22,7 +22,7 @@ from .counterfactual_response import (
 )
 from .workbook import CellKey, DependencyGraph, WorkbookModel
 
-PROTOCOL = "formulaguard_behavioral_consistency_v1"
+PROTOCOL = "formulaguard_behavioral_consistency_v2"
 
 
 def _label(cell: CellKey) -> str:
@@ -104,8 +104,10 @@ class CanonicalInfluence:
     nonlinearity_residual: float | None
 
     @property
-    def key(self) -> tuple[int, int, int]:
-        return self.row_offset, self.column_offset, self.path_length
+    def key(self) -> tuple[int, int]:
+        """Return the behavioral input key; path length is diagnostic only."""
+
+        return self.row_offset, self.column_offset
 
     def as_dict(self) -> dict[str, object]:
         return asdict(self)

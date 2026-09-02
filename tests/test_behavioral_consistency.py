@@ -1,5 +1,6 @@
 import unittest
 from collections import Counter
+from dataclasses import replace
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -123,6 +124,48 @@ class BehavioralConsistencyTests(unittest.TestCase):
         self.assertEqual(records["S!B3"]["status"], "consistent")
         self.assertEqual(records["S!B4"]["status"], "behavioral_outlier")
         self.assertGreater(records["S!B4"]["score"], 0.0)
+
+    def test_direct_and_one_hop_mappings_have_zero_response_distance(self):
+        model = WorkbookModel.from_cells(
+            {("S", "A1"): 2, ("S", "A2"): 2},
+            {
+                ("S", "C1"): "=A1*2",
+                ("S", "B2"): "=A2",
+                ("S", "C2"): "=B2*2",
+            },
+        )
+
+        direct = canonical_response(build_response_signature(model, ("S", "C1")))
+        one_hop = canonical_response(build_response_signature(model, ("S", "C2")))
+
+        self.assertTrue(direct.eligible)
+        self.assertTrue(one_hop.eligible)
+        self.assertEqual(direct.influences[0].key, one_hop.influences[0].key)
+        self.assertEqual(direct.influences[0].path_length, 1)
+        self.assertEqual(one_hop.influences[0].path_length, 2)
+        self.assertAlmostEqual(response_distance(direct, one_hop), 0.0)
+
+    def test_path_independent_matching_key_collision_abstains(self):
+        model = WorkbookModel.from_cells(
+            {("S", "A1"): 2},
+            {("S", "C1"): "=A1*2"},
+        )
+        signature = build_response_signature(model, ("S", "C1"))
+        probe = signature.probes[0]
+        self.assertIsNotNone(probe.target_response)
+        indirect_response = replace(
+            probe.target_response,
+            path=(("S", "A1"), ("S", "B1"), ("S", "C1")),
+        )
+        duplicate_probe = replace(probe, target_response=indirect_response)
+
+        response = canonical_response(
+            replace(signature, probes=(probe, duplicate_probe))
+        )
+
+        self.assertFalse(response.eligible)
+        self.assertEqual(response.reason, "ambiguous_relative_input_keys")
+        self.assertEqual(response.influences, ())
 
     def test_wrong_reference_is_exposed_by_relative_input_support(self):
         model = WorkbookModel.from_cells(
