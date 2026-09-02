@@ -35,7 +35,10 @@
   这些解锁条件，因此该目录继续封存。
 - 2026-08-31 公共源码目录发现命令曾意外枚举保密路径和两个一级目录项，但未列文件、
   未哈希、未读取内容或标签；偏差已记录于
-  `research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`，保密评测仍保持锁定。
+  `research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`。2026-09-02 的根目录误搜索
+  产生潜在保密内容访问，当前 `240+120` 包已隔离且不再具备一次性盲测资格；正式验证
+  需要在完整预测锁提交后由保管人重新生成，见
+  `research/PROTECTED_DATA_ACCESS_INCIDENT_20260902.md`。
 - Phase 0 产物：
   `research/V5_MODEL_DISCOVERY_CURRENT_STATUS.md`、
   `research/V5_MODEL_DISCOVERY_TASK_CONTRACT.md`、

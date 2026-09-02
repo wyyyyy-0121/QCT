@@ -60,7 +60,7 @@
 | EORL D0 | 失败并停止 | 26/60 可用错误、6/17 组、18 个事件/6 组源可恢复；双进程一致，LibreOffice 11/12；后验拓扑为 Info1 0/2、Integer 0/29、Modified EUSES 26/29 |
 | PCRC S1-S2 | S1 可用性失败，S2 未授权 | train/calibration/internal-test hard-negative 目标 5,246/1,127/1,476；internal-test 少于 2,000，未训练模型 |
 | 旧 `240+120` | 不可读 | 尚未有候选锁 |
-| 新保管人 `240+120` | 不可读 | 已就位；路径级偏差已记录；尚未有已提交的完整预测锁 |
+| 新保管人 `240+120` | 隔离，不可读 | 2026-09-02 根目录误搜索造成潜在内容访问，当前包失去一次性盲测资格；正式验证需要锁后重新生成的保管人包 |
 
 ## 论文结论上限
 
@@ -79,8 +79,9 @@ CWRP 已按 `research/V5_CROSS_WORKBOOK_ROLE_PRIOR_PLAN.md` 完成并因 U1/U2 �
 input-only 语料构建后，FCRL 只在 219 个冻结结构组中的 125 组保留了目标，违反全组
 覆盖先决条件，已在训练前终止。它没有生成 decoder 权重、没有运行 internal-test，
 也不是 `V5-R1`。U0/U1 结果见 `research/V5_FCRL_U0_RESULT.md` 和
-`research/V5_FCRL_U1_RESULT.md`，路径级偏差见
-`research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`。
+`research/V5_FCRL_U1_RESULT.md`。早期路径级偏差见
+`research/PROTECTED_DATA_ACCESS_INCIDENT_20260831.md`；2026-09-02 潜在内容访问及
+当前保密包失效边界见 `research/PROTECTED_DATA_ACCESS_INCIDENT_20260902.md`。
 
 VHRL 随后在 VEnron 资源门通过，但固定三版本代理只覆盖 29 个正结构组，低于 30 组
 门并在训练前停止。V4 残差上限审计证明 peer 候选确实存在明显可恢复空间；但随后
