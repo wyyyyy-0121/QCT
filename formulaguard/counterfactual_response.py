@@ -291,10 +291,16 @@ class _Evaluation:
 
 
 def _run_evaluation(
-    model: WorkbookModel, input_cell: CellKey, value: float
+    model: WorkbookModel,
+    input_cell: CellKey,
+    value: float,
+    response_cells: tuple[CellKey, ...],
 ) -> _Evaluation:
     try:
-        values, errors = model.evaluate(value_overrides={input_cell: value})
+        values, errors = model.evaluate(
+            value_overrides={input_cell: value},
+            targets=response_cells,
+        )
     except Exception as exc:  # noqa: BLE001 - probe failures are evidence, not run failures.
         return _Evaluation({}, {}, f"{type(exc).__name__}: {exc}")
     return _Evaluation(values, errors)
@@ -595,8 +601,9 @@ def build_counterfactual_response_signature(
     for cell in downstream[resolved.max_downstream :]:
         rejections.append(ResponseRejection("downstream_budget_exceeded", cell))
     downstream_cells = tuple(downstream[: resolved.max_downstream])
+    response_cells = (target, *downstream_cells)
 
-    base_values, base_errors = model.evaluate()
+    base_values, base_errors = model.evaluate(targets=response_cells)
     if target in base_errors:
         issue = EvaluationIssue(
             "base", target, None, "evaluation_error", base_errors[target]
@@ -745,7 +752,7 @@ def build_counterfactual_response_signature(
             continue
 
         evaluations = {
-            stage: _run_evaluation(model, input_cell, value)
+            stage: _run_evaluation(model, input_cell, value, response_cells)
             for stage, value in perturbed_values.items()
         }
         target_response, target_issues = _measure_response(

@@ -355,6 +355,7 @@ class WorkbookModel:
         overrides: Mapping[CellKey, str] | None = None,
         *,
         value_overrides: Mapping[CellKey, object] | None = None,
+        targets: Iterable[CellKey] | None = None,
     ):
         overrides = overrides or {}
         value_overrides = value_overrides or {}
@@ -362,7 +363,11 @@ class WorkbookModel:
         if overlap:
             labels = ", ".join(f"{sheet}!{address}" for sheet, address in sorted(overlap))
             raise ValueError(f"Value overrides cannot replace formula cells: {labels}")
-        values: dict[CellKey, object] = dict(self.cells)
+        values: dict[CellKey, object] = {
+            key: value
+            for key, value in self.cells.items()
+            if key not in self.formulas and key not in overrides
+        }
         values.update(value_overrides)
         errors: dict[CellKey, str] = {}
         visiting: set[CellKey] = set()
@@ -459,7 +464,8 @@ class WorkbookModel:
                 raise ValueError(f"Unsupported function {node.name}")
             raise TypeError(type(node))
 
-        for key in self.formula_cells:
+        requested = self.formula_cells if targets is None else tuple(dict.fromkeys(targets))
+        for key in requested:
             try:
                 value_of(key)
             except Exception:

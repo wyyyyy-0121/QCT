@@ -79,6 +79,25 @@ class WorkbookTests(unittest.TestCase):
         self.assertEqual(values[("Model", "C1")], 1)
         self.assertEqual(values[("Model", "C2")], 2)
 
+    def test_targeted_evaluation_matches_full_result_and_skips_unrelated_formulas(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 2, ("Model", "Z2"): 0},
+            {
+                ("Model", "B1"): "=A1+1",
+                ("Model", "C1"): "=B1*2",
+                ("Model", "Z1"): "=1/Z2",
+            },
+        )
+
+        full_values, full_errors = model.evaluate()
+        values, errors = model.evaluate(targets=[("Model", "C1")])
+
+        self.assertEqual(values[("Model", "C1")], full_values[("Model", "C1")])
+        self.assertEqual(values[("Model", "B1")], full_values[("Model", "B1")])
+        self.assertNotIn(("Model", "Z1"), values)
+        self.assertNotIn(("Model", "Z1"), errors)
+        self.assertIn(("Model", "Z1"), full_errors)
+
 
 if __name__ == "__main__":
     unittest.main()

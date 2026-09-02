@@ -1,5 +1,6 @@
 import json
 import unittest
+from unittest.mock import patch
 
 from formulaguard.counterfactual_response import (
     CounterfactualResponseConfig,
@@ -293,6 +294,37 @@ class CounterfactualResponseTests(unittest.TestCase):
         reasons = [rejection.reason for rejection in signature.rejections]
         self.assertEqual(reasons.count("input_budget_exceeded"), 2)
         self.assertEqual(reasons.count("downstream_budget_exceeded"), 1)
+
+    def test_response_evaluation_requests_only_target_and_selected_downstream(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 2, ("Model", "Z2"): 0},
+            {
+                ("Model", "B1"): "=A1+1",
+                ("Model", "C1"): "=B1*2",
+                ("Model", "D1"): "=C1+1",
+                ("Model", "Z1"): "=1/Z2",
+            },
+        )
+        requested = []
+        original = WorkbookModel.evaluate
+
+        def observed_evaluate(instance, *args, **kwargs):
+            requested.append(tuple(kwargs.get("targets") or ()))
+            return original(instance, *args, **kwargs)
+
+        with patch.object(WorkbookModel, "evaluate", new=observed_evaluate):
+            signature = build_response_signature(
+                model,
+                ("Model", "B1"),
+                config=CounterfactualResponseConfig(max_downstream=1),
+            )
+
+        self.assertTrue(signature.eligible)
+        self.assertTrue(requested)
+        self.assertEqual(
+            set(requested),
+            {(("Model", "B1"), ("Model", "C1"))},
+        )
 
 
 if __name__ == "__main__":
