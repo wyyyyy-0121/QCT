@@ -34,8 +34,9 @@ from formulaguard.pcrc import (
 from formulaguard.v5_psl_protocol import sha256 as sha256_file
 
 
-PROTOCOL = "formulaguard_formula_denoiser_pilot_v1"
+PROTOCOL = "formulaguard_formula_denoiser_pilot_v2"
 SEED = 260902
+MASK_TOKEN = "<MASK>"
 MUTATION_FAMILIES = (
     "operator",
     "function",
@@ -46,7 +47,7 @@ MUTATION_FAMILIES = (
 )
 MAX_SOURCE_TOKENS = MAX_CONTEXT_TOKENS + MAX_FORMULA_TOKENS
 DEFAULT_CORPUS = ROOT / "results/pcrc_corpus_v1"
-DEFAULT_OUTPUT = ROOT / "results/formula_denoiser_pilot_v1"
+DEFAULT_OUTPUT = ROOT / "results/formula_denoiser_pilot_v2"
 
 
 def write_json_atomic(path: Path, payload: object) -> None:
@@ -134,7 +135,30 @@ def load_vocabulary(path: Path) -> PCRCVocabulary:
     tokens = payload.get("tokens")
     if not isinstance(tokens, list):
         raise ValueError("formula denoiser vocabulary is malformed")
-    return PCRCVocabulary(tuple(str(token) for token in tokens))
+    values = tuple(str(token) for token in tokens)
+    if MASK_TOKEN in values:
+        raise ValueError("formula denoiser mask token unexpectedly entered the base vocabulary")
+    return PCRCVocabulary((*values, MASK_TOKEN))
+
+
+def masked_reference_corruption(
+    clean_tokens: Sequence[str],
+    *,
+    target_id: str,
+) -> tuple[str, ...] | None:
+    positions = [
+        index
+        for index, token in enumerate(clean_tokens)
+        if token.startswith("OFFSET_")
+        or token.startswith("DIGIT_")
+        or token in {"ROW_REL", "ROW_ABS", "COL_REL", "COL_ABS", "SELF", "OTHER"}
+    ]
+    if not positions:
+        return None
+    choice = int(hashlib.sha256(target_id.encode("ascii")).hexdigest(), 16) % len(positions)
+    result = list(clean_tokens)
+    result[positions[choice]] = MASK_TOKEN
+    return tuple(result)
 
 
 def _stable_limit(rows: Sequence[FormulaBase], maximum: int) -> list[FormulaBase]:
@@ -169,6 +193,13 @@ def load_bases(
                 family: vocabulary.encode(tokens, maximum=MAX_FORMULA_TOKENS)
                 for family, tokens in mutations
             }
+            masked_reference = masked_reference_corruption(
+                clean_tokens, target_id=str(item["target_id"])
+            )
+            if masked_reference is not None:
+                corruption_ids["masked_reference"] = vocabulary.encode(
+                    masked_reference, maximum=MAX_FORMULA_TOKENS
+                )
             if not corruption_ids:
                 continue
             split = str(item["split"])
@@ -476,7 +507,7 @@ def train(
     internal_bases = splits["internal_test"]
     train_families = tuple(
         family for family in MUTATION_FAMILIES if family != held_out_family
-    )
+    ) + ("masked_reference",)
     training = DenoisingDataset(train_bases, train_families, include_clean=True)
     calibration_recovery = DenoisingDataset(
         calibration_bases, (held_out_family,), include_clean=False
@@ -512,9 +543,13 @@ def train(
         "git_commit": git_commit(),
         "corpus_receipt_sha256": sha256_file(corpus / "corpus_receipt.json"),
         "vocabulary_sha256": sha256_file(corpus / "vocabulary.json"),
-        "held_out_mutation_family": held_out_family,
+        "model_vocabulary_sha256": hashlib.sha256(
+            "\0".join(vocabulary.tokens).encode("ascii")
+        ).hexdigest(),
+        "held_out_explicit_mutation_family": held_out_family,
         "training_mutation_families": list(train_families),
-        "mutation_family_entered_training": False,
+        "explicit_mutation_family_entered_training": False,
+        "reference_structure_self_supervision": "single_token_masking",
         "train_bases": len(train_bases),
         "training_rows": len(training),
         "calibration_recovery_rows": len(calibration_recovery),
@@ -565,7 +600,7 @@ def train(
         seed=SEED,
     )
     history = []
-    best_score: tuple[float, float, float] | None = None
+    best_score: tuple[float, ...] | None = None
     best_state: dict[str, Tensor] | None = None
     best_epoch = 0
     stale = 0
@@ -669,9 +704,10 @@ def train(
     torch.save({
         "protocol": PROTOCOL,
         "git_commit": metadata["git_commit"],
-        "held_out_mutation_family": held_out_family,
+        "held_out_explicit_mutation_family": held_out_family,
         "best_epoch": best_epoch,
         "vocabulary_sha256": metadata["vocabulary_sha256"],
+        "model_vocabulary_sha256": metadata["model_vocabulary_sha256"],
         "model_state": best_state,
     }, temporary)
     os.replace(temporary, model_path)

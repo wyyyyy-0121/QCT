@@ -8,12 +8,22 @@ from scripts.train_formula_denoiser_pilot import (
     DenoisingDataset,
     FormulaBase,
     canonical_generated,
+    masked_reference_corruption,
     peer_formula_bodies,
     peer_mode_prediction,
 )
 
 
 class FormulaDenoiserTests(unittest.TestCase):
+    def test_reference_masking_is_deterministic_and_changes_one_token(self):
+        tokens = ("REF", "SELF", "ROW_REL", "OFFSET_NEG", "DIGIT_2")
+        first = masked_reference_corruption(tokens, target_id="target")
+        second = masked_reference_corruption(tokens, target_id="target")
+        self.assertEqual(first, second)
+        self.assertIsNotNone(first)
+        self.assertEqual(sum(left != right for left, right in zip(tokens, first)), 1)
+        self.assertIn("<MASK>", first)
+
     def test_source_preserves_context_and_corrupted_formula_segments(self):
         source, segments = denoising_source((2, 4, 3), (2, 5, 3), maximum_length=6)
         self.assertEqual(source, (2, 4, 3, 2, 5, 3))
