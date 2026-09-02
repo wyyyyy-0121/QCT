@@ -30,6 +30,8 @@ from .formula import (
 from .workbook import CellKey, WorkbookModel
 
 DEFAULT_CANDIDATE_BUDGET = 32
+MAX_EXCEL_ROW = 1_048_576
+MAX_EXCEL_COLUMN = 16_384
 
 OPERATOR_REPLACEMENT = "operator_replacement"
 REFERENCE_OFFSET = "reference_offset"
@@ -93,7 +95,7 @@ def _moved_ref(ref: Ref, axis: str, delta: int) -> Ref | None:
     address = ref.address
     row = address.row + delta if axis == "row" else address.row
     col = address.col + delta if axis == "column" else address.col
-    if row < 1 or col < 1:
+    if row < 1 or row > MAX_EXCEL_ROW or col < 1 or col > MAX_EXCEL_COLUMN:
         return None
     return Ref(
         Address(
@@ -123,7 +125,12 @@ def _numeric_changes(number: Number) -> tuple[tuple[Number, float], ...]:
         changed_decimal = decimal_value + sign * step
         changed = float(changed_decimal)
         if math.isfinite(changed) and changed != number.value:
-            changes.append((Number(changed), float(sign * step)))
+            changes.append(
+                (
+                    Number(changed, source_text=str(changed_decimal)),
+                    float(sign * step),
+                )
+            )
     return tuple(changes)
 
 
@@ -307,6 +314,48 @@ def _all_formula_candidates(
     return unique
 
 
+def _round_robin(
+    groups: list[list[CounterfactualCandidate]],
+) -> list[CounterfactualCandidate]:
+    ordered: list[CounterfactualCandidate] = []
+    offsets = [0] * len(groups)
+    while True:
+        added = False
+        for index, group in enumerate(groups):
+            if offsets[index] >= len(group):
+                continue
+            ordered.append(group[offsets[index]])
+            offsets[index] += 1
+            added = True
+        if not added:
+            return ordered
+
+
+def _select_stratified_budget(
+    candidates: list[CounterfactualCandidate],
+    budget: int,
+) -> list[CounterfactualCandidate]:
+    if len(candidates) <= budget:
+        return candidates
+
+    by_kind_and_site: dict[str, dict[str, list[CounterfactualCandidate]]] = {}
+    for candidate in candidates:
+        by_site = by_kind_and_site.setdefault(candidate.edit_kind, {})
+        by_site.setdefault(candidate.witness.path, []).append(candidate)
+
+    kind_sequences: list[list[CounterfactualCandidate]] = []
+    for edit_kind in sorted(
+        by_kind_and_site,
+        key=lambda kind: (_EDIT_KIND_ORDER.get(kind, len(_EDIT_KIND_ORDER)), kind),
+    ):
+        by_site = by_kind_and_site[edit_kind]
+        site_groups = [by_site[path] for path in sorted(by_site)]
+        kind_sequences.append(_round_robin(site_groups))
+
+    selected = _round_robin(kind_sequences)[:budget]
+    return sorted(selected, key=candidate_sort_key)
+
+
 def generate_formula_candidates(
     formula: str,
     target_address: str,
@@ -318,7 +367,10 @@ def generate_formula_candidates(
     if checked_budget == 0:
         _plain_target(target_address)
         return []
-    return _all_formula_candidates(formula, target_address)[:checked_budget]
+    return _select_stratified_budget(
+        _all_formula_candidates(formula, target_address),
+        checked_budget,
+    )
 
 
 def _resolved_references(node: Node, current_sheet: str) -> set[CellKey] | None:
@@ -352,14 +404,24 @@ def generate_counterfactual_candidates(
     *,
     budget: int = DEFAULT_CANDIDATE_BUDGET,
 ) -> list[CounterfactualCandidate]:
-    """Generate candidates whose references remain valid and acyclic in ``model``."""
+    """Generate candidates whose references remain valid and acyclic in ``model``.
+
+    A reference to an unstored cell on a known worksheet is legal Excel and is
+    therefore retained. Only unknown worksheets, out-of-grid coordinates, and
+    dependency cycles are rejected here; later behavioral evidence decides
+    whether a legal blank reference is a plausible repair.
+    """
     checked_budget = _checked_budget(budget)
     if key not in model.formulas:
         raise KeyError(f"Formula cell not found: {key[0]}!{key[1]}")
     if checked_budget == 0:
         return []
 
-    known_cells = set(model.cells) | set(model.formulas)
+    known_sheets = (
+        set(model.sheet_visibility)
+        | {cell[0] for cell in model.cells}
+        | {cell[0] for cell in model.formulas}
+    )
     descendants = model.dependency_graph().descendants(key)
     original = normalized_formula(model.formulas[key])
     valid: list[CounterfactualCandidate] = []
@@ -375,15 +437,13 @@ def generate_counterfactual_candidates(
         references = _resolved_references(node, key[0])
         if references is None or key in references:
             continue
-        if not references.issubset(known_cells):
+        if any(reference[0] not in known_sheets for reference in references):
             continue
         if references & descendants:
             continue
         seen.add(normalized)
         valid.append(candidate)
-        if len(valid) >= checked_budget:
-            break
-    return valid
+    return _select_stratified_budget(valid, checked_budget)
 
 
 __all__ = [

@@ -44,11 +44,40 @@ class FormulaCandidateTests(unittest.TestCase):
 
         self.assertEqual(full, repeated)
         self.assertEqual(full, sorted(full, key=candidate_sort_key))
-        self.assertEqual(limited, full[:7])
         self.assertEqual(len(limited), 7)
+        self.assertEqual(limited, sorted(limited, key=candidate_sort_key))
+        self.assertTrue(
+            {OPERATOR_REPLACEMENT, REFERENCE_OFFSET, NUMERIC_CONSTANT}.issubset(
+                {candidate.edit_kind for candidate in limited}
+            )
+        )
         normalized = [normalized_formula(item.formula) for item in full]
         self.assertEqual(len(normalized), len(set(normalized)))
         self.assertNotIn(normalized_formula("=A2+B2*1.5"), normalized)
+
+    def test_budget_is_stratified_across_edit_kinds_and_ast_sites(self):
+        candidates = generate_formula_candidates(
+            "=SUM(A1:A2)+B1+C1+D1+E1+F1+G1+H1+I1+J1+1",
+            "K1",
+            budget=32,
+        )
+
+        self.assertEqual(len(candidates), 32)
+        self.assertEqual(
+            {candidate.edit_kind for candidate in candidates},
+            {
+                OPERATOR_REPLACEMENT,
+                REFERENCE_OFFSET,
+                RANGE_BOUNDARY,
+                NUMERIC_CONSTANT,
+            },
+        )
+        operator_sites = {
+            candidate.witness.path
+            for candidate in candidates
+            if candidate.edit_kind == OPERATOR_REPLACEMENT
+        }
+        self.assertGreater(len(operator_sites), 1)
 
     def test_offsets_preserve_absolute_markers_and_never_cross_a1_boundary(self):
         candidates = generate_formula_candidates("=$A$1", "$C$4", budget=100)
@@ -57,6 +86,12 @@ class FormulaCandidateTests(unittest.TestCase):
         self.assertEqual(formulas, {"=$A$2", "=$B$1"})
         self.assertTrue(
             all(candidate.edit_kind == REFERENCE_OFFSET for candidate in candidates)
+        )
+
+        upper_bound = generate_formula_candidates("=$XFD$1", "A1", budget=100)
+        self.assertEqual(
+            {candidate.formula for candidate in upper_bound},
+            {"=$XFC$1", "=$XFD$2"},
         )
 
     def test_decimal_constant_uses_its_smallest_rendered_decimal_place(self):
@@ -73,7 +108,50 @@ class FormulaCandidateTests(unittest.TestCase):
         rounded = generate_formula_candidates("=0.1234567", "A1", budget=100)
         self.assertEqual(
             [candidate.formula for candidate in rounded],
-            ["=0.123456", "=0.123458"],
+            ["=0.1234566", "=0.1234568"],
+        )
+
+    def test_non_numeric_edit_preserves_untouched_high_precision_constant(self):
+        candidates = generate_formula_candidates(
+            "=0.1234567*A1+987654.32109",
+            "B2",
+            budget=100,
+        )
+        non_numeric = [
+            candidate
+            for candidate in candidates
+            if candidate.edit_kind != NUMERIC_CONSTANT
+        ]
+
+        self.assertTrue(non_numeric)
+        self.assertTrue(
+            all(
+                "0.1234567" in candidate.formula
+                and "987654.32109" in candidate.formula
+                for candidate in non_numeric
+            )
+        )
+        self.assertIn(
+            "=((0.1234567*A2)+987654.32109)",
+            {candidate.formula for candidate in non_numeric},
+        )
+
+    def test_numeric_edit_preserves_the_other_numeric_literal(self):
+        candidates = generate_formula_candidates(
+            "=0.1234567+987654.32109",
+            "B1",
+            budget=100,
+        )
+        left_edits = [
+            candidate
+            for candidate in candidates
+            if candidate.edit_kind == NUMERIC_CONSTANT
+            and candidate.witness.path == "root.left"
+        ]
+
+        self.assertEqual(len(left_edits), 2)
+        self.assertTrue(
+            all("987654.32109" in candidate.formula for candidate in left_edits)
         )
 
     def test_zero_budget_and_invalid_source_return_no_candidates(self):
@@ -86,7 +164,7 @@ class FormulaCandidateTests(unittest.TestCase):
 
 
 class WorkbookCandidateTests(unittest.TestCase):
-    def test_workbook_filter_rejects_unknown_and_self_references(self):
+    def test_workbook_filter_keeps_blank_cells_but_rejects_self_references(self):
         model = WorkbookModel.from_cells(
             {("S", "A1"): 2, ("S", "B1"): 3},
             {("S", "C1"): "=B1+1"},
@@ -98,8 +176,8 @@ class WorkbookCandidateTests(unittest.TestCase):
             if candidate.edit_kind == REFERENCE_OFFSET
         ]
 
-        # B1 -> B2 is unknown, B1 -> C1 is self-referential, and B1 -> A1 is valid.
-        self.assertEqual(reference_candidates, ["=(A1+1)"])
+        # B2 is an unstored but legal blank cell; C1 is self-referential.
+        self.assertEqual(reference_candidates, ["=(B2+1)", "=(A1+1)"])
         self.assertTrue(
             all(
                 normalized_formula(candidate.formula)
@@ -124,7 +202,7 @@ class WorkbookCandidateTests(unittest.TestCase):
             ["=A1"],
         )
 
-    def test_range_boundaries_require_every_referenced_cell_to_exist(self):
+    def test_range_boundaries_may_expand_into_legal_blank_cells(self):
         model = WorkbookModel.from_cells(
             {("S", f"A{row}"): row for row in range(1, 5)},
             {("S", "C5"): "=SUM(A1:A3)"},
@@ -136,9 +214,20 @@ class WorkbookCandidateTests(unittest.TestCase):
             if candidate.edit_kind == RANGE_BOUNDARY
         }
 
+        self.assertTrue(
+            {"=SUM(A1:A2)", "=SUM(A1:A4)", "=SUM(A2:A3)"}.issubset(range_formulas)
+        )
+        self.assertIn("=SUM(A1:B3)", range_formulas)
+
+    def test_workbook_filter_rejects_references_to_unknown_sheets(self):
+        model = WorkbookModel.from_cells(
+            {("S", "A1"): 2},
+            {("S", "C1"): "=Ghost!A1"},
+        )
+
         self.assertEqual(
-            range_formulas,
-            {"=SUM(A1:A2)", "=SUM(A1:A4)", "=SUM(A2:A3)"},
+            generate_counterfactual_candidates(model, ("S", "C1"), budget=100),
+            [],
         )
 
     def test_workbook_budget_is_applied_after_validity_filtering(self):
@@ -155,8 +244,12 @@ class WorkbookCandidateTests(unittest.TestCase):
         limited = generate_counterfactual_candidates(model, ("S", "C1"), budget=6)
 
         self.assertGreater(len(full), 6)
-        self.assertEqual(limited, full[:6])
         self.assertEqual(limited, sorted(limited, key=candidate_sort_key))
+        self.assertTrue(
+            {OPERATOR_REPLACEMENT, REFERENCE_OFFSET, NUMERIC_CONSTANT}.issubset(
+                {candidate.edit_kind for candidate in limited}
+            )
+        )
 
 
 if __name__ == "__main__":

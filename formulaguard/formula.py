@@ -4,11 +4,11 @@ from __future__ import annotations
 
 import math
 import re
-from dataclasses import dataclass
+from collections.abc import Iterable, Iterator
+from dataclasses import dataclass, field
 from difflib import SequenceMatcher
-from typing import Iterable, Iterator, Sequence
 
-from .a1 import Address, num_to_col, parse_address
+from .a1 import Address, parse_address
 
 
 REF_PATTERN = r"(?:(?:'(?:(?:'')|[^'])+'|[A-Za-z_][A-Za-z0-9_.]*)!)?\$?[A-Za-z]{1,3}\$?[1-9]\d*"
@@ -34,6 +34,7 @@ class Token:
 @dataclass(frozen=True)
 class Number:
     value: float
+    source_text: str | None = field(default=None, compare=False, repr=False)
 
 
 @dataclass(frozen=True)
@@ -166,7 +167,7 @@ class Parser:
         token = self.current
         if token.kind == "NUMBER":
             self.index += 1
-            return Number(float(token.value))
+            return Number(float(token.value), source_text=token.value)
         if token.kind == "REF":
             self.index += 1
             left = _parse_ref(token.value)
@@ -253,7 +254,9 @@ def _format_ref(ref: Ref) -> str:
 
 def render(node: Node) -> str:
     if isinstance(node, Number):
-        return str(int(node.value)) if node.value.is_integer() else f"{node.value:g}"
+        if node.source_text is not None:
+            return node.source_text
+        return str(int(node.value)) if node.value.is_integer() else repr(node.value)
     if isinstance(node, Ref):
         return _format_ref(node)
     if isinstance(node, Range):
