@@ -314,3 +314,23 @@
   防护、有限校准、基线、消融及迁移门；EORL 证据只能作为已关闭路线的机制边界。
 - 没有决定：没有证明所有用户指定输出任务都不可行，没有授权神经网络、`V5-R1` 或
   保密评估，也没有产生相对 V4 或公开学术基线的提升。
+
+## D0022：PCRC 候选分布对齐修订预注册
+
+- 日期：2026-09-02
+- 依据：`research/V5_PCRC_PREREGISTRATION.md` 及同名 JSON；冻结发生在 PCRC 语料
+  构建、训练或预测前。
+- 必要纠正：仓库中已有 2026-08-31 的神经 semantic compatibility 双编码器。它的
+  校准候选准确率 48.58%、选择性 internal-test 准确率 66.93%，均未过冻结门；揭晓
+  public repair-margin Top-5 31.05%，低于 V4 的 57.89%。不得把同一想法换名重跑。
+- 新假设：只检验冻结的可执行 peer repair 候选分布、目标遮蔽结构上下文和 repair-
+  observed compatibility margin 是否能提供 V4 稳定晋升信号。网络、AST、peer、候选
+  修复、masked prediction 和 selective promotion 都不是原创主张。
+- 已知可行性：SpreadsheetBench v1 input-only 固定为 607 簿、219 组、74,570 公式；
+  200-target 审计有 23,605 个目标。揭晓 public 60 错误的源上有 42 个 peer 候选、38
+  个正确角色候选；两 peer 支持仍有 32 个，但控制同样常有候选，所以支持本身不判错。
+- 决定：允许固定小型双向 GRU 双编码器、三档学习率校准和一次 S1/S2。S1 失败不得读
+  public 预测；S2 失败不得接收 SpreadsheetBench v2 或保密数据。全部门通过仍只授权
+  外部输入预测锁，不自动授权 `V5-R1`。
+- 受保护数据：仍禁止列目录、哈希、读取、搜索或重合审计；历史非保密试用包不进入
+  PCRC 训练。
