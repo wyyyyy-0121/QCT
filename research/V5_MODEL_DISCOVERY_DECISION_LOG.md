@@ -334,3 +334,21 @@
   外部输入预测锁，不自动授权 `V5-R1`。
 - 受保护数据：仍禁止列目录、哈希、读取、搜索或重合审计；历史非保密试用包不进入
   PCRC 训练。
+
+## D0023：PCRC S1 候选可用性失败并停止
+
+- 日期：2026-09-02
+- 依据：实现锁 `7278de8`、上下文不支持公式修正 `f3dd4d6`、
+  `research/V5_PCRC_S1_AVAILABILITY_RESULT.md` 和
+  `results/pcrc_corpus_v1/corpus_receipt.json`；回执 SHA-256 为
+  `9ee07fcbac3c20912773c3416d232971b38ae275125dd2fc840954c5615ea1c3`。
+- 完整性：24 workers 完成 607/607 个 input-only 工作簿和 153/33/33 个结构组；第二
+  进程复用并校验全部分片，回执不变；answer、标签和保密输入均为空。
+- 观察：train/calibration/internal-test 分别有 5,246/1,127/1,476 个含冻结可执行 peer
+  hard negative 的目标，候选数为 13,231/2,864/2,671。internal-test 的 1,476 低于
+  预注册至少 2,000 个目标门。
+- 计数纠正：冻结前观察的 2,303 internal-test 是更宽的任意局部替代，不等同于 PCRC
+  的 shape-matched、translated、parser-supported、去等价候选。不得换回旧候选来过门。
+- 决定：PCRC 在训练前停止；不运行三档学习率、校准、internal-test、public、
+  SpreadsheetBench v2 或保密评估，不降低 2,000 门，不授权 `V5-R1`。
+- 受保护数据：未列目录、未哈希、未读取、未搜索或用于本轮任何工件。
