@@ -7,12 +7,13 @@ import posixpath
 import statistics
 import xml.etree.ElementTree as ET
 import zipfile
+from bisect import bisect_left
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable, Mapping
 
-from .a1 import iter_rect, parse_address, plain_address
+from .a1 import parse_address, plain_address
 from .formula import (
     Binary,
     FormulaSyntaxError,
@@ -161,6 +162,14 @@ class WorkbookModel:
         self.sheet_visibility = {
             str(sheet): bool(visible)
             for sheet, visible in (sheet_visibility or {}).items()
+        }
+        coordinate_index: dict[str, list[tuple[int, int, CellKey]]] = defaultdict(list)
+        for key in all_cells:
+            address = parse_address(key[1])
+            coordinate_index[key[0]].append((address.row, address.col, key))
+        self._coordinate_index = {
+            sheet: tuple(sorted(entries))
+            for sheet, entries in coordinate_index.items()
         }
         self._ast_cache: dict[str, Node] = {}
 
@@ -311,6 +320,44 @@ class WorkbookModel:
             self._ast_cache[formula] = parse_formula(formula)
         return self._ast_cache[formula]
 
+    def _range_keys(
+        self,
+        sheet: str,
+        start,
+        end,
+        *,
+        extra_keys: Iterable[CellKey] = (),
+    ) -> tuple[CellKey, ...]:
+        row_min, row_max = sorted((start.row, end.row))
+        column_min, column_max = sorted((start.col, end.col))
+        entries = self._coordinate_index.get(sheet, ())
+        index = bisect_left(entries, (row_min, 0, ("", "")))
+        keys: set[CellKey] = set()
+        for row, column, key in entries[index:]:
+            if row > row_max:
+                break
+            if column_min <= column <= column_max:
+                keys.add(key)
+        for key in extra_keys:
+            if key[0] != sheet or key in keys:
+                continue
+            address = parse_address(key[1])
+            if (
+                row_min <= address.row <= row_max
+                and column_min <= address.col <= column_max
+            ):
+                keys.add(key)
+        return tuple(
+            sorted(
+                keys,
+                key=lambda key: (
+                    parse_address(key[1]).row,
+                    parse_address(key[1]).col,
+                    key,
+                ),
+            )
+        )
+
     def fingerprints(self, overrides: Mapping[CellKey, str] | None = None) -> dict[CellKey, str]:
         overrides = overrides or {}
         result: dict[CellKey, str] = {}
@@ -341,8 +388,11 @@ class WorkbookModel:
                     dependents[source].add(cell)
                 else:
                     sheet = item.start.sheet or item.end.sheet or cell[0]
-                    for address in iter_rect(item.start.address, item.end.address):
-                        source = (sheet, address)
+                    for source in self._range_keys(
+                        sheet,
+                        item.start.address,
+                        item.end.address,
+                    ):
                         precedents[cell].add(source)
                         dependents[source].add(cell)
         for key in set(self.cells) | set(self.formulas):
@@ -404,7 +454,15 @@ class WorkbookModel:
                 return value_of((node.sheet or current_sheet, node.address.a1.replace("$", "")))
             if isinstance(node, Range):
                 sheet = node.start.sheet or node.end.sheet or current_sheet
-                return [value_of((sheet, address)) for address in iter_rect(node.start.address, node.end.address)]
+                return [
+                    value_of(key)
+                    for key in self._range_keys(
+                        sheet,
+                        node.start.address,
+                        node.end.address,
+                        extra_keys=value_overrides,
+                    )
+                ]
             if isinstance(node, Unary):
                 val = numeric(eval_node(node.value, current_sheet))  # type: ignore[arg-type]
                 return val if node.op == "+" else -val

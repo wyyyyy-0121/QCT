@@ -98,6 +98,27 @@ class WorkbookTests(unittest.TestCase):
         self.assertNotIn(("Model", "Z1"), errors)
         self.assertIn(("Model", "Z1"), full_errors)
 
+    def test_full_column_range_materializes_only_present_cells(self):
+        model = WorkbookModel.from_cells(
+            {("Model", "A1"): 10, ("Model", "A3"): 20},
+            {("Model", "B1"): "=AVERAGE(A1:A1048576)"},
+        )
+
+        graph = model.dependency_graph()
+        values, errors = model.evaluate()
+        changed, changed_errors = model.evaluate(
+            value_overrides={("Model", "A2"): 30}
+        )
+
+        self.assertEqual(
+            graph.precedents[("Model", "B1")],
+            {("Model", "A1"), ("Model", "A3")},
+        )
+        self.assertFalse(errors)
+        self.assertFalse(changed_errors)
+        self.assertEqual(values[("Model", "B1")], 15)
+        self.assertEqual(changed[("Model", "B1")], 20)
+
 
 if __name__ == "__main__":
     unittest.main()
