@@ -5,6 +5,7 @@ from formulaguard.reference_progression import (
     directional_progression_peers,
     formula_offsets,
     progression_decision,
+    progression_residual,
 )
 from formulaguard.workbook import WorkbookModel
 
@@ -48,6 +49,23 @@ class ReferenceProgressionTests(unittest.TestCase):
             directional_progression_peers(first, ("S", "D2")),
             directional_progression_peers(second, ("S", "D2")),
         )
+
+    def test_peer_only_residual_detects_a_reference_progression_error(self):
+        peer_formulas = {
+            ("S", "B2"): "=A2",
+            ("S", "C2"): "=A2",
+            ("S", "E2"): "=A2",
+            ("S", "F2"): "=A2",
+        }
+        model = WorkbookModel.from_cells({}, {**peer_formulas, ("S", "D2"): "=B2"})
+        peers = directional_progression_peers(model, ("S", "D2"))
+        correct = progression_residual(formula_tokens("=A2", "D2", "S"), peers)
+        corrupted = progression_residual(formula_tokens("=B2", "D2", "S"), peers)
+        self.assertTrue(correct.supported)
+        self.assertEqual(correct.residual, 0.0)
+        self.assertTrue(corrupted.supported)
+        self.assertGreater(corrupted.residual, 0.0)
+        self.assertEqual(corrupted.reason, "progression_anomaly")
 
     def test_constant_or_undersupported_peers_abstain(self):
         candidates = (("REF", "SELF", "ROW_REL", "OFFSET_ZERO", "DIGIT_0",

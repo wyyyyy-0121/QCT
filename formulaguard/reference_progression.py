@@ -35,6 +35,17 @@ class ProgressionDecision:
     reason: str
 
 
+@dataclass(frozen=True)
+class ProgressionResidual:
+    supported: bool
+    residual: float
+    axes: tuple[str, ...]
+    peer_count: int
+    slopes: tuple[str, ...]
+    expected_values: tuple[int, ...]
+    reason: str
+
+
 def directional_progression_peers(
     model: WorkbookModel,
     target: CellKey,
@@ -139,6 +150,36 @@ def _fit_offsets(
     return tuple(slopes), tuple(intercepts), sum(residuals, Fraction()) / len(residuals)
 
 
+def _exact_progression_fits(
+    peers: Sequence[ProgressionPeer],
+    minimum_peers: int,
+) -> list[
+    tuple[
+        str,
+        tuple[str, ...],
+        int,
+        tuple[Fraction, ...],
+        tuple[Fraction, ...],
+    ]
+]:
+    grouped: dict[tuple[str, tuple[str, ...]], list[tuple[int, tuple[int, ...]]]] = {}
+    for peer in peers:
+        parsed = formula_offsets(peer.tokens)
+        if not parsed.values:
+            continue
+        grouped.setdefault((peer.axis, parsed.skeleton), []).append(
+            (peer.delta, parsed.values)
+        )
+    fits = []
+    for (axis, skeleton), rows in grouped.items():
+        if len(rows) < minimum_peers or len({x for x, _ in rows}) < minimum_peers:
+            continue
+        slopes, intercepts, peer_error = _fit_offsets(rows)
+        if peer_error == 0 and any(slope != 0 for slope in slopes):
+            fits.append((axis, skeleton, len(rows), slopes, intercepts))
+    return fits
+
+
 def progression_decision(
     candidates: Sequence[Sequence[str]],
     peers: Sequence[ProgressionPeer],
@@ -149,24 +190,12 @@ def progression_decision(
     if minimum_peers < 3:
         raise ValueError("reference progression requires at least three peers")
     parsed_candidates = [formula_offsets(candidate) for candidate in candidates]
-    grouped: dict[tuple[str, tuple[str, ...]], list[tuple[int, tuple[int, ...]]]] = {}
-    for peer in peers:
-        parsed = formula_offsets(peer.tokens)
-        if not parsed.values:
-            continue
-        grouped.setdefault((peer.axis, parsed.skeleton), []).append(
-            (peer.delta, parsed.values)
-        )
-
     predictions: list[
-        tuple[int, str, int, tuple[Fraction, ...], Fraction, Fraction]
+        tuple[int, str, int, tuple[Fraction, ...], Fraction]
     ] = []
-    for (axis, skeleton), rows in grouped.items():
-        if len(rows) < minimum_peers or len({x for x, _ in rows}) < minimum_peers:
-            continue
-        slopes, intercepts, peer_error = _fit_offsets(rows)
-        if peer_error != 0 or not any(slope != 0 for slope in slopes):
-            continue
+    for axis, skeleton, peer_count, slopes, intercepts in _exact_progression_fits(
+        peers, minimum_peers
+    ):
         errors = []
         for index, candidate in enumerate(parsed_candidates):
             if candidate.skeleton != skeleton or len(candidate.values) != len(intercepts):
@@ -182,7 +211,7 @@ def progression_decision(
         winners = [index for error, index in errors if error == best_error]
         if best_error == 0 and len(winners) == 1:
             predictions.append(
-                (winners[0], axis, len(rows), slopes, peer_error, best_error)
+                (winners[0], axis, peer_count, slopes, best_error)
             )
 
     candidate_indexes = {row[0] for row in predictions}
@@ -206,9 +235,65 @@ def progression_decision(
         axes=tuple(sorted({row[1] for row in supporting})),
         peer_count=max(row[2] for row in supporting),
         slopes=slopes,
-        peer_error=float(min(row[4] for row in supporting)),
-        candidate_error=float(min(row[5] for row in supporting)),
+        peer_error=0.0,
+        candidate_error=float(min(row[4] for row in supporting)),
         reason="unique_exact_nonconstant_progression",
+    )
+
+
+def progression_residual(
+    observed: Sequence[str],
+    peers: Sequence[ProgressionPeer],
+    *,
+    minimum_peers: int = 3,
+) -> ProgressionResidual:
+    """Measure an observed formula against a unique peer-only expectation."""
+    if minimum_peers < 3:
+        raise ValueError("reference progression requires at least three peers")
+    parsed = formula_offsets(observed)
+    matching = [
+        (axis, peer_count, slopes, intercepts)
+        for axis, skeleton, peer_count, slopes, intercepts in _exact_progression_fits(
+            peers, minimum_peers
+        )
+        if skeleton == parsed.skeleton
+        and len(intercepts) == len(parsed.values)
+        and all(value.denominator == 1 for value in intercepts)
+    ]
+    expectations = {
+        tuple(int(value) for value in intercepts)
+        for _, _, _, intercepts in matching
+    }
+    if len(expectations) != 1:
+        return ProgressionResidual(
+            supported=False,
+            residual=0.0,
+            axes=tuple(sorted({row[0] for row in matching})),
+            peer_count=max((row[1] for row in matching), default=0),
+            slopes=(),
+            expected_values=(),
+            reason="no_unique_integer_expectation",
+        )
+    expected = next(iter(expectations))
+    residual = sum(
+        abs(observed_value - expected_value)
+        for observed_value, expected_value in zip(parsed.values, expected, strict=True)
+    ) / len(expected)
+    supporting = [
+        row
+        for row in matching
+        if tuple(int(value) for value in row[3]) == expected
+    ]
+    return ProgressionResidual(
+        supported=True,
+        residual=residual,
+        axes=tuple(sorted({row[0] for row in supporting})),
+        peer_count=max(row[1] for row in supporting),
+        slopes=tuple(
+            str(value) for row in supporting for value in row[2] if value != 0
+        ),
+        expected_values=expected,
+        reason="progression_anomaly" if residual > 0 else "progression_match",
     )
 
 
@@ -216,7 +301,9 @@ __all__ = [
     "FormulaOffsets",
     "ProgressionDecision",
     "ProgressionPeer",
+    "ProgressionResidual",
     "directional_progression_peers",
     "formula_offsets",
     "progression_decision",
+    "progression_residual",
 ]
