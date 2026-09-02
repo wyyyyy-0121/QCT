@@ -253,19 +253,20 @@ def _nearby_cells(
     target_row, target_col = _coordinate(target)
     target_format = _format_class(model, target)
     candidates: list[tuple[int, tuple[str, int, int, str], CellKey]] = []
-    for cell in model.formula_cells:
-        if cell == target or cell[0] != target[0]:
-            continue
-        row, col = _coordinate(cell)
-        if axis == "row":
-            compatible, distance = row == target_row, abs(col - target_col)
-        else:
-            compatible, distance = col == target_col, abs(row - target_row)
-        if (
-            compatible
-            and 0 < distance <= config.axis_radius
-            and _format_class(model, cell) == target_format
-        ):
+    lookup = {
+        (row, col): cell
+        for cell in model.formula_cells
+        if cell[0] == target[0]
+        for row, col in (_coordinate(cell),)
+    }
+    for direction in (-1, 1):
+        for distance in range(1, config.axis_radius + 1):
+            row = target_row if axis == "row" else target_row + direction * distance
+            col = target_col + direction * distance if axis == "row" else target_col
+            cell = lookup.get((row, col))
+            # A blank or differently formatted formula marks a role boundary.
+            if cell is None or _format_class(model, cell) != target_format:
+                break
             candidates.append((distance, _cell_sort(cell), cell))
     candidates.sort()
     return [item[2] for item in candidates]

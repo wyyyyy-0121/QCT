@@ -88,6 +88,23 @@ class BehavioralConsistencyTests(unittest.TestCase):
         self.assertEqual(audit["records"][0]["status"], "abstained")
         self.assertEqual(audit["records"][0]["reason"], "no_coherent_peer_axis")
 
+    def test_blank_gap_separates_unrelated_formula_blocks(self):
+        model = WorkbookModel.from_cells(
+            {("S", f"A{row}"): row for row in range(1, 4)},
+            {
+                ("S", "C4"): "=A1*2",
+                ("S", "D4"): "=A2*2",
+                ("S", "E4"): "=A3*2",
+                ("S", "K4"): "=A1",
+                ("S", "L4"): "=A2",
+            },
+        )
+
+        audit = audit_behavioral_consistency(model, targets=[("S", "K4")])
+
+        self.assertEqual(audit["records"][0]["status"], "abstained")
+        self.assertEqual(audit["records"][0]["reason"], "no_coherent_peer_axis")
+
     def test_correct_ast_candidate_closes_behavioral_outlier(self):
         model = WorkbookModel.from_cells(
             {("S", f"A{row}"): row for row in range(1, 5)},
