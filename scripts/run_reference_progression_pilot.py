@@ -358,12 +358,24 @@ def run(
         for row in rows
         if row["split"] == "train"
     )
-    split_groups = {
+    source_split_groups = {
+        split: {
+            str(payload["structure_group"])
+            for payload in payloads
+            if payload["split"] == split
+        }
+        for split in EXPECTED_GROUPS
+    }
+    if {
+        split: len(groups) for split, groups in source_split_groups.items()
+    } != EXPECTED_GROUPS:
+        raise ValueError("reference progression source structure-group splits changed")
+    eligible_split_groups = {
         split: {str(row["structure_group"]) for row in rows if row["split"] == split}
         for split in EXPECTED_GROUPS
     }
-    if {split: len(groups) for split, groups in split_groups.items()} != EXPECTED_GROUPS:
-        raise ValueError("reference progression structure-group splits changed")
+    if any(not groups for groups in eligible_split_groups.values()):
+        raise ValueError("reference progression has an empty eligible split")
     metrics = {
         split: summarize([row for row in rows if row["split"] == split], frequency)
         for split in EXPECTED_GROUPS
@@ -372,6 +384,12 @@ def run(
         **metadata,
         "complete": True,
         "targets": len(rows),
+        "source_structure_groups": {
+            split: len(groups) for split, groups in source_split_groups.items()
+        },
+        "eligible_structure_groups": {
+            split: len(groups) for split, groups in eligible_split_groups.items()
+        },
         "metrics": metrics,
         "combined_shards_sha256": stable_hash([
             [path.name, sha256_file(path)] for path in sorted(shards.glob("*.json"))
