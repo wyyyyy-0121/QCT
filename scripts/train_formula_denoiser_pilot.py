@@ -462,11 +462,15 @@ def train(
         raise ValueError("formula denoiser output already exists")
     configure(SEED)
     vocabulary = load_vocabulary(corpus / "vocabulary.json")
-    splits = load_bases(
+    complete_splits = load_bases(
         corpus,
         vocabulary,
-        maximum_targets_per_split=maximum_targets_per_split,
+        maximum_targets_per_split=0,
     )
+    splits = {
+        split: _stable_limit(rows, maximum_targets_per_split)
+        for split, rows in complete_splits.items()
+    }
     train_bases = splits["train"]
     calibration_bases = splits["calibration"]
     internal_bases = splits["internal_test"]
@@ -495,7 +499,11 @@ def train(
     allowed_output_ids = {
         vocabulary.ids["<UNK>"],
         vocabulary.ids["<END>"],
-        *(token for base in train_bases for token in base.clean_ids[1:-1]),
+        *(
+            token
+            for base in complete_splits["train"]
+            for token in base.clean_ids[1:-1]
+        ),
     }
     output.mkdir(parents=True)
     metadata = {
@@ -515,6 +523,7 @@ def train(
         "internal_control_rows": len(internal_controls),
         "selection_calibration_bases": len(selection_bases),
         "maximum_targets_per_split": maximum_targets_per_split,
+        "output_grammar_train_bases": len(complete_splits["train"]),
         "epochs": epochs,
         "batch_size": batch_size,
         "workers": workers,
@@ -584,10 +593,16 @@ def train(
             workers=workers,
             beam_size=1,
         )
+        net_recovery = (
+            float(recovery["top1_exact_recovery"])
+            - float(controls["action_rate"])
+        )
         score = (
+            net_recovery,
             float(recovery["top1_exact_recovery"]),
             -float(controls["action_rate"]),
             float(recovery["structure_group_macro_top1"]),
+            -mean_loss,
         )
         history.append({
             "epoch": epoch,

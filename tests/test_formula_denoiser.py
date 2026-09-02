@@ -41,6 +41,25 @@ class FormulaDenoiserTests(unittest.TestCase):
         self.assertTrue(torch.isneginf(logits[..., 0]).all())
         self.assertTrue(torch.isfinite(logits[..., 3:6]).all())
 
+    def test_copy_alignment_skips_context_and_formula_start(self):
+        model = FormulaDenoiser(
+            8,
+            maximum_source_length=8,
+            maximum_target_length=6,
+            model_size=16,
+            attention_heads=4,
+            encoder_layers=1,
+            decoder_layers=1,
+            feedforward_size=32,
+            dropout=0.0,
+        )
+        aligned = model.aligned_copy_ids(
+            torch.tensor([[2, 4, 3, 2, 5, 6, 3, 0]]),
+            torch.tensor([[0, 0, 0, 1, 1, 1, 1, 0]]),
+            4,
+        )
+        self.assertEqual(aligned.tolist(), [[5, 6, 3, 0]])
+
     def test_beam_generation_stops_at_end_token(self):
         model = FormulaDenoiser(
             8,

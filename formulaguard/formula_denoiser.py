@@ -7,6 +7,7 @@ from collections.abc import Sequence
 
 import torch
 from torch import Tensor, nn
+from torch.nn import functional as F
 
 
 CONTEXT_SEGMENT = 0
@@ -99,6 +100,7 @@ class FormulaDenoiser(nn.Module):
         self.source_norm = nn.LayerNorm(model_size)
         self.target_norm = nn.LayerNorm(model_size)
         self.output_bias = nn.Parameter(torch.zeros(vocabulary_size))
+        self.copy_gate = nn.Linear(model_size, 1)
         allowed = torch.ones(vocabulary_size, dtype=torch.bool)
         if allowed_output_ids is not None:
             allowed.zero_()
@@ -120,6 +122,35 @@ class FormulaDenoiser(nn.Module):
         nn.init.normal_(self.source_position.weight, mean=0.0, std=0.02)
         nn.init.normal_(self.target_position.weight, mean=0.0, std=0.02)
         nn.init.zeros_(self.output_bias)
+        nn.init.zeros_(self.copy_gate.weight)
+        nn.init.constant_(self.copy_gate.bias, 4.0)
+
+    def aligned_copy_ids(
+        self,
+        source_ids: Tensor,
+        source_segments: Tensor,
+        target_length: int,
+    ) -> Tensor:
+        """Align each predicted position with the observed formula token to preserve."""
+
+        if source_ids.shape != source_segments.shape or target_length < 1:
+            raise ValueError("formula denoiser copy alignment shape differs")
+        result = torch.full(
+            (source_ids.size(0), target_length),
+            self.padding_id,
+            dtype=torch.long,
+            device=source_ids.device,
+        )
+        for row in range(source_ids.size(0)):
+            formula = source_ids[row][
+                source_segments[row].eq(CORRUPTED_FORMULA_SEGMENT)
+                & source_ids[row].ne(self.padding_id)
+            ]
+            # Decoder position zero predicts the token after <START>.
+            available = min(target_length, max(0, formula.numel() - 1))
+            if available:
+                result[row, :available] = formula[1 : available + 1]
+        return result
 
     def encode(self, source_ids: Tensor, source_segments: Tensor) -> tuple[Tensor, Tensor]:
         if (
@@ -147,6 +178,7 @@ class FormulaDenoiser(nn.Module):
         memory: Tensor,
         source_padding_mask: Tensor,
         target_input_ids: Tensor,
+        copy_token_ids: Tensor | None = None,
     ) -> Tensor:
         if (
             target_input_ids.ndim != 2
@@ -173,6 +205,12 @@ class FormulaDenoiser(nn.Module):
             memory_key_padding_mask=source_padding_mask,
         )
         logits = decoded @ self.token_embedding.weight.transpose(0, 1) + self.output_bias
+        if copy_token_ids is not None:
+            if copy_token_ids.shape != target_input_ids.shape:
+                raise ValueError("formula denoiser copy token batch shape differs")
+            copy_boost = F.softplus(self.copy_gate(decoded)).squeeze(-1)
+            copy_boost = copy_boost * copy_token_ids.ne(self.padding_id)
+            logits.scatter_add_(2, copy_token_ids[:, :, None], copy_boost[:, :, None])
         return logits.masked_fill(~self.allowed_output[None, None, :], float("-inf"))
 
     def forward(
@@ -182,7 +220,12 @@ class FormulaDenoiser(nn.Module):
         target_input_ids: Tensor,
     ) -> Tensor:
         memory, source_padding_mask = self.encode(source_ids, source_segments)
-        return self.decode_logits(memory, source_padding_mask, target_input_ids)
+        copy_token_ids = self.aligned_copy_ids(
+            source_ids, source_segments, target_input_ids.size(1)
+        )
+        return self.decode_logits(
+            memory, source_padding_mask, target_input_ids, copy_token_ids
+        )
 
     @torch.no_grad()
     def beam_generate(
@@ -219,12 +262,22 @@ class FormulaDenoiser(nn.Module):
         expanded_padding = source_padding_mask[:, None, :].expand(
             batch, beam_size, source_padding_mask.size(1)
         ).reshape(batch * beam_size, source_padding_mask.size(1))
+        expanded_source = source_ids[:, None, :].expand(
+            batch, beam_size, source_ids.size(1)
+        ).reshape(batch * beam_size, source_ids.size(1))
+        expanded_segments = source_segments[:, None, :].expand(
+            batch, beam_size, source_segments.size(1)
+        ).reshape(batch * beam_size, source_segments.size(1))
 
         for _ in range(self.maximum_target_length - 1):
+            copy_token_ids = self.aligned_copy_ids(
+                expanded_source, expanded_segments, sequences.size(2)
+            )
             logits = self.decode_logits(
                 expanded_memory,
                 expanded_padding,
                 sequences.reshape(batch * beam_size, -1),
+                copy_token_ids,
             )[:, -1, :]
             log_probabilities = torch.log_softmax(logits.float(), dim=-1).reshape(
                 batch, beam_size, vocabulary_size
