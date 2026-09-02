@@ -1,6 +1,7 @@
 import unittest
 
 from formulaguard.counterfactual_candidates import (
+    FUNCTION_REPLACEMENT,
     NUMERIC_CONSTANT,
     OPERATOR_REPLACEMENT,
     RANGE_BOUNDARY,
@@ -24,6 +25,7 @@ class FormulaCandidateTests(unittest.TestCase):
 
         expected = {
             "=((A1+SUM(B1:B3))+10)": OPERATOR_REPLACEMENT,
+            "=((A1*AVERAGE(B1:B3))+10)": FUNCTION_REPLACEMENT,
             "=((A2*SUM(B1:B3))+10)": REFERENCE_OFFSET,
             "=((A1*SUM(B1:B4))+10)": RANGE_BOUNDARY,
             "=((A1*SUM(B1:B3))+9)": NUMERIC_CONSTANT,
@@ -67,6 +69,7 @@ class FormulaCandidateTests(unittest.TestCase):
             {candidate.edit_kind for candidate in candidates},
             {
                 OPERATOR_REPLACEMENT,
+                FUNCTION_REPLACEMENT,
                 REFERENCE_OFFSET,
                 RANGE_BOUNDARY,
                 NUMERIC_CONSTANT,
@@ -92,6 +95,31 @@ class FormulaCandidateTests(unittest.TestCase):
         self.assertEqual(
             {candidate.formula for candidate in upper_bound},
             {"=$XFC$1", "=$XFD$2"},
+        )
+
+    def test_function_replacements_are_limited_to_aggregate_family(self):
+        aggregate = generate_formula_candidates("=MIN(A1:A3)", "B1", budget=100)
+        functions = {
+            candidate.formula
+            for candidate in aggregate
+            if candidate.edit_kind == FUNCTION_REPLACEMENT
+        }
+        self.assertEqual(
+            functions,
+            {
+                "=AVERAGE(A1:A3)",
+                "=COUNT(A1:A3)",
+                "=MAX(A1:A3)",
+                "=SUM(A1:A3)",
+            },
+        )
+
+        conditional = generate_formula_candidates("=IF(A1>0,A1,0)", "B1", budget=100)
+        self.assertFalse(
+            any(
+                candidate.edit_kind == FUNCTION_REPLACEMENT
+                for candidate in conditional
+            )
         )
 
     def test_decimal_constant_uses_its_smallest_rendered_decimal_place(self):

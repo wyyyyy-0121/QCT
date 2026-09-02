@@ -34,18 +34,21 @@ MAX_EXCEL_ROW = 1_048_576
 MAX_EXCEL_COLUMN = 16_384
 
 OPERATOR_REPLACEMENT = "operator_replacement"
+FUNCTION_REPLACEMENT = "function_replacement"
 REFERENCE_OFFSET = "reference_offset"
 RANGE_BOUNDARY = "range_boundary"
 NUMERIC_CONSTANT = "numeric_constant"
 
 _EDIT_KIND_ORDER = {
     OPERATOR_REPLACEMENT: 0,
-    REFERENCE_OFFSET: 1,
-    RANGE_BOUNDARY: 2,
-    NUMERIC_CONSTANT: 3,
+    FUNCTION_REPLACEMENT: 1,
+    REFERENCE_OFFSET: 2,
+    RANGE_BOUNDARY: 3,
+    NUMERIC_CONSTANT: 4,
 }
 _ARITHMETIC_OPERATORS = ("+", "-", "*", "/", "^")
 _COMPARISON_OPERATORS = ("=", "<>", "<", ">", "<=", ">=")
+_AGGREGATE_FUNCTIONS = ("SUM", "AVERAGE", "MIN", "MAX", "COUNT")
 _OPERATOR_ORDER = {
     operator: index
     for index, operator in enumerate((*_ARITHMETIC_OPERATORS, *_COMPARISON_OPERATORS))
@@ -235,6 +238,20 @@ def _mutations(node: Node, target: str, path: str = "root"):
         return
 
     if isinstance(node, Func):
+        if node.name in _AGGREGATE_FUNCTIONS:
+            for replacement in _AGGREGATE_FUNCTIONS:
+                if replacement == node.name:
+                    continue
+                yield _Mutation(
+                    Func(replacement, node.args),
+                    FUNCTION_REPLACEMENT,
+                    EditWitness(
+                        target,
+                        f"{path}.name",
+                        node.name,
+                        replacement,
+                    ),
+                )
         for index, argument in enumerate(node.args):
             for mutation in _mutations(argument, target, f"{path}.args[{index}]"):  # type: ignore[arg-type]
                 arguments = list(node.args)
@@ -448,6 +465,7 @@ def generate_counterfactual_candidates(
 
 __all__ = [
     "DEFAULT_CANDIDATE_BUDGET",
+    "FUNCTION_REPLACEMENT",
     "NUMERIC_CONSTANT",
     "OPERATOR_REPLACEMENT",
     "RANGE_BOUNDARY",
