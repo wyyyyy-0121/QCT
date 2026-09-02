@@ -20,7 +20,7 @@ from .counterfactual_response import (
     CounterfactualResponseSignature,
     build_response_signature,
 )
-from .workbook import CellKey, WorkbookModel
+from .workbook import CellKey, DependencyGraph, WorkbookModel
 
 PROTOCOL = "formulaguard_behavioral_consistency_v1"
 
@@ -272,6 +272,28 @@ def _nearby_cells(
     return [item[2] for item in candidates]
 
 
+def _frozen_peer_neighborhoods(
+    model: WorkbookModel,
+    targets: Sequence[CellKey],
+    config: BehavioralConsistencyConfig,
+    graph: DependencyGraph,
+) -> dict[CellKey, dict[str, tuple[CellKey, ...]]]:
+    """Select peers once from the observed graph, excluding dependency chains."""
+
+    neighborhoods: dict[CellKey, dict[str, tuple[CellKey, ...]]] = {}
+    for target in targets:
+        related = graph.ancestors(target) | graph.descendants(target)
+        neighborhoods[target] = {
+            axis: tuple(
+                cell
+                for cell in _nearby_cells(model, target, axis, config)
+                if cell not in related
+            )
+            for axis in ("column", "row")
+        }
+    return neighborhoods
+
+
 def _pairwise_median(
     peers: Sequence[CellKey],
     signatures: Mapping[CellKey, CanonicalResponse],
@@ -285,10 +307,10 @@ def _pairwise_median(
 
 
 def _record(
-    model: WorkbookModel,
     target: CellKey,
     signatures: Mapping[CellKey, CanonicalResponse],
     config: BehavioralConsistencyConfig,
+    peer_neighborhood: Mapping[str, Sequence[CellKey]],
 ) -> dict[str, object]:
     signature = signatures[target]
     if not signature.eligible:
@@ -304,7 +326,7 @@ def _record(
     for axis_index, axis in enumerate(("column", "row")):
         peers = [
             cell
-            for cell in _nearby_cells(model, target, axis, config)
+            for cell in peer_neighborhood[axis]
             if cell in signatures and signatures[cell].eligible
         ][: config.max_peers]
         if len(peers) < config.min_peers:
@@ -363,21 +385,27 @@ def audit_behavioral_consistency(
     missing = [cell for cell in selected if cell not in model.formulas]
     if missing:
         raise KeyError(f"formula target not found: {_label(missing[0])}")
+    graph = model.dependency_graph()
+    neighborhoods = _frozen_peer_neighborhoods(model, selected, resolved, graph)
     needed = set(selected)
     for target in selected:
         for axis in ("column", "row"):
-            needed.update(_nearby_cells(model, target, axis, resolved))
+            needed.update(neighborhoods[target][axis])
     signatures = {
         cell: canonical_response(
             build_response_signature(
                 model,
                 cell,
                 config=resolved.response_config,
+                graph=graph,
             )
         )
         for cell in sorted(needed, key=_cell_sort)
     }
-    records = [_record(model, target, signatures, resolved) for target in selected]
+    records = [
+        _record(target, signatures, resolved, neighborhoods[target])
+        for target in selected
+    ]
     return {
         "protocol": PROTOCOL,
         "label_free": True,
@@ -427,10 +455,43 @@ def rank_behavioral_candidates(
     """Rank candidate formulas by reduction in behavioral inconsistency."""
 
     resolved = config or BehavioralConsistencyConfig()
-    observed = audit_behavioral_consistency(model, targets=[target], config=resolved)[
-        "records"
-    ][0]
+    resolved.validate()
+    if target not in model.formulas:
+        raise KeyError(f"formula target not found: {_label(target)}")
+
+    observed_graph = model.dependency_graph()
+    neighborhoods = _frozen_peer_neighborhoods(
+        model,
+        (target,),
+        resolved,
+        observed_graph,
+    )
+    peer_cells = set(neighborhoods[target]["column"]) | set(
+        neighborhoods[target]["row"]
+    )
+    observed_signatures = {
+        cell: canonical_response(
+            build_response_signature(
+                model,
+                cell,
+                config=resolved.response_config,
+                graph=observed_graph,
+            )
+        )
+        for cell in sorted({target, *peer_cells}, key=_cell_sort)
+    }
+    observed = _record(
+        target,
+        observed_signatures,
+        resolved,
+        neighborhoods[target],
+    )
     observed_applicable = observed["status"] != "abstained"
+    frozen_peer_signatures = {
+        cell: signature
+        for cell, signature in observed_signatures.items()
+        if cell != target
+    }
     rows: list[dict[str, object]] = []
     seen: set[str] = set()
     for candidate in candidates:
@@ -442,11 +503,24 @@ def rank_behavioral_candidates(
         ):
             continue
         seen.add(formula)
-        record = audit_behavioral_consistency(
-            _clone_with_formula(model, target, formula),
-            targets=[target],
-            config=resolved,
-        )["records"][0]
+        candidate_model = _clone_with_formula(model, target, formula)
+        candidate_graph = candidate_model.dependency_graph()
+        candidate_signature = canonical_response(
+            build_response_signature(
+                candidate_model,
+                target,
+                config=resolved.response_config,
+                graph=candidate_graph,
+            )
+        )
+        candidate_signatures = dict(frozen_peer_signatures)
+        candidate_signatures[target] = candidate_signature
+        record = _record(
+            target,
+            candidate_signatures,
+            resolved,
+            neighborhoods[target],
+        )
         applicable = observed_applicable and record["status"] != "abstained"
         candidate_score = float(record["score"])
         improvement = float(observed["score"]) - candidate_score if applicable else None
