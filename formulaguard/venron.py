@@ -5,11 +5,10 @@ from __future__ import annotations
 import hashlib
 import re
 from collections import Counter
+from collections.abc import Iterable, Mapping
 from pathlib import Path, PurePosixPath
-from typing import Iterable, Mapping, Sequence
 
 import openpyxl
-
 
 ORDER_MEMBER = "VEnron1.0/Version/FileOrder.xls"
 GROUP_PATTERN = re.compile(r"^(\d+)_(\d+)_(.+)$")
@@ -143,10 +142,20 @@ def inspect_formula_workbook(path: Path) -> dict[str, object]:
                     if cell.data_type == "f" or (
                         isinstance(cell.value, str) and cell.value.startswith("=")
                     ):
+                        value = cell.value
+                        formula = (
+                            value
+                            if isinstance(value, str)
+                            else getattr(value, "text", None)
+                        )
+                        if not isinstance(formula, str) or not formula.strip():
+                            raise ValueError(
+                                "formula cell has no deterministic formula text"
+                            )
                         formulas.append({
                             "sheet": sheet.title,
                             "address": cell.coordinate,
-                            "formula": str(cell.value).strip(),
+                            "formula": formula.strip(),
                         })
     finally:
         workbook.close()
@@ -164,11 +173,11 @@ def inspect_formula_workbook(path: Path) -> dict[str, object]:
 def _formula_map(profile: Mapping[str, object]) -> dict[tuple[str, str], str]:
     rows = profile.get("formulas")
     if not isinstance(rows, list):
-        raise ValueError("VEnron profile has no formula list")
+        raise TypeError("VEnron profile has no formula list")
     result: dict[tuple[str, str], str] = {}
     for row in rows:
         if not isinstance(row, Mapping):
-            raise ValueError("VEnron formula profile row is malformed")
+            raise TypeError("VEnron formula profile row is malformed")
         key = (str(row.get("sheet", "")), str(row.get("address", "")))
         formula = str(row.get("formula", "")).strip()
         if not all(key) or not formula or key in result:

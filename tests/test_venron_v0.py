@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 import openpyxl
+from openpyxl.worksheet.formula import ArrayFormula
 
 from formulaguard.venron import (
     ORDER_MEMBER,
@@ -10,8 +11,7 @@ from formulaguard.venron import (
     inspect_formula_workbook,
     parse_order_workbook,
 )
-from scripts.prepare_venron_v0_corpus import validate_verbose_listing
-from scripts.prepare_venron_v0_corpus import _hash_record
+from scripts.prepare_venron_v0_corpus import _hash_record, validate_verbose_listing
 from scripts.score_venron_v0_gate import evaluate_gates
 
 
@@ -100,6 +100,24 @@ class VEnronV0Tests(unittest.TestCase):
                 "formula": "=SUM(A1:A2)",
             }])
             self.assertNotIn("private constant", str(observed))
+
+    def test_formula_inspection_extracts_array_formula_text(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "array.xlsx"
+            workbook = openpyxl.Workbook()
+            sheet = workbook.active
+            sheet["A1"] = 1
+            sheet["A2"] = 2
+            sheet["A3"] = ArrayFormula(ref="A3:A3", text="=SUM(A1:A2)")
+            workbook.save(path)
+            workbook.close()
+
+            observed = inspect_formula_workbook(path)
+            self.assertEqual(observed["formulas"], [{
+                "sheet": "Sheet",
+                "address": "A3",
+                "formula": "=SUM(A1:A2)",
+            }])
 
     def test_transition_separates_direct_move_bulk_and_no_change(self):
         single = compare_formula_profiles(
