@@ -41,6 +41,18 @@ def formula_map(profile: Mapping[str, object]) -> dict[tuple[str, str], str]:
     return result
 
 
+def profile_has_valid_formula_text(profile: Mapping[str, object]) -> bool:
+    rows = profile.get("formulas")
+    if not isinstance(rows, list):
+        return False
+    return all(
+        isinstance(row, Mapping)
+        and isinstance(row.get("formula"), str)
+        and str(row["formula"]).strip().startswith("=")
+        for row in rows
+    )
+
+
 def sheet_titles(profile: Mapping[str, object]) -> frozenset[str]:
     titles = profile.get("sheet_titles")
     if not isinstance(titles, list) or any(not isinstance(item, str) for item in titles):
@@ -203,6 +215,10 @@ def evaluate_u0_gates(summary: Mapping[str, object]) -> dict[str, bool]:
             summary.get("overlap_exclusion_complete") is True
             and int(summary.get("excluded_group_rows", 0)) == 0
         ),
+        "complete_group_invalid_profile_exclusion": (
+            summary.get("profile_text_validation_complete") is True
+            and int(summary.get("invalid_profile_group_rows", 0)) == 0
+        ),
         "integrity_and_reproducibility_ready": (
             summary.get("input_hashes_verified") is True
             and summary.get("group_order_verified") is True
@@ -281,6 +297,7 @@ __all__ = [
     "formula_map",
     "formula_signature",
     "near_duplicate",
+    "profile_has_valid_formula_text",
     "stable_id",
     "transition_is_candidate",
     "validate_private_manifest",

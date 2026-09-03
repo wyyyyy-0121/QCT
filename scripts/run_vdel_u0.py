@@ -32,6 +32,7 @@ from formulaguard.vdel import (
     evaluate_u0_gates,
     formula_signature,
     near_duplicate,
+    profile_has_valid_formula_text,
     stable_id,
     transition_is_candidate,
     validate_private_manifest,
@@ -90,6 +91,7 @@ SOURCE_PATHS = (
     "formulaguard/venron.py",
     "scripts/run_vdel_u0.py",
     "research/V5_VDEL_PREREGISTRATION.md",
+    "research/V5_VDEL_AMENDMENT_1.md",
 )
 
 
@@ -420,8 +422,26 @@ def run(
         raise ValueError("VDEL transition manifest does not cover every adjacent pair")
 
     candidate_groups = sorted({int(row["group_id"]) for row in candidates})
-    excluded_groups: dict[int, set[str]] = {}
+    invalid_profile_groups: set[int] = set()
     for position, group_id in enumerate(candidate_groups, 1):
+        if any(
+            not profile_has_valid_formula_text(load_profile(group_id, order))
+            for order in by_group[group_id]
+        ):
+            invalid_profile_groups.add(group_id)
+        if position % 20 == 0 or position == len(candidate_groups):
+            print(
+                f"VDEL formula-text-audited groups {position}/{len(candidate_groups)}",
+                flush=True,
+            )
+
+    valid_candidate_groups = [
+        group_id
+        for group_id in candidate_groups
+        if group_id not in invalid_profile_groups
+    ]
+    overlap_excluded_groups: dict[int, set[str]] = {}
+    for position, group_id in enumerate(valid_candidate_groups, 1):
         matched_cohorts: set[str] = set()
         for order in by_group[group_id]:
             signature = formula_signature(load_profile(group_id, order))
@@ -431,16 +451,22 @@ def run(
             if matched_cohorts:
                 break
         if matched_cohorts:
-            excluded_groups[group_id] = matched_cohorts
-        if position % 20 == 0 or position == len(candidate_groups):
-            print(f"VDEL overlap-audited groups {position}/{len(candidate_groups)}", flush=True)
+            overlap_excluded_groups[group_id] = matched_cohorts
+        if position % 20 == 0 or position == len(valid_candidate_groups):
+            print(
+                f"VDEL overlap-audited groups {position}/{len(valid_candidate_groups)}",
+                flush=True,
+            )
 
     ranking_windows: list[dict[str, object]] = []
     controls: list[dict[str, object]] = []
     classifications: Counter[str] = Counter()
     for position, transition in enumerate(candidates, 1):
         group_id = int(transition["group_id"])
-        if group_id in excluded_groups:
+        if group_id in invalid_profile_groups:
+            classifications["excluded_invalid_profile_group"] += 1
+            continue
+        if group_id in overlap_excluded_groups:
             classifications["excluded_overlap_group"] += 1
             continue
         current_order = int(transition["current_order"])
@@ -478,13 +504,24 @@ def run(
     positive_count = sum(int(row["positive_count"]) for row in ranking_windows)
     negative_count = sum(int(row["negative_count"]) for row in ranking_windows)
     candidate_count = sum(int(row["available_candidate_count"]) for row in ranking_windows)
-    excluded_hashes = sorted(stable_id("vdel-group", group_id) for group_id in excluded_groups)
-    excluded_from_rows = sum(
-        str(row["group_id_hash"]) in set(excluded_hashes)
+    overlap_excluded_hashes = sorted(
+        stable_id("vdel-group", group_id) for group_id in overlap_excluded_groups
+    )
+    invalid_profile_hashes = sorted(
+        stable_id("vdel-group", group_id) for group_id in invalid_profile_groups
+    )
+    overlap_excluded_from_rows = sum(
+        str(row["group_id_hash"]) in set(overlap_excluded_hashes)
+        for row in [*ranking_windows, *controls]
+    )
+    invalid_profile_from_rows = sum(
+        str(row["group_id_hash"]) in set(invalid_profile_hashes)
         for row in [*ranking_windows, *controls]
     )
     overlap_by_cohort = Counter(
-        cohort for cohorts_for_group in excluded_groups.values() for cohort in cohorts_for_group
+        cohort
+        for cohorts_for_group in overlap_excluded_groups.values()
+        for cohort in cohorts_for_group
     )
     summary = {
         "v0_profiles": len(profiles),
@@ -493,12 +530,17 @@ def run(
         "potential_delta_transitions": len(candidates),
         "potential_delta_groups": len(candidate_groups),
         "public_workbooks_profiled": len(public_units),
-        "overlap_candidate_groups_audited": len(candidate_groups),
-        "overlap_excluded_groups": len(excluded_groups),
-        "overlap_excluded_group_hashes": excluded_hashes,
+        "profile_text_groups_audited": len(candidate_groups),
+        "invalid_profile_groups": len(invalid_profile_groups),
+        "invalid_profile_group_hashes": invalid_profile_hashes,
+        "profile_text_validation_complete": True,
+        "invalid_profile_group_rows": invalid_profile_from_rows,
+        "overlap_candidate_groups_audited": len(valid_candidate_groups),
+        "overlap_excluded_groups": len(overlap_excluded_groups),
+        "overlap_excluded_group_hashes": overlap_excluded_hashes,
         "overlap_excluded_groups_by_public_cohort": dict(sorted(overlap_by_cohort.items())),
         "overlap_exclusion_complete": True,
-        "excluded_group_rows": excluded_from_rows,
+        "excluded_group_rows": overlap_excluded_from_rows,
         "classifications": dict(sorted(classifications.items())),
         "ranking_windows": len(ranking_windows),
         "ranking_window_groups": len(ranking_group_hashes),

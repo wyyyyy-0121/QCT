@@ -13,6 +13,7 @@ from formulaguard.vdel import (
     fold_for_group,
     formula_signature,
     near_duplicate,
+    profile_has_valid_formula_text,
     transition_is_candidate,
     validate_private_manifest,
 )
@@ -85,6 +86,22 @@ class VDELPrimitiveTests(unittest.TestCase):
             near_duplicate(
                 formula_signature(profile(first_rows[:19])),
                 formula_signature(profile(exact_rows[:19])),
+            )
+        )
+
+    def test_formula_text_validation_rejects_object_renderings(self):
+        self.assertTrue(
+            profile_has_valid_formula_text(profile([("S", "A1", "=SUM(B1:B2)")]))
+        )
+        self.assertFalse(
+            profile_has_valid_formula_text(
+                profile([
+                    (
+                        "S",
+                        "A1",
+                        "<openpyxl.worksheet.formula.ArrayFormula object at 0x1234>",
+                    )
+                ])
             )
         )
 
@@ -194,6 +211,8 @@ class VDELPrimitiveTests(unittest.TestCase):
             "no_reedit_control_groups": 15,
             "overlap_exclusion_complete": True,
             "excluded_group_rows": 0,
+            "profile_text_validation_complete": True,
+            "invalid_profile_group_rows": 0,
             "input_hashes_verified": True,
             "group_order_verified": True,
             "candidate_accounting_verified": True,
