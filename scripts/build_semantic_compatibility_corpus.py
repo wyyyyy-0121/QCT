@@ -11,8 +11,8 @@ import os
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -35,7 +35,6 @@ from scripts.build_fcrl_u1_corpus import (
     stable_hash,
     write_json_atomic,
 )
-
 
 PROTOCOL = "formulaguard_semantic_compatibility_corpus_v2"
 MAX_TARGETS_PER_WORKBOOK = 32

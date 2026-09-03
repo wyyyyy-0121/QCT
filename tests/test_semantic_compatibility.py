@@ -24,15 +24,11 @@ from scripts.build_semantic_compatibility_corpus import (
 )
 from scripts.extract_semantic_compatibility_embeddings import (
     CONTEXT_SIZE,
-    PROTOCOL as EMBEDDING_PROTOCOL,
     _resolve_target_key,
     _validate_embedding_payload,
 )
-from scripts.train_semantic_compatibility import (
-    EvaluationRow,
-    _candidate_roles,
-    evaluate_gates,
-    group_bootstrap_interval,
+from scripts.extract_semantic_compatibility_embeddings import (
+    PROTOCOL as EMBEDDING_PROTOCOL,
 )
 from scripts.score_semantic_compatibility_selective import (
     SelectiveRow,
@@ -40,6 +36,12 @@ from scripts.score_semantic_compatibility_selective import (
     internal_gates,
     select_threshold,
     wilson_interval,
+)
+from scripts.train_semantic_compatibility import (
+    EvaluationRow,
+    _candidate_roles,
+    evaluate_gates,
+    group_bootstrap_interval,
 )
 
 

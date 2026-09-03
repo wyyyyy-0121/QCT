@@ -955,7 +955,7 @@ class WorkbookModel:
         for key in requested:
             try:
                 value_of(key)
-            except Exception:
+            except Exception:  # noqa: BLE001, S110 intentional compatibility or fallback boundary; preserve runtime behavior
                 pass
         return values, errors
 

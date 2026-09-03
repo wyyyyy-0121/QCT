@@ -8,7 +8,6 @@ from collections.abc import Mapping, Sequence
 from .a1 import parse_address
 from .workbook import CellKey, WorkbookModel
 
-
 PROTOCOL = "formulaguard_eorl_v1"
 D0_PROTOCOL = "formulaguard_eorl_d0_v1"
 RELATIVE_TOLERANCE = 1e-9
@@ -179,12 +178,12 @@ def source_repair_recoverability(
         record = records_by_cell.get(cell_label(source), {})
         hypotheses = record.get("repair_hypotheses", [])
         if not isinstance(hypotheses, list):
-            raise ValueError(f"malformed repair hypotheses for {cell_label(source)}")
+            raise ValueError(f"malformed repair hypotheses for {cell_label(source)}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         if hypotheses:
             source_with_hypothesis += 1
         for hypothesis_index, hypothesis in enumerate(hypotheses, 1):
             if not isinstance(hypothesis, Mapping) or not isinstance(hypothesis.get("formula"), str):
-                raise ValueError(f"malformed repair hypothesis for {cell_label(source)}")
+                raise ValueError(f"malformed repair hypothesis for {cell_label(source)}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
             formula = str(hypothesis["formula"])
             evaluated += 1
             values, errors = observed.evaluate({source: formula})

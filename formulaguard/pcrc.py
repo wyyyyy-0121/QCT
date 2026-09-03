@@ -13,7 +13,6 @@ from .formula import Binary, Func, Node, Number, Range, Ref, Unary, parse_formul
 from .model_discovery import SignalAuditConfig, audit_workbook
 from .workbook import CellKey, WorkbookModel
 
-
 PROTOCOL = "formulaguard_pcrc_v1"
 CORPUS_PROTOCOL = "formulaguard_pcrc_corpus_v1"
 MAX_TARGETS_PER_WORKBOOK = 200
@@ -330,10 +329,10 @@ def workbook_examples(
         seen = {observed}
         hypotheses = record.get("repair_hypotheses", [])
         if not isinstance(hypotheses, list):
-            raise ValueError("PCRC repair hypotheses are malformed")
+            raise ValueError("PCRC repair hypotheses are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         for hypothesis in hypotheses:
             if not isinstance(hypothesis, Mapping) or not isinstance(hypothesis.get("formula"), str):
-                raise ValueError("PCRC repair hypothesis is malformed")
+                raise ValueError("PCRC repair hypothesis is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
             encoded = formula_tokens(str(hypothesis["formula"]), target[1], target[0])
             if encoded in seen:
                 continue
@@ -374,7 +373,7 @@ class PCRCVocabulary:
         self.ids = {token: index for index, token in enumerate(self.tokens)}
 
     @classmethod
-    def build(cls, token_rows: Sequence[Sequence[str]]) -> "PCRCVocabulary":
+    def build(cls, token_rows: Sequence[Sequence[str]]) -> PCRCVocabulary:
         counts: dict[str, int] = {}
         for row in token_rows:
             for token in row:
@@ -394,10 +393,10 @@ __all__ = [
     "MAX_CONTEXT_TOKENS",
     "MAX_FORMULA_TOKENS",
     "MAX_TARGETS_PER_WORKBOOK",
-    "PCRCVocabulary",
     "PEER_CONFIG",
     "PROTOCOL",
     "SPECIAL_TOKENS",
+    "PCRCVocabulary",
     "formula_tokens",
     "masked_context_tokens",
     "numeric_category",

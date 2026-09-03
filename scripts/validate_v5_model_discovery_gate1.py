@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
-
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 CARDS_PATH = ROOT / "research/V5_MODEL_DISCOVERY_METHOD_CARDS.json"
@@ -55,7 +55,7 @@ def load_cards(path: Path = CARDS_PATH) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
-        raise ValueError("method cards must be a JSON object")
+        raise ValueError("method cards must be a JSON object")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return value
 
 

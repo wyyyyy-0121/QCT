@@ -7,16 +7,15 @@ import hashlib
 import json
 import subprocess
 import sys
-from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.v4_rrc import rerank, structure_fold  # noqa: E402
-from scripts.extract_peer_repair_closure import (  # noqa: E402
+from formulaguard.v4_rrc import rerank, structure_fold
+from scripts.extract_peer_repair_closure import (
     DEFAULT_PROFILES,
     DEFAULT_SIGNALS,
     DEFAULT_V4,
@@ -25,20 +24,28 @@ from scripts.extract_peer_repair_closure import (  # noqa: E402
     _load_sources,
     _reject_protected,
 )
-from scripts.extract_peer_repair_responsibility import (  # noqa: E402
+from scripts.extract_peer_repair_responsibility import (
     DEFAULT_OUTPUT as DEFAULT_RESPONSIBILITY,
+)
+from scripts.extract_peer_repair_responsibility import (
     RUN_PROTOCOL as RESPONSIBILITY_RUN_PROTOCOL,
+)
+from scripts.extract_peer_repair_responsibility import (
     _validate_record,
 )
-from scripts.run_model_discovery_signals import read_profiles, sha256, shard_name  # noqa: E402
-from scripts.run_v4_residual_controller import (  # noqa: E402
+from scripts.run_model_discovery_signals import (
+    read_profiles,
+    sha256,
+    shard_name,
+)
+from scripts.run_v4_residual_controller import (
     DEFAULT_EVENTS,
     load_event_rows,
     source_rank,
     stable_hash,
 )
-from scripts.run_v4_rrc_required_baselines import write_immutable  # noqa: E402
-from scripts.score_peer_repair_closure import (  # noqa: E402
+from scripts.run_v4_rrc_required_baselines import write_immutable
+from scripts.score_peer_repair_closure import (
     BOOTSTRAP_SAMPLES,
     BOOTSTRAP_SEED,
     EXPECTED_CONTROLS,
@@ -48,7 +55,6 @@ from scripts.score_peer_repair_closure import (  # noqa: E402
     _bootstrap_delta,
     _error_metrics,
 )
-
 
 PROTOCOL = "formulaguard_peer_repair_responsibility_score_v1"
 PREDICTION_PROTOCOL = "formulaguard_peer_repair_responsibility_prediction_v1"
@@ -116,7 +122,7 @@ def load_responsibility(
             raise ValueError(f"unexpected or duplicate responsibility unit: {unit_id!r}")
         audit = signals[unit_id].get("audit")
         if not isinstance(audit, dict):
-            raise ValueError(f"source peer audit is malformed: {unit_id}")
+            raise ValueError(f"source peer audit is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         result[unit_id] = _validate_record(path, profiles_by_id[unit_id], audit)
     if set(result) != set(profiles_by_id):
         raise ValueError("responsibility unit inventory differs from profiles")
@@ -131,7 +137,7 @@ def build_prediction(
     ranking = v4_payload.get("ranking")
     probe = responsibility_payload.get("probe")
     if not isinstance(ranking, list) or not isinstance(probe, Mapping):
-        raise ValueError(f"V4 or responsibility payload is malformed: {unit_id}")
+        raise ValueError(f"V4 or responsibility payload is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     v4_cells = tuple(str(row["cell"]) for row in ranking if isinstance(row, Mapping))
     if len(v4_cells) != len(ranking) or len(v4_cells) != len(set(v4_cells)):
         raise ValueError(f"V4 ranking is malformed: {unit_id}")
@@ -238,7 +244,7 @@ def event_rows(
         prediction = predictions[unit_id]
         ranking = v4[unit_id]["ranking"]
         if not isinstance(ranking, list):
-            raise ValueError(f"V4 ranking is malformed: {unit_id}")
+            raise ValueError(f"V4 ranking is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         v4_cells = [str(row["cell"]) for row in ranking if isinstance(row, Mapping)]
         if list(event["v4_rank"]) != v4_cells:
             raise ValueError(f"event V4 ranking differs from frozen source: {unit_id}")

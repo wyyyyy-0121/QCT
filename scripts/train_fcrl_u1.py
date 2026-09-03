@@ -4,15 +4,14 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import random
 import subprocess
 import time
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 import torch
 
@@ -29,16 +28,15 @@ from formulaguard.workbook import WorkbookModel
 from scripts.build_fcrl_u1_corpus import (
     DEFAULT_CORPUS_MANIFEST,
     DEFAULT_CORPUS_RECEIPT,
+    DEFAULT_FORTAP_SOURCE,
     DEFAULT_INPUT_ROOT,
     DEFAULT_INTAKE_MANIFEST,
-    DEFAULT_FORTAP_SOURCE,
     EXPECTED_GROUPS,
     load_sources,
     sha256_file,
     stable_hash,
     write_json_atomic,
 )
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_fcrl_u1_training_v1"

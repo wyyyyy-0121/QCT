@@ -4,7 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 REQUIRED_PREFIXES = ("formulaguard/",)
 REQUIRED_FILES = {
     "scripts/run_experiments.py",

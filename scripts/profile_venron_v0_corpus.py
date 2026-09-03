@@ -12,11 +12,10 @@ import shutil
 import subprocess
 import tempfile
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
 
 from formulaguard.venron import inspect_formula_workbook, stable_record_id
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_profile_v0"
@@ -148,7 +147,7 @@ def _convert_one(
             "formulas": formula_profile["formulas"],
             "failure_type": "",
         }
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         target.unlink(missing_ok=True)
         return {
             **base,

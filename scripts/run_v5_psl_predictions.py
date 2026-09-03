@@ -10,8 +10,8 @@ import re
 import subprocess
 import sys
 import time
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -40,7 +40,6 @@ from formulaguard.v5_psl_protocol import (
 from formulaguard.v52 import v52_from_v4
 from formulaguard.workbook import WorkbookModel
 from scripts.freeze_v5_psl_candidate import BASELINE_POLICY, candidate_source_files
-
 
 FORBIDDEN_SECRET_NAMES = {
     "cases.csv", "third_party_declaration.json",
@@ -277,14 +276,14 @@ def audit_prediction_shard(
         raise ValueError(f"Shard method inventory is invalid: {path.name}")
     for method_name, payload in methods.items():
         if not isinstance(payload, dict):
-            raise ValueError(f"Invalid method payload {method_name}: {path.name}")
+            raise ValueError(f"Invalid method payload {method_name}: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         ranking = payload.get("ranking")
         if not isinstance(ranking, list):
-            raise ValueError(f"Missing complete ranking {method_name}: {path.name}")
+            raise ValueError(f"Missing complete ranking {method_name}: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         validate_complete_ranking(ranking, formula_cells)
         action_cells = payload.get("action_cells")
         if not isinstance(action_cells, list):
-            raise ValueError(f"Invalid action cells {method_name}: {path.name}")
+            raise ValueError(f"Invalid action cells {method_name}: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         canonical_actions = [canonical_cell(cell) for cell in action_cells]
         if len(canonical_actions) != len(set(canonical_actions)):
             raise ValueError(f"Invalid action cells {method_name}: {path.name}")
@@ -431,7 +430,7 @@ def _verify_public_commitments(
 ) -> dict[str, str]:
     locked = candidate["third_party_commitments_received_before_lock"]
     if not isinstance(locked, Mapping):
-        raise ValueError("Candidate lock lacks third-party archive commitments")
+        raise ValueError("Candidate lock lacks third-party archive commitments")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     commitments = read_sha256_commitments(
         public_root / "secret_precommit_sha256.txt",
         required_names=FORBIDDEN_SECRET_NAMES,

@@ -5,12 +5,11 @@ from __future__ import annotations
 import hashlib
 import json
 from collections import Counter, defaultdict
-from typing import Mapping
+from collections.abc import Mapping
 
 from .a1 import Address, num_to_col, parse_address
 from .formula import Binary, Func, Node, Number, Range, Ref, Unary, parse_formula
 from .workbook import CellKey, WorkbookModel
-
 
 PROFILE_PROTOCOL = "formulaguard_cwrp_workbook_profile_v1"
 MASKED_EXAMPLE_PROTOCOL = "formulaguard_cwrp_masked_formula_example_v1"
@@ -127,7 +126,7 @@ def workbook_profile(model: WorkbookModel) -> dict[str, object]:
         fingerprint_counts[fingerprint] += 1
 
     sheet_signatures = []
-    for sheet, sheet_keys in by_sheet.items():
+    for sheet_keys in by_sheet.values():
         coordinates = [parse_address(key[1]) for key in sheet_keys]
         min_row = min((address.row for address in coordinates), default=1)
         min_col = min((address.col for address in coordinates), default=1)
@@ -167,11 +166,11 @@ def workbook_profile(model: WorkbookModel) -> dict[str, object]:
 def profile_counter(profile: Mapping[str, object]) -> Counter[str]:
     rows = profile.get("role_fingerprint_counts")
     if not isinstance(rows, list):
-        raise ValueError("profile has no role fingerprint counts")
+        raise ValueError("profile has no role fingerprint counts")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     counter: Counter[str] = Counter()
     for row in rows:
         if not isinstance(row, dict):
-            raise ValueError("role fingerprint count row is malformed")
+            raise ValueError("role fingerprint count row is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         fingerprint = str(row.get("fingerprint", ""))
         count = row.get("count")
         if not fingerprint or not isinstance(count, int) or count < 1:

@@ -10,9 +10,8 @@ import json
 import math
 import os
 import subprocess
-from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
 
 from formulaguard.venron import stable_record_id
 from formulaguard.venron_proxy import (
@@ -22,7 +21,6 @@ from formulaguard.venron_proxy import (
     exact_reversions,
     explicit_formula_errors,
 )
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_v1_scan_v1"
@@ -153,7 +151,7 @@ def scan(
     if not isinstance(versions, list) or not isinstance(profiles, list) or not isinstance(
         transitions, list
     ):
-        raise ValueError("VEnron V1 scan manifests are malformed")
+        raise ValueError("VEnron V1 scan manifests are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     profile_by_source = {str(row["source_relative_path"]): row for row in profiles}
     versions_by_group_order = {
         (int(row["group_id"]), int(row["version_order"])): row for row in versions

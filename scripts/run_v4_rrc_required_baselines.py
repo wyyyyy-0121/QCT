@@ -11,8 +11,8 @@ import os
 import subprocess
 import sys
 from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -28,13 +28,12 @@ from scripts.run_v4_residual_controller import (
     load_event_rows,
     load_json,
     load_shards,
-    relative,
     reject_protected,
+    relative,
     sha256,
     source_rank,
     stable_hash,
 )
-
 
 PROTOCOL = "formulaguard_v4_rrc_required_baselines_v1"
 DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/observation_profiles.csv"
@@ -76,7 +75,7 @@ def localization_rows(payload: Sequence[Mapping[str, object]]) -> list[Localizat
         sheet, address = str(row["cell"]).rsplit("!", 1)
         evidence = row.get("evidence")
         if not isinstance(evidence, dict):
-            raise ValueError("V4 ranking row lacks evidence")
+            raise ValueError("V4 ranking row lacks evidence")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         results.append(LocalizationResult(
             cell=(sheet, address),
             score=float(row["score"]),

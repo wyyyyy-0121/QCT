@@ -301,7 +301,7 @@ def _run_evaluation(
             value_overrides={input_cell: value},
             targets=response_cells,
         )
-    except Exception as exc:  # noqa: BLE001 - probe failures are evidence, not run failures.
+    except Exception as exc:  # Probe failures are evidence, not run failures.  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return _Evaluation({}, {}, f"{type(exc).__name__}: {exc}")
     return _Evaluation(values, errors)
 

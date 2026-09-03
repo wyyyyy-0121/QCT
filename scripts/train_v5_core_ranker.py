@@ -16,7 +16,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.v5_core import FEATURE_NAMES, _learned_score, fit_pairwise_linear_ranker
+from formulaguard.v5_core import (
+    FEATURE_NAMES,
+    _learned_score,
+    fit_pairwise_linear_ranker,
+)
 
 
 def read_jsonl(path: Path) -> list[dict]:

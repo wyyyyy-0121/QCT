@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from formulaguard.workbook import WorkbookModel
 from scripts.audit_core_reset_b_data import (
     InputLedger,
     build_audit,
@@ -13,7 +14,6 @@ from scripts.audit_core_reset_b_data import (
     workbook_profile,
 )
 from scripts.build_v6_dataset import write_xlsx
-from formulaguard.workbook import WorkbookModel
 
 
 def make_workbook(

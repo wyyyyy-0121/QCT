@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
 from fractions import Fraction
-from typing import Sequence
 
 from .a1 import parse_address
 from .pcrc import DIRECTIONAL_PEERS, PEER_CONFIG, formula_tokens

@@ -10,26 +10,24 @@ import os
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path, PurePosixPath
 from statistics import fmean
-from typing import Iterable, Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.cwrp import (  # noqa: E402
+from formulaguard.cwrp import (
     MASKED_EXAMPLE_PROTOCOL,
     MAX_TARGETS_PER_WORKBOOK,
     masked_formula_examples,
     stable_hash,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.acquire_cwrp_sheetjs import sha256  # noqa: E402
-from scripts.build_cwrp_corpus import PROTOCOL as CORPUS_PROTOCOL  # noqa: E402
-from scripts.convert_cwrp_sheetjs import write_json_atomic  # noqa: E402
-
+from formulaguard.workbook import WorkbookModel
+from scripts.acquire_cwrp_sheetjs import sha256
+from scripts.build_cwrp_corpus import PROTOCOL as CORPUS_PROTOCOL
+from scripts.convert_cwrp_sheetjs import write_json_atomic
 
 PROTOCOL = "formulaguard_cwrp_self_supervised_v1"
 DEFAULT_CORPUS = ROOT / "results/cwrp_corpus_v1"
@@ -92,7 +90,7 @@ def read_corpus(corpus_dir: Path, source_root: Path) -> tuple[list[dict[str, obj
         raise ValueError("corpus manifest hash differs from receipt")
     workbooks = manifest.get("workbooks")
     if not isinstance(workbooks, list):
-        raise ValueError("corpus manifest has no workbook list")
+        raise ValueError("corpus manifest has no workbook list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     rows = []
     seen: set[str] = set()
     group_folds: dict[str, int] = {}
@@ -169,7 +167,7 @@ def _validate_example(example: Mapping[str, object], expected: Mapping[str, obje
     if any(not isinstance(keys[level], str) or len(keys[level]) != 64 for level in LEVELS):
         raise ValueError("masked example context key is not a SHA-256")
     if not isinstance(example.get("target_fingerprint"), str):
-        raise ValueError("masked example target fingerprint is missing")
+        raise ValueError("masked example target fingerprint is missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     local_candidates = example.get("local_peer_candidates")
     if not isinstance(local_candidates, list) or len(local_candidates) > 5:
         raise ValueError("masked example has invalid local peer candidates")
@@ -183,7 +181,7 @@ def _validate_example(example: Mapping[str, object], expected: Mapping[str, obje
         ):
             raise ValueError("masked example has malformed local peer candidate")
     if not isinstance(example.get("locally_unsupported"), bool):
-        raise ValueError("masked example has invalid sparse-target flag")
+        raise ValueError("masked example has invalid sparse-target flag")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     if any(example.get(key) != 0 for key in (
         "sensitive_text_features", "raw_numeric_features", "sheet_name_features",
         "target_formula_features",
@@ -205,7 +203,7 @@ def _validate_shard(path: Path, expected: Mapping[str, object]) -> dict[str, obj
     ids = []
     for example in examples:
         if not isinstance(example, dict):
-            raise ValueError(f"example shard row is malformed: {path.name}")
+            raise ValueError(f"example shard row is malformed: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         _validate_example(example, expected)
         ids.append(str(example["example_id"]))
     if ids != sorted(ids) or len(ids) != len(set(ids)):

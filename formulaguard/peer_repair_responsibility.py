@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import math
 import re
-from typing import Mapping, Sequence
+from collections.abc import Mapping, Sequence
 
 from .a1 import parse_address
 from .localize import (
@@ -20,7 +20,6 @@ from .peer_repair_closure import (
     select_peer_candidate,
 )
 from .workbook import CellKey, WorkbookModel
-
 
 PROTOCOL = "formulaguard_peer_repair_responsibility_v1"
 MODEL_VERSION = "peer-repair-output-responsibility-label-free-v1"
@@ -44,11 +43,11 @@ def _cell_key(label: str, model: WorkbookModel) -> CellKey:
 def _record_map(audit: Mapping[str, object]) -> dict[str, Mapping[str, object]]:
     records = audit.get("records")
     if not isinstance(records, list):
-        raise ValueError("peer audit records are malformed")
+        raise ValueError("peer audit records are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     result: dict[str, Mapping[str, object]] = {}
     for row in records:
         if not isinstance(row, Mapping):
-            raise ValueError("peer audit record is malformed")
+            raise ValueError("peer audit record is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         label = str(row.get("cell", ""))
         if not label or label in result:
             raise ValueError("peer audit contains an empty or duplicate cell")
@@ -138,13 +137,13 @@ def probe_repair_responsibility(
     payload["candidate_peer_rank"] = 1
     hypotheses = records[candidate].get("repair_hypotheses")
     if not isinstance(hypotheses, list):
-        raise ValueError("selected peer repair hypotheses are malformed")
+        raise ValueError("selected peer repair hypotheses are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     if not hypotheses:
         payload["selection_reason"] = "peer_top1_has_no_repair_hypothesis"
         return payload
     first = hypotheses[0]
     if not isinstance(first, Mapping):
-        raise ValueError("first peer repair hypothesis is malformed")
+        raise ValueError("first peer repair hypothesis is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     repair_formula = first.get("formula")
     if not isinstance(repair_formula, str) or not repair_formula.startswith("="):
         raise ValueError("first peer repair hypothesis has no valid formula")

@@ -8,8 +8,8 @@ import json
 import platform
 import subprocess
 import sys
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 import torch
 
@@ -21,9 +21,9 @@ from formulaguard.fcrl_u1 import (
     stable_hash,
 )
 from scripts.build_fcrl_u1_corpus import write_json_atomic
-from scripts.freeze_fcrl_u1_candidate import LOCKED_SOURCES, PROTOCOL as LOCK_PROTOCOL
+from scripts.freeze_fcrl_u1_candidate import LOCKED_SOURCES
+from scripts.freeze_fcrl_u1_candidate import PROTOCOL as LOCK_PROTOCOL
 from scripts.train_fcrl_u1 import load_target_contract
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_fcrl_u1_score_v1"
@@ -95,10 +95,10 @@ def verify_candidate_lock(
 
     artifacts = payload.get("artifacts")
     if not isinstance(artifacts, dict):
-        raise ValueError("FCRL candidate artifacts are missing")
+        raise ValueError("FCRL candidate artifacts are missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     for name, record in artifacts.items():
         if not isinstance(record, dict):
-            raise ValueError(f"FCRL candidate artifact is invalid: {name}")
+            raise ValueError(f"FCRL candidate artifact is invalid: {name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         artifact = _repo_path(record.get("path"))
         if (
             not artifact.is_file()
@@ -114,7 +114,7 @@ def verify_candidate_lock(
             raise ValueError(f"FCRL locked source changed: {source}")
     source_paths = payload.get("source_paths")
     if not isinstance(source_paths, dict):
-        raise ValueError("FCRL source paths are missing")
+        raise ValueError("FCRL source paths are missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     fortap_source = _repo_path(source_paths.get("fortap_source"))
     _repo_path(source_paths.get("input_root"))
     if (

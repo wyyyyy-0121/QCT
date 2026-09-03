@@ -9,9 +9,9 @@ import math
 import subprocess
 import sys
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -28,13 +28,14 @@ from scripts.train_semantic_compatibility import (
     DEFAULT_TARGET_MANIFEST,
     DEFAULT_TARGET_RECEIPT,
     DEFAULT_VOCABULARY,
-    PROTOCOL as TRAINING_PROTOCOL,
     _batch_tensors,
     build_examples,
     load_embeddings,
     load_vocabulary,
 )
-
+from scripts.train_semantic_compatibility import (
+    PROTOCOL as TRAINING_PROTOCOL,
+)
 
 PROTOCOL = "formulaguard_semantic_compatibility_selective_v1"
 MIN_CALIBRATION_ACTIONS = 100

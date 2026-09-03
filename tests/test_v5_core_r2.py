@@ -3,14 +3,14 @@ import unittest
 from types import SimpleNamespace
 from unittest import mock
 
-from formulaguard.api import localize
 import formulaguard.v5_core_r2 as r2_module
+from formulaguard.api import localize
 from formulaguard.v5_core_r2 import (
     MODEL_VERSION,
     ObservationalEvidence,
     PlaceboEvidence,
-    observational_ranking,
     observational_probe_set,
+    observational_ranking,
     observational_source_evidence,
     observational_uncertainty_set,
     regime_conditioned_residuals,

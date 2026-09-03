@@ -10,9 +10,8 @@ import os
 import shutil
 import subprocess
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_inventory_v0"

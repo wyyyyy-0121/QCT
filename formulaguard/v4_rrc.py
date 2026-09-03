@@ -9,11 +9,10 @@ from __future__ import annotations
 
 import hashlib
 import math
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from typing import Mapping, Sequence
 
 import numpy as np
-
 
 CHANNELS = ("peer", "combined", "role", "impact")
 ATOMIC_NUMERIC = (
@@ -262,7 +261,7 @@ def candidate_feature_map(
         values[f"candidate_minus_fifth_{name}"] = (
             left - right if math.isfinite(left) and math.isfinite(right) else math.nan
         )
-    missing = sorted(set((*CONTINUOUS_FEATURES, *BINARY_FEATURES)) - set(values))
+    missing = sorted({*CONTINUOUS_FEATURES, *BINARY_FEATURES} - set(values))
     if missing:
         raise ValueError(f"feature extraction incomplete: {missing}")
     return values
@@ -442,7 +441,7 @@ def residual_utility(
         return -2.0
     sources = set(source_cells)
     before = bool(sources & set(v4_ranking[:5]))
-    after = bool(sources & set((*v4_ranking[:4], candidate)))
+    after = bool(sources & {*v4_ranking[:4], candidate})
     if after and not before:
         return 1.0
     if before and not after:

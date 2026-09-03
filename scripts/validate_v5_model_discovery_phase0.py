@@ -10,9 +10,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Iterable
-
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER_PATH = ROOT / "research/V5_MODEL_DISCOVERY_DATA_LEDGER.json"
@@ -54,7 +54,7 @@ def _binom_pmf(n: int, k: int, probability: float) -> float:
 
 
 def _binom_cdf(n: int, k: int, probability: float) -> float:
-    return sum(_binom_pmf(n, j, probability) for j in range(0, k + 1))
+    return sum(_binom_pmf(n, j, probability) for j in range(k + 1))
 
 
 def _binom_sf(n: int, k: int, probability: float) -> float:
@@ -169,7 +169,7 @@ def _read_json(path: Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
-        raise ValueError(f"{path} must contain a JSON object")
+        raise ValueError(f"{path} must contain a JSON object")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return value
 
 
@@ -261,7 +261,7 @@ def markdown_power_report(report: dict[str, Any]) -> str:
         "在一个结构组作为一个配对观测、显著性水平 `alpha=0.05`、精确双侧配对符号检验的",
         "保守计算下，25 个 Enron 工作簿组或 30 个最终模板组都不足以可靠检出 5 个百分",
         "点的 Top-5 改善。这里的功效取决于未知的配对不一致率；即使在本表设定的最好",
-        "不一致率条件下，25 组最大功效约为 `%.2f%%`，30 组最大功效约为 `%.2f%%`。" % (
+        "不一致率条件下，25 组最大功效约为 `{:.2f}%`，30 组最大功效约为 `{:.2f}%`。".format(
             100 * summary["25"]["five_pp_max_power"],
             100 * summary["30"]["five_pp_max_power"],
         ),
@@ -286,13 +286,9 @@ def markdown_power_report(report: dict[str, Any]) -> str:
     for n in (25, 30):
         item = summary[str(n)]
         lines.append(
-            "| %d | %.2f%% | %.2f%% | %.2f%% |"
-            % (
-                n,
-                100 * item["five_pp_min_power"],
-                100 * item["five_pp_max_power"],
-                100 * item["five_pp_mean_power"],
-            )
+            f"| {n} | {100 * item['five_pp_min_power']:.2f}% | "
+            f"{100 * item['five_pp_max_power']:.2f}% | "
+            f"{100 * item['five_pp_mean_power']:.2f}% |"
         )
     lines.extend([
         "",

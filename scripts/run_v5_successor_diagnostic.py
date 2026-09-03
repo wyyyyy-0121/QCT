@@ -10,8 +10,8 @@ import os
 import statistics
 import sys
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -30,7 +30,6 @@ from scripts.freeze_v5_psl_candidate import _git
 from scripts.run_v5_psl_predictions import audit_prediction_shard, predict_workbook
 from scripts.run_v5_psl_public_pressure import read_manifest
 from scripts.tune_v5_psl_parameters import FOLD_COUNT, assign_group_folds
-
 
 PROTOCOL = "v5_successor_baseline_diagnostic_v1"
 RANKING_METHODS = ("v4_r1", "v4_3_semantic_c", "v5_psl_dev1")

@@ -2,13 +2,12 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Sequence
 
 from .localize import LocalizationResult, v4_scores
 from .model_discovery import audit_workbook, validate_label_free_output
 from .workbook import WorkbookModel
-
 
 MODEL_VERSION = "v4-peer-fifth-exploratory-v1"
 ARCHITECTURE = "frozen_v4_top4_plus_peer_disagreement_fifth"

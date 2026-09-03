@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import sys
@@ -14,9 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.eorl import D0_PROTOCOL, PROTOCOL  # noqa: E402
-from scripts.run_model_discovery_signals import sha256, stable_hash  # noqa: E402
-
+from formulaguard.eorl import D0_PROTOCOL, PROTOCOL
+from scripts.run_model_discovery_signals import sha256, stable_hash
 
 PROTOCOL_REPRODUCTION = "formulaguard_eorl_d0_reproduction_v1"
 ARTIFACTS = ("tasks.jsonl", "scoring.jsonl", "cross_engine.jsonl", "receipt.json")
@@ -58,7 +56,7 @@ def verify(primary: Path, recheck: Path, output: Path) -> Path:
     )
     pre_gates = left.get("pre_reproduction_gates")
     if not isinstance(pre_gates, dict):
-        raise ValueError("EORL D0 pre-reproduction gates are malformed")
+        raise ValueError("EORL D0 pre-reproduction gates are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     gates = dict(pre_gates)
     gates["independent_process_byte_identical"] = independent_reproduction
     gates["protected_and_forbidden_inputs_absent"] = (

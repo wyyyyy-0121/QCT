@@ -14,15 +14,14 @@ import json
 import math
 from bisect import bisect_left
 from collections import Counter, defaultdict, deque
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 from .a1 import num_to_col, parse_address
 from .formula import (
     Binary,
     Func,
-    FormulaSyntaxError,
     Node,
     Number,
     Range,
@@ -32,7 +31,6 @@ from .formula import (
     translate_formula,
 )
 from .workbook import CellKey, DependencyGraph, WorkbookModel
-
 
 PROTOCOL = "formulaguard_model_discovery_label_free_signal_audit_v1"
 MODEL_VERSION = "model-discovery-atomic-signals-v1"
@@ -214,7 +212,7 @@ def _build_regions(
     """Build conservative contiguous formula regions without labels."""
 
     cells = tuple(sorted((key for key, ok in parseable.items() if ok), key=_cell_sort))
-    parent, find, union = _union_find(cells)
+    _parent, find, union = _union_find(cells)
     cell_set = set(cells)
     for key in cells:
         sheet, address_text = key
@@ -229,7 +227,7 @@ def _build_regions(
                     translate_formula(model.formulas[key], key[1], other[1])
                 )
                 right = normalized_formula(model.formulas[other])
-            except Exception:
+            except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
                 continue
             if translated == right or left == right:
                 union(key, other)
@@ -358,7 +356,7 @@ def _nearest_role(
     position = bisect_left(coordinates, target)
     window = ordered[max(0, position - limit * 2): position + limit * 2 + 1]
     candidates = [
-        (abs((_coordinate(item)[0] - _coordinate(key)[0])) + abs((_coordinate(item)[1] - _coordinate(key)[1])), _cell_sort(item), item)
+        (abs(_coordinate(item)[0] - _coordinate(key)[0]) + abs(_coordinate(item)[1] - _coordinate(key)[1]), _cell_sort(item), item)
         for item in window if item != key
     ]
     candidates.sort()
@@ -456,7 +454,7 @@ def audit_workbook(
             fingerprints[key] = all_fingerprints[key]
             shapes[key] = _shape_class(nodes[key])
             parseable[key] = True
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             parseable[key] = False
             parse_errors[key] = f"{type(exc).__name__}: {exc}"
             fingerprints[key] = "UNSUPPORTED"
@@ -571,7 +569,7 @@ def audit_workbook(
             try:
                 candidate = translate_formula(model.formulas[peer], peer[1], key[1])
                 candidate_norm = normalized_formula(candidate)
-            except Exception:
+            except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
                 continue
             peer_candidate[peer] = candidate_norm
             candidate_votes[candidate_norm] += 1

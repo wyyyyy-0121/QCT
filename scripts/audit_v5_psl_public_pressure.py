@@ -13,8 +13,8 @@ import subprocess
 import sys
 import zipfile
 from collections import Counter
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -33,6 +33,7 @@ from formulaguard.v5_psl_protocol import (
     combined_shards_sha256,
     sha256,
 )
+from scripts.freeze_v5_psl_candidate import _git, candidate_source_files
 from scripts.run_v5_psl_public_pressure import (
     PRESSURE_EVENT_FIELDS,
     PRESSURE_METHODS,
@@ -41,7 +42,6 @@ from scripts.run_v5_psl_public_pressure import (
     development_signatures,
     read_manifest,
 )
-from scripts.freeze_v5_psl_candidate import _git, candidate_source_files
 from scripts.tune_v5_psl_parameters import FOLD_COUNT, assign_group_folds
 
 
@@ -447,7 +447,7 @@ def _revision_count(path: Path) -> int:
         raise ValueError("V5-PSL mechanism revision log protocol is invalid")
     revisions = payload.get("revisions")
     if not isinstance(revisions, list):
-        raise ValueError("V5-PSL mechanism revision log must contain a list")
+        raise ValueError("V5-PSL mechanism revision log must contain a list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     for index, row in enumerate(revisions, 1):
         if not isinstance(row, dict) or not {
             "revision_id", "root_cause", "evidence_sha256", "source_commit",

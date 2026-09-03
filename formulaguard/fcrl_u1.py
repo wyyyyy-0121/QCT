@@ -5,9 +5,8 @@ from __future__ import annotations
 import hashlib
 import json
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
-
 
 U1_TOP5_MINIMUM = 0.50
 U1_TOP1_MINIMUM = 0.25
@@ -102,7 +101,7 @@ def score_u1_predictions(
     content = prediction_content(predictions)
     if {str(row["target_id"]) for row in content} != set(target_by_id):
         raise ValueError("FCRL predictions do not cover the exact internal-test target set")
-    if len(set(str(target["structure_group"]) for target in internal)) != expected_structure_groups:
+    if len({str(target["structure_group"]) for target in internal}) != expected_structure_groups:
         raise ValueError("FCRL internal-test structure-group count changed")
     if len(global_top5) > 5 or any(not isinstance(value, str) for value in global_top5):
         raise ValueError("FCRL global-frequency baseline is invalid")

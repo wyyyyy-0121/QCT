@@ -5,8 +5,8 @@ from __future__ import annotations
 import hashlib
 import posixpath
 import zipfile
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 from xml.etree import ElementTree
 
 EXPLICIT_ERROR_TOKENS = frozenset({
@@ -29,11 +29,11 @@ PACKAGE_REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
 def formula_map(profile: Mapping[str, object]) -> dict[tuple[str, str], str]:
     rows = profile.get("formulas")
     if not isinstance(rows, list):
-        raise ValueError("VEnron formula profile has no formula list")
+        raise ValueError("VEnron formula profile has no formula list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     result: dict[tuple[str, str], str] = {}
     for row in rows:
         if not isinstance(row, Mapping):
-            raise ValueError("VEnron formula profile row is malformed")
+            raise ValueError("VEnron formula profile row is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         key = (str(row.get("sheet", "")), str(row.get("address", "")))
         formula = str(row.get("formula", "")).strip()
         if not all(key) or not formula or key in result:

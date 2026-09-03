@@ -4,7 +4,11 @@ from pathlib import Path
 
 import openpyxl
 
-from scripts.intake_venron_order_file import ORDER_MEMBER, inspect_order_workbook, validate_layout
+from scripts.intake_venron_order_file import (
+    ORDER_MEMBER,
+    inspect_order_workbook,
+    validate_layout,
+)
 
 
 def workbook_row(path: str) -> dict[str, object]:

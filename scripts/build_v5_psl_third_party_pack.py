@@ -15,14 +15,18 @@ import json
 import shutil
 import sys
 import zipfile
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.formula import FormulaSyntaxError, formula_fingerprint, normalized_formula
+from formulaguard.formula import (
+    FormulaSyntaxError,
+    formula_fingerprint,
+    normalized_formula,
+)
 from formulaguard.v5_psl_protocol import (
     CASE_FIELDS,
     PUBLIC_FIELDS,
@@ -37,7 +41,6 @@ from formulaguard.v5_psl_protocol import (
     sha256,
 )
 from formulaguard.workbook import CellKey, WorkbookModel
-
 
 PACKAGE_VERSION = "v5_psl_single_custodian_pack_v2"
 SECRET_COMPONENTS = (
@@ -178,12 +181,18 @@ def validate_case_pair(
     if signature and signature in development_signatures:
         raise ValueError(f"{instance_id}: formula transformation overlaps the development inventory")
     evidence = _evaluation_evidence(original, changed)
-    if kind == "error" and evidence["internal_formula_coverage"] == 1.0:
-        if evidence["internally_observed_changed_formula_values"] == 0:
-            raise ValueError(f"{instance_id}: injected formula change has no internally observable effect")
-    if kind == "control" and evidence["internal_formula_coverage"] == 1.0:
-        if evidence["internally_observed_changed_formula_values"] != 0:
-            raise ValueError(f"{instance_id}: unchanged control recalculates differently from its original")
+    if (
+        kind == "error"
+        and evidence["internal_formula_coverage"] == 1.0
+        and evidence["internally_observed_changed_formula_values"] == 0
+    ):
+        raise ValueError(f"{instance_id}: injected formula change has no internally observable effect")
+    if (
+        kind == "control"
+        and evidence["internal_formula_coverage"] == 1.0
+        and evidence["internally_observed_changed_formula_values"] != 0
+    ):
+        raise ValueError(f"{instance_id}: unchanged control recalculates differently from its original")
 
     return {
         "instance_id": instance_id,
@@ -242,7 +251,7 @@ def build_packages(
         (raw_root / "third_party_declaration.json").read_text(encoding="utf-8")
     )
     if not isinstance(declaration_value, dict):
-        raise ValueError("third_party_declaration.json must contain a JSON object")
+        raise ValueError("third_party_declaration.json must contain a JSON object")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     declaration: dict[str, object] = declaration_value
     design_audit = audit_design(cases, declaration)
     mapping = _opaque_ids(cases, pseudonym_key)

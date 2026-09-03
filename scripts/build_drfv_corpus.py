@@ -9,26 +9,33 @@ import json
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.cwrp import PROFILE_PROTOCOL, profile_counter, stable_hash, workbook_profile  # noqa: E402
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.build_cwrp_corpus import (  # noqa: E402
+from formulaguard.cwrp import (
+    PROFILE_PROTOCOL,
+    profile_counter,
+    stable_hash,
+    workbook_profile,
+)
+from formulaguard.workbook import WorkbookModel
+from scripts.build_cwrp_corpus import (
     PROTOCOL as CWRP_CORPUS_PROTOCOL,
+)
+from scripts.build_cwrp_corpus import (
     cluster_profiles,
 )
-from scripts.convert_cwrp_sheetjs import write_json_atomic  # noqa: E402
-from scripts.intake_drfv_spreadsheetbench_v1 import (  # noqa: E402
+from scripts.convert_cwrp_sheetjs import write_json_atomic
+from scripts.intake_drfv_spreadsheetbench_v1 import (
     PROTOCOL as INTAKE_PROTOCOL,
+)
+from scripts.intake_drfv_spreadsheetbench_v1 import (
     sha256,
 )
-
 
 PROTOCOL = "formulaguard_drfv_corpus_build_v1"
 DEFAULT_INTAKE = ROOT / "results/drfv_spreadsheetbench_v1_intake"
@@ -96,7 +103,7 @@ def read_intake(intake_dir: Path, source_root: Path) -> tuple[list[dict[str, obj
     seen_paths: set[str] = set()
     for item in rows:
         if not isinstance(item, dict):
-            raise ValueError("DRFV input manifest row is malformed")
+            raise ValueError("DRFV input manifest row is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         workbook_id = str(item.get("workbook_id", ""))
         relative_path = str(item.get("relative_path", ""))
         if not workbook_id or workbook_id in seen_ids or relative_path in seen_paths:
@@ -128,7 +135,7 @@ def _profile_worker(payload: tuple[str, str, str]) -> dict[str, object]:
         raise ValueError(f"input changed before profiling: {workbook_id}")
     try:
         profile = workbook_profile(WorkbookModel.from_xlsx(path))
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return {
             "protocol": PROTOCOL,
             "workbook_id": workbook_id,

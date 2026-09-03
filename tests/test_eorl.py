@@ -1,6 +1,6 @@
-import unittest
 import json
 import tempfile
+import unittest
 from pathlib import Path
 
 from formulaguard.eorl import (

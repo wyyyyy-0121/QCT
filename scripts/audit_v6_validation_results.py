@@ -18,7 +18,6 @@ import statistics
 from collections import Counter, defaultdict
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 ERROR_TYPES = (
     "absolute_reference", "copy_offset", "function_replacement",
@@ -199,7 +198,7 @@ def audit(args) -> dict:
         issues.append("duplicate_public_or_label_id")
     if set(public_ids) != set(label_ids):
         issues.append("public_label_id_mismatch")
-    if set(row["method"] for row in raw) != expected_methods:
+    if {row["method"] for row in raw} != expected_methods:
         issues.append("method_set_mismatch")
     if len(raw) != 360 * len(expected_methods):
         issues.append("raw_row_count_mismatch")
@@ -396,10 +395,10 @@ def markdown(payload: dict) -> str:
         "",
         "## Technical summary",
         "",
-        f"The 360-event locked validation is internally consistent and reproducible, but no V6 variant is eligible for freezing. "
+        (f"The 360-event locked validation is internally consistent and reproducible, but no V6 variant is eligible for freezing. "
         f"V6-B is the strongest locator (macro Top-5 {b['macro_top5']:.2%}, MRR {b['mrr']:.4f}, six-type minimum Top-5 {b['worst_type_top5']:.2%}), "
         "yet all three variants exceed the 10% clean-control alarm cap at 16.67%. V6-A/B also fail the exact Enron non-decrease rule, while V6-C is outperformed by a registered ablation and collapses on absolute-reference cases. "
-        f"The selection receipt therefore records `selected_variant={receipt['selected_variant']}` and `freeze_allowed={str(receipt['freeze_allowed']).lower()}`.",
+        f"The selection receipt therefore records `selected_variant={receipt['selected_variant']}` and `freeze_allowed={str(receipt['freeze_allowed']).lower()}`."),
         "",
         "## V6-B dominates the synthetic localization task but fails deployment safety",
         "",
@@ -414,21 +413,21 @@ def markdown(payload: dict) -> str:
         )
     lines += [
         "",
-        f"V6-B improves paired MRR over V4 by {b['mrr'] - metrics['v4']['mrr']:+.4f}; the independently reproduced 95% interval is "
+        (f"V6-B improves paired MRR over V4 by {b['mrr'] - metrics['v4']['mrr']:+.4f}; the independently reproduced 95% interval is "
         f"[{ci['mrr_difference_bootstrap_95_ci'][0]:.4f}, {ci['mrr_difference_bootstrap_95_ci'][1]:.4f}]. "
         f"Its paired macro Top-5 interval is [{ci['macro_top5_difference_bootstrap_95_ci'][0]:.2%}, {ci['macro_top5_difference_bootstrap_95_ci'][1]:.2%}]. "
-        "These are valid internal synthetic results, not evidence of independent real-world superiority.",
+        "These are valid internal synthetic results, not evidence of independent real-world superiority."),
         "",
         "## Clean exceptions invalidate all three freeze candidates",
         "",
-        "Each variant triggers 40 alarms among 240 correct workbooks (16.67%). All 40 occur in the deliberately valid `exception` structure, while the other clean structures have zero alarms. "
-        "This concentration identifies a systematic modeling error: alternating but intentional formula families are treated as anomalous and promoted. It is not random noise and cannot be dismissed by averaging.",
+        ("Each variant triggers 40 alarms among 240 correct workbooks (16.67%). All 40 occur in the deliberately valid `exception` structure, while the other clean structures have zero alarms. "
+        "This concentration identifies a systematic modeling error: alternating but intentional formula families are treated as anomalous and promoted. It is not random noise and cannot be dismissed by averaging."),
         "",
         "## The ablation pattern exposes synthetic alignment risk",
         "",
-        "The `semantics_only` ablation obtains Top-1 and MRR of 100% for A, B and C on all 360 events. "
+        ("The `semantics_only` ablation obtains Top-1 and MRR of 100% for A, B and C on all 360 events. "
         "That signal uses no labels at localization time, so the result is not evidence of label leakage. However, it shows that the deterministic validation generator produces errors that are perfectly separable by the same semantic regularities built into V6. "
-        "Consequently, the large V6-B gain is useful mechanism evidence but is too optimistic as a generalization estimate. A third-party dataset with unseen templates is essential.",
+        "Consequently, the large V6-B gain is useful mechanism evidence but is too optimistic as a generalization estimate. A third-party dataset with unseen templates is essential."),
         "",
         "## Scope, data and metric definitions",
         "",
@@ -441,8 +440,8 @@ def markdown(payload: dict) -> str:
         "",
         "## Integrity and label-separation checks passed",
         "",
-        "The public and secret precommit hashes, 720-workbook inventory, V4/V6/method source hashes, 360 complete prediction shards, combined shard digest, 24-worker receipt, 28-method coverage, raw metric identities, aggregate summaries, bootstrap intervals, clean alarms, Enron receipts and selection gates were independently recomputed. "
-        "Prediction metadata records `label_files_read=[]`; the secret label hash was released only after the complete-ranking receipt existed. No audit discrepancy was found.",
+        ("The public and secret precommit hashes, 720-workbook inventory, V4/V6/method source hashes, 360 complete prediction shards, combined shard digest, 24-worker receipt, 28-method coverage, raw metric identities, aggregate summaries, bootstrap intervals, clean alarms, Enron receipts and selection gates were independently recomputed. "
+        "Prediction metadata records `label_files_read=[]`; the secret label hash was released only after the complete-ranking receipt existed. No audit discrepancy was found."),
         "",
         "## Registered gate failures",
         "",
@@ -453,8 +452,8 @@ def markdown(payload: dict) -> str:
         "",
         "## Limitations and robustness",
         "",
-        "This is a deterministic internal synthetic validation, not a third-party blind study. The perfect semantics-only result is the main robustness warning. Enron contains only 30 retrospective events and A/B fail its exact safety gate by a numerically tiny one-rank tail change. "
-        "The clean-control failure is larger and practically important. Because the thresholds and stop rule were preregistered, changing them after seeing these results would invalidate the locked decision.",
+        ("This is a deterministic internal synthetic validation, not a third-party blind study. The perfect semantics-only result is the main robustness warning. Enron contains only 30 retrospective events and A/B fail its exact safety gate by a numerically tiny one-rank tail change. "
+        "The clean-control failure is larger and practically important. Because the thresholds and stop rule were preregistered, changing them after seeing these results would invalidate the locked decision."),
         "",
         "## Recommended next steps",
         "",

@@ -13,9 +13,7 @@ import argparse
 import csv
 import json
 import statistics
-from collections import defaultdict
 from pathlib import Path
-
 
 METHODS = ("v4", "v5_rule", "v5_learned")
 
@@ -267,8 +265,8 @@ def main() -> None:
     report = [
         "# V5-Core Enron 失败机制诊断",
         "",
-        "> 结论先行：Enron 安全门槛确实失败，当前 V5-Core 不能取代 V4。"
-        "本报告是揭晓标签后的回顾性诊断，只解释失败，不参与模型训练、调参或选择。",
+        ("> 结论先行：Enron 安全门槛确实失败，当前 V5-Core 不能取代 V4。"
+        "本报告是揭晓标签后的回顾性诊断，只解释失败，不参与模型训练、调参或选择。"),
         "",
         "## 1. 总体结果",
         "",
@@ -280,18 +278,18 @@ def main() -> None:
         report.append(f"| {label} | {pct(values['top5'])} | {values['mrr']:.4f} | {values['exam']:.4f} |")
     report.extend([
         "",
-        f"规则头相对 V4 的 MRR 差为 **{all_values['rule_minus_v4_mrr']:.4f}**；"
-        f"学习头差为 **{all_values['learned_minus_v4_mrr']:.4f}**。两者都超过预登记允许的 -0.01 退化。",
+        (f"规则头相对 V4 的 MRR 差为 **{all_values['rule_minus_v4_mrr']:.4f}**；"
+        f"学习头差为 **{all_values['learned_minus_v4_mrr']:.4f}**。两者都超过预登记允许的 -0.01 退化。"),
         "",
         "## 2. 解析覆盖与主排序泛化",
         "",
-        f"- 30 个事件中，真实源包含不支持语法的事件为 **{len(unsupported_events)}** 个；"
-        f"真实源仍受支持的事件为 **{len(supported_events)}** 个。",
-        f"- 7 个工作簿共出现 826 个不支持公式；兼容适配器只把这些公式放到完整排名尾部，"
-        "没有改动冻结的 V5-Core 核心。",
-        f"- 在真实源受支持的 {len(supported_events)} 个事件上，V4/Rule/Learned 的 MRR 分别为 "
+        (f"- 30 个事件中，真实源包含不支持语法的事件为 **{len(unsupported_events)}** 个；"
+        f"真实源仍受支持的事件为 **{len(supported_events)}** 个。"),
+        ("- 7 个工作簿共出现 826 个不支持公式；兼容适配器只把这些公式放到完整排名尾部，"
+        "没有改动冻结的 V5-Core 核心。"),
+        (f"- 在真实源受支持的 {len(supported_events)} 个事件上，V4/Rule/Learned 的 MRR 分别为 "
         f"**{supported['v4']['mrr']:.4f} / {supported['v5_rule']['mrr']:.4f} / "
-        f"{supported['v5_learned']['mrr']:.4f}**。",
+        f"{supported['v5_learned']['mrr']:.4f}**。"),
         "",
     ])
     if conclusion["ranking_regression_persists_on_supported_sources"]:
@@ -307,10 +305,10 @@ def main() -> None:
         "",
         "## 3. 事件级升降",
         "",
-        f"- 规则头：{outcome_counts['rule']['win']} 胜 / {outcome_counts['rule']['tie']} 平 / "
-        f"{outcome_counts['rule']['loss']} 负。",
-        f"- 学习头：{outcome_counts['learned']['win']} 胜 / {outcome_counts['learned']['tie']} 平 / "
-        f"{outcome_counts['learned']['loss']} 负。",
+        (f"- 规则头：{outcome_counts['rule']['win']} 胜 / {outcome_counts['rule']['tie']} 平 / "
+        f"{outcome_counts['rule']['loss']} 负。"),
+        (f"- 学习头：{outcome_counts['learned']['win']} 胜 / {outcome_counts['learned']['tie']} 平 / "
+        f"{outcome_counts['learned']['loss']} 负。"),
         "",
         "最大退化事件如下（MRR 差为 V5-Core − V4）：",
         "",
@@ -329,10 +327,10 @@ def main() -> None:
         "",
         "1. 不修改 V5-Core 权重、阈值或候选规则来迎合 Enron；Enron 已经是回顾性安全集。",
         "2. 当前开发审计保持失败，V5-Core 暂不允许取代 V4，也不生成成功冻结标签。",
-        "3. 仍运行预先设计的 480 例锁定内部验证，但其定位为**独立诊断证据**，"
-        "不是用来覆盖或‘救回’已经失败的 Enron 门槛。",
-        "4. 若锁定验证明显优于 V4，则论文应同时报告‘合成泛化强、真实语料安全性不足’；"
-        "若锁定验证也退化，则 V5-Core 作为有完整机制与负结果的核心重构保留。",
+        ("3. 仍运行预先设计的 480 例锁定内部验证，但其定位为**独立诊断证据**，"
+        "不是用来覆盖或‘救回’已经失败的 Enron 门槛。"),
+        ("4. 若锁定验证明显优于 V4，则论文应同时报告‘合成泛化强、真实语料安全性不足’；"
+        "若锁定验证也退化，则 V5-Core 作为有完整机制与负结果的核心重构保留。"),
         "",
         "## 5. 可复算文件",
         "",

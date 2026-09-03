@@ -12,9 +12,9 @@ import subprocess
 import sys
 import tempfile
 from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -31,7 +31,6 @@ from formulaguard.v4_rrc import (
     residual_utility,
     structure_fold,
 )
-
 
 PROTOCOL = "formulaguard_v4_residual_controller_crossfit_v1"
 DEFAULT_EVENTS = ROOT / "results/model_discovery_gate2_final_v3/event_scores.jsonl"
@@ -81,7 +80,7 @@ def reject_protected(path: Path) -> None:
 def load_json(path: Path) -> dict[str, object]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict):
-        raise ValueError(f"expected JSON object: {path}")
+        raise ValueError(f"expected JSON object: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return payload
 
 
@@ -164,7 +163,7 @@ def build_units(
         audit = signal.get("audit")
         v4_rows = v4.get("ranking")
         if not isinstance(audit, dict) or not isinstance(v4_rows, list):
-            raise ValueError(f"incomplete signal/V4 payload: {unit_id}")
+            raise ValueError(f"incomplete signal/V4 payload: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         if audit.get("label_inputs") != [] or v4.get("label_inputs") != []:
             raise ValueError(f"prediction shard consumed labels: {unit_id}")
         v4_cells = tuple(str(row["cell"]) for row in v4_rows)

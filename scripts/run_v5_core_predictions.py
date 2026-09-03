@@ -19,7 +19,11 @@ if str(ROOT) not in sys.path:
 
 from formulaguard.localize import v4_scores
 from formulaguard.v4x import v4_3_scores
-from formulaguard.v5_core import v5_core_ablation_scores, v5_core_default_parameters, v5_core_scores
+from formulaguard.v5_core import (
+    v5_core_ablation_scores,
+    v5_core_default_parameters,
+    v5_core_scores,
+)
 from formulaguard.workbook import WorkbookModel
 
 

@@ -10,9 +10,9 @@ import re
 import shutil
 import subprocess
 import tarfile
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import BinaryIO, Mapping, Sequence
-
+from typing import BinaryIO
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_drfv_spreadsheetbench_v1_intake_v1"
@@ -215,7 +215,7 @@ def intake(
                 digest = hashlib.sha256()
                 written = 0
                 with temporary.open("xb") as output:
-                    for block in iter(lambda: handle.read(1024 * 1024), b""):
+                    for block in iter(lambda handle=handle: handle.read(1024 * 1024), b""):
                         output.write(block)
                         written += len(block)
                         digest.update(block)

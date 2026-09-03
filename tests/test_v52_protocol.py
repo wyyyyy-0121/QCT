@@ -9,8 +9,8 @@ from pathlib import Path
 from formulaguard.workbook import WorkbookModel
 from scripts.build_v52_stress_workbooks import build_redteam_workbooks
 from scripts.run_external_evaluation import sha256_file
-from scripts.v52_blind_protocol import validate_public_manifest, verify_joint_lock
 from scripts.run_v4_v52_blind_100_lock import verify_precommit
+from scripts.v52_blind_protocol import validate_public_manifest, verify_joint_lock
 
 
 class V52BlindProtocolTests(unittest.TestCase):
@@ -62,7 +62,7 @@ class V52BlindProtocolTests(unittest.TestCase):
                 "exceptions_sha256": digest_b,
                 "private_batch2_archive_sha256": digest_c,
             }), encoding="utf-8")
-            public.write_text("\n".join((digest_a, digest_b, digest_c)), encoding="utf-8")
+            public.write_text(f"{digest_a}\n{digest_b}\n{digest_c}", encoding="utf-8")
             checked = verify_precommit(
                 commitment, public, {"case_001", "case_002"}, 2
             )

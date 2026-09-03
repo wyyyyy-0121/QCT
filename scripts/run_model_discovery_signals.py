@@ -16,14 +16,14 @@ import json
 import os
 import subprocess
 import sys
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.model_discovery import (  # noqa: E402
+from formulaguard.model_discovery import (
     FORBIDDEN_LABEL_FIELDS,
     MODEL_VERSION,
     PROTOCOL,
@@ -31,8 +31,7 @@ from formulaguard.model_discovery import (  # noqa: E402
     audit_workbook,
     validate_label_free_output,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-
+from formulaguard.workbook import WorkbookModel
 
 RUN_PROTOCOL = "formulaguard_model_discovery_signal_run_v1"
 DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/workbook_profiles.csv"
@@ -197,7 +196,7 @@ def _validate_record(path: Path, expected: Mapping[str, str]) -> dict[str, objec
         raise ValueError(f"shard workbook hash mismatch: {path.name}")
     audit = record.get("audit")
     if not isinstance(audit, dict):
-        raise ValueError(f"shard audit payload is malformed: {path.name}")
+        raise ValueError(f"shard audit payload is malformed: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     errors = validate_label_free_output(audit)
     if errors:
         raise ValueError(f"invalid label-free audit {path.name}: {'; '.join(errors)}")

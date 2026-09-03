@@ -4,23 +4,30 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import json
 import statistics
 import subprocess
 import sys
 from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.v4_peer_fifth import MODEL_VERSION, REVIEW_BUDGET, v4_peer_fifth_scores
-from formulaguard.v5_psl_protocol import canonical_cell, combined_shards_sha256, safe_path, sha256
+from formulaguard.v4_peer_fifth import (
+    MODEL_VERSION,
+    REVIEW_BUDGET,
+    v4_peer_fifth_scores,
+)
+from formulaguard.v5_psl_protocol import (
+    canonical_cell,
+    combined_shards_sha256,
+    safe_path,
+    sha256,
+)
 from formulaguard.workbook import WorkbookModel
-
 
 DATA_PROTOCOL = "formulaguard_public_xlsx_revision_evidence_v1"
 PREDICTION_PROTOCOL = "v4_peer_fifth_public_revision_prediction_v1"
@@ -200,6 +207,7 @@ def _verify_predictions(data_root: Path, predictions: Path) -> dict[str, object]
     _git("cat-file", "-e", f"HEAD:{relative.as_posix()}")
     if subprocess.run(
         ["git", "diff", "--quiet", "HEAD", "--", str(predictions)], cwd=ROOT,
+        check=False,
     ).returncode:
         raise ValueError("public revision predictions are not committed")
     return completion

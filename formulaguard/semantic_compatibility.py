@@ -3,14 +3,13 @@
 from __future__ import annotations
 
 import re
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
-from typing import Iterable, Mapping, Sequence
 
 from .a1 import parse_address
 from .cwrp import formula_role_fingerprint
 from .formula import REF_RE, translate_formula
 from .workbook import CellKey, WorkbookModel
-
 
 MODEL_VERSION = "semantic-formula-compatibility-pilot-v2"
 ROLE_PROTOCOL = "formulaguard_semantic_formula_role_v2"
@@ -19,7 +18,7 @@ TOKEN_RE = re.compile(
     r"(?:SELF|OTHER)!R(?:\[-?\+?\d+\]|\d+)C(?:\[-?\+?\d+\]|\d+)"
     r"|[A-Z_][A-Z0-9_.]*|<=|>=|<>|[+\-*/^=<>:,()]|NUM|STR"
 )
-NUMBER_RE = re.compile(r"(?<![A-Z0-9_.])(?:\d+(?:\.\d*)?|\.\d+)(?:E[+\-]?\d+)?", re.I)
+NUMBER_RE = re.compile(r"(?<![A-Z0-9_.])(?:\d+(?:\.\d*)?|\.\d+)(?:E[+\-]?\d+)?", re.IGNORECASE)
 STRING_RE = re.compile(r'"(?:[^"]|"")*"')
 ROLE_REFERENCE_RE = re.compile(
     r"^(SELF|OTHER)!R(\[-?\+?\d+\]|\d+)C(\[-?\+?\d+\]|\d+)$"
@@ -48,7 +47,7 @@ def canonical_formula_role(formula: str, anchor_text: str, current_sheet: str) -
     try:
         return formula_role_fingerprint(formula, anchor_text, current_sheet)
     except (TypeError, ValueError):
-        body = formula[1:] if formula.startswith("=") else formula
+        body = formula.removeprefix("=")
         body = STRING_RE.sub("STR", body)
         references: list[str] = []
 
@@ -94,7 +93,7 @@ class FormulaVocabulary:
         *,
         minimum_count: int = 2,
         maximum_size: int = 16384,
-    ) -> "FormulaVocabulary":
+    ) -> FormulaVocabulary:
         if minimum_count < 1 or maximum_size < len(SPECIAL_TOKENS):
             raise ValueError("invalid formula vocabulary bounds")
         counts: dict[str, int] = {}
@@ -175,10 +174,10 @@ def semantic_candidate_roles(
 
 
 __all__ = [
-    "FormulaVocabulary",
     "MODEL_VERSION",
     "ROLE_PROTOCOL",
     "SPECIAL_TOKENS",
+    "FormulaVocabulary",
     "canonical_formula_role",
     "pad_token_ids",
     "role_tokens",

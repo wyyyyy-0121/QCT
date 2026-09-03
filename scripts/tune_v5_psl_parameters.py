@@ -11,9 +11,9 @@ import statistics
 import sys
 import time
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from dataclasses import asdict
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -35,7 +35,6 @@ from formulaguard.v5_psl_protocol import (
 from formulaguard.workbook import WorkbookModel
 from scripts.freeze_v5_psl_candidate import _git, candidate_source_files
 from scripts.run_v5_psl_public_pressure import read_manifest
-
 
 PROTOCOL = "v5_psl_parameter_tuning_v1"
 BASELINE_ID = "no_perturbation"
@@ -67,7 +66,7 @@ def tuning_profiles() -> dict[str, dict[str, object]]:
     profiles: dict[str, dict[str, object]] = {}
     for name, overrides in EVIDENCE_PROFILES:
         for margin in MARGINS:
-            profile_id = f"{name}_m{int(round(100 * margin)):02d}"
+            profile_id = f"{name}_m{round(100 * margin):02d}"
             values = {**base, **overrides, "localization_margin": margin}
             profiles[profile_id] = asdict(PSLConfig.from_mapping(values))
     return profiles
@@ -179,7 +178,7 @@ def _audit_case(
             raise ValueError(f"Tuning ablation changed: {path}")
         result = record.get("result")
         if not isinstance(result, dict):
-            raise ValueError(f"Invalid tuning result: {path}")
+            raise ValueError(f"Invalid tuning result: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         provenance = result.get("provenance")
         if (
             not isinstance(provenance, dict)
@@ -194,7 +193,7 @@ def _audit_case(
         validate_complete_ranking(result.get("ranking", []), formula_cells)
         actions = result.get("review_cells")
         if not isinstance(actions, list):
-            raise ValueError(f"Invalid tuning action set: {path}")
+            raise ValueError(f"Invalid tuning action set: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         canonical_actions = [canonical_cell(value) for value in actions]
         canonical_formulas = {canonical_cell(value) for value in formula_cells}
         if (

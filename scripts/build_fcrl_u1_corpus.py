@@ -10,8 +10,8 @@ import json
 import os
 import subprocess
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 from formulaguard.fcrl import (
     FCRLAdapterError,
@@ -20,13 +20,12 @@ from formulaguard.fcrl import (
     local_peer_completion_keys,
 )
 from formulaguard.fcrl_torch import (
-    FCRLTorchError,
     FCRLTokenizerRuntime,
+    FCRLTorchError,
     load_tokenizer_runtime,
     tensorize_tables,
 )
 from formulaguard.workbook import WorkbookModel
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_fcrl_u1_corpus_v1"
@@ -134,10 +133,10 @@ def load_sources(
         raise ValueError("DRFV corpus receipt violates the FCRL source contract")
     rows = json.loads(corpus_manifest.read_text(encoding="utf-8")).get("workbooks")
     if not isinstance(rows, list):
-        raise ValueError("DRFV corpus manifest has no workbook rows")
+        raise ValueError("DRFV corpus manifest has no workbook rows")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     intake_rows = json.loads(intake_manifest.read_text(encoding="utf-8")).get("workbooks")
     if not isinstance(intake_rows, list):
-        raise ValueError("SpreadsheetBench input manifest has no workbook rows")
+        raise ValueError("SpreadsheetBench input manifest has no workbook rows")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     intake_by_id = {str(row["workbook_id"]): row for row in intake_rows}
 
     retained = [

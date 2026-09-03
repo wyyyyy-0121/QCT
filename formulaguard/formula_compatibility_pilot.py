@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 
-
 PROTOCOL = "formulaguard_formula_compatibility_pilot_v1"
 OPERATOR_REPLACEMENTS = {
     "OP_+": "OP_-",
@@ -126,10 +125,10 @@ def candidate_rows(example: dict[str, object], *, maximum_mutations: int = 5) ->
         rows.append({"kind": kind, "tokens": tokens})
     repairs = example.get("repair_candidates", [])
     if not isinstance(repairs, list):
-        raise ValueError("formula compatibility repair candidates are malformed")
+        raise ValueError("formula compatibility repair candidates are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     for repair in repairs:
         if not isinstance(repair, dict) or not isinstance(repair.get("tokens"), list):
-            raise ValueError("formula compatibility repair candidate is malformed")
+            raise ValueError("formula compatibility repair candidate is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         tokens = tuple(str(token) for token in repair["tokens"])
         if tokens in seen:
             continue

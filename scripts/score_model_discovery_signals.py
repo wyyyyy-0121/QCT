@@ -23,16 +23,15 @@ import random
 import statistics
 import subprocess
 import sys
-from collections import Counter, defaultdict
+from collections import defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.model_discovery import validate_label_free_output  # noqa: E402
-
+from formulaguard.model_discovery import validate_label_free_output
 
 SCORER_PROTOCOL = "formulaguard_model_discovery_gate2_score_v1"
 SIGNAL_RUN_PROTOCOL = "formulaguard_model_discovery_signal_run_v1"
@@ -176,7 +175,7 @@ def _load_json(path: Path) -> dict[str, object]:
     except (OSError, json.JSONDecodeError) as exc:
         raise ValueError(f"cannot read JSON {path}: {exc}") from exc
     if not isinstance(value, dict):
-        raise ValueError(f"JSON object required: {path}")
+        raise ValueError(f"JSON object required: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return value
 
 
@@ -213,7 +212,7 @@ def _validate_signal_run(
             raise ValueError(f"signal workbook hash mismatch: {path.name}")
         audit = record.get("audit")
         if not isinstance(audit, dict):
-            raise ValueError(f"signal audit missing: {path.name}")
+            raise ValueError(f"signal audit missing: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         errors = validate_label_free_output(audit)
         if errors:
             raise ValueError(f"signal validation failed {path.name}: {'; '.join(errors)}")
@@ -367,7 +366,7 @@ def _load_shards(signal_dir: Path, v4_dir: Path, profiles: list[dict[str, str]])
 
 def _rank_cells(ranking: object) -> list[str]:
     if not isinstance(ranking, list):
-        raise ValueError("ranking must be a list")
+        raise ValueError("ranking must be a list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     if ranking and isinstance(ranking[0], dict):
         return [str(item["cell"]) for item in ranking]
     return [str(cell) for cell in ranking]
@@ -410,11 +409,11 @@ def _structure_macro(rows: Sequence[Mapping[str, object]], method: str, case_kin
 def _record_action_cells(audit: Mapping[str, object], channel: str) -> tuple[list[str], list[str]]:
     records = audit.get("records")
     if not isinstance(records, list):
-        raise ValueError("signal records missing")
+        raise ValueError("signal records missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     by_cell = {str(row["cell"]): row for row in records if isinstance(row, dict) and "cell" in row}
     review = audit.get("review_cells", {}).get(channel) if isinstance(audit.get("review_cells"), dict) else None
     if not isinstance(review, list):
-        raise ValueError(f"review cells missing for {channel}")
+        raise ValueError(f"review cells missing for {channel}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     review_cells: list[str] = []
     action_cells: list[str] = []
     seen_regions: set[str] = set()
@@ -441,7 +440,7 @@ def _record_action_cells(audit: Mapping[str, object], channel: str) -> tuple[lis
 def _region_sets(audit: Mapping[str, object], sources: Sequence[str]) -> tuple[set[str], dict[str, str]]:
     records = audit.get("records")
     if not isinstance(records, list):
-        raise ValueError("signal records missing")
+        raise ValueError("signal records missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     by_cell = {str(row["cell"]): row for row in records if isinstance(row, dict) and "cell" in row}
     regions = {str(by_cell[cell].get("region_id", "")) for cell in sources if cell in by_cell}
     regions.discard("")
@@ -451,7 +450,7 @@ def _region_sets(audit: Mapping[str, object], sources: Sequence[str]) -> tuple[s
 def _oracle_rank(audit: Mapping[str, object], sources: Sequence[str], *, selector: bool) -> tuple[list[str], str | None]:
     rankings = audit.get("rankings")
     if not isinstance(rankings, dict):
-        raise ValueError("signal rankings missing")
+        raise ValueError("signal rankings missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     channel_ranks = {channel: _rank_cells(rankings[channel]) for channel in CHANNELS}
     if selector:
         choices = []
@@ -483,7 +482,7 @@ def attach_events(events: list[dict[str, object]], profiles: list[dict[str, str]
         audit = payload["signal"]
         records = audit.get("records")
         if not isinstance(records, list):
-            raise ValueError(f"missing records for {unit}")
+            raise ValueError(f"missing records for {unit}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         formula_cells = {str(row["cell"]) for row in records if isinstance(row, dict) and "cell" in row}
         source_all = list(event["source_cells"])
         source_formula = [cell for cell in source_all if cell in formula_cells]
@@ -647,7 +646,7 @@ def _paired_diff(rows: Sequence[Mapping[str, object]], method: str, baseline: st
     loss_events: set[str] = set()
     gain_workbooks: set[str] = set()
     loss_workbooks: set[str] = set()
-    for group, group_rows in groups.items():
+    for group_rows in groups.values():
         left = statistics.fmean(float(row["metrics"][method]["top5"]) for row in group_rows)
         right = statistics.fmean(float(row["metrics"][baseline]["top5"]) for row in group_rows)
         diffs.append(left - right)
@@ -677,7 +676,7 @@ def risk_coverage(rows: Sequence[Mapping[str, object]], method: str) -> list[dic
         cloned: list[dict[str, object]] = []
         for row in rows:
             action = set(row["action_cells"].get(method, [])[:budget])
-            source = set(row["source_formula_cells"])
+            set(row["source_formula_cells"])
             cloned.append({"case_kind": row["case_kind"], "source_formula_cells": row["source_formula_cells"], "action_cells": {method: list(action)}})
         summary = action_summary(cloned, method, "error")
         controls = action_summary(cloned, method, "control")
@@ -868,7 +867,7 @@ def score(*, profiles_path: Path, signal_dir: Path, v4_dir: Path, output_dir: Pa
         "baseline_v4_2_and_strong_comparison_available": False,
         "baseline_comparison_note": "Gate 2 scorer does not treat legacy V4.2 outputs as same-input predictions; a compatible re-run is required before a B pass can be claimed.",
     }
-    gate2b["passed"] = all(bool(value) for key, value in gate2b.items() if key.endswith("pct") or key.endswith("rate")) and gate2b["baseline_v4_2_and_strong_comparison_available"]
+    gate2b["passed"] = all(bool(value) for key, value in gate2b.items() if key.endswith(("pct", "rate"))) and gate2b["baseline_v4_2_and_strong_comparison_available"]
     branch = "A" if gate2a["decision"]["passed"] else ("B" if gate2b["passed"] else "C")
 
     payload = {

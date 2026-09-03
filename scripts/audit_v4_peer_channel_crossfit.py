@@ -5,14 +5,13 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.run_v4_peer_fifth_experiment import predict as predict_peer
 from scripts.run_v4_residual_controller import (
     DEFAULT_EVENTS,
     DEFAULT_SIGNALS,
@@ -30,7 +29,6 @@ from scripts.run_v4_static_fifth_experiment import (
     relative,
     score,
 )
-
 
 PROTOCOL = "formulaguard_v4_fifth_channel_structure_crossfit_v1"
 CHANNELS = ("combined", "peer", "role", "impact")

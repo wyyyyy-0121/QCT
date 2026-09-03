@@ -7,8 +7,8 @@ import json
 from pathlib import Path
 
 from .api import diagnose, localize
-from .v5 import v5_scores
 from .v4x import v4_1_scores
+from .v5 import v5_scores
 from .workbook import WorkbookModel
 
 

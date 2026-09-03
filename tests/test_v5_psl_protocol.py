@@ -16,7 +16,6 @@ from formulaguard.v5_psl_protocol import (
     validate_public_manifest,
 )
 
-
 DECLARATION = {
     "independent_custodian": True,
     "custodian_not_in_model_development": True,

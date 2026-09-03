@@ -11,9 +11,9 @@ import platform
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -21,7 +21,6 @@ if str(ROOT) not in sys.path:
 
 from formulaguard.a1 import parse_address
 from formulaguard.workbook import WorkbookModel
-
 
 PROTOCOL = "core_reset_b_phase0_data_audit_v1"
 NEAR_DUPLICATE_THRESHOLDS = {

@@ -5,8 +5,8 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -34,7 +34,6 @@ from scripts.run_v4_residual_controller import (
 )
 from scripts.run_v4_rrc_required_baselines import write_immutable
 from scripts.run_v4_static_fifth_experiment import git_commit, relative, score
-
 
 PROTOCOL = "formulaguard_v4_peer_evidence_allocator_exploratory_v1"
 DEFAULT_OUTPUT = ROOT / "results/v4_peer_evidence_allocator_exploratory"

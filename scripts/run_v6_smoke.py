@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-import json
 import hashlib
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -16,7 +16,7 @@ from formulaguard.workbook import WorkbookModel
 
 
 def run(*parts):
-    completed = subprocess.run([sys.executable, *map(str, parts)], cwd=ROOT)
+    completed = subprocess.run([sys.executable, *map(str, parts)], cwd=ROOT, check=False)
     if completed.returncode:
         raise SystemExit(completed.returncode)
 

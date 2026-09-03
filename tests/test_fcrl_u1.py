@@ -1,6 +1,7 @@
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
+from typing import ClassVar
 
 import torch
 from torch import nn
@@ -13,9 +14,8 @@ from formulaguard.fcrl_torch import (
     load_tokenizer_runtime,
     tensorize_tables,
 )
-from formulaguard.workbook import WorkbookModel
 from formulaguard.fcrl_u1 import prediction_metrics, score_u1_predictions
-
+from formulaguard.workbook import WorkbookModel
 
 ROOT = Path(__file__).resolve().parents[1]
 FORTAP_SOURCE = ROOT / "data/external/model_discovery/raw/TUTA_table_understanding"
@@ -85,7 +85,7 @@ class _LossDecoder(nn.Module):
 
 
 class _BeamTokenizer:
-    _tokens = {"<START>": 0, "<END>": 1, "<RANGE>": 3}
+    _tokens: ClassVar[dict[str, int]] = {"<START>": 0, "<END>": 1, "<RANGE>": 3}
 
     def fp_tok2id(self, token):
         return self._tokens[token]

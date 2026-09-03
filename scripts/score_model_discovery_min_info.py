@@ -22,22 +22,20 @@ import argparse
 import csv
 import hashlib
 import json
-import math
 import os
 import statistics
 import subprocess
 import sys
 from collections import defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.a1 import parse_address  # noqa: E402
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-
+from formulaguard.a1 import parse_address
+from formulaguard.workbook import WorkbookModel
 
 PROTOCOL = "formulaguard_model_discovery_branch_c_min_info_v1"
 CONDITIONS = ("history_version", "key_output", "pass_fail", "domain_constraint")
@@ -258,7 +256,7 @@ def exact_constraint_action(changed: Sequence[str], model: WorkbookModel, refere
     if not changed:
         return [], {"available": True, "violated": False, "reason": "no_formula_constraint_violation"}
     # One exact cell/formula constraint is deliberately limited to one action.
-    target = sorted(changed, key=lambda value: (value.split("!", 1)[0], parse_address(value.rsplit("!", 1)[1]).row, parse_address(value.rsplit("!", 1)[1]).col))[0]
+    target = min(changed, key=lambda value: (value.split("!", 1)[0], parse_address(value.rsplit("!", 1)[1]).row, parse_address(value.rsplit("!", 1)[1]).col))
     return [target], {
         "available": True,
         "violated": True,

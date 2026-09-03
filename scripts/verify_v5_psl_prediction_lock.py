@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -130,7 +130,7 @@ def verify_prediction_run(
     return {
         "protocol": "v5_psl_prediction_lock_v1",
         "locked": True,
-        "locked_at_utc": datetime.now(timezone.utc).isoformat(),
+        "locked_at_utc": datetime.now(UTC).isoformat(),
         "candidate_id": candidate["candidate_id"],
         "git_commit": git_head(),
         "instances": len(rows),

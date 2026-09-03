@@ -9,11 +9,10 @@ from __future__ import annotations
 
 import math
 import re
-from typing import Mapping, Sequence
+from collections.abc import Mapping, Sequence
 
 from .model_discovery import audit_workbook, validate_label_free_output
 from .workbook import CellKey, WorkbookModel
-
 
 PROTOCOL = "formulaguard_peer_repair_closure_v1"
 MODEL_VERSION = "peer-repair-closure-label-free-v1"
@@ -65,11 +64,11 @@ def _round(value: float) -> float:
 def _record_map(audit: Mapping[str, object]) -> dict[str, Mapping[str, object]]:
     records = audit.get("records")
     if not isinstance(records, list):
-        raise ValueError("peer audit records are malformed")
+        raise ValueError("peer audit records are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     result: dict[str, Mapping[str, object]] = {}
     for row in records:
         if not isinstance(row, Mapping):
-            raise ValueError("peer audit record is malformed")
+            raise ValueError("peer audit record is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         label = str(row.get("cell", ""))
         if not label or label in result:
             raise ValueError("peer audit contains an empty or duplicate cell")
@@ -111,7 +110,7 @@ def _audit_projection(audit: Mapping[str, object]) -> dict[str, object]:
 def _peer_rank(audit: Mapping[str, object], label: str) -> int:
     rankings = audit.get("rankings")
     if not isinstance(rankings, Mapping) or not isinstance(rankings.get("peer"), list):
-        raise ValueError("peer audit ranking is malformed")
+        raise ValueError("peer audit ranking is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     try:
         return [str(value) for value in rankings["peer"]].index(label) + 1
     except ValueError as exc:
@@ -156,7 +155,7 @@ def _candidate_metrics(
     before_review = before_audit.get("review_cells")
     after_review = after_audit.get("review_cells")
     if not isinstance(before_review, Mapping) or not isinstance(after_review, Mapping):
-        raise ValueError("peer review sets are malformed")
+        raise ValueError("peer review sets are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     fields = (
         "defect_score",
         "peer_disagreement",
@@ -269,7 +268,7 @@ def select_peer_candidate(
         or not isinstance(rankings, Mapping)
         or not isinstance(rankings.get("peer"), list)
     ):
-        raise ValueError("peer review set is malformed")
+        raise ValueError("peer review set is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     peer = tuple(str(value) for value in reviews["peer"])
     peer_inventory = tuple(str(value) for value in rankings["peer"])
     if len(peer) != len(set(peer)):
@@ -317,13 +316,13 @@ def probe_repair_closure(
     payload["candidate_peer_rank"] = _peer_rank(source_audit, candidate)
     hypotheses = records[candidate].get("repair_hypotheses")
     if not isinstance(hypotheses, list):
-        raise ValueError("selected peer repair hypotheses are malformed")
+        raise ValueError("selected peer repair hypotheses are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     if not hypotheses:
         payload["selection_reason"] = "peer_top1_has_no_repair_hypothesis"
         return payload
     first = hypotheses[0]
     if not isinstance(first, Mapping):
-        raise ValueError("first peer repair hypothesis is malformed")
+        raise ValueError("first peer repair hypothesis is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     formula = first.get("formula")
     if not isinstance(formula, str) or not formula.startswith("="):
         raise ValueError("first peer repair hypothesis has no valid formula")

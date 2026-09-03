@@ -121,7 +121,7 @@ def load_model_outputs(
         try:
             result = function()
             output.append((method, model.formula_cells, result, None, review, state, None))
-        except Exception as exc:  # noqa: BLE001 - preserve method failures in receipt
+        except Exception as exc:  # Preserve method failures in the receipt.  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             output.append((method, model.formula_cells, None, None, None, None, f"{type(exc).__name__}: {exc}"))
 
     from formulaguard.localize import v4_scores
@@ -149,7 +149,7 @@ def load_model_outputs(
         try:
             diagnosis = diagnose_v5_psl(model)
             output.append(("v5_psl_full", model.formula_cells, list(diagnosis.ranking), None, diagnosis.review_cells, diagnosis.state.value, None))
-        except Exception as exc:  # noqa: BLE001 - preserve method failures in receipt
+        except Exception as exc:  # Preserve method failures in the receipt.  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             output.append(("v5_psl_full", model.formula_cells, None, None, None, None, f"{type(exc).__name__}: {exc}"))
     if structuralguard_code is not None and wanted("structuralguard"):
         code = str(structuralguard_code.resolve())
@@ -201,7 +201,7 @@ def main() -> int:
         }
         try:
             outputs = load_model_outputs(case, dataset, args.structuralguard_code, set(args.methods) if args.methods else None)
-        except Exception as exc:  # noqa: BLE001 - preserve loader failures in receipt
+        except Exception as exc:  # Preserve loader failures in the receipt.  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             records.append({
                 "status": "error",
                 "method": "case_loader",
@@ -235,7 +235,7 @@ def main() -> int:
                     native_review=[key(cell) for cell in native_review] if native_review is not None else None,
                     diagnostic_state=diagnostic_state,
                 ))
-            except Exception as exc:  # noqa: BLE001 - preserve adapter failures in receipt
+            except Exception as exc:  # Preserve adapter failures in the receipt.  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 records.append({
                     "status": "error",
                     "method": method,

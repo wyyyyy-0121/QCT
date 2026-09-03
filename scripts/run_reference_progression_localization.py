@@ -18,12 +18,12 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.pcrc import formula_tokens, stable_hash  # noqa: E402
-from formulaguard.reference_progression import (  # noqa: E402
+from formulaguard.pcrc import formula_tokens, stable_hash
+from formulaguard.reference_progression import (
     directional_progression_peers,
     progression_residual,
 )
-from formulaguard.v5_psl_protocol import (  # noqa: E402
+from formulaguard.v5_psl_protocol import (
     canonical_cell,
     combined_shards_sha256,
     parse_source_cells,
@@ -32,10 +32,9 @@ from formulaguard.v5_psl_protocol import (  # noqa: E402
     source_rank,
     validate_complete_ranking,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.run_v5_psl_public_pressure import read_manifest  # noqa: E402
-from scripts.tune_v5_psl_parameters import assign_group_folds  # noqa: E402
-
+from formulaguard.workbook import WorkbookModel
+from scripts.run_v5_psl_public_pressure import read_manifest
+from scripts.tune_v5_psl_parameters import assign_group_folds
 
 PROTOCOL = "formulaguard_reference_progression_localization_v1"
 MAX_WORKERS = 24
@@ -173,10 +172,10 @@ def _predict(
         raise ValueError("reference progression V4 shard identity differs")
     methods = prior.get("methods")
     if not isinstance(methods, Mapping) or not isinstance(methods.get("v4_r1"), Mapping):
-        raise ValueError("reference progression V4 method is missing")
+        raise ValueError("reference progression V4 method is missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     v4_ranking = methods["v4_r1"].get("ranking")
     if not isinstance(v4_ranking, list):
-        raise ValueError("reference progression V4 ranking is missing")
+        raise ValueError("reference progression V4 ranking is missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     model = WorkbookModel.from_xlsx(workbook)
     predictions = progression_rankings(model, v4_ranking)
     return {
@@ -230,7 +229,7 @@ def audit_shard(
     for key in ("standalone_ranking", "v4_fusion_ranking", "v4_ranking"):
         ranking = record.get(key)
         if not isinstance(ranking, list):
-            raise ValueError("reference progression ranking is missing")
+            raise ValueError("reference progression ranking is missing")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         validate_complete_ranking(ranking, formula_cells)
     actions = record.get("action_cells")
     if (
@@ -257,7 +256,7 @@ def ranking_summary(
         sources = set(parse_source_cells(row["source_cells"]))
         ranking = records[row["instance_id"]][ranking_key]
         if not isinstance(ranking, list):
-            raise ValueError("reference progression score ranking is malformed")
+            raise ValueError("reference progression score ranking is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         rank = source_rank(ranking, sources)
         ranks.append(rank)
         by_group[groups[row["instance_id"]]].append(rank is not None and rank <= 5)
@@ -283,7 +282,7 @@ def selective_summary(
     for row in rows:
         actions = records[row["instance_id"]]["action_cells"]
         if not isinstance(actions, list):
-            raise ValueError("reference progression actions are malformed")
+            raise ValueError("reference progression actions are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         inspected += len(actions)
         if row["case_kind"] == "error":
             acted_errors += bool(actions)

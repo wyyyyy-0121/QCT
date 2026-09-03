@@ -12,9 +12,8 @@ import hashlib
 import json
 import os
 import subprocess
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_cwrp_sheetjs_acquisition_v1"
@@ -60,7 +59,7 @@ def parse_tree_snapshot(path: Path) -> dict[str, int]:
         raise ValueError("GitHub tree snapshot is missing or truncated")
     tree = payload.get("tree")
     if not isinstance(tree, list):
-        raise ValueError("GitHub tree snapshot has no tree list")
+        raise ValueError("GitHub tree snapshot has no tree list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     count = 0
     total_bytes = 0
     for item in tree:

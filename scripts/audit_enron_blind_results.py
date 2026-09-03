@@ -6,12 +6,10 @@ import argparse
 import csv
 import hashlib
 import json
-import math
 import random
 import statistics
 from collections import defaultdict
 from pathlib import Path
-
 
 METHODS = (
     "graph",

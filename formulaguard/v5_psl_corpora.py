@@ -12,11 +12,10 @@ import stat
 import subprocess
 import urllib.request
 import zipfile
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 from .v5_psl_protocol import canonical_json_sha256, sha256
-
 
 CORPUS_IDS = (
     "modified_euses", "info1", "integer_corpus", "enron_error",
@@ -39,7 +38,7 @@ def load_registry(path: Path) -> dict[str, dict[str, object]]:
         raise ValueError("Public corpus registry protocol is invalid")
     rows = payload.get("corpora")
     if not isinstance(rows, list):
-        raise ValueError("Public corpus registry must contain a corpora list")
+        raise ValueError("Public corpus registry must contain a corpora list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     by_id = {}
     for row in rows:
         if not isinstance(row, dict) or row.get("id") not in CORPUS_IDS:
@@ -123,7 +122,7 @@ def acquire_corpus(
     destination.mkdir(parents=True)
     acquisition = spec["acquisition"]
     if not isinstance(acquisition, Mapping):
-        raise ValueError(f"Invalid acquisition record for {corpus_id}")
+        raise ValueError(f"Invalid acquisition record for {corpus_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     kind = str(acquisition["kind"])
     receipt: dict[str, object] = {
         "protocol": "v5_psl_public_corpus_acquisition_v1",
@@ -317,7 +316,7 @@ def _forepbench_inventory(source: Path, task_scope: str) -> list[dict[str, objec
     path = candidates[0]
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, list):
-        raise ValueError("FoRepBenchmarks.json must contain a list")
+        raise ValueError("FoRepBenchmarks.json must contain a list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     relative = path.relative_to(source).as_posix()
     return [
         {

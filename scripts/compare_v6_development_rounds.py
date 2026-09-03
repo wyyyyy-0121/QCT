@@ -13,7 +13,6 @@ import hashlib
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -133,9 +132,9 @@ def markdown(receipt: dict) -> str:
         "",
         "## Decision",
         "",
-        "All three preregistered development variants are complete and independently auditable. "
+        ("All three preregistered development variants are complete and independently auditable. "
         "This comparison does not select a model: the frozen method specification reserves selection "
-        "for the one-shot 360-event locked validation after all A/B/C predictions and matched ablations are on disk.",
+        "for the one-shot 360-event locked validation after all A/B/C predictions and matched ablations are on disk."),
         "",
         "| Variant | Mechanism | Dev macro Top-5 | Dev MRR | Red-team macro Top-5 | Worst red-team type | Clean FPR | Enron MRR delta |",
         "|---|---|---:|---:|---:|---:|---:|---:|",
@@ -155,15 +154,15 @@ def markdown(receipt: dict) -> str:
         "",
         "## Mechanism interpretation",
         "",
-        f"- BSS is strongly supported as a range mechanism: B minus A is {ba['development_range_boundary_top5']:+.2%} "
-        f"development range-boundary Top-5 and {ba['redteam_macro_top5']:+.2%} red-team macro Top-5.",
-        f"- The C safety constraints do not reduce the registered clean exception alarm rate "
+        (f"- BSS is strongly supported as a range mechanism: B minus A is {ba['development_range_boundary_top5']:+.2%} "
+        f"development range-boundary Top-5 and {ba['redteam_macro_top5']:+.2%} red-team macro Top-5."),
+        (f"- The C safety constraints do not reduce the registered clean exception alarm rate "
         f"({cb['clean_false_alarm_rate']:+.2%}) and leave red-team macro Top-5 unchanged "
-        f"({cb['redteam_macro_top5']:+.2%}).",
-        f"- C is more conservative on development data: C minus B is {cb['development_macro_top5']:+.2%} macro Top-5; "
-        f"the change is concentrated in absolute-reference cases ({cb['development_absolute_reference_top5']:+.2%}).",
-        "- C exactly preserves V4 on the 30-event Enron retrospective check, while A/B share a one-rank tail regression. "
-        "Enron remains retrospective and is not independent evidence.",
+        f"({cb['redteam_macro_top5']:+.2%})."),
+        (f"- C is more conservative on development data: C minus B is {cb['development_macro_top5']:+.2%} macro Top-5; "
+        f"the change is concentrated in absolute-reference cases ({cb['development_absolute_reference_top5']:+.2%})."),
+        ("- C exactly preserves V4 on the 30-event Enron retrospective check, while A/B share a one-rank tail regression. "
+        "Enron remains retrospective and is not independent evidence."),
         "",
         "## Integrity and next step",
         "",

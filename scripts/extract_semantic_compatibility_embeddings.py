@@ -12,8 +12,8 @@ import os
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -51,9 +51,10 @@ from scripts.build_fcrl_u1_corpus import (
 )
 from scripts.build_semantic_compatibility_corpus import (
     PROTOCOL as CORPUS_PROTOCOL,
+)
+from scripts.build_semantic_compatibility_corpus import (
     target_id,
 )
-
 
 PROTOCOL = "formulaguard_semantic_compatibility_embeddings_v2"
 MAX_WORKERS = 24

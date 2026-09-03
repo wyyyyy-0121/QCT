@@ -18,15 +18,19 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.a1 import parse_address  # noqa: E402
-from formulaguard.formula_compatibility_pilot import candidate_rows  # noqa: E402
-from formulaguard.pcrc import selected_targets, stable_hash, workbook_examples  # noqa: E402
-from formulaguard.reference_progression import (  # noqa: E402
+from formulaguard.a1 import parse_address
+from formulaguard.formula_compatibility_pilot import candidate_rows
+from formulaguard.pcrc import (
+    selected_targets,
+    stable_hash,
+    workbook_examples,
+)
+from formulaguard.reference_progression import (
     directional_progression_peers,
     progression_decision,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.build_fcrl_u1_corpus import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.build_fcrl_u1_corpus import (
     DEFAULT_CORPUS_MANIFEST,
     DEFAULT_CORPUS_RECEIPT,
     DEFAULT_INPUT_ROOT,
@@ -37,7 +41,6 @@ from scripts.build_fcrl_u1_corpus import (  # noqa: E402
     sha256_file,
     write_json_atomic,
 )
-
 
 PROTOCOL = "formulaguard_reference_progression_pilot_v1"
 MAX_WORKERS = 24
@@ -206,7 +209,7 @@ def _validate_shard(path: Path, source: Mapping[str, object]) -> dict[str, objec
 def baseline_candidate(row: Mapping[str, object], frequency: Mapping[str, int]) -> str:
     candidates = row["candidates"]
     if not isinstance(candidates, list):
-        raise ValueError("reference progression candidates are malformed")
+        raise ValueError("reference progression candidates are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     selected = max(
         candidates,
         key=lambda item: (

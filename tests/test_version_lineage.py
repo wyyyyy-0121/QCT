@@ -13,7 +13,6 @@ from formulaguard.v4x import (
 )
 from formulaguard.v52 import V52Decision
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 

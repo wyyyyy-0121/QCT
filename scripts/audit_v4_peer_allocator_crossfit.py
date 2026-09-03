@@ -5,16 +5,20 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.run_v4_residual_controller import reject_protected, sha256, stable_hash
-from scripts.run_v4_static_fifth_experiment import _bootstrap_delta, _metrics, git_commit, relative
-
+from scripts.run_v4_static_fifth_experiment import (
+    _bootstrap_delta,
+    _metrics,
+    git_commit,
+    relative,
+)
 
 PROTOCOL = "formulaguard_v4_peer_allocator_structure_crossfit_v1"
 MODELS = ("peer_fifth", "guarded_fifth", "evidence_allocator")

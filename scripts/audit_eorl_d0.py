@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.eorl import (  # noqa: E402
+from formulaguard.eorl import (
     D0_PROTOCOL,
     PROTOCOL,
     RELATIVE_TOLERANCE,
@@ -30,18 +30,17 @@ from formulaguard.eorl import (  # noqa: E402
     source_repair_recoverability,
     values_match,
 )
-from formulaguard.libreoffice import (  # noqa: E402
+from formulaguard.libreoffice import (
     LibreOfficeEvaluator,
     LibreOfficeUnavailable,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.run_model_discovery_signals import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.run_model_discovery_signals import (
     read_profiles,
     sha256,
     shard_name,
     stable_hash,
 )
-
 
 DEFAULT_PREREGISTRATION = ROOT / "research/V5_EORL_PREREGISTRATION.json"
 DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/observation_profiles.csv"
@@ -92,7 +91,7 @@ def _git_commit() -> str:
 def _read_json(path: Path) -> dict[str, object]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict):
-        raise ValueError(f"expected JSON object: {path}")
+        raise ValueError(f"expected JSON object: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return payload
 
 
@@ -130,7 +129,7 @@ def _read_events(path: Path) -> dict[str, dict[str, object]]:
 
 def _source_cells(value: object) -> list[tuple[str, str]]:
     if not isinstance(value, list):
-        raise ValueError("event source_formula_cells is malformed")
+        raise ValueError("event source_formula_cells is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return [parse_cell_label(str(item)) for item in value]
 
 

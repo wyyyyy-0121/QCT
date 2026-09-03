@@ -13,8 +13,8 @@ import sys
 import tempfile
 import zipfile
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -41,7 +41,6 @@ from scripts.run_v5_psl_predictions import (
     verify_candidate_lock,
 )
 from scripts.verify_v5_psl_prediction_lock import verify_prediction_run
-
 
 BOOTSTRAP_DRAWS = 10_000
 BOOTSTRAP_SEED = 20260830

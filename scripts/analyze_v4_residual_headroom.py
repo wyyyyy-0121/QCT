@@ -13,9 +13,8 @@ import hashlib
 import json
 import os
 from collections import defaultdict
+from collections.abc import Callable, Mapping, Sequence
 from pathlib import Path
-from typing import Callable, Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_EVENTS = ROOT / "results/model_discovery_gate2_final_v3/event_scores.jsonl"

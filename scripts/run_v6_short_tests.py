@@ -36,7 +36,7 @@ def git_commit() -> str:
     for executable in ("git", str(bundled)):
         try:
             return subprocess.check_output([executable, "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
     return "unavailable"
 
@@ -67,7 +67,7 @@ def main():
     smoke = json.loads(smoke_path.read_text(encoding="utf-8")) if smoke_path.exists() else {}
     receipt = {
         "protocol": "v6_codex_owned_short_test_receipt_v1",
-        "timestamp_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "timestamp_utc": dt.datetime.now(dt.UTC).isoformat(),
         "git_commit": git_commit(),
         "unit_tests": tests_count,
         "unit_tests_exit_code": tests_code,

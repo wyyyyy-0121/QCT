@@ -33,7 +33,6 @@ from formulaguard.pcrc import (
 )
 from formulaguard.v5_psl_protocol import sha256 as sha256_file
 
-
 PROTOCOL = "formulaguard_formula_denoiser_pilot_v3"
 SEED = 260902
 MASK_TOKEN = "<MASK>"
@@ -134,7 +133,7 @@ def load_vocabulary(path: Path) -> PCRCVocabulary:
         raise ValueError("formula denoiser vocabulary contract differs")
     tokens = payload.get("tokens")
     if not isinstance(tokens, list):
-        raise ValueError("formula denoiser vocabulary is malformed")
+        raise ValueError("formula denoiser vocabulary is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     values = tuple(str(token) for token in tokens)
     if MASK_TOKEN in values:
         raise ValueError("formula denoiser mask token unexpectedly entered the base vocabulary")
@@ -149,9 +148,7 @@ def masked_reference_corruption(
     positions = [
         index
         for index, token in enumerate(clean_tokens)
-        if token.startswith("OFFSET_")
-        or token.startswith("DIGIT_")
-        or token in {"ROW_REL", "ROW_ABS", "COL_REL", "COL_ABS", "SELF", "OTHER"}
+        if token.startswith(("OFFSET_", "DIGIT_")) or token in {"ROW_REL", "ROW_ABS", "COL_REL", "COL_ABS", "SELF", "OTHER"}
     ]
     if not positions:
         return None

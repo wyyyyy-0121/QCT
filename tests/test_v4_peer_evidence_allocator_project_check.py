@@ -9,7 +9,6 @@ from scripts.run_v4_peer_evidence_allocator_project_check import (
     verify_candidate_lock,
 )
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 

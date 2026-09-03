@@ -2,13 +2,12 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Sequence
 
 from .localize import LocalizationResult, v4_scores
 from .v5_psl import diagnose_v5_psl
 from .workbook import WorkbookModel
-
 
 MODEL_VERSION = "v4-static-allocator-exploratory-v1"
 ARCHITECTURE = "frozen_v4_prefix_plus_coverage_gated_static_slots"

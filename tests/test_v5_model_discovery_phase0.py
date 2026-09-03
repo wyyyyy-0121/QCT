@@ -17,7 +17,6 @@ from scripts.validate_v5_model_discovery_phase0 import (
     validate_power_report,
 )
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 

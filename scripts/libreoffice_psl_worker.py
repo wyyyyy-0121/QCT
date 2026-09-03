@@ -44,7 +44,7 @@ def connect(port: int, timeout: float = 30.0):
                 "com.sun.star.frame.Desktop", remote,
             )
             return desktop
-        except Exception:
+        except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             time.sleep(0.10)
     raise RuntimeError("Timed out connecting to isolated LibreOffice process")
 
@@ -102,6 +102,7 @@ def main() -> int:
             raise RuntimeError("LibreOffice could not open workbook")
         version = subprocess.run(
             [str(args.soffice), "--version"], capture_output=True, text=True, timeout=10,
+            check=False,
         ).stdout.strip()
         print(json.dumps({"status": "ready", "engine_version": version}), flush=True)
         original_inputs: dict[tuple[str, str], float] = {}
@@ -141,22 +142,22 @@ def main() -> int:
                     document.calculateAll()
                     rows.append(read_cells(document, formula_cells))
                 print(json.dumps({"status": "ok", "base": base, "scenarios": rows}), flush=True)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 print(json.dumps({
                     "status": "error",
                     "error": f"{type(exc).__name__}: {exc}",
                 }), flush=True)
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         print(json.dumps({"status": "error", "error": f"{type(exc).__name__}: {exc}"}), flush=True)
         return 1
     finally:
         if document is not None:
             try:
                 document.close(True)
-            except Exception:
+            except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 try:
                     document.dispose()
-                except Exception:
+                except Exception:  # noqa: BLE001, S110 intentional compatibility or fallback boundary; preserve runtime behavior
                     pass
         office.terminate()
         try:

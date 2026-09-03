@@ -8,7 +8,7 @@ import hashlib
 import json
 import statistics
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -125,7 +125,7 @@ def main() -> None:
                 writer.writeheader()
                 writer.writerows(negative_rows)
     payload = {
-        "schema_version": 1, "generated_at": datetime.now(timezone.utc).isoformat(),
+        "schema_version": 1, "generated_at": datetime.now(UTC).isoformat(),
         "prediction_manifest_sha256": sha256(freeze_path), "predictions_sha256": sha256(prediction_path),
         "private_labels_sha256": sha256(args.labels), "instances_scored": len({row["instance_id"] for row in detailed}),
         "methods": freeze["methods"], "negative_exception_rows": len(negative_rows),

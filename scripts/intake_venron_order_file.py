@@ -12,12 +12,11 @@ import shutil
 import subprocess
 import tempfile
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from datetime import date, datetime, time
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
 
 import openpyxl
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_order_schema_v0"
@@ -245,7 +244,7 @@ def intake(
         raise ValueError("VEnron inventory or archive identity changed")
     members = manifest.get("members")
     if not isinstance(members, list):
-        raise ValueError("VEnron member manifest is malformed")
+        raise ValueError("VEnron member manifest is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     layout = validate_layout(members)
     bsdtar_path = resolve_executable(bsdtar, "bsdtar")
     libreoffice_path = resolve_executable(libreoffice, "libreoffice")

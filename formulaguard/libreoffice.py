@@ -6,8 +6,9 @@ import json
 import select
 import shutil
 import subprocess
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
+from typing import Self
 
 from .v5_psl_types import OfficeEvaluation, OfficeScenario
 from .workbook import CellKey, WorkbookModel
@@ -132,7 +133,7 @@ class LibreOfficeEvaluator:
                 process.kill()
                 process.wait(timeout=5)
 
-    def __enter__(self) -> "LibreOfficeEvaluator":
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, exc_type, exc, traceback) -> None:
@@ -141,7 +142,7 @@ class LibreOfficeEvaluator:
     def __del__(self):
         try:
             self.close()
-        except Exception:
+        except Exception:  # noqa: BLE001, S110 intentional compatibility or fallback boundary; preserve runtime behavior
             pass
 
 

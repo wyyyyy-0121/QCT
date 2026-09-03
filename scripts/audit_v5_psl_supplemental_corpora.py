@@ -9,8 +9,8 @@ import sys
 import tarfile
 import tempfile
 from collections import Counter
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -32,7 +32,7 @@ def _forepbench(source: Path, expected_hash: str) -> tuple[list[dict[str, object
         raise ValueError("FoRepBench dataset differs from the pinned content hash")
     payload = json.loads(dataset.read_text(encoding="utf-8"))
     if not isinstance(payload, list):
-        raise ValueError("FoRepBench dataset must contain a JSON list")
+        raise ValueError("FoRepBench dataset must contain a JSON list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     rows = []
     for index, item in enumerate(payload, 1):
         faulty = str(item.get("faulty_formula", "")) if isinstance(item, dict) else ""
@@ -138,7 +138,7 @@ def _spreadsheetbench(
                     workbook_path.write_bytes(source_item)
                     model = WorkbookModel.from_xlsx(workbook_path)
             formula_count = len(model.formulas)
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             parse_status = "excluded"
             diagnostic_state = "safe_skip"
             error_type = type(exc).__name__
@@ -149,7 +149,7 @@ def _spreadsheetbench(
                 diagnostic_attempts += 1
                 try:
                     report = diagnose_v5_psl(model)
-                except Exception as exc:
+                except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                     diagnostic_state = "safe_skip"
                     diagnostic_failures += 1
                     error_type = type(exc).__name__

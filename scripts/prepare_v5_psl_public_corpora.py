@@ -20,7 +20,6 @@ from formulaguard.v5_psl_corpora import (
 )
 from formulaguard.v5_psl_protocol import sha256
 
-
 DEFAULT_REGISTRY = ROOT / "data/external/v5_psl/corpus_registry.json"
 
 

@@ -9,7 +9,6 @@ from scripts.run_v4_static_fifth_blind import (
     verify_candidate_lock,
 )
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 

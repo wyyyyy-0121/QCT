@@ -11,8 +11,8 @@ import statistics
 import subprocess
 import sys
 from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -45,7 +45,6 @@ from scripts.run_v4_static_fifth_project_blind import (
     _release_inventory,
     _release_summary,
 )
-
 
 CANDIDATE_PROTOCOL = "v4_peer_evidence_allocator_project_check_candidate_lock_v1"
 PREDICTION_PROTOCOL = "v4_peer_evidence_allocator_project_prediction_v1"
@@ -396,7 +395,9 @@ def _verify_git_commitment(
         raise ValueError("Git prediction commitment differs")
     relative = path.resolve().relative_to(ROOT)
     _git("cat-file", "-e", f"HEAD:{relative.as_posix()}")
-    if subprocess.run(["git", "diff", "--quiet", "HEAD", "--", str(relative)], cwd=ROOT).returncode:
+    if subprocess.run(
+        ["git", "diff", "--quiet", "HEAD", "--", str(relative)], cwd=ROOT, check=False
+    ).returncode:
         raise ValueError("Git prediction commitment has uncommitted changes")
 
 

@@ -8,8 +8,8 @@ import json
 import os
 import subprocess
 import sys
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
 import torch
 
@@ -27,7 +27,6 @@ from scripts.train_fcrl_u1 import (
     iter_batches,
     load_target_contract,
 )
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_fcrl_u1_locked_runner_v1"

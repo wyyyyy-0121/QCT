@@ -9,9 +9,8 @@ import re
 import tempfile
 import zipfile
 from collections import Counter, defaultdict
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
-
 
 DEFAULT_WORKERS = 24
 PUBLIC_FIELDS = ("instance_id", "workbook")

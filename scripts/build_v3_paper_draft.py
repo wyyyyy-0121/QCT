@@ -11,14 +11,12 @@ import json
 from pathlib import Path
 
 from docx import Document
-from docx.enum.section import WD_SECTION
 from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.table import WD_ALIGN_VERTICAL, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
-
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "deliverables" / "FormulaGuard_v3_论文初稿_待补充吞吐.docx"
@@ -246,7 +244,7 @@ def main():
     v3v2 = json.loads((full / "v3_vs_v2.json").read_text(encoding="utf-8"))
     coupling = json.loads((full / "benchmark_independence.audit.json").read_text(encoding="utf-8"))
     clean = json.loads((full / "clean_summary.json").read_text(encoding="utf-8"))
-    blind = json.loads((enron / "blind_result_audit.json").read_text(encoding="utf-8"))
+    json.loads((enron / "blind_result_audit.json").read_text(encoding="utf-8"))
 
     doc = Document()
     configure(doc)

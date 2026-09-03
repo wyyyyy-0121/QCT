@@ -36,7 +36,6 @@ from formulaguard.pcrc import (
 )
 from scripts.build_fcrl_u1_corpus import sha256_file, write_json_atomic
 
-
 SEED = 260902
 BATCH_SIZE = 128
 LEARNING_RATES = (1e-3, 3e-4, 1e-4)
@@ -96,7 +95,7 @@ def load_vocabulary(path: Path) -> PCRCVocabulary:
         raise ValueError("formula compatibility vocabulary contract differs")
     tokens = payload.get("tokens")
     if not isinstance(tokens, list):
-        raise ValueError("formula compatibility vocabulary is malformed")
+        raise ValueError("formula compatibility vocabulary is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return PCRCVocabulary(tuple(str(token) for token in tokens))
 
 
@@ -347,7 +346,7 @@ def evaluate(
 
 
 def _encoded_key(tokens: Sequence[int]) -> str:
-    return hashlib.sha256(bytes().join(int(value).to_bytes(4, "little") for value in tokens)).hexdigest()
+    return hashlib.sha256(b"".join(int(value).to_bytes(4, "little") for value in tokens)).hexdigest()
 
 
 def cpu_state(model: FormulaCompatibilityPilot) -> dict[str, Tensor]:

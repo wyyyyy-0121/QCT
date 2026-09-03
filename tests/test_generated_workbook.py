@@ -1,8 +1,7 @@
-from pathlib import Path
 import unittest
+from pathlib import Path
 
 from formulaguard.workbook import WorkbookModel
-
 
 SMOKE_BOOK = Path(__file__).resolve().parents[1] / "data" / "propagationbench_smoke" / "clean" / "budget_v0.xlsx"
 

@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import csv
-import hashlib
 import json
 import os
 import sys
@@ -18,7 +17,6 @@ from formulaguard.localize import localize, v4_default_parameters
 from formulaguard.workbook import WorkbookModel
 from scripts.freeze_v4_model import verify_model_source_hashes
 from scripts.run_external_evaluation import parse_methods, sha256_file
-
 
 DEFAULT_METHODS = "graph,pattern,formulaguard,formulaguard_v3,formulaguard_v4"
 FORBIDDEN_LABEL_FIELDS = {

@@ -3,7 +3,6 @@ import unittest
 
 from scripts.validate_v5_model_discovery_gate1 import (
     CARDS_MD_PATH,
-    CARDS_PATH,
     RESULT_MD_PATH,
     RESULT_PATH,
     build_gate_result,

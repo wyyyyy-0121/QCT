@@ -13,8 +13,8 @@ import stat
 import sys
 import zipfile
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -27,7 +27,6 @@ from formulaguard.v5_psl_protocol import (
     sha256,
 )
 from scripts.freeze_v5_psl_candidate import _git
-
 
 PROTOCOL = "v5_successor_revealed_trial_intake_v1"
 V1_PACKAGE_PROTOCOL = "v5_psl_third_party_pack_v1"
@@ -126,7 +125,7 @@ def _read_csv_member(
 def _read_json_member(archive: zipfile.ZipFile, name: str) -> dict[str, object]:
     value = json.loads(_member_bytes(archive, name).decode("utf-8"))
     if not isinstance(value, dict):
-        raise ValueError(f"{name} must contain a JSON object")
+        raise ValueError(f"{name} must contain a JSON object")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return value
 
 

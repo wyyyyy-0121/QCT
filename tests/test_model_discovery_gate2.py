@@ -6,15 +6,23 @@ from formulaguard.workbook import WorkbookModel
 from scripts.score_model_discovery_min_info import (
     choose_visible_output,
     graph_distance_rank,
+)
+from scripts.score_model_discovery_min_info import (
     metric as min_info_metric,
+)
+from scripts.score_model_discovery_min_info import (
+    write_immutable as write_branch_c_immutable,
 )
 from scripts.score_model_discovery_signals import (
     _fixed_macro,
     _metric,
+)
+from scripts.score_model_discovery_signals import (
     parse_cells as signal_parse_cells,
+)
+from scripts.score_model_discovery_signals import (
     write_immutable as write_signal_immutable,
 )
-from scripts.score_model_discovery_min_info import write_immutable as write_branch_c_immutable
 
 
 class ModelDiscoveryGate2Tests(unittest.TestCase):

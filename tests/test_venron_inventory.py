@@ -19,9 +19,8 @@ class VEnronInventoryTests(unittest.TestCase):
             "group/./file.xls",
             "group/line\nbreak.xls",
         ):
-            with self.subTest(value=value):
-                with self.assertRaises(ValueError):
-                    inventory_venron_v0.safe_member_name(value)
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                inventory_venron_v0.safe_member_name(value)
 
     def test_inventory_counts_workbook_parents_without_opening_files(self):
         summary, rows = inventory_venron_v0.build_inventory([

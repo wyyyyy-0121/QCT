@@ -6,34 +6,32 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
-import os
 import subprocess
 import sys
 from collections import Counter
+from collections.abc import Iterable, Mapping, Sequence
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.model_discovery import validate_label_free_output  # noqa: E402
-from formulaguard.peer_repair_closure import (  # noqa: E402
+from formulaguard.model_discovery import validate_label_free_output
+from formulaguard.peer_repair_closure import (
     CANDIDATE_POLICY,
     MODEL_VERSION,
     PROTOCOL,
     probe_repair_closure,
     validate_probe_output,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.run_model_discovery_signals import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.run_model_discovery_signals import (
     read_profiles,
     safe_input_path,
     sha256,
     shard_name,
     write_json_atomic,
 )
-
 
 RUN_PROTOCOL = "formulaguard_peer_repair_closure_run_v1"
 DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/observation_profiles.csv"
@@ -65,7 +63,7 @@ def _reject_protected(path: Path) -> None:
 def _load_json(path: Path) -> dict[str, object]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict):
-        raise ValueError(f"expected JSON object: {path}")
+        raise ValueError(f"expected JSON object: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return payload
 
 
@@ -180,7 +178,7 @@ def _validate_record(
         raise ValueError(f"repair-closure shard crossed the data boundary: {path.name}")
     probe = payload.get("probe")
     if not isinstance(probe, dict):
-        raise ValueError(f"repair-closure probe is malformed: {path.name}")
+        raise ValueError(f"repair-closure probe is malformed: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     errors = validate_probe_output(probe)
     if errors:
         raise ValueError(f"invalid repair-closure output {path.name}: {'; '.join(errors)}")
@@ -264,7 +262,7 @@ def run(
         target = shards_dir / shard_name(unit_id)
         audit = signals[unit_id]["audit"]
         if not isinstance(audit, dict):
-            raise ValueError(f"peer audit is malformed: {unit_id}")
+            raise ValueError(f"peer audit is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         if target.exists():
             _validate_record(target, profile, audit)
         else:
@@ -276,11 +274,11 @@ def run(
             unit_id = str(profile["unit_id"])
             ranking = v4[unit_id]["ranking"]
             if not isinstance(ranking, list):
-                raise ValueError(f"V4 ranking is malformed: {unit_id}")
+                raise ValueError(f"V4 ranking is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
             v4_cells = [str(row["cell"]) for row in ranking if isinstance(row, Mapping)]
             audit = signals[unit_id]["audit"]
             if not isinstance(audit, dict):
-                raise ValueError(f"peer audit is malformed: {unit_id}")
+                raise ValueError(f"peer audit is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
             payloads.append((profile, v4_cells, audit, str(output_dir)))
         print(
             f"peer repair closure scheduling: workers={worker_count}; "
@@ -305,7 +303,7 @@ def run(
             raise ValueError(f"unexpected repair-closure unit: {unit_id}")
         audit = signals[unit_id]["audit"]
         if not isinstance(audit, dict):
-            raise ValueError(f"peer audit is malformed: {unit_id}")
+            raise ValueError(f"peer audit is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         records.append(_validate_record(path, profiles_by_id[unit_id], audit))
     reasons = Counter(str(record["probe"]["selection_reason"]) for record in records)  # type: ignore[index]
     completion: dict[str, object] = {

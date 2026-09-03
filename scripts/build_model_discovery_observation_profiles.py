@@ -16,9 +16,8 @@ import csv
 import hashlib
 import json
 import os
+from collections.abc import Iterable, Mapping
 from pathlib import Path
-from typing import Iterable, Mapping
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GROUPS = ROOT / "results/core_reset_b_phase0/scoring_groups.csv"
@@ -144,8 +143,7 @@ def build_profiles(groups_path: Path = DEFAULT_GROUPS) -> tuple[list[dict[str, s
                     f"{existing[key]!r} vs {candidate[key]!r}"
                 )
         # Keep a stable representative path if byte-identical copies occur.
-        if candidate["path"] < existing["path"]:
-            existing["path"] = candidate["path"]
+        existing["path"] = min(existing["path"], candidate["path"])
 
     profiles = sorted(by_hash.values(), key=lambda item: item["unit_id"])
     audit = {

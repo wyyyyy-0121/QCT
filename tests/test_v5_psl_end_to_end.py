@@ -9,13 +9,12 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from formulaguard.v5_psl_protocol import CASE_FIELDS, ERROR_TYPES
-from scripts.build_v6_dataset import write_xlsx
 import scripts.build_v5_psl_third_party_pack as packer
 import scripts.run_v5_psl_predictions as predictor
 import scripts.score_v5_psl_blind as scorer
 import scripts.verify_v5_psl_prediction_lock as locker
-
+from formulaguard.v5_psl_protocol import CASE_FIELDS, ERROR_TYPES
+from scripts.build_v6_dataset import write_xlsx
 
 RUN_SYNTHETIC_E2E = os.environ.get("FORMULAGUARD_RUN_V5_PSL_E2E") == "1"
 

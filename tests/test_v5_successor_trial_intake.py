@@ -194,11 +194,13 @@ class V5SuccessorTrialIntakeTests(unittest.TestCase):
             receipt = json.loads(receipt_path.read_text())
             receipt["public_archive_sha256"] = "0" * 64
             receipt_path.write_text(json.dumps(receipt), encoding="utf-8")
-            with mock.patch(
-                "scripts.audit_v5_successor_revealed_trial.ALLOWED_ROOT", Path(directory)
+            with (
+                mock.patch(
+                    "scripts.audit_v5_successor_revealed_trial.ALLOWED_ROOT", Path(directory)
+                ),
+                self.assertRaisesRegex(ValueError, "public archive hash failed"),
             ):
-                with self.assertRaisesRegex(ValueError, "public archive hash failed"):
-                    audit_package(root)
+                audit_package(root)
 
 
 if __name__ == "__main__":

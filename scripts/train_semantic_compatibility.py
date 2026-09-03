@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import random
@@ -12,9 +11,9 @@ import subprocess
 import sys
 import time
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Mapping, Sequence
 
 os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
 
@@ -26,17 +25,22 @@ import torch
 from torch import Tensor
 from torch.nn import functional as F
 
-from formulaguard.semantic_compatibility import FormulaVocabulary, SPECIAL_TOKENS, pad_token_ids
+from formulaguard.semantic_compatibility import (
+    SPECIAL_TOKENS,
+    FormulaVocabulary,
+    pad_token_ids,
+)
 from formulaguard.semantic_compatibility_torch import SemanticCompatibilityHead
-from scripts.build_fcrl_u1_corpus import sha256_file, stable_hash, write_json_atomic
+from scripts.build_fcrl_u1_corpus import sha256_file, write_json_atomic
 from scripts.build_semantic_compatibility_corpus import PROTOCOL as CORPUS_PROTOCOL
 from scripts.extract_semantic_compatibility_embeddings import (
     CONTEXT_SIZE,
-    PROTOCOL as EMBEDDING_PROTOCOL,
     _validate_embedding_payload,
     load_target_contract,
 )
-
+from scripts.extract_semantic_compatibility_embeddings import (
+    PROTOCOL as EMBEDDING_PROTOCOL,
+)
 
 PROTOCOL = "formulaguard_semantic_compatibility_training_v2"
 SEED = 260831
@@ -279,7 +283,7 @@ def evaluate(
             candidate_tokens,
             candidate_lengths,
             candidate_mask,
-            gold_indices,
+            _gold_indices,
         ) = _batch_tensors(batch_examples, context_states, embedding_indices, device)
         logits = head.candidate_logits(
             context,

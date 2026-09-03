@@ -18,16 +18,16 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.pcrc import (  # noqa: E402
+from formulaguard.pcrc import (
     CORPUS_PROTOCOL,
     MAX_TARGETS_PER_WORKBOOK,
-    PCRCVocabulary,
     PEER_CONFIG,
     PROTOCOL,
+    PCRCVocabulary,
     workbook_examples,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.build_fcrl_u1_corpus import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.build_fcrl_u1_corpus import (
     DEFAULT_CORPUS_MANIFEST,
     DEFAULT_CORPUS_RECEIPT,
     DEFAULT_INPUT_ROOT,
@@ -39,7 +39,6 @@ from scripts.build_fcrl_u1_corpus import (  # noqa: E402
     stable_hash,
     write_json_atomic,
 )
-
 
 MAX_WORKERS = 24
 DEFAULT_OUTPUT = ROOT / "results/pcrc_corpus_v1"

@@ -12,23 +12,23 @@ import subprocess
 import tempfile
 import zipfile
 from collections import Counter
+from collections.abc import Mapping
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in os.sys.path:
     os.sys.path.insert(0, str(ROOT))
 
-from formulaguard.formula import FormulaSyntaxError, parse_formula  # noqa: E402
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.acquire_cwrp_sheetjs import (  # noqa: E402
+from formulaguard.formula import FormulaSyntaxError, parse_formula
+from formulaguard.workbook import WorkbookModel
+from scripts.acquire_cwrp_sheetjs import (
     COMMIT,
-    PROTOCOL as ACQUISITION_PROTOCOL,
     sha256,
     stable_hash,
 )
-
+from scripts.acquire_cwrp_sheetjs import (
+    PROTOCOL as ACQUISITION_PROTOCOL,
+)
 
 PROTOCOL = "formulaguard_cwrp_sheetjs_conversion_v2"
 DEFAULT_SOURCE = ROOT / "data/external/model_discovery/raw/sheetjs_enron"
@@ -95,7 +95,7 @@ def read_acquisition(
     seen_ids: set[str] = set()
     for item in rows:
         if not isinstance(item, dict):
-            raise ValueError("source manifest row is not an object")
+            raise ValueError("source manifest row is not an object")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         relative = _safe_relative(str(item.get("relative_path", "")), ".xls")
         source_id = str(item.get("source_id", ""))
         declared_hash = str(item.get("sha256", ""))
@@ -232,7 +232,7 @@ def _convert_one(
             "failure_type": "",
             "failure_errno": None,
         }
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         target.unlink(missing_ok=True)
         return {
             **base,
@@ -259,7 +259,7 @@ def _validate_shard(
         raise ValueError(f"wrong conversion shard protocol: {path.name}")
     result = record.get("result")
     if not isinstance(result, dict):
-        raise ValueError(f"malformed conversion shard: {path.name}")
+        raise ValueError(f"malformed conversion shard: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     for key in ("source_id", "source_sha256", "source_bytes"):
         if result.get(key) != expected.get(key):
             raise ValueError(f"conversion shard {key} mismatch: {path.name}")

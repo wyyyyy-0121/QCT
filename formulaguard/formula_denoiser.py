@@ -9,7 +9,6 @@ import torch
 from torch import Tensor, nn
 from torch.nn import functional as F
 
-
 CONTEXT_SEGMENT = 0
 CORRUPTED_FORMULA_SEGMENT = 1
 

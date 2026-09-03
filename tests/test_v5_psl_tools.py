@@ -8,6 +8,7 @@ import zipfile
 from pathlib import Path
 from unittest import mock
 
+import scripts.freeze_v5_psl_candidate as freeze_candidate
 from formulaguard.v5_psl import v5_psl_default_parameters
 from formulaguard.v5_psl_corpora import (
     INVENTORY_FIELDS,
@@ -22,17 +23,18 @@ from formulaguard.v5_psl_protocol import (
     deterministic_zip,
     sha256,
 )
-import scripts.freeze_v5_psl_candidate as freeze_candidate
 from scripts.audit_v5_psl_public_pressure import (
     _audit_inventories,
     _audit_pressure_run,
-    _revision_gates,
     _audit_supplemental_roles,
+    _revision_gates,
     _verify_acquisition,
 )
 from scripts.audit_v5_psl_supplemental_corpora import (
     _forepbench,
     _spreadsheetbench,
+)
+from scripts.audit_v5_psl_supplemental_corpora import (
     _write as write_role_audit,
 )
 from scripts.build_v5_psl_third_party_pack import validate_case_pair
@@ -49,10 +51,16 @@ from scripts.run_v5_psl_public_pressure import (
     PRESSURE_EVENT_FIELDS,
     PRESSURE_FIELDS,
     PRESSURE_METHODS,
-    _predict as predict_pressure_workbook,
-    audit_shard as audit_pressure_shard,
     _write_development_signatures,
     _write_events,
+)
+from scripts.run_v5_psl_public_pressure import (
+    _predict as predict_pressure_workbook,
+)
+from scripts.run_v5_psl_public_pressure import (
+    audit_shard as audit_pressure_shard,
+)
+from scripts.run_v5_psl_public_pressure import (
     read_manifest as read_pressure_manifest,
 )
 from scripts.score_v5_psl_blind import (
@@ -63,14 +71,17 @@ from scripts.score_v5_psl_blind import (
 )
 from scripts.tune_v5_psl_parameters import (
     BASELINE_ID,
-    _audit_case as audit_tuning_case,
-    _case_task as run_tuning_case,
     assign_group_folds,
     select_profile,
     tuning_profiles,
 )
+from scripts.tune_v5_psl_parameters import (
+    _audit_case as audit_tuning_case,
+)
+from scripts.tune_v5_psl_parameters import (
+    _case_task as run_tuning_case,
+)
 from scripts.verify_v5_psl_prediction_lock import _validate_prediction_inventory
-
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -321,7 +332,7 @@ class V5PSLToolTests(unittest.TestCase):
     def test_bounded_tuning_audit_binds_provenance_and_action_budget(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            manifest, _run, row = pressure_run(root)
+            _manifest, _run, row = pressure_run(root)
             output = root / "tuning"
             profiles = tuning_profiles()
             for profile_id in (*profiles, BASELINE_ID):
@@ -620,9 +631,8 @@ class V5PSLToolTests(unittest.TestCase):
             path.write_text(json.dumps(payload), encoding="utf-8")
             with mock.patch(
                 "scripts.run_v5_psl_predictions.git_worktree_clean", return_value=False,
-            ):
-                with self.assertRaisesRegex(ValueError, "clean Git worktree"):
-                    verify_candidate_lock(path)
+            ), self.assertRaisesRegex(ValueError, "clean Git worktree"):
+                verify_candidate_lock(path)
 
     def test_candidate_freeze_binds_claim_matrix_signatures_and_libreoffice(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -798,7 +808,7 @@ class V5PSLToolTests(unittest.TestCase):
     def test_public_pressure_audit_recomputes_events_and_action_budgets(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            manifest, run, row = pressure_run(root, case_count=2)
+            manifest, run, _row = pressure_run(root, case_count=2)
             _audit_pressure_run(manifest, run, workers=2)
 
             events_path = run / "public_pressure_events.csv"
@@ -818,7 +828,7 @@ class V5PSLToolTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            manifest, run, row = pressure_run(root)
+            manifest, run, _row = pressure_run(root)
             shard = run / "shards/pressure_001.json"
             record = json.loads(shard.read_text(encoding="utf-8"))
             record["methods"]["full"]["state"] = "localized"
@@ -920,10 +930,10 @@ class V5PSLToolTests(unittest.TestCase):
 
     def test_registry_and_info1_adapter_preserve_license_and_pending_conversion(self):
         registry = load_registry(ROOT / "data/external/v5_psl/corpus_registry.json")
-        self.assertEqual(set(registry), set((
+        self.assertEqual(set(registry), {
             "modified_euses", "info1", "integer_corpus", "enron_error",
             "forepbench", "spreadsheetbench",
-        )))
+        })
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory)
             _original, workbook = workbook_pair(source)

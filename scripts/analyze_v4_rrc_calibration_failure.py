@@ -7,8 +7,8 @@ import json
 import math
 import os
 import sys
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -29,7 +29,6 @@ from scripts.run_v4_residual_controller import (
     stable_hash,
     summarize_predictions,
 )
-
 
 PROTOCOL = "formulaguard_v4_rrc_calibration_failure_audit_v1"
 DEFAULT_D0 = ROOT / "results/v4_rrc_d0"

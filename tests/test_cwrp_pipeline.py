@@ -6,17 +6,6 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from scripts.acquire_cwrp_sheetjs import acquire, collect_workbooks, parse_tree_snapshot
-from scripts.build_v6_dataset import write_xlsx
-from scripts.convert_cwrp_sheetjs import convert, install_converted
-from scripts.build_cwrp_corpus import cluster_profiles, read_targets
-from scripts.run_cwrp_self_supervised import (
-    _ece,
-    _validate_example,
-    HierarchicalRolePrior,
-    permute_training_targets,
-    select_support_threshold,
-)
 from formulaguard.cwrp import (
     formula_count_ratio_eligible,
     formula_role_fingerprint,
@@ -25,6 +14,17 @@ from formulaguard.cwrp import (
     workbook_profile,
 )
 from formulaguard.workbook import WorkbookModel
+from scripts.acquire_cwrp_sheetjs import acquire, collect_workbooks, parse_tree_snapshot
+from scripts.build_cwrp_corpus import cluster_profiles, read_targets
+from scripts.build_v6_dataset import write_xlsx
+from scripts.convert_cwrp_sheetjs import convert, install_converted
+from scripts.run_cwrp_self_supervised import (
+    HierarchicalRolePrior,
+    _ece,
+    _validate_example,
+    permute_training_targets,
+    select_support_threshold,
+)
 
 
 def digest(path: Path) -> str:

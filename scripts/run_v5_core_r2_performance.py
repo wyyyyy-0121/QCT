@@ -18,7 +18,6 @@ import time
 import tracemalloc
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -26,7 +25,6 @@ if str(ROOT) not in sys.path:
 from formulaguard.localize import v4_scores
 from formulaguard.v5_core_r2 import v5_core_r2_scores
 from formulaguard.workbook import WorkbookModel
-
 
 METHODS = ("v4", "r2_source", "r2_full")
 MODES = ("latency", "throughput", "memory")

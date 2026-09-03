@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import csv
-import hashlib
 import io
 import json
 import os
@@ -16,8 +15,8 @@ import sys
 import tempfile
 import zipfile
 from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -39,7 +38,6 @@ from formulaguard.v5_psl_protocol import (
     combined_shards_sha256,
     deterministic_zip_sha256,
     parse_source_cells,
-    read_csv,
     read_sha256_commitments,
     safe_path,
     sha256,
@@ -49,9 +47,11 @@ from formulaguard.v5_psl_protocol import (
 )
 from formulaguard.workbook import WorkbookModel
 from scripts.build_v5_psl_third_party_pack import validate_case_pair
-from scripts.run_v5_psl_predictions import FORBIDDEN_SECRET_NAMES, _validate_public_metadata
+from scripts.run_v5_psl_predictions import (
+    FORBIDDEN_SECRET_NAMES,
+    _validate_public_metadata,
+)
 from scripts.score_v5_psl_blind import _archive_bytes, _read_csv_bytes, _verify_secret
-
 
 CANDIDATE_PROTOCOL = "v4_static_fifth_blind_candidate_lock_v1"
 PREDICTION_PROTOCOL = "v4_static_fifth_blind_prediction_shard_v1"
@@ -443,6 +443,7 @@ def _verify_git_commitment(
     git("cat-file", "-e", f"HEAD:{relative.as_posix()}")
     if subprocess.run(
         ["git", "diff", "--quiet", "HEAD", "--", str(relative)], cwd=ROOT,
+        check=False,
     ).returncode:
         raise ValueError("Git prediction commitment has uncommitted changes")
     return payload

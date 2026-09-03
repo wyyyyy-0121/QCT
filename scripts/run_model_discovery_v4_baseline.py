@@ -16,22 +16,19 @@ import os
 import subprocess
 import sys
 import time
+from collections.abc import Iterable, Mapping
 from pathlib import Path
-from typing import Iterable, Mapping
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.formula import normalized_formula  # noqa: E402
-from formulaguard.localize import v4_default_parameters, v4_scores  # noqa: E402
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.run_model_discovery_signals import (  # noqa: E402
-    REQUIRED_PROFILE_FIELDS,
+from formulaguard.localize import v4_default_parameters, v4_scores
+from formulaguard.workbook import WorkbookModel
+from scripts.run_model_discovery_signals import (
     read_profiles,
     shard_name,
 )
-
 
 RUN_PROTOCOL = "formulaguard_model_discovery_v4_baseline_run_v1"
 DEFAULT_PROFILES = ROOT / "results/core_reset_b_phase0/observation_profiles.csv"

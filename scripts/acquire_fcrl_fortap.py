@@ -9,7 +9,6 @@ import platform
 import subprocess
 from pathlib import Path
 
-
 REPOSITORY = "https://github.com/microsoft/TUTA_table_understanding.git"
 COMMIT = "4de8bba4e9bf6a89b2e131bfb471b4db2c45b951"
 CHECKPOINT_DRIVE_ID = "1ojtIb1aYarMZpxGqiL7HN-8Xx0JD3O5E"

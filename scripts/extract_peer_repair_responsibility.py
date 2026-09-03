@@ -4,26 +4,25 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
-import json
 import subprocess
 import sys
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.peer_repair_responsibility import (  # noqa: E402
+from formulaguard.peer_repair_responsibility import (
     ACTION_RULE,
     MODEL_VERSION,
     PROTOCOL,
     probe_repair_responsibility,
     validate_responsibility_output,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.extract_peer_repair_closure import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.extract_peer_repair_closure import (
     DEFAULT_PROFILES,
     DEFAULT_SIGNALS,
     DEFAULT_V4,
@@ -33,14 +32,13 @@ from scripts.extract_peer_repair_closure import (  # noqa: E402
     _reject_protected,
     _relative,
 )
-from scripts.run_model_discovery_signals import (  # noqa: E402
+from scripts.run_model_discovery_signals import (
     read_profiles,
     safe_input_path,
     sha256,
     shard_name,
     write_json_atomic,
 )
-
 
 RUN_PROTOCOL = "formulaguard_peer_repair_responsibility_run_v1"
 DEFAULT_OUTPUT = ROOT / "results/peer_repair_responsibility_v1"
@@ -100,7 +98,7 @@ def _validate_record(
         raise ValueError(f"repair-responsibility shard crossed the data boundary: {path.name}")
     probe = payload.get("probe")
     if not isinstance(probe, dict):
-        raise ValueError(f"repair-responsibility probe is malformed: {path.name}")
+        raise ValueError(f"repair-responsibility probe is malformed: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     errors = validate_responsibility_output(probe)
     if errors:
         raise ValueError(f"invalid repair-responsibility output {path.name}: {'; '.join(errors)}")
@@ -185,7 +183,7 @@ def run(
         target = shards_dir / shard_name(unit_id)
         audit = signals[unit_id]["audit"]
         if not isinstance(audit, dict):
-            raise ValueError(f"peer audit is malformed: {unit_id}")
+            raise ValueError(f"peer audit is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         if target.exists():
             _validate_record(target, profile, audit)
         else:
@@ -198,7 +196,7 @@ def run(
             ranking = v4[unit_id]["ranking"]
             audit = signals[unit_id]["audit"]
             if not isinstance(ranking, list) or not isinstance(audit, dict):
-                raise ValueError(f"V4 or peer source is malformed: {unit_id}")
+                raise ValueError(f"V4 or peer source is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
             v4_cells = [str(row["cell"]) for row in ranking if isinstance(row, Mapping)]
             payloads.append((profile, v4_cells, audit, str(output_dir)))
         print(
@@ -224,7 +222,7 @@ def run(
             raise ValueError(f"unexpected responsibility unit: {unit_id}")
         audit = signals[unit_id]["audit"]
         if not isinstance(audit, dict):
-            raise ValueError(f"peer audit is malformed: {unit_id}")
+            raise ValueError(f"peer audit is malformed: {unit_id}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         records.append(_validate_record(path, profiles_by_id[unit_id], audit))
     reasons = Counter(str(record["probe"]["selection_reason"]) for record in records)  # type: ignore[index]
     completion: dict[str, object] = {

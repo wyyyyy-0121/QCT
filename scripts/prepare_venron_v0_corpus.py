@@ -11,11 +11,10 @@ import os
 import shutil
 import subprocess
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
 
 from formulaguard.venron import ORDER_MEMBER, parse_order_workbook
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_prepare_v0"
@@ -161,7 +160,7 @@ def prepare(
         raise ValueError("VEnron prepare input receipt or artifact identity changed")
     members = member_manifest.get("members")
     if not isinstance(members, list):
-        raise ValueError("VEnron member manifest is malformed")
+        raise ValueError("VEnron member manifest is malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     member_paths = {
         str(row.get("member_path", ""))
         for row in members

@@ -7,19 +7,17 @@ import concurrent.futures
 import csv
 import hashlib
 import json
-import os
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path, PurePosixPath
-from typing import Mapping, Sequence
-
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.cwrp import (  # noqa: E402
+from formulaguard.cwrp import (
     PROFILE_PROTOCOL,
     formula_count_ratio_eligible,
     profile_counter,
@@ -27,13 +25,14 @@ from formulaguard.cwrp import (  # noqa: E402
     weighted_jaccard,
     workbook_profile,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.acquire_cwrp_sheetjs import COMMIT, sha256  # noqa: E402
-from scripts.convert_cwrp_sheetjs import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.acquire_cwrp_sheetjs import COMMIT, sha256
+from scripts.convert_cwrp_sheetjs import (
     PROTOCOL as CONVERSION_PROTOCOL,
+)
+from scripts.convert_cwrp_sheetjs import (
     write_json_atomic,
 )
-
 
 PROTOCOL = "formulaguard_cwrp_corpus_build_v1"
 DEFAULT_CONVERSION = ROOT / "results/cwrp_sheetjs_conversion_v2"
@@ -174,7 +173,7 @@ def read_targets(path: Path) -> list[dict[str, object]]:
 
 
 def _shard_name(kind: str, workbook_id: str) -> str:
-    return hashlib.sha256(f"{kind}\0{workbook_id}".encode("utf-8")).hexdigest() + ".json"
+    return hashlib.sha256(f"{kind}\0{workbook_id}".encode()).hexdigest() + ".json"
 
 
 def _profile_worker(payload: tuple[str, str, str, str]) -> dict[str, object]:
@@ -249,7 +248,7 @@ def _edge(left: Mapping[str, object], right: Mapping[str, object]) -> tuple[bool
     left_profile = left["profile"]
     right_profile = right["profile"]
     if not isinstance(left_profile, dict) or not isinstance(right_profile, dict):
-        raise ValueError("template edge requires workbook profiles")
+        raise ValueError("template edge requires workbook profiles")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     if left_profile["structural_signature"] == right_profile["structural_signature"]:
         return True, "exact_structure", 1.0
     left_count = int(left_profile["parseable_formula_count"])

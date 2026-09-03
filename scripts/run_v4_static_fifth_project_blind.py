@@ -13,8 +13,8 @@ import json
 import os
 import subprocess
 import sys
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -40,7 +40,6 @@ from scripts.run_v4_static_fifth_blind import (
     score_rows,
     verify_candidate_lock,
 )
-
 
 RUN_PROTOCOL = "v4_static_fifth_project_blind_prediction_run_v1"
 COMPLETION_PROTOCOL = "v4_static_fifth_project_blind_prediction_completion_v1"
@@ -384,6 +383,7 @@ def _verify_git_commitment(
     _git("cat-file", "-e", f"HEAD:{relative.as_posix()}")
     if subprocess.run(
         ["git", "diff", "--quiet", "HEAD", "--", str(relative)], cwd=ROOT,
+        check=False,
     ).returncode:
         raise ValueError("Git prediction commitment has uncommitted changes")
 

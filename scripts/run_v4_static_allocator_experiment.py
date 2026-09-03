@@ -5,8 +5,8 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -37,7 +37,6 @@ from scripts.run_v4_static_fifth_experiment import (
     relative,
     score,
 )
-
 
 PROTOCOL = "formulaguard_v4_static_allocator_exploratory_v1"
 DEFAULT_OUTPUT = ROOT / "results/v4_static_allocator_exploratory"

@@ -9,8 +9,8 @@ import random
 import subprocess
 import sys
 from collections import defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -30,14 +30,13 @@ from scripts.run_v4_residual_controller import (
     load_event_rows,
     load_json,
     load_shards,
-    relative,
     reject_protected,
+    relative,
     sha256,
     source_rank,
     stable_hash,
 )
 from scripts.run_v4_rrc_required_baselines import write_immutable
-
 
 PROTOCOL = "formulaguard_v4_static_fifth_exploratory_v1"
 DEFAULT_STATIC = ROOT / "results/v4_rrc_required_baselines"

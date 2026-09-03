@@ -5,15 +5,14 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import itertools
 import json
-import os
 import subprocess
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 from formulaguard.venron import compare_formula_profiles, stable_record_id
-
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_gate_v0"
@@ -126,7 +125,7 @@ def score(*, prepare_dir: Path, profile_dir: Path, output_dir: Path) -> Path:
     versions = versions_payload.get("versions")
     profiles = index_payload.get("profiles")
     if not isinstance(versions, list) or not isinstance(profiles, list):
-        raise ValueError("VEnron V0 score manifests are malformed")
+        raise ValueError("VEnron V0 score manifests are malformed")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     profile_by_source = {str(row["source_relative_path"]): row for row in profiles}
     if len(profile_by_source) != len(versions):
         raise ValueError("VEnron profile/version identity accounting differs")
@@ -140,7 +139,7 @@ def score(*, prepare_dir: Path, profile_dir: Path, output_dir: Path) -> Path:
     counts: Counter[str] = Counter()
     for group_id in sorted(groups):
         ordered = sorted(groups[group_id], key=lambda row: int(row["version_order"]))
-        for previous, current in zip(ordered, ordered[1:]):
+        for previous, current in itertools.pairwise(ordered):
             previous_index = profile_by_source[str(previous["source_relative_path"])]
             current_index = profile_by_source[str(current["source_relative_path"])]
             transition_id = stable_record_id(

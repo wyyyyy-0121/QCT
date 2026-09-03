@@ -10,7 +10,6 @@ import random
 import statistics
 import sys
 import time
-from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -19,7 +18,6 @@ from formulaguard.benchmark import load_jsonl, parse_cell_label, values_differ
 from formulaguard.formula import normalized_formula
 from formulaguard.localize import generate_candidates, localize, v4_default_parameters
 from formulaguard.workbook import WorkbookModel
-
 
 BASE_METHODS = [
     "random", "excel_like", "pattern", "graph", "behavior",
@@ -85,7 +83,7 @@ def resolve_worker_count(requested, task_count, logical_cpus=None):
 
 
 def evaluate_instance(task):
-    benchmark_text, instance, methods, candidate_limit, gir_weights, primary_method = task
+    benchmark_text, instance, methods, candidate_limit, gir_weights, _primary_method = task
     benchmark = Path(benchmark_text)
     clean = WorkbookModel.from_xlsx(benchmark / instance["clean_workbook"])
     mutant = WorkbookModel.from_xlsx(benchmark / instance["mutant_workbook"])

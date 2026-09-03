@@ -174,7 +174,7 @@ def main() -> None:
     ]
     if args.resume:
         command.append("--resume")
-    completed = subprocess.run(command, cwd=ROOT)
+    completed = subprocess.run(command, cwd=ROOT, check=False)
     if completed.returncode:
         raise SystemExit(completed.returncode)
     completion = args.output / "predictions/prediction_complete.json"

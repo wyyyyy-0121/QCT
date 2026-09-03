@@ -8,8 +8,8 @@ import json
 import platform
 import subprocess
 import sys
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
 import torch
 
@@ -29,12 +29,13 @@ from scripts.build_fcrl_u1_corpus import (
 )
 from scripts.train_fcrl_u1 import (
     DEFAULT_CHECKPOINT,
-    DEFAULT_OUTPUT as DEFAULT_TRAINING_OUTPUT,
     DEFAULT_TARGET_MANIFEST,
     DEFAULT_TARGET_RECEIPT,
     load_target_contract,
 )
-
+from scripts.train_fcrl_u1 import (
+    DEFAULT_OUTPUT as DEFAULT_TRAINING_OUTPUT,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_fcrl_u1_candidate_lock_v1"

@@ -6,21 +6,20 @@ import hashlib
 import importlib
 import json
 import sys
+from collections.abc import Sequence
 from dataclasses import dataclass, fields
 from pathlib import Path
 from types import ModuleType, SimpleNamespace
-from typing import Sequence
 
 import torch
 from torch import Tensor, nn
 from torch.nn import functional as F
 
 from .fcrl import (
-    FCRLTableInput,
     MAX_CELL_TOKENS,
     MAX_INPUT_TOKENS,
+    FCRLTableInput,
 )
-
 
 EXPECTED_CHECKPOINT_SHA256 = "42c2166afb60fedf833fcdbc4469dd6e23611f786aa7220a20375117c6c5a4a1"
 EXPECTED_SOURCE_COMMIT = "4de8bba4e9bf6a89b2e131bfb471b4db2c45b951"
@@ -64,7 +63,7 @@ class FCRLTensorBatch:
     reachable_references: tuple[int, ...]
     total_references: tuple[int, ...]
 
-    def to(self, device: str | torch.device) -> "FCRLTensorBatch":
+    def to(self, device: str | torch.device) -> FCRLTensorBatch:
         values: dict[str, object] = {}
         for field in fields(self):
             value = getattr(self, field.name)
@@ -81,7 +80,7 @@ class FCRLTokenizerRuntime:
 
 @dataclass(frozen=True)
 class FCRLRuntime(FCRLTokenizerRuntime):
-    model: "FCRLModel"
+    model: FCRLModel
     checkpoint_sha256: str
     checkpoint_bytes: int
     loaded_backbone_tensors: int
@@ -211,7 +210,7 @@ class FCRLModel(nn.Module):
         self.hidden_size = hidden_size
         self.backbone.eval()
 
-    def train(self, mode: bool = True) -> "FCRLModel":
+    def train(self, mode: bool = True) -> FCRLModel:
         super().train(mode)
         self.backbone.eval()
         return self
@@ -381,7 +380,7 @@ def _prepare(table: FCRLTableInput, runtime: FCRLTokenizerRuntime) -> _Prepared:
         complete_sketch,
         candidate_cells,
         range_label,
-        range_map,
+        _range_map,
     ) = semi
 
     token_id: list[int] = []
@@ -400,7 +399,7 @@ def _prepare(table: FCRLTableInput, runtime: FCRLTokenizerRuntime) -> _Prepared:
     candidate_mask: list[int] = []
     full_range_map: dict[int, str] = {}
     top_left = table.table_range.split(":", 1)[0]
-    from .a1 import parse_address, num_to_col
+    from .a1 import num_to_col, parse_address
 
     top_left_address = parse_address(top_left)
     for tokens, numbers, position, fmt, cell_indicator, cell_formula, cell_candidate in zip(

@@ -17,8 +17,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from formulaguard.v5_psl import v5_psl_default_parameters
-from formulaguard.v5_psl_protocol import PREDICTION_METHODS, canonical_json_sha256, sha256
-
+from formulaguard.v5_psl_protocol import (
+    PREDICTION_METHODS,
+    canonical_json_sha256,
+    sha256,
+)
 
 HISTORICAL_SOURCE_HASHES = {
     "formulaguard/localize.py": "760fbf8519dce5a4604bcc6ba158e9ca44d9434e7e898c85e9f7bc51c6c99c40",
@@ -89,7 +92,7 @@ def _git(*args: str) -> str:
 def _read_json_object(path: Path) -> dict[str, object]:
     value = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(value, dict):
-        raise ValueError(f"Expected a JSON object: {path}")
+        raise ValueError(f"Expected a JSON object: {path}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return value
 
 

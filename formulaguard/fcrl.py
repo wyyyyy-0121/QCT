@@ -6,8 +6,8 @@ import hashlib
 import json
 import math
 import re
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
-from typing import Iterable, Mapping, Sequence
 
 from .a1 import num_to_col, parse_address
 from .formula import (
@@ -24,7 +24,6 @@ from .formula import (
     translate_formula,
 )
 from .workbook import CellKey, WorkbookModel
-
 
 FCRL_PROTOCOL = "formulaguard_fcrl_adapter_v1"
 MAX_TABLE_DIMENSION = 256

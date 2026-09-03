@@ -12,8 +12,8 @@ import subprocess
 import sys
 import tempfile
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -22,13 +22,12 @@ if str(ROOT) not in sys.path:
 from scripts.run_v4_residual_controller import (
     DEFAULT_EVENTS,
     load_event_rows,
-    relative,
     reject_protected,
+    relative,
     sha256,
     stable_hash,
 )
 from scripts.run_v4_rrc_required_baselines import read_profiles, write_immutable
-
 
 PROTOCOL = "formulaguard_excelint_native_baseline_v1"
 EXCELINT_REPOSITORY = "https://github.com/plasma-umass/ExceLint-core"
@@ -210,8 +209,8 @@ def score(
         unit_id = str(event["unit_id"])
         prediction = predictions[unit_id]
         supported = prediction["status"] == "ok"
-        review_cells = set(str(cell) for cell in prediction["review_cells"])
-        sources = set(str(cell) for cell in event["source_formula_cells"])
+        review_cells = {str(cell) for cell in prediction["review_cells"]}
+        sources = {str(cell) for cell in event["source_formula_cells"]}
         region_hit = int(bool(review_cells & sources)) if supported else None
         rows.append({
             "event_id": event["event_id"],

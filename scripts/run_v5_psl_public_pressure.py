@@ -10,8 +10,8 @@ import os
 import re
 import sys
 import time
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -34,7 +34,6 @@ from formulaguard.v5_psl_protocol import (
 from formulaguard.workbook import WorkbookModel
 from scripts.build_v5_psl_third_party_pack import validate_case_pair
 from scripts.freeze_v5_psl_candidate import _git, candidate_source_files
-
 
 PRESSURE_FIELDS = (
     "instance_id", "corpus_id", "workbook", "original_workbook", "case_kind",
@@ -161,11 +160,11 @@ def audit_shard(
     fixed_count = min(5, len(formula_cells))
     for method, result in methods.items():
         if not isinstance(result, dict) or not isinstance(result.get("ranking"), list):
-            raise ValueError(f"Invalid public pressure result for {method}: {path.name}")
+            raise ValueError(f"Invalid public pressure result for {method}: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         validate_complete_ranking(result["ranking"], formula_cells)
         actions = result.get("action_cells")
         if not isinstance(actions, list):
-            raise ValueError(f"Invalid action set for {method}: {path.name}")
+            raise ValueError(f"Invalid action set for {method}: {path.name}")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
         canonical_actions = [canonical_cell(value) for value in actions]
         if (
             len(canonical_actions) != len(set(canonical_actions))

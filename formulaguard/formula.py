@@ -10,7 +10,6 @@ from difflib import SequenceMatcher
 
 from .a1 import Address, parse_address
 
-
 REF_PATTERN = r"(?:(?:'(?:(?:'')|[^'])+'|[A-Za-z_][A-Za-z0-9_.]*)!)?\$?[A-Za-z]{1,3}\$?[1-9]\d*"
 TOKEN_RE = re.compile(
     rf"(?P<WS>\s+)|(?P<REF>{REF_PATTERN})|(?P<NUMBER>(?:\d+(?:\.\d*)?|\.\d+)(?:[Ee][+-]?\d+)?)|"
@@ -72,7 +71,7 @@ Node = Number | Ref | Range | Unary | Binary | Func
 
 
 def tokenize(formula: str) -> list[Token]:
-    text = formula[1:] if formula.startswith("=") else formula
+    text = formula.removeprefix("=")
     tokens: list[Token] = []
     pos = 0
     while pos < len(text):
@@ -202,9 +201,7 @@ def parse_formula(formula: str) -> Node:
 
 
 def iter_refs(node: Node) -> Iterator[Ref | Range]:
-    if isinstance(node, Ref):
-        yield node
-    elif isinstance(node, Range):
+    if isinstance(node, (Ref, Range)):
         yield node
     elif isinstance(node, Unary):
         yield from iter_refs(node.value)  # type: ignore[arg-type]
@@ -320,7 +317,7 @@ def small_edit_candidates_with_kinds(formula: str) -> list[tuple[str, tuple[str,
                 add(prefix + body[:match.start()] + op + body[match.end():], "operator")
 
     # Function substitutions for the supported aggregate family.
-    for match in re.finditer(r"\b(SUM|AVERAGE|MIN|MAX)\b", body, flags=re.I):
+    for match in re.finditer(r"\b(SUM|AVERAGE|MIN|MAX)\b", body, flags=re.IGNORECASE):
         for name in ("SUM", "AVERAGE", "MIN", "MAX"):
             if name != match.group().upper():
                 add(prefix + body[:match.start()] + name + body[match.end():], "aggregate_function")

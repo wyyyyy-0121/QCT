@@ -7,7 +7,6 @@ import json
 import statistics
 from pathlib import Path
 
-
 COLORS = ["#2E74B5", "#D97706", "#059669", "#7C3AED"]
 
 

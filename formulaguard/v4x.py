@@ -7,15 +7,14 @@ changing the frozen V4, legacy V5/V5.2, or completed V6 implementations.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Sequence
 
 from .localize import LocalizationResult
 from .v5 import v5_default_parameters, v5_scores
-from .v52 import RescueEvidence, V52Decision, v52_default_parameters, v52_scores
 from .v6 import v6_default_parameters, v6_scores
+from .v52 import RescueEvidence, V52Decision, v52_default_parameters, v52_scores
 from .workbook import WorkbookModel
-
 
 VERSION_ALIASES = {
     "v4.1": {

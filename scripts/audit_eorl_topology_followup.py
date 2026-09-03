@@ -14,12 +14,12 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.eorl import (  # noqa: E402
+from formulaguard.eorl import (
     parse_cell_label,
     source_formula_descendants,
 )
-from formulaguard.workbook import WorkbookModel  # noqa: E402
-from scripts.audit_eorl_d0 import (  # noqa: E402
+from formulaguard.workbook import WorkbookModel
+from scripts.audit_eorl_d0 import (
     DEFAULT_MANIFEST,
     EXPECTED_MANIFEST_SHA256,
     _git_commit,
@@ -28,8 +28,7 @@ from scripts.audit_eorl_d0 import (  # noqa: E402
     _require_clean_tracked_worktree,
     _write_immutable,
 )
-from scripts.run_model_discovery_signals import sha256, stable_hash  # noqa: E402
-
+from scripts.run_model_discovery_signals import sha256, stable_hash
 
 PROTOCOL = "formulaguard_eorl_topology_followup_v1"
 DEFAULT_OUTPUT = ROOT / "results/eorl_d0/topology_followup_receipt.json"

@@ -9,9 +9,9 @@ import json
 import os
 import subprocess
 import urllib.request
+from collections.abc import Mapping
 from pathlib import Path
-from typing import BinaryIO, Mapping
-
+from typing import BinaryIO
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = "formulaguard_vhrl_venron_acquisition_v1"
@@ -90,7 +90,7 @@ def fetch_metadata(url: str = ARTICLE_API) -> dict[str, object]:
     with urllib.request.urlopen(request, timeout=60) as response:
         payload = json.load(response)
     if not isinstance(payload, dict):
-        raise ValueError("Figshare metadata is not a JSON object")
+        raise ValueError("Figshare metadata is not a JSON object")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     return payload
 
 
@@ -110,7 +110,7 @@ def validate_metadata(payload: Mapping[str, object]) -> dict[str, object]:
         raise ValueError("Figshare license changed or is missing")
     files = payload.get("files")
     if not isinstance(files, list):
-        raise ValueError("Figshare metadata has no file list")
+        raise ValueError("Figshare metadata has no file list")  # noqa: TRY004 intentional compatibility or fallback boundary; preserve runtime behavior
     selected = [item for item in files if isinstance(item, Mapping) and item.get("id") == FILE_ID]
     if len(selected) != 1:
         raise ValueError("pinned VEnron file ID is missing or duplicated")
