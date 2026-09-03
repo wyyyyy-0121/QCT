@@ -1,0 +1,73 @@
+{
+  "protocol": "formulaguard_vepr_v1",
+  "research_code": "VEPR",
+  "formal_version_authorized": false,
+  "date_frozen": "2026-09-03",
+  "prediction_input": "one_current_workbook_snapshot",
+  "target": "same_address_formula_directly_edited_in_immediately_next_author_version",
+  "review_budget": 5,
+  "source_hashes": {
+    "profile_receipt": "54b24336912fa0ce4d50f55ef1897bef4e7ed40e1d7313a9a17fff6fcba924e0",
+    "profile_index": "f337ad4448aec142bb529a90b514dc1f8fe8235aae29414b20750cd8ab7b0cc3",
+    "v0_gate_result": "4743f0a1fb929afc6d98f4ebbfa3ac9b74022fa272c98f84da2f95f8b91b723e",
+    "v0_transition_manifest": "8a8ff6e13fdebc44f28d4abb509357c9475c3badf00a679d8bbf33456cc9a5ee",
+    "public_scoring_groups": "6f5384990f8758258dba4c556bc1f119e498d850ab37c2d092ccaa82f6e88be7"
+  },
+  "eligibility": {
+    "minimum_current_formulas": 10,
+    "maximum_current_formulas": 5000,
+    "minimum_direct_edits": 1,
+    "maximum_direct_edits": 19,
+    "maximum_additions_plus_removals": 12,
+    "minimum_stable_candidates": 5,
+    "exclude_bulk_direct_rewrite": true,
+    "exclude_bulk_add_remove": true,
+    "exclude_public_near_duplicate_group": true
+  },
+  "folds": 5,
+  "fold_salt": "formulaguard-vepr-v1",
+  "u0_minimums": {
+    "ranking_transitions": 300,
+    "ranking_groups": 50,
+    "positive_rows": 600,
+    "stable_rows": 30000,
+    "per_fold_transitions": 30,
+    "per_fold_groups": 6,
+    "per_fold_positive_rows": 80,
+    "per_fold_stable_rows": 3000,
+    "controls": 200,
+    "control_groups": 80,
+    "per_fold_controls": 20,
+    "per_fold_control_groups": 10
+  },
+  "learner": {
+    "class": "sklearn.linear_model.LogisticRegression",
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "liblinear",
+    "max_iter": 2000,
+    "class_weight": null,
+    "random_state": 260903,
+    "syntax_dimensions": 2048,
+    "maximum_stable_training_rows_per_transition": 64
+  },
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 20260903,
+    "unit": "evolution_group"
+  },
+  "forbidden_inputs": [
+    "cached_values",
+    "constants",
+    "cell_text",
+    "email_data",
+    "fault_labels",
+    "expected_outputs",
+    "correct_workbooks",
+    "public_source_cells",
+    "v4_features",
+    "protected_240_120"
+  ],
+  "next_stage": "u0_availability_and_integrity_only"
+}
+
