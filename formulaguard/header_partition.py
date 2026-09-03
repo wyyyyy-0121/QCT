@@ -701,6 +701,7 @@ def _mask_target_formula_cells(
         formula_kinds=model.formula_kinds,
         formula_regions=model.formula_regions,
         shared_formula_groups=model.shared_formula_groups,
+        shared_formula_regions=model.shared_formula_regions,
         hidden_rows=model.hidden_rows,
         hidden_columns=model.hidden_columns,
         header_partition_metadata_complete=model.header_partition_metadata_complete,

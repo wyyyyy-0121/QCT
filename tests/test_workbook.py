@@ -7,7 +7,7 @@ from zipfile import ZipFile
 from openpyxl import Workbook
 from openpyxl.worksheet.formula import ArrayFormula, DataTableFormula
 
-from formulaguard.workbook import WorkbookModel
+from formulaguard.workbook import SharedFormulaRegion, WorkbookModel
 
 WORKSHEET_NAMESPACE = (
     "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
@@ -147,6 +147,20 @@ class WorkbookTests(unittest.TestCase):
                 for row in range(2, 5)
             )
         )
+        self.assertEqual(
+            model.shared_formula_regions,
+            (
+                SharedFormulaRegion(
+                    sheet="Model",
+                    group_id="Model:7",
+                    master_cell=("Model", "C2"),
+                    start="C2",
+                    end="C4",
+                    master_formula="=A2+B2",
+                    members=(("Model", "C2"), ("Model", "C3"), ("Model", "C4")),
+                ),
+            ),
+        )
 
     def test_xlsx_reader_rejects_incomplete_shared_formula_provenance(self):
         cases = {
@@ -193,6 +207,16 @@ class WorkbookTests(unittest.TestCase):
                             },
                             {"Model:7"},
                         )
+                    if name == "sparse group":
+                        self.assertEqual(len(model.shared_formula_regions), 1)
+                        region = model.shared_formula_regions[0]
+                        self.assertEqual((region.start, region.end), ("C2", "C4"))
+                        self.assertEqual(
+                            region.members,
+                            (("Model", "C2"), ("Model", "C4")),
+                        )
+                    else:
+                        self.assertEqual(model.shared_formula_regions, ())
 
     def test_xlsx_reader_preserves_header_partition_safety_metadata(self):
         with TemporaryDirectory() as directory:

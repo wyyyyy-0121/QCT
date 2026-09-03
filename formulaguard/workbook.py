@@ -13,7 +13,7 @@ from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from .a1 import parse_address, plain_address
+from .a1 import num_to_col, parse_address, plain_address
 from .formula import (
     Binary,
     FormulaSyntaxError,
@@ -36,6 +36,46 @@ NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 NS_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 NS_PKG_REL = "http://schemas.openxmlformats.org/package/2006/relationships"
 NS = {"x": NS_MAIN, "r": NS_REL}
+
+
+@dataclass(frozen=True)
+class SharedFormulaRegion:
+    """A locally valid OOXML shared-formula master declaration."""
+
+    sheet: str
+    group_id: str
+    master_cell: CellKey
+    start: str
+    end: str
+    master_formula: str
+    members: tuple[CellKey, ...]
+
+    def __post_init__(self) -> None:
+        if not self.sheet or not self.group_id:
+            raise ValueError("shared formula region identity must not be empty")
+        if self.master_cell[0] != self.sheet:
+            raise ValueError("shared formula master must be on the declared sheet")
+        start, end, bounds = _forward_range_bounds(f"{self.start}:{self.end}")
+        object.__setattr__(self, "start", start)
+        object.__setattr__(self, "end", end)
+        if not self.master_formula.startswith("="):
+            object.__setattr__(self, "master_formula", "=" + self.master_formula)
+        normalized_members = tuple(sorted(set(self.members)))
+        if len(normalized_members) != len(self.members):
+            raise ValueError("shared formula region members must be unique")
+        if self.master_cell not in normalized_members:
+            raise ValueError("shared formula master must be a region member")
+        if any(member[0] != self.sheet for member in normalized_members):
+            raise ValueError("shared formula members must be on the declared sheet")
+        if any(
+            not (
+                bounds[0] <= parse_address(member[1]).row <= bounds[1]
+                and bounds[2] <= parse_address(member[1]).col <= bounds[3]
+            )
+            for member in normalized_members
+        ):
+            raise ValueError("shared formula member lies outside the declared region")
+        object.__setattr__(self, "members", normalized_members)
 
 
 def _forward_range_bounds(
@@ -183,6 +223,7 @@ class WorkbookModel:
             str, Iterable[tuple[str, str, str]]
         ] | None = None,
         shared_formula_groups: Mapping[CellKey, str] | None = None,
+        shared_formula_regions: Iterable[SharedFormulaRegion] | None = None,
         hidden_rows: Mapping[str, Iterable[int]] | None = None,
         hidden_columns: Mapping[str, Iterable[tuple[int, int]]] | None = None,
         header_partition_metadata_complete: bool = False,
@@ -216,6 +257,24 @@ class WorkbookModel:
         }
         if any(not group for group in self.shared_formula_groups.values()):
             raise ValueError("shared formula group identifiers must not be empty")
+        self.shared_formula_regions = tuple(
+            sorted(
+                shared_formula_regions or (),
+                key=lambda region: (region.sheet, region.group_id),
+            )
+        )
+        if len({region.group_id for region in self.shared_formula_regions}) != len(
+            self.shared_formula_regions
+        ):
+            raise ValueError("shared formula region identifiers must be unique")
+        for region in self.shared_formula_regions:
+            if self.formulas.get(region.master_cell) != region.master_formula:
+                raise ValueError("shared formula master text does not match the model")
+            if any(
+                self.shared_formula_groups.get(member) != region.group_id
+                for member in region.members
+            ):
+                raise ValueError("shared formula region membership is inconsistent")
         self.header_partition_metadata_complete = header_partition_metadata_complete
         self.hidden_rows = {
             str(sheet): frozenset(int(row) for row in rows)
@@ -307,6 +366,7 @@ class WorkbookModel:
             str, Iterable[tuple[str, str, str]]
         ] | None = None,
         shared_formula_groups: Mapping[CellKey, str] | None = None,
+        shared_formula_regions: Iterable[SharedFormulaRegion] | None = None,
         hidden_rows: Mapping[str, Iterable[int]] | None = None,
         hidden_columns: Mapping[str, Iterable[tuple[int, int]]] | None = None,
         header_partition_metadata_complete: bool = False,
@@ -322,6 +382,7 @@ class WorkbookModel:
             formula_kinds=formula_kinds,
             formula_regions=formula_regions,
             shared_formula_groups=shared_formula_groups,
+            shared_formula_regions=shared_formula_regions,
             hidden_rows=hidden_rows,
             hidden_columns=hidden_columns,
             header_partition_metadata_complete=header_partition_metadata_complete,
@@ -356,6 +417,7 @@ class WorkbookModel:
             merged_ranges: dict[str, tuple[tuple[str, str], ...]] = {}
             formula_regions: dict[str, tuple[tuple[str, str, str], ...]] = {}
             shared_formula_groups: dict[CellKey, str] = {}
+            shared_formula_regions: list[SharedFormulaRegion] = []
             hidden_rows: dict[str, frozenset[int]] = {}
             hidden_columns_by_sheet: dict[
                 str, tuple[tuple[int, int], ...]
@@ -513,12 +575,10 @@ class WorkbookModel:
                         metadata_complete = False
                         continue
                     row_start, row_end, column_start, column_end = bounds
-                    expected_members = (row_end - row_start + 1) * (
-                        column_end - column_start + 1
+                    master_key = (sheet_name, master_address)
+                    member_keys = tuple(
+                        (sheet_name, member) for member in sorted(members)
                     )
-                    if len(members) != expected_members:
-                        metadata_complete = False
-                        continue
                     if master_address not in members or any(
                         not (
                             row_start <= parse_address(member).row <= row_end
@@ -529,6 +589,28 @@ class WorkbookModel:
                         for member in members
                     ):
                         metadata_complete = False
+                        continue
+                    shared_formula_regions.append(
+                        SharedFormulaRegion(
+                            sheet=sheet_name,
+                            group_id=f"{sheet_name}:{shared_index}",
+                            master_cell=master_key,
+                            start=plain_address(
+                                f"{num_to_col(column_start)}{row_start}"
+                            ),
+                            end=plain_address(
+                                f"{num_to_col(column_end)}{row_end}"
+                            ),
+                            master_formula=formulas[master_key],
+                            members=member_keys,
+                        )
+                    )
+                    expected_members = (row_end - row_start + 1) * (
+                        column_end - column_start + 1
+                    )
+                    if len(members) != expected_members:
+                        metadata_complete = False
+                        continue
                 formula_regions[sheet_name] = tuple(sheet_formula_regions)
         return cls(
             cells,
@@ -541,6 +623,7 @@ class WorkbookModel:
             formula_kinds=formula_kinds,
             formula_regions=formula_regions,
             shared_formula_groups=shared_formula_groups,
+            shared_formula_regions=shared_formula_regions,
             hidden_rows=hidden_rows,
             hidden_columns=hidden_columns_by_sheet,
             header_partition_metadata_complete=metadata_complete,
