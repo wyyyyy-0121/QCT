@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from .localize import LocalizationResult, localize as _legacy_localize
+from .localize import LocalizationResult
+from .localize import localize as _legacy_localize
 from .v4_peer_fifth import v4_peer_fifth_scores
 from .v4_static_allocator import v4_static_allocator_scores
 from .v4_static_fifth import v4_static_fifth_scores
@@ -10,12 +11,30 @@ from .v4x import v4_1_scores, v4_3_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
 from .v5_psl import SelectiveDiagnosis, diagnose_v5_psl, v5_psl_scores
+from .v5_structural_guard import v5_structural_guard_scores
 from .v6 import v6_scores
 from .workbook import WorkbookModel
 
 
 def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> list[LocalizationResult]:
     normalized = method.lower().replace("-", "_")
+    if normalized in {
+        "v5_structural_guard", "formulaguard_v5_structural_guard",
+        "structural_guard_candidate",
+    }:
+        radius = int(kwargs.pop("radius", 5))
+        peer_min_support = int(kwargs.pop("peer_min_support", 2))
+        candidate_limit = int(kwargs.pop("candidate_limit", 24))
+        if kwargs:
+            raise TypeError(
+                f"Unsupported V5 structural-guard arguments: {', '.join(sorted(kwargs))}"
+            )
+        return v5_structural_guard_scores(
+            model,
+            radius=radius,
+            peer_min_support=peer_min_support,
+            candidate_limit=candidate_limit,
+        )
     if normalized in {"v5_psl", "formulaguard_v5_psl", "v5_psl_dev1"}:
         config = kwargs.pop("config", None)
         ablation = kwargs.pop("ablation", None)
@@ -154,9 +173,18 @@ def diagnose(model: WorkbookModel, method: str = "v5_psl", **kwargs) -> Selectiv
 
 
 __all__ = [
-    "LocalizationResult", "SelectiveDiagnosis", "diagnose", "localize",
-    "v4_1_scores", "v4_3_scores", "v4_peer_fifth_scores",
-    "v4_static_allocator_scores", "v4_static_fifth_scores",
-    "v5_core_scores", "v5_core_r2_scores",
-    "v5_psl_scores", "v6_scores",
+    "LocalizationResult",
+    "SelectiveDiagnosis",
+    "diagnose",
+    "localize",
+    "v4_1_scores",
+    "v4_3_scores",
+    "v4_peer_fifth_scores",
+    "v4_static_allocator_scores",
+    "v4_static_fifth_scores",
+    "v5_core_r2_scores",
+    "v5_core_scores",
+    "v5_psl_scores",
+    "v5_structural_guard_scores",
+    "v6_scores",
 ]
