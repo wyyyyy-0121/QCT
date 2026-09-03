@@ -22,7 +22,8 @@
     "minimum_stable_candidates": 5,
     "exclude_bulk_direct_rewrite": true,
     "exclude_bulk_add_remove": true,
-    "exclude_public_near_duplicate_group": true
+    "exclude_public_near_duplicate_group": true,
+    "exclude_invalid_formula_profile_group": true
   },
   "folds": 5,
   "fold_salt": "formulaguard-vepr-v1",
@@ -68,6 +69,8 @@
     "v4_features",
     "protected_240_120"
   ],
+  "amendments": [
+    "research/V5_VEPR_AMENDMENT_1.md"
+  ],
   "next_stage": "u0_availability_and_integrity_only"
 }
-
