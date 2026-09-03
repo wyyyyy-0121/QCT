@@ -352,3 +352,33 @@
 - 决定：PCRC 在训练前停止；不运行三档学习率、校准、internal-test、public、
   SpreadsheetBench v2 或保密评估，不降低 2,000 门，不授权 `V5-R1`。
 - 受保护数据：未列目录、未哈希、未读取、未搜索或用于本轮任何工件。
+
+## D0024：SFRI 揭晓门失败并停止
+
+- 日期：2026-09-03
+- 依据：预注册提交 `b602fe9`、实现锁 `64dba19`、独立评分器 `651b51d`、
+  `research/V5_SFRI_RESULT.md` 和 `results/sfri_v1_revealed_score/score_summary.json`。
+- 完整性：两个独立预测进程均完成 96/96 个 byte-unique 工作簿和 96 个分片，结果逐
+  字节一致；record-set SHA-256 为
+  `470e113c9472513ea95aec48f59368fd954da80c24ff9e314148d255097e3850`。
+- 观察：50 个共享公式区域产生 8 个单分歧证书，覆盖 2 个结构组；8/8 目标命中且
+  8/8 候选公式精确匹配，30 个控制事件无证书。只有 `integer_corpus_018` 从第 12 位
+  进入第 5 位，净 Top-5 恢复为 1，低于冻结门要求的 2；无 Top-5 损失。
+- 决定：SFRI v1 因 `g4_net_top5_rescues` 失败而停止；不降低两例恢复门、不改变插入
+  位置、不按语料加例外，不生成候选文件或授权 `V5-R1`。
+- 受保护数据：预测和评分均未读取、列举、哈希或搜索任何受保护 `240+120` 输入。
+
+## D0025：static-fifth 公开修订确认失败
+
+- 日期：2026-09-03
+- 依据：预注册提交 `770c4a3`、before-only 预测锁 `9b6ebda`、独立评分器
+  `21eed00`、`research/V4_STATIC_FIFTH_PUBLIC_REVISION_RESULT.md` 和
+  `results/static_fifth_public_revision_score/score_summary.json`。
+- 完整性：两次预测均只读取 4 个 `before.xlsx`，结果逐字节一致；锁后评分独立复现
+  4/4 个修订和 8/8 个公式变化。score summary SHA-256 为
+  `44c525243fdbf57875ccb9c3eb09b4fbad04210ad00b4dc564c43d9418f2a261`。
+- 观察：V4-R1 与 static-fifth 的修订事件 Top-5 均为 0/4，MRR 均为
+  0.08178626149131768；零恢复、零损失、零逐修订退化，唯一失败门是严格 Top-5 提升。
+- 决定：公开修订确认以负结果停止；不修改 static-fifth、不降低门槛、不生成确认候选、
+  不授权 `V5-R1` 或受保护评估。该档案已经揭晓，不得用于新规则的盲选。
+- 受保护数据：预测和评分均未读取、列举、哈希或搜索任何受保护 `240+120` 输入。
