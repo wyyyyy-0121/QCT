@@ -26,6 +26,7 @@ PUBLIC_FIELDS = (
     "file_format",
     "integrity_status",
 )
+VOLATILE_EVIDENCE_FIELDS = {"localization_seconds"}
 
 
 def canonical_json(value: object) -> bytes:
@@ -155,7 +156,11 @@ def predict_one(task: tuple[dict[str, str], str]) -> dict[str, object]:
     for rank, item in enumerate(results, 1):
         if not math.isfinite(float(item.score)):
             raise ValueError(f"non-finite score: {row['case_id']}")
-        evidence = dict(item.evidence)
+        evidence = {
+            key: value
+            for key, value in dict(item.evidence).items()
+            if key not in VOLATILE_EVIDENCE_FIELDS
+        }
         group_id = str(evidence.get("group_id", ""))
         if group_id:
             groups[group_id] = (
@@ -173,7 +178,7 @@ def predict_one(task: tuple[dict[str, str], str]) -> dict[str, object]:
             }
         )
     return {
-        "protocol": "structural_guard_fresh_blind_prediction_shard_v1",
+        "protocol": "structural_guard_fresh_blind_prediction_shard_v1_1",
         "model": _MODEL_KIND,
         "model_version": version,
         "case_id": row["case_id"],
@@ -236,7 +241,7 @@ def main() -> int:
     if len(paths) != 360:
         raise SystemExit("prediction shard count differs from PUBLIC")
     metadata = {
-        "protocol": "structural_guard_fresh_blind_prediction_metadata_v1",
+        "protocol": "structural_guard_fresh_blind_prediction_metadata_v1_1",
         "model": args.model,
         "resolved_commit": resolved,
         "source_tree": tree,
@@ -246,10 +251,11 @@ def main() -> int:
         "workers": min(args.workers, len(tasks)),
         "runner_commit": git("rev-parse", "HEAD").strip(),
         "runner_sha256": sha256_file(Path(__file__).resolve()),
+        "excluded_volatile_evidence_fields": sorted(VOLATILE_EVIDENCE_FIELDS),
     }
     write_json(args.output / "prediction_metadata.json", metadata)
     lock_payload = {
-        "protocol": "structural_guard_fresh_blind_prediction_lock_v1",
+        "protocol": "structural_guard_fresh_blind_prediction_lock_v1_1",
         "model": args.model,
         "cases": 360,
         "combined_shards_sha256": combined_hash(paths),

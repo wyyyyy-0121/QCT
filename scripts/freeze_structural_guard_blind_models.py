@@ -106,13 +106,15 @@ def main() -> int:
             **inspected,
         }
     lock = {
-        "protocol": "structural_guard_fresh_blind_model_lock_v1",
+        "protocol": "structural_guard_fresh_blind_model_lock_v1_1",
         "models_frozen_before_dataset_generation": True,
         "models": models,
         "artifacts": {
             relative: sha256(ROOT / relative)
             for relative in (
                 "research/STRUCTURAL_GUARD_FRESH_BLIND_PROTOCOL_V1.md",
+                "research/STRUCTURAL_GUARD_FRESH_BLIND_PROTOCOL_V1_1.md",
+                "research/STRUCTURAL_GUARD_FRESH_BLIND_ATTEMPT1_ABORT.json",
                 "scripts/build_structural_guard_fresh_blind.py",
                 "scripts/run_frozen_structural_guard_predictions.py",
                 "scripts/score_structural_guard_fresh_blind.py",

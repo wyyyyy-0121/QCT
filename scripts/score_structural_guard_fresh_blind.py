@@ -283,7 +283,7 @@ def main() -> int:
     authorization = json.loads(args.authorization.read_text(encoding="utf-8"))
     if (
         authorization.get("protocol")
-        != "structural_guard_fresh_blind_reveal_authorization_v1"
+        != "structural_guard_fresh_blind_reveal_authorization_v1_1"
     ):
         raise SystemExit("reveal refused: invalid authorization")
     labels = load_secret(args.release / release["secret_archive"], public_commitment)
@@ -333,7 +333,7 @@ def main() -> int:
         }
     promoted = all(item["passed"] for item in comparisons.values())
     result = {
-        "protocol": "structural_guard_fresh_blind_result_v1",
+        "protocol": "structural_guard_fresh_blind_result_v1_1",
         "models": model_results,
         "comparisons": comparisons,
         "decision": {
