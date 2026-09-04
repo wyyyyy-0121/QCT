@@ -8,6 +8,7 @@ from .v4_peer_fifth import v4_peer_fifth_scores
 from .v4_static_allocator import v4_static_allocator_scores
 from .v4_static_fifth import v4_static_fifth_scores
 from .v4x import v4_1_scores, v4_3_scores
+from .v5_1_development import v5_1_development_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
 from .v5_psl import SelectiveDiagnosis, diagnose_v5_psl, v5_psl_scores
@@ -16,10 +17,32 @@ from .v6 import v6_scores
 from .workbook import WorkbookModel
 
 
-def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> list[LocalizationResult]:
+def localize(
+    model: WorkbookModel, method: str = "formulaguard", **kwargs
+) -> list[LocalizationResult]:
     normalized = method.lower().replace("-", "_")
     if normalized in {
-        "v5_structural_guard", "formulaguard_v5_structural_guard",
+        "v5.1_development",
+        "v5_1_development",
+        "v51_development",
+        "formulaguard_v5_1_development",
+    }:
+        radius = int(kwargs.pop("radius", 6))
+        min_template_support = int(kwargs.pop("min_template_support", 3))
+        min_group_size = int(kwargs.pop("min_group_size", 3))
+        if kwargs:
+            raise TypeError(
+                f"Unsupported V5.1-development arguments: {', '.join(sorted(kwargs))}"
+            )
+        return v5_1_development_scores(
+            model,
+            radius=radius,
+            min_template_support=min_template_support,
+            min_group_size=min_group_size,
+        )
+    if normalized in {
+        "v5_structural_guard",
+        "formulaguard_v5_structural_guard",
         "structural_guard_candidate",
     }:
         radius = int(kwargs.pop("radius", 5))
@@ -39,17 +62,22 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
         config = kwargs.pop("config", None)
         ablation = kwargs.pop("ablation", None)
         if kwargs:
-            raise TypeError(f"Unsupported V5-PSL arguments: {', '.join(sorted(kwargs))}")
+            raise TypeError(
+                f"Unsupported V5-PSL arguments: {', '.join(sorted(kwargs))}"
+            )
         return v5_psl_scores(model, config=config, ablation=ablation)
     if normalized in {
-        "formulaguard_v5_core_r2", "v5_core_r2", "v5_core_r2_full",
-        "v5_core_r2_source", "v5_core_r2_placebo",
+        "formulaguard_v5_core_r2",
+        "v5_core_r2",
+        "v5_core_r2_full",
+        "v5_core_r2_source",
+        "v5_core_r2_placebo",
     }:
         stage = kwargs.pop(
             "stage",
-            "source" if normalized.endswith("_source") else (
-                "placebo" if normalized.endswith("_placebo") else "full"
-            ),
+            "source"
+            if normalized.endswith("_source")
+            else ("placebo" if normalized.endswith("_placebo") else "full"),
         )
         config = kwargs.pop("config", None)
         candidate_limit = int(kwargs.pop("candidate_limit", 24))
@@ -59,7 +87,9 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
         ablation = kwargs.pop("ablation", None)
         candidate_keep_fraction = float(kwargs.pop("candidate_keep_fraction", 1.0))
         if kwargs:
-            raise TypeError(f"Unsupported V5-Core R2 arguments: {', '.join(sorted(kwargs))}")
+            raise TypeError(
+                f"Unsupported V5-Core R2 arguments: {', '.join(sorted(kwargs))}"
+            )
         return v5_core_r2_scores(
             model,
             stage=str(stage),
@@ -72,8 +102,12 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             candidate_keep_fraction=candidate_keep_fraction,
         )
     if normalized in {
-        "formulaguard_v5_core", "formulaguard_v5_core_rule", "v5_core", "v5_core_rule",
-        "formulaguard_v5_core_learned", "v5_core_learned",
+        "formulaguard_v5_core",
+        "formulaguard_v5_core_rule",
+        "v5_core",
+        "v5_core_rule",
+        "formulaguard_v5_core_learned",
+        "v5_core_learned",
     }:
         head = kwargs.pop(
             "head",
@@ -85,7 +119,9 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
         deep_cell_limit = int(kwargs.pop("deep_cell_limit", 120))
         deep_candidate_limit = int(kwargs.pop("deep_candidate_limit", 8))
         if kwargs:
-            raise TypeError(f"Unsupported V5-Core arguments: {', '.join(sorted(kwargs))}")
+            raise TypeError(
+                f"Unsupported V5-Core arguments: {', '.join(sorted(kwargs))}"
+            )
         return v5_core_scores(
             model,
             head=str(head),
@@ -96,7 +132,8 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             deep_candidate_limit=deep_candidate_limit,
         )
     if normalized in {
-        "v4_peer_fifth_experimental", "formulaguard_v4_peer_fifth",
+        "v4_peer_fifth_experimental",
+        "formulaguard_v4_peer_fifth",
     }:
         candidate_limit = int(kwargs.pop("candidate_limit", 15))
         if kwargs:
@@ -105,7 +142,8 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             )
         return v4_peer_fifth_scores(model, candidate_limit=candidate_limit)
     if normalized in {
-        "v4_static_allocator_experimental", "formulaguard_v4_static_allocator",
+        "v4_static_allocator_experimental",
+        "formulaguard_v4_static_allocator",
     }:
         candidate_limit = int(kwargs.pop("candidate_limit", 15))
         if kwargs:
@@ -114,7 +152,8 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             )
         return v4_static_allocator_scores(model, candidate_limit=candidate_limit)
     if normalized in {
-        "v4_static_fifth_experimental", "formulaguard_v4_static_fifth",
+        "v4_static_fifth_experimental",
+        "formulaguard_v4_static_fifth",
     }:
         candidate_limit = int(kwargs.pop("candidate_limit", 15))
         if kwargs:
@@ -128,14 +167,20 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             raise TypeError(f"Unsupported V4.1 arguments: {', '.join(sorted(kwargs))}")
         return v4_1_scores(model, candidate_limit=candidate_limit)
     if normalized in {
-        "v4.3", "v4_3", "formulaguard_v4_3", "formulaguard_v4_3_a",
-        "formulaguard_v4_3_b", "formulaguard_v4_3_c",
+        "v4.3",
+        "v4_3",
+        "formulaguard_v4_3",
+        "formulaguard_v4_3_a",
+        "formulaguard_v4_3_b",
+        "formulaguard_v4_3_c",
     }:
         variant = kwargs.pop(
             "variant",
             normalized[-1] if normalized[-2:] in {"_a", "_b", "_c"} else "c",
         )
-        base_limit = int(kwargs.pop("base_candidate_limit", kwargs.pop("candidate_limit", 15)))
+        base_limit = int(
+            kwargs.pop("base_candidate_limit", kwargs.pop("candidate_limit", 15))
+        )
         semantic_limit = int(kwargs.pop("semantic_candidate_limit", 25))
         if kwargs:
             raise TypeError(f"Unsupported V4.3 arguments: {', '.join(sorted(kwargs))}")
@@ -145,9 +190,19 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
             base_candidate_limit=base_limit,
             semantic_candidate_limit=semantic_limit,
         )
-    if normalized in {"v6", "formulaguard_v6", "formulaguard_v6_a", "formulaguard_v6_b", "formulaguard_v6_c"}:
-        variant = kwargs.pop("variant", normalized[-1] if normalized[-2:] in {"_a", "_b", "_c"} else "c")
-        base_limit = int(kwargs.pop("base_candidate_limit", kwargs.pop("candidate_limit", 15)))
+    if normalized in {
+        "v6",
+        "formulaguard_v6",
+        "formulaguard_v6_a",
+        "formulaguard_v6_b",
+        "formulaguard_v6_c",
+    }:
+        variant = kwargs.pop(
+            "variant", normalized[-1] if normalized[-2:] in {"_a", "_b", "_c"} else "c"
+        )
+        base_limit = int(
+            kwargs.pop("base_candidate_limit", kwargs.pop("candidate_limit", 15))
+        )
         semantic_limit = int(kwargs.pop("semantic_candidate_limit", 25))
         if kwargs:
             raise TypeError(f"Unsupported V6 arguments: {', '.join(sorted(kwargs))}")
@@ -160,7 +215,9 @@ def localize(model: WorkbookModel, method: str = "formulaguard", **kwargs) -> li
     return _legacy_localize(model, method, **kwargs)
 
 
-def diagnose(model: WorkbookModel, method: str = "v5_psl", **kwargs) -> SelectiveDiagnosis:
+def diagnose(
+    model: WorkbookModel, method: str = "v5_psl", **kwargs
+) -> SelectiveDiagnosis:
     """Return a workbook-level selective decision plus the complete ranking."""
     normalized = method.lower().replace("-", "_")
     if normalized not in {"v5_psl", "formulaguard_v5_psl", "v5_psl_dev1"}:
@@ -182,6 +239,7 @@ __all__ = [
     "v4_peer_fifth_scores",
     "v4_static_allocator_scores",
     "v4_static_fifth_scores",
+    "v5_1_development_scores",
     "v5_core_r2_scores",
     "v5_core_scores",
     "v5_psl_scores",
