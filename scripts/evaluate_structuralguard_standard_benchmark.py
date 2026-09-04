@@ -8,6 +8,7 @@ import json
 import statistics
 import subprocess
 import sys
+from collections import Counter
 from pathlib import Path
 
 
@@ -66,16 +67,35 @@ def ranking_record(
     *,
     native_review: list[tuple[str, str]] | None = None,
     diagnostic_state: str | None = None,
+    evidence_by_cell: dict[tuple[str, str], dict[str, object]] | None = None,
 ) -> dict:
     inventory = set(formula_cells)
     if len(ranking) != len(inventory) or set(ranking) != inventory or len(set(ranking)) != len(ranking):
         raise ValueError(f"incomplete or duplicate ranking for {method}")
     reviewed = native_review if native_review is not None else []
     review_hits = sum(cell in truth for cell in reviewed)
+    candidate_cells = {
+        cell for cell, formula in candidates.items() if formula is not None
+    }
+    candidate_truth_hits = len(candidate_cells & truth)
     exact_repairs = sum(
         cell in candidates
         and formula_key(candidates[cell]) == formula_key(expected[cell])
         for cell in truth
+    )
+    groups: dict[str, tuple[str, str]] = {}
+    for evidence in (evidence_by_cell or {}).values():
+        group_id = str(evidence.get("group_id", ""))
+        if not group_id:
+            continue
+        groups[group_id] = (
+            str(evidence.get("group_state", "")),
+            str(evidence.get("group_reason", "")),
+        )
+    accepted_groups = sum(state == "accepted" for state, _ in groups.values())
+    abstained_groups = sum(state == "abstained" for state, _ in groups.values())
+    rejection_reasons = Counter(
+        reason for state, reason in groups.values() if state == "abstained"
     )
     top = {str(k): sum(cell in truth for cell in ranking[:k]) for k in (1, 5, 10, 20)}
     return {
@@ -92,7 +112,17 @@ def ranking_record(
         "top_hits": top,
         "top_recall": {name: (hits / len(truth) if truth else None) for name, hits in top.items()},
         "exact_repairs": exact_repairs,
-        "candidate_count": sum(value is not None for value in candidates.values()),
+        "candidate_count": len(candidate_cells),
+        "candidate_truth_hits": candidate_truth_hits,
+        "candidate_action_rate": len(candidate_cells) / len(inventory) if inventory else None,
+        "candidate_location_precision": candidate_truth_hits / len(candidate_cells) if candidate_cells else None,
+        "candidate_error_coverage": candidate_truth_hits / len(truth) if truth else None,
+        "candidate_exact_precision": exact_repairs / len(candidate_cells) if candidate_cells else None,
+        "candidate_exact_coverage": exact_repairs / len(truth) if truth else None,
+        "candidate_error_abstention_rate": 1.0 - candidate_truth_hits / len(truth) if truth else None,
+        "accepted_group_count": accepted_groups,
+        "abstained_group_count": abstained_groups,
+        "group_rejection_reasons": dict(sorted(rejection_reasons.items())),
         "native_review_cells": len(reviewed),
         "native_review_hits": review_hits,
         "native_review_precision": review_hits / len(reviewed) if reviewed else None,
@@ -223,10 +253,15 @@ def main() -> int:
             try:
                 if method == "structuralguard":
                     ranking = results
+                    evidence_by_cell = {}
                 else:
                     ranking = [getattr(result, "cell", result) for result in results]
                     candidates = {
                         key(getattr(result, "cell", result)): getattr(result, "candidate_formula", None)
+                        for result in results
+                    }
+                    evidence_by_cell = {
+                        key(getattr(result, "cell", result)): dict(getattr(result, "evidence", {}))
                         for result in results
                     }
                 records.append(ranking_record(
@@ -234,6 +269,7 @@ def main() -> int:
                     truth, expected,
                     native_review=[key(cell) for cell in native_review] if native_review is not None else None,
                     diagnostic_state=diagnostic_state,
+                    evidence_by_cell=evidence_by_cell,
                 ))
             except Exception as exc:  # Preserve adapter failures in the receipt.  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 records.append({
@@ -253,17 +289,44 @@ def main() -> int:
         for condition in ("singleton", "clean", "coherent_block", "systematic_column"):
             selected = [record for record in ok if record["condition"] == condition]
             truth_count = sum(int(record["errors"]) for record in selected)
-            top5 = sum(int(record["top_hits"]["5"]) for record in selected)
+            formula_count = sum(int(record["formula_cells"]) for record in selected)
+            top_hits = {
+                name: sum(int(record["top_hits"][name]) for record in selected)
+                for name in ("1", "5", "10", "20")
+            }
+            candidate_count = sum(int(record["candidate_count"]) for record in selected)
+            candidate_truth_hits = sum(int(record["candidate_truth_hits"]) for record in selected)
+            exact_repairs = sum(int(record["exact_repairs"]) for record in selected)
             native_cells = sum(int(record["native_review_cells"]) for record in selected)
             native_hits = sum(int(record["native_review_hits"]) for record in selected)
             aps = [float(record["average_precision"]) for record in selected if record["average_precision"] is not None]
+            rejection_reasons: Counter[str] = Counter()
+            for record in selected:
+                rejection_reasons.update(record["group_rejection_reasons"])
             by_condition[condition] = {
                 "cases": len(selected),
                 "errors": truth_count,
+                "formula_cells": formula_count,
                 "macro_average_precision": statistics.fmean(aps) if aps else None,
-                "top5_hits": top5,
-                "top5_recall": top5 / truth_count if truth_count else None,
-                "exact_repairs": sum(int(record["exact_repairs"]) for record in selected),
+                "top_hits": top_hits,
+                "top_recall": {
+                    name: hits / truth_count if truth_count else None
+                    for name, hits in top_hits.items()
+                },
+                "top5_hits": top_hits["5"],
+                "top5_recall": top_hits["5"] / truth_count if truth_count else None,
+                "exact_repairs": exact_repairs,
+                "candidate_count": candidate_count,
+                "candidate_truth_hits": candidate_truth_hits,
+                "candidate_action_rate": candidate_count / formula_count if formula_count else None,
+                "candidate_location_precision": candidate_truth_hits / candidate_count if candidate_count else None,
+                "candidate_error_coverage": candidate_truth_hits / truth_count if truth_count else None,
+                "candidate_exact_precision": exact_repairs / candidate_count if candidate_count else None,
+                "candidate_exact_coverage": exact_repairs / truth_count if truth_count else None,
+                "candidate_error_abstention_rate": 1.0 - candidate_truth_hits / truth_count if truth_count else None,
+                "accepted_group_count": sum(int(record["accepted_group_count"]) for record in selected),
+                "abstained_group_count": sum(int(record["abstained_group_count"]) for record in selected),
+                "group_rejection_reasons": dict(sorted(rejection_reasons.items())),
                 "native_review_cells": native_cells,
                 "native_review_hits": native_hits,
                 "native_review_precision": native_hits / native_cells if native_cells else None,

@@ -16,8 +16,9 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 
 `V4-R1` 仍是唯一冻结主排序器；`V4.2-Review-B` 仅是 V4 系辅助复核位。
 `V4.1-PCG`、`V4.3-Semantic`、`V5-Core`、`V5-Core R2` 和 `V5-PSL` 都是已经结束的
-历史机制研究或负结果。当前研究代号是 `model-discovery`，在 Phase 0/1/2 的证据门
-通过前不会实现新的继任模型，也不会读取两套 `240+120` 数据。
+历史机制研究或负结果。当前另有独立开发候选 `V5 Structural Guard R2`，只在
+`data/structuralguard_standard_v2` 同源揭盲压力集上检查连续错误组和整列一致错误；它
+尚未冻结，也不是 V4-R1 的正式继任者。
 
 当前执行计划、任务契约、数据账本和功效报告见：
 
@@ -29,8 +30,9 @@ FormulaGuard 是一个面向高中生科研竞赛的可复现实验原型：在�
 - `research/V5_MODEL_DISCOVERY_POWER_REPORT.md`
 
 Phase 0 和 Gate 1 已通过；Gate 2 已完成且完整排名与选择性辅助均未通过，随后完成了
-RQ-C 最小附加信息测量。当前没有获授权的 `V5-R1`：`V4-R1` 仍是唯一冻结主排序器，
-Branch C 的交互式结果只用于论文中的可识别性边界，不得改写成无标签继任模型。
+RQ-C 最小附加信息测量。`V4-R1` 仍是唯一冻结主排序器，Branch C 的交互式结果只用于
+论文中的可识别性边界，不得改写成无标签继任模型。新 Structural Guard 候选不读取
+上述数据或结果，也不能凭同源开发集结果获得冻结资格。
 权威回执和结果说明见 `research/V5_MODEL_DISCOVERY_GATE2_RESULT.md`、
 `research/V5_MODEL_DISCOVERY_BRANCH_C_RESULT.md` 及对应的 `results/` 本地回执。
 
@@ -46,6 +48,8 @@ Branch C 的交互式结果只用于论文中的可识别性边界，不得改�
 - V5-PSL-dev1：已终止的历史开发线，以角色条件扰动响应指纹和显式可识别性门控产生
   `localized`、`review`、`abstain_unidentifiable`或`unsupported`。公开压力及唯一结构
   修订均未通过，不能继续候选锁或第三方确认。
+- V5 Structural Guard R2：当前独立开发候选；保持无输出真值和只读候选契约，通过
+  同表五点一致性生成可拒绝的组级候选。现有结果仅是揭盲同源开发证据。
 
 正式命名、历史目录和复现别名的完整映射见
 `research\VERSION_LINEAGE_AND_NAMING_POLICY.md`。旧源码、冻结配置和结果目录保持原名，
