@@ -423,7 +423,7 @@ def v5_1_development_scores(
             "dominance": support / max(1, len(by_column[(sheet, col)])),
         }
 
-    accepted: dict[CellKey, tuple[str, str, str, int]] = {}
+    accepted: dict[CellKey, tuple[str, str, str, int, str]] = {}
     for region in _formula_regions(model.formula_cells):
         suspicious = [
             cell for cell in region if records[cell]["anomaly"] >= MIN_ANOMALY
@@ -445,6 +445,12 @@ def v5_1_development_scores(
             if len(cells) / max(1, len(suspicious)) < 0.60:
                 continue
             group_quality = max(float(records[cell]["candidate"][2]) for cell in cells)
+            first_sheet, first_row, first_col = _coordinate(region[0])
+            last_row = _coordinate(region[-1])[1]
+            group_id = (
+                f"{first_sheet}!{num_to_col(first_col)}{first_row}:"
+                f"{num_to_col(first_col)}{last_row}#{template[:16]}"
+            )
             for cell in cells:
                 formula, source, quality, _ = records[cell]["candidate"]  # type: ignore[misc]
                 required_confidence = 0.90 if len(cells) == 1 else MIN_CONFIDENCE
@@ -454,7 +460,7 @@ def v5_1_development_scores(
                 ):
                     continue
                 if group_quality >= required_confidence:
-                    accepted[cell] = (formula, source, template, len(cells))
+                    accepted[cell] = (formula, source, template, len(cells), group_id)
 
     results: list[LocalizationResult] = []
     for cell in model.formula_cells:
@@ -479,6 +485,7 @@ def v5_1_development_scores(
                 candidate is not None and candidate[3] >= min_group_size
             ),
             "group_size": candidate[3] if candidate else 0,
+            "group_id": candidate[4] if candidate else "",
         }
         score = min(
             1.0,
