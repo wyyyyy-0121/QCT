@@ -9,6 +9,7 @@ from scripts.run_v5_structural_guard_public_predictions import (
     PUBLIC_FIELDS,
     combined_shards_sha256,
     prediction_record,
+    prediction_scope,
     validate_public_manifest_fields,
 )
 
@@ -60,6 +61,20 @@ class V5StructuralGuardPublicPredictionTests(unittest.TestCase):
             forward = combined_shards_sha256([first, second])
             reverse = combined_shards_sha256([second, first])
         self.assertEqual(forward, reverse)
+
+    def test_prediction_scope_distinguishes_recalculation_stage(self):
+        pending = [{"integrity_status": "package-valid;external-recalc-pending"}]
+        complete = [{"integrity_status": "package-valid;external-recalc-complete"}]
+        self.assertEqual(
+            prediction_scope(pending)[0],
+            "label_free_public_pre_recalc_engineering_prediction",
+        )
+        self.assertEqual(
+            prediction_scope(complete)[0],
+            "label_free_public_recalc_prediction",
+        )
+        with self.assertRaisesRegex(ValueError, "uniform recalculation stage"):
+            prediction_scope(pending + complete)
 
 
 if __name__ == "__main__":

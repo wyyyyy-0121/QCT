@@ -53,6 +53,8 @@ FORBIDDEN_PUBLIC_TOKENS = (
 )
 CASE_PATTERN = re.compile(r"k_[0-9a-f]{20}")
 CLUSTER_PATTERN = re.compile(r"c_[0-9a-f]{14}")
+PRE_RECALC_STATUS = "external-recalc-pending"
+RECALC_STATUS = "external-recalc-complete"
 
 
 def sha256(path: Path) -> str:
@@ -233,6 +235,23 @@ def validate_public_root(public_root: Path, source_archive: Path) -> list[dict[s
     return rows
 
 
+def prediction_scope(rows: Sequence[Mapping[str, str]]) -> tuple[str, str, str]:
+    statuses = {row["integrity_status"].strip() for row in rows}
+    if statuses and all(PRE_RECALC_STATUS in status.split(";") for status in statuses):
+        return (
+            "label_free_public_pre_recalc_engineering_prediction",
+            "external_recalc_and_SECRET_labels_are_pending",
+            "Do not edit predictions; rerun after externally recalculated PUBLIC is separately committed.",
+        )
+    if statuses and all(RECALC_STATUS in status.split(";") for status in statuses):
+        return (
+            "label_free_public_recalc_prediction",
+            "SECRET_labels_are_pending",
+            "Do not edit predictions; receive SECRET only after this lock is independently verified.",
+        )
+    raise ValueError(f"PUBLIC integrity status does not identify one uniform recalculation stage: {statuses}")
+
+
 def prediction_record(task: tuple[str, Mapping[str, str]]) -> tuple[dict[str, object], float]:
     workbook_text, row = task
     workbook = Path(workbook_text)
@@ -330,7 +349,9 @@ def combined_shards_sha256(paths: Sequence[Path]) -> str:
     return digest.hexdigest()
 
 
-def aggregate_summary(shards: Sequence[dict[str, object]]) -> dict[str, object]:
+def aggregate_summary(
+    shards: Sequence[dict[str, object]], evidence_scope: str
+) -> dict[str, object]:
     formula_counts = [int(row["formula_count"]) for row in shards]
     candidate_counts = [int(row["candidate_count"]) for row in shards]
     rejection_reasons: Counter[str] = Counter()
@@ -338,7 +359,7 @@ def aggregate_summary(shards: Sequence[dict[str, object]]) -> dict[str, object]:
         rejection_reasons.update(row["group_rejection_reasons"])
     return {
         "protocol": "v5_structural_guard_public_unlabeled_summary_v1",
-        "evidence_scope": "label_free_public_pre_recalc_engineering_prediction",
+        "evidence_scope": evidence_scope,
         "accuracy_scoring_available": False,
         "cases": len(shards),
         "clusters": len({str(row["cluster_id"]) for row in shards}),
@@ -376,6 +397,7 @@ def main() -> int:
     try:
         source_hashes = verify_model_lock()
         rows = validate_public_root(public_root, source_archive)
+        evidence_scope, claim_deferred_reason, lock_instruction = prediction_scope(rows)
     except (OSError, ValueError, zipfile.BadZipFile, subprocess.CalledProcessError) as exc:
         raise SystemExit(f"PUBLIC prediction refused: {exc}") from exc
 
@@ -384,9 +406,9 @@ def main() -> int:
     shards_dir.mkdir(exist_ok=True)
     metadata = {
         "protocol": "v5_structural_guard_public_prediction_metadata_v1",
-        "evidence_scope": "label_free_public_pre_recalc_engineering_prediction",
+        "evidence_scope": evidence_scope,
         "formal_blind_accuracy_claim_allowed": False,
-        "reason_formal_claim_deferred": "external_recalc_and_SECRET_labels_are_pending",
+        "reason_formal_claim_deferred": claim_deferred_reason,
         "public_archive": source_archive.name,
         "public_archive_sha256": sha256(source_archive),
         "manifest_sha256": sha256(public_root / "manifest.csv"),
@@ -442,13 +464,13 @@ def main() -> int:
     if {path.stem for path in shard_paths} != set(rows_by_id):
         raise SystemExit("prediction lock refused: shard set differs from PUBLIC cases")
     shards = [audit_shard(path, rows_by_id[path.stem], public_root) for path in shard_paths]
-    summary = aggregate_summary(shards)
+    summary = aggregate_summary(shards, evidence_scope)
     summary_path = args.output / "unlabeled_summary.json"
     write_json(summary_path, summary)
     lock = {
         "protocol": "v5_structural_guard_public_prediction_lock_v1",
         "locked": True,
-        "evidence_scope": "label_free_public_pre_recalc_engineering_prediction",
+        "evidence_scope": evidence_scope,
         "cases": len(shards),
         "combined_shards_sha256": combined_shards_sha256(shard_paths),
         "metadata_sha256": sha256(metadata_path),
@@ -456,7 +478,7 @@ def main() -> int:
         "complete_ranking_audit_passed": True,
         "labels_read": [],
         "accuracy_scoring_deferred": True,
-        "instruction": "Do not edit predictions; rerun after externally recalculated PUBLIC is separately committed.",
+        "instruction": lock_instruction,
     }
     write_json(args.output / "prediction_lock.json", lock)
     performance = {
