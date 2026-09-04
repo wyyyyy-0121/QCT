@@ -1,0 +1,223 @@
+{
+  "protocol": "v51_natural_confirmation_result_v1",
+  "models": {
+    "v4_r1": {
+      "summary": {
+        "repair_cases": 120,
+        "repair_error_cells": 1014,
+        "repair_macro_ap": 0.8409509760668901,
+        "exact_candidate_coverage": 0.17455621301775148,
+        "candidate_location_precision": 0.13863822805578344,
+        "control_workbook_candidate_fpr": 1.0,
+        "ambiguous_workbook_candidate_rate": 1.0,
+        "accepted_group_exact_coverage": 0.0,
+        "accepted_group_precision": null,
+        "unsafe_accepted_groups": 0,
+        "accepted_groups_repair_cases": 0,
+        "by_cohort": {
+          "singleton": {
+            "cases": 40,
+            "errors": 40,
+            "exact_candidate_coverage": 1.0,
+            "average_precision": 1.0
+          },
+          "contiguous_block": {
+            "cases": 40,
+            "errors": 200,
+            "exact_candidate_coverage": 0.65,
+            "average_precision": 0.7560535714285714
+          },
+          "systematic_column": {
+            "cases": 40,
+            "errors": 774,
+            "exact_candidate_coverage": 0.00904392764857881,
+            "average_precision": 0.7667993567720988
+          }
+        }
+      }
+    },
+    "v5_v1": {
+      "summary": {
+        "repair_cases": 120,
+        "repair_error_cells": 1014,
+        "repair_macro_ap": 0.9150070305316107,
+        "exact_candidate_coverage": 0.23668639053254437,
+        "candidate_location_precision": 0.7859237536656891,
+        "control_workbook_candidate_fpr": 0.45,
+        "ambiguous_workbook_candidate_rate": 0.5,
+        "accepted_group_exact_coverage": 0.0,
+        "accepted_group_precision": null,
+        "unsafe_accepted_groups": 0,
+        "accepted_groups_repair_cases": 0,
+        "by_cohort": {
+          "singleton": {
+            "cases": 40,
+            "errors": 40,
+            "exact_candidate_coverage": 1.0,
+            "average_precision": 1.0
+          },
+          "contiguous_block": {
+            "cases": 40,
+            "errors": 200,
+            "exact_candidate_coverage": 1.0,
+            "average_precision": 0.9203928571428571
+          },
+          "systematic_column": {
+            "cases": 40,
+            "errors": 774,
+            "exact_candidate_coverage": 0.0,
+            "average_precision": 0.8246282344519752
+          }
+        }
+      }
+    },
+    "v5_r2": {
+      "summary": {
+        "repair_cases": 120,
+        "repair_error_cells": 1014,
+        "repair_macro_ap": 0.7994815675752291,
+        "exact_candidate_coverage": 0.10848126232741617,
+        "candidate_location_precision": 0.1791530944625407,
+        "control_workbook_candidate_fpr": 0.525,
+        "ambiguous_workbook_candidate_rate": 0.575,
+        "accepted_group_exact_coverage": 0.06903353057199212,
+        "accepted_group_precision": 0.16279069767441862,
+        "unsafe_accepted_groups": 15,
+        "accepted_groups_repair_cases": 32,
+        "by_cohort": {
+          "singleton": {
+            "cases": 40,
+            "errors": 40,
+            "exact_candidate_coverage": 1.0,
+            "average_precision": 0.8571428571428571
+          },
+          "contiguous_block": {
+            "cases": 40,
+            "errors": 200,
+            "exact_candidate_coverage": 0.35,
+            "average_precision": 0.7894617447769622
+          },
+          "systematic_column": {
+            "cases": 40,
+            "errors": 774,
+            "exact_candidate_coverage": 0.0,
+            "average_precision": 0.751840100805868
+          }
+        }
+      }
+    },
+    "v5_1_development": {
+      "summary": {
+        "repair_cases": 120,
+        "repair_error_cells": 1014,
+        "repair_macro_ap": 0.8946002621355705,
+        "exact_candidate_coverage": 0.34714003944773175,
+        "candidate_location_precision": 0.4,
+        "control_workbook_candidate_fpr": 0.2375,
+        "ambiguous_workbook_candidate_rate": 0.175,
+        "accepted_group_exact_coverage": 0.34714003944773175,
+        "accepted_group_precision": 0.4,
+        "unsafe_accepted_groups": 34,
+        "accepted_groups_repair_cases": 66,
+        "by_cohort": {
+          "singleton": {
+            "cases": 40,
+            "errors": 40,
+            "exact_candidate_coverage": 0.35,
+            "average_precision": 1.0
+          },
+          "contiguous_block": {
+            "cases": 40,
+            "errors": 200,
+            "exact_candidate_coverage": 0.35,
+            "average_precision": 0.8690688876341051
+          },
+          "systematic_column": {
+            "cases": 40,
+            "errors": 774,
+            "exact_candidate_coverage": 0.3462532299741602,
+            "average_precision": 0.8147318987726064
+          }
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "v4_r1": {
+      "macro_ap": {
+        "delta": 0.05364928606868047,
+        "ci95_lower": -0.026069834338518505,
+        "ci95_upper": 0.12197015660833799
+      },
+      "gates": {
+        "AP delta CI lower > 0": false,
+        "exact coverage non-inferior >= -5pp": true,
+        "control FPR <= 10%": false,
+        "ambiguous rate <= 10%": false,
+        "accepted group exact coverage >= 50%": false,
+        "accepted group precision >= 95%": false,
+        "zero unsafe accepted groups": false,
+        "singleton exact coverage >= 90%": false,
+        "contiguous block exact coverage >= 70%": false,
+        "systematic column exact coverage >= 50%": false
+      },
+      "passed": false
+    },
+    "v5_v1": {
+      "macro_ap": {
+        "delta": -0.020406768396040165,
+        "ci95_lower": -0.11827830853222465,
+        "ci95_upper": 0.07036499484167047
+      },
+      "gates": {
+        "AP delta CI lower > 0": false,
+        "exact coverage non-inferior >= -5pp": true,
+        "control FPR <= 10%": false,
+        "ambiguous rate <= 10%": false,
+        "accepted group exact coverage >= 50%": false,
+        "accepted group precision >= 95%": false,
+        "zero unsafe accepted groups": false,
+        "singleton exact coverage >= 90%": false,
+        "contiguous block exact coverage >= 70%": false,
+        "systematic column exact coverage >= 50%": false
+      },
+      "passed": false
+    },
+    "v5_r2": {
+      "macro_ap": {
+        "delta": 0.09511869456034139,
+        "ci95_lower": 0.03184152081050318,
+        "ci95_upper": 0.16426608578850743
+      },
+      "gates": {
+        "AP delta CI lower > 0": true,
+        "exact coverage non-inferior >= -5pp": true,
+        "control FPR <= 10%": false,
+        "ambiguous rate <= 10%": false,
+        "accepted group exact coverage >= 50%": false,
+        "accepted group precision >= 95%": false,
+        "zero unsafe accepted groups": false,
+        "singleton exact coverage >= 90%": false,
+        "contiguous block exact coverage >= 70%": false,
+        "systematic column exact coverage >= 50%": false
+      },
+      "passed": false
+    }
+  },
+  "decision": {
+    "status": "DO_NOT_PROMOTE_V5_1",
+    "reason": "V5.1 failed one or more preregistered safety, structure, or paired utility gates."
+  },
+  "integrity": {
+    "public_sha256": "9e890163739d27a6e5b77e0cfdcd45944d1d2acaae7c6ce57f9f9dae3aae2964",
+    "secret_sha256": "85bbd2fc6832439773af7051efd5673d78cdd6432c03b1033c0cab5c3ba91381",
+    "prediction_locks": {
+      "v4_r1": "a8a5ee0fae39ef74ee54c2e4a35d58cd3c7fa8b92c714d04029c88cf78f856e7",
+      "v5_v1": "a4f3f215a9aa702022667002e06af507054338c9361b7508e2456954809be721",
+      "v5_r2": "d9a975e407970d5dc46314df85d8afb364a533be43991773361d8457890cb444",
+      "v5_1_development": "05b2864950f05874d8dfb4780bd144d30be07d71a92d1bc036f44a59b47ff4a0"
+    },
+    "double_run_identical": true,
+    "labels_loaded_after_authorization": true
+  }
+}
