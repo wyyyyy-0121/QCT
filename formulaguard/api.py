@@ -8,6 +8,7 @@ from .v4_peer_fifth import v4_peer_fifth_scores
 from .v4_static_allocator import v4_static_allocator_scores
 from .v4_static_fifth import v4_static_fifth_scores
 from .v4x import v4_1_scores, v4_3_scores
+from .v5_1_1_development import v5_1_1_development_scores
 from .v5_1_development import v5_1_development_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
@@ -35,6 +36,25 @@ def localize(
                 f"Unsupported V5.1-development arguments: {', '.join(sorted(kwargs))}"
             )
         return v5_1_development_scores(
+            model,
+            radius=radius,
+            min_template_support=min_template_support,
+            min_group_size=min_group_size,
+        )
+    if normalized in {
+        "v5.1.1_development",
+        "v5_1_1_development",
+        "v511_development",
+        "formulaguard_v5_1_1_development",
+    }:
+        radius = int(kwargs.pop("radius", 6))
+        min_template_support = int(kwargs.pop("min_template_support", 3))
+        min_group_size = int(kwargs.pop("min_group_size", 3))
+        if kwargs:
+            raise TypeError(
+                f"Unsupported V5.1.1-development arguments: {', '.join(sorted(kwargs))}"
+            )
+        return v5_1_1_development_scores(
             model,
             radius=radius,
             min_template_support=min_template_support,
