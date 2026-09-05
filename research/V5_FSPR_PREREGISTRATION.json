@@ -1,0 +1,105 @@
+{
+  "protocol": "formulaguard_fspr_v1",
+  "date": "2026-09-03",
+  "research_code": "FSPR",
+  "status": "frozen_before_implementation_fitting_prediction_or_external_download",
+  "formal_version_authorized": false,
+  "training": {
+    "source": "FoRepBench",
+    "git_commit": "d17e278092c59ec6faaa2d88730bdcbe48bb95f2",
+    "dataset_sha256": "7dc32841e8b243653a2325b38fd651415ce00257780815d1785d25ac41fb28fb",
+    "pairs": 618,
+    "folds": 5,
+    "grouping": "connected_components_of_canonical_context_or_faulty_or_correct_formula",
+    "allowed_fields": [
+      "data",
+      "faulty_formula",
+      "correct_formula"
+    ],
+    "forbidden_fields": [
+      "utterance",
+      "explanation",
+      "runtime_errors",
+      "validity_explanation",
+      "confidence_level",
+      "difficulty_level_human",
+      "difficulty_level_LLM"
+    ]
+  },
+  "calibration": {
+    "source": "SpreadsheetBench-v1-input-only-retained-DRFV-corpus",
+    "workbooks": 607,
+    "structure_groups": 219,
+    "corpus_manifest_sha256": "0e1228992fccf6b13961e397b944133db83dcde72b5372af5c36cd54306e71ed",
+    "corpus_receipt_sha256": "743461a31faf9734d38cbcb43dbf2a23cc1cf30076b8d83ffe22d3d7d6d5e789",
+    "intake_manifest_sha256": "bb01edd4a58f80a7f26f6b3051f3bdbc6983b2a5a47a23d185bcd07cf2a4f42d",
+    "threshold_split": "calibration",
+    "audit_split": "internal_test",
+    "threshold_quantile": 0.9,
+    "quantile_method": "higher",
+    "answer_workbook_inputs": [],
+    "task_text_inputs": [],
+    "fault_label_inputs": [],
+    "protected_data_inputs": []
+  },
+  "representation": {
+    "kind": "anchor_independent_formula_syntax_and_reference_type",
+    "hash": "sha256_signed_unigram_bigram",
+    "dimensions": 2048,
+    "normalization": "row_l2",
+    "raw_address_features": false,
+    "raw_identity_features": false,
+    "peer_features": false,
+    "v4_score_features": false
+  },
+  "learner": {
+    "kind": "balanced_logistic_regression",
+    "c_values": [0.1, 1.0, 10.0],
+    "tie_order": [1.0, 0.1, 10.0],
+    "solver": "liblinear",
+    "maximum_iterations": 2000,
+    "seed": 260903
+  },
+  "ranking": {
+    "architecture": "frozen_v4_top4_plus_high_confidence_fspr_fifth",
+    "review_budget": 5,
+    "immutable_v4_prefix": 4,
+    "tail_order": "v4",
+    "score_fusion": false
+  },
+  "label_free_gate": {
+    "pairwise_accuracy_minimum": 0.75,
+    "roc_auc_minimum": 0.8,
+    "folds_at_or_above_0_70_minimum": 4,
+    "full_not_lower_than_ablations": true,
+    "two_process_byte_identical": true,
+    "internal_test_workbook_action_rate_maximum": 0.15
+  },
+  "public_gate": {
+    "group_macro_top5_delta_minimum": 0.02,
+    "mrr_non_degradation": true,
+    "net_top5_rescues_minimum": 5,
+    "top5_losses_maximum": 2,
+    "enron_top5_and_mrr_non_degradation": true,
+    "other_cohort_top5_regression_maximum": 0.05,
+    "control_workbook_change_rate_maximum": 0.15,
+    "two_process_byte_identical": true
+  },
+  "external_gate": {
+    "source": "SpreadsheetBench-v2-Debugging",
+    "eligible_tasks_minimum": 80,
+    "top5_delta_minimum": 0.05,
+    "mrr_non_degradation": true,
+    "rescues_minimum": 5,
+    "losses_maximum": 1,
+    "one_sided_exact_sign_p_maximum": 0.05,
+    "nonnegative_task_group_fraction_minimum": 0.8,
+    "two_process_byte_identical": true
+  },
+  "authorized_version_artifact_on_complete_pass": "research/V5_FSPR1_VERSION.json",
+  "authorized_version": "V5-FSPR1",
+  "reserved_v5_r1_authorized": false,
+  "protected_path": "/home/ayaka/code/FormulaGuard_240_120/",
+  "protected_access_authorized": false,
+  "single_revision_allowed": false
+}

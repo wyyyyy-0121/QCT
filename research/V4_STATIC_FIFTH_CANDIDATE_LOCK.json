@@ -1,0 +1,35 @@
+{
+  "protocol": "v4_static_fifth_blind_candidate_lock_v1",
+  "candidate_id": "v4_static_fifth_exploratory_v1",
+  "candidate_locked": true,
+  "formal_version": null,
+  "model": {
+    "model_version": "v4-static-fifth-exploratory-v1",
+    "architecture": "frozen_v4_top4_plus_static_anchor_fifth",
+    "review_budget": 5,
+    "immutable_v4_prefix": 4
+  },
+  "model_source_commit": "2a5ec423d647b5879feb3796fff168424438167e",
+  "public_prediction_commit": "04c5927c7d721504252d5279aa0d9b81b631a01d",
+  "source_sha256": {
+    "formulaguard/v4_static_fifth.py": "67a241c89fad4415f73c1e52f01affbe65a2f34fbe45bd32afba58bd068cd01d",
+    "formulaguard/localize.py": "760fbf8519dce5a4604bcc6ba158e9ca44d9434e7e898c85e9f7bc51c6c99c40",
+    "formulaguard/v5_psl.py": "896c234ebdeb2139fbd7676ac5441111f95efba1d9ecc74f255ec49804d7e030"
+  },
+  "public_development_prediction_receipt": "results/v4_static_fifth_exploratory/receipt.json",
+  "public_development_prediction_receipt_sha256": "d921b401f8735617caf5e79c2baa3d75b93446b02ca5cdeb17711ad1fa35fda9",
+  "development_signature_inventory": "results/v5_psl_public_pressure_revision_1/development_formula_change_signatures.txt",
+  "development_signature_inventory_sha256": "36c1eaa06678a6f595982fca66b2e8d25fe0da6025fcc90dba20083daecebf6f",
+  "blind_promotion_gates": {
+    "minimum_top5_gain_pp": 5.0,
+    "bootstrap_delta_lower_bound_strictly_positive": true,
+    "minimum_mrr_delta": 0.0,
+    "minimum_v4_miss_recovery_rate": 0.15,
+    "maximum_v4_hit_loss_rate": 0.02,
+    "maximum_error_type_regression_pp": 5.0,
+    "minimum_nonnegative_template_fraction": 0.8,
+    "review_budget_equal_to_v4": true
+  },
+  "protected_data_read_before_lock": false,
+  "post_lock_tuning_forbidden": true
+}

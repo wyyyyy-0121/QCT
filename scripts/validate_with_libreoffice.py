@@ -73,6 +73,7 @@ def main():
             capture_output=True,
             text=True,
             timeout=120,
+            check=False,
         )
         recalculated = converted_dir / target_name
         if completed.returncode != 0 or not recalculated.is_file():
@@ -120,4 +121,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -21,6 +21,7 @@ if str(ROOT) not in sys.path:
 from formulaguard.formula import normalized_formula
 from formulaguard.v5_core import build_candidate_portfolio, discover_formula_regimes
 from formulaguard.workbook import WorkbookModel
+
 ERROR_STRATA = {
     "traditional": 420,
     "withheld_mutation": 90,
@@ -285,7 +286,7 @@ def main() -> None:
             candidate_absent_checks.append(all(
                 normalized_formula(candidate.formula) != correct_key for candidate in portfolio
             ))
-        except Exception:
+        except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             candidate_absent_checks.append(False)
     candidate_absent_verified_rate = mean(candidate_absent_checks)
     raw_error: list[dict] = []

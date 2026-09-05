@@ -16,7 +16,6 @@ from formulaguard.localize import car_v3_scores, gir_scores
 from formulaguard.workbook import WorkbookModel
 from scripts.run_experiments import resolve_worker_count
 
-
 PROFILES = [
     ("intervention_heavy", (0.25, 0.60, 0.10, 0.05)),
     ("balanced", (0.35, 0.50, 0.10, 0.05)),
@@ -25,7 +24,7 @@ PROFILES = [
 
 
 def select_threshold(mutant_scores, clean_scores, max_clean_alarm=0.25):
-    values = sorted(set([*mutant_scores, *clean_scores]))
+    values = sorted({*mutant_scores, *clean_scores})
     epsilon = max(1e-12, abs(values[-1]) * 1e-12) if values else 1e-12
     feasible = []
     for threshold in values + ([values[-1] + epsilon] if values else [epsilon]):

@@ -1,0 +1,23 @@
+{
+  "independent_custodian": true,
+  "custodian_not_in_model_development": true,
+  "custodian_prepared_or_supervised_all_cases": true,
+  "model_was_run": false,
+  "labels_withheld_until_prediction_lock": true,
+  "permissions_and_anonymization_checked": true,
+  "all_cases_recalculated_without_runtime_errors": true,
+  "case_plan_fixed_before_third_party_predictions": true,
+  "templates_withheld_until_candidate_lock": true,
+  "no_development_template_overlap": true,
+  "custodian_received_no_model_outputs": true,
+  "single_custodian_design_acknowledged": true,
+  "custodian_id": null,
+  "calculation_engine": null,
+  "calculation_engine_version": null,
+  "permission_evidence_sha256": null,
+  "anonymization_evidence_sha256": null,
+  "case_plan_sha256": null,
+  "template_overlap_evidence_sha256": null,
+  "public_release_channel": "private_to_evaluation_team_unless_redistribution_is_authorized",
+  "notes": "Use one stable pseudonymous steward/custodian ID. The four hashes must bind external permission, anonymization, frozen case-plan, and development-overlap evidence."
+}

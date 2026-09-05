@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def run(*parts, allow_gate_failure=False):
     command = [sys.executable, *map(str, parts)]
-    completed = subprocess.run(command, cwd=ROOT)
+    completed = subprocess.run(command, cwd=ROOT, check=False)
     if completed.returncode and not (allow_gate_failure and completed.returncode == 2):
         raise SystemExit(completed.returncode)
 

@@ -15,7 +15,6 @@ import shutil
 import subprocess
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATASET = ROOT / "data/v6_validation"
 DEFAULT_RECEIPT = ROOT / "research/V6_VALIDATION_PRECOMMIT.json"
@@ -59,6 +58,7 @@ def git_commit() -> str:
         return "unavailable"
     completed = subprocess.run(
         [executable, "rev-parse", "HEAD"], cwd=ROOT, text=True, capture_output=True,
+        check=False,
     )
     if completed.returncode:
         return "unavailable"

@@ -15,7 +15,6 @@ import shutil
 import subprocess
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -52,6 +51,7 @@ def tag_exists(tag: str) -> bool:
     completed = subprocess.run(
         [executable, "rev-parse", "--verify", "--quiet", f"refs/tags/{tag}"],
         cwd=ROOT,
+        check=False,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )

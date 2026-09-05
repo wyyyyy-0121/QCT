@@ -1,0 +1,167 @@
+{
+  "protocol": "formulaguard_v4_rrc_calibration_failure_audit_v1",
+  "complete": true,
+  "d0": {
+    "receipt_path": "results/v4_rrc_d0/receipt.json",
+    "receipt_sha256": "343a17aaf9bb6a9b0d81a3ffa48a2ebc31c24fbded5eb4a40021581758449fe2",
+    "git_commit": "2ac19305d8a2761ba69b3f4207dd6578ee652e0a",
+    "passed": false
+  },
+  "folds": [
+    {
+      "outer_fold": 0,
+      "calibration_fold": 1,
+      "calibration_control_workbooks": 8,
+      "candidate_thresholds": 58,
+      "thresholds_with_at_least_three_gains": 43,
+      "thresholds_also_safe_on_controls": 0,
+      "thresholds_also_safe_on_v4_hits": 0,
+      "fully_eligible_thresholds": 0,
+      "best_precision_with_at_least_three_gains": {
+        "threshold": 0.6187273099981627,
+        "residual_event_gains": 4,
+        "acted_error_events": 16,
+        "positive_residual_action_precision": 0.25,
+        "v4_hit_loss_rate": 0.02857142857142857,
+        "control_workbook_action_rate": 0.375,
+        "top5_difference": 0.11874999999999991,
+        "action_units": 19
+      },
+      "best_precision_after_control_and_v4_loss_constraints": null,
+      "best_gain_after_control_and_v4_loss_constraints": null
+    },
+    {
+      "outer_fold": 1,
+      "calibration_fold": 2,
+      "calibration_control_workbooks": 1,
+      "candidate_thresholds": 39,
+      "thresholds_with_at_least_three_gains": 28,
+      "thresholds_also_safe_on_controls": 27,
+      "thresholds_also_safe_on_v4_hits": 25,
+      "fully_eligible_thresholds": 0,
+      "best_precision_with_at_least_three_gains": {
+        "threshold": 0.45129260131618976,
+        "residual_event_gains": 6,
+        "acted_error_events": 15,
+        "positive_residual_action_precision": 0.4,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.17800000000000005,
+        "action_units": 15
+      },
+      "best_precision_after_control_and_v4_loss_constraints": {
+        "threshold": 0.45129260131618976,
+        "residual_event_gains": 6,
+        "acted_error_events": 15,
+        "positive_residual_action_precision": 0.4,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.17800000000000005,
+        "action_units": 15
+      },
+      "best_gain_after_control_and_v4_loss_constraints": {
+        "threshold": -0.46675000187692617,
+        "residual_event_gains": 8,
+        "acted_error_events": 32,
+        "positive_residual_action_precision": 0.25,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.19800000000000006,
+        "action_units": 32
+      }
+    },
+    {
+      "outer_fold": 2,
+      "calibration_fold": 3,
+      "calibration_control_workbooks": 1,
+      "candidate_thresholds": 36,
+      "thresholds_with_at_least_three_gains": 26,
+      "thresholds_also_safe_on_controls": 19,
+      "thresholds_also_safe_on_v4_hits": 0,
+      "fully_eligible_thresholds": 0,
+      "best_precision_with_at_least_three_gains": {
+        "threshold": -0.05015391269414305,
+        "residual_event_gains": 7,
+        "acted_error_events": 22,
+        "positive_residual_action_precision": 0.3181818181818182,
+        "v4_hit_loss_rate": 0.058823529411764705,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.17741935483870963,
+        "action_units": 21
+      },
+      "best_precision_after_control_and_v4_loss_constraints": null,
+      "best_gain_after_control_and_v4_loss_constraints": null
+    },
+    {
+      "outer_fold": 3,
+      "calibration_fold": 4,
+      "calibration_control_workbooks": 1,
+      "candidate_thresholds": 27,
+      "thresholds_with_at_least_three_gains": 19,
+      "thresholds_also_safe_on_controls": 5,
+      "thresholds_also_safe_on_v4_hits": 5,
+      "fully_eligible_thresholds": 0,
+      "best_precision_with_at_least_three_gains": {
+        "threshold": 0.2919190953058089,
+        "residual_event_gains": 3,
+        "acted_error_events": 11,
+        "positive_residual_action_precision": 0.2727272727272727,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.05797101449275366,
+        "action_units": 9
+      },
+      "best_precision_after_control_and_v4_loss_constraints": {
+        "threshold": 0.2919190953058089,
+        "residual_event_gains": 3,
+        "acted_error_events": 11,
+        "positive_residual_action_precision": 0.2727272727272727,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.05797101449275366,
+        "action_units": 9
+      },
+      "best_gain_after_control_and_v4_loss_constraints": {
+        "threshold": 0.2919190953058089,
+        "residual_event_gains": 3,
+        "acted_error_events": 11,
+        "positive_residual_action_precision": 0.2727272727272727,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": 0.0,
+        "top5_difference": 0.05797101449275366,
+        "action_units": 9
+      }
+    },
+    {
+      "outer_fold": 4,
+      "calibration_fold": 0,
+      "calibration_control_workbooks": 0,
+      "candidate_thresholds": 26,
+      "thresholds_with_at_least_three_gains": 21,
+      "thresholds_also_safe_on_controls": 0,
+      "thresholds_also_safe_on_v4_hits": 0,
+      "fully_eligible_thresholds": 0,
+      "best_precision_with_at_least_three_gains": {
+        "threshold": 0.4411370592361265,
+        "residual_event_gains": 4,
+        "acted_error_events": 7,
+        "positive_residual_action_precision": 0.5714285714285714,
+        "v4_hit_loss_rate": 0.0,
+        "control_workbook_action_rate": null,
+        "top5_difference": 0.1346153846153847,
+        "action_units": 7
+      },
+      "best_precision_after_control_and_v4_loss_constraints": null,
+      "best_gain_after_control_and_v4_loss_constraints": null
+    }
+  ],
+  "conclusion": {
+    "finite_thresholds": 0,
+    "all_folds_below_75pct_precision_with_three_gains": true,
+    "failure_is_not_only_control_risk": true,
+    "d1_allowed": false,
+    "line_stopped": true
+  },
+  "protected_data_inputs": [],
+  "receipt_sha256": "17e0b6a78ffc78fd3b3ec548883f61bb46f53896afe38bdb177ba0592aa44398"
+}

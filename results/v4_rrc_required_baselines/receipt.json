@@ -1,0 +1,92 @@
+{
+  "protocol": "formulaguard_v4_rrc_required_baselines_v1",
+  "complete": true,
+  "git_commit": "e0ffa8d0760f3a1543aa3e5e599b07bff7f1e9ff",
+  "workers": 24,
+  "inputs": {
+    "profiles": {
+      "path": "results/core_reset_b_phase0/observation_profiles.csv",
+      "sha256": "26f7d1d64a65860fb90714a51beb602742d28d1cfefeea8cbadf331b0e1463dc"
+    },
+    "events": {
+      "path": "results/model_discovery_gate2_final_v3/event_scores.jsonl",
+      "sha256": "c68e2436957a83f6e8e80e6de6c5a3d45ca35b71e162ebc928275352ba90dd34"
+    },
+    "v4": {
+      "path": "results/model_discovery_v4_baseline",
+      "combined_shards_sha256": "b6ad4b46058e7c5b966bd8faa4b790f52c33a87fa03631fa744fe4a1df28d1f6"
+    }
+  },
+  "counts": {
+    "units": 196,
+    "events": 220,
+    "shards": 196
+  },
+  "summary": {
+    "events": 220,
+    "errors": 190,
+    "controls": 30,
+    "v4_top5": 0.5890510948905109,
+    "v4_2_review_b": {
+      "native_review_hit": 0.654014598540146,
+      "mean_review_cost_per_event": 5.095454545454546,
+      "additional_action_units": 22,
+      "control_additional_action_rate": 0.0,
+      "metric_note": "native five-plus-optional-sixth review hit; not Top-5"
+    },
+    "v5_psl_static_anchor": {
+      "top5": 0.6495133819951338,
+      "mrr": 0.36515651074779804
+    },
+    "by_cohort": {
+      "enron": {
+        "events": 30,
+        "groups": 25,
+        "v4_top5": 0.52,
+        "v4_2_native_review_hit": 0.52,
+        "static_anchor_top5": 0.4333333333333333
+      },
+      "historical_100": {
+        "events": 100,
+        "groups": 95,
+        "v4_top5": 0.6210526315789474,
+        "v4_2_native_review_hit": 0.7105263157894737,
+        "static_anchor_top5": 0.7210526315789474
+      },
+      "public:info1": {
+        "events": 2,
+        "groups": 2,
+        "v4_top5": 0.0,
+        "v4_2_native_review_hit": 0.0,
+        "static_anchor_top5": 0.0
+      },
+      "public:integer_corpus": {
+        "events": 29,
+        "groups": 9,
+        "v4_top5": 0.4166666666666667,
+        "v4_2_native_review_hit": 0.4166666666666667,
+        "static_anchor_top5": 0.4722222222222222
+      },
+      "public:modified_euses": {
+        "events": 29,
+        "groups": 6,
+        "v4_top5": 0.8249999999999998,
+        "v4_2_native_review_hit": 0.8916666666666666,
+        "static_anchor_top5": 0.8999999999999999
+      }
+    }
+  },
+  "artifacts": {
+    "event_scores": {
+      "path": "results/v4_rrc_required_baselines/event_scores.jsonl",
+      "sha256": "d4a6d0980bb94ca976914e21a191326aac9312c29b1638224a46358aa5b0a1ce"
+    },
+    "combined_shards_sha256": "97e0854355efc45419c647ff24c629db54fa3df656d9d1231c39f99081e64098"
+  },
+  "label_boundary": {
+    "prediction_label_inputs": [],
+    "labels_read_only_by_scorer": true
+  },
+  "protected_data_inputs": [],
+  "receipt_sha256": "e0be9b00b5a9dbe74b5dfa4826d76810eaf3ed75add27dd8cb5e673da503d175"
+}

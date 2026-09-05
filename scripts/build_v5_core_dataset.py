@@ -23,7 +23,6 @@ from formulaguard.formula import normalized_formula
 from formulaguard.workbook import WorkbookModel
 from scripts.build_v6_dataset import sha256, write_xlsx
 
-
 ERROR_TYPES = (
     "range_boundary",
     "operator",

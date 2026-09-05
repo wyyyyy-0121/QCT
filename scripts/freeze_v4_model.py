@@ -14,7 +14,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from formulaguard.localize import v4_default_parameters
 from scripts.run_external_evaluation import sha256_file
 
-
 REQUIRED_RESULT_FILES = (
     "external_raw.csv",
     "external_summary.csv",

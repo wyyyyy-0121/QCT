@@ -3,9 +3,8 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 CORE_HASH_PREFIXES = ("formulaguard/",)
 CORE_HASH_FILES = {
@@ -96,7 +95,7 @@ def main():
         gates["v3_mrr_not_below_v2"] = float(v3_comparison.get("mean_mrr_difference_v3_minus_v2", -1.0)) >= -1e-12
         gates["source_first_metric_present"] = "source_first_in_causal_cone" in formulaguard
     assessment = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "eligible": all(gates.values()),
         "gates": gates,
         "strongest_no_oracle_baseline": strongest["method"],
@@ -121,7 +120,7 @@ def main():
     config = {
         "schema_version": 2 if args.model_version == "v3" else 1,
         "model_version": args.model_version,
-        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_at": datetime.now(UTC).isoformat(),
         "source_mode": "quick",
         "benchmark_name": args.validation.parent.name,
         "profile": selected_profile["profile"] if selected_profile else "v3_preregistered_car",

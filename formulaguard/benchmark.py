@@ -5,7 +5,7 @@ from __future__ import annotations
 import csv
 import json
 import math
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 
 from .formula import normalized_formula
@@ -108,7 +108,7 @@ def validate_dataset(root: Path, output_dir: Path):
     for row in rows:
         try:
             record, _, _ = validate_instance(root, row)
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             record = ValidationRecord(
                 instance_id=row.get("instance_id", "unknown"),
                 valid=False,

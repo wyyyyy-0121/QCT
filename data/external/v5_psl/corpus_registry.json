@@ -1,0 +1,132 @@
+{
+  "protocol": "v5_psl_public_corpus_registry_v1",
+  "verified_at": "2026-08-30",
+  "raw_data_committed": false,
+  "corpora": [
+    {
+      "id": "modified_euses",
+      "title": "Modified EUSES Corpus",
+      "homepage": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/euses/",
+      "acquisition": {
+        "kind": "http_zip",
+        "url": "https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/benchmarks/EUSES_modified.zip",
+        "sha256": "3701d4d322dc057d166be0aa4104284a701614174ac8f4ab852616df4127c3d4",
+        "size_bytes": 53954933
+      },
+      "license": {
+        "status": "manual_review_required",
+        "identifier": null,
+        "source": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/euses/",
+        "redistribution_by_this_project": false
+      },
+      "task_scope": "retrospective_localization_development",
+      "evidence_boundary": "injected faults; not natural-error evidence",
+      "expected_base_workbooks": 184,
+      "expected_faulty_versions": 576
+    },
+    {
+      "id": "info1",
+      "title": "Info1 Corpus",
+      "homepage": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/info1/",
+      "acquisition": {
+        "kind": "http_zip",
+        "url": "https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/benchmarks/Info1.zip",
+        "sha256": "b889174ac36c7ddc66207dff7e53e831c804802723dcd8b75b04a1f70368f9e3",
+        "size_bytes": 8494426
+      },
+      "license": {
+        "status": "manual_review_required",
+        "identifier": null,
+        "source": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/info1/",
+        "redistribution_by_this_project": false
+      },
+      "task_scope": "retrospective_localization_development",
+      "evidence_boundary": "exercise spreadsheets with real faults; multiple faults may be inseparable",
+      "expected_base_workbooks": 2,
+      "expected_faulty_versions": 119
+    },
+    {
+      "id": "integer_corpus",
+      "title": "Integer Corpus",
+      "homepage": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/integer-corpus/",
+      "acquisition": {
+        "kind": "http_zip",
+        "url": "https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/benchmarks/Integer.zip",
+        "sha256": "47d6950a9275e68b4b3c51177893b2a9dbc3053243e30b7eb88c32bbc6829aec",
+        "size_bytes": 2337027
+      },
+      "license": {
+        "status": "manual_review_required",
+        "identifier": null,
+        "source": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/integer-corpus/",
+        "redistribution_by_this_project": false
+      },
+      "task_scope": "retrospective_localization_development",
+      "evidence_boundary": "integer-domain injected faults; not natural-error evidence",
+      "expected_base_workbooks": 33,
+      "expected_faulty_versions": 231
+    },
+    {
+      "id": "enron_error",
+      "title": "Enron Error Corpus",
+      "homepage": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/enron-error-corpus/",
+      "acquisition": {
+        "kind": "http_zip",
+        "url": "https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/2017/06/Error_ENRON.zip",
+        "sha256": "4f23c7cbe5dc7534c83f11842ad732ac708e5faf2c13f8ecf2a07c04292f4450",
+        "size_bytes": 789204
+      },
+      "license": {
+        "status": "no_explicit_redistribution_license_observed",
+        "identifier": null,
+        "source": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/enron-error-corpus/",
+        "redistribution_by_this_project": false
+      },
+      "task_scope": "retrospective_localization_development",
+      "evidence_boundary": "real-error retrospective only; labels already known",
+      "expected_fault_rows": 36
+    },
+    {
+      "id": "forepbench",
+      "title": "FoRepBench",
+      "homepage": "https://github.com/microsoft/prose-benchmarks/tree/main/FoRepBench",
+      "acquisition": {
+        "kind": "git",
+        "url": "https://github.com/microsoft/prose-benchmarks.git",
+        "commit": "d17e278092c59ec6faaa2d88730bdcbe48bb95f2",
+        "subpath": "FoRepBench"
+      },
+      "content_hashes": {
+        "FoRepBench/dataset/FoRepBenchmarks.json": "7dc32841e8b243653a2325b38fd651415ce00257780815d1785d25ac41fb28fb",
+        "FoRepBench/dataset/seed_data.json": "95adec20d879a05c0f97dcfdb8ff70f6bb50ba0320487f2debe7e853ff22ada1"
+      },
+      "license": {
+        "status": "repository_license_is_heterogeneous_manual_subset_review_required",
+        "identifier": "NOASSERTION",
+        "source": "https://github.com/microsoft/prose-benchmarks/blob/d17e278092c59ec6faaa2d88730bdcbe48bb95f2/LICENSE",
+        "redistribution_by_this_project": false
+      },
+      "task_scope": "repair_only",
+      "evidence_boundary": "explicit-error formula repair; excluded from silent-source localization accuracy",
+      "expected_items": 618
+    },
+    {
+      "id": "spreadsheetbench",
+      "title": "SpreadsheetBench",
+      "homepage": "https://spreadsheetbench.github.io/",
+      "acquisition": {
+        "kind": "git",
+        "url": "https://github.com/RUCKBReasoning/SpreadsheetBench.git",
+        "commit": "49b73a94775fb489063f60ca1865e3a650079a79"
+      },
+      "license": {
+        "status": "repository_readme_declares_cc_by_sa_4_0_dataset_terms_require_recheck",
+        "identifier": "CC-BY-SA-4.0",
+        "source": "https://github.com/RUCKBReasoning/SpreadsheetBench/blob/49b73a94775fb489063f60ca1865e3a650079a79/README.md#license-and-citation",
+        "redistribution_by_this_project": false
+      },
+      "task_scope": "parser_stress_only",
+      "evidence_boundary": "complex workbook parsing and safe abstention; no root-cause accuracy claim"
+    }
+  ]
+}

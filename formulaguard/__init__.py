@@ -1,15 +1,43 @@
 """FormulaGuard research prototype."""
 
-from .api import LocalizationResult, localize
+from .api import LocalizationResult, diagnose, localize
+from .model_discovery import (
+    SignalAuditConfig,
+    audit_workbook,
+    validate_label_free_output,
+)
 from .v4x import VERSION_ALIASES, V42Decision, v4_1_scores, v4_2_review, v4_3_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
+from .v5_psl import DiagnosticState, PSLConfig, SelectiveDiagnosis, v5_psl_scores
+from .v5_structural_guard import (
+    v5_structural_guard_default_parameters,
+    v5_structural_guard_scores,
+)
 from .v6 import v6_scores
 from .workbook import WorkbookModel
 
 __all__ = [
-    "WorkbookModel", "LocalizationResult", "localize", "VERSION_ALIASES",
-    "V42Decision", "v4_1_scores", "v4_2_review", "v4_3_scores",
-    "v5_core_scores", "v5_core_r2_scores", "v6_scores",
+    "VERSION_ALIASES",
+    "DiagnosticState",
+    "LocalizationResult",
+    "PSLConfig",
+    "SelectiveDiagnosis",
+    "SignalAuditConfig",
+    "V42Decision",
+    "WorkbookModel",
+    "audit_workbook",
+    "diagnose",
+    "localize",
+    "v4_1_scores",
+    "v4_2_review",
+    "v4_3_scores",
+    "v5_core_r2_scores",
+    "v5_core_scores",
+    "v5_psl_scores",
+    "v5_structural_guard_default_parameters",
+    "v5_structural_guard_scores",
+    "v6_scores",
+    "validate_label_free_output",
 ]
 __version__ = "0.1.0"

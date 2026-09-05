@@ -9,13 +9,12 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 import zipfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from formulaguard.a1 import iter_rect, parse_address
-
 
 NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 NS_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
@@ -184,7 +183,7 @@ def main():
         if usable:
             try:
                 sheets = sheet_names(usable)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 base_reason = f"workbook_load_error:{type(exc).__name__}"
                 usable = None
         labels = []
@@ -192,7 +191,7 @@ def main():
             for _, coordinate in faulty:
                 try:
                     labels.append(property_coordinate(coordinate, sheets))
-                except Exception as exc:
+                except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                     base_reason = f"coordinate_error:{exc}"
         property_cells[spreadsheet_number] = labels
         if usable:
@@ -295,7 +294,7 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     audit = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "property_files": len(property_files),
         "fault_events": len(rows),
         "expected_faults": args.expected_faults,

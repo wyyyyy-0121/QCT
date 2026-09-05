@@ -11,7 +11,6 @@ import os
 import statistics
 import subprocess
 import sys
-from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,7 +20,6 @@ if str(ROOT) not in sys.path:
 DEFAULT_ENRON_MANIFEST = ROOT / "data/external/enron/manifest.csv"
 EXPECTED_RETROSPECTIVE_EVENTS = 30
 
-from formulaguard.localize import v4_scores
 from formulaguard.v6 import v6_prepared_v4_scores, v6_scores
 from formulaguard.workbook import WorkbookModel
 
@@ -37,7 +35,7 @@ def sha256(path: Path):
 def git_commit() -> str:
     try:
         return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
         return subprocess.check_output([str(bundled), "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 

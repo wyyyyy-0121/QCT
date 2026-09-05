@@ -2,6 +2,8 @@
 
 *.py text eol=lf
 *.mjs text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
 *.md text eol=lf
 *.json text eol=lf
 *.toml text eol=lf
@@ -17,3 +19,6 @@
 *.jpg binary
 *.jpeg binary
 
+# Historical receipts lock the working-tree bytes of these two files.
+research/frozen_config_v4.json text eol=crlf
+data/v5_development/manifest.csv text eol=lf

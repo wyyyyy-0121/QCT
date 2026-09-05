@@ -81,7 +81,7 @@ def main():
             memory = [row["python_peak_memory_mb"] for row in latency if row["size"] == size and row["method"] == method]
             summary.append({
                 "size": size, "method": method,
-                "median_seconds": statistics.median(values), "p95_seconds": sorted(values)[-1],
+                "median_seconds": statistics.median(values), "p95_seconds": max(values),
                 "median_python_peak_memory_mb": statistics.median(memory),
                 "max_python_peak_memory_mb": max(memory),
             })

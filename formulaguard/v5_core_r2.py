@@ -11,8 +11,8 @@ from __future__ import annotations
 import math
 import statistics
 import time
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
-from typing import Mapping, Sequence
 
 from .a1 import num_to_col, parse_address
 from .formula import (
@@ -46,7 +46,6 @@ from .v5_core import (
 )
 from .v6 import relative_ast_signature
 from .workbook import CellKey, DependencyGraph, WorkbookModel
-
 
 MODEL_VERSION = "v5-core-r2-dnca-dev1"
 DEFAULT_CANDIDATE_LIMIT = 24
@@ -178,7 +177,7 @@ def _formula_complexity(formula: str) -> tuple[str, int, int]:
         references = sum(1 for _ in iter_refs(node))
         size = _ast_size(node)
         return outer, min(8, references), min(12, size // 2)
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return "unsupported", 0, 0
 
 
@@ -195,7 +194,7 @@ def _orientation_residual(
             translated.append(normalized_formula(
                 translate_formula(model.formulas[peer], peer[1], cell[1])
             ))
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
     if len(translated) < 2:
         return 0.0, len(translated)
@@ -213,7 +212,7 @@ def _local_block_boundary_exception(model: WorkbookModel, cell: CellKey) -> floa
     """Return label-free protection for aggregate formulas at a local block edge."""
     try:
         node = parse_formula(model.formulas[cell])
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return 0.0
     if not isinstance(node, Func) or node.name not in {"SUM", "AVERAGE", "MIN", "MAX"}:
         return 0.0
@@ -245,7 +244,7 @@ def _distant_role_replication(model: WorkbookModel, cell: CellKey) -> float:
             return 0.0
         own_signature = relative_ast_signature(model.formulas[cell], cell[1])
         own_address = parse_address(cell[1])
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return 0.0
     for other in model.formula_cells:
         if other == cell or other[0] != cell[0]:
@@ -254,7 +253,7 @@ def _distant_role_replication(model: WorkbookModel, cell: CellKey) -> float:
             address = parse_address(other[1])
             if relative_ast_signature(model.formulas[other], other[1]) != own_signature:
                 continue
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
         same_column = address.col == own_address.col and abs(address.row - own_address.row) >= 3
         same_row = address.row == own_address.row and abs(address.col - own_address.col) >= 3
@@ -290,7 +289,7 @@ def _regime_conditioned_residuals(
         for item in line:
             try:
                 signatures.append(relative_ast_signature(model.formulas[item], item[1]))
-            except Exception:
+            except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 signatures.append("unsupported")
         period, _ = _periodic_pattern(signatures)
         if period and len(line) >= period * 2:
@@ -302,10 +301,10 @@ def _regime_conditioned_residuals(
             mode, support = max(counts.items(), key=lambda item: (item[1], item[0]))
             residuals[cell] = 0.0 if signatures[index] == mode else support / max(1, len(slot_values))
             continue
-        horizontal, h_total = _orientation_residual(
+        horizontal, _h_total = _orientation_residual(
             model, cell, [*peers["left"], *peers["right"]],
         )
-        vertical, v_total = _orientation_residual(
+        vertical, _v_total = _orientation_residual(
             model, cell, [*peers["up"], *peers["down"]],
         )
         # The strongest coherent axis defines the local formula regime.  Requiring
@@ -573,7 +572,7 @@ def observational_source_evidence(
     result = (completed, regimes)
     if cache is None:
         cache = {}
-        setattr(model, "_fg_v5_core_r2_observation_cache", cache)
+        model._fg_v5_core_r2_observation_cache = cache
     cache[cache_key] = result
     return result
 
@@ -899,7 +898,7 @@ def matched_placebo_evidence(
         context["base_global_energy"] = base_global_energy
         context["base_maps"] = base_maps
         context["evaluation_cache"] = {}
-        setattr(model, "_fg_v5_core_r2_intervention_context", context)
+        model._fg_v5_core_r2_intervention_context = context
     formula = context["formula"]
     behavior = context["behavior"]
     graph_scores = context["graph_scores"]
@@ -1515,8 +1514,8 @@ __all__ = [
     "ObservationalEvidence",
     "PlaceboEvidence",
     "matched_placebo_evidence",
-    "observational_ranking",
     "observational_probe_set",
+    "observational_ranking",
     "observational_source_evidence",
     "observational_uncertainty_set",
     "v5_core_r2_default_parameters",

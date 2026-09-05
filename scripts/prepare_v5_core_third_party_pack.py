@@ -15,13 +15,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 import sys
+
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.build_v5_core_dataset import ERROR_TYPES, sha256
 from formulaguard.a1 import parse_address
 from formulaguard.formula import normalized_formula, translate_formula
 from formulaguard.workbook import WorkbookModel
+from scripts.build_v5_core_dataset import ERROR_TYPES, sha256
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -73,7 +74,7 @@ def simple_neighbor_can_reproduce(
             continue
         try:
             proposal = translate_formula(formula, peer[1], source[1])
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
         if normalized_formula(proposal) == normalized_formula(correct_formula):
             return True

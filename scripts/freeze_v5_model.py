@@ -15,7 +15,6 @@ from formulaguard.v5 import v5_default_parameters
 from scripts.run_external_evaluation import sha256_file
 from scripts.verify_v5_prerequisites import verify as verify_prerequisites
 
-
 MODEL_FILES = (
     "formulaguard/v5.py",
     "formulaguard/cli.py",

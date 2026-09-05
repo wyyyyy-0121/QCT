@@ -16,7 +16,9 @@ GIT_BUNDLED = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/depende
 
 def git(*args, capture=True):
     executable = shutil.which("git") or str(GIT_BUNDLED)
-    completed = subprocess.run([executable, *args], cwd=ROOT, text=True, capture_output=capture)
+    completed = subprocess.run(
+        [executable, *args], cwd=ROOT, text=True, capture_output=capture, check=False
+    )
     if completed.returncode:
         raise SystemExit((completed.stderr or completed.stdout).strip())
     return completed.stdout.strip()

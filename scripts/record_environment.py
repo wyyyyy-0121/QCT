@@ -6,9 +6,8 @@ import json
 import platform
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 TRACKED_SUFFIXES = {".py", ".mjs", ".ps1", ".cmd", ".toml", ".json", ".md"}
 EXCLUDED_PARTS = {"node_modules", "results", "outputs", ".tmp_render", "__pycache__"}
@@ -25,7 +24,7 @@ def sha256(path):
 def command_output(command):
     try:
         return subprocess.check_output(command, text=True, stderr=subprocess.STDOUT, timeout=10).strip()
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return f"unavailable:{type(exc).__name__}:{exc}"
 
 
@@ -46,7 +45,7 @@ def main():
             continue
         files.append({"path": relative.as_posix(), "sha256": sha256(path)})
     payload = {
-        "recorded_at": datetime.now(timezone.utc).isoformat(),
+        "recorded_at": datetime.now(UTC).isoformat(),
         "platform": platform.platform(),
         "python_version": sys.version,
         "python_executable": sys.executable,

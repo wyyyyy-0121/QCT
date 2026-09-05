@@ -24,7 +24,6 @@ from formulaguard.v5 import v5_default_parameters, v5_scores
 from formulaguard.workbook import WorkbookModel
 from scripts.run_external_evaluation import _event_context, sha256_file
 
-
 METHOD = "formulaguard_v5"
 
 
@@ -41,7 +40,7 @@ def _evaluate_workbook(task: tuple[str, list[dict[str, str]], int]):
         ], workbook_path.name
     try:
         model = WorkbookModel.from_xlsx(workbook_path)
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return [], [
             {
                 "instance_id": instance["instance_id"],

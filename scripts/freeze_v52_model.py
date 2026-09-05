@@ -13,7 +13,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from formulaguard.v52 import v52_default_parameters
 from scripts.run_external_evaluation import sha256_file
 
-
 SOURCE_FILES = (
     "formulaguard/v52.py",
     "formulaguard/localize.py",

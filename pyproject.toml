@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "formulaguard"
 version = "0.1.0"
@@ -11,4 +15,32 @@ formulaguard = "formulaguard.cli:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+pythonpath = ["."]
 
+[tool.setuptools]
+packages = ["formulaguard"]
+
+[tool.ruff]
+# Historical model sources are byte-locked by research receipts.  Changing
+# them to satisfy style checks would invalidate reproducibility evidence.
+extend-exclude = [
+    "formulaguard/localize.py",
+    "formulaguard/v5.py",
+    "formulaguard/v52.py",
+    "formulaguard/v4_peer_evidence_allocator.py",
+    "formulaguard/v4_static_fifth.py",
+    "formulaguard/v5_psl.py",
+    "formulaguard/v6.py",
+    "scripts/analyze_external_results.py",
+    "scripts/audit_v4_development.py",
+    "scripts/build_v52_redteam_manifest.py",
+    "scripts/build_v52_stress_workbooks.py",
+    "scripts/run_external_evaluation.py",
+    "scripts/run_v4_v52_blind_lock.py",
+    "scripts/run_v52_clean_controls.py",
+    "scripts/run_v52_labeled_development.py",
+    "scripts/score_v4_v52_blind.py",
+    "scripts/select_v52_variant.py",
+    "scripts/v52_blind_protocol.py",
+    "scripts/audit_v52_round.py",
+]

@@ -28,17 +28,17 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from build_v6_dataset import (
-    Case,
     COMPLEXITIES,
     DEPTHS,
     ERROR_TYPES,
     TOPOLOGIES,
+    Case,
     build_case,
     write_xlsx,
 )
+
 from formulaguard.formula import normalized_formula
 from formulaguard.workbook import WorkbookModel
-
 
 TRUTHY = {"1", "yes", "true", "y"}
 FINAL_CASE_FIELDS = {
@@ -223,7 +223,7 @@ def package_final(args, descriptors, public_dir, secret_dir):
         raise SystemExit("Review ledger contains duplicate instance_id values")
     review = {row["instance_id"]: row for row in review_rows}
     descriptor_ids, design_gates = validate_final_design(rows, descriptors, review)
-    workbooks, originals = public_dir / "workbooks", secret_dir / "originals"
+    _workbooks, _originals = public_dir / "workbooks", secret_dir / "originals"
     public_rows, labels, design = [], [], []
     seen_mutant_hashes = set()
     seed_commitment = hashlib.sha256(str(args.secret_seed).encode()).hexdigest()
