@@ -9,6 +9,11 @@ from .v4_static_allocator import v4_static_allocator_scores
 from .v4_static_fifth import v4_static_fifth_scores
 from .v4x import v4_1_scores, v4_3_scores
 from .v5_1_1_development import v5_1_1_development_scores
+from .v5_1_2_development import v5_1_2_development_scores
+from .v5_1_3_development import v5_1_3_development_scores
+from .v5_1_4_development import v5_1_4_development_scores
+from .v5_1_5_development import v5_1_5_development_scores
+from .v5_1_6_development import v5_1_6_development_scores
 from .v5_1_development import v5_1_development_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
@@ -22,6 +27,28 @@ def localize(
     model: WorkbookModel, method: str = "formulaguard", **kwargs
 ) -> list[LocalizationResult]:
     normalized = method.lower().replace("-", "_")
+    if normalized in {"v5.1.6_development", "v5_1_6_development", "v516_development"}:
+        return v5_1_6_development_scores(model, **kwargs)
+    if normalized in {"v5.1.5_development", "v5_1_5_development", "v515_development"}:
+        return v5_1_5_development_scores(model, **kwargs)
+    if normalized in {
+        "v5.1.4_development", "v5_1_4_development", "v514_development",
+        "formulaguard_v5_1_4_development",
+    }:
+        return v5_1_4_development_scores(model, **kwargs)
+    if normalized in {
+        "v5.1.3_development", "v5_1_3_development", "v513_development",
+        "formulaguard_v5_1_3_development",
+    }:
+        return v5_1_3_development_scores(model, **kwargs)
+    if normalized in {
+        "v5.1.2_development", "v5_1_2_development", "v512_development",
+        "formulaguard_v5_1_2_development",
+    }:
+        config = kwargs.pop("config", None)
+        if kwargs:
+            raise TypeError(f"Unsupported V5.1.2 arguments: {', '.join(sorted(kwargs))}")
+        return v5_1_2_development_scores(model, config=config)
     if normalized in {
         "v5.1_development",
         "v5_1_development",
