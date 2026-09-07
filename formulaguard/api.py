@@ -16,6 +16,7 @@ from .v5_1_5_development import v5_1_5_development_scores
 from .v5_1_6_development import v5_1_6_development_scores
 from .v5_1_7_development import v5_1_7_development_scores
 from .v5_1_8_development import v5_1_8_development_scores
+from .v5_1_9_development import v5_1_9_development_scores
 from .v5_1_development import v5_1_development_scores
 from .v5_core import v5_core_scores
 from .v5_core_r2 import v5_core_r2_scores
@@ -29,6 +30,8 @@ def localize(
     model: WorkbookModel, method: str = "formulaguard", **kwargs
 ) -> list[LocalizationResult]:
     normalized = method.lower().replace("-", "_")
+    if normalized in {"v5.1.9_development", "v5_1_9_development", "v519_development"}:
+        return v5_1_9_development_scores(model, **kwargs)
     if normalized in {"v5.1.8_development", "v5_1_8_development", "v518_development"}:
         return v5_1_8_development_scores(model, **kwargs)
     if normalized in {"v5.1.7_development", "v5_1_7_development", "v517_development"}:
