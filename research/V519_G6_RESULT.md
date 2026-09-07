@@ -1,6 +1,6 @@
 # V519 G6 Final Acceptance Record
 
-Status: G6 audit and validation complete; Git delivery is being prepared.
+Status: G6 audit, validation, and Git delivery complete.
 The stage plan was recorded before execution in `V519_G6_PLAN.md`.
 
 ## Requirement Evidence
@@ -21,7 +21,7 @@ The stage plan was recorded before execution in `V519_G6_PLAN.md`.
 | G5 zero unsafe groups and strict coverage gain on each backend | `V519_VALIDATION_V1/result.json`, final raw audit strata | Gate passed; 192 accepted groups checked, zero unsafe |
 | Costs and ablations | `V519_SERIAL_BENCH_V1/result.json`, G5 six-mode records | 60 serial measurements, five repetitions per condition, two separately profiled runs |
 | Full suite, Ruff and source preservation | `V519_CHECKS/`, frozen/current source comparison, staged allowlist | 1,196 passed, 1 skipped, 91 subtests; Ruff passed; audit passed |
-| Commit, push and remote equality | Git commit and `git ls-remote origin refs/heads/codex/linux-migration` | Pending GitHub authentication/push |
+| Commit, push and remote equality | Git commit and `git ls-remote origin refs/heads/codex/linux-migration` | Commit `c5b7020` pushed; remote HEAD matches local |
 
 ## Reproduction Boundaries
 
