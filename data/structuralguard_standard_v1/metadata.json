@@ -1,0 +1,15 @@
+{
+  "protocol": "structuralguard_standard_benchmark_v1",
+  "source_archive": "StructuralGuard_handoff_20260903_complete.zip",
+  "source_archive_sha256": "49ced27ddafe0d68b2f6c573bb61706b09d0b4a97eb2e9f08aaaa070c1a2a4a1",
+  "case_count": 20,
+  "conditions": {
+    "singleton": 5,
+    "clean": 5,
+    "coherent_block": 5,
+    "systematic_column": 5
+  },
+  "formula_cells": 17272,
+  "injected_errors": 1068,
+  "generated_by": "scripts/build_structuralguard_standard_benchmark.py"
+}

@@ -127,7 +127,7 @@ def main():
         raise SystemExit("Blind scoring refused: third-party final design gates are absent or failed")
     if any(row.get("instance_id") not in labels for row in exception_rows):
         raise SystemExit("Blind scoring refused: exception ledger contains unknown instances")
-    if set(path.stem for path in shard_paths) != set(labels):
+    if {path.stem for path in shard_paths} != set(labels):
         raise SystemExit("Blind scoring refused: labels and locked prediction IDs differ")
     type_counts = {error: sum(row.get("error_type") == error for row in label_rows) for error in (
         "reference_shift", "range_boundary", "operator", "function_replacement",

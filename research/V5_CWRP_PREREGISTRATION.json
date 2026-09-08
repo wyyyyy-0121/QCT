@@ -1,0 +1,78 @@
+{
+  "protocol": "formulaguard_cwrp_preregistration_v1",
+  "date": "2026-08-31",
+  "status": "frozen_before_workbook_content_ingest",
+  "research_name": "CWRP",
+  "formal_model_name_authorized": false,
+  "source": {
+    "repository": "https://github.com/SheetJS/enron_xls",
+    "commit": "5b73fc395cbe4727a986ab02a5028c1c1585617f",
+    "sparse_paths": ["nuix", "LICENSE", "README.md"],
+    "license": "CC0-1.0",
+    "excluded_paths": ["edrm"],
+    "tree_snapshot_sha256": "22ac8694943eb5d2a552fc304ed4576fc2e55f5a5954656528cc2ec073998876"
+  },
+  "forbidden_inputs": [
+    "fault_source_cells",
+    "correct_formulas",
+    "error_types",
+    "pass_fail_labels",
+    "expected_outputs",
+    "v4_rankings",
+    "old_240_120",
+    "new_custodian_240_120",
+    "cell_text",
+    "raw_numeric_values",
+    "filename_semantics",
+    "sheet_name_text"
+  ],
+  "deduplication": {
+    "exact_bytes": true,
+    "exact_structural_signature": true,
+    "near_duplicate_metric": "formula_fingerprint_multiset_weighted_jaccard",
+    "near_duplicate_threshold": 0.8,
+    "formula_count_ratio_min": 0.5,
+    "formula_count_ratio_max": 2.0,
+    "exclude_gate2_connected_components": true,
+    "split_unit": "near_duplicate_connected_component"
+  },
+  "evaluation": {
+    "outer_folds": 5,
+    "fold_roles": {"train": 3, "calibration": 1, "test": 1},
+    "max_targets_per_workbook": 200,
+    "review_budget": 5,
+    "min_parseable_formula_fraction_per_workbook": 0.5,
+    "primary_metric": "workbook_macro_top5",
+    "baselines": ["global_frequency", "local_peer", "context_frequency"],
+    "local_peer_axis_radius": 12
+  },
+  "gates": {
+    "u0": {
+      "min_workbooks": 100,
+      "min_parseable_formulas": 10000,
+      "min_sparse_workbooks": 50,
+      "min_sparse_targets": 1000,
+      "min_template_groups_per_test_fold": 10,
+      "max_sensitive_text_features": 0,
+      "max_fault_label_inputs": 0
+    },
+    "u1": {
+      "min_top5_gain_vs_global_pp": 10.0,
+      "min_top5_gain_vs_context_pp": 5.0,
+      "min_sparse_coverage": 0.2,
+      "min_sparse_selective_top5": 0.6,
+      "min_positive_outer_folds_vs_global": 4,
+      "require_group_macro_same_direction": true
+    },
+    "u2": {
+      "min_selective_top5": 0.6,
+      "min_coverage": 0.2,
+      "max_ece_10_bins": 0.1,
+      "min_permutation_drop_top5_pp": 10.0,
+      "require_deterministic_prediction_hash": true
+    }
+  },
+  "failure_policy": "stop_cwrp_without_threshold_or_feature_changes",
+  "next_stage_condition": "u0_and_u1_and_u2_all_pass",
+  "protected_data_accessed": []
+}

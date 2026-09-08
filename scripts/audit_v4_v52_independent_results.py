@@ -16,8 +16,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scripts.analyze_external_results import bootstrap_mean_difference, random_event_expectation
-
+from scripts.analyze_external_results import (
+    bootstrap_mean_difference,
+    random_event_expectation,
+)
 
 SEED = 20260819
 DRAWS = 10_000

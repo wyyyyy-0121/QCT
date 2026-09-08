@@ -1,0 +1,17 @@
+{
+  "protocol": "structuralguard_standard_benchmark_v2",
+  "derived_from_protocol": "structuralguard_standard_benchmark_v1",
+  "derived_from_sha256s": "177d6840ff11783196b30765611f6e48924c760ec8cfa4d327fcf0008af7cff3",
+  "source_archive_sha256": "49ced27ddafe0d68b2f6c573bb61706b09d0b4a97eb2e9f08aaaa070c1a2a4a1",
+  "case_count": 20,
+  "conditions": {
+    "singleton": 5,
+    "clean": 5,
+    "coherent_block": 5,
+    "systematic_column": 5
+  },
+  "formula_cells": 17272,
+  "injected_errors": 1068,
+  "corrected_v1_coherent_labels": 60,
+  "generated_by": "scripts/build_structuralguard_standard_v2.py"
+}

@@ -1,0 +1,54 @@
+{
+  "protocol": "formulaguard_fspr_label_free_lock_v1",
+  "date": "2026-09-03",
+  "candidate_id": "v5-fspr1-candidate",
+  "candidate_locked": true,
+  "formal_version": null,
+  "implementation_commit": "57eed4614186aa38a760e5702c27019140a15c84",
+  "preregistration": {
+    "path": "research/V5_FSPR_PREREGISTRATION.json",
+    "sha256": "50346696ae8c7c3c0ed94c9fa730482699b4910c459e3f09b4d022ba9d1e69b2"
+  },
+  "source_sha256": {
+    "formulaguard/fspr.py": "e27e33cc0a555489af6853c3709a96bb508f679bf1ae38391f896f49f63f0bee",
+    "scripts/train_fspr.py": "81f8d674abbd95281f130aa66732b5953213a3d7d1f6666c2288bd987e8b214b",
+    "scripts/verify_fspr_reproduction.py": "00dd88d5b210fefe81bb27a325e32715ad8c09f10f117898e82c2ed02bee1488"
+  },
+  "artifacts": {
+    "model_path": "results/fspr_v1_run_a/model.json",
+    "model_sha256": "7339856c67f62824b4b1bc8aed94d021a322bbd03a9288f1b490f16372ca0dd3",
+    "run_a_receipt_path": "results/fspr_v1_run_a/label_free_receipt.json",
+    "run_a_receipt_sha256": "b402b94f8e8301187a1ca926635d472447043281362305e0bfc9a3d5b66f09f6",
+    "run_b_receipt_path": "results/fspr_v1_run_b/label_free_receipt.json",
+    "run_b_receipt_sha256": "b402b94f8e8301187a1ca926635d472447043281362305e0bfc9a3d5b66f09f6",
+    "reproduction_receipt_path": "results/fspr_v1_reproduction/reproduction_receipt.json",
+    "reproduction_receipt_sha256": "8347829d5d671cb4370c91cea9a94d3d022ec529280d069adb17cfc901964552"
+  },
+  "label_free_result": {
+    "pairs": 618,
+    "leakage_groups": 392,
+    "selected_c": 10.0,
+    "pairwise_accuracy": 0.8365695792880259,
+    "roc_auc": 0.943641928760696,
+    "folds_at_or_above_0_70": 5,
+    "syntax_only_pairwise_accuracy": 0.8171521035598706,
+    "context_only_pairwise_accuracy": 0.2977346278317152,
+    "maximum_pure_python_inference_delta": 2.6645352591003757e-15,
+    "calibration_threshold": 3.0438495287876592,
+    "internal_test_action_workbooks": 0,
+    "internal_test_workbooks": 91,
+    "independent_runs_byte_identical": true,
+    "all_label_free_gates_passed": true
+  },
+  "public_transfer_prediction_authorized": true,
+  "public_transfer_scoring_authorized_after_prediction_lock": true,
+  "spreadsheetbench_v2_download_authorized": false,
+  "version_artifact_authorized": false,
+  "protected_access_authorized": false,
+  "post_lock_model_or_threshold_changes_forbidden": true,
+  "fault_label_inputs": [],
+  "revealed_localization_inputs": [],
+  "answer_workbook_inputs": [],
+  "task_text_inputs": [],
+  "protected_data_inputs": []
+}

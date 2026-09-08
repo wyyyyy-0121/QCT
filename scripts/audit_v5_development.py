@@ -14,7 +14,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.analyze_external_results import bootstrap_mean_difference
 
-
 METHODS = (
     "graph", "pattern", "formulaguard", "formulaguard_v3", "formulaguard_v4",
     "formulaguard_v5",

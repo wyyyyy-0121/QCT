@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 
@@ -31,7 +31,7 @@ def main():
             "sha256": sha256(path),
         })
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "results_root": str(args.results.resolve()),
         "files": sorted(records, key=lambda row: row["path"]),
     }

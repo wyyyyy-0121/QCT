@@ -1,0 +1,183 @@
+{
+  "protocol": "v511_natural_confirmation_model_lock_v1",
+  "models_frozen_before_dataset_generation": true,
+  "labels_read": [],
+  "models": {
+    "v4_r1": {
+      "name": "V4-R1",
+      "git_object": "freeze-v4-r1",
+      "kind": "v4_r1",
+      "resolved_commit": "91f1a0839e651f9be4635ec7dc57a10276aff9e5",
+      "source_tree": "03b94bf2fbe161b0ff10afdf813843161b41c0ee",
+      "entry_point": "formulaguard.localize.v4_scores",
+      "signature": "(model: 'WorkbookModel', *, candidate_limit: 'int' = 15, max_intervention_cells: 'int' = 100, rrf_k: 'int' = 60, scope_depth: 'int' = 3, scope_decay: 'float' = 0.7)",
+      "parameters": {
+        "candidate_limit": 15,
+        "max_intervention_cells": 100,
+        "rrf_k": 60,
+        "scope_depth": 3,
+        "scope_decay": 0.7,
+        "strong_min_controls": 2,
+        "strong_min_delta": 0.05,
+        "strong_min_irg": 3.0,
+        "strong_promotion": 10,
+        "moderate_min_controls": 2,
+        "moderate_min_delta": 0.02,
+        "moderate_min_irg": 1.5,
+        "moderate_promotion": 2
+      }
+    },
+    "v5_v1": {
+      "name": "V5-v1",
+      "git_object": "ce7576354c0a4298019ee8bbbfc575fd68cff4da",
+      "kind": "v5_v1",
+      "resolved_commit": "ce7576354c0a4298019ee8bbbfc575fd68cff4da",
+      "source_tree": "b8f862bf27db677d892070824f3387763bb4711a",
+      "entry_point": "formulaguard.v5_structural_guard.v5_structural_guard_scores",
+      "signature": "(model: 'WorkbookModel', *, radius: 'int' = 5, peer_min_support: 'int' = 2, candidate_limit: 'int' = 24) -> 'list[LocalizationResult]'",
+      "parameters": {
+        "model_version": "v5-formulaguard-silent-source-r1",
+        "architecture": "independent_local_template_header_semantics_constraint_attribution",
+        "radius": 5,
+        "peer_min_support": 2,
+        "candidate_limit": 24,
+        "uses_v4_scores": false,
+        "labels_at_localization": false,
+        "automatic_edit_applied": false,
+        "semantic_roles": [
+          "highest_max",
+          "lowest_min",
+          "average_average",
+          "net_subtraction",
+          "variance_subtraction",
+          "closing_outflow_sign",
+          "per_unit_denominator",
+          "net_sales_input_coverage"
+        ]
+      }
+    },
+    "v5_r2": {
+      "name": "V5-R2",
+      "git_object": "2232a870e3be089650ccd1676049e6c5c35cd692",
+      "kind": "v5_r2",
+      "resolved_commit": "2232a870e3be089650ccd1676049e6c5c35cd692",
+      "source_tree": "e977a1cd3d98e8ce1c6c86c80734d4f6b6140303",
+      "entry_point": "formulaguard.v5_structural_guard.v5_structural_guard_scores",
+      "signature": "(model: 'WorkbookModel', *, radius: 'int' = 5, peer_min_support: 'int' = 2, candidate_limit: 'int' = 24) -> 'list[LocalizationResult]'",
+      "parameters": {
+        "model_version": "v5-formulaguard-silent-source-r2",
+        "architecture": "independent_local_template_header_semantics_constraint_attribution",
+        "radius": 5,
+        "peer_min_support": 2,
+        "candidate_limit": 24,
+        "group_min_size": 5,
+        "group_representative_count": 5,
+        "group_min_role_gain": 0.5,
+        "group_min_flank_support": 2,
+        "group_score_floor": 0.95,
+        "uses_v4_scores": false,
+        "labels_at_localization": false,
+        "automatic_edit_applied": false,
+        "semantic_roles": [
+          "highest_max",
+          "lowest_min",
+          "average_average",
+          "net_subtraction",
+          "variance_subtraction",
+          "closing_outflow_sign",
+          "per_unit_denominator",
+          "net_sales_input_coverage"
+        ]
+      }
+    },
+    "v5_1_development": {
+      "name": "V5.1-development",
+      "git_object": "06e7190",
+      "kind": "v5_1_development",
+      "resolved_commit": "06e7190edc3bb5a16c4f66690e700af6b744eb6c",
+      "source_tree": "d1b847e7918f0d3341d763d3dced5fcc37cf838e",
+      "entry_point": "formulaguard.v5_1_development.v5_1_development_scores",
+      "signature": "(model: 'WorkbookModel', *, radius: 'int' = 6, min_template_support: 'int' = 3, min_group_size: 'int' = 3) -> 'list[LocalizationResult]'",
+      "parameters": {
+        "model_version": "v5.1-development",
+        "architecture": "workbook_gate_robust_template_consensus_semantic_synthesis",
+        "radius": 6,
+        "min_template_support": 3,
+        "min_group_size": 3,
+        "min_candidate_confidence": 0.75,
+        "min_anomaly_score": 0.7,
+        "workbook_gate": "two_channel_or_stable_template_consensus",
+        "candidate_sources": [
+          "peer_translation",
+          "small_edit",
+          "semantic_synthesis"
+        ],
+        "labels_at_localization": false,
+        "automatic_edit_applied": false,
+        "frozen_v5_r2_untouched": true
+      }
+    },
+    "v5_1_1_development": {
+      "name": "V5.1.1-development",
+      "git_object": "4b960f8",
+      "kind": "v5_1_1_development",
+      "resolved_commit": "4b960f8d49d1f644b8682f3c8d6bf509c4da4bdc",
+      "source_tree": "2c6560435874dac716a9142a5c5485cb25cbc53f",
+      "entry_point": "formulaguard.v5_1_1_development.v5_1_1_development_scores",
+      "signature": "(model: 'WorkbookModel', *, radius: 'int' = 6, min_template_support: 'int' = 3, min_group_size: 'int' = 3) -> 'list[LocalizationResult]'",
+      "parameters": {
+        "model_version": "v5.1.1-development",
+        "architecture": "conservative_role_registry_consensus_function_compatibility",
+        "radius": 6,
+        "min_template_support": 3,
+        "min_group_size": 3,
+        "min_candidate_confidence": 0.75,
+        "min_anomaly_score": 0.7,
+        "min_peer_dominance": 0.7,
+        "min_template_margin": 0.2,
+        "workbook_gate": "role_compatibility_and_consensus_or_anchored_region",
+        "candidate_sources": [
+          "peer_translation",
+          "small_edit",
+          "semantic_role_registry"
+        ],
+        "ratio_columns_excluded": true,
+        "unknown_function_abstention": true,
+        "labels_at_localization": false,
+        "automatic_edit_applied": false,
+        "frozen_v5_1_untouched": true
+      }
+    }
+  },
+  "artifacts": {
+    "scripts/build_v51_natural_confirmation.py": "28fc3088a9b64ddf1f4d689c05df8103633c5c6bcb1e6280fb8cf91a57a24365",
+    "scripts/run_v51_confirmation_predictions.py": "3a215a1caa9357e716da86210c3aa93b674dc3731d786d915829a741a676ce5b",
+    "scripts/run_v511_confirmation_predictions.py": "0771c83b68586f7bab6eb4513c7f3c0cc954b15d6d370cd9c59724091f2e4895",
+    "scripts/score_v511_natural_confirmation.py": "4c9aa51bca4c61694d4e85f8881432308242cc99a6ab187d89ac790acc6b5e72",
+    "scripts/create_v511_reveal_authorization.py": "f31daca917d793e7efa9e9368f2ea18ca4706b6dcf379de9a0fdc83afa282556",
+    "scripts/freeze_v511_natural_confirmation_models.py": "5e0671941174dcd6b91ca710fb871325f7a8ed0e2d6ba7c6371ab98e111f933a",
+    "formulaguard/v5_1_1_development.py": "e9c7bb6d7e08600c12911aa679eafc69fa12852137906c606cd21767d18ff01c"
+  },
+  "dataset_protocol": {
+    "release": "v511_natural_confirmation_release_v1",
+    "cases": 240,
+    "clusters": 20,
+    "cases_per_cluster": 12,
+    "families": 6,
+    "seed_selected_after_lock": true
+  },
+  "promotion_gates": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20260906,
+    "control_workbook_candidate_fpr_max": 0.1,
+    "ambiguous_workbook_candidate_rate_max": 0.1,
+    "accepted_group_exact_coverage_min": 0.5,
+    "accepted_group_precision_min": 0.95,
+    "unsafe_accepted_groups_max": 0,
+    "singleton_exact_coverage_min": 0.9,
+    "contiguous_block_exact_coverage_min": 0.7,
+    "systematic_column_exact_coverage_min": 0.5,
+    "macro_ap_delta_ci95_lower_gt": 0.0,
+    "exact_coverage_noninferiority_margin": -0.05
+  }
+}

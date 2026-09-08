@@ -1,0 +1,111 @@
+{
+  "protocol": "structural_guard_fresh_blind_model_lock_v1_1",
+  "models_frozen_before_dataset_generation": true,
+  "models": {
+    "v4_r1": {
+      "name": "V4-R1",
+      "git_object": "freeze-v4-r1",
+      "kind": "v4_r1",
+      "resolved_commit": "91f1a0839e651f9be4635ec7dc57a10276aff9e5",
+      "source_tree": "03b94bf2fbe161b0ff10afdf813843161b41c0ee",
+      "entry_point": "formulaguard.localize.v4_scores",
+      "signature": "(model: 'WorkbookModel', *, candidate_limit: 'int' = 15, max_intervention_cells: 'int' = 100, rrf_k: 'int' = 60, scope_depth: 'int' = 3, scope_decay: 'float' = 0.7)",
+      "parameters": {
+        "candidate_limit": 15,
+        "max_intervention_cells": 100,
+        "rrf_k": 60,
+        "scope_depth": 3,
+        "scope_decay": 0.7,
+        "strong_min_controls": 2,
+        "strong_min_delta": 0.05,
+        "strong_min_irg": 3.0,
+        "strong_promotion": 10,
+        "moderate_min_controls": 2,
+        "moderate_min_delta": 0.02,
+        "moderate_min_irg": 1.5,
+        "moderate_promotion": 2
+      }
+    },
+    "v5_v1": {
+      "name": "V5-v1",
+      "git_object": "ce7576354c0a4298019ee8bbbfc575fd68cff4da",
+      "kind": "v5_v1",
+      "resolved_commit": "ce7576354c0a4298019ee8bbbfc575fd68cff4da",
+      "source_tree": "b8f862bf27db677d892070824f3387763bb4711a",
+      "entry_point": "formulaguard.v5_structural_guard.v5_structural_guard_scores",
+      "signature": "(model: 'WorkbookModel', *, radius: 'int' = 5, peer_min_support: 'int' = 2, candidate_limit: 'int' = 24) -> 'list[LocalizationResult]'",
+      "parameters": {
+        "model_version": "v5-formulaguard-silent-source-r1",
+        "architecture": "independent_local_template_header_semantics_constraint_attribution",
+        "radius": 5,
+        "peer_min_support": 2,
+        "candidate_limit": 24,
+        "uses_v4_scores": false,
+        "labels_at_localization": false,
+        "automatic_edit_applied": false,
+        "semantic_roles": [
+          "highest_max",
+          "lowest_min",
+          "average_average",
+          "net_subtraction",
+          "variance_subtraction",
+          "closing_outflow_sign",
+          "per_unit_denominator",
+          "net_sales_input_coverage"
+        ]
+      }
+    },
+    "v5_r2": {
+      "name": "V5-R2",
+      "git_object": "2232a870e3be089650ccd1676049e6c5c35cd692",
+      "kind": "v5_r2",
+      "resolved_commit": "2232a870e3be089650ccd1676049e6c5c35cd692",
+      "source_tree": "e977a1cd3d98e8ce1c6c86c80734d4f6b6140303",
+      "entry_point": "formulaguard.v5_structural_guard.v5_structural_guard_scores",
+      "signature": "(model: 'WorkbookModel', *, radius: 'int' = 5, peer_min_support: 'int' = 2, candidate_limit: 'int' = 24) -> 'list[LocalizationResult]'",
+      "parameters": {
+        "model_version": "v5-formulaguard-silent-source-r2",
+        "architecture": "independent_local_template_header_semantics_constraint_attribution",
+        "radius": 5,
+        "peer_min_support": 2,
+        "candidate_limit": 24,
+        "group_min_size": 5,
+        "group_representative_count": 5,
+        "group_min_role_gain": 0.5,
+        "group_min_flank_support": 2,
+        "group_score_floor": 0.95,
+        "uses_v4_scores": false,
+        "labels_at_localization": false,
+        "automatic_edit_applied": false,
+        "semantic_roles": [
+          "highest_max",
+          "lowest_min",
+          "average_average",
+          "net_subtraction",
+          "variance_subtraction",
+          "closing_outflow_sign",
+          "per_unit_denominator",
+          "net_sales_input_coverage"
+        ]
+      }
+    }
+  },
+  "artifacts": {
+    "research/STRUCTURAL_GUARD_FRESH_BLIND_PROTOCOL_V1.md": "a62b00a1858e090ea97ba080b9320f2a489758c698a3791cf5ae3a9b6d445cf3",
+    "research/STRUCTURAL_GUARD_FRESH_BLIND_PROTOCOL_V1_1.md": "4d7ee4f3243aa5e350a6370745e969de55e995c9c2ffb7d5147cccd5279a4bc7",
+    "research/STRUCTURAL_GUARD_FRESH_BLIND_ATTEMPT1_ABORT.json": "5ed067248e02bdabdaeef59d58fe3deb00d8ffa99804d8e9dddbc402d771e452",
+    "scripts/build_structural_guard_fresh_blind.py": "47d7d833c4fa77f55a7e922aa1da8b43ca81527b763b3e6dfd1f3cfa213f8805",
+    "scripts/run_frozen_structural_guard_predictions.py": "baf3821b5ef5e88a9ddd568058472dc4962d807298cc83927ddd2adbf3888f14",
+    "scripts/score_structural_guard_fresh_blind.py": "77ba137770abcfa0ad6fff773a2db66e59172b4e1412ffcb690ab41acb11dfc5"
+  },
+  "promotion_gates": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20260904,
+    "macro_ap_delta_ci95_lower_gt": 0.0,
+    "exact_coverage_noninferiority_margin": -0.05,
+    "control_workbook_candidate_fpr_max": 0.2,
+    "accepted_group_exact_coverage_min": 0.5,
+    "accepted_group_precision_min": 0.95,
+    "unsafe_accepted_groups_max": 0
+  }
+}

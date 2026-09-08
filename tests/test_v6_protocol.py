@@ -13,11 +13,14 @@ from formulaguard.v6 import _effective_rows, _prepare_v6, semantic_candidates, v
 from formulaguard.workbook import WorkbookModel
 from scripts.build_v6_dataset import Case, build_case, enumerate_cases, write_xlsx
 from scripts.build_v6_third_party_pack import validate_external_case
-from scripts.run_v6_blind_lock import audit_locked_shard
-from scripts.run_v6_enron import DEFAULT_ENRON_MANIFEST, EXPECTED_RETROSPECTIVE_EVENTS, included_events
-from scripts.run_v6_predictions import audit_complete_shard
 from scripts.precommit_v6_validation import PUBLIC_FILES
-
+from scripts.run_v6_blind_lock import audit_locked_shard
+from scripts.run_v6_enron import (
+    DEFAULT_ENRON_MANIFEST,
+    EXPECTED_RETROSPECTIVE_EVENTS,
+    included_events,
+)
+from scripts.run_v6_predictions import audit_complete_shard
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -180,6 +183,7 @@ class V6ProtocolTests(unittest.TestCase):
                     "--template-config", str(ROOT / "research/V6_THIRD_PARTY_TEMPLATE_EXAMPLE.json"),
                     "--final",
                 ],
+                check=False,
                 cwd=ROOT, text=True, capture_output=True,
             )
             self.assertNotEqual(completed.returncode, 0)
@@ -274,7 +278,7 @@ class V6ProtocolTests(unittest.TestCase):
             output = Path(directory) / "dataset"
             completed = subprocess.run(
                 [sys.executable, str(ROOT / "scripts/build_v6_dataset.py"), "--profile", "smoke", "--output", str(output), "--limit", "2"],
-                cwd=ROOT, text=True, capture_output=True,
+                cwd=ROOT, text=True, capture_output=True, check=False,
             )
             self.assertEqual(completed.returncode, 0, completed.stderr)
             public = json.loads((output / "instances.jsonl").read_text(encoding="utf-8").splitlines()[0])

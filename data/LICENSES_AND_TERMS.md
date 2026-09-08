@@ -51,19 +51,71 @@
 
 ## Modified EUSES Corpus
 
-- Overview: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-overview/
-- Comparison: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-comparison/
-- Status: not yet downloaded.
-- Before use: verify the original EUSES terms and the modified benchmark's redistribution/citation requirements.
+- Source page: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/euses/
+- Direct archive: https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/benchmarks/EUSES_modified.zip
+- Archive SHA-256 independently streamed and verified on 2026-08-30:
+  `3701D4D322DC057D166BE0AA4104284A701614174AC8F4AB852616DF4127C3D4`.
+- The source page does not establish a redistribution license in the project
+  record. Acquisition requires explicit terms acknowledgement; raw files remain
+  local and redistribution is disabled.
+- Use only as revealed injected-fault development evidence. Legacy sheet-index
+  labels and `.xls` conversions require manual review.
+
+## Info1 Corpus
+
+- Source page: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/info1/
+- Direct archive: https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/benchmarks/Info1.zip
+- Archive SHA-256 independently streamed and verified on 2026-08-30:
+  `B889174AC36C7DDC66207DFF7E53E831C804802723DCDB8B75B04A1F70368F9E3`.
+- The source page describes real faults in exercise spreadsheets but no project-
+  verified redistribution license. Raw data remain local; multi-fault cases need
+  a recorded identifiability decision.
+
+## Integer Corpus
+
+- Source page: https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/integer-corpus/
+- Direct archive: https://spreadsheets.sai.tugraz.at/wp-content/uploads/sites/3/benchmarks/Integer.zip
+- Archive SHA-256 independently streamed and verified on 2026-08-30:
+  `47D6950A9275E68B4B3C51177893B2A9DBC3053243E30B7EB88C32BBC6829AEC`.
+- No redistribution license has been established in this project. Use is local,
+  revealed, integer-domain injected-fault pressure only.
 
 ## FoRepBench
 
 - Repository: https://github.com/microsoft/prose-benchmarks/tree/main/FoRepBench
-- Status: optional repair-only supplement; not part of silent-error localization accuracy.
-- Before use: record repository commit and license.
+- Pinned repository commit checked on 2026-08-30:
+  `d17e278092c59ec6faaa2d88730bdcbe48bb95f2`.
+- `FoRepBenchmarks.json` SHA-256:
+  `7DC32841E8B243653A2325B38FD651415CE00257780815D1785D25AC41FB28FB`;
+  `seed_data.json` SHA-256:
+  `95ADEC20D879A05C0F97DCFDB8FF70F6BB50BA0320487F2DEBE7E853FF22ADA1`.
+- GitHub reports the repository license as `NOASSERTION`, and its aggregate
+  license file covers heterogeneous benchmark subsets. A manual FoRepBench-
+  specific review remains required; this project does not redistribute it.
+- Repair-only supplement with 618 records; never part of silent-error source
+  localization accuracy.
 
 ## SpreadsheetBench
 
 - Repository: https://github.com/RUCKBReasoning/SpreadsheetBench
-- Status: optional parser/scalability stress test; not a root-cause ground-truth benchmark.
-- Before use: record repository commit, dataset version, and license.
+- Pinned repository commit checked on 2026-08-30:
+  `49b73a94775fb489063f60ca1865e3a650079a79`.
+- The pinned README declares CC BY-SA 4.0 under its License and Citation
+  section. Dataset-hosting terms and any later verified subset must still be
+  checked separately before redistribution; this project keeps redistribution
+  disabled by default.
+- Parser/scalability and safe-abstention stress only; it has no root-cause label
+  suitable for the main accuracy metric.
+
+## FormulaGuard V5-PSL independent 240+120 corpus
+
+- This corpus does not yet exist in the project workspace.
+- It must be created by six non-developer creators under an independent
+  custodian, using 20 self-authored anonymized templates and 10 explicitly
+  licensed public templates.
+- Each template requires a creator-permission or license receipt. PUBLIC may be
+  transferred privately for evaluation; public redistribution is allowed only
+  when every underlying template permits it.
+- Raw creator IDs, originals, labels, review records, and SECRET remain outside
+  the repository. Only package/prediction hashes and aggregate scored evidence
+  may be committed after the protocol permits release.

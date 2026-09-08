@@ -1,0 +1,54 @@
+{
+  "protocol": "formulaguard_fcrl_u0_v1",
+  "date": "2026-08-31",
+  "status": "pass",
+  "scope": "artifact_adapter_leakage_determinism_and_one_synthetic_gpu_batch",
+  "artifact": {
+    "source_commit": "4de8bba4e9bf6a89b2e131bfb471b4db2c45b951",
+    "license": "MIT",
+    "license_sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "checkpoint_bytes": 547835515,
+    "checkpoint_sha256": "42c2166afb60fedf833fcdbc4469dd6e23611f786aa7220a20375117c6c5a4a1",
+    "enron_finetuned": false,
+    "loaded_backbone_tensors": 205,
+    "expected_backbone_tensors": 205,
+    "backbone_parameters": 108668496,
+    "decoder_parameters": 33755945
+  },
+  "checks": {
+    "backbone_keys_and_shapes_exact": true,
+    "backbone_frozen": true,
+    "target_formula_and_cached_value_absent_from_encoder": true,
+    "independent_process_hash_match": true,
+    "cross_sheet_reference_rejected": true,
+    "target_marker_survives_truncation": true,
+    "gpu_forward_finite": true,
+    "decoder_backward_finite": true,
+    "official_attention_key_value_layout_adapted": true,
+    "torch_scatter_not_required_by_selected_modules": true
+  },
+  "synthetic_smoke": {
+    "encoder_hash": "87ad509cedfb6d5d73b1bd2066e39d55402c9d2fac3ab06f95a6f71c02045ddc",
+    "process_hashes_equal": true,
+    "sequence_tokens": 24,
+    "formula_target_tokens": 8,
+    "reachable_references": 2,
+    "total_references": 2,
+    "encoded_shape": [1, 24, 768],
+    "sketch_loss": 3.669984817504883,
+    "range_loss": 2.0235509872436523,
+    "total_loss": 5.693535804748535
+  },
+  "environment": {
+    "python": "3.11.16",
+    "torch": "2.13.0+cu130",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cpu_workers": 24
+  },
+  "public_corpus_examples_constructed": 0,
+  "u1_u2_u3_u4_run": false,
+  "protected_data_inputs": [],
+  "fault_label_inputs": [],
+  "raw_workbook_values_logged": false
+}

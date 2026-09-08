@@ -16,7 +16,6 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from formulaguard.localize import v4_scores
 from formulaguard.v6 import v6_prepared_v4_scores, v6_scores
 from formulaguard.workbook import WorkbookModel
 from scripts.verify_v6_freeze import verify

@@ -6,7 +6,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 STRONG_TYPES = ("reference_shift", "operator", "absolute_reference", "copy_offset")
 ABLATIONS = (
     "no_ffc", "no_bss", "no_d", "no_irg", "no_side_effect",

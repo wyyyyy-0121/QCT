@@ -18,7 +18,6 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -87,7 +86,7 @@ def audit_layer(root: Path, layer: str, variant: str) -> dict:
     issues: list[str] = []
     if len(rows) != expected_events * len(expected_methods):
         issues.append("unexpected_raw_row_count")
-    if set(row["method"] for row in rows) != expected_methods:
+    if {row["method"] for row in rows} != expected_methods:
         issues.append("unexpected_method_set")
     if any(count != 1 for count in key_counts.values()):
         issues.append("duplicate_event_method_key")
@@ -264,7 +263,7 @@ def audit_enron(root: Path, variant: str) -> dict:
     issues = []
     if any(value != 1 for value in keys.values()):
         issues.append("duplicate_enron_event_method_key")
-    if set(row["method"] for row in rows) != expected_methods:
+    if {row["method"] for row in rows} != expected_methods:
         issues.append("unexpected_enron_method_set")
     if metadata.get("retrospective_only") is not True:
         issues.append("enron_not_marked_retrospective")
@@ -429,10 +428,10 @@ def markdown_report(payload: dict) -> str:
         "",
         "## Technical summary",
         "",
-        f"V6-{payload['round'].upper()} is trustworthy as a completed development diagnostic, but it did not pass its preregistered round gate and is not eligible for freezing. "
+        (f"V6-{payload['round'].upper()} is trustworthy as a completed development diagnostic, but it did not pass its preregistered round gate and is not eligible for freezing. "
         f"Development macro Top-5 rose from {dev_v4['macro_top5']:.2%} to {dev_v6['macro_top5']:.2%}; red-team macro Top-5 rose from {red_v4['macro_top5']:.2%} to {red_v6['macro_top5']:.2%}. "
         f"However, clean false alarms were {clean['alarms']}/{clean['workbooks']} ({clean['false_alarm_rate']:.2%}) and Enron MRR changed by {enron['mrr_difference']:+.8f}. "
-        f"Failed gates: {', '.join(failed)}.",
+        f"Failed gates: {', '.join(failed)}."),
         "",
         "## The gain is large but uneven",
         "",
@@ -442,8 +441,8 @@ def markdown_report(payload: dict) -> str:
         "",
         "## Legitimate exception formulas cause every clean alarm",
         "",
-        f"All {clean['alarms']} alarms occur in the `exception` structure; its false-alarm rate is {clean['by_structure']['exception']['false_alarm_rate']:.2%}, while every other clean structure is 0%. "
-        "This is a systematic failure mode rather than diffuse noise: an alternating but intentional MAX/MIN family looks locally inconsistent and receives a strong counterfactual promotion.",
+        (f"All {clean['alarms']} alarms occur in the `exception` structure; its false-alarm rate is {clean['by_structure']['exception']['false_alarm_rate']:.2%}, while every other clean structure is 0%. "
+        "This is a systematic failure mode rather than diffuse noise: an alternating but intentional MAX/MIN family looks locally inconsistent and receives a strong counterfactual promotion."),
         "",
         (
             "## Enron is practically unchanged and passes the exact safety rule"

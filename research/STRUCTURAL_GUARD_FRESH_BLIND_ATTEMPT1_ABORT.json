@@ -1,0 +1,11 @@
+{
+  "protocol": "structural_guard_fresh_blind_attempt_abort_v1",
+  "stage": "before_secret_reveal",
+  "secret_read_by_scorer": false,
+  "reason": "V4-R1 double-run byte lock differed only because serialized localization_seconds is nondeterministic",
+  "public_sha256": "370e7931c5e85e2ff582b00bbeb501aceab2462b7bd1e92671d9f6dd24eadec3",
+  "secret_sha256": "9ed7b3e3ed9a1de79cf421a871108e251e1f420b7222625e9469c78f95002bdd",
+  "v4_run_a_combined_shards_sha256": "e70265ec42bd8b1439d2086cdc8557426d5c52e92896a6745d487e2f934f7202",
+  "v4_run_b_combined_shards_sha256": "8b18ba41bbc89fe081dc9b010bab8be3b2b3be994667e0a839d8c31103e0933d",
+  "retired_from_accuracy_claims": true
+}

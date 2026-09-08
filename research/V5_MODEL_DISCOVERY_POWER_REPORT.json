@@ -1,0 +1,226 @@
+{
+  "protocol": "formulaguard_model_discovery_phase0_power_v1",
+  "date": "2026-08-31",
+  "status": "design_sensitivity_not_observed_effect",
+  "test": {
+    "name": "exact_conditional_two_sided_paired_sign_test",
+    "alpha": 0.05,
+    "unit": "structure_group",
+    "null": "candidate and V4 have equal paired success probability",
+    "alternative": "candidate success exceeds V4 by delta",
+    "discordance_rates": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ]
+  },
+  "planned_sample_sizes": [
+    25,
+    30
+  ],
+  "effect_grid": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "rows": [
+    {
+      "n_structure_groups": 25,
+      "delta": 0.05,
+      "discordance_rate": 0.2,
+      "exact_two_sided_sign_power": 0.01982299166
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.05,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.032505665775
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.05,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.035805149704
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.05,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.035380474226
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.1,
+      "discordance_rate": 0.2,
+      "exact_two_sided_sign_power": 0.063247282092
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.1,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.066095478405
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.1,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.06103234338
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.1,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.054514378806
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.2,
+      "discordance_rate": 0.2,
+      "exact_two_sided_sign_power": 0.383310588221
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.2,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.241948002677
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.2,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.179707953516
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.2,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.141576136097
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.3,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.60198988954
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.3,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.409667122351
+    },
+    {
+      "n_structure_groups": 25,
+      "delta": 0.3,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.309672336749
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.05,
+      "discordance_rate": 0.2,
+      "exact_two_sided_sign_power": 0.030135370451
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.05,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.037393110504
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.05,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.040095584552
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.05,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.036921132997
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.1,
+      "discordance_rate": 0.2,
+      "exact_two_sided_sign_power": 0.099251647513
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.1,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.081179393258
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.1,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.072218270813
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.1,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.060503606975
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.2,
+      "discordance_rate": 0.2,
+      "exact_two_sided_sign_power": 0.57248756241
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.2,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.307095781094
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.2,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.22365093404
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.2,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.168724315901
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.3,
+      "discordance_rate": 0.4,
+      "exact_two_sided_sign_power": 0.713146990445
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.3,
+      "discordance_rate": 0.6,
+      "exact_two_sided_sign_power": 0.501806595265
+    },
+    {
+      "n_structure_groups": 30,
+      "delta": 0.3,
+      "discordance_rate": 0.8,
+      "exact_two_sided_sign_power": 0.372808175065
+    }
+  ],
+  "summary_for_five_percentage_points": {
+    "25": {
+      "five_pp_min_power": 0.01982299166,
+      "five_pp_max_power": 0.035805149704,
+      "five_pp_mean_power": 0.030878570341
+    },
+    "30": {
+      "five_pp_min_power": 0.030135370451,
+      "five_pp_max_power": 0.040095584552,
+      "five_pp_mean_power": 0.036136299626
+    }
+  },
+  "decision": {
+    "five_pp_is_not_well_powered_at_25_or_30_groups": true,
+    "required_action": "Do not claim confirmatory 5-point superiority from 25 or 30 groups; increase independent template groups before locking, or label the result as estimation/exploratory evidence."
+  }
+}

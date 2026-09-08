@@ -22,7 +22,6 @@ from formulaguard.formula import normalized_formula
 from formulaguard.localize import generate_candidates
 from formulaguard.workbook import WorkbookModel
 
-
 MUTATION_TO_REPAIR_KINDS = {
     "M1_reference_shift": {"reference_shift", "copy_offset", "copy_offset_row"},
     "M2_range_boundary": {

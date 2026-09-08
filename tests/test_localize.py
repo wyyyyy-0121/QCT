@@ -2,8 +2,8 @@ import unittest
 from unittest.mock import patch
 
 from formulaguard.localize import (
-    _energy,
     _competition_ranks,
+    _energy,
     _v3_component_change,
     _v4_bounded_change,
     behavior_anomaly_scores,

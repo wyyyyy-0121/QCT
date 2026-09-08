@@ -1,0 +1,22 @@
+{
+  "protocol": "v4_peer_evidence_allocator_project_check_candidate_lock_v1",
+  "candidate_id": "v4_peer_evidence_allocator_exploratory_v1",
+  "candidate_locked": true,
+  "model": {
+    "model_version": "v4-peer-evidence-allocator-exploratory-v1",
+    "architecture": "evidence_dominance_v4_peer_review_budget_allocator",
+    "review_budget": 5,
+    "minimum_v4_prefix": 3
+  },
+  "model_source_commit": "f245ae5396953077f3ba70cb0b9fdf68ace0af7d",
+  "source_sha256": {
+    "formulaguard/v4_peer_evidence_allocator.py": "6e7557ec99c22cd38d7e678538a06a2b35879d60709ef883ad73a2be81b69353"
+  },
+  "public_development_receipt": "results/v4_peer_evidence_allocator_exploratory/receipt.json",
+  "public_development_receipt_sha256": "6e823b0969f6d29073c2de4244b70a530b4b4edca6c32754c51d1b66b4e5993e",
+  "protected_check_role": "project_generated_saturated_safety_check_only",
+  "comparative_improvement_claim_allowed": false,
+  "formal_version": null,
+  "protected_labels_read_before_lock": false,
+  "post_lock_tuning_on_project_corpus_forbidden": true
+}

@@ -13,16 +13,15 @@ import json
 import math
 import statistics
 import time
-from collections import Counter, defaultdict, deque
+from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Iterable, Mapping, Sequence
 
 from .a1 import num_to_col, parse_address
 from .formula import (
     Binary,
     Func,
-    Range,
     Unary,
     edit_cost,
     normalized_formula,
@@ -42,14 +41,12 @@ from .localize import (
     graph_anomaly_scores,
 )
 from .v6 import (
-    SemanticEvidence,
     _reference_quality,
     relative_ast_signature,
     semantic_candidates,
     semantic_peers,
 )
 from .workbook import CellKey, DependencyGraph, WorkbookModel
-
 
 MODEL_VERSION = "v5-core-dev-r2"
 DEFAULT_CANDIDATE_LIMIT = 32
@@ -147,7 +144,7 @@ def _clamp(value: float) -> float:
 def _outer_class(formula: str) -> str:
     try:
         node = parse_formula(formula)
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return "unsupported"
     if isinstance(node, Func):
         return "aggregate" if node.name in {"SUM", "AVERAGE", "MIN", "MAX"} else "function"
@@ -240,7 +237,7 @@ def discover_formula_regimes(model: WorkbookModel) -> dict[CellKey, RegimeEviden
         for item in ordered_line:
             try:
                 signatures.append(relative_ast_signature(model.formulas[item], item[1]))
-            except Exception:
+            except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
                 signatures.append("unsupported")
         period, periodic_ratio = _periodic_pattern(signatures)
         periodic_member = False
@@ -263,7 +260,7 @@ def discover_formula_regimes(model: WorkbookModel) -> dict[CellKey, RegimeEviden
         try:
             node = parse_formula(model.formulas[cell])
             aggregate = isinstance(node, Func) and node.name in {"SUM", "AVERAGE", "MIN", "MAX"}
-        except Exception:
+        except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             aggregate = False
         boundary_role = "summary" if aggregate and edge else "edge" if edge else "interior"
 
@@ -274,7 +271,7 @@ def discover_formula_regimes(model: WorkbookModel) -> dict[CellKey, RegimeEviden
             for peer in rows_in_direction:
                 try:
                     translated = normalized_formula(translate_formula(model.formulas[peer], peer[1], cell[1]))
-                except Exception:
+                except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
                     continue
                 translated_total += 1
                 translated_matches += translated == own
@@ -442,7 +439,7 @@ def build_candidate_portfolio(
                     try:
                         proposal = translate_formula(model.formulas[peer], peer[1], cell[1])
                         parse_formula(proposal)
-                    except Exception:
+                    except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
                         continue
                     if normalized_formula(proposal) == normalized_formula(original):
                         continue
@@ -453,7 +450,7 @@ def build_candidate_portfolio(
             for rows in periodic_votes.values():
                 if len(rows) < 2:
                     continue
-                proposal = sorted(item[0] for item in rows)[0]
+                proposal = min(item[0] for item in rows)
                 directions = tuple(sorted({f"periodic_{item[1]}" for item in rows}))
                 sources = tuple(sorted({"periodic_slot_consensus", *directions}))
                 edit_kinds = ["copy_pattern"]
@@ -494,14 +491,14 @@ def build_candidate_portfolio(
         try:
             proposal = translate_formula(model.formulas[peer], peer[1], cell[1])
             parse_formula(proposal)
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
         if normalized_formula(proposal) != normalized_formula(original):
             matrix_votes[normalized_formula(proposal)].append((proposal, peer[1]))
     for rows in matrix_votes.values():
         if len(rows) < 2:
             continue
-        proposal = sorted(item[0] for item in rows)[0]
+        proposal = min(item[0] for item in rows)
         base = next((item for item in semantic if normalized_formula(item.candidate.formula) == normalized_formula(proposal)), None)
         quality = base.candidate.reference_quality if base else 1.0
         candidate = RepairCandidate(
@@ -525,12 +522,12 @@ def build_candidate_portfolio(
         try:
             proposal = translate_formula(model.formulas[peer], peer[1], cell[1])
             parse_formula(proposal)
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
         if normalized_formula(proposal) != normalized_formula(original):
             cross_votes[normalized_formula(proposal)].append(proposal)
     for rows in cross_votes.values():
-        proposal = sorted(rows)[0]
+        proposal = min(rows)
         candidate = RepairCandidate(
             proposal, len(rows), ("cross_sheet_mapping",), ("cross_sheet_reference",),
             edit_cost(original, proposal), 1.0,
@@ -550,7 +547,7 @@ def build_candidate_portfolio(
         formula = item.candidate.formula
         try:
             parse_formula(formula)
-        except Exception:
+        except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
             continue
         if normalized_formula(formula) == original_normalized:
             continue
@@ -927,7 +924,7 @@ def _prepare_v5_core(
     }
     if cache is None:
         cache = {}
-        setattr(model, "_fg_v5_core_cache", cache)
+        model._fg_v5_core_cache = cache
     cache[cache_key] = prepared
     return prepared
 
@@ -1298,9 +1295,9 @@ def fit_pairwise_linear_ranker(
 
 
 __all__ = [
-    "CandidateEvidence",
     "FEATURE_NAMES",
     "MODEL_VERSION",
+    "CandidateEvidence",
     "PortfolioCandidate",
     "RegimeEvidence",
     "build_candidate_portfolio",

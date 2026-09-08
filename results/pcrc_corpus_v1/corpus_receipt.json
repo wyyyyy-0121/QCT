@@ -1,0 +1,54 @@
+{
+  "answer_workbook_inputs": [],
+  "combined_shards_sha256": "d59dbc8ce54bb44a623c8cbd8ddf0e26897628d61d72552d96409cbadb614652",
+  "complete": true,
+  "corpus_manifest_sha256": "0e1228992fccf6b13961e397b944133db83dcde72b5372af5c36cd54306e71ed",
+  "corpus_receipt_sha256": "743461a31faf9734d38cbcb43dbf2a23cc1cf30076b8d83ffe22d3d7d6d5e789",
+  "fault_label_inputs": [],
+  "git_commit": "f3dd4d6ae842c8c1ed4eb26699850f7c05a1c897",
+  "intake_manifest_sha256": "bb01edd4a58f80a7f26f6b3051f3bdbc6983b2a5a47a23d185bcd07cf2a4f42d",
+  "max_targets_per_workbook": 200,
+  "peer_configuration": {
+    "axis_radius": 12,
+    "impact_depth": 4,
+    "local_radius": 6,
+    "max_axis_peers": 16,
+    "max_hypotheses": 4,
+    "max_impact_nodes": 2000,
+    "max_local_peers": 24,
+    "max_role_peers": 16,
+    "review_budget": 5
+  },
+  "preregistration_sha256": "bd8018317709e367fcb12e7b77b3e3ff373088b9a43f16d0ced1c7aa2d0350ae",
+  "protected_data_inputs": [],
+  "protocol": "formulaguard_pcrc_corpus_v1",
+  "raw_formula_strings_persisted": false,
+  "raw_numeric_values_persisted": false,
+  "selected_targets": 23247,
+  "source_workbooks": 607,
+  "split_hard_negative_candidates": {
+    "calibration": 2864,
+    "internal_test": 2671,
+    "train": 13231
+  },
+  "split_hard_negative_targets": {
+    "calibration": 1127,
+    "internal_test": 1476,
+    "train": 5246
+  },
+  "split_structure_groups": {
+    "calibration": 33,
+    "internal_test": 33,
+    "train": 153
+  },
+  "split_targets": {
+    "calibration": 3637,
+    "internal_test": 3499,
+    "train": 16111
+  },
+  "target_formula_tokens_entered_context": false,
+  "vocabulary_sha256": "e5c34c1daf764b5ce3ad337b6f0822001399b7944743b7cced0998d644a8d643",
+  "vocabulary_size": 259,
+  "workbooks_with_targets": 604,
+  "workers": 24
+}

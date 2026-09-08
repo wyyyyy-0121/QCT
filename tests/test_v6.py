@@ -5,8 +5,8 @@ from formulaguard.api import localize
 from formulaguard.formula import normalized_formula
 from formulaguard.localize import v4_scores
 from formulaguard.v6 import (
-    relative_ast_signature,
     _select_promotion,
+    relative_ast_signature,
     semantic_candidates,
     semantic_peers,
     v6_ablation_scores,

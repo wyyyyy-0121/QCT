@@ -6,9 +6,10 @@ __pycache__/
 htmlcov/
 .venv/
 venv/
+*.egg-info/
 
 # Node dependencies supplied by the local Codex runtime
-node_modules/
+node_modules
 npm-debug.log*
 
 # Generated benchmarks and experiment outputs
@@ -24,6 +25,11 @@ outputs/
 # Third-party workbooks are never committed before license review
 data/external/**/workbooks/
 data/external/enron/source/
+data/external/v5_psl/raw/
+data/external/v5_psl/revealed_trial/
+data/external/model_discovery/raw/
+data/external/model_discovery/converted/
+data/external/model_discovery/corpus/
 data/blind_v4/workbooks/
 data/v4_v52_blind/public/manifest.csv
 data/v4_v52_blind/public/workbooks/

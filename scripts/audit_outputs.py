@@ -3,9 +3,8 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 EXPECTED_METHODS = {
     "random", "excel_like", "pattern", "graph", "behavior",
@@ -130,7 +129,7 @@ def main():
             details["unique_declared_topologies"] = structural.get("unique_declared_topologies", 0)
             details["unique_calculated_signatures"] = structural.get("unique_calculated_signatures", 0)
     audit = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "evidence_complete": not missing_files and all(checks.values()),
         "missing_files": missing_files,
         "checks": checks,

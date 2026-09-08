@@ -1,0 +1,57 @@
+{
+  "protocol": "formulaguard_cwrp_result_v1",
+  "date": "2026-08-31",
+  "status": "stopped_after_u1_u2_failure",
+  "preregistration": "research/V5_CWRP_PREREGISTRATION.json",
+  "corrected_run": {
+    "git_commit": "674b6dfce4ec2b3560470747d30a465081bf06de",
+    "output": "results/cwrp_self_supervised_v2",
+    "receipt_sha256": "1c21f54dadc2fa87d67e80d9000ca82de3b0c11e26b2895e5cacaf3b1a911819",
+    "gate_summary_sha256": "747b3dbec3d3a1ab800787e4af9148b93392f229f2d0c2934a9bfc4ffe0ee364",
+    "prediction_sha256": "9344b86bcebff9650a6cf3bd991c1305f7f2f617b788ad90b19560619edcd851",
+    "prediction_content_sha256": "5e58febc5a41d01a8e2234163aebea539b86cd83b8bd6502baccb3f370f18e1a",
+    "example_shards_sha256": "a36da81c20c00a3d92799d5cd238773da536b27f08d34671f15a19d208cb12c6"
+  },
+  "original_run": {
+    "git_commit": "8bd295fd319744762ef9d34ebd7ca75b0f7acfe0",
+    "output": "results/cwrp_self_supervised_v1",
+    "receipt_sha256": "72518d6f4b7ac24764933538e6334fbd1e5171c0e66a0022359218856c567157",
+    "gate_summary_sha256": "ba39adc2679431a1a12d3bc57c7230ba4ad422f56662d1fc828a8ac2ff2f859b",
+    "implementation_deviation": "reported equal-width ECE instead of preregistered equal-frequency ECE",
+    "predictions_identical_to_corrected_run": true
+  },
+  "counts": {
+    "workbooks": 303,
+    "template_groups": 125,
+    "parseable_formulas": 281743,
+    "examples": 30875,
+    "sparse_examples": 2387,
+    "sparse_workbooks": 197
+  },
+  "workbook_macro_top5": {
+    "cwrp": 0.0780503551145107,
+    "global_frequency": 0.031657401431175326,
+    "context_frequency": 0.21577303552094654,
+    "local_peer": 0.8138849531732336,
+    "permuted_target_placebo": 0.10503858833239446
+  },
+  "selective": {
+    "selected": 1614,
+    "coverage": 0.052275303643724694,
+    "top5": 0.6982651796778191,
+    "ece_10_equal_frequency_bins": 0.2023307728906437
+  },
+  "sparse_selective": {
+    "selected": 58,
+    "coverage": 0.024298282362798494,
+    "top5": 0.8620689655172413
+  },
+  "gates": {
+    "u0": true,
+    "u1": false,
+    "u2": false
+  },
+  "protected_data_accessed": [],
+  "next_stage_authorized": false,
+  "formal_model_name_authorized": false
+}

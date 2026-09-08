@@ -55,7 +55,7 @@ def compatible_v5_core_scores(model: WorkbookModel, *, head: str, config: dict):
     for cell, formula in model.formulas.items():
         try:
             parse_formula(formula)
-        except Exception:
+        except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             unsupported.append(cell)
         else:
             supported[cell] = formula

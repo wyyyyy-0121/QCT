@@ -7,15 +7,14 @@ changing the frozen V4, legacy V5/V5.2, or completed V6 implementations.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Sequence
 
 from .localize import LocalizationResult
 from .v5 import v5_default_parameters, v5_scores
-from .v52 import RescueEvidence, V52Decision, v52_default_parameters, v52_scores
 from .v6 import v6_default_parameters, v6_scores
+from .v52 import RescueEvidence, V52Decision, v52_default_parameters, v52_scores
 from .workbook import WorkbookModel
-
 
 VERSION_ALIASES = {
     "v4.1": {
@@ -40,11 +39,25 @@ VERSION_ALIASES = {
         "status": "rejected_for_main_freeze",
     },
     "v5": {
-        "canonical_id": "v5-core-dev-r2",
+        "canonical_id": "v5-psl-dev1-rev1",
         "legacy_id": None,
         "legacy_module": None,
-        "role": "reserved_for_candidate_centric_core_redesign",
-        "status": "development",
+        "role": "static_anchor_repair_verified_selective_localization",
+        "status": "rejected_public_pressure_revision",
+    },
+    "v5-core-cc": {
+        "canonical_id": "v5-core-candidate-centric-dev",
+        "legacy_id": None,
+        "legacy_module": "formulaguard.v5_core",
+        "role": "candidate_centric_core_reconstruction",
+        "status": "rejected_locked_validation",
+    },
+    "v5-core-r2": {
+        "canonical_id": "v5-core-r2-dnca-dev",
+        "legacy_id": None,
+        "legacy_module": "formulaguard.v5_core_r2",
+        "role": "dual_null_causal_attribution_research_line",
+        "status": "rejected_pressure_safety",
     },
 }
 

@@ -13,19 +13,16 @@ from formulaguard.formula import formula_fingerprint, normalized_formula
 from formulaguard.workbook import WorkbookModel
 from scripts import (
     analyze_v5_core_enron_failure,
-    freeze_v5_core,
-    run_v5_core_predictions,
-    run_v5_core_stage,
-)
-from scripts import audit_v5_core_public_inputs
-from scripts import (
+    audit_v5_core_public_inputs,
     audit_v5_core_validation,
+    freeze_v5_core,
     lock_v5_core_blind,
     prepare_v5_core_third_party_pack,
+    run_v5_core_predictions,
+    run_v5_core_stage,
     score_v5_core_blind,
     train_v5_core_ranker,
 )
-from scripts.score_v5_core_predictions import hash_file, verify_prediction_completion
 from scripts.audit_v5_core_dataset import audit_root, translation_invariant_formula_pair
 from scripts.build_v5_core_dataset import (
     PROFILE_COUNTS,
@@ -35,6 +32,7 @@ from scripts.build_v5_core_dataset import (
     enumerate_cases,
     write_xlsx,
 )
+from scripts.score_v5_core_predictions import hash_file, verify_prediction_completion
 
 
 class V5CoreProtocolTests(unittest.TestCase):
@@ -321,7 +319,7 @@ class V5CoreProtocolTests(unittest.TestCase):
         self.assertIn("outside the project repository", prepare_source)
         self.assertEqual(
             freeze_v5_core.manifest_key(
-                Path("D:/code/QCT/results/v5_core_validation/summary.json")
+                freeze_v5_core.ROOT / "results/v5_core_validation/summary.json"
             ),
             "results/v5_core_validation/summary.json",
         )

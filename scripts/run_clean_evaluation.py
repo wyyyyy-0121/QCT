@@ -26,7 +26,7 @@ def percentile(values, q):
 
 def select_threshold(mutant_scores, clean_scores, max_clean_alarm):
     """Maximize mutant-source recall subject to a bounded clean alarm rate."""
-    values = sorted(set(float(value) for value in [*mutant_scores, *clean_scores]))
+    values = sorted({float(value) for value in [*mutant_scores, *clean_scores]})
     if not values:
         return 0.0, 0.0, 0.0
     epsilon = max(1e-12, abs(values[-1]) * 1e-12)

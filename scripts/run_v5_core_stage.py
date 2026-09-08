@@ -19,7 +19,7 @@ ABLATIONS = (
 
 def run(*parts: object, allow_gate_failure: bool = False) -> None:
     command = [sys.executable, *map(str, parts)]
-    completed = subprocess.run(command, cwd=ROOT)
+    completed = subprocess.run(command, cwd=ROOT, check=False)
     if completed.returncode and not (allow_gate_failure and completed.returncode == 2):
         raise SystemExit(completed.returncode)
 
@@ -45,6 +45,7 @@ def build_outputs(results: Path, *, title: str, filename: str) -> None:
             "--results", str(results), "--output", str(Path("outputs") / filename),
         ],
         cwd=ROOT,
+        check=False,
     )
     if completed.returncode:
         raise SystemExit(completed.returncode)

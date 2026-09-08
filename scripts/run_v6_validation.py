@@ -12,7 +12,7 @@ ABLATIONS = ["no_ffc", "no_bss", "no_d", "no_irg", "no_side_effect", "no_uniquen
 
 
 def run(*parts, allow_selection_failure=False):
-    completed = subprocess.run([sys.executable, *map(str, parts)], cwd=ROOT)
+    completed = subprocess.run([sys.executable, *map(str, parts)], cwd=ROOT, check=False)
     if completed.returncode and not (allow_selection_failure and completed.returncode == 2):
         raise SystemExit(completed.returncode)
 

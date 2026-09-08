@@ -10,7 +10,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -19,7 +19,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from formulaguard.formula import FormulaSyntaxError, parse_formula
 from formulaguard.localize import localize
 from formulaguard.workbook import WorkbookModel
-
 
 FORBIDDEN_PUBLIC_COLUMNS = {"source_cell", "source_cells", "correct_formula", "error_formula", "error_type"}
 
@@ -37,7 +36,7 @@ def evaluate_task(task: tuple[str, list[dict[str, str]], str, int]) -> tuple[lis
     workbook = Path(workbook_text)
     try:
         model = WorkbookModel.from_xlsx(workbook)
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return [], [{"instance_id": row["instance_id"], "reason": f"load_error:{type(exc).__name__}:{exc}"} for row in instances]
     supported = 0
     for formula in model.formulas.values():
@@ -129,7 +128,7 @@ def main() -> None:
     config = args.frozen_config.resolve()
     manifest = {
         "schema_version": 1,
-        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_at": datetime.now(UTC).isoformat(),
         "label_access": "none: only public instance_id/workbook manifest was read",
         "public_manifest_sha256": sha256(args.manifest),
         "predictions_sha256": sha256(prediction_path),

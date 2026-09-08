@@ -1,0 +1,53 @@
+{
+  "protocol": "formulaguard_model_discovery_gate1_v1",
+  "date": "2026-08-31",
+  "gate_1_passed": true,
+  "authorization": {
+    "method_cards_complete": true,
+    "official_excelint_current_cli_verified": true,
+    "academic_baseline_superiority_claim": false,
+    "new_model_implementation": false
+  },
+  "method_count": 9,
+  "method_ids": [
+    "excelint",
+    "custodes",
+    "warder",
+    "amcheck",
+    "sedmr",
+    "spreadsheet_sfl",
+    "lamirage",
+    "flame",
+    "selective_prediction"
+  ],
+  "identity_counts": {
+    "official_current_implementation": 1,
+    "related_work_only": 8
+  },
+  "excelint_runtime": {
+    "repository": "https://github.com/plasma-umass/ExceLint-core",
+    "commit": "b2c5e7df4405a932c82a07e105f275c61fdab6e3",
+    "node": "v22.22.1",
+    "build_command": "npm ci --ignore-scripts; npm run build",
+    "sample_output_sha256": {
+      "act3_lab23_posey": "a74358d636725cd716a38983a6c2d483ffd0978ae214035f5e794c9c790f5c2a",
+      "attendance_v0": "d20f8de2069d418f061e04b79c61a7c96e2744d0621a84647b680e3fbfb5794b",
+      "enron_22": "1a0a0ab642523beba193834df25927e5de72ae56680ef89f322f0ca6a8638b91"
+    },
+    "package_lock_sha256": "37b6dae7aa40a23dfba6efa8a2a2cec1c6dc56b17bd93a6c730a527b01aaa794",
+    "observed_output": "WorkbookAnalysis JSON with sheets, proposed fixes and foundBugs; no complete per-formula ranking",
+    "security_note": "npm reported legacy dependency vulnerabilities; the runtime is isolated for Gate 1 verification and is not copied into this repository."
+  },
+  "claim_boundary": {
+    "allowed": [
+      "compare official current ExceLint native region/fix output where input support and mapping are explicit",
+      "use other cards to define related-work and metric boundaries"
+    ],
+    "forbidden": [
+      "claim a reproduced OOPSLA experiment without the legacy Windows runner",
+      "claim superiority over an unavailable original implementation",
+      "call a repair or parser benchmark a silent-source localization benchmark"
+    ]
+  },
+  "next_gate": "Gate 2: label-free failure graph and atomic signal audit"
+}

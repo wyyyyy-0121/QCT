@@ -12,7 +12,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.run_external_evaluation import sha256_file
 
-
 REFERENCE_METHODS = (
     "graph", "pattern", "formulaguard", "formulaguard_v3", "formulaguard_v4",
 )

@@ -1,0 +1,58 @@
+{
+  "protocol": "formulaguard_fspr_public_prediction_lock_v1",
+  "date": "2026-09-03",
+  "candidate_id": "v5-fspr1-candidate",
+  "predictions_locked": true,
+  "formal_version": null,
+  "prediction_source_commit": "cdfb4420fc95fd525c6cfc6fc66b92f6d6ab2d9a",
+  "model_lock": {
+    "path": "research/V5_FSPR_LABEL_FREE_LOCK.json",
+    "sha256": "9672b16423756a75bf895f6ed2541cda9fbef360a3fd37873825366d05f9dfaa"
+  },
+  "model_sha256": "7339856c67f62824b4b1bc8aed94d021a322bbd03a9288f1b490f16372ca0dd3",
+  "inventory": {
+    "revealed_public_events": 220,
+    "errors": 190,
+    "controls": 30,
+    "unique_observed_workbooks": 196,
+    "review_budget": 5,
+    "immutable_v4_prefix": 4,
+    "ranking_change_workbooks": 11
+  },
+  "run_a": {
+    "path": "results/fspr_public_predictions_run_a",
+    "completion_receipt_sha256": "660a9f9743be8fde8fc4e091a3d76f0ad7c24d08527845bd528660489cbf117e",
+    "predictions_sha256": "b13efec6cad70a64f7461a154719153e2cf2d9711c46da03cbd24e0eff65ffff"
+  },
+  "run_b": {
+    "path": "results/fspr_public_predictions_run_b",
+    "completion_receipt_sha256": "660a9f9743be8fde8fc4e091a3d76f0ad7c24d08527845bd528660489cbf117e",
+    "predictions_sha256": "b13efec6cad70a64f7461a154719153e2cf2d9711c46da03cbd24e0eff65ffff"
+  },
+  "reproduction": {
+    "path": "results/fspr_public_reproduction/reproduction_receipt.json",
+    "sha256": "865d774ff8eb0ffa7ffe1790aaab4c2a0356757e93e376b051048b7d53ee6c2f",
+    "byte_identical": true,
+    "all_prediction_gates_passed": true
+  },
+  "frozen_public_gate": {
+    "structure_group_macro_top5_delta_minimum": 0.02,
+    "structure_group_macro_mrr_non_degradation": true,
+    "net_top5_rescues_minimum": 5,
+    "top5_losses_maximum": 2,
+    "enron_top5_and_mrr_non_degradation": true,
+    "other_major_cohort_top5_regression_maximum": 0.05,
+    "control_workbook_ranking_change_rate_maximum": 0.15,
+    "two_prediction_runs_byte_identical": true
+  },
+  "revealed_public_scoring_authorized": true,
+  "spreadsheetbench_v2_download_authorized": false,
+  "version_artifact_authorized": false,
+  "protected_access_authorized": false,
+  "post_lock_prediction_or_model_changes_forbidden": true,
+  "label_inputs": [],
+  "revealed_localization_inputs": [],
+  "answer_workbook_inputs": [],
+  "task_text_inputs": [],
+  "protected_data_inputs": []
+}

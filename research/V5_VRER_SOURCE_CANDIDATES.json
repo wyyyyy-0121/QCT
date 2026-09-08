@@ -1,0 +1,78 @@
+{
+  "protocol": "formulaguard_vrer_source_candidates_v1",
+  "vrer_protocol": "formulaguard_vrer_v1",
+  "frozen_before_candidate_workbook_audit": true,
+  "sources": [
+    {
+      "repository": "ewcole/tax_worksheets",
+      "canonical_url": "https://github.com/ewcole/tax_worksheets",
+      "local_directory": "ewcole_tax_worksheets",
+      "pinned_head": "b9197d95e0040936720893587b4bc64551905eff",
+      "license_spdx": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "288934c37cfd3efa0a8e283a2151b037a93f01bc2a8c8acd0aa8ea626a3bc26b",
+      "license_covers_workbooks": true,
+      "candidates": [
+        {
+          "candidate_id": "ewcole-2020-f1040-line14",
+          "source_kind": "correction",
+          "commit_sha": "1c4ec3e3099c09e94e4b206bbeac00ee90e4007e",
+          "parent_sha": "64abe814ee804ad787eaf26b0f8dfe2fdd2e3114",
+          "workbook_path": "Federal/f1040-2019.xlsx",
+          "evidence_scope": "workbook",
+          "evidence_quote": "Correct formula for 2019 f1040 Line 14"
+        },
+        {
+          "candidate_id": "ewcole-2020-combined-line14",
+          "source_kind": "correction",
+          "commit_sha": "1c4ec3e3099c09e94e4b206bbeac00ee90e4007e",
+          "parent_sha": "64abe814ee804ad787eaf26b0f8dfe2fdd2e3114",
+          "workbook_path": "Federal/f1040-combined-2019.xlsx",
+          "evidence_scope": "workbook",
+          "evidence_quote": "Correct formula for 2019 f1040 Line 14"
+        },
+        {
+          "candidate_id": "ewcole-2021-schedule-se-line10",
+          "source_kind": "correction",
+          "commit_sha": "ce2e3dfdeb392de5beca5bd37e64d14d045f8002",
+          "parent_sha": "a1a5a3bc8e2ce70f1a74f8ee82a3775c59f91d6a",
+          "workbook_path": "Federal/f1040sse-2020.xlsx",
+          "evidence_scope": "workbook",
+          "evidence_quote": "Correct percentage for f1040 schedule SE line 10"
+        },
+        {
+          "candidate_id": "ewcole-2025-combined-w2-references",
+          "source_kind": "correction",
+          "commit_sha": "74828d3da02db848eaf627cbaeb251f489381bed",
+          "parent_sha": "19d7c4f94ee53fdba57c3c9db4ebfec7d1ffa9db",
+          "workbook_path": "2024-combined.xlsx",
+          "evidence_scope": "workbook",
+          "evidence_quote": "2024-combined.xlsx - Correct formulas referencing W2"
+        }
+      ]
+    },
+    {
+      "repository": "eoframework/eof-solutions",
+      "canonical_url": "https://github.com/eoframework/eof-solutions",
+      "local_directory": "eof_solutions",
+      "pinned_head": "2eb16a552d70368acada4cc16b9cd5dc018f24e8",
+      "license_spdx": "BUSL-1.1",
+      "license_path": "LICENSE",
+      "license_sha256": "b3ee221011b1451851174f97d8bbd17b2ebc7caf661325cb005ef30da729766c",
+      "license_covers_workbooks": true,
+      "candidates": [
+        {
+          "candidate_id": "eof-2025-cisco-loe-circular-references",
+          "source_kind": "correction",
+          "commit_sha": "858a03921c12b1f7e23992a35f7bab888641c8a5",
+          "parent_sha": "ea28b09957fb0bdc0684b482408ff404aaecc676",
+          "workbook_path": "solutions/cisco/ai/network-analytics/presales/level-of-effort-estimate.xlsx",
+          "evidence_scope": "workbook",
+          "evidence_quote": "Fix Cisco presales issues: circular references, architecture diagrams, and PPTX note"
+        }
+      ]
+    }
+  ],
+  "protected_data_inputs": [],
+  "revealed_label_inputs": []
+}

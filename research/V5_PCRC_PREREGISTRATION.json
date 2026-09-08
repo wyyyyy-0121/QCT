@@ -1,0 +1,111 @@
+{
+  "protocol": "formulaguard_pcrc_v1",
+  "date": "2026-09-02",
+  "research_code": "PCRC",
+  "status": "frozen_before_corpus_construction_training_or_prediction",
+  "formal_version_authorized": false,
+  "data": {
+    "corpus": "SpreadsheetBench-v1-input-only-retained-DRFV-corpus",
+    "workbooks": 607,
+    "structure_groups": 219,
+    "parseable_formulas": 74570,
+    "split_structure_groups": {
+      "train": 153,
+      "calibration": 33,
+      "internal_test": 33
+    },
+    "max_targets_per_workbook": 200,
+    "corpus_manifest_sha256": "0e1228992fccf6b13961e397b944133db83dcde72b5372af5c36cd54306e71ed",
+    "corpus_receipt_sha256": "743461a31faf9734d38cbcb43dbf2a23cc1cf30076b8d83ffe22d3d7d6d5e789",
+    "intake_manifest_sha256": "bb01edd4a58f80a7f26f6b3051f3bdbc6983b2a5a47a23d185bcd07cf2a4f42d",
+    "answer_workbook_inputs": [],
+    "fault_label_inputs": [],
+    "v4_training_inputs": [],
+    "protected_data_inputs": []
+  },
+  "peer_generator": {
+    "axis_radius": 12,
+    "local_radius": 6,
+    "max_axis_peers": 16,
+    "max_local_peers": 24,
+    "max_role_peers": 16,
+    "max_hypotheses": 4,
+    "candidate_order": [
+      "vote_count_desc",
+      "independent_axes_desc",
+      "independent_cells_desc",
+      "normalized_formula_asc"
+    ]
+  },
+  "context": {
+    "target_formula_masked": true,
+    "target_cached_value_masked": true,
+    "maximum_tokens": 384,
+    "topology_window": 5,
+    "directional_peers_per_direction": 4,
+    "dependent_formulas": 8,
+    "target_derived_precedent_edges": false,
+    "raw_text": false,
+    "raw_numeric_literals": false,
+    "sheet_names": false
+  },
+  "model": {
+    "kind": "small_dual_bigru",
+    "embedding_size": 128,
+    "hidden_size_per_direction": 192,
+    "projection_size": 256,
+    "formula_maximum_tokens": 96,
+    "temperature": 0.1,
+    "loss": "per_target_candidate_cross_entropy",
+    "batch_size": 128,
+    "learning_rates": [0.001, 0.0003, 0.0001],
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "maximum_epochs": 30,
+    "patience": 4,
+    "seed": 260902,
+    "precision": "fp32",
+    "workers": 24
+  },
+  "promotion": {
+    "score": "max_repair_compatibility_minus_observed_compatibility",
+    "threshold_quantiles": [0.9, 0.95, 0.975, 0.99],
+    "calibration_clean_workbook_action_rate_maximum": 0.1,
+    "ranking": "positive_promotions_by_margin_then_exact_v4_order"
+  },
+  "required_ablations": [
+    "context_frequency",
+    "local_peer",
+    "formula_only",
+    "observed_only",
+    "no_promotion"
+  ],
+  "self_supervised_gate": {
+    "eligible_hard_negative_targets_minimum": 2000,
+    "structure_groups_minimum": 25,
+    "candidate_accuracy_minimum": 0.6,
+    "candidate_accuracy_delta_over_strongest_baseline_minimum": 0.05,
+    "group_macro_accuracy_minimum": 0.55,
+    "group_bootstrap_delta_lower_bound_above_zero": true,
+    "unseen_role_accuracy_minimum": 0.45,
+    "clean_target_preference_error_maximum": 0.1,
+    "clean_workbook_action_rate_maximum": 0.15,
+    "independent_process_predictions_byte_identical": true
+  },
+  "public_gate": {
+    "overall_group_macro_top5_delta_over_v4_minimum": 0.05,
+    "enron_group_macro_top5_delta_over_v4_minimum": 0.05,
+    "historical_integer_modified_euses_top5_regression_maximum": 0.05,
+    "overall_group_macro_mrr_improves": true,
+    "cohort_mrr_regression_maximum": 0.02,
+    "group_bootstrap_top5_delta_lower_bound_above_zero": true,
+    "control_workbook_action_rate_maximum": 0.15,
+    "v4_hit_loss_rate_maximum": 0.02,
+    "full_exceeds_every_ablation": true,
+    "full_delta_over_formula_only_and_observed_only_minimum": 0.03
+  },
+  "external_test": "SpreadsheetBench-v2-Debugging-locked-after-S1-and-S2",
+  "protected_path": "/home/ayaka/code/FormulaGuard_240_120/",
+  "protected_access_authorized": false,
+  "single_revision_allowed": false
+}

@@ -20,7 +20,6 @@ if str(ROOT) not in sys.path:
 from formulaguard.formula import normalized_formula
 from formulaguard.workbook import WorkbookModel
 
-
 ERROR_TYPES = (
     "reference_shift",
     "range_boundary",
@@ -67,7 +66,7 @@ def _sheet_xml(cells: dict[str, object], formulas: dict[str, str]) -> str:
         rows.setdefault(row, []).append(cell)
     for address, formula in formulas.items():
         _, row = _col_row(address)
-        body = formula[1:] if formula.startswith("=") else formula
+        body = formula.removeprefix("=")
         rows.setdefault(row, []).append(f'<c r={quoteattr(address)}><f>{escape(body)}</f></c>')
     content = []
     for row, items in sorted(rows.items()):

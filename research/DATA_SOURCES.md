@@ -87,6 +87,22 @@
 - 用途：复杂、多表和非标准布局的解析鲁棒性及安全跳过压力测试。
 - 限制：它不是带源错误标签的根因定位数据集，不进入主准确率。
 
+### SpreadsheetBench 2
+
+- 论文：<https://arxiv.org/abs/2606.29955>
+- 数据：<https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2>
+- 代码：<https://github.com/RUCKBReasoning/SpreadsheetBench-2>
+- 公开规模：321 个端到端任务，其中 100 个 Debugging；每个 Debugging 输入不在指令中
+  公布错误类型或目标格，金标准工作簿可机械定义需修改格。
+- 许可：论文正文声明数据 CC BY-SA 4.0、代码 MIT；数据卡顶层 MIT 标记与正文冲突，
+  本项目按更严格的数据许可处理，不再分发原始工作簿。
+- DRFV 用途：100 个 Debugging 任务完整保留为候选冻结和预测锁后的外部公式源格测试，
+  不用于训练或调参；专家注入错误不能被描述为自然发生错误。
+- 固定 revision、接收隔离和停止门见
+  `research/V5_DRFV_MECHANISM_SELECTION_AND_PREREGISTRATION.md`。
+- 当前结果：DRFV 的 SpreadsheetBench v1 input-only 语料门已失败，因而没有接收或
+  读取 SpreadsheetBench 2；详见 `research/V5_DRFV_U0_RESULT.md`。
+
 ## 4. 数据证据分层
 
 | 层级 | 数据 | 可以支持的结论 |
@@ -114,6 +130,37 @@ V6 不复用已揭晓 100 例做选择。其内部数据由
 例外表和 SECRET.zip 的 SHA-256；冻结后释放无标签 PUBLIC.zip，预测锁后释放
 SECRET.zip。该集合才是 V6 的最终独立证据。完整协议见
 `research/V6_THIRD_PARTY_PROTOCOL.md`。
+
+## 4.2 V5-PSL-dev1 公开压力层与独立确认层
+
+V5-PSL不再把同源合成生成器的高分当作晋级依据。公开压力层固定为六个来源，
+其注册表是`data/external/v5_psl/corpus_registry.json`：
+
+| 数据 | 固定版本 | 只允许的用途 |
+|---|---|---|
+| Modified EUSES | `EUSES_modified.zip`, SHA-256 `3701d4d3...c3d4` | 已揭晓注入故障开发与控制压力 |
+| Info1 | `Info1.zip`, SHA-256 `b889174a...f9e3` | 已揭晓真实故障回顾性开发 |
+| Integer Corpus | `Integer.zip`, SHA-256 `47d6950a...9aec` | 整数域注入故障压力 |
+| Enron Error Corpus | `Error_ENRON.zip`, SHA-256 `4f23c7cb...4450` | 已揭晓真实错误安全回归 |
+| FoRepBench | Git `d17e278092c59ec6faaa2d88730bdcbe48bb95f2` | 618项显式错误修复公式对；定位准确率为0项 |
+| SpreadsheetBench | Git `49b73a94775fb489063f60ca1865e3a650079a79` | 复杂XLSX解析、无标签诊断和有记录拒绝 |
+
+前三个SFL语料使用工作表序号坐标和旧`.xls`格式。适配器只保留原始坐标和哈希，
+不会自动猜工作表名；转换、单/多源可识别性和纳入决定必须人工复核。FoRepBench和
+SpreadsheetBench有专用角色审计，硬性禁止把其修复/操作标签计入静默源定位指标。
+许可不清的数据只在本地使用，原始文件统一位于Git忽略的
+`data/external/v5_psl/raw/`。
+
+公开压力结果仍是已揭晓开发证据，只允许一次有根因、证据哈希和源码提交记录的
+机制修订。候选锁前还必须完成主论文核对；模板中的`passed=false`不能手工当作通过
+回执。
+
+锁定确认协议v2由一名未参与开发的独立保管评测人准备并盲持：30个未见模板，
+240错误和120控制；其中180个可识别错误、60个歧义错误、60普通控制和60合法例外
+控制。保管人在候选锁前只公布PUBLIC与SECRET归档哈希；候选锁后释放无标签PUBLIC，
+完整排名锁后才释放SECRET并评分一次。该设计不提供多制题人或标注者一致性证据，
+只能称为单保管人盲持的外部模板确认。原始数据和当前仓库中都没有这360例，因此
+当前不能报告锁定确认结果或使用`V5-R1`名称。
 
 ## 5. 每次数据构建必须保留的审计产物
 

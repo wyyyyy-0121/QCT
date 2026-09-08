@@ -1,0 +1,22 @@
+{
+  "protocol": "v5_psl_mechanism_revision_log_v1",
+  "candidate": "V5-PSL-dev1-rev1",
+  "maximum_revisions": 1,
+  "revisions": [
+    {
+      "revision_id": "V5-PSL-dev1-rev1",
+      "date": "2026-08-30",
+      "root_cause": "Response-first ranking removed substantially more static Top-5 true sources than it rescued, did not separate error from clean-control response strength, and the prior eight-placebo design made the fixed strong empirical-tail threshold mathematically unreachable.",
+      "evidence_document": "research/V5_PSL_PARAMETER_TUNING_FAILURE_1.md",
+      "evidence_sha256": "fa3bd5f695f225478d28394b72f840dbd3c7571e6a4eb99bd95a1607d1201d92",
+      "revision_specification": "research/V5_PSL_MECHANISM_REVISION_1.md",
+      "source_commit": "d7e44592009bcbe7a8615bb8560526c4f78804e5"
+    }
+  ],
+  "post_failure_development_amendment": {
+    "document": "research/V5_PSL_DEVELOPMENT_AMENDMENT_1.md",
+    "scope": "revealed_public_development_only",
+    "mechanism_revision_consumed": true
+  },
+  "note": "The original dev1 preregistration forbade threshold tuning after failure. Amendment 1 does not alter that failed result; it permits one fixed bounded comparison only on data explicitly downgraded to revealed development evidence. Add a revision entry only for the single permitted root-cause mechanism revision."
+}

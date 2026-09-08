@@ -1,21 +1,21 @@
-import json
 import csv
+import json
 import subprocess
 import sys
-import unittest
 import tempfile
+import unittest
 from pathlib import Path
 
+from scripts.analyze_external_results import random_event_expectation
 from scripts.audit_benchmark_independence import classify_coupling
 from scripts.audit_external_manifest import manifest_sources
-from scripts.analyze_external_results import random_event_expectation
 from scripts.audit_v4_development import build_audit
+from scripts.freeze_v4_model import verify_model_source_hashes
+from scripts.merge_v5_development_results import _key_audit
 from scripts.prepare_enron_manifest import expand_fault_spec
 from scripts.run_external_evaluation import METHODS, parse_methods
 from scripts.run_v4_blind_predictions import validate_label_free_columns
 from scripts.score_v4_blind_predictions import score_rankings, verify_prediction_lock
-from scripts.freeze_v4_model import verify_model_source_hashes
-from scripts.merge_v5_development_results import _key_audit
 from scripts.verify_v5_prerequisites import verify as verify_v5_prerequisites
 
 

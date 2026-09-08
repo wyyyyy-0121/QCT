@@ -1,0 +1,40 @@
+[
+  {
+    "backend": "v4",
+    "candidate_cells": 32,
+    "status": "unique_solution",
+    "candidate_preparation_seconds": 0.07360509400041337,
+    "candidate_domain_seconds": 0.03961485499985429,
+    "bound_preparation_seconds": 0.42444028299996717,
+    "decision_output_seconds": 0.0003274410000813077,
+    "diagnosis_seconds": 0.570806074999382,
+    "search_dispatch_initial_check_seconds": 0.03281840199906583,
+    "input_construction_seconds": 0.0019088779999947292,
+    "ranking_seconds": 13.50703058199997,
+    "proof_replay_seconds": 0.08186276099968381,
+    "serialization_seconds": 0.0014975379999668803,
+    "observed_full_workflow_seconds": 14.163105833998998,
+    "preparation_evaluations": 66,
+    "leaf_evaluations": 1,
+    "visited_nodes": 65
+  },
+  {
+    "backend": "v511",
+    "candidate_cells": 32,
+    "status": "unique_solution",
+    "candidate_preparation_seconds": 0.07911450099982176,
+    "candidate_domain_seconds": 0.05054877500060684,
+    "bound_preparation_seconds": 0.41414754899960826,
+    "decision_output_seconds": 0.0003269889994044206,
+    "diagnosis_seconds": 0.5784453209998901,
+    "search_dispatch_initial_check_seconds": 0.03430750700044882,
+    "input_construction_seconds": 0.0018805540003086207,
+    "ranking_seconds": 0.15470931199979532,
+    "proof_replay_seconds": 0.08252098799948726,
+    "serialization_seconds": 0.0013288390000525396,
+    "observed_full_workflow_seconds": 0.8188850139995338,
+    "preparation_evaluations": 66,
+    "leaf_evaluations": 1,
+    "visited_nodes": 65
+  }
+]

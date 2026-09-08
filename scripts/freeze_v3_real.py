@@ -5,9 +5,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -41,7 +40,7 @@ def main() -> None:
     payload = {
         "schema_version": 1,
         "model_version": "v3-real-b",
-        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_at": datetime.now(UTC).isoformat(),
         "implementation_commit": args.implementation_commit,
         "selection_rule": "v2_raw_score_primary_then_positive_car_evidence_breaks_exact_ties_only",
         "candidate_limit": 15,

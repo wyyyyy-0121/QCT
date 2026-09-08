@@ -1,0 +1,122 @@
+{
+  "protocol": "formulaguard_excelint_native_baseline_v1",
+  "complete": true,
+  "source_lock_git_commit": "e6ff1e6f659fa5b528a44cddb91a08718a261e2b",
+  "workers": 24,
+  "timeout_seconds_per_workbook": 300,
+  "runtime_identity": {
+    "repository": "https://github.com/plasma-umass/ExceLint-core",
+    "commit": "b2c5e7df4405a932c82a07e105f275c61fdab6e3",
+    "node_version": "v22.23.2",
+    "cli_source_sha256": "793a2f40b18d83554e1562f62a3ba820c0546d409744b81589f88dd9439f18db",
+    "package_lock_sha256": "37b6dae7aa40a23dfba6efa8a2a2cec1c6dc56b17bd93a6c730a527b01aaa794",
+    "build_javascript_tree_sha256": "e346f4a772cd9fa716361ef2c9db8d5067f1b5a1b1393dc548f2ef9feffe4aaf",
+    "native_parameters": {
+      "formatting_discount_percent": 50,
+      "reporting_threshold_percent": 0,
+      "minimum_fix_size_cells": 3,
+      "maximum_fix_entropy": 1.0
+    }
+  },
+  "inputs": {
+    "profiles": {
+      "path": "results/core_reset_b_phase0/observation_profiles.csv",
+      "sha256": "26f7d1d64a65860fb90714a51beb602742d28d1cfefeea8cbadf331b0e1463dc"
+    },
+    "events_for_scoring_only": {
+      "path": "results/model_discovery_gate2_final_v3/event_scores.jsonl",
+      "sha256": "c68e2436957a83f6e8e80e6de6c5a3d45ca35b71e162ebc928275352ba90dd34"
+    }
+  },
+  "counts": {
+    "units": 196,
+    "events": 220,
+    "shards": 196
+  },
+  "summary": {
+    "compatibility": {
+      "units": 196,
+      "supported_units": 196,
+      "supported_unit_rate": 1.0,
+      "status_counts": {
+        "ok": 196
+      }
+    },
+    "native_region": {
+      "error_events": 190,
+      "supported_error_events": 190,
+      "source_region_hit_structure_macro_supported": 0.44160583941605847,
+      "source_region_hit_structure_macro_all_inputs_conservative": 0.44160583941605847,
+      "mean_review_cells_per_supported_unit": 21.147959183673468,
+      "median_review_cells_per_supported_unit": 6.0,
+      "metric_note": "native foundBugs region hit and unique review-cell cost; no Top-5 or MRR"
+    },
+    "control_safety": {
+      "control_units": 11,
+      "supported_control_units": 11,
+      "control_workbook_action_rate_supported": 0.7272727272727273
+    },
+    "by_cohort": {
+      "enron": {
+        "events": 30,
+        "error_events": 30,
+        "supported_error_events": 30,
+        "source_region_hit_supported": 0.06,
+        "source_region_hit_all_inputs_conservative": 0.06
+      },
+      "historical_100": {
+        "events": 100,
+        "error_events": 100,
+        "supported_error_events": 100,
+        "source_region_hit_supported": 0.5789473684210527,
+        "source_region_hit_all_inputs_conservative": 0.5789473684210527
+      },
+      "public:info1": {
+        "events": 2,
+        "error_events": 2,
+        "supported_error_events": 2,
+        "source_region_hit_supported": 0.0,
+        "source_region_hit_all_inputs_conservative": 0.0
+      },
+      "public:integer_corpus": {
+        "events": 44,
+        "error_events": 29,
+        "supported_error_events": 29,
+        "source_region_hit_supported": 0.21666666666666667,
+        "source_region_hit_all_inputs_conservative": 0.21666666666666667
+      },
+      "public:modified_euses": {
+        "events": 44,
+        "error_events": 29,
+        "supported_error_events": 29,
+        "source_region_hit_supported": 0.34166666666666673,
+        "source_region_hit_all_inputs_conservative": 0.34166666666666673
+      }
+    }
+  },
+  "artifacts": {
+    "event_scores": {
+      "path": "results/v4_rrc_excelint_native/event_scores.jsonl",
+      "sha256": "8d75bd7f88ebcbb0a9d70c14324d76fa7c23f08f7afdec8240c2567dc852d0d6"
+    },
+    "combined_shards_sha256": "4947cd651f78e6740c8ba21c52b1b7e2ede0e1747f4de4fef6138285c43a0c76"
+  },
+  "output_boundary": {
+    "raw_native_output_persisted": false,
+    "persisted_prediction_fields": [
+      "unit_id",
+      "workbook_sha256",
+      "status",
+      "review_cells",
+      "review_cost",
+      "acted"
+    ],
+    "native_formula_or_value_content_persisted": false
+  },
+  "label_boundary": {
+    "prediction_label_inputs": [],
+    "labels_opened_after_all_prediction_shards": true
+  },
+  "protected_data_inputs": [],
+  "receipt_sha256": "b833f5efc9c07f5af8ce9458baa3be1442f85be5218c09be8a0616d59b925438"
+}

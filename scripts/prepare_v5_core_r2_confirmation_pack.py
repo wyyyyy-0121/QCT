@@ -21,7 +21,10 @@ if str(ROOT) not in sys.path:
 
 from formulaguard.formula import normalized_formula
 from formulaguard.workbook import WorkbookModel
-from scripts.audit_v5_core_dataset import graph_formula_signature, translation_invariant_formula_pair
+from scripts.audit_v5_core_dataset import (
+    graph_formula_signature,
+    translation_invariant_formula_pair,
+)
 
 ERROR_STRATA = {
     "traditional": 420, "withheld_mutation": 90,
@@ -75,7 +78,7 @@ def safe_file(root: Path, relative: str) -> Path:
 def canonical_formula(value: str) -> str:
     try:
         return normalized_formula(value)
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return "".join(str(value).split()).upper()
 
 
@@ -156,7 +159,7 @@ def validate_case(payload: tuple[str, dict[str, str], dict[str, str], dict[str, 
             result["translation_pair"] = translation_invariant_formula_pair(
                 original.formulas[source], mutant.formulas[source], f"{source[0]}!{source[1]}",
             )
-        except Exception:
+        except Exception:  # noqa: BLE001, S110 intentional compatibility or fallback boundary; preserve runtime behavior
             pass
 
     mutant_values, mutant_errors = mutant.evaluate()
@@ -181,7 +184,7 @@ def validate_case(payload: tuple[str, dict[str, str], dict[str, str], dict[str, 
         result["graph_formula_signature"] = hashlib.sha256(
             json.dumps(source_signatures, sort_keys=True).encode("utf-8")
         ).hexdigest()
-    except Exception:
+    except Exception:  # noqa: BLE001, S110 intentional compatibility or fallback boundary; preserve runtime behavior
         pass
     descendants = set().union(*(graph.descendants(source) for source in sources))
     sinks = source_keys(label.get("sink_cells", "")) if label.get("sink_cells") else {
@@ -213,7 +216,7 @@ def development_pairs() -> set[tuple[str, str]]:
                 pairs.add(translation_invariant_formula_pair(
                     row["correct_formula"], row["mutated_formula"], row["source_cell"],
                 ))
-            except Exception:
+            except Exception:  # noqa: BLE001, S112 intentional compatibility or fallback boundary; preserve runtime behavior
                 continue
     return pairs
 
@@ -224,7 +227,7 @@ def graph_signature_task(payload: tuple[str, str]) -> str | None:
         model = WorkbookModel.from_xlsx(Path(workbook_text))
         signature = graph_formula_signature(model, source_cell)
         return hashlib.sha256(json.dumps([signature]).encode("utf-8")).hexdigest()
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         return None
 
 

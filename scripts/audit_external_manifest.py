@@ -6,7 +6,7 @@ import argparse
 import csv
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -87,7 +87,7 @@ def main() -> None:
             model = models[workbook_path]
             formula_count, supported_formula_count = formula_support[workbook_path]
             sources = manifest_sources(row)
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             record["evaluation_exclusion_reason"] = f"load_or_label_error:{type(exc).__name__}:{exc}"
             records.append(record)
             continue
@@ -137,7 +137,7 @@ def main() -> None:
     included = [record for record in records if record["manifest_include"]]
     ready = [record for record in records if record["evaluation_ready"]]
     audit = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "manifest_events": len(records),
         "manifest_included_events": len(included),
         "evaluation_ready_events": len(ready),

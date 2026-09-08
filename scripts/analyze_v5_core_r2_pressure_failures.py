@@ -45,7 +45,7 @@ def supported_model(model: WorkbookModel) -> tuple[WorkbookModel, set[tuple[str,
     for cell, formula in model.formulas.items():
         try:
             parse_formula(formula)
-        except Exception:
+        except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
             unsupported.add(cell)
         else:
             formulas[cell] = formula

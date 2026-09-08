@@ -1,0 +1,128 @@
+{
+  "protocol": "formulaguard_v4_residual_controller_v1",
+  "date": "2026-08-31",
+  "status": "frozen_before_controller_implementation_or_crossfit_scoring",
+  "research_name": "V4-RRC",
+  "formal_model_name_authorized": false,
+  "base_ranker": "V4-R1",
+  "review_budget": 5,
+  "immutable_v4_prefix": 4,
+  "candidate_channel": "peer_region_deduplicated_review_cells",
+  "candidate_top_k": 5,
+  "allowed_action": "retain_v4_fifth_or_replace_with_one_peer_candidate",
+  "development_inputs": [
+    "results/model_discovery_gate2_final_v3/event_scores.jsonl",
+    "results/model_discovery_signal_audit_observed",
+    "results/model_discovery_v4_baseline"
+  ],
+  "development_role": "revealed_grouped_crossfit_only_not_independent_validation",
+  "forbidden_features": [
+    "cohort_or_corpus_identity",
+    "case_kind",
+    "error_type",
+    "source_or_correct_formula_labels",
+    "expected_output_or_pass_fail",
+    "filename_sheet_name_cell_text_formula_text_or_formula_fingerprint",
+    "raw_or_cached_values",
+    "absolute_row_or_column",
+    "workbook_unit_structure_template_or_person_identity",
+    "protected_data"
+  ],
+  "feature_families": [
+    "normalized_candidate_ranks_in_peer_combined_role_impact_v4",
+    "top5_channel_consensus",
+    "channel_scores_and_next_rank_margins",
+    "frozen_atomic_numeric_evidence",
+    "frozen_atomic_status_one_hot",
+    "frozen_v4_numeric_evidence",
+    "frozen_v4_status_one_hot",
+    "workbook_scale_and_ratio_features",
+    "candidate_minus_v4_fifth_differences"
+  ],
+  "learner": {
+    "family": "linear_l2_ridge_closed_form_numpy",
+    "lambda": 1.0,
+    "penalize_intercept": false,
+    "feature_standardization": "training_fold_mean_and_standard_deviation",
+    "hyperparameter_search": false,
+    "random_seed_selection": false
+  },
+  "utility_targets": {
+    "recover_v4_miss": 1.0,
+    "unchanged_top5_hit_state": 0.0,
+    "lose_v4_hit": -4.0,
+    "act_on_control": -2.0
+  },
+  "crossfit": {
+    "folds": 5,
+    "assignment": "int(sha256(structure_group)[:8],16)%5",
+    "outer_test_fold": "j",
+    "inner_calibration_fold": "(j+1)%5",
+    "training_folds": "remaining_three",
+    "shared_decision_per_unit_id": true,
+    "minimum_finite_threshold_folds": 3,
+    "final_fit_folds": [0, 1, 2, 3],
+    "final_calibration_fold": 4
+  },
+  "calibration_constraints": {
+    "minimum_positive_residual_action_precision": 0.75,
+    "maximum_control_workbook_action_rate": 0.15,
+    "maximum_v4_hit_loss_rate": 0.02,
+    "minimum_recovered_events": 3,
+    "selection_order": [
+      "maximum_structure_macro_net_top5_gain",
+      "maximum_recovered_events",
+      "minimum_actions",
+      "highest_threshold"
+    ]
+  },
+  "development_gates": {
+    "minimum_overall_structure_macro_top5_gain_pp": 5.0,
+    "minimum_enron_top5_gain_pp": 5.0,
+    "minimum_enron_mrr_gain": 0.0,
+    "maximum_any_n2_cohort_regression_pp": 2.0,
+    "minimum_positive_residual_action_precision": 0.75,
+    "minimum_v4_miss_recovery_rate": 0.15,
+    "maximum_v4_hit_loss_rate": 0.02,
+    "maximum_control_workbook_action_rate": 0.15,
+    "minimum_nonnegative_outer_folds": 4,
+    "require_two_process_hash_match": true
+  },
+  "single_revision": {
+    "allowed_only_if": "overall_gain_passes_and_enron_nonnegative_and_only_precision_loss_or_control_safety_gates_fail",
+    "change": "require_atomic_evidence_supported_and_peer_top5_plus_combined_or_role_top5",
+    "all_other_features_model_folds_thresholds_and_gates_unchanged": true,
+    "maximum_revisions": 1
+  },
+  "baselines": [
+    "V4-R1",
+    "V4.2-Review-B-native-sixth-slot",
+    "V5-PSL-static-anchor",
+    "Gate2-fixed-selector",
+    "RRF-V4-peer-k60",
+    "forced-peer-top1-fifth-slot",
+    "ExceLint-native-region-output",
+    "oracle-headroom-upper-bound"
+  ],
+  "ablations": [
+    "no_v4_numeric_evidence",
+    "no_atomic_numeric_evidence",
+    "no_cross_channel_consensus",
+    "no_risk_threshold",
+    "peer_reciprocal_rank_only"
+  ],
+  "old_revealed_trial": {
+    "access_condition": "development_gate_passed_and_candidate_lock_committed",
+    "may_modify_candidate": false,
+    "independent_validation": false
+  },
+  "spreadsheetbench2": {
+    "access_condition": "old_revealed_trial_passed",
+    "gold_access_condition": "complete_input_prediction_lock_committed",
+    "may_become_development_data": false
+  },
+  "protected_data_access_condition": "development_old_trial_and_spreadsheetbench2_passed_and_final_spec_source_config_coefficients_environment_and_complete_public_predictions_committed",
+  "protected_data_path": "/home/ayaka/code/FormulaGuard_240_120/",
+  "protected_data_access_authorized_without_new_user_message": true,
+  "protected_data_accessed": []
+}

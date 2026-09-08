@@ -1,0 +1,323 @@
+{
+  "protocol": "formulaguard_v4_fifth_channel_structure_crossfit_v1",
+  "complete": true,
+  "source_git_commit": "3eeba9f5bb4871ced70c74ace165bc78c42b5d92",
+  "selection": {
+    "candidate_channels": [
+      "combined",
+      "peer",
+      "role",
+      "impact"
+    ],
+    "training_only_constraints": {
+      "mrr_delta_minimum": 0.0,
+      "v4_hit_loss_rate_maximum": 0.02
+    },
+    "objective": "maximum_structure_macro_top5_delta",
+    "tie_breaks": [
+      "mrr_delta",
+      "lower_v4_hit_loss",
+      "fixed_channel_order"
+    ],
+    "outer_test_labels_used_for_selection": false
+  },
+  "inputs": {
+    "events": {
+      "path": "results/model_discovery_gate2_final_v3/event_scores.jsonl",
+      "sha256": "c68e2436957a83f6e8e80e6de6c5a3d45ca35b71e162ebc928275352ba90dd34"
+    },
+    "v4_combined_shards_sha256": "b6ad4b46058e7c5b966bd8faa4b790f52c33a87fa03631fa744fe4a1df28d1f6",
+    "signal_combined_shards_sha256": "17fab17b109376e22d339a25d3861aa8c72e5c05a2c410cceab1845938a93890"
+  },
+  "folds": [
+    {
+      "outer_fold": 0,
+      "training_folds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_channel": "peer",
+      "training_metrics": {
+        "events": 163,
+        "structure_groups": 111,
+        "v4_top5": 0.5423423423423422,
+        "candidate_top5": 0.6698198198198198,
+        "top5_delta_pp": 12.74774774774775,
+        "v4_mrr": 0.3624881922391816,
+        "candidate_mrr": 0.3794912950723157,
+        "mrr_delta": 0.01700310283313411,
+        "recovered_events": 23,
+        "lost_events": 1,
+        "v4_hit_loss_rate": 0.011235955056179775
+      },
+      "held_out_metrics": {
+        "events": 27,
+        "structure_groups": 26,
+        "v4_top5": 0.7884615384615384,
+        "candidate_top5": 0.9615384615384616,
+        "top5_delta_pp": 17.307692307692314,
+        "v4_mrr": 0.5394206487956488,
+        "candidate_mrr": 0.5590811965811965,
+        "mrr_delta": 0.01966054778554771,
+        "recovered_events": 5,
+        "lost_events": 0
+      },
+      "held_out_v4_hit_loss_rate": 0.0
+    },
+    {
+      "outer_fold": 1,
+      "training_folds": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "selected_channel": "role",
+      "training_metrics": {
+        "events": 133,
+        "structure_groups": 105,
+        "v4_top5": 0.5938095238095238,
+        "candidate_top5": 0.7371428571428571,
+        "top5_delta_pp": 14.333333333333332,
+        "v4_mrr": 0.4021837680095374,
+        "candidate_mrr": 0.4196112245758256,
+        "mrr_delta": 0.01742745656628819,
+        "recovered_events": 19,
+        "lost_events": 1,
+        "v4_hit_loss_rate": 0.013333333333333334
+      },
+      "held_out_metrics": {
+        "events": 57,
+        "structure_groups": 32,
+        "v4_top5": 0.5734375,
+        "candidate_top5": 0.65,
+        "top5_delta_pp": 7.656249999999998,
+        "v4_mrr": 0.37599470519483086,
+        "candidate_mrr": 0.38468524071924803,
+        "mrr_delta": 0.008690535524417176,
+        "recovered_events": 4,
+        "lost_events": 0
+      },
+      "held_out_v4_hit_loss_rate": 0.0
+    },
+    {
+      "outer_fold": 2,
+      "training_folds": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selected_channel": "peer",
+      "training_metrics": {
+        "events": 150,
+        "structure_groups": 112,
+        "v4_top5": 0.5790178571428571,
+        "candidate_top5": 0.7008928571428571,
+        "top5_delta_pp": 12.187499999999996,
+        "v4_mrr": 0.38165965414489167,
+        "candidate_mrr": 0.39667835816593083,
+        "mrr_delta": 0.015018704021039164,
+        "recovered_events": 19,
+        "lost_events": 0,
+        "v4_hit_loss_rate": 0.0
+      },
+      "held_out_metrics": {
+        "events": 40,
+        "structure_groups": 25,
+        "v4_top5": 0.634,
+        "candidate_top5": 0.8340000000000001,
+        "top5_delta_pp": 20.000000000000007,
+        "v4_mrr": 0.46060979772032673,
+        "candidate_mrr": 0.489266749982157,
+        "mrr_delta": 0.028656952261830293,
+        "recovered_events": 9,
+        "lost_events": 1
+      },
+      "held_out_v4_hit_loss_rate": 0.04
+    },
+    {
+      "outer_fold": 3,
+      "training_folds": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "selected_channel": "peer",
+      "training_metrics": {
+        "events": 153,
+        "structure_groups": 106,
+        "v4_top5": 0.6198113207547169,
+        "candidate_top5": 0.7533018867924528,
+        "top5_delta_pp": 13.34905660377359,
+        "v4_mrr": 0.4226179990306731,
+        "candidate_mrr": 0.4398238308668604,
+        "mrr_delta": 0.01720583183618729,
+        "recovered_events": 22,
+        "lost_events": 1,
+        "v4_hit_loss_rate": 0.010752688172043012
+      },
+      "held_out_metrics": {
+        "events": 37,
+        "structure_groups": 31,
+        "v4_top5": 0.4838709677419355,
+        "candidate_top5": 0.6290322580645161,
+        "top5_delta_pp": 14.516129032258062,
+        "v4_mrr": 0.30527800999950594,
+        "candidate_mrr": 0.3238167352339017,
+        "mrr_delta": 0.01853872523439576,
+        "recovered_events": 6,
+        "lost_events": 0
+      },
+      "held_out_v4_hit_loss_rate": 0.0
+    },
+    {
+      "outer_fold": 4,
+      "training_folds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selected_channel": "peer",
+      "training_metrics": {
+        "events": 161,
+        "structure_groups": 114,
+        "v4_top5": 0.6114035087719297,
+        "candidate_top5": 0.7662280701754386,
+        "top5_delta_pp": 15.482456140350887,
+        "v4_mrr": 0.41259325164837163,
+        "candidate_mrr": 0.43263570877523166,
+        "mrr_delta": 0.020042457126860036,
+        "recovered_events": 26,
+        "lost_events": 1,
+        "v4_hit_loss_rate": 0.01020408163265306
+      },
+      "held_out_metrics": {
+        "events": 29,
+        "structure_groups": 23,
+        "v4_top5": 0.4782608695652174,
+        "candidate_top5": 0.5217391304347826,
+        "top5_delta_pp": 4.347826086956519,
+        "v4_mrr": 0.3141519791009427,
+        "candidate_mrr": 0.3190945245113813,
+        "mrr_delta": 0.004942545410438592,
+        "recovered_events": 2,
+        "lost_events": 0
+      },
+      "held_out_v4_hit_loss_rate": 0.0
+    }
+  ],
+  "selected_channels": [
+    "peer",
+    "role",
+    "peer",
+    "peer",
+    "peer"
+  ],
+  "overall": {
+    "events": 190,
+    "structure_groups": 137,
+    "v4_top5": 0.5890510948905109,
+    "candidate_top5": 0.7164233576642335,
+    "top5_delta_pp": 12.73722627737226,
+    "v4_mrr": 0.39606661465135806,
+    "candidate_mrr": 0.41208175488827553,
+    "mrr_delta": 0.01601514023691747,
+    "recovered_events": 26,
+    "lost_events": 1,
+    "v4_miss_recovery_rate": 0.325,
+    "v4_hit_loss_rate": 0.00909090909090909
+  },
+  "by_cohort": {
+    "enron": {
+      "events": 30,
+      "structure_groups": 25,
+      "v4_top5": 0.52,
+      "candidate_top5": 0.56,
+      "top5_delta_pp": 4.0000000000000036,
+      "v4_mrr": 0.4006004242892056,
+      "candidate_mrr": 0.40482470731612025,
+      "mrr_delta": 0.0042242830269146325,
+      "recovered_events": 1,
+      "lost_events": 0
+    },
+    "historical_100": {
+      "events": 100,
+      "structure_groups": 95,
+      "v4_top5": 0.6210526315789474,
+      "candidate_top5": 0.7789473684210526,
+      "top5_delta_pp": 15.78947368421052,
+      "v4_mrr": 0.3897437590087324,
+      "candidate_mrr": 0.40953919556663426,
+      "mrr_delta": 0.019795436557901835,
+      "recovered_events": 18,
+      "lost_events": 0
+    },
+    "public:info1": {
+      "events": 2,
+      "structure_groups": 2,
+      "v4_top5": 0.0,
+      "candidate_top5": 0.0,
+      "top5_delta_pp": 0.0,
+      "v4_mrr": 0.04339677047289504,
+      "candidate_mrr": 0.04018567639257295,
+      "mrr_delta": -0.003211094080322087,
+      "recovered_events": 0,
+      "lost_events": 0
+    },
+    "public:integer_corpus": {
+      "events": 29,
+      "structure_groups": 9,
+      "v4_top5": 0.4166666666666667,
+      "candidate_top5": 0.5277777777777778,
+      "top5_delta_pp": 11.11111111111111,
+      "v4_mrr": 0.35998369826875926,
+      "candidate_mrr": 0.3764163961038961,
+      "mrr_delta": 0.016432697835136845,
+      "recovered_events": 4,
+      "lost_events": 0
+    },
+    "public:modified_euses": {
+      "events": 29,
+      "structure_groups": 6,
+      "v4_top5": 0.8249999999999998,
+      "candidate_top5": 0.8999999999999999,
+      "top5_delta_pp": 7.500000000000007,
+      "v4_mrr": 0.6489686114686114,
+      "candidate_mrr": 0.6600400400400401,
+      "mrr_delta": 0.011071428571428732,
+      "recovered_events": 3,
+      "lost_events": 1
+    }
+  },
+  "structure_group_bootstrap": {
+    "seed": 20260831,
+    "samples": 20000,
+    "groups": 137,
+    "mean_delta_pp": 12.737226277372264,
+    "ci95_delta_pp": [
+      7.700729927007299,
+      18.284671532846712
+    ],
+    "positive_groups": 22,
+    "zero_groups": 114,
+    "negative_groups": 1
+  },
+  "gates": {
+    "crossfit_top5_gain_at_least_10pp": true,
+    "crossfit_mrr_nonnegative": true,
+    "crossfit_v4_hit_loss_at_most_2pct": true,
+    "all_outer_folds_top5_positive": true,
+    "all_main_cohorts_top5_nonnegative": true,
+    "structure_bootstrap_lower_bound_positive": true,
+    "peer_selected_in_at_least_four_folds": true
+  },
+  "all_crossfit_gates_passed": true,
+  "crossfit_event_rows_sha256": "f93a3dd374f9c9d3bc65150f1eaa5a8fde565c3fa9dd3ca4773c03b5bc8e67a3",
+  "protected_data_inputs": [],
+  "receipt_sha256": "f02441cc3cbc017382d32423caa603ce6aa3848a812a16546f92b9cf7044e3fc"
+}

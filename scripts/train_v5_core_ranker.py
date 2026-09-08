@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import math
+import shutil
 import statistics
 import subprocess
 import sys
@@ -15,7 +16,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.v5_core import FEATURE_NAMES, _learned_score, fit_pairwise_linear_ranker
+from formulaguard.v5_core import (
+    FEATURE_NAMES,
+    _learned_score,
+    fit_pairwise_linear_ranker,
+)
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -28,7 +33,7 @@ def sha256(path: Path) -> str:
 
 def git_commit() -> str:
     bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
-    executable = "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(bundled)
+    executable = shutil.which("git") or str(bundled)
     return subprocess.check_output([executable, "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
 

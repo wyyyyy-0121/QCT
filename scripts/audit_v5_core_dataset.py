@@ -17,7 +17,13 @@ if str(ROOT) not in sys.path:
 from formulaguard.a1 import parse_address
 from formulaguard.formula import formula_fingerprint, normalized_formula
 from formulaguard.workbook import WorkbookModel
-from scripts.build_v5_core_dataset import ERROR_TYPES, PROFILE_COUNTS, REGIMES, TOPOLOGIES, sha256
+from scripts.build_v5_core_dataset import (
+    ERROR_TYPES,
+    PROFILE_COUNTS,
+    REGIMES,
+    TOPOLOGIES,
+    sha256,
+)
 
 
 def read_jsonl(path: Path) -> list[dict]:

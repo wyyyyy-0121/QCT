@@ -1,0 +1,79 @@
+{
+  "protocol": "formulaguard_eorl_v1",
+  "research_code": "EORL",
+  "formal_version_authorized": false,
+  "inference_contract": {
+    "inputs": [
+      "workbook",
+      "user_selected_formula_output_cell",
+      "expected_numeric_output_value"
+    ],
+    "forbidden_inputs": [
+      "source_labels",
+      "correct_formulas",
+      "reference_workbook",
+      "cohort",
+      "workbook_identity",
+      "filename_semantics"
+    ]
+  },
+  "public_inputs": {
+    "error_events": 60,
+    "control_events": 30,
+    "error_structure_groups": 17,
+    "observation_profiles_sha256": "26f7d1d64a65860fb90714a51beb602742d28d1cfefeea8cbadf331b0e1463dc",
+    "revealed_events_sha256": "c68e2436957a83f6e8e80e6de6c5a3d45ca35b71e162ebc928275352ba90dd34",
+    "public_pair_manifest_sha256": "bed0ac4e026fd2afea1552d00262b00c0b6034cbc6cbcabf6355c9115719ac54",
+    "signal_shards_sha256": "17fab17b109376e22d339a25d3861aa8c72e5c05a2c410cceab1845938a93890",
+    "hypothesis_configuration_sha256": "7cc319ad154cd874e8fda1249daa334ecbd6f37417fdcb4b52ee006c663b30bd"
+  },
+  "numeric_tolerance": {
+    "relative": 1e-09,
+    "scale": "max(1, abs(expected_value))"
+  },
+  "d0_gates": {
+    "eligible_error_events_minimum": 40,
+    "eligible_error_structure_groups_minimum": 12,
+    "eligible_control_events_minimum": 24,
+    "source_residually_recoverable_error_events_minimum": 24,
+    "source_residually_recoverable_groups_minimum": 8,
+    "independent_process_byte_identical": true,
+    "libreoffice_stable_hash_sample_fraction": 0.2,
+    "libreoffice_agreement_minimum": 0.9,
+    "protected_inputs": 0
+  },
+  "ranking": {
+    "review_budget": 5,
+    "maximum_peer_hypotheses_per_formula": 4,
+    "residual": "abs(actual-expected)/max(1,abs(expected))",
+    "gain": "max(0,(base_residual-repaired_residual)/max(base_residual,1e-12))",
+    "fitted_parameters": 0,
+    "neural_network": false
+  },
+  "baselines": [
+    "v4",
+    "cone_v4",
+    "cone_distance",
+    "repair_support",
+    "minimal_edit",
+    "minimal_edit_residual",
+    "eorl_top1_hypothesis",
+    "eorl_no_support_ties",
+    "oracle_after_formula"
+  ],
+  "d1_gates": {
+    "top5_gain_vs_cone_v4_pp_minimum": 5.0,
+    "top5_gain_vs_strongest_compatible_baseline_pp_minimum": 5.0,
+    "top5_gain_vs_v4_pp_minimum": 5.0,
+    "mrr_nonnegative_for_all_three_comparisons": true,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260901,
+    "bootstrap_lower_bound_above_zero": true,
+    "nonnegative_structure_folds_minimum": 4,
+    "corpus_regression_pp_maximum": 5.0,
+    "control_action_rate_maximum": 0.0,
+    "complete_ranking_and_explanations": true
+  },
+  "protected_data_access_before_candidate_lock": false,
+  "post_result_tuning_allowed": false
+}

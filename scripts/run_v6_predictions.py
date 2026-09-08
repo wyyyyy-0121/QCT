@@ -16,10 +16,13 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from formulaguard.localize import v4_scores
-from formulaguard.v6 import v6_ablation_scores, v6_default_parameters, v6_prepared_v4_scores, v6_scores
+from formulaguard.v6 import (
+    v6_ablation_scores,
+    v6_default_parameters,
+    v6_prepared_v4_scores,
+    v6_scores,
+)
 from formulaguard.workbook import WorkbookModel
-
 
 EVIDENCE_FIELDS = (
     "model_version", "v4_rank", "v6_rank", "semantic_tier", "family_support",
@@ -41,7 +44,7 @@ def hash_file(path: Path) -> str:
 def git_commit() -> str:
     try:
         return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-    except Exception:
+    except Exception:  # noqa: BLE001 intentional compatibility or fallback boundary; preserve runtime behavior
         bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
         return subprocess.check_output([str(bundled), "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
@@ -206,7 +209,7 @@ def main():
                 record = json.loads(shard.read_text(encoding="utf-8"))
                 if record["workbook_sha256"] == hash_file(args.benchmark / row["mutant_workbook"]):
                     continue
-            except Exception:
+            except Exception:  # noqa: BLE001, S110 intentional compatibility or fallback boundary; preserve runtime behavior
                 pass
             raise SystemExit(f"Resume refused: invalid existing shard {shard}")
         pending.append(row)

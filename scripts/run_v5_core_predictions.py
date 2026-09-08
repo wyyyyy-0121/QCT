@@ -7,6 +7,7 @@ import concurrent.futures
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -18,7 +19,11 @@ if str(ROOT) not in sys.path:
 
 from formulaguard.localize import v4_scores
 from formulaguard.v4x import v4_3_scores
-from formulaguard.v5_core import v5_core_ablation_scores, v5_core_default_parameters, v5_core_scores
+from formulaguard.v5_core import (
+    v5_core_ablation_scores,
+    v5_core_default_parameters,
+    v5_core_scores,
+)
 from formulaguard.workbook import WorkbookModel
 
 
@@ -32,7 +37,7 @@ def hash_file(path: Path) -> str:
 
 def git_commit() -> str:
     bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
-    executable = "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(bundled)
+    executable = shutil.which("git") or str(bundled)
     return subprocess.check_output([executable, "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
 

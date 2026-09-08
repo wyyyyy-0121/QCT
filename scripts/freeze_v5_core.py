@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import platform
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -33,7 +34,7 @@ def manifest_key(path: Path) -> str:
 
 def git(*args: str) -> str:
     bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe"
-    executable = "git" if subprocess.run(["where", "git"], capture_output=True).returncode == 0 else str(bundled)
+    executable = shutil.which("git") or str(bundled)
     return subprocess.check_output([executable, *args], cwd=ROOT, text=True).strip()
 
 

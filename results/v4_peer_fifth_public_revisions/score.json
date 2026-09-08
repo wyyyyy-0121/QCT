@@ -1,0 +1,117 @@
+{
+  "protocol": "v4_peer_fifth_public_revision_score_v1",
+  "candidate_model_version": "v4-peer-fifth-exploratory-v1",
+  "model_source_commit": "d930e6376c5f08d294d17d27392d08f8f5666aab",
+  "prediction_completion_sha256": "e160ba984bb54c09e1923d52b2363d994936468b4c5a331fa4b9c85254d2b57f",
+  "prediction_combined_shards_sha256": "a7a58dbb47d1661224bf0bec73cc4eb6a39172f9eeb5dc849b08d9dfc21b7cd4",
+  "cases_sha256": "6bbc8c7f1784bbdbed567830a451e3852e22000ce5d769fa6cb3da76517dfbf7",
+  "summary": {
+    "revision_cells": 8,
+    "workbooks": 4,
+    "v4_top5": 0.0,
+    "candidate_top5": 0.0,
+    "top5_delta_pp": 0.0,
+    "v4_mrr": 0.07628857634449618,
+    "candidate_mrr": 0.07286892469933101,
+    "mrr_delta": -0.003419651645165167,
+    "recovered_events": 0,
+    "lost_events": 0,
+    "gates": {
+      "top5_nonnegative": true,
+      "mrr_nonnegative": false,
+      "no_v4_hit_lost": true,
+      "at_least_one_v4_miss_recovered": false,
+      "review_budget_equal_to_v4": true
+    },
+    "confirmation_passed": false
+  },
+  "events": [
+    {
+      "revision_case_id": "PRC001",
+      "workbook_id": "PWR001",
+      "v4_rank": 139,
+      "candidate_rank": 140,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.007194244604316547,
+      "candidate_mrr": 0.007142857142857143
+    },
+    {
+      "revision_case_id": "PRC002",
+      "workbook_id": "PWR001",
+      "v4_rank": 148,
+      "candidate_rank": 149,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.006756756756756757,
+      "candidate_mrr": 0.006711409395973154
+    },
+    {
+      "revision_case_id": "PRC003",
+      "workbook_id": "PWR001",
+      "v4_rank": 247,
+      "candidate_rank": 248,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.004048582995951417,
+      "candidate_mrr": 0.004032258064516129
+    },
+    {
+      "revision_case_id": "PRC004",
+      "workbook_id": "PWR001",
+      "v4_rank": 251,
+      "candidate_rank": 252,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.00398406374501992,
+      "candidate_mrr": 0.003968253968253968
+    },
+    {
+      "revision_case_id": "PRC005",
+      "workbook_id": "PWR001",
+      "v4_rank": 22,
+      "candidate_rank": 23,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.045454545454545456,
+      "candidate_mrr": 0.043478260869565216
+    },
+    {
+      "revision_case_id": "PRC006",
+      "workbook_id": "PWR002",
+      "v4_rank": 15,
+      "candidate_rank": 16,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.06666666666666667,
+      "candidate_mrr": 0.0625
+    },
+    {
+      "revision_case_id": "PRC007",
+      "workbook_id": "PWR003",
+      "v4_rank": 8,
+      "candidate_rank": 8,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.125,
+      "candidate_mrr": 0.125
+    },
+    {
+      "revision_case_id": "PRC008",
+      "workbook_id": "PWR004",
+      "v4_rank": 10,
+      "candidate_rank": 11,
+      "v4_top5": 0,
+      "candidate_top5": 0,
+      "v4_mrr": 0.1,
+      "candidate_mrr": 0.09090909090909091
+    }
+  ],
+  "label_boundary": {
+    "predictions_committed_before_cases_read": true,
+    "model_label_inputs": []
+  },
+  "claim_scope": "held_out_public_version_revision_evidence",
+  "formal_blind_test": false,
+  "independent_semantic_correctness_proven": false
+}

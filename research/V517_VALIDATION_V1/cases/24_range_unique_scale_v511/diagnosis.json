@@ -1,0 +1,3691 @@
+{
+  "backend": "v511",
+  "candidates": [
+    {
+      "cell": [
+        "Dept_000",
+        "H10"
+      ],
+      "formula": "=SUM(B10:D10)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H6"
+      ],
+      "formula": "=SUM(B6:D6)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H11"
+      ],
+      "formula": "=SUM(B11:D11)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H10"
+      ],
+      "formula": "=SUM(B10:D10)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H14"
+      ],
+      "formula": "=SUM(B14:D14)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H4"
+      ],
+      "formula": "=SUM(B4:D4)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H5"
+      ],
+      "formula": "=SUM(B5:D5)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H8"
+      ],
+      "formula": "=SUM(B8:D8)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H11"
+      ],
+      "formula": "=SUM(B11:D11)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H6"
+      ],
+      "formula": "=SUM(B6:D6)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H11"
+      ],
+      "formula": "=SUM(B11:D11)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H4"
+      ],
+      "formula": "=SUM(B4:D4)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H8"
+      ],
+      "formula": "=SUM(B8:D8)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H9"
+      ],
+      "formula": "=SUM(B9:D9)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H7"
+      ],
+      "formula": "=SUM(B7:D7)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H12"
+      ],
+      "formula": "=SUM(B12:D12)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H3"
+      ],
+      "formula": "=SUM(B3:D3)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H8"
+      ],
+      "formula": "=SUM(B8:D8)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H10"
+      ],
+      "formula": "=SUM(B10:D10)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H3"
+      ],
+      "formula": "=SUM(B3:D3)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H9"
+      ],
+      "formula": "=SUM(B9:D9)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H13"
+      ],
+      "formula": "=SUM(B13:D13)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H13"
+      ],
+      "formula": "=SUM(B13:D13)",
+      "source": "edge_column"
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H11"
+      ],
+      "formula": "=SUM(B11:D11)",
+      "source": "edge_column"
+    }
+  ],
+  "decisions": [
+    {
+      "accepted_formula": "=SUM(B10:D10)",
+      "cell": [
+        "Dept_000",
+        "H10"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B6:D6)",
+      "cell": [
+        "Dept_001",
+        "H6"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B11:D11)",
+      "cell": [
+        "Dept_002",
+        "H11"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B10:D10)",
+      "cell": [
+        "Dept_003",
+        "H10"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B14:D14)",
+      "cell": [
+        "Dept_004",
+        "H14"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B4:D4)",
+      "cell": [
+        "Dept_005",
+        "H4"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B5:D5)",
+      "cell": [
+        "Dept_006",
+        "H5"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B8:D8)",
+      "cell": [
+        "Dept_007",
+        "H8"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B11:D11)",
+      "cell": [
+        "Dept_008",
+        "H11"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B6:D6)",
+      "cell": [
+        "Dept_009",
+        "H6"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B11:D11)",
+      "cell": [
+        "Dept_010",
+        "H11"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B4:D4)",
+      "cell": [
+        "Dept_011",
+        "H4"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B8:D8)",
+      "cell": [
+        "Dept_012",
+        "H8"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B9:D9)",
+      "cell": [
+        "Dept_013",
+        "H9"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B7:D7)",
+      "cell": [
+        "Dept_014",
+        "H7"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B12:D12)",
+      "cell": [
+        "Dept_015",
+        "H12"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B3:D3)",
+      "cell": [
+        "Dept_016",
+        "H3"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B8:D8)",
+      "cell": [
+        "Dept_017",
+        "H8"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B10:D10)",
+      "cell": [
+        "Dept_018",
+        "H10"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B3:D3)",
+      "cell": [
+        "Dept_019",
+        "H3"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B9:D9)",
+      "cell": [
+        "Dept_020",
+        "H9"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B13:D13)",
+      "cell": [
+        "Dept_021",
+        "H13"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B13:D13)",
+      "cell": [
+        "Dept_022",
+        "H13"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": "=SUM(B11:D11)",
+      "cell": [
+        "Dept_023",
+        "H11"
+      ],
+      "group_id": "v517_648be98606a32ae18f0c3357a4253055e022300814e7d3135449406cb227a64f",
+      "group_size": 24,
+      "reason": "unique_solution",
+      "repair_score": 1.0,
+      "state": "accepted"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_000",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_000",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_000",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_000",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_000",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_001",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_001",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_001",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_001",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_001",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_002",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_002",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_002",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_002",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_002",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_003",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_003",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_003",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_003",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_003",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_004",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_004",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_004",
+        "H17"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_004",
+        "H18"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_004",
+        "H19"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_005",
+        "H5"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_005",
+        "H6"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_005",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_005",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_005",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_006",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_006",
+        "H6"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_006",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_006",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_006",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_007",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_007",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_007",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_007",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_007",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_008",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_008",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_008",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_008",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_008",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_009",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_009",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_009",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_009",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_009",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_010",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_010",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_010",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_010",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_010",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_011",
+        "H5"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_011",
+        "H6"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_011",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_011",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_011",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_012",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_012",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_012",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_012",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_012",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_013",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_013",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_013",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_013",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_013",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_014",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_014",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_014",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_014",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_014",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_015",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_015",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_015",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_015",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_015",
+        "H17"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_016",
+        "H4"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_016",
+        "H5"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_016",
+        "H6"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_016",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_016",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_017",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_017",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_017",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_017",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_017",
+        "H9"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_018",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_018",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_018",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_018",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_018",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_019",
+        "H4"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_019",
+        "H5"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_019",
+        "H6"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_019",
+        "H7"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_019",
+        "H8"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_020",
+        "H10"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_020",
+        "H11"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_020",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_020",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_020",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_021",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_021",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_021",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_021",
+        "H17"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_021",
+        "H18"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_022",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_022",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_022",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_022",
+        "H17"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_022",
+        "H18"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_023",
+        "H12"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_023",
+        "H13"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_023",
+        "H14"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_023",
+        "H15"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    },
+    {
+      "accepted_formula": null,
+      "cell": [
+        "Dept_023",
+        "H16"
+      ],
+      "group_id": "",
+      "group_size": 0,
+      "reason": "unique_solution",
+      "repair_score": 0.0,
+      "state": "abstained"
+    }
+  ],
+  "localization": [
+    {
+      "cell": [
+        "Dept_000",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 1, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 1,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 2, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 2,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 3, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 3,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 4, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 4,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 5, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 5,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H4"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 6, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 6,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H5"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 7, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 7,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 8, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 8,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 9, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 9,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 10, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 10,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 11, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 11,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H4"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 12, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 12,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 13, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 13,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 14, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 14,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 15, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 15,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 16, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 16,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H3"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 17, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 17,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 18, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 18,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 19, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 19,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H3"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 20, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 20,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 21, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 21,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 22, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 22,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 23, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 23,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.07499999999999998, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.55, \"candidate_origin\": \"none\", \"final_rank\": 24, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.16666666666666663, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 1.0, \"template_margin\": 1.0, \"workbook_gate\": \"abstained\"}",
+      "rank": 24,
+      "score": 0.265
+    },
+    {
+      "cell": [
+        "Dept_000",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 25, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 25,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_000",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 26, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 26,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_000",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 27, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 27,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_000",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 28, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 28,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_000",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 29, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 29,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 30, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 30,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 31, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 31,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 32, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 32,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 33, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 33,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_001",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 34, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 34,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 35, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 35,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 36, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 36,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 37, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 37,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 38, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 38,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_002",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 39, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 39,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 40, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 40,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 41, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 41,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 42, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 42,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 43, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 43,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_003",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 44, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 44,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 45, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 45,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 46, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 46,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H17"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 47, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 47,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H18"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 48, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 48,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_004",
+        "H19"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 49, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 49,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H5"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 50, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 50,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 51, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 51,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 52, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 52,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 53, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 53,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_005",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 54, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 54,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 55, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 55,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 56, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 56,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 57, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 57,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 58, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 58,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_006",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 59, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 59,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 60, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 60,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 61, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 61,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 62, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 62,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 63, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 63,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_007",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 64, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 64,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 65, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 65,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 66, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 66,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 67, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 67,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 68, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 68,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_008",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 69, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 69,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 70, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 70,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 71, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 71,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 72, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 72,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 73, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 73,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_009",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 74, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 74,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 75, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 75,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 76, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 76,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 77, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 77,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 78, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 78,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_010",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 79, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 79,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H5"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 80, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 80,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 81, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 81,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 82, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 82,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 83, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 83,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_011",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 84, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 84,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 85, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 85,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 86, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 86,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 87, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 87,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 88, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 88,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_012",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 89, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 89,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 90, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 90,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 91, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 91,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 92, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 92,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 93, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 93,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_013",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 94, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 94,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 95, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 95,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 96, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 96,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 97, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 97,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 98, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 98,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_014",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 99, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 99,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 100, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 100,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 101, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 101,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 102, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 102,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 103, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 103,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_015",
+        "H17"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 104, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 104,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H4"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 105, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 105,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H5"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 106, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 106,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 107, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 107,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 108, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 108,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_016",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 109, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 109,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 110, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 110,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 111, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 111,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 112, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 112,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 113, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 113,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_017",
+        "H9"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 114, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 114,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 115, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 115,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 116, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 116,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 117, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 117,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 118, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 118,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_018",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 119, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 119,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H4"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 120, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 120,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H5"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 121, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 121,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H6"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 122, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 122,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H7"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 123, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 123,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_019",
+        "H8"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 124, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 124,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H10"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 125, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 125,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H11"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 126, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 126,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 127, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 127,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 128, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 128,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_020",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 129, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 129,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 130, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 130,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 131, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 131,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 132, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 132,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H17"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 133, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 133,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_021",
+        "H18"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 134, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 134,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 135, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 135,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 136, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 136,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 137, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 137,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H17"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 138, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 138,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_022",
+        "H18"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 139, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 139,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H12"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 140, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 140,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H13"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 141, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 141,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H14"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 142, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 142,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H15"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 143, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 143,
+      "score": 0.04400000000000001
+    },
+    {
+      "cell": [
+        "Dept_023",
+        "H16"
+      ],
+      "evidence_json": "{\"anomaly_score\": 0.0, \"automatic_edit_applied\": false, \"candidate_confidence\": 0.11000000000000001, \"candidate_origin\": \"none\", \"final_rank\": 144, \"function_compatibility\": \"passed\", \"group_id\": \"\", \"group_propagated\": 0, \"group_reason\": \"role_function_or_template_gate\", \"group_size\": 0, \"group_state\": \"not_applicable\", \"header_role_penalty\": 0.0, \"local_template_residual\": 0.0, \"model_version\": \"v5.1.1-development\", \"template_dominance\": 0.8, \"template_margin\": 0.6, \"workbook_gate\": \"abstained\"}",
+      "rank": 144,
+      "score": 0.04400000000000001
+    }
+  ],
+  "repair_policy": "structural",
+  "search": {
+    "binding": "8cc8e2c5ac5554c75ff472c5b7ffaf8a758f583562cd59a65fd8fe9b50212b12",
+    "candidate_cells": 24,
+    "complete": true,
+    "engine": "independent_integer_bounds",
+    "evaluated": 1,
+    "fallback_reason": "",
+    "preparation_evaluations": 50,
+    "pruned_states": 16777215,
+    "solutions_seen": 1,
+    "space_size": 16777216,
+    "status": "unique_solution",
+    "terminals": [
+      {
+        "constraint": 0,
+        "prefix": [
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": 0,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "constraint": -1,
+        "prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "visited": 49
+  }
+}

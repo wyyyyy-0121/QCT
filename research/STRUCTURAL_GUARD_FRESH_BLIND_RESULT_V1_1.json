@@ -1,0 +1,100 @@
+{
+  "protocol": "structural_guard_fresh_blind_result_v1_1",
+  "models": {
+    "v4_r1": {
+      "summary": {
+        "repair_cases": 180,
+        "repair_error_cells": 2190,
+        "repair_macro_ap": 0.5624065011813739,
+        "exact_candidate_coverage": 0.09634703196347032,
+        "candidate_location_precision": 0.10383333333333333,
+        "control_workbook_candidate_fpr": 1.0,
+        "ambiguous_workbook_candidate_rate": 1.0,
+        "accepted_group_exact_coverage": 0.0,
+        "accepted_group_precision": null,
+        "unsafe_accepted_groups": 0,
+        "accepted_groups_repair_cases": 0
+      }
+    },
+    "v5_v1": {
+      "summary": {
+        "repair_cases": 180,
+        "repair_error_cells": 2190,
+        "repair_macro_ap": 0.36516259647199706,
+        "exact_candidate_coverage": 0.0410958904109589,
+        "candidate_location_precision": 0.1,
+        "control_workbook_candidate_fpr": 1.0,
+        "ambiguous_workbook_candidate_rate": 1.0,
+        "accepted_group_exact_coverage": 0.0,
+        "accepted_group_precision": null,
+        "unsafe_accepted_groups": 0,
+        "accepted_groups_repair_cases": 0
+      }
+    },
+    "v5_r2": {
+      "summary": {
+        "repair_cases": 180,
+        "repair_error_cells": 2190,
+        "repair_macro_ap": 0.36516259647199706,
+        "exact_candidate_coverage": 0.0273972602739726,
+        "candidate_location_precision": 0.05263157894736842,
+        "control_workbook_candidate_fpr": 1.0,
+        "ambiguous_workbook_candidate_rate": 1.0,
+        "accepted_group_exact_coverage": 0.0,
+        "accepted_group_precision": null,
+        "unsafe_accepted_groups": 0,
+        "accepted_groups_repair_cases": 0
+      }
+    }
+  },
+  "comparisons": {
+    "v4_r1": {
+      "macro_ap": {
+        "delta": -0.19724390470937686,
+        "ci95_lower": -0.21523145334144533,
+        "ci95_upper": -0.18055085141574767
+      },
+      "gates": {
+        "macro AP delta CI lower bound > 0": false,
+        "exact repair coverage non-inferiority >= -5pp": false,
+        "control workbook FPR <= comparator": true,
+        "control workbook FPR <= 20%": false,
+        "accepted-group exact coverage >= 50%": false,
+        "accepted-group precision >= 95%": false,
+        "zero unsafe accepted groups": true
+      },
+      "passed": false
+    },
+    "v5_v1": {
+      "macro_ap": {
+        "delta": 0.0,
+        "ci95_lower": 0.0,
+        "ci95_upper": 0.0
+      },
+      "gates": {
+        "macro AP delta CI lower bound > 0": false,
+        "exact repair coverage non-inferiority >= -5pp": true,
+        "control workbook FPR <= comparator": true,
+        "control workbook FPR <= 20%": false,
+        "accepted-group exact coverage >= 50%": false,
+        "accepted-group precision >= 95%": false,
+        "zero unsafe accepted groups": true
+      },
+      "passed": false
+    }
+  },
+  "decision": {
+    "status": "DO_NOT_PROMOTE",
+    "reason": "R2 failed one or more preregistered safety or utility gates."
+  },
+  "integrity": {
+    "public_sha256": "2d965ec19c270fae2fc26ec6c2455d3376a9180dcb6dab49c7e3378413dfc1e4",
+    "secret_sha256": "13036e0c2da8430e5777637b62a522b3c48a7eb32680e83e5e72ce9a420b7bd7",
+    "prediction_locks": {
+      "v4_r1": "fdbe09eada0796293c36575a53275519540e39b969b2281fa57f8439e18c04bd",
+      "v5_v1": "4e2f0f6c0696a1382b50c38c5398ef4e2c894238a49908f01624836aa63df14f",
+      "v5_r2": "f204b2653a101efa78d883898f4fafc06c11adc9a1fbcd486f8943bb1fe70270"
+    },
+    "double_run_identical": true
+  }
+}

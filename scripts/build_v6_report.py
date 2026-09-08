@@ -12,6 +12,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR)); sys.path.insert(0, str(ROOT))
 from build_v6_dataset import write_xlsx
+
 from formulaguard.workbook import WorkbookModel
 
 
@@ -34,9 +35,9 @@ def main():
         markdown.append(f"| {method} | {row['top1']:.4f} | {row['top5']:.4f} | {row['macro_top5']:.4f} | {row['mrr']:.4f} | {row['repair_exact']:.4f} |")
     markdown.extend([
         "", f"Main-variant Top-5 failures recorded: {len(failures)}.", "",
-        "All figures and tables are regenerated from summary.json, by_error.csv, "
+        ("All figures and tables are regenerated from summary.json, by_error.csv, "
         "by_stratum.csv, and failure_cases.csv. Formula text is exported as inline "
-        "text, never as executable workbook formulas.",
+        "text, never as executable workbook formulas."),
     ])
     (args.results / "REPORT.md").write_text("\n".join(markdown) + "\n", encoding="utf-8")
 
