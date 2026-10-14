@@ -1,0 +1,90 @@
+[
+  {
+    "name": "forepbench_readme_correctcase",
+    "url": "https://api.github.com/repos/microsoft/prose-benchmarks/contents/FoRepBench/Readme.md?ref=d17e278092c59ec6faaa2d88730bdcbe48bb95f2",
+    "http_status": "200",
+    "effective_url": "https://api.github.com/repos/microsoft/prose-benchmarks/contents/FoRepBench/Readme.md?ref=d17e278092c59ec6faaa2d88730bdcbe48bb95f2",
+    "curl_exit_code": 0,
+    "size_bytes": 2216,
+    "sha256": "3ba9355a6b23d1f171aa9aaa4b205138fe06787c3a1490b8328b6d50969b8ee0",
+    "retrieved_at": "2026-10-14T05:24:05.608125+00:00",
+    "error": ""
+  },
+  {
+    "name": "spreadsheetbench_license_tree",
+    "url": "https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench/git/trees/49b73a94775fb489063f60ca1865e3a650079a79?recursive=1",
+    "http_status": "200",
+    "effective_url": "https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench/git/trees/49b73a94775fb489063f60ca1865e3a650079a79?recursive=1",
+    "curl_exit_code": 0,
+    "size_bytes": 11740,
+    "sha256": "8663f9d5c73a36d64ea737c6f1ba8836fc017e31bcb1b162431d178f18d0f590",
+    "retrieved_at": "2026-10-14T05:24:05.554509+00:00",
+    "error": ""
+  },
+  {
+    "name": "excelint_tree",
+    "url": "https://api.github.com/repos/ExceLint/ExceLint/git/trees/master?recursive=1",
+    "http_status": "200",
+    "effective_url": "https://api.github.com/repos/ExceLint/ExceLint/git/trees/master?recursive=1",
+    "curl_exit_code": 0,
+    "size_bytes": 68246,
+    "sha256": "5de64167450bbadca95336f8013e1a457dcbf36482519fd9fe6643c0667e1763",
+    "retrieved_at": "2026-10-14T05:24:05.836979+00:00",
+    "error": ""
+  },
+  {
+    "name": "ssb2_hf_page",
+    "url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2",
+    "http_status": "000",
+    "effective_url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:24:12.909336+00:00",
+    "error": "curl: (28) Connection timed out after 8002 milliseconds\n"
+  },
+  {
+    "name": "ssb2_hf_api_ipv4",
+    "url": "https://huggingface.co/api/datasets/KAKA22/SpreadsheetBench-v2/revision/main",
+    "http_status": "000",
+    "effective_url": "https://huggingface.co/api/datasets/KAKA22/SpreadsheetBench-v2/revision/main",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:24:13.566823+00:00",
+    "error": "curl: (28) Connection timed out after 8002 milliseconds\n"
+  },
+  {
+    "name": "ssb2_hf_card_ipv4",
+    "url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2/resolve/main/README.md?download=true",
+    "http_status": "000",
+    "effective_url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2/resolve/main/README.md?download=true",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:24:13.619671+00:00",
+    "error": "curl: (28) Connection timed out after 8002 milliseconds\n"
+  },
+  {
+    "name": "forepbench_paper",
+    "url": "https://kdd-eval-workshop.github.io/genai-evaluation-kdd2025/assets/papers/Submission%2033.pdf",
+    "http_status": "200",
+    "effective_url": "https://kdd-eval-workshop.github.io/genai-evaluation-kdd2025/assets/papers/Submission%2033.pdf",
+    "curl_exit_code": 0,
+    "size_bytes": 1010101,
+    "sha256": "c6575818c5b72ac2de7c39b1ce3800e84cbcf82474ff71182d6986117b2e3193",
+    "retrieved_at": "2026-10-14T05:24:10.966544+00:00",
+    "error": ""
+  },
+  {
+    "name": "corpus_format",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/format/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/format/",
+    "curl_exit_code": 0,
+    "size_bytes": 32240,
+    "sha256": "2d5cb061e841b4e2c78b4abda15d205a41192ee32816da55f3fc585799292fa1",
+    "retrieved_at": "2026-10-14T05:24:12.011836+00:00",
+    "error": ""
+  }
+]

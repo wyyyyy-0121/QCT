@@ -1,0 +1,56 @@
+{
+  "completed_at": "2026-10-14T05:26:58.992222+00:00",
+  "model": "V5.1.9-development",
+  "scope": "Enron historical revealed regression; no independent blind claim",
+  "all_tasks_completed": false,
+  "summaries": {
+    "v4": {
+      "original_events": 36,
+      "eligible_events": 30,
+      "successfully_predicted_events": 26,
+      "execution_statuses": {
+        "completed": 21,
+        "timeout": 4
+      },
+      "top1_hits": 7,
+      "top5_hits": 13,
+      "top10_hits": 17,
+      "top1_rate_all_eligible": 0.23333333333333334,
+      "top5_rate_all_eligible": 0.43333333333333335,
+      "top10_rate_all_eligible": 0.5666666666666667,
+      "top1_rate_successful_inputs": 0.2692307692307692,
+      "top5_rate_successful_inputs": 0.5,
+      "top10_rate_successful_inputs": 0.6538461538461539,
+      "search_statuses": {
+        "no_approved_constraints": 21
+      },
+      "accepted_cells_across_unique_workbooks": 8,
+      "repair_precision": null,
+      "repair_precision_unavailable_reason": "correct formulas and exhaustive workbook-error truth are absent"
+    },
+    "v511": {
+      "original_events": 36,
+      "eligible_events": 30,
+      "successfully_predicted_events": 29,
+      "execution_statuses": {
+        "completed": 24,
+        "timeout": 1
+      },
+      "top1_hits": 6,
+      "top5_hits": 12,
+      "top10_hits": 16,
+      "top1_rate_all_eligible": 0.2,
+      "top5_rate_all_eligible": 0.4,
+      "top10_rate_all_eligible": 0.5333333333333333,
+      "top1_rate_successful_inputs": 0.20689655172413793,
+      "top5_rate_successful_inputs": 0.41379310344827586,
+      "top10_rate_successful_inputs": 0.5517241379310345,
+      "search_statuses": {
+        "no_approved_constraints": 24
+      },
+      "accepted_cells_across_unique_workbooks": 8,
+      "repair_precision": null,
+      "repair_precision_unavailable_reason": "correct formulas and exhaustive workbook-error truth are absent"
+    }
+  }
+}

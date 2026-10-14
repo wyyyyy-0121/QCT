@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-14T05:03:01.095439+00:00",
+  "model": "V5.1.9-development",
+  "entrypoint": "formulaguard.api.localize(method=\"v5.1.9-development\")",
+  "evaluation_driver": "scripts/evaluate_v519_confirmation.py",
+  "stage": "development",
+  "planned_population": "51 workbooks x 2 backends x 6 modes = 612 diagnoses",
+  "source_root": "/home/ayaka/hybridguard",
+  "compatibility_path": "/home/ayaka/QCT",
+  "python": "/home/ayaka/miniforge3/bin/python3",
+  "python_version": "3.13.13",
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "git_head": "c5a80d4ac0df79735db1dc6d7ffe57270b28c87c",
+  "git_branch": "codex/linux-migration",
+  "command_sequence": [
+    ".venv/bin/python -m scripts.evaluate_v519_confirmation freeze --output \"New version/20261014_v519_current_model/freeze\"",
+    ".venv/bin/python -m scripts.evaluate_v519_confirmation build --stage development --lock \"New version/20261014_v519_current_model/freeze/source_lock.json\" --output \"New version/20261014_v519_current_model/release\"",
+    ".venv/bin/python -m scripts.evaluate_v519_confirmation predict --release \"New version/20261014_v519_current_model/release\" --lock \"New version/20261014_v519_current_model/freeze/source_lock.json\" --output \"New version/20261014_v519_current_model/predictions\" --workers 4",
+    ".venv/bin/python -m scripts.evaluate_v519_confirmation score --release \"New version/20261014_v519_current_model/release\" --lock \"New version/20261014_v519_current_model/freeze/source_lock.json\" --predictions \"New version/20261014_v519_current_model/predictions\" --output \"New version/20261014_v519_current_model/score\" --workers 4"
+  ]
+}

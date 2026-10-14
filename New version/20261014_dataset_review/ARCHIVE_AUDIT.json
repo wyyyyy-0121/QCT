@@ -1,0 +1,248 @@
+{
+  "audited_at": "2026-10-14T05:48:07.578080+00:00",
+  "packages": [
+    {
+      "package": "EUSES_modified.zip",
+      "path": "archives/EUSES_modified.zip",
+      "sha256": "3701d4d322dc057d166be0aa4104284a701614174ac8f4ab852616df4127c3d4",
+      "compressed_bytes": 53954933,
+      "uncompressed_bytes": 201794092,
+      "crc_verified": true,
+      "files": 2766,
+      "file_extensions": {
+        ".txt": 1,
+        ".properties": 705,
+        ".xlsx": 2,
+        ".xls": 2058
+      },
+      "workbook_files": 2060,
+      "annotation_files": 705,
+      "resolved_workbook_references": 705,
+      "missing_workbook_references": [],
+      "faulty_cell_labels": 705,
+      "faults_per_annotation": {
+        "min": 1,
+        "median": 1,
+        "max": 1
+      },
+      "fault_type_counts": {
+        "RFR": 61,
+        "CRR": 133,
+        "CRS": 69,
+        "AOR": 140,
+        "FRC": 107,
+        "FFR": 95,
+        "CRP": 81,
+        "ROR": 19
+      },
+      "oracle_mistake_true_flags": 0,
+      "keys_with_formula_in_name": [],
+      "truth_note": "Expected output values do not supply correct source formulas; mapping to a clean base workbook still requires verification.",
+      "readme_paths": [
+        "EUSES/README.txt"
+      ],
+      "license_paths": []
+    },
+    {
+      "package": "Info1.zip",
+      "path": "archives/Info1.zip",
+      "sha256": "b889174ac36c7ddc66207dff7e53e831c804802723dcd8b75b04a1f70368f9e3",
+      "compressed_bytes": 8494426,
+      "uncompressed_bytes": 13653410,
+      "crc_verified": true,
+      "files": 238,
+      "file_extensions": {
+        ".properties": 119,
+        ".xls": 60,
+        ".xlsx": 59
+      },
+      "workbook_files": 119,
+      "annotation_files": 119,
+      "resolved_workbook_references": 119,
+      "missing_workbook_references": [],
+      "faulty_cell_labels": 5609,
+      "faults_per_annotation": {
+        "min": 1,
+        "median": 1,
+        "max": 404
+      },
+      "fault_type_counts": {
+        "blank": 5609
+      },
+      "oracle_mistake_true_flags": 0,
+      "keys_with_formula_in_name": [],
+      "truth_note": "Expected output values do not supply correct source formulas; mapping to a clean base workbook still requires verification.",
+      "readme_paths": [],
+      "license_paths": []
+    },
+    {
+      "package": "Integer.zip",
+      "path": "archives/Integer.zip",
+      "sha256": "47d6950a9275e68b4b3c51177893b2a9dbc3053243e30b7eb88c32bbc6829aec",
+      "compressed_bytes": 2337027,
+      "uncompressed_bytes": 3291477,
+      "crc_verified": true,
+      "files": 544,
+      "file_extensions": {
+        ".txt": 1,
+        ".properties": 231,
+        ".xlsx": 275,
+        ".xls": 37
+      },
+      "workbook_files": 312,
+      "annotation_files": 231,
+      "resolved_workbook_references": 231,
+      "missing_workbook_references": [],
+      "faulty_cell_labels": 404,
+      "faults_per_annotation": {
+        "min": 1,
+        "median": 2,
+        "max": 7
+      },
+      "fault_type_counts": {
+        "CRS": 75,
+        "ROR": 39,
+        "CRP": 31,
+        "CRR": 106,
+        "RFR": 80,
+        "AOR": 71,
+        "FFR": 2
+      },
+      "oracle_mistake_true_flags": 0,
+      "keys_with_formula_in_name": [],
+      "truth_note": "Expected output values do not supply correct source formulas; mapping to a clean base workbook still requires verification.",
+      "readme_paths": [
+        "INTEGER/README.txt"
+      ],
+      "license_paths": []
+    },
+    {
+      "package": "Payroll_Gradebook.zip",
+      "path": "archives/Payroll_Gradebook.zip",
+      "sha256": "9195fa8f8322285749d28fcf8ade5ae75492639e3a88fda64f46d8fd0ac94042",
+      "compressed_bytes": 920099,
+      "uncompressed_bytes": 2464506,
+      "crc_verified": true,
+      "files": 698,
+      "file_extensions": {
+        ".properties": 349,
+        ".xls": 349
+      },
+      "workbook_files": 349,
+      "annotation_files": 349,
+      "resolved_workbook_references": 349,
+      "missing_workbook_references": [],
+      "faulty_cell_labels": 1502,
+      "faults_per_annotation": {
+        "min": 1,
+        "median": 4,
+        "max": 8
+      },
+      "fault_type_counts": {
+        "FFR": 534,
+        "RFR": 315,
+        "UKN": 323,
+        "CRP": 330
+      },
+      "oracle_mistake_true_flags": 565,
+      "keys_with_formula_in_name": [],
+      "truth_note": "Expected output values do not supply correct source formulas; mapping to a clean base workbook still requires verification.",
+      "readme_paths": [],
+      "license_paths": []
+    },
+    {
+      "package": "EUSES-double-triple-faults.zip",
+      "path": "sources/modified_euses_multi_fault.source",
+      "sha256": "cd26421c76f0d1b74f35af1ba80ab633ccc98544dfbe7a3743f87d7b4a061ae2",
+      "compressed_bytes": 6844481,
+      "crc_verified": true,
+      "files": 572,
+      "uncompressed_bytes": 22311870,
+      "file_extensions": {
+        ".properties": 217,
+        ".xls": 355
+      }
+    }
+  ],
+  "formula_repair_packages": [
+    {
+      "package": "FoRepBenchmarks.json",
+      "path": "formula_repair_json/FoRepBenchmarks.json",
+      "rows": 618,
+      "git_blob_sha_verified": "7ccf5420923759637fff3009492b7e46d5077b39",
+      "sha256": "7dc32841e8b243653a2325b38fd651415ce00257780815d1785d25ac41fb28fb",
+      "correct_formulas": 618,
+      "faulty_formulas": 618,
+      "nonempty_runtime_error_annotations": 618,
+      "runtime_error_labels": {
+        "#VALUE!": 64,
+        "#N/A": 140,
+        "#REF!": 12,
+        "#NAME?": 158,
+        "#DIV/0!": 244
+      },
+      "specified_faulty_formula_locations": 0,
+      "validity_values": {
+        "True": 618
+      },
+      "keys": [
+        "confidence_level",
+        "correct_formula",
+        "data",
+        "difficulty_level_LLM",
+        "difficulty_level_human",
+        "explanation",
+        "faulty_formula",
+        "is_valid",
+        "runtime_errors",
+        "utterance",
+        "validity_explanation"
+      ],
+      "task_note": "The task supplies an erroneous formula and context; runtime-error annotations are present. It is not a workbook-wide silent-source localization truth set."
+    },
+    {
+      "package": "seed_data.json",
+      "path": "formula_repair_json/seed_data.json",
+      "rows": 59,
+      "git_blob_sha_verified": "68418fe9c1bd896cc3c521243eea9d1bb59de2a1",
+      "sha256": "95adec20d879a05c0f97dcfdb8ff70f6bb50ba0320487f2debe7e853ff22ada1",
+      "correct_formulas": 59,
+      "faulty_formulas": 59,
+      "nonempty_runtime_error_annotations": 59,
+      "runtime_error_labels": {
+        "#N/A": 24,
+        "#REF!": 1,
+        "#VALUE!": 26,
+        "#DIV/0!": 6,
+        "#NAME?": 2
+      },
+      "specified_faulty_formula_locations": 49,
+      "validity_values": {
+        "None": 59
+      },
+      "keys": [
+        "annotator(s) 1",
+        "correct_formula",
+        "correct_formula_info",
+        "data",
+        "faulty_formula",
+        "faulty_formula_cell_location",
+        "faulty_formula_info",
+        "formula_difficulty_level",
+        "id_in_seed_data_file",
+        "localized_data",
+        "localized_opt_id",
+        "localized_output_values",
+        "metadata",
+        "pound_errors",
+        "runtime_errors",
+        "second verdict",
+        "second_verdict",
+        "utterance",
+        "verdict"
+      ],
+      "task_note": "The task supplies an erroneous formula and context; runtime-error annotations are present. It is not a workbook-wide silent-source localization truth set."
+    }
+  ],
+  "scope": "Archive integrity and public annotation metadata only; no model run or workbook formula conversion."
+}

@@ -1,0 +1,10 @@
+# Public downloads stay local; publish source receipts and audit summaries.
+/20261014_dataset_review/archives/
+/20261014_dataset_review/sources/
+/20261014_dataset_review/formula_repair_json/
+/followup_20261014/source_discovery/receipts/
+/followup_20261014/source_discovery/receipts_v2/
+
+# These directories contain published scores, not disposable outputs.
+!/followup_20261014/baseline/results/
+!/followup_20261014/baseline/results/**

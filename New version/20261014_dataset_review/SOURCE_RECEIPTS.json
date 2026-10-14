@@ -1,0 +1,211 @@
+[
+  {
+    "name": "enron",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/enron-error-corpus/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/enron-error-corpus/",
+    "curl_exit_code": 0,
+    "size_bytes": 31333,
+    "sha256": "c4fc10e627c341a4662b5fcbc829b7ea22095e4cbb245fc920e3691cff29eae9",
+    "retrieved_at": "2026-10-14T05:13:46.053647+00:00",
+    "error": ""
+  },
+  {
+    "name": "corpora_overview",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-overview/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-overview/",
+    "curl_exit_code": 0,
+    "size_bytes": 33073,
+    "sha256": "0a769a90e197f6b31e79c5236c228acca177fc1fd6cf1e5a048ba1e98297bc5f",
+    "retrieved_at": "2026-10-14T05:13:45.799028+00:00",
+    "error": ""
+  },
+  {
+    "name": "modified_euses",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/euses/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/euses/",
+    "curl_exit_code": 0,
+    "size_bytes": 33046,
+    "sha256": "1473291b6870e1a47575f5f4232a4d12527f4a35c1ff69f80c9508e3b0f2ae78",
+    "retrieved_at": "2026-10-14T05:13:45.871695+00:00",
+    "error": ""
+  },
+  {
+    "name": "info1",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/info1/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/info1/",
+    "curl_exit_code": 0,
+    "size_bytes": 32047,
+    "sha256": "188737b04e05705e59cffedeeb68a1c0657c131b600b6261e45c7a7fc6bc7ce8",
+    "retrieved_at": "2026-10-14T05:13:46.003580+00:00",
+    "error": ""
+  },
+  {
+    "name": "integer",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/integer-corpus/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/integer-corpus/",
+    "curl_exit_code": 0,
+    "size_bytes": 32533,
+    "sha256": "1487de5dcf782b0a648f12dfb39cf51ae8aaf78c76bc9bf1f73862dfbd7cb056",
+    "retrieved_at": "2026-10-14T05:13:45.939087+00:00",
+    "error": ""
+  },
+  {
+    "name": "corpora_comparison",
+    "url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-comparison/",
+    "http_status": "200",
+    "effective_url": "https://spreadsheets.sai.tugraz.at/index.php/corpora-for-benchmarking/corpora-comparison/",
+    "curl_exit_code": 0,
+    "size_bytes": 47588,
+    "sha256": "535bac5c3d3f5d63ac348a1ed611e898fdf0f475f1fd8f128ea959ffa17dee95",
+    "retrieved_at": "2026-10-14T05:13:46.040052+00:00",
+    "error": ""
+  },
+  {
+    "name": "forepbench_readme",
+    "url": "https://raw.githubusercontent.com/microsoft/prose-benchmarks/d17e278092c59ec6faaa2d88730bdcbe48bb95f2/FoRepBench/README.md",
+    "http_status": "000",
+    "effective_url": "https://raw.githubusercontent.com/microsoft/prose-benchmarks/d17e278092c59ec6faaa2d88730bdcbe48bb95f2/FoRepBench/README.md",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:21.018206+00:00",
+    "error": "curl: (28) Operation timed out after 35001 milliseconds with 0 bytes received\n"
+  },
+  {
+    "name": "forepbench_license",
+    "url": "https://raw.githubusercontent.com/microsoft/prose-benchmarks/d17e278092c59ec6faaa2d88730bdcbe48bb95f2/LICENSE",
+    "http_status": "000",
+    "effective_url": "https://raw.githubusercontent.com/microsoft/prose-benchmarks/d17e278092c59ec6faaa2d88730bdcbe48bb95f2/LICENSE",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:21.018073+00:00",
+    "error": "curl: (28) Operation timed out after 35001 milliseconds with 0 bytes received\n"
+  },
+  {
+    "name": "forepbench_metadata",
+    "url": "https://api.github.com/repos/microsoft/prose-benchmarks/contents/FoRepBench?ref=d17e278092c59ec6faaa2d88730bdcbe48bb95f2",
+    "http_status": "200",
+    "effective_url": "https://api.github.com/repos/microsoft/prose-benchmarks/contents/FoRepBench?ref=d17e278092c59ec6faaa2d88730bdcbe48bb95f2",
+    "curl_exit_code": 0,
+    "size_bytes": 1940,
+    "sha256": "0827f7c7b553387787ae2d33f80631ded920f33d0d077d764ff5626e6a2ee4e9",
+    "retrieved_at": "2026-10-14T05:13:46.680199+00:00",
+    "error": ""
+  },
+  {
+    "name": "spreadsheetbench_readme",
+    "url": "https://raw.githubusercontent.com/RUCKBReasoning/SpreadsheetBench/49b73a94775fb489063f60ca1865e3a650079a79/README.md",
+    "http_status": "000",
+    "effective_url": "https://raw.githubusercontent.com/RUCKBReasoning/SpreadsheetBench/49b73a94775fb489063f60ca1865e3a650079a79/README.md",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:21.019935+00:00",
+    "error": "curl: (28) Operation timed out after 35000 milliseconds with 0 bytes received\n"
+  },
+  {
+    "name": "spreadsheetbench_license",
+    "url": "https://raw.githubusercontent.com/RUCKBReasoning/SpreadsheetBench/49b73a94775fb489063f60ca1865e3a650079a79/LICENSE",
+    "http_status": "000",
+    "effective_url": "https://raw.githubusercontent.com/RUCKBReasoning/SpreadsheetBench/49b73a94775fb489063f60ca1865e3a650079a79/LICENSE",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:21.078384+00:00",
+    "error": "curl: (28) Operation timed out after 35000 milliseconds with 0 bytes received\n"
+  },
+  {
+    "name": "spreadsheetbench2_metadata",
+    "url": "https://huggingface.co/api/datasets/KAKA22/SpreadsheetBench-v2",
+    "http_status": "000",
+    "effective_url": "https://huggingface.co/api/datasets/KAKA22/SpreadsheetBench-v2",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:21.079317+00:00",
+    "error": "curl: (28) Connection timed out after 35001 milliseconds\n"
+  },
+  {
+    "name": "spreadsheetbench2_card",
+    "url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2/raw/main/README.md",
+    "http_status": "000",
+    "effective_url": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2/raw/main/README.md",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:21.689641+00:00",
+    "error": "curl: (28) Connection timed out after 35001 milliseconds\n"
+  },
+  {
+    "name": "spreadsheetbench2_readme",
+    "url": "https://raw.githubusercontent.com/RUCKBReasoning/SpreadsheetBench-2/main/README.md",
+    "http_status": "200",
+    "effective_url": "https://raw.githubusercontent.com/RUCKBReasoning/SpreadsheetBench-2/main/README.md",
+    "curl_exit_code": 0,
+    "size_bytes": 5834,
+    "sha256": "061160e8a1d02320c30dde5b63ea5e3108b0c53f21881f0169512ee12ad748de",
+    "retrieved_at": "2026-10-14T05:14:21.683938+00:00",
+    "error": ""
+  },
+  {
+    "name": "spreadsheetbench2_paper",
+    "url": "https://arxiv.org/abs/2606.29955",
+    "http_status": "200",
+    "effective_url": "https://arxiv.org/abs/2606.29955",
+    "curl_exit_code": 0,
+    "size_bytes": 44246,
+    "sha256": "2108cec897f5a2ea8c46460bd587c322e270b9a3e3c82bad62859b9f319b7431",
+    "retrieved_at": "2026-10-14T05:14:21.905039+00:00",
+    "error": ""
+  },
+  {
+    "name": "excelint_readme",
+    "url": "https://raw.githubusercontent.com/ExceLint/ExceLint/master/README.md",
+    "http_status": "000",
+    "effective_url": "https://raw.githubusercontent.com/ExceLint/ExceLint/master/README.md",
+    "curl_exit_code": 28,
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrieved_at": "2026-10-14T05:14:56.028627+00:00",
+    "error": "curl: (28) Operation timed out after 35000 milliseconds with 0 bytes received\n"
+  },
+  {
+    "name": "lamirage_repo",
+    "url": "https://api.github.com/repos/microsoft/LaMirage",
+    "http_status": "404",
+    "effective_url": "https://api.github.com/repos/microsoft/LaMirage",
+    "curl_exit_code": 0,
+    "size_bytes": 118,
+    "sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9",
+    "retrieved_at": "2026-10-14T05:14:21.694783+00:00",
+    "error": ""
+  },
+  {
+    "name": "forepbench_current_repo",
+    "url": "https://api.github.com/repos/microsoft/prose-benchmarks",
+    "http_status": "200",
+    "effective_url": "https://api.github.com/repos/microsoft/prose-benchmarks",
+    "curl_exit_code": 0,
+    "size_bytes": 6721,
+    "sha256": "854092234859a2c0a3c814c2fa76810764af28fa8e2824bba8d5074fdb977292",
+    "retrieved_at": "2026-10-14T05:14:21.697833+00:00",
+    "error": ""
+  },
+  {
+    "name": "spreadsheetbench_current_repo",
+    "url": "https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench",
+    "http_status": "200",
+    "effective_url": "https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench",
+    "curl_exit_code": 0,
+    "size_bytes": 6855,
+    "sha256": "2bc34c3d2d84b5b05d4502320904b52639126b470a2b0397a6d58820b8e42d22",
+    "retrieved_at": "2026-10-14T05:14:22.327874+00:00",
+    "error": ""
+  }
+]

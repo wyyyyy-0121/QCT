@@ -1,0 +1,153 @@
+{
+  "written_at": "2026-10-14T05:17:18.066185+00:00",
+  "model": "V5.1.9-development",
+  "scope": "previously revealed Enron retrospective regression, not a new held-out dataset",
+  "source_lock": "/home/ayaka/hybridguard/New version/20261014_v519_current_model/freeze/source_lock.json",
+  "source_lock_sha256": "73c58cf73ad03110527ec7e7f3e35dbea7d56f4795f32f7989946700116b2c2e",
+  "original_events": 36,
+  "preincluded_events": 30,
+  "preexcluded_events": 6,
+  "unique_workbooks": 25,
+  "backends": [
+    "v4",
+    "v511"
+  ],
+  "workers": 4,
+  "timeout_seconds_per_workbook_and_backend": 180,
+  "documents": [],
+  "approvals": {},
+  "inputs": [
+    {
+      "id": "6c4be369a172ff4fe0bb",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/01.xlsx",
+      "sha256": "c9770a5dfe9560a6ee63b21faa87569b2d3f306899c3eb5b15de79ab1a7b14d5"
+    },
+    {
+      "id": "848397e764bcf03a7650",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/02.xlsx",
+      "sha256": "be0aff7f1cc93d8c57889d765cb335d501eab2a25bf4c5b6df6f27a64e657587"
+    },
+    {
+      "id": "ac4b129b36772ae1dce5",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/03.xlsx",
+      "sha256": "a9c9e10ebb0ad99784551c562737a1e7533035c286f4fbe3e951bf9ef4084aa5"
+    },
+    {
+      "id": "efa33ee3075d918ee67a",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/04.xlsx",
+      "sha256": "4d3f1e3b200396ff5b39f8c33521d4abd0013fef61fe883397a6cb18fdd5535d"
+    },
+    {
+      "id": "373d7a1c5666e33abf40",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/05.xlsx",
+      "sha256": "e9a440cf7ddfc1e7a880e06e74ba33bc69c2acf6d76762153b3a52ef489891ec"
+    },
+    {
+      "id": "0ba99b5ace34e9b79752",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/06.xlsx",
+      "sha256": "9a30564b2958c7e055ca859ddd1a3928547e9db37b115b02f3af45b851bee5a4"
+    },
+    {
+      "id": "abb175795ab87ce30b4b",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/07.xlsx",
+      "sha256": "5473462fd2615710c820719f8d02daf218d505e78f231e48f832b7b2b842f6cb"
+    },
+    {
+      "id": "6429fc9a9c4a424250c1",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/08.xlsx",
+      "sha256": "7550674fe60d05e2dd82cab07c7325f36fc035d44ff2992bb605d4da59b5606a"
+    },
+    {
+      "id": "d0959bbc97c91d3bc5b8",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/09.xlsx",
+      "sha256": "e502915aa9857b12f2dc49b5124be3c6afac23b5591d2780bfe3f40106fa6468"
+    },
+    {
+      "id": "fd0fe83fdfe43bf31f3d",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/10.xlsx",
+      "sha256": "42b91066f9c0d7b133d76010c1ce9236686b9d55a2fd4d162d3acdad01cd74fa"
+    },
+    {
+      "id": "7343228b96ab3b557fab",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/11.xlsx",
+      "sha256": "4312f0815bd8dd8bd50863ba017872316609d2dda7d8e4d029e2a05bbfa0a664"
+    },
+    {
+      "id": "d19364126d0949623703",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/12.xlsx",
+      "sha256": "14dc76fdf1537e96b4c551446a9ac0871732eb9bb433dda24e07f4f4a93bb042"
+    },
+    {
+      "id": "245a1860892d3803f1b9",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/13.xlsx",
+      "sha256": "9f3b087b132008f2ee2ece2d58b78c11c0c08b48800539a7dfae0b5ba826f991"
+    },
+    {
+      "id": "a13cced593b562d250c3",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/16.xlsx",
+      "sha256": "649f370cc580b896c5b640663db844120f3c03b0f446b1836319be58364bddf0"
+    },
+    {
+      "id": "3e6cb925eeb8672f97ea",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/18.xlsx",
+      "sha256": "753b27c5913dc58a0eb73241cab86e9fce4d55802b42e49a76a7beea916b8d6c"
+    },
+    {
+      "id": "f5e5be39af94215748c4",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/19.xlsx",
+      "sha256": "6effeeef77a8d4fe26658fa42c294fcd091a0072895706af163578fe5b3398e2"
+    },
+    {
+      "id": "cae8f5040c8209a9d81c",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/20.xlsx",
+      "sha256": "721026a83543096b27952a66660b406fb7c6fbec3042c265e6f6ecca4cddd3a1"
+    },
+    {
+      "id": "9677b39a142e4e813aa1",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/21.xlsx",
+      "sha256": "4882b9faf14d708ffa99fc67e9010ba83e2be31bb9606acdc5457290db87ce5c"
+    },
+    {
+      "id": "a0201c511ecdd86d6166",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/22.xlsx",
+      "sha256": "1654225608d66567307daa4bd8173a880d6284585ac494e40335b3ad26f90f2e"
+    },
+    {
+      "id": "5d354c6bffaaa85a5666",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/24.xlsx",
+      "sha256": "30632f8c6f12b5f1d3db0a2d18cda7eea88ebaa2587c4f96b021e361fe0e8d3c"
+    },
+    {
+      "id": "cceab54d361ffecf4e5b",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/25.xlsx",
+      "sha256": "d46648a9b3a32260e54506d0cdee4bfb824a78d6c2d118e74ad4b14383ce4c54"
+    },
+    {
+      "id": "efe27c433b60b5646827",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/27.xlsx",
+      "sha256": "bd428570998bf2e8c800248fed9cb1002b7d939d9cbcd8cfbc7b8fba8bc82586"
+    },
+    {
+      "id": "92defcf84780ad90c4a1",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/28.xlsx",
+      "sha256": "ba1123131380ac6ff1736ea813f9971b432795e6441e9079a61c7372fa58ca5e"
+    },
+    {
+      "id": "ddacad945517bf03cb25",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/29.xlsx",
+      "sha256": "1a99c7fa167f33cea58f07506e221bbd3e378a75a86aab0662d4c55cfe430933"
+    },
+    {
+      "id": "1e3c8900de1aee125f52",
+      "path": "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/30.xlsx",
+      "sha256": "6a7dd415414351f775d4f07067d5472b74b08151e2b3d0844f8f1c5d5cfd53e7"
+    }
+  ],
+  "metrics": [
+    "any-labeled-source Top1/Top5/Top10 event hit",
+    "labeled cell recall at 10"
+  ],
+  "denominators": "all 30 preincluded events; timeouts/errors are misses in the conservative rate; successful-input rates are separately reported",
+  "repair_accuracy": "not scored: no correct formulas in the existing manifest",
+  "label_boundary": "workers receive only workbook path/backend; scoring reads cell labels after prediction lock"
+}

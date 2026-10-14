@@ -1,0 +1,301 @@
+{
+  "scope": "Report derivation from completed, previously revealed runs. No model execution or new-data scoring.",
+  "model": "V5.1.9-development",
+  "runtime_python": "3.11.16",
+  "frozen_source_files": 454,
+  "development_stage_seconds": 692.7303486180001,
+  "replayed_certificates": 282,
+  "development_candidates": {
+    "v4": {
+      "formula_cells": 4872,
+      "error_cells": 735,
+      "correct_cells": 4137,
+      "distinct_changed_candidate_pairs": 4143,
+      "distinct_candidate_cells": 4143,
+      "max_distinct_candidates_per_cell": 1,
+      "correct_candidate_pairs": 735,
+      "candidate_precision": 0.1774076755973932,
+      "false_candidate_rate_on_correct_formula_cells": 0.8237853517041335
+    },
+    "v511": {
+      "formula_cells": 4872,
+      "error_cells": 735,
+      "correct_cells": 4137,
+      "distinct_changed_candidate_pairs": 762,
+      "distinct_candidate_cells": 762,
+      "max_distinct_candidates_per_cell": 1,
+      "correct_candidate_pairs": 735,
+      "candidate_precision": 0.9645669291338582,
+      "false_candidate_rate_on_correct_formula_cells": 0.006526468455402465
+    }
+  },
+  "enron_supplement": {
+    "v4": {
+      "attempted_tasks": 25,
+      "completed_workbooks": 21,
+      "timeouts": [
+        "07.xlsx",
+        "09.xlsx",
+        "12.xlsx",
+        "24.xlsx"
+      ],
+      "median_successful_task_seconds": 15.70230013499986,
+      "common_successful_preincluded_events": 26,
+      "top10_hits_on_common_events": 17,
+      "accepted_decisions_with_unknown_correctness": [
+        {
+          "workbook": "03.xlsx",
+          "cell": [
+            "BMSPT066",
+            "J40"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=SUM(J8:J38)",
+          "reason": "stable_copy_template",
+          "group_id": "v512_e1a4e44fcdb8fc1b011994f5755b7ab9eb0e10885ac007ea573e0325ed02e44a",
+          "group_size": 3,
+          "repair_score": 0.7692307692307693,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "03.xlsx",
+          "cell": [
+            "BMSPT066",
+            "H40"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=SUM(H8:H38)",
+          "reason": "stable_copy_template",
+          "group_id": "v512_e1a4e44fcdb8fc1b011994f5755b7ab9eb0e10885ac007ea573e0325ed02e44a",
+          "group_size": 3,
+          "repair_score": 0.7692307692307693,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "03.xlsx",
+          "cell": [
+            "BMSPT066",
+            "I40"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=SUM(I8:I38)",
+          "reason": "stable_copy_template",
+          "group_id": "v512_e1a4e44fcdb8fc1b011994f5755b7ab9eb0e10885ac007ea573e0325ed02e44a",
+          "group_size": 3,
+          "repair_score": 0.7692307692307693,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "21.xlsx",
+          "cell": [
+            "Sheet1 (2)",
+            "E127"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=D127",
+          "reason": "stable_copy_template",
+          "group_id": "v512_97331e31dc3681cfe9af1ac85d56ba9e624c910d70e8431d25c70824a1137946",
+          "group_size": 1,
+          "repair_score": 0.75,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "E37"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=+E36",
+          "reason": "stable_copy_template",
+          "group_id": "v512_3eeec576518c7267f14bd056d35dc028ee503734cf31f93df46e642ba2bf7548",
+          "group_size": 2,
+          "repair_score": 0.9166666666666666,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "F37"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=(D37-E37)+F36",
+          "reason": "stable_copy_template",
+          "group_id": "v512_b191766d1b00cf0abef9921c4d9c9e6d35283bc7f7254a1dc4e10bd639842e15",
+          "group_size": 2,
+          "repair_score": 0.9333333333333333,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "E36"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=+E35",
+          "reason": "stable_copy_template",
+          "group_id": "v512_3eeec576518c7267f14bd056d35dc028ee503734cf31f93df46e642ba2bf7548",
+          "group_size": 2,
+          "repair_score": 0.9166666666666666,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "F36"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=(D36-E36)+F35",
+          "reason": "stable_copy_template",
+          "group_id": "v512_b191766d1b00cf0abef9921c4d9c9e6d35283bc7f7254a1dc4e10bd639842e15",
+          "group_size": 2,
+          "repair_score": 0.9333333333333333,
+          "correctness": "unknown"
+        }
+      ],
+      "all_successful_inputs_unchanged": true
+    },
+    "v511": {
+      "attempted_tasks": 25,
+      "completed_workbooks": 24,
+      "timeouts": [
+        "07.xlsx"
+      ],
+      "median_successful_task_seconds": 1.9951498539999193,
+      "common_successful_preincluded_events": 26,
+      "top10_hits_on_common_events": 16,
+      "accepted_decisions_with_unknown_correctness": [
+        {
+          "workbook": "03.xlsx",
+          "cell": [
+            "BMSPT066",
+            "J40"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=SUM(J8:J38)",
+          "reason": "stable_copy_template",
+          "group_id": "v512_e1a4e44fcdb8fc1b011994f5755b7ab9eb0e10885ac007ea573e0325ed02e44a",
+          "group_size": 3,
+          "repair_score": 0.7692307692307693,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "03.xlsx",
+          "cell": [
+            "BMSPT066",
+            "H40"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=SUM(H8:H38)",
+          "reason": "stable_copy_template",
+          "group_id": "v512_e1a4e44fcdb8fc1b011994f5755b7ab9eb0e10885ac007ea573e0325ed02e44a",
+          "group_size": 3,
+          "repair_score": 0.7692307692307693,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "03.xlsx",
+          "cell": [
+            "BMSPT066",
+            "I40"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=SUM(I8:I38)",
+          "reason": "stable_copy_template",
+          "group_id": "v512_e1a4e44fcdb8fc1b011994f5755b7ab9eb0e10885ac007ea573e0325ed02e44a",
+          "group_size": 3,
+          "repair_score": 0.7692307692307693,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "21.xlsx",
+          "cell": [
+            "Sheet1 (2)",
+            "E127"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=D127",
+          "reason": "stable_copy_template",
+          "group_id": "v512_97331e31dc3681cfe9af1ac85d56ba9e624c910d70e8431d25c70824a1137946",
+          "group_size": 1,
+          "repair_score": 0.75,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "E36"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=+E35",
+          "reason": "stable_copy_template",
+          "group_id": "v512_3eeec576518c7267f14bd056d35dc028ee503734cf31f93df46e642ba2bf7548",
+          "group_size": 2,
+          "repair_score": 0.9166666666666666,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "F36"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=(D36-E36)+F35",
+          "reason": "stable_copy_template",
+          "group_id": "v512_b191766d1b00cf0abef9921c4d9c9e6d35283bc7f7254a1dc4e10bd639842e15",
+          "group_size": 2,
+          "repair_score": 0.9333333333333333,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "E37"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=+E36",
+          "reason": "stable_copy_template",
+          "group_id": "v512_3eeec576518c7267f14bd056d35dc028ee503734cf31f93df46e642ba2bf7548",
+          "group_size": 2,
+          "repair_score": 0.9166666666666666,
+          "correctness": "unknown"
+        },
+        {
+          "workbook": "25.xlsx",
+          "cell": [
+            "external",
+            "F37"
+          ],
+          "state": "accepted",
+          "accepted_formula": "=(D37-E37)+F36",
+          "reason": "stable_copy_template",
+          "group_id": "v512_b191766d1b00cf0abef9921c4d9c9e6d35283bc7f7254a1dc4e10bd639842e15",
+          "group_size": 2,
+          "repair_score": 0.9333333333333333,
+          "correctness": "unknown"
+        }
+      ],
+      "all_successful_inputs_unchanged": true
+    }
+  },
+  "enron_timeout_seconds": 180,
+  "source_sha256": {
+    "20261014_v519_current_model/METRICS_SUMMARY.json": "687e00e99f96f3f96871bd981c491dfe8378a1fff554dd41f570d48e0a2ae79e",
+    "20261014_v519_current_model/score/result.json": "7ae378c9561128b776bdb785087b7a9a1bbd747d8bb3646c1c687aa068f0dca2",
+    "20261014_v519_current_model/freeze/source_lock.json": "73c58cf73ad03110527ec7e7f3e35dbea7d56f4795f32f7989946700116b2c2e",
+    "20261014_v519_current_model/predictions/prediction_lock.json": "eb9d38880406f4d8e6d7472a02a1f9973ab465eba0cf0528c4471a35c1a0f5e7",
+    "20261014_v519_current_model/HISTORICAL_COMPARISON.json": "5c6d940ec85b679d3b22d80ef773fca27bb101c5d125c6264ed6ca2e30d14e26",
+    "20261014_v519_current_model/EXECUTION.json": "e1b06f4427fd380b3c46df379dc58e6b945f3a9f7919fa2c4216212e19145c76",
+    "20261014_v519_enron_retrospective/RESULT.json": "b3fac97e8037907c6247b17ac1de3b46077054c45df5442abbb359c0b05af39e",
+    "20261014_v519_enron_retrospective/EVENT_SCORES.csv": "67b7ccc7dd59e7cf5d80071b2b75b6b1ed2378526b3b492f03d3a9ce6eb6b624",
+    "20261014_v519_enron_retrospective/PREDICTION_LOCK.json": "4a39aee3fd0745eb9aa33109cacd0dde45ab4124cc197a3d82de7d10a60c7200",
+    "20261014_v519_enron_retrospective/PROTOCOL.json": "e8b892fb4460fdf5351ecbff9c71f1298f49bb3b10701bbfc7dbc075b5d2387e",
+    "20261014_dataset_review/ARCHIVE_AUDIT.json": "18ef4643b734948021a9f53b0d78260e3ab5bc50cd300c4fd92bcd1210d07c21"
+  }
+}

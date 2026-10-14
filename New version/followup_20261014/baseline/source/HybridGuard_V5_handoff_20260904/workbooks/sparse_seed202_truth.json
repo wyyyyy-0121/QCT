@@ -1,0 +1,471 @@
+{
+  "protocol": "multi_scenario_formula_error_suite_v2",
+  "scenario": "sparse_seed202",
+  "family": "sparse",
+  "seed": 202,
+  "generated_cells": 75000,
+  "formula_cells": 7505,
+  "error_cells": 30,
+  "error_rate": 0.003997335109926716,
+  "parallel_sheets": [
+    "North",
+    "Central",
+    "East",
+    "South",
+    "West"
+  ],
+  "groups": [
+    {
+      "group_id": "sparse-202-001",
+      "kind": "singleton",
+      "cells": [
+        "Central!I897"
+      ]
+    },
+    {
+      "group_id": "sparse-202-002",
+      "kind": "singleton",
+      "cells": [
+        "North!I34"
+      ]
+    },
+    {
+      "group_id": "sparse-202-003",
+      "kind": "singleton",
+      "cells": [
+        "East!I1046"
+      ]
+    },
+    {
+      "group_id": "sparse-202-004",
+      "kind": "singleton",
+      "cells": [
+        "North!I676"
+      ]
+    },
+    {
+      "group_id": "sparse-202-005",
+      "kind": "singleton",
+      "cells": [
+        "West!I242"
+      ]
+    },
+    {
+      "group_id": "sparse-202-006",
+      "kind": "singleton",
+      "cells": [
+        "South!I962"
+      ]
+    },
+    {
+      "group_id": "sparse-202-007",
+      "kind": "singleton",
+      "cells": [
+        "South!I1151"
+      ]
+    },
+    {
+      "group_id": "sparse-202-008",
+      "kind": "singleton",
+      "cells": [
+        "Central!I1170"
+      ]
+    },
+    {
+      "group_id": "sparse-202-009",
+      "kind": "singleton",
+      "cells": [
+        "South!I766"
+      ]
+    },
+    {
+      "group_id": "sparse-202-010",
+      "kind": "singleton",
+      "cells": [
+        "East!I83"
+      ]
+    },
+    {
+      "group_id": "sparse-202-011",
+      "kind": "singleton",
+      "cells": [
+        "North!I541"
+      ]
+    },
+    {
+      "group_id": "sparse-202-012",
+      "kind": "singleton",
+      "cells": [
+        "West!I400"
+      ]
+    },
+    {
+      "group_id": "sparse-202-013",
+      "kind": "singleton",
+      "cells": [
+        "South!I336"
+      ]
+    },
+    {
+      "group_id": "sparse-202-014",
+      "kind": "singleton",
+      "cells": [
+        "North!I298"
+      ]
+    },
+    {
+      "group_id": "sparse-202-015",
+      "kind": "singleton",
+      "cells": [
+        "South!I374"
+      ]
+    },
+    {
+      "group_id": "sparse-202-016",
+      "kind": "singleton",
+      "cells": [
+        "West!I439"
+      ]
+    },
+    {
+      "group_id": "sparse-202-017",
+      "kind": "singleton",
+      "cells": [
+        "West!I1253"
+      ]
+    },
+    {
+      "group_id": "sparse-202-018",
+      "kind": "singleton",
+      "cells": [
+        "Central!I272"
+      ]
+    },
+    {
+      "group_id": "sparse-202-019",
+      "kind": "singleton",
+      "cells": [
+        "Central!I777"
+      ]
+    },
+    {
+      "group_id": "sparse-202-020",
+      "kind": "singleton",
+      "cells": [
+        "West!I1271"
+      ]
+    },
+    {
+      "group_id": "sparse-202-021",
+      "kind": "singleton",
+      "cells": [
+        "North!I1239"
+      ]
+    },
+    {
+      "group_id": "sparse-202-022",
+      "kind": "singleton",
+      "cells": [
+        "Central!I132"
+      ]
+    },
+    {
+      "group_id": "sparse-202-023",
+      "kind": "singleton",
+      "cells": [
+        "East!I947"
+      ]
+    },
+    {
+      "group_id": "sparse-202-024",
+      "kind": "singleton",
+      "cells": [
+        "West!I736"
+      ]
+    },
+    {
+      "group_id": "sparse-202-025",
+      "kind": "singleton",
+      "cells": [
+        "North!I416"
+      ]
+    },
+    {
+      "group_id": "sparse-202-026",
+      "kind": "singleton",
+      "cells": [
+        "North!I745"
+      ]
+    },
+    {
+      "group_id": "sparse-202-027",
+      "kind": "singleton",
+      "cells": [
+        "West!I686"
+      ]
+    },
+    {
+      "group_id": "sparse-202-028",
+      "kind": "singleton",
+      "cells": [
+        "East!I1135"
+      ]
+    },
+    {
+      "group_id": "sparse-202-029",
+      "kind": "singleton",
+      "cells": [
+        "West!I614"
+      ]
+    },
+    {
+      "group_id": "sparse-202-030",
+      "kind": "singleton",
+      "cells": [
+        "North!I299"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "cell": "North!I34",
+      "kind": "singleton",
+      "group_id": "sparse-202-002",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B34*C34*(1-D34)*(1+G34)-B34*E34-F34",
+      "correct_formula": "=B34*C34*(1-D34)*(1-G34)-B34*E34-F34"
+    },
+    {
+      "cell": "North!I298",
+      "kind": "singleton",
+      "group_id": "sparse-202-014",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B298*C298*(1-D298)*(1+G298)-B298*E298-F298",
+      "correct_formula": "=B298*C298*(1-D298)*(1-G298)-B298*E298-F298"
+    },
+    {
+      "cell": "North!I299",
+      "kind": "singleton",
+      "group_id": "sparse-202-030",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B299*C299*(1-D299)*(1+G299)-B299*E299-F299",
+      "correct_formula": "=B299*C299*(1-D299)*(1-G299)-B299*E299-F299"
+    },
+    {
+      "cell": "North!I416",
+      "kind": "singleton",
+      "group_id": "sparse-202-025",
+      "mutation": "multiplier_085",
+      "wrong_formula": "=B416*C416*(1-D416)*(1-G416)*0.85-B416*E416-F416",
+      "correct_formula": "=B416*C416*(1-D416)*(1-G416)-B416*E416-F416"
+    },
+    {
+      "cell": "North!I541",
+      "kind": "singleton",
+      "group_id": "sparse-202-011",
+      "mutation": "multiplier_085",
+      "wrong_formula": "=B541*C541*(1-D541)*(1-G541)*0.85-B541*E541-F541",
+      "correct_formula": "=B541*C541*(1-D541)*(1-G541)-B541*E541-F541"
+    },
+    {
+      "cell": "North!I676",
+      "kind": "singleton",
+      "group_id": "sparse-202-004",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B676*C676*(1-D676)*(1-G676)+B676*E676-F676",
+      "correct_formula": "=B676*C676*(1-D676)*(1-G676)-B676*E676-F676"
+    },
+    {
+      "cell": "North!I745",
+      "kind": "singleton",
+      "group_id": "sparse-202-026",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B745*C745*(1-D745)*(1-G745)+B745*E745-F745",
+      "correct_formula": "=B745*C745*(1-D745)*(1-G745)-B745*E745-F745"
+    },
+    {
+      "cell": "North!I1239",
+      "kind": "singleton",
+      "group_id": "sparse-202-021",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B1239*C1239*(1-D1239)*(1-G1239)+B1239*E1239-F1239",
+      "correct_formula": "=B1239*C1239*(1-D1239)*(1-G1239)-B1239*E1239-F1239"
+    },
+    {
+      "cell": "Central!I132",
+      "kind": "singleton",
+      "group_id": "sparse-202-022",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B132*C132*(1-D132)*(1-G132)+B132*E132-F132",
+      "correct_formula": "=B132*C132*(1-D132)*(1-G132)-B132*E132-F132"
+    },
+    {
+      "cell": "Central!I272",
+      "kind": "singleton",
+      "group_id": "sparse-202-018",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B272*C272*(1-D272)*(1+G272)-B272*E272-F272",
+      "correct_formula": "=B272*C272*(1-D272)*(1-G272)-B272*E272-F272"
+    },
+    {
+      "cell": "Central!I777",
+      "kind": "singleton",
+      "group_id": "sparse-202-019",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B777*C777*(1-D777)*(1+G777)-B777*E777-F777",
+      "correct_formula": "=B777*C777*(1-D777)*(1-G777)-B777*E777-F777"
+    },
+    {
+      "cell": "Central!I897",
+      "kind": "singleton",
+      "group_id": "sparse-202-001",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B897*C897*(1-D897)*(1-G897)+B897*E897-F897",
+      "correct_formula": "=B897*C897*(1-D897)*(1-G897)-B897*E897-F897"
+    },
+    {
+      "cell": "Central!I1170",
+      "kind": "singleton",
+      "group_id": "sparse-202-008",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B1170*C1170*(1-D1170)*(1+G1170)-B1170*E1170-F1170",
+      "correct_formula": "=B1170*C1170*(1-D1170)*(1-G1170)-B1170*E1170-F1170"
+    },
+    {
+      "cell": "East!I83",
+      "kind": "singleton",
+      "group_id": "sparse-202-010",
+      "mutation": "multiplier_085",
+      "wrong_formula": "=B83*C83*(1-D83)*(1-G83)*0.85-B83*E83-F83",
+      "correct_formula": "=B83*C83*(1-D83)*(1-G83)-B83*E83-F83"
+    },
+    {
+      "cell": "East!I947",
+      "kind": "singleton",
+      "group_id": "sparse-202-023",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B947*C947*(1-D947)*(1-G947)+B947*E947-F947",
+      "correct_formula": "=B947*C947*(1-D947)*(1-G947)-B947*E947-F947"
+    },
+    {
+      "cell": "East!I1046",
+      "kind": "singleton",
+      "group_id": "sparse-202-003",
+      "mutation": "flip_discount",
+      "wrong_formula": "=B1046*C1046*(1+D1046)*(1-G1046)-B1046*E1046-F1046",
+      "correct_formula": "=B1046*C1046*(1-D1046)*(1-G1046)-B1046*E1046-F1046"
+    },
+    {
+      "cell": "East!I1135",
+      "kind": "singleton",
+      "group_id": "sparse-202-028",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B1135*C1135*(1-D1135)*(1+G1135)-B1135*E1135-F1135",
+      "correct_formula": "=B1135*C1135*(1-D1135)*(1-G1135)-B1135*E1135-F1135"
+    },
+    {
+      "cell": "South!I336",
+      "kind": "singleton",
+      "group_id": "sparse-202-013",
+      "mutation": "omit_shipping",
+      "wrong_formula": "=B336*C336*(1-D336)*(1-G336)-B336*E336",
+      "correct_formula": "=B336*C336*(1-D336)*(1-G336)-B336*E336-F336"
+    },
+    {
+      "cell": "South!I374",
+      "kind": "singleton",
+      "group_id": "sparse-202-015",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B374*C374*(1-D374)*(1-G374)+B374*E374-F374",
+      "correct_formula": "=B374*C374*(1-D374)*(1-G374)-B374*E374-F374"
+    },
+    {
+      "cell": "South!I766",
+      "kind": "singleton",
+      "group_id": "sparse-202-009",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B766*C766*(1-D766)*(1-G766)+B766*E766-F766",
+      "correct_formula": "=B766*C766*(1-D766)*(1-G766)-B766*E766-F766"
+    },
+    {
+      "cell": "South!I962",
+      "kind": "singleton",
+      "group_id": "sparse-202-006",
+      "mutation": "flip_discount",
+      "wrong_formula": "=B962*C962*(1+D962)*(1-G962)-B962*E962-F962",
+      "correct_formula": "=B962*C962*(1-D962)*(1-G962)-B962*E962-F962"
+    },
+    {
+      "cell": "South!I1151",
+      "kind": "singleton",
+      "group_id": "sparse-202-007",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B1151*C1151*(1-D1151)*(1-G1151)+B1151*E1151-F1151",
+      "correct_formula": "=B1151*C1151*(1-D1151)*(1-G1151)-B1151*E1151-F1151"
+    },
+    {
+      "cell": "West!I242",
+      "kind": "singleton",
+      "group_id": "sparse-202-005",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B242*C242*(1-D242)*(1-G242)+B242*E242-F242",
+      "correct_formula": "=B242*C242*(1-D242)*(1-G242)-B242*E242-F242"
+    },
+    {
+      "cell": "West!I400",
+      "kind": "singleton",
+      "group_id": "sparse-202-012",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B400*C400*(1-D400)*(1-G400)+B400*E400-F400",
+      "correct_formula": "=B400*C400*(1-D400)*(1-G400)-B400*E400-F400"
+    },
+    {
+      "cell": "West!I439",
+      "kind": "singleton",
+      "group_id": "sparse-202-016",
+      "mutation": "flip_discount",
+      "wrong_formula": "=B439*C439*(1+D439)*(1-G439)-B439*E439-F439",
+      "correct_formula": "=B439*C439*(1-D439)*(1-G439)-B439*E439-F439"
+    },
+    {
+      "cell": "West!I614",
+      "kind": "singleton",
+      "group_id": "sparse-202-029",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B614*C614*(1-D614)*(1+G614)-B614*E614-F614",
+      "correct_formula": "=B614*C614*(1-D614)*(1-G614)-B614*E614-F614"
+    },
+    {
+      "cell": "West!I686",
+      "kind": "singleton",
+      "group_id": "sparse-202-027",
+      "mutation": "multiplier_085",
+      "wrong_formula": "=B686*C686*(1-D686)*(1-G686)*0.85-B686*E686-F686",
+      "correct_formula": "=B686*C686*(1-D686)*(1-G686)-B686*E686-F686"
+    },
+    {
+      "cell": "West!I736",
+      "kind": "singleton",
+      "group_id": "sparse-202-024",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B736*C736*(1-D736)*(1+G736)-B736*E736-F736",
+      "correct_formula": "=B736*C736*(1-D736)*(1-G736)-B736*E736-F736"
+    },
+    {
+      "cell": "West!I1253",
+      "kind": "singleton",
+      "group_id": "sparse-202-017",
+      "mutation": "plus_cost",
+      "wrong_formula": "=B1253*C1253*(1-D1253)*(1-G1253)+B1253*E1253-F1253",
+      "correct_formula": "=B1253*C1253*(1-D1253)*(1-G1253)-B1253*E1253-F1253"
+    },
+    {
+      "cell": "West!I1271",
+      "kind": "singleton",
+      "group_id": "sparse-202-020",
+      "mutation": "flip_tax",
+      "wrong_formula": "=B1271*C1271*(1-D1271)*(1+G1271)-B1271*E1271-F1271",
+      "correct_formula": "=B1271*C1271*(1-D1271)*(1-G1271)-B1271*E1271-F1271"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+.venv/bin/python -m scripts.evaluate_v519_confirmation freeze --output "New version/20261014_v519_current_model/freeze"
+.venv/bin/python -m scripts.evaluate_v519_confirmation build --stage development --lock "New version/20261014_v519_current_model/freeze/source_lock.json" --output "New version/20261014_v519_current_model/release"
+.venv/bin/python -m scripts.evaluate_v519_confirmation predict --release "New version/20261014_v519_current_model/release" --lock "New version/20261014_v519_current_model/freeze/source_lock.json" --output "New version/20261014_v519_current_model/predictions" --workers 4
+.venv/bin/python -m scripts.evaluate_v519_confirmation score --release "New version/20261014_v519_current_model/release" --lock "New version/20261014_v519_current_model/freeze/source_lock.json" --predictions "New version/20261014_v519_current_model/predictions" --output "New version/20261014_v519_current_model/score" --workers 4

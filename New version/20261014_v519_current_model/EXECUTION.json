@@ -1,0 +1,96 @@
+[
+  {
+    "stage": "freeze",
+    "argv": [
+      "/home/ayaka/hybridguard/.venv/bin/python",
+      "-m",
+      "scripts.evaluate_v519_confirmation",
+      "freeze",
+      "--output",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/freeze"
+    ],
+    "started_at": "2026-10-14T05:03:37.967885+00:00",
+    "finished_at": "2026-10-14T05:03:38.487578+00:00",
+    "elapsed_seconds": 0.5197247769999649,
+    "exit_code": 0
+  },
+  {
+    "stage": "build",
+    "argv": [
+      "/home/ayaka/hybridguard/.venv/bin/python",
+      "-m",
+      "scripts.evaluate_v519_confirmation",
+      "build",
+      "--stage",
+      "development",
+      "--lock",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/freeze/source_lock.json",
+      "--output",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/release"
+    ],
+    "started_at": "2026-10-14T05:03:38.488041+00:00",
+    "finished_at": "2026-10-14T05:03:38.896735+00:00",
+    "elapsed_seconds": 0.40872801800014713,
+    "exit_code": 0
+  },
+  {
+    "stage": "focused_checks",
+    "argv": [
+      "/home/ayaka/hybridguard/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_v519_api.py",
+      "tests/test_v5_1_9_development.py",
+      "tests/test_v519_components.py",
+      "-q"
+    ],
+    "started_at": "2026-10-14T05:03:38.897377+00:00",
+    "finished_at": "2026-10-14T05:04:20.234605+00:00",
+    "elapsed_seconds": 41.337263379000206,
+    "exit_code": 0
+  },
+  {
+    "stage": "predict",
+    "argv": [
+      "/home/ayaka/hybridguard/.venv/bin/python",
+      "-m",
+      "scripts.evaluate_v519_confirmation",
+      "predict",
+      "--release",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/release",
+      "--lock",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/freeze/source_lock.json",
+      "--output",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/predictions",
+      "--workers",
+      "4"
+    ],
+    "started_at": "2026-10-14T05:04:20.235208+00:00",
+    "finished_at": "2026-10-14T05:11:26.939908+00:00",
+    "elapsed_seconds": 426.70472896699994,
+    "exit_code": 0
+  },
+  {
+    "stage": "score",
+    "argv": [
+      "/home/ayaka/hybridguard/.venv/bin/python",
+      "-m",
+      "scripts.evaluate_v519_confirmation",
+      "score",
+      "--release",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/release",
+      "--lock",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/freeze/source_lock.json",
+      "--predictions",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/predictions",
+      "--output",
+      "/home/ayaka/hybridguard/New version/20261014_v519_current_model/score",
+      "--workers",
+      "4"
+    ],
+    "started_at": "2026-10-14T05:11:26.940280+00:00",
+    "finished_at": "2026-10-14T05:15:10.700124+00:00",
+    "elapsed_seconds": 223.75990347699985,
+    "exit_code": 0
+  }
+]

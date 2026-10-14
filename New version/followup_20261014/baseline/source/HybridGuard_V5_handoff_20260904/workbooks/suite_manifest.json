@@ -1,0 +1,60 @@
+{
+  "protocol": "multi_scenario_formula_error_suite_v2",
+  "workbook_count": 6,
+  "scenarios": [
+    {
+      "scenario": "sparse_seed101",
+      "family": "sparse",
+      "seed": 101,
+      "workbook": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\sparse_seed101.xlsx",
+      "truth": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\sparse_seed101_truth.json",
+      "errors": 12,
+      "groups": 12
+    },
+    {
+      "scenario": "sparse_seed202",
+      "family": "sparse",
+      "seed": 202,
+      "workbook": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\sparse_seed202.xlsx",
+      "truth": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\sparse_seed202_truth.json",
+      "errors": 30,
+      "groups": 30
+    },
+    {
+      "scenario": "sparse_seed303",
+      "family": "sparse",
+      "seed": 303,
+      "workbook": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\sparse_seed303.xlsx",
+      "truth": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\sparse_seed303_truth.json",
+      "errors": 60,
+      "groups": 60
+    },
+    {
+      "scenario": "systemic_seed404",
+      "family": "systemic",
+      "seed": 404,
+      "workbook": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\systemic_seed404.xlsx",
+      "truth": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\systemic_seed404_truth.json",
+      "errors": 2149,
+      "groups": 3
+    },
+    {
+      "scenario": "systemic_seed505",
+      "family": "systemic",
+      "seed": 505,
+      "workbook": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\systemic_seed505.xlsx",
+      "truth": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\systemic_seed505_truth.json",
+      "errors": 1400,
+      "groups": 3
+    },
+    {
+      "scenario": "systemic_seed606",
+      "family": "systemic",
+      "seed": 606,
+      "workbook": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\systemic_seed606.xlsx",
+      "truth": "C:\\Users\\czk\\Documents\\ChatGPT\\论文1\\outputs\\01a06700-7545-7822-bbbd-3698d2c37015\\multi_suite_v3\\systemic_seed606_truth.json",
+      "errors": 2099,
+      "groups": 3
+    }
+  ]
+}

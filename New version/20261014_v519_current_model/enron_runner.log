@@ -1,0 +1,106 @@
+Enron 1/50: v511 6c4be369a172ff4fe0bb completed 0.3s
+Enron 2/50: v4 6c4be369a172ff4fe0bb completed 0.3s
+Enron 3/50: v511 848397e764bcf03a7650 completed 0.3s
+Enron 4/50: v4 848397e764bcf03a7650 completed 1.0s
+Enron 5/50: v511 efa33ee3075d918ee67a completed 1.7s
+Enron 6/50: v511 ac4b129b36772ae1dce5 completed 8.8s
+Enron 7/50: v4 efa33ee3075d918ee67a completed 17.7s
+Enron 8/50: v511 373d7a1c5666e33abf40 completed 12.0s
+Enron 9/50: v511 0ba99b5ace34e9b79752 completed 3.9s
+Enron 10/50: v4 0ba99b5ace34e9b79752 completed 15.7s
+Enron 11/50: v4 ac4b129b36772ae1dce5 completed 87.6s
+Enron 12/50: v4 6429fc9a9c4a424250c1 completed 4.2s
+Enron 13/50: v511 6429fc9a9c4a424250c1 completed 1.1s
+Enron 14/50: v4 373d7a1c5666e33abf40 completed 142.1s
+Enron 15/50: v4 abb175795ab87ce30b4b timeout 180.0s
+Enron 16/50: v4 fd0fe83fdfe43bf31f3d completed 0.6s
+Enron 17/50: v511 fd0fe83fdfe43bf31f3d completed 0.3s
+Enron 18/50: v511 abb175795ab87ce30b4b timeout 180.0s
+Enron 19/50: v511 7343228b96ab3b557fab completed 1.3s
+Enron 20/50: v4 7343228b96ab3b557fab completed 9.3s
+Enron 21/50: v511 d0959bbc97c91d3bc5b8 completed 85.5s
+Enron 22/50: v4 245a1860892d3803f1b9 completed 0.3s
+Enron 23/50: v511 245a1860892d3803f1b9 completed 0.2s
+Enron 24/50: v4 a13cced593b562d250c3 completed 26.7s
+Enron 25/50: v511 a13cced593b562d250c3 completed 0.9s
+Enron 26/50: v4 d0959bbc97c91d3bc5b8 timeout 180.0s
+Enron 27/50: v511 3e6cb925eeb8672f97ea completed 8.8s
+Enron 28/50: v4 3e6cb925eeb8672f97ea completed 59.6s
+Enron 29/50: v511 d19364126d0949623703 completed 110.9s
+Enron 30/50: v511 f5e5be39af94215748c4 completed 21.0s
+Enron 31/50: v511 cae8f5040c8209a9d81c completed 11.4s
+Enron 32/50: v4 d19364126d0949623703 timeout 180.0s
+Enron 33/50: v511 9677b39a142e4e813aa1 completed 5.2s
+Enron 34/50: v4 a0201c511ecdd86d6166 completed 0.2s
+Enron 35/50: v511 a0201c511ecdd86d6166 completed 0.2s
+Enron 36/50: v4 9677b39a142e4e813aa1 completed 58.5s
+Enron 37/50: v511 5d354c6bffaaa85a5666 completed 14.2s
+Enron 38/50: v4 cae8f5040c8209a9d81c completed 98.6s
+Enron 39/50: v511 cceab54d361ffecf4e5b completed 2.9s
+Enron 40/50: v4 f5e5be39af94215748c4 completed 179.0s
+Enron 41/50: v511 efe27c433b60b5646827 completed 2.1s
+Enron 42/50: v4 cceab54d361ffecf4e5b completed 41.2s
+Enron 43/50: v511 92defcf84780ad90c4a1 completed 0.6s
+Enron 44/50: v4 92defcf84780ad90c4a1 completed 1.9s
+Enron 45/50: v4 ddacad945517bf03cb25 completed 0.2s
+Enron 46/50: v511 ddacad945517bf03cb25 completed 0.2s
+Enron 47/50: v4 efe27c433b60b5646827 completed 39.4s
+Enron 48/50: v511 1e3c8900de1aee125f52 completed 1.9s
+Enron 49/50: v4 1e3c8900de1aee125f52 completed 10.2s
+Enron 50/50: v4 5d354c6bffaaa85a5666 timeout 180.0s
+{
+  "completed_at": "2026-10-14T05:26:58.992222+00:00",
+  "model": "V5.1.9-development",
+  "scope": "Enron historical revealed regression; no independent blind claim",
+  "all_tasks_completed": false,
+  "summaries": {
+    "v4": {
+      "original_events": 36,
+      "eligible_events": 30,
+      "successfully_predicted_events": 26,
+      "execution_statuses": {
+        "completed": 21,
+        "timeout": 4
+      },
+      "top1_hits": 7,
+      "top5_hits": 13,
+      "top10_hits": 17,
+      "top1_rate_all_eligible": 0.23333333333333334,
+      "top5_rate_all_eligible": 0.43333333333333335,
+      "top10_rate_all_eligible": 0.5666666666666667,
+      "top1_rate_successful_inputs": 0.2692307692307692,
+      "top5_rate_successful_inputs": 0.5,
+      "top10_rate_successful_inputs": 0.6538461538461539,
+      "search_statuses": {
+        "no_approved_constraints": 21
+      },
+      "accepted_cells_across_unique_workbooks": 8,
+      "repair_precision": null,
+      "repair_precision_unavailable_reason": "correct formulas and exhaustive workbook-error truth are absent"
+    },
+    "v511": {
+      "original_events": 36,
+      "eligible_events": 30,
+      "successfully_predicted_events": 29,
+      "execution_statuses": {
+        "completed": 24,
+        "timeout": 1
+      },
+      "top1_hits": 6,
+      "top5_hits": 12,
+      "top10_hits": 16,
+      "top1_rate_all_eligible": 0.2,
+      "top5_rate_all_eligible": 0.4,
+      "top10_rate_all_eligible": 0.5333333333333333,
+      "top1_rate_successful_inputs": 0.20689655172413793,
+      "top5_rate_successful_inputs": 0.41379310344827586,
+      "top10_rate_successful_inputs": 0.5517241379310345,
+      "search_statuses": {
+        "no_approved_constraints": 24
+      },
+      "accepted_cells_across_unique_workbooks": 8,
+      "repair_precision": null,
+      "repair_precision_unavailable_reason": "correct formulas and exhaustive workbook-error truth are absent"
+    }
+  }
+}

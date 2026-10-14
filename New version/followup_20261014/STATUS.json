@@ -1,0 +1,20 @@
+{
+  "goal_status": "paused",
+  "pause_reason": "User requested pause after this commit and upload",
+  "git_branch": "research/hybridguard-followup",
+  "final_validation_complete": false,
+  "baseline_reproduced": true,
+  "development_candidate": "selector-dev1",
+  "development_precision": 0.9961695292227851,
+  "development_coverage": 0.4863364903179104,
+  "development_gate_passed": false,
+  "public_sources_accepted": 0,
+  "public_template_families_accepted": 0,
+  "next_actions": [
+    "develop role and exception checks with all known failure strata retained",
+    "verify six genuinely new public origins and fifteen families",
+    "freeze improved model and scorer before final inputs/answers"
+  ],
+  "original_locks_unchanged": true,
+  "score_contract_tests_passed": true
+}

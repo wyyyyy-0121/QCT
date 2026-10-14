@@ -1,0 +1,1010 @@
+{
+  "completed_at": "2026-10-14T05:26:58.810701+00:00",
+  "source_lock_sha256": "73c58cf73ad03110527ec7e7f3e35dbea7d56f4795f32f7989946700116b2c2e",
+  "manifest_sha256": "3eb129423a92320db57c69af667c6d58a25c85e4548fd6adf8ba581054201abd",
+  "labels_read_by_workers": [],
+  "workbooks": 25,
+  "tasks": 50,
+  "records": [
+    {
+      "id": "0ba99b5ace34e9b79752",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 15.70230013499986,
+      "prediction": "predictions/0ba99b5ace34e9b79752_v4.json.gz",
+      "prediction_sha256": "854283f55f6634fe02152dac4b1f38868d3102669fc7a6437d7d03ab70fd20c8",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/06.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/0ba99b5ace34e9b79752_v4.json.gz"
+      ]
+    },
+    {
+      "id": "0ba99b5ace34e9b79752",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 3.8743642620001992,
+      "prediction": "predictions/0ba99b5ace34e9b79752_v511.json.gz",
+      "prediction_sha256": "b95ee50f12473194d3cac762bb993d21e5f0b50e0ca7b6604e699b7eee29220a",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/06.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/0ba99b5ace34e9b79752_v511.json.gz"
+      ]
+    },
+    {
+      "id": "1e3c8900de1aee125f52",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 10.195108898999933,
+      "prediction": "predictions/1e3c8900de1aee125f52_v4.json.gz",
+      "prediction_sha256": "c34750b0a1de1db2b00c1a5a37266769263e944bdeb566e652ba1ccd0c4d5145",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/30.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/1e3c8900de1aee125f52_v4.json.gz"
+      ]
+    },
+    {
+      "id": "1e3c8900de1aee125f52",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.9197666190002565,
+      "prediction": "predictions/1e3c8900de1aee125f52_v511.json.gz",
+      "prediction_sha256": "71732226dbdd1bb963c4bc5b83dccd5f7707fcfaa872c491dcf3d47318c6f51f",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/30.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/1e3c8900de1aee125f52_v511.json.gz"
+      ]
+    },
+    {
+      "id": "245a1860892d3803f1b9",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.31597371599991675,
+      "prediction": "predictions/245a1860892d3803f1b9_v4.json.gz",
+      "prediction_sha256": "12a93e140f8ca9cc9ebcce81fc817c538c30b107458f606683d27af0b673fbe2",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/13.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/245a1860892d3803f1b9_v4.json.gz"
+      ]
+    },
+    {
+      "id": "245a1860892d3803f1b9",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.2152911650000533,
+      "prediction": "predictions/245a1860892d3803f1b9_v511.json.gz",
+      "prediction_sha256": "a3f62877f7a4cbbe29f66205141e600988c27410a1e89db2755daa2b212dfd53",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/13.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/245a1860892d3803f1b9_v511.json.gz"
+      ]
+    },
+    {
+      "id": "373d7a1c5666e33abf40",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 142.11166985100022,
+      "prediction": "predictions/373d7a1c5666e33abf40_v4.json.gz",
+      "prediction_sha256": "78a7016cbea2165d97073f17aed648a93de80c854add31b04594e7b781e02cf2",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/05.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/373d7a1c5666e33abf40_v4.json.gz"
+      ]
+    },
+    {
+      "id": "373d7a1c5666e33abf40",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 11.99335322700017,
+      "prediction": "predictions/373d7a1c5666e33abf40_v511.json.gz",
+      "prediction_sha256": "c0e401226a2c33fda27ff62a8d654890b668e7712bb32d4f01440df587002689",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/05.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/373d7a1c5666e33abf40_v511.json.gz"
+      ]
+    },
+    {
+      "id": "3e6cb925eeb8672f97ea",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 59.64430869099988,
+      "prediction": "predictions/3e6cb925eeb8672f97ea_v4.json.gz",
+      "prediction_sha256": "d5ca1ebc9ff0dd5f949e567f58aff204926fd177f31dfeec82ef28b72a85c6b6",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/18.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/3e6cb925eeb8672f97ea_v4.json.gz"
+      ]
+    },
+    {
+      "id": "3e6cb925eeb8672f97ea",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.84029954000016,
+      "prediction": "predictions/3e6cb925eeb8672f97ea_v511.json.gz",
+      "prediction_sha256": "2794a12662b94dd18b4ba2c374d01c99df590320fae3892df8111aa22907b623",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/18.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/3e6cb925eeb8672f97ea_v511.json.gz"
+      ]
+    },
+    {
+      "id": "5d354c6bffaaa85a5666",
+      "backend": "v4",
+      "status": "timeout",
+      "exit_code": null,
+      "elapsed_seconds": 180.00331975300014,
+      "prediction": null,
+      "prediction_sha256": null,
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/24.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/5d354c6bffaaa85a5666_v4.json.gz"
+      ]
+    },
+    {
+      "id": "5d354c6bffaaa85a5666",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 14.15679963699995,
+      "prediction": "predictions/5d354c6bffaaa85a5666_v511.json.gz",
+      "prediction_sha256": "61e19d6ab3730a43d750f355df728a0ea092bd16a16df830ace360175512929c",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/24.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/5d354c6bffaaa85a5666_v511.json.gz"
+      ]
+    },
+    {
+      "id": "6429fc9a9c4a424250c1",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 4.177819817999989,
+      "prediction": "predictions/6429fc9a9c4a424250c1_v4.json.gz",
+      "prediction_sha256": "eccd3e8a09d046613d7a260834b14fb2d1a52a007adba08bda129f31bb3b8d64",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/08.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/6429fc9a9c4a424250c1_v4.json.gz"
+      ]
+    },
+    {
+      "id": "6429fc9a9c4a424250c1",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.11792894600012,
+      "prediction": "predictions/6429fc9a9c4a424250c1_v511.json.gz",
+      "prediction_sha256": "5c2ee36077e08a6a858f0fd040c85d20c263e1959e203cfeac704cd28c1f4a51",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/08.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/6429fc9a9c4a424250c1_v511.json.gz"
+      ]
+    },
+    {
+      "id": "6c4be369a172ff4fe0bb",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.31752941700005977,
+      "prediction": "predictions/6c4be369a172ff4fe0bb_v4.json.gz",
+      "prediction_sha256": "32f850a2ffc67195e38d1b360e8e719624205ed5ffedeecfbecd9357f4dae8dc",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/01.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/6c4be369a172ff4fe0bb_v4.json.gz"
+      ]
+    },
+    {
+      "id": "6c4be369a172ff4fe0bb",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.3167378099999496,
+      "prediction": "predictions/6c4be369a172ff4fe0bb_v511.json.gz",
+      "prediction_sha256": "e01eaabbaba21f749663af585ac828c239544c76dcbdb2d98d93ea2881052e56",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/01.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/6c4be369a172ff4fe0bb_v511.json.gz"
+      ]
+    },
+    {
+      "id": "7343228b96ab3b557fab",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.291840184000193,
+      "prediction": "predictions/7343228b96ab3b557fab_v4.json.gz",
+      "prediction_sha256": "4cd66457c5daff0b450ceab3b0d28f17d389016e75f9957321cecc46042211ae",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/11.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/7343228b96ab3b557fab_v4.json.gz"
+      ]
+    },
+    {
+      "id": "7343228b96ab3b557fab",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.2685939220000364,
+      "prediction": "predictions/7343228b96ab3b557fab_v511.json.gz",
+      "prediction_sha256": "f515b0385ef271eb3e55ac4b3bf09a27033bcf10ce2f25b153a9f61ad903c403",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/11.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/7343228b96ab3b557fab_v511.json.gz"
+      ]
+    },
+    {
+      "id": "848397e764bcf03a7650",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9685944529999233,
+      "prediction": "predictions/848397e764bcf03a7650_v4.json.gz",
+      "prediction_sha256": "3b8624b02aa552150c3ac5e13610c2f4067a7b2f33e876d07641853e93a7e0dc",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/02.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/848397e764bcf03a7650_v4.json.gz"
+      ]
+    },
+    {
+      "id": "848397e764bcf03a7650",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.31662585499998386,
+      "prediction": "predictions/848397e764bcf03a7650_v511.json.gz",
+      "prediction_sha256": "8a222ce88d1a10555efebb268cc80d59cdb0b146cd844993c06888067e1eba8a",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/02.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/848397e764bcf03a7650_v511.json.gz"
+      ]
+    },
+    {
+      "id": "92defcf84780ad90c4a1",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.9207338940000227,
+      "prediction": "predictions/92defcf84780ad90c4a1_v4.json.gz",
+      "prediction_sha256": "4766669704b86d62a09e9a3cdb17813107277548c0ab62ceb485a929b34c1383",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/28.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/92defcf84780ad90c4a1_v4.json.gz"
+      ]
+    },
+    {
+      "id": "92defcf84780ad90c4a1",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5660912559997087,
+      "prediction": "predictions/92defcf84780ad90c4a1_v511.json.gz",
+      "prediction_sha256": "27c6517cae032e08bf2a781adc5ae79ab1896af09b8cdf88fb916e21b7f3a9bc",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/28.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/92defcf84780ad90c4a1_v511.json.gz"
+      ]
+    },
+    {
+      "id": "9677b39a142e4e813aa1",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 58.533440569999584,
+      "prediction": "predictions/9677b39a142e4e813aa1_v4.json.gz",
+      "prediction_sha256": "9cf643d969d9c8c997e29c566736237897d59c915e7c25fbd673301605a753cd",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/21.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/9677b39a142e4e813aa1_v4.json.gz"
+      ]
+    },
+    {
+      "id": "9677b39a142e4e813aa1",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.179717745000289,
+      "prediction": "predictions/9677b39a142e4e813aa1_v511.json.gz",
+      "prediction_sha256": "fba72e590e841ffb501ed69f5a35019419214ae628dea3f2e4e98385b7bd4553",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/21.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/9677b39a142e4e813aa1_v511.json.gz"
+      ]
+    },
+    {
+      "id": "a0201c511ecdd86d6166",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.21547930099995938,
+      "prediction": "predictions/a0201c511ecdd86d6166_v4.json.gz",
+      "prediction_sha256": "5e982c919147dd61be650282c7a4f4ff6a269c46c32aab09f57097a7c41e9fff",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/22.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/a0201c511ecdd86d6166_v4.json.gz"
+      ]
+    },
+    {
+      "id": "a0201c511ecdd86d6166",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.21538278300022284,
+      "prediction": "predictions/a0201c511ecdd86d6166_v511.json.gz",
+      "prediction_sha256": "b41114ff8164865d51f6ac26b0ad5449048434a9374582e31ed7920842ca1775",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/22.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/a0201c511ecdd86d6166_v511.json.gz"
+      ]
+    },
+    {
+      "id": "a13cced593b562d250c3",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 26.703195697999945,
+      "prediction": "predictions/a13cced593b562d250c3_v4.json.gz",
+      "prediction_sha256": "f2e500f2b6d067e33b0199a1793291e14cad3c003bda829b65db5a7678c9eee6",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/16.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/a13cced593b562d250c3_v4.json.gz"
+      ]
+    },
+    {
+      "id": "a13cced593b562d250c3",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9185171690000971,
+      "prediction": "predictions/a13cced593b562d250c3_v511.json.gz",
+      "prediction_sha256": "52be6ab3d5aacf5fe135a603829c68cbbe057ee2cfed79ce9c94800db69c807b",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/16.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/a13cced593b562d250c3_v511.json.gz"
+      ]
+    },
+    {
+      "id": "abb175795ab87ce30b4b",
+      "backend": "v4",
+      "status": "timeout",
+      "exit_code": null,
+      "elapsed_seconds": 180.00388308499987,
+      "prediction": null,
+      "prediction_sha256": null,
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/07.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/abb175795ab87ce30b4b_v4.json.gz"
+      ]
+    },
+    {
+      "id": "abb175795ab87ce30b4b",
+      "backend": "v511",
+      "status": "timeout",
+      "exit_code": null,
+      "elapsed_seconds": 180.00385102499968,
+      "prediction": null,
+      "prediction_sha256": null,
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/07.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/abb175795ab87ce30b4b_v511.json.gz"
+      ]
+    },
+    {
+      "id": "ac4b129b36772ae1dce5",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 87.59487503299988,
+      "prediction": "predictions/ac4b129b36772ae1dce5_v4.json.gz",
+      "prediction_sha256": "879974024b209ba8eebf60902af2c19972746bae579d371d4039f99c22bfcecf",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/03.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/ac4b129b36772ae1dce5_v4.json.gz"
+      ]
+    },
+    {
+      "id": "ac4b129b36772ae1dce5",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.785500542999898,
+      "prediction": "predictions/ac4b129b36772ae1dce5_v511.json.gz",
+      "prediction_sha256": "5904046430872fb94820b934cbff4d58887ac2582b17f95689158b265c5600f3",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/03.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/ac4b129b36772ae1dce5_v511.json.gz"
+      ]
+    },
+    {
+      "id": "cae8f5040c8209a9d81c",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 98.60375727499968,
+      "prediction": "predictions/cae8f5040c8209a9d81c_v4.json.gz",
+      "prediction_sha256": "2417f78dfb9dbff9cddbc3ae9145ecd5fc4157af4c994b64e3d8371cbffaac21",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/20.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/cae8f5040c8209a9d81c_v4.json.gz"
+      ]
+    },
+    {
+      "id": "cae8f5040c8209a9d81c",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 11.44839218800007,
+      "prediction": "predictions/cae8f5040c8209a9d81c_v511.json.gz",
+      "prediction_sha256": "d8cc9fdf6d6c6ca7ba3b3ab9c782e39817bbe1ec0b51b65123d81b0aeadcbc89",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/20.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/cae8f5040c8209a9d81c_v511.json.gz"
+      ]
+    },
+    {
+      "id": "cceab54d361ffecf4e5b",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 41.18610640799989,
+      "prediction": "predictions/cceab54d361ffecf4e5b_v4.json.gz",
+      "prediction_sha256": "9390d6948f04daa0edc8774627d4b4150bf77bdbf358d8b15d3efbf8be90099f",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/25.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/cceab54d361ffecf4e5b_v4.json.gz"
+      ]
+    },
+    {
+      "id": "cceab54d361ffecf4e5b",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.873263081999994,
+      "prediction": "predictions/cceab54d361ffecf4e5b_v511.json.gz",
+      "prediction_sha256": "2e703cf49a60ee2ed97b47c1230bd7944df38bbf2627dd4a0484d74c101f425b",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/25.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/cceab54d361ffecf4e5b_v511.json.gz"
+      ]
+    },
+    {
+      "id": "d0959bbc97c91d3bc5b8",
+      "backend": "v4",
+      "status": "timeout",
+      "exit_code": null,
+      "elapsed_seconds": 180.00587446999998,
+      "prediction": null,
+      "prediction_sha256": null,
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/09.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/d0959bbc97c91d3bc5b8_v4.json.gz"
+      ]
+    },
+    {
+      "id": "d0959bbc97c91d3bc5b8",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 85.50027006800019,
+      "prediction": "predictions/d0959bbc97c91d3bc5b8_v511.json.gz",
+      "prediction_sha256": "5351000e237647847c90d528cf7e542dc56f52c9845e882feef8fa37db41d5fd",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/09.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/d0959bbc97c91d3bc5b8_v511.json.gz"
+      ]
+    },
+    {
+      "id": "d19364126d0949623703",
+      "backend": "v4",
+      "status": "timeout",
+      "exit_code": null,
+      "elapsed_seconds": 180.0055146750001,
+      "prediction": null,
+      "prediction_sha256": null,
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/12.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/d19364126d0949623703_v4.json.gz"
+      ]
+    },
+    {
+      "id": "d19364126d0949623703",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 110.89681864500017,
+      "prediction": "predictions/d19364126d0949623703_v511.json.gz",
+      "prediction_sha256": "986f0da2fa39922d786fcfc4d83ce0119a4fcbf7c130312368948fcac5b76906",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/12.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/d19364126d0949623703_v511.json.gz"
+      ]
+    },
+    {
+      "id": "ddacad945517bf03cb25",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.21563542799958668,
+      "prediction": "predictions/ddacad945517bf03cb25_v4.json.gz",
+      "prediction_sha256": "aa9228e133cb4d232eefbfad8567fb2ce84fbed68c74a31a70d15e44a1571a84",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/29.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/ddacad945517bf03cb25_v4.json.gz"
+      ]
+    },
+    {
+      "id": "ddacad945517bf03cb25",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.21617680600002132,
+      "prediction": "predictions/ddacad945517bf03cb25_v511.json.gz",
+      "prediction_sha256": "b0fb6f9aaa211eb8da4bc8120dafe98c62ad4cefcacd57ce64ba8118c68f9d34",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/29.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/ddacad945517bf03cb25_v511.json.gz"
+      ]
+    },
+    {
+      "id": "efa33ee3075d918ee67a",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 17.707762813000045,
+      "prediction": "predictions/efa33ee3075d918ee67a_v4.json.gz",
+      "prediction_sha256": "b5724808ba7a68cc21012970313b9436691dc5178a6d27d18ab375ed13534483",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/04.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/efa33ee3075d918ee67a_v4.json.gz"
+      ]
+    },
+    {
+      "id": "efa33ee3075d918ee67a",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.6683749690000695,
+      "prediction": "predictions/efa33ee3075d918ee67a_v511.json.gz",
+      "prediction_sha256": "a850aa383171be791f8b9ee1ed5e424ee0d320851e15d6b93f41cd801054a033",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/04.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/efa33ee3075d918ee67a_v511.json.gz"
+      ]
+    },
+    {
+      "id": "efe27c433b60b5646827",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 39.384420427999885,
+      "prediction": "predictions/efe27c433b60b5646827_v4.json.gz",
+      "prediction_sha256": "b338e6bde434c48328d10cb04f5496e24269d5f3d815941bdb1977a94b43a5e2",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/27.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/efe27c433b60b5646827_v4.json.gz"
+      ]
+    },
+    {
+      "id": "efe27c433b60b5646827",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.070533088999582,
+      "prediction": "predictions/efe27c433b60b5646827_v511.json.gz",
+      "prediction_sha256": "440bb34f783f1de0410e778be1136d46ed6fab526eef15d053298c889de8a6bb",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/27.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/efe27c433b60b5646827_v511.json.gz"
+      ]
+    },
+    {
+      "id": "f5e5be39af94215748c4",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 178.953919177,
+      "prediction": "predictions/f5e5be39af94215748c4_v4.json.gz",
+      "prediction_sha256": "0d4040bb50664c27f5e1950b723cb6248b2cca262ca64721140571b2aa2e9652",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/19.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/f5e5be39af94215748c4_v4.json.gz"
+      ]
+    },
+    {
+      "id": "f5e5be39af94215748c4",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 20.977996351,
+      "prediction": "predictions/f5e5be39af94215748c4_v511.json.gz",
+      "prediction_sha256": "73440f512577b09f82594b372f307c2194e4c04d393459d041ce0403a6712a82",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/19.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/f5e5be39af94215748c4_v511.json.gz"
+      ]
+    },
+    {
+      "id": "fd0fe83fdfe43bf31f3d",
+      "backend": "v4",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6181712359998528,
+      "prediction": "predictions/fd0fe83fdfe43bf31f3d_v4.json.gz",
+      "prediction_sha256": "6e45b028be963caa96feaa15cf7c0f17d1baf97cbf0a12954046fa6c52ec647d",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/10.xlsx",
+        "--backend",
+        "v4",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/fd0fe83fdfe43bf31f3d_v4.json.gz"
+      ]
+    },
+    {
+      "id": "fd0fe83fdfe43bf31f3d",
+      "backend": "v511",
+      "status": "completed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.31570478399999047,
+      "prediction": "predictions/fd0fe83fdfe43bf31f3d_v511.json.gz",
+      "prediction_sha256": "9c4a6afebf39765ab984bfea5e51bcd13e478ca91b5ce6452cc8d3198517a9f9",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/20261014_v519_current_model/run_enron_retrospective.py",
+        "worker",
+        "--workbook",
+        "/home/ayaka/hybridguard/data/external/enron/workbooks/converted/10.xlsx",
+        "--backend",
+        "v511",
+        "--output",
+        "/home/ayaka/hybridguard/New version/20261014_v519_enron_retrospective/predictions/fd0fe83fdfe43bf31f3d_v511.json.gz"
+      ]
+    }
+  ]
+}

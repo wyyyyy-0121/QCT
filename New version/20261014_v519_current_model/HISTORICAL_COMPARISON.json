@@ -1,0 +1,669 @@
+{
+  "all_equal": true,
+  "comparison": {
+    "v4_baseline": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 21,
+        "current": 21,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.34285714285714286,
+        "current": 0.34285714285714286,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "equal": true
+      }
+    },
+    "v4_components_off": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 21,
+        "current": 21,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.34285714285714286,
+        "current": 0.34285714285714286,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "equal": true
+      }
+    },
+    "v4_low_budget": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.0,
+        "current": 0.0,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "budget_exceeded": 43,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 2,
+          "original_satisfies_constraints": 3
+        },
+        "current": {
+          "budget_exceeded": 43,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 2,
+          "original_satisfies_constraints": 3
+        },
+        "equal": true
+      }
+    },
+    "v4_main": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 540,
+        "current": 540,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 540,
+        "current": 540,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 33,
+        "current": 33,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.7346938775510204,
+        "current": 0.7346938775510204,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "equal": true
+      }
+    },
+    "v4_reject_all": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.0,
+        "current": 0.0,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "equal": true
+      }
+    },
+    "v4_review_only": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.0,
+        "current": 0.0,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "equal": true
+      }
+    },
+    "v511_baseline": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 21,
+        "current": 21,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.34285714285714286,
+        "current": 0.34285714285714286,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "equal": true
+      }
+    },
+    "v511_components_off": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 252,
+        "current": 252,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 21,
+        "current": 21,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.34285714285714286,
+        "current": 0.34285714285714286,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 15,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 21
+        },
+        "equal": true
+      }
+    },
+    "v511_low_budget": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.0,
+        "current": 0.0,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "budget_exceeded": 43,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 2,
+          "original_satisfies_constraints": 3
+        },
+        "current": {
+          "budget_exceeded": 43,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 2,
+          "original_satisfies_constraints": 3
+        },
+        "equal": true
+      }
+    },
+    "v511_main": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 540,
+        "current": 540,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 540,
+        "current": 540,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 33,
+        "current": 33,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.7346938775510204,
+        "current": 0.7346938775510204,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "equal": true
+      }
+    },
+    "v511_reject_all": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.0,
+        "current": 0.0,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "equal": true
+      }
+    },
+    "v511_review_only": {
+      "workbooks": {
+        "previous": 51,
+        "current": 51,
+        "equal": true
+      },
+      "required_cells": {
+        "previous": 735,
+        "current": 735,
+        "equal": true
+      },
+      "correct_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_cells": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "accepted_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "unsafe_groups": {
+        "previous": 0,
+        "current": 0,
+        "equal": true
+      },
+      "coverage": {
+        "previous": 0.0,
+        "current": 0.0,
+        "equal": true
+      },
+      "statuses": {
+        "previous": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "current": {
+          "ambiguous_solutions": 3,
+          "budget_exceeded": 3,
+          "constraint_rejected:constraint document is not externally approved": 3,
+          "no_solution": 6,
+          "original_satisfies_constraints": 3,
+          "unique_solution": 33
+        },
+        "equal": true
+      }
+    }
+  }
+}

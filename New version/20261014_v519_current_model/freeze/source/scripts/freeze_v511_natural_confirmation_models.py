@@ -1,0 +1,134 @@
+"""Freeze V5.1.1, baselines, and the fresh confirmation protocol."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from scripts.freeze_v51_natural_confirmation_models import (
+    ROOT,
+    extract,
+    git,
+    inspect_model,
+    sha256,
+)
+
+MODEL_SPECS = {
+    "v4_r1": {"name": "V4-R1", "git_object": "freeze-v4-r1", "kind": "v4_r1"},
+    "v5_v1": {
+        "name": "V5-v1",
+        "git_object": "ce7576354c0a4298019ee8bbbfc575fd68cff4da",
+        "kind": "v5_v1",
+    },
+    "v5_r2": {
+        "name": "V5-R2",
+        "git_object": "2232a870e3be089650ccd1676049e6c5c35cd692",
+        "kind": "v5_r2",
+    },
+    "v5_1_development": {
+        "name": "V5.1-development",
+        "git_object": "06e7190",
+        "kind": "v5_1_development",
+    },
+    "v5_1_1_development": {
+        "name": "V5.1.1-development",
+        "git_object": "4b960f8",
+        "kind": "v5_1_1_development",
+    },
+}
+
+
+def inspect_v511(source: Path) -> dict:
+    expression = (
+        "import importlib,inspect,json;m=importlib.import_module('formulaguard.v5_1_1_development');"
+        "print(json.dumps({'entry_point':'formulaguard.v5_1_1_development.v5_1_1_development_scores',"
+        "'signature':str(inspect.signature(m.v5_1_1_development_scores)),"
+        "'parameters':m.v5_1_1_development_default_parameters()}))"
+    )
+    environment = dict(os.environ)
+    environment["PYTHONPATH"] = str(source)
+    completed = subprocess.run(
+        [sys.executable, "-c", expression],
+        cwd=source,
+        env=environment,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return json.loads(completed.stdout)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+    models = {}
+    for key, spec in MODEL_SPECS.items():
+        commit = git("rev-parse", spec["git_object"]).strip()
+        tree = git("rev-parse", f"{commit}^{{tree}}").strip()
+        import tempfile
+
+        with tempfile.TemporaryDirectory(prefix=f"freeze-{key}-") as temporary:
+            extract(commit, Path(temporary))
+            inspected = (
+                inspect_v511(Path(temporary))
+                if spec["kind"] == "v5_1_1_development"
+                else inspect_model(Path(temporary), spec["kind"])
+            )
+        models[key] = {
+            **spec,
+            "resolved_commit": commit,
+            "source_tree": tree,
+            **inspected,
+        }
+    artifact_paths = (
+        "scripts/build_v51_natural_confirmation.py",
+        "scripts/run_v51_confirmation_predictions.py",
+        "scripts/run_v511_confirmation_predictions.py",
+        "scripts/score_v511_natural_confirmation.py",
+        "scripts/create_v511_reveal_authorization.py",
+        "scripts/freeze_v511_natural_confirmation_models.py",
+        "formulaguard/v5_1_1_development.py",
+    )
+    lock = {
+        "protocol": "v511_natural_confirmation_model_lock_v1",
+        "models_frozen_before_dataset_generation": True,
+        "labels_read": [],
+        "models": models,
+        "artifacts": {path: sha256(ROOT / path) for path in artifact_paths},
+        "dataset_protocol": {
+            "release": "v511_natural_confirmation_release_v1",
+            "cases": 240,
+            "clusters": 20,
+            "cases_per_cluster": 12,
+            "families": 6,
+            "seed_selected_after_lock": True,
+        },
+        "promotion_gates": {
+            "bootstrap_draws": 10000,
+            "bootstrap_seed": 20260906,
+            "control_workbook_candidate_fpr_max": 0.10,
+            "ambiguous_workbook_candidate_rate_max": 0.10,
+            "accepted_group_exact_coverage_min": 0.50,
+            "accepted_group_precision_min": 0.95,
+            "unsafe_accepted_groups_max": 0,
+            "singleton_exact_coverage_min": 0.90,
+            "contiguous_block_exact_coverage_min": 0.70,
+            "systematic_column_exact_coverage_min": 0.50,
+            "macro_ap_delta_ci95_lower_gt": 0.0,
+            "exact_coverage_noninferiority_margin": -0.05,
+        },
+    }
+    args.output.write_text(json.dumps(lock, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(args.output)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
