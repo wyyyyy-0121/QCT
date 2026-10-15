@@ -1,0 +1,359 @@
+{
+  "adapter_error_count": 43,
+  "adapter_version": "typed-execution-adapter-dev1",
+  "id": "public11",
+  "input_sha256": "0771ce416909b75eabe153ff6543e5d29bc6c9080df296de8c1266415b30bef2",
+  "loaded_formula_cells": 43,
+  "loaded_formula_omissions": [],
+  "original": {
+    "PV!A10": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A11": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A12": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A13": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A14": {
+      "error": "ZeroDivisionError: division by zero",
+      "kind": "error"
+    },
+    "PV!A15": {
+      "error": "ValueError: Expected numeric value, got '#N/A'",
+      "kind": "error"
+    },
+    "PV!A16": {
+      "error": "ValueError: Expected numeric value, got '#NUM!'",
+      "kind": "error"
+    },
+    "PV!A17": {
+      "error": "ValueError: Expected numeric value, got '#NULL!'",
+      "kind": "error"
+    },
+    "PV!A18": {
+      "error": "ValueError: Expected numeric value, got '#VALUE!'",
+      "kind": "error"
+    },
+    "PV!A19": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A2": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A20": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A21": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A22": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A23": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A24": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "PV!A25": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "PV!A26": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "PV!A27": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "PV!A28": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "PV!A29": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A3": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A30": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A31": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A32": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A33": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A34": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A35": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A36": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A37": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A38": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A39": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A4": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A40": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A41": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A42": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A43": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A5": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A6": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A7": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A8": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!A9": {
+      "error": "ValueError: Unsupported function PV",
+      "kind": "error"
+    },
+    "PV!B14": {
+      "error": "ZeroDivisionError: division by zero",
+      "kind": "error"
+    }
+  },
+  "raw_formula_declarations": 43,
+  "source_hash_after": "0771ce416909b75eabe153ff6543e5d29bc6c9080df296de8c1266415b30bef2",
+  "source_path": "tests/fixtures/pv.xlsx",
+  "typed_adapter": {
+    "PV!A10": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A11": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A12": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A13": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A14": {
+      "error": "#DIV/0!",
+      "kind": "error"
+    },
+    "PV!A15": {
+      "error": "#N/A",
+      "kind": "error"
+    },
+    "PV!A16": {
+      "error": "#NUM!",
+      "kind": "error"
+    },
+    "PV!A17": {
+      "error": "#NULL!",
+      "kind": "error"
+    },
+    "PV!A18": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "PV!A19": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A20": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A21": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A22": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A23": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A24": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "PV!A25": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "PV!A26": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "PV!A27": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "PV!A28": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "PV!A29": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A30": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A31": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A32": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A33": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A34": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A35": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A36": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A37": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A38": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A39": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A4": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A40": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A41": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A42": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A43": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A5": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A6": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A7": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A8": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!A9": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "PV!B14": {
+      "error": "#DIV/0!",
+      "kind": "error"
+    }
+  }
+}

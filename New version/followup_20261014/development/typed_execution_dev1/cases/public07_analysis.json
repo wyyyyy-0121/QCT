@@ -1,0 +1,5164 @@
+{
+  "comparisons": {
+    "original_vs_typed_different_error": 223,
+    "original_vs_typed_same_error": 11,
+    "typed_vs_reference_actual_error_reference_boolean": 178,
+    "typed_vs_reference_actual_error_reference_number": 21,
+    "typed_vs_reference_different_error": 22,
+    "typed_vs_reference_same_error": 13
+  },
+  "details": [
+    {
+      "cell": "Information!A3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=1/0",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!A5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "{=na}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!A9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=NA()",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISBLANK(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISBLANK",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=CELL(\"contents\"; B2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", B2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", B2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISBLANK(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=CELL(\"contents\"; C2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", C2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", C2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!C3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERR(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERR(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERR(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERR(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERR(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERR(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!C9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERR(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISERROR(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISERROR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=CELL(\"contents\"; D2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", D2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", D2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!D3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!D9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISERROR(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISEVEN(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISEVEN(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISEVEN(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISEVEN(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISEVEN(A14)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISEVEN(A15)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISEVEN(A16)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISEVEN(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISEVEN(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISEVEN(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISEVEN(A2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISEVEN(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISEVEN(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISEVEN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!E22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "{=CELL(\"contents\"; E2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", E2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", E2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=ISEVEN(A3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!E4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NUM!",
+        "error": "#NUM!",
+        "formula_imported": "=ISEVEN(A4)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 503
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!E5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=ISEVEN(A5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=ISEVEN(A6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!E7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=ISEVEN(A7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!E8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NULL!",
+        "error": "#NULL!",
+        "formula_imported": "=ISEVEN(A8)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 521
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!E9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=ISEVEN(A9)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!F10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISLOGICAL(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISLOGICAL(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISLOGICAL",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=CELL(\"contents\"; F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", F2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", F2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!F3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!F9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISLOGICAL(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=CELL(\"contents\"; G2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", G2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", G2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!G3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNA(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!G9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNA(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNONTEXT(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNONTEXT(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNONTEXT(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNONTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=CELL(\"contents\"; H2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", H2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", H2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!H3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!H9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNONTEXT(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISNUMBER(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISNUMBER",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=CELL(\"contents\"; I2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", I2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", I2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!I3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!I9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISNUMBER(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISODD(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISODD(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISODD(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISODD(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISODD(A14)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISODD(A15)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISODD(A16)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISODD(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISODD(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISODD(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "=ISODD(A2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISODD(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISODD(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISODD",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!J22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:504",
+        "error": "Err:504",
+        "formula_imported": "{=CELL(\"contents\"; J2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 504
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", J2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", J2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=ISODD(A3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!J4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NUM!",
+        "error": "#NUM!",
+        "formula_imported": "=ISODD(A4)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 503
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!J5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=ISODD(A5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=ISODD(A6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!J7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=ISODD(A7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!J8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NULL!",
+        "error": "#NULL!",
+        "formula_imported": "=ISODD(A8)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 521
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!J9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=ISODD(A9)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!K10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A10)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A11)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A12)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A13)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISTEXT(A14)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISTEXT(A15)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=ISTEXT(A16)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A17)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A18)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A19)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A2)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A20)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A21)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ISTEXT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=CELL(\"contents\"; K2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", K2)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 6: '\"contents\", K2)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!K3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A3)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A4)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A5)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A6)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A7)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A8)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!K9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "FALSE",
+        "formula_imported": "=ISTEXT(A9)",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": false
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_boolean"
+    },
+    {
+      "cell": "Information!L10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1",
+        "formula_imported": "=N(A10)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=N(A11)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=N(A12)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=N(A13)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=N(A14)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=N(A15)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=N(A16)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=N(A17)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=N(A18)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.23",
+        "formula_imported": "=N(A19)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.23
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=N(A2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-2.34",
+        "formula_imported": "=N(A20)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -2.34
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36526",
+        "formula_imported": "=N(A21)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36526.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function N",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Information!L3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=N(A3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!L4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NUM!",
+        "error": "#NUM!",
+        "formula_imported": "=N(A4)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 503
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!L5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=N(A5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found '' in '=na'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!L6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=N(A6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#VALUE!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!L7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=N(A7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#REF!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!L8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NULL!",
+        "error": "#NULL!",
+        "formula_imported": "=N(A8)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 521
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NULL!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NULL!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Information!L9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=N(A9)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Information!M2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=NA()",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NA",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    }
+  ],
+  "id": "public07",
+  "loaded_formula_cells": 234,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 234
+}

@@ -1,0 +1,3976 @@
+{
+  "comparisons": {
+    "original_vs_typed_agreement": 7,
+    "original_vs_typed_different_error": 173,
+    "typed_vs_reference_actual_error_reference_number": 140,
+    "typed_vs_reference_agreement": 7,
+    "typed_vs_reference_different_error": 12,
+    "typed_vs_reference_same_error": 21
+  },
+  "details": [
+    {
+      "cell": "Sheet1!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "100",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(B1+100;B3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 100.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "121",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(B1 + 100;B3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 121.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=HOUR(B2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(B2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(B1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(B2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(B2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!B25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "7",
+        "formula_imported": "=WEEKDAY(B1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 7.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1899",
+        "formula_imported": "=YEAR(B1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1899.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "30",
+        "formula_imported": "=DAY(B1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 30.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3144",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(C1+100;C3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3144.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3166",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(C1 + 100;C3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3166.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "14",
+        "formula_imported": "=HOUR(C2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 14.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "24",
+        "formula_imported": "=MINUTE(C2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 24.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(C1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(C2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(C2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!C25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "7",
+        "formula_imported": "=WEEKDAY(C1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 7.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1899",
+        "formula_imported": "=YEAR(C1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1899.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "30",
+        "formula_imported": "=DAY(C1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 30.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6189",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(D1+100;D3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6189.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6210",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(D1 + 100;D3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6210.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=HOUR(D2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "23",
+        "formula_imported": "=MINUTE(D2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 23.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(D1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(D2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(D2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!D25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=WEEKDAY(D1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1899",
+        "formula_imported": "=YEAR(D1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1899.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "200",
+        "formula_imported": "=100+C3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 200.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 200.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 200.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!D9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "31",
+        "formula_imported": "=DAY(D1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 31.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "9262",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(E1+100;E3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 9262.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "9283",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(E1 + 100;E3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 9283.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=HOUR(E2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:23'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "23",
+        "formula_imported": "=MINUTE(E2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 23.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:23'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=MONTH(E1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(E2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:23'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.0576388888888889",
+        "formula_imported": "=TIMEVALUE(E2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.05763888888888889
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:23'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=WEEKDAY(E1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(E1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!E3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "300",
+        "formula_imported": "=100+D3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 300.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 300.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 300.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!E9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "30",
+        "formula_imported": "=DAY(E1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 30.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12308",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(F1+100;F3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12308.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12327",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(F1 + 100;F3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12327.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "=HOUR(F2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(F2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=MONTH(F1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(F2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(F2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!F25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4",
+        "formula_imported": "=WEEKDAY(F1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(F1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!F3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "400",
+        "formula_imported": "=100+E3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 400.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 400.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 400.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!F9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "31",
+        "formula_imported": "=DAY(F1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 31.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "15380",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(G1+100;G3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 15380.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "15400",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(G1 + 100;G3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 15400.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "=HOUR(G2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(G2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=MONTH(G1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(G2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(G2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!G25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4",
+        "formula_imported": "=WEEKDAY(G1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(G1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!G3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "500",
+        "formula_imported": "=100+F3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 500.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 500.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 500.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!G9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "28",
+        "formula_imported": "=DAY(G1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 28.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "18423",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(H1+100;H3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 18423.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "18444",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(H1 + 100;H3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 18444.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=HOUR(H2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "45",
+        "formula_imported": "=MINUTE(H2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 45.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=MONTH(H1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36",
+        "formula_imported": "=SECOND(H2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(H2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!H25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=WEEKDAY(H1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(H1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!H3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "600",
+        "formula_imported": "=100+G3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 600.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 600.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 600.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!H9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=DAY(H1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "21467",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(I1+100;I3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 21467.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "21489",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(I1 + 100;I3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 21489.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "16",
+        "formula_imported": "=HOUR(I2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 16.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MINUTE(I2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=MONTH(I1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(I2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(I2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!I25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=WEEKDAY(I1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(I1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!I3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "700",
+        "formula_imported": "=100+H3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 700.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 700.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 700.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!I9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=DAY(I1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1683",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(J1+100;J3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1683.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1705",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(J1 + 100;J3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1705.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=HOUR(J2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function PI",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "23",
+        "formula_imported": "=MINUTE(J2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 23.0
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function PI",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=MONTH(J1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3.14159265358979",
+        "formula_imported": "=PI()",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.141592653589793
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function PI",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "54.000",
+        "formula_imported": "=SECOND(J2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 54.0
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function PI",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(J2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function PI",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!J25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=WEEKDAY(J1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(J1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!J9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=DAY(J1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "366",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(K1;K3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 366.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "366",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(K1;K3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 366.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=HOUR(K2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:00:00 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(K2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:00:00 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(K1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(K2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:00:00 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.0416666666666667",
+        "formula_imported": "=TIMEVALUE(K2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.041666666666666664
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '1:00:00 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=WEEKDAY(K1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1900",
+        "formula_imported": "=YEAR(K1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1900.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!K9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "31",
+        "formula_imported": "=DAY(K1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 31.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "398",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(L1;L3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 398.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "425",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(L1;L3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 425.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=HOUR(L2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "59",
+        "formula_imported": "=MINUTE(L2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 59.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=MONTH(L1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "59",
+        "formula_imported": "=SECOND(L2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 59.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.0416550925925926",
+        "formula_imported": "=TIMEVALUE(L2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.04165509259259259
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59 AM'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=WEEKDAY(L1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1901",
+        "formula_imported": "=YEAR(L1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1901.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!L9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=DAY(L1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "13075",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(M1;M3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 13075.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "13088",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(M1;M3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 13088.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=HOUR(M2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "59",
+        "formula_imported": "=MINUTE(M2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 59.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=MONTH(M1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "59",
+        "formula_imported": "=SECOND(M2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 59.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.541655092592593",
+        "formula_imported": "=TIMEVALUE(M2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.5416550925925926
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '12:59:59'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4",
+        "formula_imported": "=WEEKDAY(M1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1927",
+        "formula_imported": "=YEAR(M1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1927.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!M3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "101",
+        "formula_imported": "=100+L3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 101.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 101.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 101.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!M9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "18",
+        "formula_imported": "=DAY(M1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 18.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(N1;N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(N1;N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=HOUR(N2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(N2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(N1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(N2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(N2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!N25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "7",
+        "formula_imported": "=WEEKDAY(N1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 7.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1899",
+        "formula_imported": "=YEAR(N1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1899.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!N9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "30",
+        "formula_imported": "=DAY(N1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 30.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(O1;O3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(O1;O3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=HOUR(O2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(O2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(O1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(O2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(O2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!O25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=WEEKDAY(O1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1899",
+        "formula_imported": "=YEAR(O1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1899.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!O9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "31",
+        "formula_imported": "=DAY(O1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 31.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(P1;P3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EDATE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(P1;P3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function EOMONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=HOUR(P2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function HOUR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=MINUTE(P2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MINUTE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=MONTH(P1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function MONTH",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SECOND(P2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SECOND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(P2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TIMEVALUE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!P25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "=WEEKDAY(P1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function WEEKDAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1899",
+        "formula_imported": "=YEAR(P1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1899.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function YEAR",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!P9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "29",
+        "formula_imported": "=DAY(P1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 29.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function DAY",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!Q1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=1/0",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(Q1;Q3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(Q1;Q3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=HOUR(Q2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=MINUTE(Q2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=MONTH(Q1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=1/0",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SECOND(Q2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=TIMEVALUE(Q2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=WEEKDAY(Q1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=YEAR(Q1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!Q9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=DAY(Q1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: ZeroDivisionError: division by zero",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEDATE(R1;R3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=COM.SUN.STAR.SHEET.ADDIN.ANALYSIS.GETEOMONTH(R1;R3)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=HOUR(R2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=MINUTE(R2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=MONTH(R1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=SECOND(R2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=TIMEVALUE(R2)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Sheet1!R25",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=WEEKDAY(R1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=YEAR(R1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "Sheet1!R9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=DAY(R1)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'XYZZY'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    }
+  ],
+  "id": "public05",
+  "loaded_formula_cells": 180,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 180
+}

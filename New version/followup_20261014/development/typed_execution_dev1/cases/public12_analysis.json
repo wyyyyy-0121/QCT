@@ -1,0 +1,4240 @@
+{
+  "comparisons": {
+    "original_vs_typed_agreement": 46,
+    "original_vs_typed_different_error": 127,
+    "original_vs_typed_same_error": 19,
+    "typed_vs_reference_actual_error_reference_number": 82,
+    "typed_vs_reference_agreement": 46,
+    "typed_vs_reference_different_error": 64
+  },
+  "details": [
+    {
+      "cell": "LinestArrayExp!A10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=1+A9",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 2.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 2.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=1+A10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 3.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 3.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4",
+        "formula_imported": "=1+A11",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 4.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 4.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=1+A12",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-5",
+        "formula_imported": "=1+A2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -5.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -5.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -5.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-4",
+        "formula_imported": "=1+A3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -4.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -4.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -4.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-3",
+        "formula_imported": "=1+A4",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -3.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -3.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -3.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-2",
+        "formula_imported": "=1+A5",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -2.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -2.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -2.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1",
+        "formula_imported": "=1+A6",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -1.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -1.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=1+A7",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!A9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=1+A8",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 1.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 1.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2.3",
+        "formula_imported": "=B$17*A10^2+C$17*A10+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.3000000000000003
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 2.3000000000000003
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 2.3000000000000003
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4.1",
+        "formula_imported": "=B$17*A11^2+C$17*A11+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 4.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 4.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6.7",
+        "formula_imported": "=B$17*A12^2+C$17*A12+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.700000000000001
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 6.700000000000001
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 6.700000000000001
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "10.1",
+        "formula_imported": "=B$17*A13^2+C$17*A13+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 10.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 10.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 10.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.399575424575425",
+        "formula_imported": "{=LINEST(B2:B13;A2:A13^{1;2})}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.39957542457542455
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "LinestArrayExp!B19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.399575424575425",
+        "formula_imported": "{=LINEST(B2:B13;A2:A13^{1;2};;TRUE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.39957542457542455
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2},,TRUE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2},,TRUE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "LinestArrayExp!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "16.7",
+        "formula_imported": "=B$17*A2^2+C$17*A2+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 16.700000000000003
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 16.700000000000003
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 16.700000000000003
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.399575424575425",
+        "formula_imported": "{=LINEST(B2:B13;A2:A13^{1;2};TRUE();TRUE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.39957542457542455
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2},TRUE,TRUE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2},TRUE,TRUE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "LinestArrayExp!B28",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(B2:B14;A2:A14^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!B29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(B2:B14;A2:A13^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12.1",
+        "formula_imported": "=B$17*A3^2+C$17*A3+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 12.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 12.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B30",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(B2:B13;A2:A12^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!B33",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=LINEST(A2:A13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "LinestArrayExp!B34",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.601748251748252",
+        "formula_imported": "{=LINEST(B2:B13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.601748251748252
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "LinestArrayExp!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "8.3",
+        "formula_imported": "=B$17*A4^2+C$17*A4+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 8.3
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 8.3
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 8.3
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5.4",
+        "formula_imported": "=B$17*A5^2+C$17*A5+D$17+0.1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.4
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5.4
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5.4
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3.1",
+        "formula_imported": "=B$17*A6^2+C$17*A6+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 3.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 3.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.7",
+        "formula_imported": "=B$17*A7^2+C$17*A7+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.7000000000000002
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 1.7000000000000002
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 1.7000000000000002
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.1",
+        "formula_imported": "=B$17*A8^2+C$17*A8+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 1.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 1.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.3",
+        "formula_imported": "=B$17*A9^2+C$17*A9+D$17",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.3
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 1.3
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 1.3
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "LinestArrayExp!C28",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(C2:C13;B2:B13^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!C29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(C2:C14;B2:B13^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!C30",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(C2:C13;B2:B12^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!D30",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST($Trend.F17:F28;C2:C12^{1;2})}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 29: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 29: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "LinestArrayExp!F21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(F16:F18;G16:H18;;TRUE())}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unexpected token ',' in '=LINEST(F16:F18,G16:H18,,TRUE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unexpected token ',' in '=LINEST(F16:F18,G16:H18,,TRUE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J5:N5;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J3:N3;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J4:N4;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J3:N3;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-2.25403535741737",
+        "formula_imported": "=SLOPE(J4:N4;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -2.2540353574173717
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1.21052631578947",
+        "formula_imported": "=SLOPE(J5:N5;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.2105263157894735
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SLOPE(J6:N6;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J7:N7;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2.7401998462721",
+        "formula_imported": "=SLOPE(J5:N5;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.7401998462720987
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SLOPE(J6:N6;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SLOPE(J7:N7;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B26",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SLOPE(J6:N6;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B27",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SLOPE(J7:N7;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=SLOPE(J7:N7;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.440977443609022",
+        "formula_imported": "=SLOPE(J3:N3;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.44097744360902247
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.817258883248731",
+        "formula_imported": "=SLOPE(J4:N4;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.8172588832487307
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J5:N5;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J6:N6;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.361928934010152",
+        "formula_imported": "=SLOPE(J3:N3;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.3619289340101522
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=SLOPE(J4:N4;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J5:N5;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J3:N3;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J4:N4;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J3:N3;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.342428900845505",
+        "formula_imported": "=INTERCEPT(J4:N4;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.3424289008455048
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1.78947368421052",
+        "formula_imported": "=INTERCEPT(J5:N5;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.7894736842105239
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=INTERCEPT(J6:N6;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J7:N7;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-2.23981552651806",
+        "formula_imported": "=INTERCEPT(J5:N5;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -2.239815526518062
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=INTERCEPT(J6:N6;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=INTERCEPT(J7:N7;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C26",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=INTERCEPT(J6:N6;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C27",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=INTERCEPT(J7:N7;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=INTERCEPT(J7:N7;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.169548872180452",
+        "formula_imported": "=INTERCEPT(J3:N3;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.16954887218045167
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1.53299492385787",
+        "formula_imported": "=INTERCEPT(J4:N4;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.5329949238578688
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J5:N5;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J6:N6;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!C8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.836040609137056",
+        "formula_imported": "=INTERCEPT(J3:N3;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.836040609137056
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!C9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=INTERCEPT(J4:N4;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J5:N5;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J3:N3;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J4:N4;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J3:N3;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-5.29265949269793",
+        "formula_imported": "=FORECAST(D2;J4:N4;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -5.292659492697925
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-4.81578947368421",
+        "formula_imported": "=FORECAST(D2;J5:N5;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -4.815789473684208
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=FORECAST(D2;J6:N6;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J7:N7;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4.61068408916218",
+        "formula_imported": "=FORECAST(D2;J5:N5;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.610684089162184
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=FORECAST(D2;J6:N6;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=FORECAST(D2;J7:N7;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D26",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=FORECAST(D2;J6:N6;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D27",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=FORECAST(D2;J7:N7;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=FORECAST(D2;J7:N7;J3:N3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.932894736842104",
+        "formula_imported": "=FORECAST(D2;J3:N3;J4:N4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9328947368421043
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D37",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.689655172413793",
+        "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B37;C37)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.6896551724137931
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D38",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B38;C38)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D39",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.689655172413793",
+        "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B39;C39)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.6896551724137931
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-3.5761421319797",
+        "formula_imported": "=FORECAST(D2;J4:N4;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -3.5761421319796955
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D45",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B45;C45)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J5:N5;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J6:N6;J7:N7)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!D8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.74086294416244",
+        "formula_imported": "=FORECAST(D2;J3:N3;J5:N5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.7408629441624364
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!D9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=FORECAST(D2;J4:N4;J6:N6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J5:N5;J7:N7;E2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J3:N3;J6:N6;E2:F2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J4:N4;J7:N7;E2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J3:N3;J7:N7;E2:F2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-5.29265949269793",
+        "formula_imported": "{=TREND(J4:N4;J3:N3;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -5.292659492697925
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-4.81578947368421",
+        "formula_imported": "{=TREND(J5:N5;J4:N4;E2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -4.815789473684207
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=TREND(J6:N6;J5:N5;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J7:N7;J6:N6;E2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4.61068408916218",
+        "formula_imported": "{=TREND(J5:N5;J3:N3;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.610684089162184
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=TREND(J6:N6;J4:N4;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=TREND(J7:N7;J5:N5;E2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E26",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=TREND(J6:N6;J3:N3;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E27",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=TREND(J7:N7;J4:N4;E2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=TREND(J7:N7;J3:N3;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.932894736842105",
+        "formula_imported": "{=TREND(J3:N3;J4:N4;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9328947368421046
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-3.5761421319797",
+        "formula_imported": "{=TREND(J4:N4;J5:N5;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -3.5761421319796955
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J5:N5;J6:N6;E2:F2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J6:N6;J7:N7;E2:F2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!E8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.74086294416244",
+        "formula_imported": "{=TREND(J3:N3;J5:N5;E2:F2)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.7408629441624366
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!E9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(J4:N4;J6:N6;E2:F2)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J5:N5;J7:N7)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J3:N3;J6:N6)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J4:N4;J7:N7)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J3:N3;J7:N7)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-2.25403535741737",
+        "formula_imported": "{=LINEST(J4:N4;J3:N3)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -2.2540353574173717
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1.21052631578947",
+        "formula_imported": "{=LINEST(J5:N5;J4:N4)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.2105263157894735
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G19",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=LINEST(J6:N6;J5:N5)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G20",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J7:N7;J6:N6)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2.7401998462721",
+        "formula_imported": "{=LINEST(J5:N5;J3:N3)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.7401998462720987
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G23",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=LINEST(J6:N6;J4:N4)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=LINEST(J7:N7;J5:N5)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G26",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=LINEST(J6:N6;J3:N3)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G27",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=LINEST(J7:N7;J4:N4)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G29",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "{=LINEST(J7:N7;J3:N3)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.440977443609022",
+        "formula_imported": "{=LINEST(J3:N3;J4:N4)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.44097744360902247
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.817258883248731",
+        "formula_imported": "{=LINEST(J4:N4;J5:N5)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.8172588832487307
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J5:N5;J6:N6)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J6:N6;J7:N7)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!G8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.361928934010152",
+        "formula_imported": "{=LINEST(J3:N3;J5:N5)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.3619289340101522
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!G9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=LINEST(J4:N4;J6:N6)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!J12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3.1",
+        "formula_imported": "=J11+1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 3.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 3.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!J13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4.1",
+        "formula_imported": "=J12+1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 4.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 4.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!J14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5.1",
+        "formula_imported": "=J13+1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!K11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-4",
+        "formula_imported": "=K10-2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -4.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -4.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -4.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!K13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-9",
+        "formula_imported": "=K12-2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -9.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -9.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -9.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!K14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-11",
+        "formula_imported": "=K13-2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -11.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -11.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -11.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!K4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-4",
+        "formula_imported": "=J4-2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -4.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -4.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -4.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!L12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "=L11+3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 6.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 6.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!L13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "9",
+        "formula_imported": "=L12+3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 9.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 9.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 9.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!L14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=L13+3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!L24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3.896425",
+        "formula_imported": "=J24*J22+K24*K22+L22",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.896425
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 3.896425
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 3.896425
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!L3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3.1",
+        "formula_imported": "=K3+1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 3.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 3.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!L5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "=K5+3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 6.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 6.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!M22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.143749999999999",
+        "formula_imported": "=P10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.14374999999999943
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!M24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-3",
+        "formula_imported": "=J24",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -3.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -3
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -3
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!M3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "4.1",
+        "formula_imported": "=L3+1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 4.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 4.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 4.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!M4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-9",
+        "formula_imported": "=L4-2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -9.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -9.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -9.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!M5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "9",
+        "formula_imported": "=L5+3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 9.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 9.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 9.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!N22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.266964285714287",
+        "formula_imported": "=Q10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.2669642857142865
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -0.2669642857142858
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -0.2669642857142858
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!N24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=K24",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!N3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5.1",
+        "formula_imported": "=M3+1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.1
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5.1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5.1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!N4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-11",
+        "formula_imported": "=M4-2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -11.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -11.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -11.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!N5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=M5+3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!O22",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.426785714285713",
+        "formula_imported": "=R10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.42678571428571255
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.42678571428571443
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.42678571428571443
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Stats!O24",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-1.33928571428572",
+        "formula_imported": "=M24*M22+N24*N22+O22",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.3392857142857182
+      },
+      "original_model": {
+        "error": "ValueError: FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "execution_error",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!P10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.143749999999999",
+        "formula_imported": "{=LINEST(J3:N3;J4:N5;TRUE();FALSE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.14374999999999943
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!P11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.143749999999999",
+        "formula_imported": "{=LINEST(J10:J14;K10:L14;TRUE();FALSE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.14374999999999943
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J10:J14,K10:L14,TRUE,FALSE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J10:J14,K10:L14,TRUE,FALSE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!P13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.0443518518518517",
+        "formula_imported": "{=LINEST(J3:N3;J4:N5;FALSE();FALSE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.04435185185185172
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,FALSE,FALSE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,FALSE,FALSE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!P14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.0443518518518517",
+        "formula_imported": "{=LINEST(J10:J14;K10:L14;FALSE();TRUE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.04435185185185172
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J10:J14,K10:L14,FALSE,TRUE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J10:J14,K10:L14,FALSE,TRUE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!P3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=SLOPE(J3:N3;J4:N5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!P4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=INTERCEPT(J3:N3;J4:N5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!P5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=FORECAST(2.5; J3:N3;J4:N5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!P6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=TREND(J3:N3;J4:N5;2.5)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!P7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(J3:N4;J5:N7)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!Q16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.440977443609022",
+        "formula_imported": "{=LINEST(J3:N3;J4:N4;;TRUE())}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.44097744360902247
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unexpected token ',' in '=LINEST(J3:N3,J4:N4,,TRUE)'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unexpected token ',' in '=LINEST(J3:N3,J4:N4,,TRUE)'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Stats!Q3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=SLOPE(J3:N4;J5:N5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!Q4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=INTERCEPT(J3:N4;J5:N5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!Q5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=FORECAST(2.5;J3:N4;J5:N5)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!Q6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=TREND(J3:N4;J5:N5;2.5)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!Q7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(J3:N4;J5:N5)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!R3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=SLOPE(J3:N3;K4:N4)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SLOPE",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!R4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=INTERCEPT(J3:N3;K4:N4)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function INTERCEPT",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!R5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "=FORECAST(2.5;J3:N3;K4:N4)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function FORECAST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!R6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=TREND(J3:N3;K4:N4;2.5)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Stats!R7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "Err:502",
+        "error": "Err:502",
+        "formula_imported": "{=LINEST(J3:N3;K4:N4)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 502
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function LINEST",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Trend!B17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "16.7101648351648",
+        "formula_imported": "{=TREND($LinestArrayExp.B2:B13;$LinestArrayExp.A2:A13^{1;2})}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 16.710164835164836
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2})'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2})'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Trend!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-6",
+        "formula_imported": "{=TREND($LinestArrayExp.A2:A13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -6.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Trend!B31",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "{=TREND(D31:D33;E31:F33)}",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "Trend!C17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "16.7101648351648",
+        "formula_imported": "{=TREND($LinestArrayExp.B2:B13;$LinestArrayExp.A2:A13^{1;2}; $LinestArrayExp.A2:A13^{1;2})}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 16.710164835164836
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2}, LinestArrayEx'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2}, LinestArrayEx'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Trend!C2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "9.38461538461539",
+        "formula_imported": "{=TREND($LinestArrayExp.B2:B13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 9.384615384615387
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Trend!D17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1.30981518481518",
+        "formula_imported": "{=TREND($LinestArrayExp.B2:B13;$LinestArrayExp.A2:A13^{1;2}; $Trend.F17:G28)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.3098151848151849
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2}, Trend!F17:G28'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2}, Trend!F17:G28'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Trend!D2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-6",
+        "formula_imported": "{=TREND($LinestArrayExp.A2:A13;$LinestArrayExp.A2:A13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -6.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function TREND",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    }
+  ],
+  "id": "public12",
+  "loaded_formula_cells": 192,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 192
+}

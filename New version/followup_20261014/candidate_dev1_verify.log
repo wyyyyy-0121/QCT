@@ -1,0 +1,49 @@
+{
+  "all_locks_verified": true,
+  "all_candidate_inventories_replayed_exactly": true,
+  "labels_read_during_replay": false,
+  "cases": 56,
+  "formula_cells": 13400,
+  "totals": {
+    "errors": 1076,
+    "candidate_hits": 1076,
+    "errors_with_zero_candidates": 0,
+    "errors_with_unique_candidate": 0,
+    "errors_with_multiple_candidates": 1076
+  },
+  "by_group": {
+    "crossdomain": {
+      "errors": 492,
+      "candidate_hits": 492,
+      "errors_with_zero_candidates": 0,
+      "errors_with_unique_candidate": 0,
+      "errors_with_multiple_candidates": 492
+    },
+    "adversarial": {
+      "errors": 584,
+      "candidate_hits": 584,
+      "errors_with_zero_candidates": 0,
+      "errors_with_unique_candidate": 0,
+      "errors_with_multiple_candidates": 584
+    }
+  },
+  "all_statuses": {
+    "supported": 13400
+  },
+  "truncated_cells": 0,
+  "clean_formula_cells_with_candidates": 12324,
+  "truth_file_hashes": {
+    "development/crossdomain_dev1/truth.json": "92b1256e98ecfb6555ae1b25812e4b2cc8626525e9676d1c13aa0cbd5dc32ce7",
+    "development/dev5_adversarial1/truth.json": "3c5c6b17c4c2e191833297311352a91135a34afca1c0d50b57259c4504acd408"
+  },
+  "source_lock_sha256": "eb6e371384f8a7c108caee56d14862c115c4792dbb13c09d4d8f088ed9db4044",
+  "prediction_lock_sha256": "e5e7a06b91cea1cbaa53a6ad505ca63ac9c9e2cb09ed2c9aabe8498eb3d389eb",
+  "score_sha256": "cbcf1c20081690f5bf6e00be7de9f94a9250dea05b380fef3e39742d4789e8cc",
+  "verifier_sha256": "e757b94f43fbb8b07f5e1c2967b8d4c2fdf9621fa30180d77b1c5afe1519edeb",
+  "repair_precision": null,
+  "correct_repair_coverage": null,
+  "repair_proposals_generated": false,
+  "final_validation_eligible": false,
+  "interpretation": "A hypothesis inventory is not a repair decision; no acceptance metrics improved.",
+  "utc": "2026-10-15T08:40:26.519803+00:00"
+}

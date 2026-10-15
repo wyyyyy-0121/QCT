@@ -1,0 +1,1667 @@
+{
+  "comparisons": {
+    "original_vs_typed_agreement": 33,
+    "original_vs_typed_different_error": 31,
+    "original_vs_typed_same_error": 11,
+    "typed_vs_reference_actual_error_reference_number": 38,
+    "typed_vs_reference_actual_error_reference_text": 1,
+    "typed_vs_reference_agreement": 33,
+    "typed_vs_reference_different_error": 3
+  },
+  "details": [
+    {
+      "cell": "ArrayForm!A32",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "{=A28:D28+A30:D30}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!C1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "71",
+        "formula_imported": "{=SUM(A1:A3*B1:B3)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 71.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got [2, 3, 6]",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!E1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=ROW(A1:A3)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ROW",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!E21",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "{=A21:A24+C21:C24}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!E7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "11",
+        "formula_imported": "{=SUM((A7:A13=\"a\")*(B7:B13=\"y\")*C7:C13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 11.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 13: '\"a\")*(B7:B13=\"y\")*C7'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 13: '\"a\")*(B7:B13=\"y\")*C7'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!E8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "10",
+        "formula_imported": "{=SUM((A7:A13<>\"b\")*(B7:B13<>\"y\")*C7:C13)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 10.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 14: '\"b\")*(B7:B13<>\"y\")*C'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 14: '\"b\")*(B7:B13<>\"y\")*C'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!E9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "16",
+        "formula_imported": "{=SUM((A7:A13>\"b\")*(B7:B13<\"z\")*(C7:C13+3.5))}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 16.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 13: '\"b\")*(B7:B13<\"z\")*(C'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 13: '\"b\")*(B7:B13<\"z\")*(C'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!F1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=INDEX(ROW(A1:A3); 1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ROW",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!F2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=INDEX(ROW(A1:A3); 2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ROW",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!F28",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "{=A21:A24*A30:D30}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!F3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=INDEX(ROW(A1:A3); 3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function ROW",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!G16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=A16:B17*D16:E17}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!H1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "{=COLUMN(A1:B1)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function COLUMN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!H2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=INDEX(COLUMN(A1:B1);1;1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function COLUMN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "ArrayForm!I2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=INDEX(COLUMN(A1:B1);1;2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function COLUMN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Empty!B1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0",
+        "formula_imported": "=C1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "6",
+        "formula_imported": "=SUM(A1:A3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 6.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 6.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 6.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "33",
+        "formula_imported": "=SUM(A10:A12)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 33.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 33.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 33.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36",
+        "formula_imported": "=SUM(A11:A13)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 36.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 36.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "39",
+        "formula_imported": "=SUM(A12:A14)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 39.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 39.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 39.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "42",
+        "formula_imported": "=SUM(A13:A15)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 42.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 42.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 42.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "45",
+        "formula_imported": "=SUM(A14:A16)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 45.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 45.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 45.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "48",
+        "formula_imported": "=SUM(A15:A17)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 48.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 48.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 48.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "51",
+        "formula_imported": "=SUM(A16:A18)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 51.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 51.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 51.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "35",
+        "formula_imported": "=SUM(A17:A19)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 35.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 35.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 35.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "18",
+        "formula_imported": "=SUM(A18:A20)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 18.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 18.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 18.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "9",
+        "formula_imported": "=SUM(A2:A4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 9.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 9.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 9.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12",
+        "formula_imported": "=SUM(A3:A5)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 12.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "15",
+        "formula_imported": "=SUM(A4:A6)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 15.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 15.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 15.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "18",
+        "formula_imported": "=SUM(A5:A7)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 18.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 18.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 18.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "21",
+        "formula_imported": "=SUM(A6:A8)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 21.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 21.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 21.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "24",
+        "formula_imported": "=SUM(A7:A9)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 24.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 24.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 24.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "27",
+        "formula_imported": "=SUM(A8:A10)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 27.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 27.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 27.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "30",
+        "formula_imported": "=SUM(A9:A11)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 30.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 30.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 30.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!C1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.279415498198926",
+        "formula_imported": "=SIN(B1*A1^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.27941549819892586
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.970600619811948",
+        "formula_imported": "=SIN(B10*A10^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.9706006198119478
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.983522413573783",
+        "formula_imported": "=SIN(B11*A11^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.9835224135737828
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.919836934669537",
+        "formula_imported": "=SIN(B12*A12^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9198369346695374
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.909548151103884",
+        "formula_imported": "=SIN(B13*A13^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9095481511038842
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C14",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.999771564382428",
+        "formula_imported": "=SIN(B14*A14^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9997715643824283
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C15",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.714243783495441",
+        "formula_imported": "=SIN(B15*A15^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.7142437834954408
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C16",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.443113079481331",
+        "formula_imported": "=SIN(B16*A16^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.44311307948133055
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C17",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.80062916411734",
+        "formula_imported": "=SIN(B17*A17^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.8006291641173401
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C18",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.933493585712144",
+        "formula_imported": "=SIN(B18*A18^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.9334935857121439
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.991778853443116",
+        "formula_imported": "=SIN(B2*A2^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9917788534431158
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.926818505417785",
+        "formula_imported": "=SIN(B3*A3^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.926818505417785
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.945445154921117",
+        "formula_imported": "=SIN(B4*A4^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.9454451549211168
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.683283725035524",
+        "formula_imported": "=SIN(B5*A5^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.6832837250355236
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.901762290560574",
+        "formula_imported": "=SIN(B6*A6^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.9017622905605737
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.864596891695948",
+        "formula_imported": "=SIN(B7*A7^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.8645968916959479
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.123722687896238",
+        "formula_imported": "=SIN(B8*A8^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.12372268789623811
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!C9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.999759820078643",
+        "formula_imported": "=SIN(B9*A9^2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.9997598200786427
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "Sheet1!D1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-0.0228637681730084",
+        "formula_imported": "=LINEST(C1:C18;B1:B18)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.022863768173008364
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function SIN",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "datetime!B1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12/28/1899",
+        "formula_imported": "=A1",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -2.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -2
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -2
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3/1/1900",
+        "formula_imported": "=A10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 61.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 61
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 61
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "3/2/1900",
+        "formula_imported": "=A11",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 62.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 62
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 62
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12/30/1899",
+        "formula_imported": "=A12",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.5
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.5
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.5
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12/29/1899",
+        "formula_imported": "=A2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -1.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12/30/1899",
+        "formula_imported": "=A3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "12/31/1899",
+        "formula_imported": "=A4",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 1
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 1
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1/1/1900",
+        "formula_imported": "=A5",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 2
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 2
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1/2/1900",
+        "formula_imported": "=A6",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 3
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 3
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2/26/1900",
+        "formula_imported": "=A7",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 58.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 58
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 58
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2/27/1900",
+        "formula_imported": "=A8",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 59.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 59
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 59
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "datetime!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2/28/1900",
+        "formula_imported": "=A9",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 60.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 60
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 60
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "sref!B1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "21",
+        "formula_imported": "=SUM(Table1[])",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 21.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "sref!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "7",
+        "formula_imported": "=SUM(Table1[col2])",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 7.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[col2])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[col2])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "sref!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "15",
+        "formula_imported": "=SUM(Table1[#This Row])",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 15.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#This Row])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#This Row])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "sref!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=SUM(Table1[#All])",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#All])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#All])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "sref!B5",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "21",
+        "formula_imported": "=SUM(Table1[#Data])",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 21.0
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Data])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Data])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "sref!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "col1col2col3",
+        "formula_imported": "=CONCAT(Table1[#Headers])",
+        "kind": "text",
+        "result_type": "TEXT",
+        "uno_error_code": 0,
+        "value": "col1col2col3"
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 20: '[#Headers])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 20: '[#Headers])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_text"
+    },
+    {
+      "cell": "sref!B7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=SUM(Table1[#Totals])",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Totals])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Totals])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "sref!F4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NAME?",
+        "error": "#NAME?",
+        "formula_imported": "=SUBTOTAL(109;[col3])",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 525
+      },
+      "original_model": {
+        "error": "FormulaSyntaxError: Unsupported token at column 14: '[col3])'",
+        "kind": "error"
+      },
+      "original_vs_typed": "same_error",
+      "typed_adapter": {
+        "error": "FormulaSyntaxError: Unsupported token at column 14: '[col3])'",
+        "kind": "error"
+      },
+      "typed_vs_reference": "different_error"
+    },
+    {
+      "cell": "trim-range!B1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "24",
+        "formula_imported": "=SUM(D1:E3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 24.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 24.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 24.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "trim-range!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "136",
+        "formula_imported": "=B1+SUM(D4:E4)+D5",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 136.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 136.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 136.0
+      },
+      "typed_vs_reference": "agreement"
+    }
+  ],
+  "id": "public06",
+  "loaded_formula_cells": 75,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 75
+}

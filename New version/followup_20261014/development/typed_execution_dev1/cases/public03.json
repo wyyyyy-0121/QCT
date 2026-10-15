@@ -1,0 +1,63 @@
+{
+  "adapter_error_count": 0,
+  "adapter_version": "typed-execution-adapter-dev1",
+  "id": "public03",
+  "input_sha256": "973b4de3d7dd162999170c90d47fba0e09be37e562246571e5c85081cd289f98",
+  "loaded_formula_cells": 6,
+  "loaded_formula_omissions": [],
+  "original": {
+    "Sheet1!A6": {
+      "kind": "number",
+      "value": 50
+    },
+    "Sheet1!B1": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B10": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B2": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B6": {
+      "kind": "number",
+      "value": 50
+    },
+    "Sheet1!B8": {
+      "kind": "number",
+      "value": -50.0
+    }
+  },
+  "raw_formula_declarations": 6,
+  "source_hash_after": "973b4de3d7dd162999170c90d47fba0e09be37e562246571e5c85081cd289f98",
+  "source_path": "tests/fixtures/circular.xlsx",
+  "typed_adapter": {
+    "Sheet1!A6": {
+      "kind": "number",
+      "value": 50
+    },
+    "Sheet1!B1": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B10": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B2": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B6": {
+      "kind": "number",
+      "value": 50
+    },
+    "Sheet1!B8": {
+      "kind": "number",
+      "value": -50.0
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "all_candidate_inventories_replayed_exactly": true,
+  "all_locks_verified": true,
+  "all_statuses": {
+    "supported": 13400
+  },
+  "by_group": {
+    "adversarial": {
+      "candidate_hits": 584,
+      "errors": 584,
+      "errors_with_multiple_candidates": 584,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "crossdomain": {
+      "candidate_hits": 492,
+      "errors": 492,
+      "errors_with_multiple_candidates": 492,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    }
+  },
+  "by_scenario": {
+    "adversarial/all_peers_corrupted": {
+      "candidate_hits": 480,
+      "errors": 480,
+      "errors_with_multiple_candidates": 480,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "adversarial/multiline_scope_conflict": {},
+    "adversarial/peer_unit_mismatch": {
+      "candidate_hits": 96,
+      "errors": 96,
+      "errors_with_multiple_candidates": 96,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "adversarial/row_exception_and_error": {
+      "candidate_hits": 4,
+      "errors": 4,
+      "errors_with_multiple_candidates": 4,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "adversarial/unknown_output_label": {
+      "candidate_hits": 4,
+      "errors": 4,
+      "errors_with_multiple_candidates": 4,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "adversarial/unmarked_reversed_role": {},
+    "crossdomain/clean": {},
+    "crossdomain/copied_error_majority": {
+      "candidate_hits": 384,
+      "errors": 384,
+      "errors_with_multiple_candidates": 384,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "crossdomain/exception_and_error": {
+      "candidate_hits": 4,
+      "errors": 4,
+      "errors_with_multiple_candidates": 4,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "crossdomain/marked_exception": {},
+    "crossdomain/multirow_regions": {
+      "candidate_hits": 4,
+      "errors": 4,
+      "errors_with_multiple_candidates": 4,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "crossdomain/sparse_error": {
+      "candidate_hits": 4,
+      "errors": 4,
+      "errors_with_multiple_candidates": 4,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    },
+    "crossdomain/unmarked_exception": {},
+    "crossdomain/whole_column_error": {
+      "candidate_hits": 96,
+      "errors": 96,
+      "errors_with_multiple_candidates": 96,
+      "errors_with_unique_candidate": 0,
+      "errors_with_zero_candidates": 0
+    }
+  },
+  "candidate_count_histogram_all_formula_cells": {
+    "4": 3220,
+    "8": 1780,
+    "11": 1683,
+    "18": 1683,
+    "25": 5031,
+    "29": 3
+  },
+  "candidate_count_histogram_error_cells": {
+    "18": 269,
+    "25": 807
+  },
+  "cases": 56,
+  "clean_formula_cells_with_candidates": 12324,
+  "correct_repair_coverage": null,
+  "final_validation_eligible": false,
+  "formula_cells": 13400,
+  "interpretation": "A hypothesis inventory is not a repair decision; no acceptance metrics improved.",
+  "labels_read_during_replay": false,
+  "prediction_lock_sha256": "e5e7a06b91cea1cbaa53a6ad505ca63ac9c9e2cb09ed2c9aabe8498eb3d389eb",
+  "repair_precision": null,
+  "repair_proposals_generated": false,
+  "score_sha256": "cbcf1c20081690f5bf6e00be7de9f94a9250dea05b380fef3e39742d4789e8cc",
+  "source_lock_sha256": "eb6e371384f8a7c108caee56d14862c115c4792dbb13c09d4d8f088ed9db4044",
+  "totals": {
+    "candidate_hits": 1076,
+    "errors": 1076,
+    "errors_with_multiple_candidates": 1076,
+    "errors_with_unique_candidate": 0,
+    "errors_with_zero_candidates": 0
+  },
+  "truncated_cells": 0,
+  "truth_file_hashes": {
+    "development/crossdomain_dev1/truth.json": "92b1256e98ecfb6555ae1b25812e4b2cc8626525e9676d1c13aa0cbd5dc32ce7",
+    "development/dev5_adversarial1/truth.json": "3c5c6b17c4c2e191833297311352a91135a34afca1c0d50b57259c4504acd408"
+  },
+  "utc": "2026-10-15T08:40:26.519803+00:00",
+  "verifier_sha256": "e757b94f43fbb8b07f5e1c2967b8d4c2fdf9621fa30180d77b1c5afe1519edeb"
+}

@@ -1,0 +1,46 @@
+{
+  "cases": 56,
+  "new_final_families": 0,
+  "parameters": {
+    "binary_operator_substitutions": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ],
+    "max_candidates": 256,
+    "max_tokens": 512,
+    "multi_edit_search": false,
+    "numeric_scaling_operand_deletion": true,
+    "preserve_sheet_and_absolute_flags": true,
+    "reference_offsets": [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "selection_authority": "none; diagnostic candidate inventory only",
+    "unary_sign_edits": true,
+    "version": "hybridguard-followup-candidates-dev1"
+  },
+  "proposals_generated": false,
+  "role": "revealed development candidate inventory",
+  "selection": "all 32 crossdomain and all 24 frozen adversarial cases",
+  "selection_authority": "none; generated hypotheses require independent evidence",
+  "source_exclusion": "existing development families; not final validation",
+  "truth_read_before_prediction": false,
+  "utc": "2026-10-15T08:32:56.820259+00:00",
+  "version": "hybridguard-followup-candidates-dev1"
+}

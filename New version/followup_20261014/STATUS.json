@@ -40,7 +40,7 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 30,
+  "unit_test_count": 43,
   "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
@@ -82,4 +82,13 @@
   "public_execution_reference_final_eligible": false,
   "latest_execution_evidence": "development/execution_reference_dev1/analysis.json",
   "latest_verified_remote_before_execution_checkpoint": "02cdcccc433dd8cb69cd06b99d6a44fe884775bd"
+  ,"typed_execution_adapter": "typed-execution-adapter-dev1",
+  "typed_execution_cases": 14,
+  "typed_execution_raw_formula_declarations": 5117,
+  "typed_execution_vs_libreoffice_agreements": 967,
+  "typed_execution_business_labels_available": false,
+  "typed_execution_final_validation_eligible": false,
+  "typed_execution_report": "TYPED_EXECUTION_REPORT_20261015.md",
+  "typed_execution_verification": "qa/TYPED_EXECUTION_DEV1_VERIFICATION_20261015.json",
+  "latest_typed_execution_analysis": "development/typed_execution_dev1/analysis.json"
 }

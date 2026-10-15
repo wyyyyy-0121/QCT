@@ -1,0 +1,741 @@
+{
+  "comparisons": {
+    "original_vs_typed_agreement": 1,
+    "original_vs_typed_different_error": 32,
+    "typed_vs_reference_actual_error_reference_number": 24,
+    "typed_vs_reference_agreement": 1,
+    "typed_vs_reference_same_error": 8
+  },
+  "details": [
+    {
+      "cell": "NPV!A10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36250.53",
+        "formula_imported": "=NPV(G10;H10;I10;J10;K10;L10;M10)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36250.534912984425
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!A11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=NPV(G11;H11;I11;J11;K11;L11;M11)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#N/A'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#N/A",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!A12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=NPV(G12;H12;I12;J12;K12;L12;M12)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#DIV/0!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!A13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NUM!",
+        "error": "#NUM!",
+        "formula_imported": "=NPV(G13;H13;I13;J13;K13;L13;M13)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 503
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!A2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1188.44",
+        "formula_imported": "=NPV(G2;H2;I2;J2;K2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1188.4434123352212
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!A3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "8.03",
+        "formula_imported": "=NPV(G3;H3;I3;H4;I4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 8.025726280057427
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!A6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=NPV(G6;H6;I6;J6;K6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'a'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!A7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "41922.06",
+        "formula_imported": "=NPV(G7;H7;I7;J7;K7;L7)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 41922.06155493236
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!A8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36164.72",
+        "formula_imported": "=NPV(G8;H8;I8;J8;K8;L8)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36164.715368215846
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!A9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "27273.82",
+        "formula_imported": "=NPV(G9;H9;I9;J9;K9;L9)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 27273.819669316814
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'a'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36250.53",
+        "formula_imported": "=NPV(G10;H10:M10)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36250.534912984425
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!B11",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#N/A",
+        "error": "#N/A",
+        "formula_imported": "=NPV(G11;H11:M11)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 32767
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#N/A'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#N/A",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!B12",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=NPV(G12;H12:M12)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#DIV/0!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!B13",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#NUM!",
+        "error": "#NUM!",
+        "formula_imported": "=NPV(G13;H13:M13)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 503
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got '#NUM!'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1188.44",
+        "formula_imported": "=NPV(G2;H2:K2)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1188.4434123352212
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "8.03",
+        "formula_imported": "=NPV(G3;H3:I4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 8.025726280057427
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "#VALUE!",
+        "error": "#VALUE!",
+        "formula_imported": "=NPV(G6;H6:K6)",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 519
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'a'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "same_error"
+    },
+    {
+      "cell": "NPV!B7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "41922.06",
+        "formula_imported": "=NPV(G7;H7:L7)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 41922.06155493236
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36164.72",
+        "formula_imported": "=NPV(G8;H8:L8)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36164.715368215846
+      },
+      "original_model": {
+        "error": "ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!B9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "27273.82",
+        "formula_imported": "=NPV(G9;H9:L9)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 27273.819669316814
+      },
+      "original_model": {
+        "error": "ValueError: Expected numeric value, got 'a'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!C10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "36250.53",
+        "formula_imported": "=40000-3749.47",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 36250.53
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 36250.53
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 36250.53
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "NPV!D10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C10-A10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.004912984426482581
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!D2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C2-A2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.0004123352211991005
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!D3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C3-A3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!D7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C7-A7",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.0015549323652521707
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!D8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C8-A8",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.004631784155208152
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!D9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "773.52",
+        "formula_imported": "=C9-A9",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 773.5203306831863
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Expected numeric value, got 'a'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!E10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C10-B10",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.004912984426482581
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!E2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C2-B2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.0004123352211991005
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!E3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C3-B3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!E7",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C7-B7",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -0.0015549323652521707
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!E8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00",
+        "formula_imported": "=C8-B8",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.004631784155208152
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Unsupported function NPV",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#NAME?",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    },
+    {
+      "cell": "NPV!E9",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "773.52",
+        "formula_imported": "=C9-B9",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 773.5203306831863
+      },
+      "original_model": {
+        "error": "ValueError: ValueError: Expected numeric value, got 'a'",
+        "kind": "error"
+      },
+      "original_vs_typed": "different_error",
+      "typed_adapter": {
+        "error": "#VALUE!",
+        "kind": "error"
+      },
+      "typed_vs_reference": "actual_error_reference_number"
+    }
+  ],
+  "id": "public10",
+  "loaded_formula_cells": 33,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 33
+}

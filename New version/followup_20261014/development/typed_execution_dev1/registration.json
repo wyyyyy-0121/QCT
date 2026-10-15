@@ -1,0 +1,36 @@
+{
+  "business_labels_available": false,
+  "business_labels_read": [],
+  "case_count": 14,
+  "comparison": "typed values; numeric relative/absolute tolerance 1e-8; errors retain codes",
+  "new_final_families": 0,
+  "new_final_sources": 0,
+  "origin": "dgorissen/pycel pinned fixtures; permanently excluded from final validation",
+  "previous_execution_lock_sha256": "5565a5f7263deed1d73f820d3e012d09b12014cc2b59b667b3861fc13ebd4f18",
+  "python": "3.13.13",
+  "reference": "locked LibreOffice observations from execution_reference_dev1",
+  "repair_proposals_generated": false,
+  "role": "revealed development execution compatibility audit",
+  "selected_files": [
+    "example/example.xlsx",
+    "tests/fixtures/basic.xlsx",
+    "tests/fixtures/circular.xlsx",
+    "tests/fixtures/cond-format.xlsx",
+    "tests/fixtures/date-time.xlsx",
+    "tests/fixtures/excelcompiler.xlsx",
+    "tests/fixtures/information.xlsx",
+    "tests/fixtures/logical.xlsx",
+    "tests/fixtures/lookup.xlsx",
+    "tests/fixtures/npv.xlsx",
+    "tests/fixtures/pv.xlsx",
+    "tests/fixtures/stats.xlsx",
+    "tests/fixtures/text.xlsx",
+    "tests/fixtures/yearfrac.xlsx"
+  ],
+  "source_files": {
+    "scripts/run_typed_execution_dev1.py": "d6e5dc210a72080ab6d80681271dbc929cda3ddce53f115b4e14d26e0b17d46d",
+    "scripts/typed_execution_adapter.py": "655feee1e141f63c04cb27fcdb6b0cf04c6907e6770c50216856cf17bc8b6535",
+    "tests/test_typed_execution_adapter.py": "23b74af0ee1135c99ce44e9405919645b4a934f5b59b391c6e253054e32a7631"
+  },
+  "utc": "2026-10-15T10:32:17.284078+00:00"
+}

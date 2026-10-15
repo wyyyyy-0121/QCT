@@ -1,0 +1,144 @@
+{
+  "comparisons": {
+    "original_vs_typed_agreement": 6,
+    "typed_vs_reference_agreement": 6
+  },
+  "details": [
+    {
+      "cell": "Sheet1!A6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "50.00000000",
+        "formula_imported": "=B6",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 50.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 50
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 50
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B1",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00000000",
+        "formula_imported": "=B3-B2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B10",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00000000",
+        "formula_imported": "=IF(B3=0; 0; B10+0.001)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "0.00000000",
+        "formula_imported": "=IF(B3=0; 0; A2*B1)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 0.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B6",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "50.00000000",
+        "formula_imported": "=IF(B3=0; A5;IF(A6<0;A5; A6-B5))",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 50.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 50
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 50
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B8",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "-50.00000000",
+        "formula_imported": "=B1-B6",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": -50.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": -50.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": -50.0
+      },
+      "typed_vs_reference": "agreement"
+    }
+  ],
+  "id": "public03",
+  "loaded_formula_cells": 6,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 6
+}

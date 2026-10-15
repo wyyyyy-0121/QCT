@@ -1,0 +1,615 @@
+{
+  "adapter_error_count": 42,
+  "adapter_version": "typed-execution-adapter-dev1",
+  "id": "public06",
+  "input_sha256": "8c7687b59aa5326fd098c18c68f9030273410fc4d726ed1e50acee16f5f44dec",
+  "loaded_formula_cells": 75,
+  "loaded_formula_omissions": [],
+  "original": {
+    "ArrayForm!A32": {
+      "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+      "kind": "error"
+    },
+    "ArrayForm!C1": {
+      "error": "ValueError: Expected numeric value, got [2, 3, 6]",
+      "kind": "error"
+    },
+    "ArrayForm!E1": {
+      "error": "ValueError: Unsupported function ROW",
+      "kind": "error"
+    },
+    "ArrayForm!E21": {
+      "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+      "kind": "error"
+    },
+    "ArrayForm!E7": {
+      "error": "FormulaSyntaxError: Unsupported token at column 13: '\"a\")*(B7:B13=\"y\")*C7'",
+      "kind": "error"
+    },
+    "ArrayForm!E8": {
+      "error": "FormulaSyntaxError: Unsupported token at column 14: '\"b\")*(B7:B13<>\"y\")*C'",
+      "kind": "error"
+    },
+    "ArrayForm!E9": {
+      "error": "FormulaSyntaxError: Unsupported token at column 13: '\"b\")*(B7:B13<\"z\")*(C'",
+      "kind": "error"
+    },
+    "ArrayForm!F1": {
+      "error": "ValueError: Unsupported function ROW",
+      "kind": "error"
+    },
+    "ArrayForm!F2": {
+      "error": "ValueError: Unsupported function ROW",
+      "kind": "error"
+    },
+    "ArrayForm!F28": {
+      "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+      "kind": "error"
+    },
+    "ArrayForm!F3": {
+      "error": "ValueError: Unsupported function ROW",
+      "kind": "error"
+    },
+    "ArrayForm!G16": {
+      "error": "ValueError: Expected numeric value, got [1, 2, 3, 4]",
+      "kind": "error"
+    },
+    "ArrayForm!H1": {
+      "error": "ValueError: Unsupported function COLUMN",
+      "kind": "error"
+    },
+    "ArrayForm!H2": {
+      "error": "ValueError: Unsupported function COLUMN",
+      "kind": "error"
+    },
+    "ArrayForm!I2": {
+      "error": "ValueError: Unsupported function COLUMN",
+      "kind": "error"
+    },
+    "Empty!B1": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B1": {
+      "kind": "number",
+      "value": 6.0
+    },
+    "Sheet1!B10": {
+      "kind": "number",
+      "value": 33.0
+    },
+    "Sheet1!B11": {
+      "kind": "number",
+      "value": 36.0
+    },
+    "Sheet1!B12": {
+      "kind": "number",
+      "value": 39.0
+    },
+    "Sheet1!B13": {
+      "kind": "number",
+      "value": 42.0
+    },
+    "Sheet1!B14": {
+      "kind": "number",
+      "value": 45.0
+    },
+    "Sheet1!B15": {
+      "kind": "number",
+      "value": 48.0
+    },
+    "Sheet1!B16": {
+      "kind": "number",
+      "value": 51.0
+    },
+    "Sheet1!B17": {
+      "kind": "number",
+      "value": 35.0
+    },
+    "Sheet1!B18": {
+      "kind": "number",
+      "value": 18.0
+    },
+    "Sheet1!B2": {
+      "kind": "number",
+      "value": 9.0
+    },
+    "Sheet1!B3": {
+      "kind": "number",
+      "value": 12.0
+    },
+    "Sheet1!B4": {
+      "kind": "number",
+      "value": 15.0
+    },
+    "Sheet1!B5": {
+      "kind": "number",
+      "value": 18.0
+    },
+    "Sheet1!B6": {
+      "kind": "number",
+      "value": 21.0
+    },
+    "Sheet1!B7": {
+      "kind": "number",
+      "value": 24.0
+    },
+    "Sheet1!B8": {
+      "kind": "number",
+      "value": 27.0
+    },
+    "Sheet1!B9": {
+      "kind": "number",
+      "value": 30.0
+    },
+    "Sheet1!C1": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C10": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C11": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C12": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C13": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C14": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C15": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C16": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C17": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C18": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C2": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C3": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C4": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C5": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C6": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C7": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C8": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!C9": {
+      "error": "ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "Sheet1!D1": {
+      "error": "ValueError: ValueError: Unsupported function SIN",
+      "kind": "error"
+    },
+    "datetime!B1": {
+      "kind": "number",
+      "value": -2
+    },
+    "datetime!B10": {
+      "kind": "number",
+      "value": 61
+    },
+    "datetime!B11": {
+      "kind": "number",
+      "value": 62
+    },
+    "datetime!B12": {
+      "kind": "number",
+      "value": 0.5
+    },
+    "datetime!B2": {
+      "kind": "number",
+      "value": -1
+    },
+    "datetime!B3": {
+      "kind": "number",
+      "value": 0
+    },
+    "datetime!B4": {
+      "kind": "number",
+      "value": 1
+    },
+    "datetime!B5": {
+      "kind": "number",
+      "value": 2
+    },
+    "datetime!B6": {
+      "kind": "number",
+      "value": 3
+    },
+    "datetime!B7": {
+      "kind": "number",
+      "value": 58
+    },
+    "datetime!B8": {
+      "kind": "number",
+      "value": 59
+    },
+    "datetime!B9": {
+      "kind": "number",
+      "value": 60
+    },
+    "sref!B1": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[])'",
+      "kind": "error"
+    },
+    "sref!B2": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[col2])'",
+      "kind": "error"
+    },
+    "sref!B3": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#This Row])'",
+      "kind": "error"
+    },
+    "sref!B4": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#All])'",
+      "kind": "error"
+    },
+    "sref!B5": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Data])'",
+      "kind": "error"
+    },
+    "sref!B6": {
+      "error": "FormulaSyntaxError: Unsupported token at column 20: '[#Headers])'",
+      "kind": "error"
+    },
+    "sref!B7": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Totals])'",
+      "kind": "error"
+    },
+    "sref!F4": {
+      "error": "FormulaSyntaxError: Unsupported token at column 14: '[col3])'",
+      "kind": "error"
+    },
+    "trim-range!B1": {
+      "kind": "number",
+      "value": 24.0
+    },
+    "trim-range!B2": {
+      "kind": "number",
+      "value": 136.0
+    }
+  },
+  "raw_formula_declarations": 75,
+  "source_hash_after": "8c7687b59aa5326fd098c18c68f9030273410fc4d726ed1e50acee16f5f44dec",
+  "source_path": "tests/fixtures/excelcompiler.xlsx",
+  "typed_adapter": {
+    "ArrayForm!A32": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "ArrayForm!C1": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "ArrayForm!E1": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "ArrayForm!E21": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "ArrayForm!E7": {
+      "error": "FormulaSyntaxError: Unsupported token at column 13: '\"a\")*(B7:B13=\"y\")*C7'",
+      "kind": "error"
+    },
+    "ArrayForm!E8": {
+      "error": "FormulaSyntaxError: Unsupported token at column 14: '\"b\")*(B7:B13<>\"y\")*C'",
+      "kind": "error"
+    },
+    "ArrayForm!E9": {
+      "error": "FormulaSyntaxError: Unsupported token at column 13: '\"b\")*(B7:B13<\"z\")*(C'",
+      "kind": "error"
+    },
+    "ArrayForm!F1": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "ArrayForm!F2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "ArrayForm!F28": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "ArrayForm!F3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "ArrayForm!G16": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "ArrayForm!H1": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "ArrayForm!H2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "ArrayForm!I2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Empty!B1": {
+      "kind": "number",
+      "value": 0.0
+    },
+    "Sheet1!B1": {
+      "kind": "number",
+      "value": 6.0
+    },
+    "Sheet1!B10": {
+      "kind": "number",
+      "value": 33.0
+    },
+    "Sheet1!B11": {
+      "kind": "number",
+      "value": 36.0
+    },
+    "Sheet1!B12": {
+      "kind": "number",
+      "value": 39.0
+    },
+    "Sheet1!B13": {
+      "kind": "number",
+      "value": 42.0
+    },
+    "Sheet1!B14": {
+      "kind": "number",
+      "value": 45.0
+    },
+    "Sheet1!B15": {
+      "kind": "number",
+      "value": 48.0
+    },
+    "Sheet1!B16": {
+      "kind": "number",
+      "value": 51.0
+    },
+    "Sheet1!B17": {
+      "kind": "number",
+      "value": 35.0
+    },
+    "Sheet1!B18": {
+      "kind": "number",
+      "value": 18.0
+    },
+    "Sheet1!B2": {
+      "kind": "number",
+      "value": 9.0
+    },
+    "Sheet1!B3": {
+      "kind": "number",
+      "value": 12.0
+    },
+    "Sheet1!B4": {
+      "kind": "number",
+      "value": 15.0
+    },
+    "Sheet1!B5": {
+      "kind": "number",
+      "value": 18.0
+    },
+    "Sheet1!B6": {
+      "kind": "number",
+      "value": 21.0
+    },
+    "Sheet1!B7": {
+      "kind": "number",
+      "value": 24.0
+    },
+    "Sheet1!B8": {
+      "kind": "number",
+      "value": 27.0
+    },
+    "Sheet1!B9": {
+      "kind": "number",
+      "value": 30.0
+    },
+    "Sheet1!C1": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C10": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C11": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C12": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C13": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C14": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C15": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C16": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C17": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C18": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C4": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C5": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C6": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C7": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C8": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!C9": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "Sheet1!D1": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "datetime!B1": {
+      "kind": "number",
+      "value": -2
+    },
+    "datetime!B10": {
+      "kind": "number",
+      "value": 61
+    },
+    "datetime!B11": {
+      "kind": "number",
+      "value": 62
+    },
+    "datetime!B12": {
+      "kind": "number",
+      "value": 0.5
+    },
+    "datetime!B2": {
+      "kind": "number",
+      "value": -1
+    },
+    "datetime!B3": {
+      "kind": "number",
+      "value": 0
+    },
+    "datetime!B4": {
+      "kind": "number",
+      "value": 1
+    },
+    "datetime!B5": {
+      "kind": "number",
+      "value": 2
+    },
+    "datetime!B6": {
+      "kind": "number",
+      "value": 3
+    },
+    "datetime!B7": {
+      "kind": "number",
+      "value": 58
+    },
+    "datetime!B8": {
+      "kind": "number",
+      "value": 59
+    },
+    "datetime!B9": {
+      "kind": "number",
+      "value": 60
+    },
+    "sref!B1": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[])'",
+      "kind": "error"
+    },
+    "sref!B2": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[col2])'",
+      "kind": "error"
+    },
+    "sref!B3": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#This Row])'",
+      "kind": "error"
+    },
+    "sref!B4": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#All])'",
+      "kind": "error"
+    },
+    "sref!B5": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Data])'",
+      "kind": "error"
+    },
+    "sref!B6": {
+      "error": "FormulaSyntaxError: Unsupported token at column 20: '[#Headers])'",
+      "kind": "error"
+    },
+    "sref!B7": {
+      "error": "FormulaSyntaxError: Unsupported token at column 11: '[#Totals])'",
+      "kind": "error"
+    },
+    "sref!F4": {
+      "error": "FormulaSyntaxError: Unsupported token at column 14: '[col3])'",
+      "kind": "error"
+    },
+    "trim-range!B1": {
+      "kind": "number",
+      "value": 24.0
+    },
+    "trim-range!B2": {
+      "kind": "number",
+      "value": 136.0
+    }
+  }
+}

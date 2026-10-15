@@ -1,0 +1,7070 @@
+{
+  "candidate_recall": 1.0,
+  "cases": [
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x11",
+      "scenario": "clean"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x12",
+      "scenario": "sparse_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x13",
+      "scenario": "whole_column_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x14",
+      "scenario": "unmarked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x15",
+      "scenario": "marked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x16",
+      "scenario": "exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 96,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x17",
+      "scenario": "copied_error_majority"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "crossdomain",
+      "id": "x18",
+      "scenario": "multirow_regions"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x21",
+      "scenario": "clean"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x22",
+      "scenario": "sparse_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x23",
+      "scenario": "whole_column_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x24",
+      "scenario": "unmarked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x25",
+      "scenario": "marked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x26",
+      "scenario": "exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 96,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x27",
+      "scenario": "copied_error_majority"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "crossdomain",
+      "id": "x28",
+      "scenario": "multirow_regions"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x31",
+      "scenario": "clean"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x32",
+      "scenario": "sparse_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x33",
+      "scenario": "whole_column_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x34",
+      "scenario": "unmarked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x35",
+      "scenario": "marked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x36",
+      "scenario": "exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 96,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x37",
+      "scenario": "copied_error_majority"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "crossdomain",
+      "id": "x38",
+      "scenario": "multirow_regions"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x41",
+      "scenario": "clean"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x42",
+      "scenario": "sparse_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x43",
+      "scenario": "whole_column_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x44",
+      "scenario": "unmarked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x45",
+      "scenario": "marked_exception"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x46",
+      "scenario": "exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 96,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x47",
+      "scenario": "copied_error_majority"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "crossdomain",
+      "id": "x48",
+      "scenario": "multirow_regions"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "inventory_rollforward",
+      "group": "adversarial",
+      "id": "a11",
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 120,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "adversarial",
+      "id": "a12",
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "adversarial",
+      "id": "a13",
+      "scenario": "unknown_output_label"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "adversarial",
+      "id": "a14",
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "inventory_rollforward",
+      "group": "adversarial",
+      "id": "a15",
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "inventory_rollforward",
+      "group": "adversarial",
+      "id": "a16",
+      "scenario": "row_exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "loan_amortization",
+      "group": "adversarial",
+      "id": "a21",
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 120,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "E!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "adversarial",
+      "id": "a22",
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "adversarial",
+      "id": "a23",
+      "scenario": "unknown_output_label"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 18,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "adversarial",
+      "id": "a24",
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "loan_amortization",
+      "group": "adversarial",
+      "id": "a25",
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 18,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "loan_amortization",
+      "group": "adversarial",
+      "id": "a26",
+      "scenario": "row_exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "budget_allocation",
+      "group": "adversarial",
+      "id": "a31",
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 120,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "adversarial",
+      "id": "a32",
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "adversarial",
+      "id": "a33",
+      "scenario": "unknown_output_label"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "adversarial",
+      "id": "a34",
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "budget_allocation",
+      "group": "adversarial",
+      "id": "a35",
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "budget_allocation",
+      "group": "adversarial",
+      "id": "a36",
+      "scenario": "row_exception_and_error"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "unit_conversion",
+      "group": "adversarial",
+      "id": "a41",
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 120,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "B!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "C!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "D!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "E!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "adversarial",
+      "id": "a42",
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "adversarial",
+      "id": "a43",
+      "scenario": "unknown_output_label"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 24,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F10",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F11",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F12",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F13",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F14",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F15",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F17",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F18",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F19",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F2",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F20",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F21",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F22",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F23",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F24",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F25",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F3",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F4",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F5",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F6",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F7",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F8",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        },
+        {
+          "candidate_count": 25,
+          "cell": "A!F9",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "adversarial",
+      "id": "a44",
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": null,
+      "error_count": 0,
+      "errors": [],
+      "family": "unit_conversion",
+      "group": "adversarial",
+      "id": "a45",
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "candidate_authorization": "none",
+      "correct_formula_candidate_recall": 1.0,
+      "error_count": 1,
+      "errors": [
+        {
+          "candidate_count": 25,
+          "cell": "A!F16",
+          "correct_formula_in_inventory": true,
+          "status": "supported"
+        }
+      ],
+      "family": "unit_conversion",
+      "group": "adversarial",
+      "id": "a46",
+      "scenario": "row_exception_and_error"
+    }
+  ],
+  "coverage": null,
+  "interpretation": "Candidate recall is diagnostic; no formula is proposed or accepted.",
+  "precision": null,
+  "prediction_lock_sha256": "e5e7a06b91cea1cbaa53a6ad505ca63ac9c9e2cb09ed2c9aabe8498eb3d389eb",
+  "proposals_generated": false,
+  "totals": {
+    "candidate_hits": 1076,
+    "errors": 1076,
+    "errors_with_multiple_candidates": 1076,
+    "errors_with_unique_candidate": 0,
+    "errors_with_zero_candidates": 0
+  },
+  "version": "hybridguard-followup-candidates-dev1"
+}

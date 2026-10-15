@@ -1,0 +1,279 @@
+{
+  "adapter_error_count": 32,
+  "adapter_version": "typed-execution-adapter-dev1",
+  "id": "public10",
+  "input_sha256": "39c6e9d7fa19bee25e14981e837e153f16030a107c88a7d4a78b182cffde3b0c",
+  "loaded_formula_cells": 33,
+  "loaded_formula_omissions": [],
+  "original": {
+    "NPV!A10": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!A11": {
+      "error": "ValueError: Expected numeric value, got '#N/A'",
+      "kind": "error"
+    },
+    "NPV!A12": {
+      "error": "ValueError: Expected numeric value, got '#DIV/0!'",
+      "kind": "error"
+    },
+    "NPV!A13": {
+      "error": "ValueError: Expected numeric value, got '#NUM!'",
+      "kind": "error"
+    },
+    "NPV!A2": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!A3": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!A6": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "NPV!A7": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!A8": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!A9": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "NPV!B10": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!B11": {
+      "error": "ValueError: Expected numeric value, got '#N/A'",
+      "kind": "error"
+    },
+    "NPV!B12": {
+      "error": "ValueError: Expected numeric value, got '#DIV/0!'",
+      "kind": "error"
+    },
+    "NPV!B13": {
+      "error": "ValueError: Expected numeric value, got '#NUM!'",
+      "kind": "error"
+    },
+    "NPV!B2": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!B3": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!B6": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "NPV!B7": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!B8": {
+      "error": "ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!B9": {
+      "error": "ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "NPV!C10": {
+      "kind": "number",
+      "value": 36250.53
+    },
+    "NPV!D10": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!D2": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!D3": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!D7": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!D8": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!D9": {
+      "error": "ValueError: ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    },
+    "NPV!E10": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!E2": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!E3": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!E7": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!E8": {
+      "error": "ValueError: ValueError: Unsupported function NPV",
+      "kind": "error"
+    },
+    "NPV!E9": {
+      "error": "ValueError: ValueError: Expected numeric value, got 'a'",
+      "kind": "error"
+    }
+  },
+  "raw_formula_declarations": 33,
+  "source_hash_after": "39c6e9d7fa19bee25e14981e837e153f16030a107c88a7d4a78b182cffde3b0c",
+  "source_path": "tests/fixtures/npv.xlsx",
+  "typed_adapter": {
+    "NPV!A10": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!A11": {
+      "error": "#N/A",
+      "kind": "error"
+    },
+    "NPV!A12": {
+      "error": "#DIV/0!",
+      "kind": "error"
+    },
+    "NPV!A13": {
+      "error": "#NUM!",
+      "kind": "error"
+    },
+    "NPV!A2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!A3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!A6": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "NPV!A7": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!A8": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!A9": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "NPV!B10": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!B11": {
+      "error": "#N/A",
+      "kind": "error"
+    },
+    "NPV!B12": {
+      "error": "#DIV/0!",
+      "kind": "error"
+    },
+    "NPV!B13": {
+      "error": "#NUM!",
+      "kind": "error"
+    },
+    "NPV!B2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!B3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!B6": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "NPV!B7": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!B8": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!B9": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "NPV!C10": {
+      "kind": "number",
+      "value": 36250.53
+    },
+    "NPV!D10": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!D2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!D3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!D7": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!D8": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!D9": {
+      "error": "#VALUE!",
+      "kind": "error"
+    },
+    "NPV!E10": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!E2": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!E3": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!E7": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!E8": {
+      "error": "#NAME?",
+      "kind": "error"
+    },
+    "NPV!E9": {
+      "error": "#VALUE!",
+      "kind": "error"
+    }
+  }
+}

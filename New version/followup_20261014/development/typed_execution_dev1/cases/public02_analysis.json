@@ -1,0 +1,144 @@
+{
+  "comparisons": {
+    "original_vs_typed_agreement": 6,
+    "typed_vs_reference_agreement": 6
+  },
+  "details": [
+    {
+      "cell": "Sheet1!B2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=A2+A3",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "1",
+        "formula_imported": "=B2-A4",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 1.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 1.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 1.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!B4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "2",
+        "formula_imported": "=MIN(B2; A2:A3)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 2.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 2.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 2.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!C2",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "5",
+        "formula_imported": "=B3*B2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 5.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 5.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 5.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!C3",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "10",
+        "formula_imported": "=C2*A2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 10.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 10.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 10.0
+      },
+      "typed_vs_reference": "agreement"
+    },
+    {
+      "cell": "Sheet1!C4",
+      "libreoffice": {
+        "content_type": "FORMULA",
+        "display": "25",
+        "formula_imported": "=C2^B4",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 25.0
+      },
+      "original_model": {
+        "kind": "number",
+        "value": 25.0
+      },
+      "original_vs_typed": "agreement",
+      "typed_adapter": {
+        "kind": "number",
+        "value": 25.0
+      },
+      "typed_vs_reference": "agreement"
+    }
+  ],
+  "id": "public02",
+  "loaded_formula_cells": 6,
+  "loaded_formula_omissions": [],
+  "raw_formula_declarations": 6
+}
