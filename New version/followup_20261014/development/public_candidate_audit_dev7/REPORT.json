@@ -1,0 +1,618 @@
+{
+  "role": "development candidate audit; not final validation",
+  "created_utc": "2026-10-15T12:25:07.221202+00:00",
+  "sample_count": 11,
+  "downloaded_count": 11,
+  "origin_groups_observed": [
+    "18f",
+    "damodaran",
+    "epa",
+    "iowa_state_agdm",
+    "packt",
+    "renewables",
+    "uk_government"
+  ],
+  "records": [
+    {
+      "origin": "iowa_state_agdm",
+      "discovery_label": "hay_budget",
+      "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20haybudgetonly.xlsx",
+      "retrieved_utc": "2026-10-15T12:23:42.966119+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/iowa_state_agdm/hay_budget.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20haybudgetonly.xlsx",
+      "bytes": 89836,
+      "sha256": "ca188a3776314d7a17e0c40564bdc2737ada2e6dc705186cd20964b9c42026ec",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 2,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 157,
+            "xml_bytes": 38961
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 154,
+            "xml_bytes": 37097
+          }
+        ],
+        "formula_cells": 311,
+        "formula_fingerprint_sha256": "c7722ca6cc4088e8da4bad6c267b5cdded35c8aa34c699b8376a93f9edf01388"
+      }
+    },
+    {
+      "origin": "iowa_state_agdm",
+      "discovery_label": "crop_rotation",
+      "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20croprotation.xlsx",
+      "retrieved_utc": "2026-10-15T12:23:45.777586+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/iowa_state_agdm/crop_rotation.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20croprotation.xlsx",
+      "bytes": 200234,
+      "sha256": "87411c767743b3fdb60a883dffe3140d0bc8b2a42ac5363499f5a31b9ff3faf6",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 6,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 122,
+            "xml_bytes": 20733
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 81,
+            "xml_bytes": 27261
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 126,
+            "xml_bytes": 26227
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 77,
+            "xml_bytes": 25335
+          },
+          {
+            "xml_name": "xl/worksheets/sheet5.xml",
+            "formula_cells": 77,
+            "xml_bytes": 25335
+          },
+          {
+            "xml_name": "xl/worksheets/sheet6.xml",
+            "formula_cells": 79,
+            "xml_bytes": 24395
+          }
+        ],
+        "formula_cells": 562,
+        "formula_fingerprint_sha256": "e6f79405e98aa67ed4eceb83f5588929d0f813b3079b57bd470eb37ff58097fb"
+      }
+    },
+    {
+      "origin": "iowa_state_agdm",
+      "discovery_label": "farm_finance",
+      "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-14cashflowbudget12month.xlsx",
+      "retrieved_utc": "2026-10-15T12:24:00.925656+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/iowa_state_agdm/farm_finance.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-14cashflowbudget12month.xlsx",
+      "bytes": 27635,
+      "sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 1,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 25,
+            "xml_bytes": 29262
+          }
+        ],
+        "formula_cells": 25,
+        "formula_fingerprint_sha256": "58d5208bd59f934f522296aabc5e5effa9a51b5d9bc966dc17afa9d5c30d4ee0"
+      }
+    },
+    {
+      "origin": "damodaran",
+      "discovery_label": "capital_structure",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+      "retrieved_utc": "2026-10-15T12:24:02.054187+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/damodaran/capital_structure.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+      "bytes": 100960,
+      "sha256": "32ccdad0e50d87226908162ab512e067a7614fbbe26b9291b7f0de155d2b7115",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 13,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 0,
+            "xml_bytes": 5687
+          },
+          {
+            "xml_name": "xl/worksheets/sheet10.xml",
+            "formula_cells": 13,
+            "xml_bytes": 3104
+          },
+          {
+            "xml_name": "xl/worksheets/sheet11.xml",
+            "formula_cells": 111,
+            "xml_bytes": 18179
+          },
+          {
+            "xml_name": "xl/worksheets/sheet12.xml",
+            "formula_cells": 0,
+            "xml_bytes": 5956
+          },
+          {
+            "xml_name": "xl/worksheets/sheet13.xml",
+            "formula_cells": 0,
+            "xml_bytes": 943
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 0,
+            "xml_bytes": 5262
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 15,
+            "xml_bytes": 15515
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 310,
+            "xml_bytes": 86696
+          },
+          {
+            "xml_name": "xl/worksheets/sheet5.xml",
+            "formula_cells": 0,
+            "xml_bytes": 28249
+          },
+          {
+            "xml_name": "xl/worksheets/sheet6.xml",
+            "formula_cells": 19,
+            "xml_bytes": 7655
+          },
+          {
+            "xml_name": "xl/worksheets/sheet7.xml",
+            "formula_cells": 10,
+            "xml_bytes": 19468
+          },
+          {
+            "xml_name": "xl/worksheets/sheet8.xml",
+            "formula_cells": 49,
+            "xml_bytes": 11271
+          },
+          {
+            "xml_name": "xl/worksheets/sheet9.xml",
+            "formula_cells": 12,
+            "xml_bytes": 72025
+          }
+        ],
+        "formula_cells": 539,
+        "formula_fingerprint_sha256": "2af4354b5942d90311ed018ff72665a16f6df739c65cdc994dcfd40e0a41dd93"
+      }
+    },
+    {
+      "origin": "damodaran",
+      "discovery_label": "fcff_simple",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx",
+      "retrieved_utc": "2026-10-15T12:24:05.548579+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/damodaran/fcff_simple.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx",
+      "bytes": 287995,
+      "sha256": "d6ffb67d965dc22463e4d013636befab3da431e7fc608936a82612fa73198e72",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 17,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 41,
+            "xml_bytes": 25424
+          },
+          {
+            "xml_name": "xl/worksheets/sheet10.xml",
+            "formula_cells": 170,
+            "xml_bytes": 44936
+          },
+          {
+            "xml_name": "xl/worksheets/sheet11.xml",
+            "formula_cells": 13,
+            "xml_bytes": 21911
+          },
+          {
+            "xml_name": "xl/worksheets/sheet12.xml",
+            "formula_cells": 12,
+            "xml_bytes": 72146
+          },
+          {
+            "xml_name": "xl/worksheets/sheet13.xml",
+            "formula_cells": 0,
+            "xml_bytes": 130870
+          },
+          {
+            "xml_name": "xl/worksheets/sheet14.xml",
+            "formula_cells": 0,
+            "xml_bytes": 132463
+          },
+          {
+            "xml_name": "xl/worksheets/sheet15.xml",
+            "formula_cells": 0,
+            "xml_bytes": 98543
+          },
+          {
+            "xml_name": "xl/worksheets/sheet16.xml",
+            "formula_cells": 11,
+            "xml_bytes": 7715
+          },
+          {
+            "xml_name": "xl/worksheets/sheet17.xml",
+            "formula_cells": 0,
+            "xml_bytes": 3768
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 109,
+            "xml_bytes": 22930
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 83,
+            "xml_bytes": 18317
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 176,
+            "xml_bytes": 21658
+          },
+          {
+            "xml_name": "xl/worksheets/sheet5.xml",
+            "formula_cells": 33,
+            "xml_bytes": 10741
+          },
+          {
+            "xml_name": "xl/worksheets/sheet6.xml",
+            "formula_cells": 24,
+            "xml_bytes": 7963
+          },
+          {
+            "xml_name": "xl/worksheets/sheet7.xml",
+            "formula_cells": 9,
+            "xml_bytes": 32958
+          },
+          {
+            "xml_name": "xl/worksheets/sheet8.xml",
+            "formula_cells": 20,
+            "xml_bytes": 25062
+          },
+          {
+            "xml_name": "xl/worksheets/sheet9.xml",
+            "formula_cells": 18,
+            "xml_bytes": 7654
+          }
+        ],
+        "formula_cells": 719,
+        "formula_fingerprint_sha256": "2819f56e2fd93f709d075c3cf055572b16ea4fb70d3888a19ea6e1a1fae08abf"
+      }
+    },
+    {
+      "origin": "epa",
+      "discovery_label": "refrigerated_condenser",
+      "url": "https://www.epa.gov/sites/default/files/2017-12/refrigerated_condenser_calc_sheet_2017.xlsm",
+      "retrieved_utc": "2026-10-15T12:24:46.021943+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/epa/refrigerated_condenser.xlsm",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://www.epa.gov/sites/default/files/2017-12/refrigerated_condenser_calc_sheet_2017.xlsm",
+      "bytes": 66599,
+      "sha256": "15814b7e4a3d45113c08b00eb4b99a0d226ea1a937955eda8c397c0c6f736c38",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 6,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 0,
+            "xml_bytes": 9033
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 36,
+            "xml_bytes": 26434
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 32,
+            "xml_bytes": 17793
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 150,
+            "xml_bytes": 59044
+          },
+          {
+            "xml_name": "xl/worksheets/sheet5.xml",
+            "formula_cells": 0,
+            "xml_bytes": 13037
+          },
+          {
+            "xml_name": "xl/worksheets/sheet6.xml",
+            "formula_cells": 0,
+            "xml_bytes": 10737
+          }
+        ],
+        "formula_cells": 218,
+        "formula_fingerprint_sha256": "504006e0e8ba1866d5942db79be7d396b4d74497a39e7664ad5818bce8a3a6cd"
+      }
+    },
+    {
+      "origin": "epa",
+      "discovery_label": "carbon_adsorber",
+      "url": "https://www.epa.gov/sites/default/files/2020-11/epa_carbon_adsorber_calc_sheet_7thedition_nov2020.xlsm",
+      "retrieved_utc": "2026-10-15T12:24:49.943902+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/epa/carbon_adsorber.xlsm",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://www.epa.gov/sites/default/files/2020-11/epa_carbon_adsorber_calc_sheet_7thedition_nov2020.xlsm",
+      "bytes": 84280,
+      "sha256": "ca983db99d6c11abd3a8aad1faacc0ca18e2871ee93d6602409b70cdc9fbfad4",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 6,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 0,
+            "xml_bytes": 8964
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 67,
+            "xml_bytes": 39388
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 47,
+            "xml_bytes": 23560
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 132,
+            "xml_bytes": 64496
+          },
+          {
+            "xml_name": "xl/worksheets/sheet5.xml",
+            "formula_cells": 0,
+            "xml_bytes": 5381
+          },
+          {
+            "xml_name": "xl/worksheets/sheet6.xml",
+            "formula_cells": 22,
+            "xml_bytes": 8994
+          }
+        ],
+        "formula_cells": 268,
+        "formula_fingerprint_sha256": "9820ec04bf59d845bd9aba1fc16e67e9fd5f37ca18376cb8c1ee624321e591d9"
+      }
+    },
+    {
+      "origin": "uk_government",
+      "discovery_label": "lcoe_calculator",
+      "url": "https://assets.publishing.service.gov.uk/media/64f19bbf9ee0f2000fb7bd53/Annex_B_-_Example_LCOE_calculator_correction_20230831.xlsx",
+      "retrieved_utc": "2026-10-15T12:24:51.035448+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/uk_government/lcoe_calculator.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://assets.publishing.service.gov.uk/media/64f19bbf9ee0f2000fb7bd53/Annex_B_-_Example_LCOE_calculator_correction_20230831.xlsx",
+      "bytes": 84949,
+      "sha256": "b0f15382e8c9c9b74d944a0ab8301a3326fb3bfbf4a950896a66f29c52000357",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 4,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 0,
+            "xml_bytes": 5027
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 104,
+            "xml_bytes": 58570
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 82,
+            "xml_bytes": 77875
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 0,
+            "xml_bytes": 11376
+          }
+        ],
+        "formula_cells": 186,
+        "formula_fingerprint_sha256": "0f3b9bfb994a484a636f476e738d4761e6ea15a7bd78c69167f5ea0f8ecc8a7e"
+      }
+    },
+    {
+      "origin": "18f",
+      "discovery_label": "software_model",
+      "url": "https://raw.githubusercontent.com/18F/financial-models/d86e8f89145bb0e29cd7268e1497de45ddbae0c8/Software%20Model.xlsx",
+      "retrieved_utc": "2026-10-15T12:24:54.704510+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/18f/software_model.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://raw.githubusercontent.com/18F/financial-models/d86e8f89145bb0e29cd7268e1497de45ddbae0c8/Software%20Model.xlsx",
+      "bytes": 9376,
+      "sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 4,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 0,
+            "xml_bytes": 853
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 4,
+            "xml_bytes": 2940
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 4,
+            "xml_bytes": 2087
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 4,
+            "xml_bytes": 2095
+          }
+        ],
+        "formula_cells": 12,
+        "formula_fingerprint_sha256": "50556dbb8e06f63777143d8c4b393b807b5d87078cd8ebc7750ac6d144240d94"
+      }
+    },
+    {
+      "origin": "packt",
+      "discovery_label": "financial_model",
+      "url": "https://raw.githubusercontent.com/PacktPublishing/Project-Finance-and-Excel---Build-Financial-Models-from-Scratch/618787e67a7ee0e6643f60ef447a9c35d6ee9301/Financial%2BModel.xlsx",
+      "retrieved_utc": "2026-10-15T12:24:57.374341+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/packt/financial_model.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://raw.githubusercontent.com/PacktPublishing/Project-Finance-and-Excel---Build-Financial-Models-from-Scratch/618787e67a7ee0e6643f60ef447a9c35d6ee9301/Financial%2BModel.xlsx",
+      "bytes": 99724,
+      "sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 10,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 10,
+            "xml_bytes": 14050
+          },
+          {
+            "xml_name": "xl/worksheets/sheet10.xml",
+            "formula_cells": 371,
+            "xml_bytes": 38370
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 3,
+            "xml_bytes": 19943
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 311,
+            "xml_bytes": 61812
+          },
+          {
+            "xml_name": "xl/worksheets/sheet4.xml",
+            "formula_cells": 249,
+            "xml_bytes": 40665
+          },
+          {
+            "xml_name": "xl/worksheets/sheet5.xml",
+            "formula_cells": 83,
+            "xml_bytes": 15690
+          },
+          {
+            "xml_name": "xl/worksheets/sheet6.xml",
+            "formula_cells": 164,
+            "xml_bytes": 26707
+          },
+          {
+            "xml_name": "xl/worksheets/sheet7.xml",
+            "formula_cells": 208,
+            "xml_bytes": 34252
+          },
+          {
+            "xml_name": "xl/worksheets/sheet8.xml",
+            "formula_cells": 248,
+            "xml_bytes": 35465
+          },
+          {
+            "xml_name": "xl/worksheets/sheet9.xml",
+            "formula_cells": 206,
+            "xml_bytes": 31560
+          }
+        ],
+        "formula_cells": 1853,
+        "formula_fingerprint_sha256": "cbfa768c04cc285897868298b52f80ad90281b96eb3b9a0609431ec14ef5dd3a"
+      }
+    },
+    {
+      "origin": "renewables",
+      "discovery_label": "simplified_project_finance",
+      "url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/Simplified-Project-Finance-Model.xlsx",
+      "retrieved_utc": "2026-10-15T12:25:00.382754+00:00",
+      "final_validation_eligible": false,
+      "path": "data/external/hybridguard_candidate_audit_dev1/workbooks/renewables/simplified_project_finance.xlsx",
+      "status": "downloaded",
+      "http_status": 200,
+      "effective_url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/Simplified-Project-Finance-Model.xlsx",
+      "bytes": 203806,
+      "sha256": "3b9a8b47f3cf9ad506698c6cf89082472401b9c8b851ed78ba944101c35b43f2",
+      "structure": {
+        "status": "parsed",
+        "sheet_count": 3,
+        "sheet_stats": [
+          {
+            "xml_name": "xl/worksheets/sheet1.xml",
+            "formula_cells": 0,
+            "xml_bytes": 18325
+          },
+          {
+            "xml_name": "xl/worksheets/sheet2.xml",
+            "formula_cells": 0,
+            "xml_bytes": 20618
+          },
+          {
+            "xml_name": "xl/worksheets/sheet3.xml",
+            "formula_cells": 1826,
+            "xml_bytes": 876404
+          }
+        ],
+        "formula_cells": 1826,
+        "formula_fingerprint_sha256": "87bb286ea65bc6d1c4badaa4bd9d42f99cc3714e5d3046922e527865c87d60d3"
+      }
+    }
+  ],
+  "duplicate_file_sha256_groups": [],
+  "duplicate_formula_fingerprint_groups": [],
+  "accepted_sources": 0,
+  "accepted_template_families": 0,
+  "limits": [
+    "A download and formula count do not establish license scope or source independence.",
+    "Formula fingerprints are structural metadata, not correctness labels.",
+    "No workbook is used for model selection, threshold tuning or final scoring.",
+    "Natural-error truth and a clean-to-injected audit remain outstanding."
+  ]
+}
