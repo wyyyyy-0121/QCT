@@ -1,0 +1,248 @@
+{
+  "utc": "2026-10-15T11:44:25.723533+00:00",
+  "role": "independent revealed-development audit; no final acceptance",
+  "runs": {
+    "selector_dev6_contract": {
+      "lock": {
+        "files": 108,
+        "source_files": 89,
+        "recovered_exact_hash_sources": [
+          "scripts/run_selector_dev6.py",
+          "scripts/selector_dev6.py",
+          "tests/test_dev6_contract.py"
+        ],
+        "prediction_lock_sha256": "f2d232ef360fff21dc6aed7f11a65860404cce0ac43da4ff1745cfca147c77cb"
+      },
+      "group_diagnostic_totals": {
+        "regression": {
+          "proposals": 13156,
+          "correct": 13156,
+          "wrong": 0,
+          "errors": 16577,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 0.7936297279362973
+        },
+        "stress": {
+          "proposals": 25,
+          "correct": 25,
+          "wrong": 0,
+          "errors": 73,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 0.3424657534246575
+        },
+        "tradeoff": {
+          "proposals": 73,
+          "correct": 48,
+          "wrong": 25,
+          "errors": 48,
+          "harmful_correct_cells": 25,
+          "precision": 0.6575342465753424,
+          "coverage": 1.0
+        },
+        "crossdomain": {
+          "proposals": 492,
+          "correct": 492,
+          "wrong": 0,
+          "errors": 492,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 1.0
+        },
+        "adversarial": {
+          "proposals": 372,
+          "correct": 368,
+          "wrong": 4,
+          "errors": 584,
+          "harmful_correct_cells": 4,
+          "precision": 0.989247311827957,
+          "coverage": 0.6301369863013698
+        }
+      },
+      "adversarial_by_variant": {
+        "unmarked_reversed_role": {
+          "proposals": 4,
+          "correct": 0,
+          "wrong": 4,
+          "errors": 0,
+          "harmful_correct_cells": 4,
+          "precision": 0.0,
+          "coverage": null
+        },
+        "all_peers_corrupted": {
+          "proposals": 360,
+          "correct": 360,
+          "wrong": 0,
+          "errors": 480,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 0.75
+        },
+        "unknown_output_label": {
+          "proposals": 4,
+          "correct": 4,
+          "wrong": 0,
+          "errors": 4,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 1.0
+        },
+        "peer_unit_mismatch": {
+          "proposals": 0,
+          "correct": 0,
+          "wrong": 0,
+          "errors": 96,
+          "harmful_correct_cells": 0,
+          "precision": null,
+          "coverage": 0.0
+        },
+        "multiline_scope_conflict": {
+          "proposals": 0,
+          "correct": 0,
+          "wrong": 0,
+          "errors": 0,
+          "harmful_correct_cells": 0,
+          "precision": null,
+          "coverage": null
+        },
+        "row_exception_and_error": {
+          "proposals": 4,
+          "correct": 4,
+          "wrong": 0,
+          "errors": 4,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 1.0
+        }
+      },
+      "pooled_adversarial_acceptance_metric": false,
+      "score_sha256": "78af5e19735a1eb5bc3da0e96f571bb24c2193a7f7f7083c8e2f5a3817d6a27a"
+    },
+    "selector_dev6_contract_v2": {
+      "lock": {
+        "files": 108,
+        "source_files": 89,
+        "recovered_exact_hash_sources": [],
+        "prediction_lock_sha256": "bc4bc2e60891ef7fadc05e06987b64aeae844c2ad1e79c1f736d0e4e60180ad4"
+      },
+      "group_diagnostic_totals": {
+        "regression": {
+          "proposals": 13156,
+          "correct": 13156,
+          "wrong": 0,
+          "errors": 16577,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 0.7936297279362973
+        },
+        "stress": {
+          "proposals": 25,
+          "correct": 25,
+          "wrong": 0,
+          "errors": 73,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 0.3424657534246575
+        },
+        "tradeoff": {
+          "proposals": 73,
+          "correct": 48,
+          "wrong": 25,
+          "errors": 48,
+          "harmful_correct_cells": 25,
+          "precision": 0.6575342465753424,
+          "coverage": 1.0
+        },
+        "crossdomain": {
+          "proposals": 492,
+          "correct": 492,
+          "wrong": 0,
+          "errors": 492,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 1.0
+        },
+        "adversarial": {
+          "proposals": 467,
+          "correct": 463,
+          "wrong": 4,
+          "errors": 584,
+          "harmful_correct_cells": 4,
+          "precision": 0.9914346895074947,
+          "coverage": 0.7928082191780822
+        }
+      },
+      "adversarial_by_variant": {
+        "unmarked_reversed_role": {
+          "proposals": 4,
+          "correct": 0,
+          "wrong": 4,
+          "errors": 0,
+          "harmful_correct_cells": 4,
+          "precision": 0.0,
+          "coverage": null
+        },
+        "all_peers_corrupted": {
+          "proposals": 455,
+          "correct": 455,
+          "wrong": 0,
+          "errors": 480,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 0.9479166666666666
+        },
+        "unknown_output_label": {
+          "proposals": 4,
+          "correct": 4,
+          "wrong": 0,
+          "errors": 4,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 1.0
+        },
+        "peer_unit_mismatch": {
+          "proposals": 0,
+          "correct": 0,
+          "wrong": 0,
+          "errors": 96,
+          "harmful_correct_cells": 0,
+          "precision": null,
+          "coverage": 0.0
+        },
+        "multiline_scope_conflict": {
+          "proposals": 0,
+          "correct": 0,
+          "wrong": 0,
+          "errors": 0,
+          "harmful_correct_cells": 0,
+          "precision": null,
+          "coverage": null
+        },
+        "row_exception_and_error": {
+          "proposals": 4,
+          "correct": 4,
+          "wrong": 0,
+          "errors": 4,
+          "harmful_correct_cells": 0,
+          "precision": 1.0,
+          "coverage": 1.0
+        }
+      },
+      "pooled_adversarial_acceptance_metric": false,
+      "score_sha256": "f2cb7acbf9463c92f30462672cb64b00f21a8d618939a3da7f2290769cc52242"
+    }
+  },
+  "dev5_actual_adversarial_diagnostic": {
+    "proposals": 12,
+    "correct": 8,
+    "wrong": 4,
+    "errors": 584,
+    "harmful_correct_cells": 4,
+    "precision": 0.6666666666666666,
+    "coverage": 0.0136986301369863
+  },
+  "reported_comparison_corrected": true,
+  "corrected_comparison": "dev5 8/584; dev6 initial 368/584; dev6 v2 463/584",
+  "final_validation_passed": false
+}

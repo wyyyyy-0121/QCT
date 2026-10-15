@@ -1,0 +1,732 @@
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Spreadsheet programs</title>
+    <style type="text/css">
+<!--
+.background {color: #00F;
+}
+-->
+    </style>
+    <link href="../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+    <script src="../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+	</head>
+
+<body bgcolor="white">
+		<div align="left">
+		  <center>
+		    <center>
+		      <table width="20%" border="1" align="left">
+		        <tr>
+		          <td rowspan="2"><a href="http://www.damodaran.com"><img src="Budimage/sitelogo.jpg" alt="logo" width="305" height="48"></a></td>
+		          <td bgcolor="#FFFFFF"><a href="biomission.html"><img src="Budimage/about.jpg" alt="about" width="56" height="25"></a></td>
+		          <td><a href="writing.html"><img src="Budimage/writing.jpg" alt="writing" width="63" height="25"></a></td>
+		          <td><span class="background"><a href="tools.html" target="frame102703"><img src="Budimage/tools.jpg" alt="tools" width="53" height="25"></a></span></td>
+	            </tr>
+		        <tr>
+		          <td><span class="background"><a href="teaching.html" target="frame102703"><img src="Budimage/teaching.jpg" alt="teaching" width="76" height="25"></a></span></td>
+		          <td><a href="data.html"><img src="Budimage/datanew.jpg" alt="data" width="40" height="25"></a></td>
+		          <td><span class="background"><a href="spreadsh.htm" target="frame102703"></a><a href="https://aswathdamodaran.blogspot.com"><img src="Budimage/blog.jpg" alt="blog" width="37" height="25"></a></span></td>
+	            </tr>
+	          </table>
+	        </center>
+		  </center>
+		  <p>&nbsp;</p>
+		  <h1>&nbsp;</h1>
+		  <p><img src="Budimage/spreadsheets.jpg" width="470" height="95"></p>
+          <ul id="MenuBar1" class="MenuBarHorizontal">
+            <li><a href="https://financetools.idc.ac.il">Online tools</a></li>
+            <li><a href="spreadsh.htm">Spreadsheets</a></li>
+            <li><a href="valuationtools.html">Webcasts</a></li>
+            <li><a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/uValue.html">uValue app</a></li>
+          </ul>
+          <p>&nbsp;</p>
+		  <hr>
+		  <p>With time, the number of spreadsheets on this page has also increased.
+			    To help you in finding the spreadsheet that you might want, I
+	      have categorized the spreadsheets into the following groups:</p>
+		  <ol>
+		    <li><a href="#cf"> Corporate finance spreadsheets</a>: These spreadsheets are 
+		      most useful if you are interested in conventional corporate financial analysis. 
+		      It includes spreadsheets to analyze a project's cashflows and viability, a 
+		      company's risk profile, its optimal capital structure and debt type, andwhether 
+	        it is paying out what it can afford to in dividends. These programs are broadly categorized into	those	that
+	        <ol>
+	          <li>Estimate risk in an investment and its hurdle rate, as well as assess investment returns  (net present value, internal rate of return, accounting return)</li>
+	          <li>Evaluate the right mix of debt and equity in a business and the right type of debt for a firm</li>
+	          <li>Examine how much a firm should return to investors and in what form (dividends versus buybacks)</li>
+	          </ol>
+		    </li>
+		    <li><a href="#valinputs">Valuation Inputs Spreadsheets</a>: In this section, 
+		      you will find spreadsheets that allow you to
+		      <ol>
+		        <li> Estimate the right discount rate to use for your firm, starting with the 
+		          risk premium in your cost of equity and concluding with the cost of capital 
+		          for your firm.</li>
+		        <li>Convert R&amp;D and operating leases into capitalized assets</li>
+		        <li>Estimate the right capital expenditures and diagnose the terminal value 
+		          assumptions to see if they are reasonable.</li>
+	          </ol>
+		    </li>
+		    <li><a href="#valreconcile">Valuation Model Reconciliation</a>: In this section, you will find spreadsheets
+		          that reconcile different DCF approaches - FCFE versus Dividend Discount Model,
+		          FCFE versus FCFF model, EVA versus Cost of capital and Net Debt versus Gross
+	          Debt Approaches. </li>
+		    <li><a href="#ginzumodels">Big-picture valuation spreadsheets</a>:
+		          If you are looking for one spreadsheet to help you in valuing
+		          a company, I would recommend one of these 'ginzu' spreadsheets.
+		          While they require a large number of inputs, they are flexible
+		          enough to allow you to value just about any company. You do have
+		          to decide whether you want to use a dividend, FCFE or FCFF model
+		          spreadsheet. If you have no idea which one will work for you,
+		          I would suggest that you try the <a href="https://pages.stern.nyu.edu/~adamodar/pc/model.xls">&quot;right
+		            model&quot; spreadsheet </a>first.<br>
+            </li>
+		    <li><a href="#valmodels">Focused valuation spreadsheets</a>: If
+		          you have a clear choice in terms of models - stable growth dividend
+		          discount, 2-stage FCFE etc. - you can download a spreadsheet
+	          for the specific model in this section.</li>
+		    <li>Valuation of specific types of companies: Valuation is all about
+	          exceptions, and these spreadsheets are designed to help value specific
+            types of companies including:
+		      <ol>
+		        <li><a href="#finsvc">Financial Service firms</a>: While dividend discount
+		          models tend to be the weapon of choice for many, you will find an excess
+		          equity return model here.</li>
+		        <li><a href="#troubledfirms">Troubled firms</a>: You will find an earnings
+		          normalizer spreadsheet, a generic valuation model for valuing a firm as a
+		          going concern and a spreadsheet that allows you to estimate the probability
+		          that a troubled firm will not survive.</li>
+		        <li><a href="#pvtfirms">Private companies</a>: You will find spreadsheets
+		          for adjusting discount rates and estimating illiquidity discounts for private
+		          companies.</li>
+		        <li><a href="#higrowthfirms">Young and high-growth firms</a>: You will find
+		          a revenue growth estimator as well as a generic valuation model for high
+		          growth firms in this section.</li>
+	          </ol>
+		    </li>
+		    <li><a href="#multiples">Multiples</a>: You can estimate equity
+	          as well as firm value multiples, based upon fundamentals.</li>
+		    <li><a href="#acqvaln">Valuation in Acquisitions</a>: You can value
+	          synergy in an acquiisition and analyze a leveraged buyout.</li>
+		    <li><a href="#otherassets">Valuation of other assets</a>: In this
+		          section, you will find a model for valuing income-generating
+	          real estate.</li>
+		    <li><a href="#valueenh">Value Enhancement Spreadsheets</a>: In
+		          this section, you will find a spreadsheet that reconciles EVA
+		          and DCF valuation, a model for estimating CFROI and a DCF version
+	          of a value enhancement spreadsheet.</li>
+		    <li><a href="#basicoption">Basic option pricing models</a>: In
+		          this seciton, you will find Black-Scholes models for valuing short
+		          term options, long term options and options that result in dilution
+		          of stock (such as warrants). In addition, you will find spreadsheets
+		          that convert Black-Scholes inputs into Binomial model inputs and
+		          use the binomial model to value options.<br>
+	          </li>
+		    <li><a href="#optincf">Real option models in corporate finance</a>:
+		          In this section, you will find three basic real option models -
+		          the option to delay, the option to expand and the option to abandon.
+		          In addition, the value of financial flexibility is considered as
+	          an option.</li>
+		    <li><a href="#optinval">Real option models in valuation</a>: In
+		          this section, you will find models to value both a patent (and
+		          a firm owning a patent) as an option, natural resource firms and
+	          equity in deeply troubled firms.</li>
+	      </ol>
+		  <p>These spreadsheet programs are  in Excel and are not copy
+	          protected. Download them and feel free to modify them to your own
+	          specifications. I do have video guides available for some of the
+	          most accessed spreadsheets. I hope they are useful.			</p>
+		  <p>	<em>One more point. I am not an expert on Microsoft Excel and am frankly mystified
+			  by some of the quirky differences between the Mac version (which I use)
+			  and the PC version (which you probably have). If you want to refine your
+			  spreadsheet skills, you can of course by a book on Excel. However, a reader
+			  of this website, Alex Palfi of Tykoh Training, has been kind enough to offer <a href="https://pages.stern.nyu.edu/~adamodar/pc/SpreadsheetGuide.xls">this
+		    guide</a> to using and building spreadsheets. Please feel free to download
+			  it and use it and to then convey your appreciation to him.</em></p>
+			<hr>
+            <p><em>Browser warning: Starting in August 2021, Google Chrome seems to be having trouble downloading files (spreadsheets, data etc.) from my site. I have no idea why, and have little interest in investing more time finding out. If you have download problems, please try a different browser.</em>		</p>
+		</div>
+	<center>
+	  <p>      
+	  <table border="2" cellpadding="0" cellspacing="2">
+    <tr bgcolor="#0066CC" align="center"> 
+      <td valign="middle"><em><strong><font color="white">Grouping</font></strong></em></td>
+      <td> 
+      <div align="left"> <font color="white">Program </font></div>      </td>
+      <td><font color="#FFFFFF">Video guide</font></td>
+      <td> 
+        <center>
+          <font color="white">Description</font> 
+        </center>      </td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="12" align="left" valign="middle" bgcolor="#CCFFFF"><div align="left"><em><strong><a name="cf"></a>Corporate Finance</strong></em></div></td>
+      <td bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls">Capital Budgeting</a></div>      </td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to do a basic capital budgeting analysis for 
+        a project, and compute NPV, IRR and ROI.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/risk.xls">Estimate a beta</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to input past returns on a stock and a market 
+        index to analyse its price performance (Jensen's Alpha), its sensitivity 
+        to market movements (Beta) and the proportion of its risk that can be 
+        attributed to the market.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/riskchecker.xls">Regression Analyzer</a></td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://dl.dropbox.com/u/24597893/CFSpr13/Webcasts/Regression.mp4">Webcast</a></td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to check your computations of Jensen's
+        alpha, range on beta and expected return, given the output from a return
+        regression (risk.xls above).</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls">Lever &amp; unlever betas</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to enter the current beta, tax rate and the 
+        debt equity ratio for your stock, and obtain a table of betas at different 
+        debt ratios.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/oplease.xls">Convert operating leases to debt</a></td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://dl.dropbox.com/u/24597893/Valuation/Leases.mp4">Webcast</a></td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to convert lease commitments to debt.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls">Estimate a synthetic rating &amp; cost of debt</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to estimate a rating and a cost of debt for 
+        your company from the firm's interext coverage ratio.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="left" bgcolor="#CCFFFF"><div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/apv.xls">Adjusted Present Value (for optimizing debt)</a></div></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model allows you to estimate an &quot;optimal&quot; Capital
+        Structure for a company using the Adjusted Present Value Approach. </td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx">Optimum Capital Structure (Cost of capital approach)</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF"><p>&nbsp;</p></td>
+      <td bgcolor="#CCFFFF">This model allows you to estimate an &quot;optimal&quot; Capital
+        structure  for a company using the cost of capital approach. An option in the model also allows you to build in indirect bankruptcy cost by letting your operating income vary with your bond rating.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/returncalculator.xls">Calculate accounting returns (ROE, ROIC)</a></td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://dl.dropbox.com/u/24597893/CFSpr13/Webcasts/ROIC.mp4">Webcast</a></td>
+      <td bgcolor="#CCFFFF">The return on invested capital and return on equity are accounting measures but useful measures, nevertheless, of the quality of existing projects.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/macrodur.xls">Design debt (by looking at sensitivity to macro variables)</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model allows you to estimate the duration of a firm's assets 
+        and its sensitivity to other macro economic variables. It may be useful 
+        in the design of debt.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <a href="https://pages.stern.nyu.edu/~adamodar/pc/dividends.xls">Estimate potential dividends &amp; compare to actual dividends</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model compares the dividends paid to what a firm could have paid, 
+        by estimating the free cash flow to equity (the cash flow left over after 
+        net debt payments, net capital expenditures and working capital investments.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/buybacks.xls">Evaluate the effect of a buyback on EPS and value</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model allows you to assess how a buyback will affect earnings per share and make judgments on its consequences for overall value and value per share.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="7" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="valinputs"></a>Corporate finance &amp; Valuation:<br>
+        Inputs</strong></em></td>
+      <td bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/readme1s.xls">readme1s.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This file describes the programs in this section and provides some insights 
+        into their usage.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/ImpliedROCROE.xls">impliedROC&amp;ROE.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to compute the ROC or ROE implied in your
+        terminal value calculation.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls">wacccalc.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to estimate the cost of capital for your 
+        firm. </td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/cpxest.xls">cpxest.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model summarizes the three approaches that can be used to estimate 
+        the net capital expenditures for a firm, when it reaches stable growth.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/oplease.xls">oplease.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://dl.dropbox.com/u/24597893/Valuation/Leases.mp4">Webcast</a></td>
+      <td bgcolor="#CCFFFF">This model converts operating lease expenses into financing expenses 
+        and restates operating income and debt outstanding.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/R&DConv.xls">R&amp;DConv.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://dl.dropbox.com/u/24597893/Valuation/R&D.mp4">Webcast </a></td>
+      <td bgcolor="#CCFFFF">This model converts R&amp; D expenses from operating to capital expenses, 
+        estimates a value for the research asset and restates operating income.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/implprem.xls" target="frame102703">implprem.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet calculates the implied risk premium in a market. This 
+        can be used in discounted cashflow valuation to do market neutral valuation.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td rowspan="4" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="valreconcile"></a>Valuation Model Reconciliation </strong></em></td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls">fcfevsddm.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to reconcile the differences between the
+      FCFE and the dividend discount models for estimating equity value. </td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffvsfcfe.xls">fcffvsfcfe.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to reconcile the differences between the
+        FCFF and the FCFE approaches to valuation. </td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffeva.xls">fcffeva.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet reconciles a cost of capital DCF valuation with an
+        EVA valuation of the same company </td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/GrossvsNet.xls">GrossvsNet.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to reconcile the differences between the
+        Gross debt and Net debt approaches to valuation. </td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="9" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><font color="#cc0000"><a name="ginzumodels"></a><font color="#000000">All-in-one 
+        Valuation Models </font></font></strong></em></td>
+      <td align="center" bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/model.xls">model.xls</a></div>      </td>
+      <td align="center" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model provides a rough guide to which discounted 
+        cash flow model may be best suited to your firm.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/higrowth.xls">higrowth.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet can be used to value tough-to-value firms, with negative 
+        earnings, high growth in revenues and few comparables. If you have a dot.com 
+        firm, this is your best choice.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls">divginzu.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A complete dividend discount model that can do stable growth, 2-stage 
+        or 3-stage valuation. This is your best choice if you are analyzing financial 
+        service firms.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls">fcfeginzu.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A complete FCFE valuation model that allows you to capital R&amp;D and 
+        deal with options in the context of a valuation model.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/growthbreakdown.xls">growthbreakdown.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A model to value the premium you should pay for growth in either an intrinsic valuation or a relative valuation.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx">fcffsimpleginzu.xlsx</a></td>
+      <td align="left" bgcolor="#CCFFFF"><p><a href="https://www.youtube.com/watch?v=ufg-sMoEWNQ&list=PLUkh9m2BorqmRAGzJb5OIvTAKZZu9HWF-&index=16&t=0s">Webcast</a></p>
+        <p><a href="https://pages.stern.nyu.edu/~adamodar/pptfiles/SpreadsheetGuides/fcffsimpleginzuguide.pptx">Slides</a><br>
+      </p></td>
+      <td bgcolor="#CCFFFF">A complete FCFF model that allows for changing margins and has default assumptions built in (to protect you from inconsistent assumptions). If you want a quick, all-in-one model to value a company with relatively few inputs, try this.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzuCorona.xlsx">fcffsimpleginzuCorona.xlsx</a></td>
+      <td align="left" bgcolor="#CCFFFF"><p><a href="https://www.youtube.com/watch?v=F9GfXJ-IrSA&list=PLUkh9m2Borqnk6tJUpGzN4RcDUBAjovqN&index=5&t=3s">Webcast</a></p>
+        <p><br>
+        </p></td>
+      <td bgcolor="#CCFFFF">This is the simple valuation spreadsheet, tweaked in the middle of the COVID crisis, to reflect updated equity risk premiums and a provision to input the effects of the crisis on near-term earnings and margins.</td>
+      </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffginzu.xlsx">fcffginzu.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF"><p><a href="https://pages.stern.nyu.edu/~adamodar/podcasts/fcffginzu.mov">Video</a></p>
+      <p><a href="https://pages.stern.nyu.edu/~adamodar/podcasts/fcffginzu.ppt">Presentation</a></p></td>
+      <td bgcolor="#CCFFFF">This model tries to do it all, with all of the associated risks and 
+        rewards. I hate having to work with a dozen spreadsheets to value a firm, 
+        and I have tried to put them all into one spreadsheet - a ratings estimator, 
+        an earnings normalizer, an R&amp;D converter, an operating lease converter, 
+        a bottom-up beta estimator and industry averages. Try it out and make 
+        your own additions.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffginzulambda.xls">fcffginzulambda.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model allows the
+        user to enter a measure of company exposure to country risk (that is
+        different from beta) in a FCFF valuation model. It does not have many of the bells and whistles of teh fcffginzu model.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td rowspan="8" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong>Loose Ends in Valuation </strong></em></td>
+      <td align="center" bgcolor="#CCFFFF"><div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/controlvalue.xls">controlvalue.xls</a></div></td>
+      <td align="center" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model analyzes the value of control in a firm. </td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="left" bgcolor="#CCFFFF"><div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls" target="frame102703">synergyvaluation.xls</a></div></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model estimates the value of synergy in a
+        merger.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/brandnamevalue.xls">brandnamevalue.xls</a></div></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet provides different ways of estimating the value of
+        a brand name, although each comes with some baggage. </td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="left" bgcolor="#CCFFFF"><div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/complscore.xls">complscore.xls</a></div></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to measure the complexity in a company
+        and give it a score. </td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/employeeoption.xls">employeeoption.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to value employee options and incorporate them into value.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/GrossvsNet.xls">GrossvsNet.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to understand why the gross and net debt
+        approaches give you different estimates of value for a firm. </td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/liqdisc.xls">liqdisc.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Estimates the illiquidity discount that should be
+        applied to a private firm as a function of the firm's size and financial
+        health. Uses both restricted stock approach and bid-ask spread regression.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="left" bgcolor="#CCFFFF"><div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/distress.xls">distress.xls</a></div></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to estimate the probability of distress
+        from the bond price of a company. </td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td rowspan="11" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="valmodels"></a>Focused 
+        Valuation Models</strong></em></td>
+      <td bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls">ddmst.xls</a></div>      </td>
+      <td rowspan="3" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Stable growth, dividend discount model; best suited for firms growing 
+        at the same rate as the economy and paying residual cash as dividends.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls">ddm2st.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">Two-stage DDM; best suited for firms paying residual cash in dividends 
+        while having moderate growth.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls">ddm3st.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">Three-stage DDM; best suited for firms paying residual cash in dividends, 
+        while having high growth.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls">fcfest.xls</a></div>      </td>
+      <td rowspan="3" align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Stable growth, FCFE discount model; best suited for firms in stable 
+        leverage and growing at the same rate as the economy.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls">fcfe2st.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">Two-stage FCFE discount model; best suited for firms with stable leverage 
+        and having moderate growth.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls">fcfe3st.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">Three-stage FCFE discount model; best suited for firms with stable leverage 
+        and having high growth.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffst.xls">fcffst.xls</a></div>      </td>
+      <td rowspan="3" align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Stable growth FCFF discount model; best suited for firms growing at 
+        the same rate as the economy.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls">fcff2st.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">Two-stage FCFF discount model; best suited for firms with shifting leverage 
+        and growing at a moderate rate.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcff3st.xls">fcff3st.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">Three-stage FCFF discount model; best suited for firms with shifting 
+        leverage and high growth.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/evavaln.xls">evavaln</a><a href="https://pages.stern.nyu.edu/~adamodar/pc/evavaln.xls">.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Three-stage FCFF valuation model, also presented in terms of projected 
+        EVA.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffgen.xls">fcffgen.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A generalised FCFF model, where the operating margins are allowed to 
+        change each year; best suited for firms in transition.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="finsvc"></a>Financial Service firms</strong></em></td>
+      <td bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls">eqexret.xls</a></td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Estimates the value of equity in a bank by discounting expected excess 
+        returns to equity investors over time and adding them to book value of 
+        equity. </td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td rowspan="3" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="troubledfirms"></a>Troubled 
+        firms</strong></em></td>
+      <td bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/normearn.xls">normearn.xls</a></td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Normalizes the earnings for a troubled firm, uising historical or industry 
+        averages. </td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/distress.xls">distress.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Estimates the likelihood that a troubled firm will not survive, based 
+        upon bond ratings as well as bond prices.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffneg.xls">fcffneg.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Generalized FCFF model that allows you to value negative earnings firms 
+        as going concerns.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="3" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="pvtfirms"></a>Private 
+        firms</strong></em></td>
+      <td bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/pvtdiscrate.xls">pvtdiscrate.xls</a></td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Adjusts the discount rate (cost of equity) for a private firm to reflect 
+        the lack of diversification on the part of the owner (or potential buyer)</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/minoritydiscount.xls">minoritydiscount.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Estimates the discount for a minority stake in a private business,
+        based on the value of control.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/liqdisc.xls">liqdisc.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Estimates the illiquidity discount that should be applied to a private 
+        firm as a function of the firm's size and financial health. Uses both 
+        restricted stock approach and bid-ask spread regression.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="2" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="higrowthfirms"></a>High 
+        Growth Firms</strong></em></td>
+      <td bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/revgrowth.xls">revgrowth.xls</a></td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Estimates compounded revenue growth rate for a firm, based upon market 
+        share and market size assumptions.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/higrowth.xls">higrowth.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet can be used to value tough-to-value firms, with negative 
+        earnings, high growth in revenues and few comparables. If you have a young 
+        or start-up firm, this is your best choice.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="2" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="multiples"></a>Multiples</strong></em></td>
+      <td bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/eqmult.xls">eqmult.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This is a model that uses a two-stage dividend discount model to estimate 
+        the appropriate equity multiples for your firm. It will give you identical 
+        answers (in terms of value) as the 2-stage DDM model.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/firmmult.xls">firmmult.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model uses a 2-stage FCFF model to estimate the appropriate firm 
+        value multiples for your firm. It will give you identical answers (in 
+        terms of value) as the 2-stage FCFF model.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="3" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="acqvaln"></a>Acquisitions</strong></em></td>
+      <td align="center" bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/lboval.xls" target="frame102703">lboval.xls</a></div>      </td>
+      <td align="center" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model analyzes the value of equity and the firm in a leveraged 
+        buyout.</td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="left" bgcolor="#CCFFFF"><div align="left"><a href="https://pages.stern.nyu.edu/~adamodar/pc/controlvalue.xls">controlvalue.xls</a></div></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model analyzes the value of control in a firm. </td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls" target="frame102703">synergyvaluation.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model estimates the value of synergy in a merger.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="otherassets"></a>Other Assets</strong></em></td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/reval.xls">reval.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to value an income-generating property as 
+        well as just the equity stake in the property.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td rowspan="3" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="valueenh"></a>Value 
+        Enhancement</strong></em></td>
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls">valenh.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to make a quick (and dirty) estimate of 
+        the effect of restructuring a firm in a discounted cashflow framework.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffeva.xls">fcffeva.xls</a></td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet shows the equivalence of the DCF and EVA approaches 
+        to valuation.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls">cfroi.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet allows you to estimate the current CFROI for a firm.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td rowspan="4" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="basicoption"></a>Basic 
+        Option Pricing Models</strong></em></td>
+      <td bgcolor="#CCFFFF"><a href="https://pages.stern.nyu.edu/~adamodar/pc/bstobin.xls">bstobin.xls</a></td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This spreadsheet converts the standard deviation input in the Black-Scholes 
+        model to up and down movemenents in the binomial tree.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/optst.xls">optst.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This is a dividend-adjusted model for valuing short-term options. It 
+        considers the present value of expected dividends during the option life.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/optlt.xls">optlt.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">Tnis is a dividend-adjusted model for valuing long term options. It 
+        considers the expected dividend yield on the underlying asset.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls">warrant.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This is a model for valuing options that result in dilution of the underlying 
+        stock. Consequently, it is useful in valuing warrants and management options.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td rowspan="4" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="optincf"></a>Real Option 
+        Models in Corporate Finance</strong></em></td>
+      <td bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/expand.xls">expand.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model estimates the value of the option to expand in an investment 
+        project. Modified, it can also be used to assess the value of strategic 
+        options.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/delay.xls">delay.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model estimates the value of the option to delay an investment 
+        project.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/flexval.xls">flexval.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model estimates the value of financial flexibility, i.e, the maintenance 
+        of excess debt capacity or back-up financing.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/abandon.xls">abandon.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">This model estimates the value of the option to abandon a project or 
+        investment.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td rowspan="3" align="left" valign="middle" bgcolor="#CCFFFF"><em><strong><a name="optinval"></a>Real 
+        Option Models in Valuation</strong></em></td>
+      <td bgcolor="#CCFFFF"> 
+      <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/equity.xls">equity.xls</a></div>      </td>
+      <td bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A model that uses option pricing to value the equity in a firm; best 
+        suited for highly levered firms in trouble.</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/natres.xls">natres.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A model that uses option pricing to value a natural resource company; 
+        useful for valuing oil or mining companies.</td>
+    </tr>
+    <tr bgcolor="#CCFF99"> 
+      <td align="left" bgcolor="#CCFFFF"> 
+        <div align="left"> <a href="https://pages.stern.nyu.edu/~adamodar/pc/project.xls">project.xls</a></div>      </td>
+      <td align="left" bgcolor="#CCFFFF">&nbsp;</td>
+      <td bgcolor="#CCFFFF">A model that uses option pricing to value a product patent or option; 
+        useful for valuing the patents that a company might hold.</td>
+    </tr>
+  </table>
+<p></p>
+			<h3>&nbsp;</h3>
+		</center>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});
+    </script>
+</body>
+
+</html>

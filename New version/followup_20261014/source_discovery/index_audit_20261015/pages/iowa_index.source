@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2534582-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2534582-5');
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.extension.iastate.edu/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '55']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+<noscript>
+
+<!-- Piwik Image Tracker-->
+<img src="https://piwik.extension.iastate.edu/piwik.php?idsite=55&rec=1" style="border:0" alt="" />
+<!-- End Piwik -->
+
+	</noscript>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<title>Ag Decision Maker - Iowa State University</title>
+	<!-- <link href="css/iastate.legacy.css" rel="stylesheet"> // Include if your content requires legacy IASTATE theme CSS -->
+	<link href="css/iastate.min.css?v=17.0.0-beta-2" rel="stylesheet">
+	<!-- <link href="css/site.css" rel="stylesheet" media="all"> // Site-specific CSS and theme overrides -->
+	<link href="https://cdn.theme.iastate.edu/favicon/favicon.ico" rel="icon" type="image/x-icon">
+	<link href="https://cdn.theme.iastate.edu/favicon/favicon.png" rel="icon" type="">
+	<link href="https://cdn.theme.iastate.edu/favicon/apple-touch-icon.png" rel="icon" type="apple-touch-icon">
+	  
+	<link href="https://cdn.theme.iastate.edu/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<style type="text/css">
+         } .border {
+           border: 2px solid #1E870C;
+           padding: 10px;
+		 height: 260px;
+		 box-sizing: border-box;
+         outline-offset: 5px;
+         } 
+	     .border2 {
+           border: 2px solid #BB0508;
+           padding: 10px;
+		 height: 260px;
+		 box-sizing: border-box;
+         outline-offset: 5px;
+         } 
+	  .border3 {
+           border: 2px solid #E7D01A;
+           padding: 10px;
+		 height: 800px;
+		 box-sizing: border-box;
+         outline-offset: 5px;
+         } 	 
+			.border4 {
+           font-size: 12px;
+				font-weight: 400;
+			 border: 1px solid #BB0508;
+           padding: 5px;
+		 
+		 box-sizing: border-box;
+         outline-offset: 5px;
+         } 
+			  .border5 {
+           border: 1px solid #96BB53;
+           padding: 5px;
+		 box-sizing: border-box;
+         outline-offset: 5px;
+         } 	 
+			  .border6 {
+           border: 2px solid #284465;
+           padding: 5px;
+		 box-sizing: border-box;
+         outline-offset: 5px;
+         } 	
+			table.gray, table.cream{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.full-width{
+	width: 100%;
+}
+
+table.gray > thead > tr > th,
+table.gray > tbody > tr > th,
+table.gray > tbody > tr > td{
+	border: 1px solid #bbb;
+	padding: 2px 6px;
+	text-align: left;
+}
+
+table.gray > thead > tr > th{
+	background: #e3e3e3;
+}
+
+table.gray > tbody > tr > th{
+	background: #f2f2f2;
+	font-family: trebuchet ms;
+	font-style: italic;
+}
+
+table.gray > tbody > tr:nth-child(even) > td,
+table.gray > tbody > tr.even > td{
+	background: #f9f9f9;
+}
+
+table.gray > tbody > tr > td.ops,
+table.cream > tbody > tr > td.ops{
+	min-width: 20%;
+	white-space: nowrap;
+}
+
+table.cream > thead > tr > th,
+table.cream > tbody > tr > th,
+table.cream > tbody > tr > td{
+	padding: 2px 6px;
+	vertical-align: top;
+}
+
+table.cream > thead > tr > th{
+	background: #f5e39a;
+	border-bottom: 1px solid #c63600;
+	border-top: 1px solid #c63600;
+	color: #333;
+	text-align: left;
+}
+
+table.cream > tbody > tr > th{
+	background: #f3ecd4;
+	border-bottom: 1px solid #aea581;
+	text-align: left;
+}
+
+table.cream > tbody > tr > td{
+	border-bottom: 1px solid #c1b78f;
+}
+
+table.cream > tbody > tr:nth-child(even) > td,
+table.cream > tbody > tr.even > td{
+	background: #f8f8f0;
+}
+
+table.cream > tbody > tr > td.ops a + a{
+	margin-left: 10px;
+}
+
+table.cream > tbody a{
+	text-decoration: none;
+}
+
+table.cream > tbody a:hover{
+	text-decoration: underline;
+}
+	</style>
+	
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://piwik.extension.iastate.edu/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '20']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+</head>
+
+<body class="">
+
+
+<!-- skip-nav -->
+<div class="skip-nav"><a href="#main-content">Skip to main content</a></div>
+<!-- /skip-nav -->
+
+<!-- header -->
+<header>
+
+<!-- navbar-iastate -->
+<nav class="navbar-iastate">
+	<div class="container">
+
+		<!-- navbar-iastate left -->
+		<ul class="nav navbar-nav">
+          <li><a href="https://www.iastate.edu" title="Iowa State University Home Page">iastate.edu</a></li>
+          <li><a href="https://www.cals.iastate.edu/">College of Ag and Life Sciences</a></li>
+          <li><a href="https://www.extension.iastate.edu/ag/">Ag and Natural Resources</a></li>
+		</ul>
+		<!-- /navbar-iastate left -->
+
+		<!-- navbar-iastate right -->
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="https://www.extension.iastate.edu/countyservices/">Offices</a></li>
+            <li><a href="https://www.extension.iastate.edu/ag/farm-management">Farm Management Team</a></li>
+            <li class="dropdown"> <a href="about.html" class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a href="authorsmain.html">Authors</a></li>
+                <li><a href="aboutagdm.html">Background</a></li>
+                <li><a href="notify.html">Update Notification</a></li>
+                <li><a href="websites.html">Related Web Sites</a></li>
+                <li><a href="newsletterarchive.html">Newsletter Archives</a>            </li>
+              </ul>
+            </li>
+		</ul>
+		<!-- /navbar-iastate right -->
+
+	</div>
+</nav>
+<!-- /navbar-iastate -->
+
+<!-- navbar-site -->
+<nav class="navbar-site">
+	<div class="container">
+
+		<div class="navbar-site-wordmark">
+			<a href="homepage.html" title="Home" class="wordmark-unit">
+				<span class="wordmark-isu">Iowa State University</span>
+				<span class="wordmark-unit-title">AG DECISION MAKER</span>
+			</a>
+		</div>
+ 
+		<div class="navbar-header visible-xs visible-sm">
+			<button id="navbar-menu-button" type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#navbar-menu-collapse, #navbar-site-links-collapse" aria-expanded="false">
+				<span class="navbar-toggle-icon menu-icon">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</span>
+				<span class="navbar-toggle-label">
+					Menu <span class="sr-only">Toggle</span>
+				</span>
+			</button>
+			<button id="navbar-search-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-site-search-collapse" aria-expanded="false">
+				<span class="navbar-toggle-icon search-icon"></span>
+				<span class="navbar-toggle-label">
+					Search <span class="sr-only">Toggle</span>
+				</span>
+			</button>
+		</div>
+
+		<div class="navbar-site-info collapse navbar-collapse" id="navbar-site-search-collapse">
+	<form action="//google.iastate.edu/search" class="navbar-site-search" method="GET" role="search">
+				<label for="search-input" class="sr-only">Search</label>
+				<input name="output" type="hidden" value="xml_no_dtd">
+				<input name="client" type="hidden" value="default_frontend">
+				<input name="sitesearch" type="hidden" value="www.extension.iastate.edu/agdm">
+				<input name="proxystylesheet" type="hidden" value="default_frontend">
+				<input name="q" id="search-input" aria-label="Text input for search" title="Search" placeholder="Search" tabindex="0" type="text" class="form-control">
+				<input class="hidden" title="Submit" type="submit" value="Search">
+				<span class="search-icon"></span>
+			</form>
+		</div>
+
+		<div class="navbar-site-info collapse navbar-collapse navbar-caps" id="navbar-site-links-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<!-- Site-wide links. Customized for your site -->
+				<li><a href="outlook.html">Outlook</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="whatsnew.html">Recent Updates</a></li>
+			</ul>
+		</div>
+
+	</div>
+</nav>
+<!-- /navbar-site -->
+
+</header>
+<!-- /header -->
+
+<!-- navbar-menu -->
+<div class="navbar-menu-wrapper">
+<nav class="navbar navbar-menu navbar-default navbar-static-top navbar-caps" role="navigation">
+	<div class="container">
+	
+		<div class="nav navbar-nav collapse navbar-collapse" id="navbar-menu-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="homepage.html">Home Page</a></li>
+				<li class="dropdown"> 
+					<a tabindex="0" class="dropdown-toggle" data-toggle="" href="" data-submenu>Crops</a><a class="dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="cdcostsreturns.html">Costs &amp; Returns</a></li>
+					  <li>
+							<a href="cdmarkets.html">Storage &amp; Markets</a></li>
+					  <li><a href="cdoutlook.html">Outlook &amp; Prices</a></li>
+					  <li><a href="cdmachinery.html">Machinery</a></li>
+					  <li><a href="cdother.html">Other</a>				</li>
+					</ul>
+				</li>
+				<li class="dropdown"> <a tabindex="0" class="dropdown-toggle" data-toggle="" href="" data-submenu>Livestock</a><a class="dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+								  <ul class="dropdown-menu" role="menu">
+								    <li><a href="ldcostsreturns.html">Costs &amp; Returns</a></li>
+								    <li> <a href="ldmarkets.html">Markets</a></li>
+								    <li><a href="ldoutlook.html">Outlook &amp; Prices</a></li>
+								    <li><a href="ldother.html">Other</a></li>
+			      </ul>
+			  </li>
+				<li class="dropdown"> <a tabindex="0" class="dropdown-toggle" data-toggle="" href="" data-submenu>Whole Farm</a><a class="dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+								  <ul class="dropdown-menu" role="menu">
+								    <li><a href="wdcostsreturns.html">Costs &amp; Returns</a></li>
+                                    <li><a href="wdleasing.html">Leasing</a></li>
+                                    <li><a href="wdvalues.html">Land Values</a></li>
+                                    <li><a href="wdfinancial.html">Financial</a></li>
+                                    <li><a href="wdhumanresources.html">Human Resources</a></li>
+                                    <li><a href="wdlegalandtaxes.html">Legal &amp; Taxes</a></li>
+                                    <li><a href="wdbusiness.html">Transition &amp; Estate Planning</a></li>
+                                    <li><a href="wdmeasures.html">Weight &amp; Measurements</a></li>
+                                    <li><a href="wdother.html">Other</a></li>
+				  </ul>
+			  </li>			<li class="dropdown"> <a tabindex="0" class="dropdown-toggle" data-toggle="" href="" data-submenu>Business Development</a><a class="dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+								  <ul class="dropdown-menu" role="menu">
+								    <li><a href="vdstart.html">Business Start-up</a></li>
+                                    <li><a href="vdmarketing.html">Marketing</a></li>
+                                    <li><a href="vdoperations.html">Operations</a></li>
+                                    <li><a href="vdanalysis.html">Analysis</a>
+				  </li></ul>
+			  </li>
+				<li class="dropdown"> <a tabindex="0" class="dropdown-toggle" data-toggle="" href="" data-submenu>Cooperatives</a>
+				  <ul class="dropdown-menu" role="menu">
+               <li><a href="cooperatives.html">Basics</a></li>
+                    <li><a href="cooperatives.html#consolidation">Consolidation</a></li>
+                    <li><a href="cooperatives.html#financials">Financials &amp; Capitalization</a></li>
+                    <li><a href="cooperatives.html#leadership">Leadership, Governance &amp; Strategy</a></li>
+                    <li><a href="cooperatives.html#outlook">Outlook &amp; Current Conditions</a></li>
+                    <li><a href="cooperatives.html#patronage">Patronage &amp; Taxation</a></li>
+                    <li><a href="cooperatives.html#other">Other</a></li>
+                  </ul>
+			  </li>
+				<li class="dropdown"> <a tabindex="0" class="dropdown-toggle" data-toggle="" href="" data-submenu>Energy</a><a class="dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+								  <ul class="dropdown-menu" role="menu">
+								    <li><a href="energy.html">Prices &amp; Profitability</a></li>
+                                    <li><a href="energy.html#climate">Climate Change</a></li>
+                                    <li><a href="energy.html#other">Other</a></li>
+                                  
+				  </ul>
+			  </li>
+
+			</ul>
+		</div>
+
+	</div>
+</nav>
+</div>
+<!-- /navbar-menu -->
+
+<!-- main -->
+<main role="main" id="main-content">
+  <div class="container">    <div class="col-xs-12 col-md-10"><p></p>
+
+  <h1><button type="button" class="btn btn-success" aria-label="decision tools"><span class="fa fa-file-excel-o" aria-hidden="true"></span></button> 
+  Decision Tools</h1>
+ <p> <a href="#crops">Crops</a> - <a href="#livestock">Livestock</a> - <a href="#wholefarm">Whole Farm </a> - <a href="#business">Business Development</a> - <a href="#energy">Renewable Energy</a> </p> 
+ </div>
+  <div class="col-xs-12 col-md-10"> <div class="border6">
+	  <h3><a id="crops"></a> Crops      </h3>
+	  <div class="table-responsive"></div>
+	<table class="gray full-width">
+
+	<tbody>
+	
+		<tr>
+		  <th>Costs &amp; Returns</th>
+		  <th>pdf</th>
+		  <th>file</th>
+		
+		  </tr>
+		<tr>
+		  <td width="72%"><p>Pasture Cost Improvement Budgets (8 Decision Tools)<br>
+		    Use these decision tools to determine the initial cost per acre for improving:</p>
+		    <ul>
+		      <li>Grass
+		        <ul>
+		          <li><a href="crops/xls/a1-15SH1.xlsx">Lime, Fertilizer, and Weed Control</a></li>
+		          <li><a href="crops/xls/a1-15SH2.xlsx">Complete Renovation with a New Grass Seeding</a></li>
+		          <li><a href="crops/xls/a1-15SH3.xlsx">Complete Renovation with a Legume-Grass Mixture</a></li>
+		          </ul>
+		        </li>
+		      <li>Pasture
+		        <ul>
+		          <li><a href="crops/xls/a1-15SH4.xlsx">Interseeding and No-till Renovation</a></li>
+		          <li><a href="crops/xls/a1-15SH5.xlsx">Frost Seeding</a></li>
+		          <li><a href="crops/xls/a1-15SH6.xlsx">Killed Sod, No-till Renovation</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+            <ul>
+              <li>Hay
+                <ul>
+                  <li><a href="crops/xls/a1-15-20haybudgetonly.xlsx">Alfalfa or Alfalfa-grass Hay Budget</a></li>
+                  <li><a href="crops/xls/a1-15-20haybudgetwithcompanion.xlsx">Alfalfa or Alfalfa-grass Hay with Oat Companion Crop Budget</a>              </li>
+                </ul>
+              </li>
+            </ul></td><td width="7%"><a href="crops/pdf/a1-15.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+            <td width="7%"><a href="crops/html/a1-15.html">A1-15</a></td>
+		 </tr>
+		<tr>
+		  <td width="72%"><p>Fruit &amp; Vegetable Budgets (15 Decision Tools)<br>
+		    Use these decision tools to estimate the costs and returns for fruit and vegetable production. Budgets are available for: </p>
+		    <ul>
+		      <li><a href="crops/xls/a1-17asparagus.xlsx">Asparagus</a></li>
+		      <li><a href="crops/xls/a1-17basil.xlsx">Basil</a></li>
+		      <li><a href="crops/xls/a1-17specialtygreenbeans.xlsx">Specialty Green Beans</a></li>
+		      <li><a href="crops/xls/a1-17carrots.xlsx">Carrots</a></li>
+		      <li><a href="crops/xls/a1-17eggplant.xlsx">Eggplant</a></li>
+		      <li><a href="crops/xls/a1-17garlic.xlsx">Garlic</a></li>
+		      <li><a href="crops/xls/a1-17saladgreens.xlsx">Salad Greens</a></li>
+		      <li><a href="crops/xls/a1-17snowpeas.xlsx">Snow Peas</a></li>
+		      <li><a href="crops/xls/a1-17potatoes.xlsx">Potatoes</a></li>
+		      <li><a href="crops/xls/a1-17sweetpotatoes.xlsx">Sweet Potatoes</a></li>
+		      <li><a href="crops/xls/a1-17redraspberries.xlsx">Red Raspberries</a></li>
+		      <li><a href="crops/xls/a1-17strawberries.xlsx">Strawberries</a></li>
+		      <li><a href="crops/xls/a1-17cherrytomatoes.xlsx">Cherry Tomatoes</a></li>
+		      <li><a href="crops/xls/a1-17tomatoes.xlsx">Heirloom Tomatoes</a></li>
+		      </ul></td>
+		  <td width="7%"><a href="https://store.extension.iastate.edu/product/16086"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td width="7%"><a href="crops/html/a1-17.html">A1-17</a></td>
+		  
+		  </tr>
+		<tr>
+		  <td>Organic Crop Production Enterprise Budgets (4 Decision Tools)<br>
+Use these decision tools to estimate the costs and returns for growing <a href="crops/xls/a1-18corn.xlsx">Organic Corn</a>, <a href="crops/xls/a1-18soybeans.xlsx">Organic Soybeans</a>, <a href="crops/xls/a1-18oats.xlsx">Organic Oats</a>, and <a href="crops/xls/a1-18alfalfa.xlsx">Organic Alfalfa</a></td>
+		  <td><a href="https://store.extension.iastate.edu/product/12267"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-18.html">A1-18</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><p>Crop Production Costs Budgets (14 Decision Tools)<br>
+		    Use these decision tools to project the costs and returns of growing:</p>
+		    <ul>
+		      <li><a href="crops/xls/a1-20cfc_tbl1.xlsx">Corn following Corn</a></li>
+		      <li><a href="crops/xls/a1-20cfs_tbl2.xlsx">Corn following Soybean</a></li>
+		      <li><a href="crops/xls/a1-20cornsilage_tbl3.xlsx">Corn Silage following Corn</a></li>
+		      <li><a href="crops/xls/a1-20sfc_tbl4.xlsx">Herbicide tolerant Soybeans following Corn (herbicide tolerant)</a></li>
+		      <li><a href="crops/xls/a1-20nontolerant_sfc.xlsx">Non-herbicide tolerant soybeans following corn</a></li>
+		      <li><a href="crops/xls/a1-20lowtillcfstbl6.xlsx">Low-till corn following Soybeans</a></li>
+		      <li><a href="crops/xls/a1-20lowtillsfctbl6.xlsx">Low-till drilled Soybeans following Corn</a></li>
+		      <li><a href="crops/xls/a1-20striptillcfstbl5.xlsx">Strip till Corn following  Soybeans</a></li>
+		      <li><a href="crops/xls/a1-20striptillsfctbl5.xlsx">Strip till Herbicide  Tolerant Soybeans following Corn</a></li>
+		      <li><a href="crops/xls/a1-15-20haybudgetonly.xlsx">Alfalfa or Alfalfa-grass Hay Budget</a></li>
+		      <li><a href="crops/xls/a1-15-20haybudgetwithcompanion.xlsx">Alfalfa or Alfalfa-grass Hay with Oat Companion Crop Budget</a></li>
+		      <li><a href="crops/xls/a1-15-20oatsmallgrainbudget.xlsx">Oat or Other Small Grain Budget</a></li>
+		      <li><a href="crops/xls/a1-20maintgpimprovgrass_tbl9.xlsx">Improved Grass Pasture</a></li>
+		      <li><a href="crops/xls/a1-20maintpimprovgrleg_tbl9.xlsx">Improved Grass-legume Pasture</a></li>
+		    </ul></td>
+		  <td><a href="crops/pdf/a1-20.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-20.html">A1-20</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-20costprodgrain.xlsx">Breakeven Worksheet for Crops</a><br>
+Use this decision tool to find cash-flow requirements per acre and break-even selling prices per bushel or ton for individual crops.</td>
+		  <td><a href="crops/pdf/a1-20.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-20.html">A1-20</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-20croprotation.xlsx">Crop Rotation Summary</a><br>
+		    Use this decision tool to estimate the returns for different crop  rotations over a six-year timeframe. Includes budgets for corn,  soybeans, and oat or small grain.</td>
+		  <td><a href="crops/pdf/a1-20.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-20.html">A1-20</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-20croprotationanalyzer.xlsx">Crop Rotation Analyzer</a><br>
+		    Use this decision tool to analyze the economic returns for up to five  different crop rotations over a six-year time frame. The tool separates  crop inputs and machinery costs by enterprise and looks at annual and  average returns over variable costs by rotation.</td>
+		  <td><a href="crops/pdf/a1-20.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-20.html">A1-20</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-24canolabudget.xlsx">Production Cost for Winter Canola</a><br>
+Use this decision tool for estimating costs and returns for winter canola production in Iowa </td>
+		  <td><a href="crops/pdf/a1-24.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-24.html">A1-24</a></td>
+		
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-26organictransition.xlsx">Making the Transition from Conventional to Organic Production</a><br>
+Use this decision tool to help analyze the  transition process from conventional to organic production.</td>
+		  <td><a href="https://store.extension.iastate.edu/product/12936.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-26.html">A1-26</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-27switchgrasscomparison.xlsx">To Grow or not to Grow: A Tool for Comparing Returns to Switchgrass for Bioenergy with Annual Crops and CRP</a><br>
+Use this decision tool to economically compare how well switchgrass will perform compared to current crop production systems.</td>
+		  <td><a href="crops/pdf/a1-27.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-27.html">A1-27</a></td>
+		
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-32arcco2014calculator.xlsx">ARC-CO Payment  Calculator for <strong>2014/15</strong></a><br>
+		    Use this decision tool to estimate payments for the  ARC-CO program for the 2014 crop year (payments made in October 2015)</td>
+		  <td><a href="crops/pdf/a1-32.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-32.html">A1-32</a></td>
+		  
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-32arcco2015calculator.xlsx">ARC-CO Payment  Calculator for <strong>2015/16</strong></a><br>
+Use this decision tool to estimate payments for the  ARC-CO program for the 2015 crop year (payments made in October 2016)</td>
+		  <td><a href="crops/pdf/a1-32.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-32.html">A1-32</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-32arcco2016calculator.xlsx">ARC-CO Payment  Calculator for <strong>2016/17</strong></a><br>
+Use this decision tool to project payments for the ARC-CO program for the 2016 crop year (payments made in October 2017).</td>
+		  <td><a href="crops/pdf/a1-32.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-32.html">A1-32</a></td>
+		
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-32arcco2017calculator.xlsx">ARC-CO Payment  Calculator for <strong>2017/18</strong></a><br>
+Use this decision tool to project payments for the ARC-CO program for the 2017 crop year (payments made in October 2018).</td>
+		  <td><a href="crops/pdf/a1-32.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-32.html">A1-32</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-32plcpaymentcalculator.xlsx">Price Loss Coverage (PLC) Payment Calculator</a><br>
+Use this decision tool to estimate payments under the PLC program for  2014, 2015 and 2016 crop years.</td>
+		  <td><a href="crops/pdf/a1-32.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-32.html">A1-32</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-33farmbilldata.xlsx">ARC-CO &amp; PLC Per  Acre Payment Estimator for Iowa, 2024-2025<br>
+          </a>Use this decision tool to estimate Iowa payments by county for the ARC-CO and PLC 2018 Farm Bill programs for <strong>2023-2024</strong>.</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-33.html">A1-33</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-33farmbilldata2020.xlsx">ARC-CO &amp; PLC Per  Acre Payment Estimator for Iowa, 2019-2023<br>
+          </a>Use this decision tool to project Iowa payments by county for the ARC-CO and PLC 2018 Farm Bill programs for 2023-2024 and view historical payment data by county for <strong>2019-2022</strong> crops.</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-33.html">A1-33</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-33farmbilldata2014.xlsx">ARC-CO &amp; PLC  Payments by Crop and County for Iowa, 2014-2018</a><br>
+Use this decision tool to view Iowa payment details by county for the ARC-CO and PLC 2014 Farm Bill programs for <strong>2014-2018</strong>.</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-33.html">A1-33</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="https://www.extension.iastate.edu/agdm/crops/xls/a1-33farmbillpaymentanalyzer.xlsx" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">ISU Farm Bill Analyzer</a><br>
+Use this education tool to analyze the decision points for corn and soybean producers in the 2014 Farm Bill.</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-33.html">A1-33</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-35plcyieldupdate.xlsx">PLC Yield Update Tool: Farm Bill 2018</a></td>
+		  <td><a href="crops/pdf/a1-35.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-35.html">A1-35</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-36farmbillcalculator.xlsx">Farm Bill Calculator</a><br>
+Use this calculator to see potential payments for the 2014 Farm Bill.</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-36.html">A1-36</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-37marketfacilitationprogramcalc.xlsx">Market Facilitation Program Calculator</a><br>
+Use this decision tool to estimate payments under the 2018 Market Facilitation Program</td>
+		  <td><a href="crops/pdf/a1-37.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-37.html">A1-37</a></td>
+		
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-44sco-eco-yields.xlsx">Supplemental Coverage Option (SCO) and Enhanced Coverage Option (ECO) County Yield History for Iowa</a><br>
+		    Use this decision tool to see past expected and final county level Iowa yields used in the SCO and ECO programs. </td>
+		  <td><a href="crops/pdf/a1-44.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-44.html">A1-44</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-48cropinsurancecomparison.xlsx">Crop Insurance Comparison</a><br>
+		    Use this decision tool to compare different crop insurance strategies for corn and soybeans.</td>
+		  <td><a href="crops/pdf/a1-48.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-48.html">A1-48</a></td>
+		  
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-57delayedplantingevaluator.xlsx">Delayed Planting and Replanting Evaluator</a><br>
+Use this decision tool to evaluate delayed planting, replanting and prevented planting alternatives as it relates to individual crop insurance coverage.</td>
+		  <td><a href="crops/pdf/a1-57.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-57.html">A1-57</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-65cornsilagepricer.xlsx">Silage Pricer</a><br>
+Use this decision tool to estimate a minimum and maximum price for corn or oat silage standing in the field or harvested and stored.</td>
+		  <td><a href="crops/pdf/a1-65.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-65.html">A1-65</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-70cornstoverpricer.xlsx">Corn Stover Pricer</a><br>
+Use this decision tool to estimate a price for corn stover standing in the field or harvested and stored.</td>
+		  <td><a href="crops/pdf/a1-70.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-70.html">A1-70</a></td>
+
+		  </tr>
+		<tr>
+		  <td>Net Returns to Carbon Farming --<a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-al.xlsx">AL</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-az.xlsx">AZ</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ar.xlsx">AR</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ca.xlsx">CA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-co.xlsx">CO</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ct.xlsx">CT</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-de.xlsx">DE</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-dc.xlsx">DC</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-fl.xlsx">FL</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ga.xlsx">GA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-hi.xlsx">HI</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-id.xlsx">ID</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-il.xlsx">IL</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-in.xlsx">IN</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ia.xlsx">IA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ks.xlsx">KS</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ky.xlsx">KY</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-la.xlsx">LA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-me.xlsx">ME</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-md.xlsx">MD</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ma.xlsx">MA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-mi.xlsx">MI</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-mn.xlsx">MN</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ms.xlsx">MS</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-mo.xlsx">MO</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-mt.xlsx">MT</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ne.xlsx">NE</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-nv.xlsx">NV</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-nh.xlsx">NH</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-nj.xlsx">NJ</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-nm.xlsx">NM</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ny.xlsx">NY</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-nc.xlsx">NC</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-nd.xlsx">ND</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-oh.xlsx">OH</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ok.xlsx">OK</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-or.xlsx">OR</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-pa.xlsx">PA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ri.xlsx">RI</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-sc.xlsx">SC</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-sd.xlsx">SD</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-tn.xlsx">TN</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-tx.xlsx">TX</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-ut.xlsx">UT</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-va.xlsx">VA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-vt.xlsx">VT</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-wa.xlsx">WA</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-wi.xlsx">WI</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-wv.xlsx">WV</a>, <a href="crops/xls/a1-78/a1-78netreturnstocarbonfarming-wy.xlsx">WY</a><br>
+		    Use these decision tools to calculate net returns to carbon farming in Iowa and surrounding states. <br></td>
+		  <td><a href="crops/pdf/a1-78.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-78.html">A1-78</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-80carbonintensityscorecalc.xlsx">Carbon Intensity Score Calculator</a><br>
+		    Use this decision tool to estimate Carbon Intensity Scores and potential  pass-through Federal Tax Credit 45Z (TC45Z) using the R&amp;D GREET  Model.</td>
+		  <td><a href="crops/pdf/a1-80.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-80.html">A1-80</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-81fungicidetreatmentanalysis.xlsx">Economic Analysis of Foliar Fungicide Treatment on Corn</a><br>
+		    Use this decision tool to analyze the economic impact of fungicide application for a farm operation.</td>
+		  <td><a href="crops/pdf/a1-81.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-81.html">A1-81</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-87weedmanagementalternatives_harrison.xlsx">Weed Management Budgeting Tool - Harrison County</a><br>
+		    Use this decision tool to evaluate the long-run costs of farming practice changes to manage weed resistance in Harrison County, Iowa.</td>
+		  <td><a href="crops/pdf/a1-87.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-87.html">A1-87</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-88herbaceousfeedstockproduction.xlsx">Estimating production costs of herbaceous materials for biomass</a><br>
+		    Use this decision tool to estimate production costs of herbaceous materials for biomass.</td>
+		  <td><a href="crops/pdf/a1-88.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+		  <td><a href="crops/html/a1-88.html">A1-88</a></td>
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-91economicsofcovercrops.xlsx" target="_blank" rel="noopener noreferrer">Economics of Cover Crops</a><br>
+Use this decision tool to analyze projected or actual economic costs and  benefits for cover crops, with or without grazing and harvesting.</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-91.html">A1-91</a></td>
+	
+		  </tr>
+		<tr>
+		  <td><a href="crops/xls/a1-96organictransition10year.xlsx">Evaluating Organic Transitions at the Field Level</a><br>
+Use this Decision Tool to evaluate the transition to organic production across a 10-year period</td>
+		  <td>&nbsp;</td>
+		  <td><a href="crops/html/a1-96.html">A1-96</a></td>
+		  </tr>
+	</tbody>
+</table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	  
+	    <tr>
+	      <th width="72%">Storage &amp; Markets</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-31dryingcosts.xlsx">Comparison of  Drying Systems Calculator</a><br>
+Use this decision tool to compare  total  drying cost per bushel based on the type of drying system and price   inputs.</td>
+	      <td><a href="crops/pdf/a2-31.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-31.html">A2-31</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-32graindryingandshrinkcomparison.xlsx">Corn Drying and Shrink Comparison</a><br>
+Use this decision tool to compare alternatives for wet grain at harvest. </td>
+	      <td><a href="crops/pdf/a2-32.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-32.html">A2-32</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-33.xlsx">Monthly Cost for Storing Grain</a><br>
+Use this decision tool to project the cost  of storing grain past harvest in existing storage facilities or  commercial storage.</td>
+	      <td><a href="crops/pdf/a2-33.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-33.html">A2-33</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-35.xlsx">Grain Storage Investment Comparison</a><br>
+Use this decision tool to compare the cost  for on-farm storage, commercial storage, rental farm storage, or in a  storage condominium investment. </td>
+	      <td><a href="crops/pdf/a2-35.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-35.html">A2-35</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-37haystoragecost.xlsx">Hay Storage Cost Comparison</a><br>
+Use this decision tool to compare costs for various types of hay storage</td>
+	      <td><a href="crops/pdf/a2-37.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-37.html">A2-37</a></td>
+	      </tr>
+	    <tr>
+	      <td><p><a href="crops/xls/a2-38CASTtool.xlsx">Crop Allowable Storage Time</a><br>
+	        Use this decision tool to estimate allowable storage time for corn, soybean, oat, or wheat crops.	        <br>
+	      </p></td>
+	      <td><a href="crops/pdf/a2-38.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-38.html">A2-38</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-39grainfacilityenergyaudit.xlsx">Grain Facility Energy Audit (GFEA) Decision Tool</a><br>Use this comprehensive energy-audit workbook with technical checklists for farm-scale or commercial operations to calculate $ per bushel and annual savings based on user inputs and energy prices (electric + thermal fuel).</td>
+	      <td><a href="crops/pdf/a2-39.pdf"><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button></a></td>
+	      <td><a href="crops/html/a2-39.html">A2-39</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	   
+	    <tr>
+	      <th width="72%">Outlook &amp; Prices</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-15pricecalc.xlsx">Season Average Price Calculator</a><br>
+This decision tool uses monthly grain prices  and futures prices to  estimate the season average price for corn and  soybeans.</td>
+	      <td><a href="crops/pdf/a2-15.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a2-15.html">A2-15</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp; </p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Machinery</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><p><a href="crops/xls/a3-12historiccustomrates.xlsx">Historical Iowa Custom Rate Averages</a><br>
+	        Use  this decision tool to access average custom rates reporting on the  annual ISU Custom Rate Survey from 2000 through the current year.	      </p></td>
+	      <td></td>
+	      <td><a href="crops/html/a3-12.html">A3-12</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-13customshare.xlsx">Determining the Custom Operator's Share of the Crop</a><br>
+Use this decision tool to compute an  equitable share of the crop to give the custom operator instead of a  cash payment. </td>
+	      <td><a href="crops/pdf/a3-13.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-13.html">A3-13</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-21-35machfinancing.xlsx">Farm Machinery Financing Analyzer<br>
+	      </a> Use this decision tool to compare the cost the cost of owning vs. leasing farm machinery.</td>
+	      <td><a href="crops/pdf/a3-21.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-21.html">A3-21</a></td>
+	      </tr>
+	    <tr>
+	      <td>&nbsp;</td>
+	      <td><a href="crops/pdf/a3-35.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-35.html">A3-35</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-24fieldcap.xlsx">Estimating the Field Capacity of Farm Machines</a><br>
+Use this decision tool to estimate the acreage capacity of a new machine.</td>
+	      <td><a href="crops/pdf/a3-24.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-24.html">A3-24</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-28tractorsize.xlsx">Matching Tractor Power and Implement Size</a><br>
+Use this decision tool  to match the size of a tractor to the size of an implement.</td>
+	      <td><a href="crops/pdf/a3-28.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-28.html">A3-28</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-28fielddays.xlsx">Estimating the Number of Field Days Required</a><br>
+Use this decision tool to estimate the number of field days required to complete a field operation. </td>
+	      <td><a href="crops/pdf/a3-28.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-28.html">A3-28</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-29machcostcalc.xlsx">Estimating Farm Machinery Costs</a><br>
+Use this decision tool to estimate the cost of owning and operating farm machinery. </td>
+	      <td><a href="crops/pdf/a3-29.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-29.html">A3-29</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-29graintransportation.xlsx">Grain Transportation Costs</a><br>
+Use this decision tool to find ownership and  operator costs for transporting grain by wagon or truck.</td>
+	      <td><a href="crops/pdf/a3-29.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-29.html">A3-29</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-33ownerch.xlsx">Combine Ownership or Custom Hire</a><br>
+Use this decision tool to help you compare the cost of owning a combine to the cost of custom hire. </td>
+	      <td><a href="crops/pdf/a3-33.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-33.html">A3-33</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-34jointmach.xlsx">Joint Machinery Ownership</a><br>
+Use this decision tool  to compute each party's cost of jointly owning machinery.</td>
+	      <td><a href="crops/pdf/a3-34.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-34.html">A3-34</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-38jointventfarmmach.xlsx">Farm Machinery Joint Venture Worksheet</a><br>
+Use this decision tool to compute each  party's initial capital contribution and annual payments and operating  expenses for a joint venture.</td>
+	      <td><a href="crops/pdf/a3-38.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-38.html">A3-38</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-40motorvehiclecost.xlsx">Motor Vehicle Cost Analyzer</a><br>
+Use this decision tool to calculate  ownership and operating costs for a vehicle per mile and per year.</td>
+	      <td><a href="crops/pdf/a3-40.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-40.html">A3-40</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a2-32-a3-41grainbidpricecomparison.xlsx">Grain Bid Price Comparison</a><br>
+Use this decision tool to compare grain delivery to multiple buyer  locations based on transportation costs, cash grain bids, and  adjustments for moisture by delivery location.</td>
+	      <td><a href="crops/pdf/a3-41.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-41.html">A3-41</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-42g2hsystemsizing.xlsx">GH2 System Sizing Tool</a> -- A3-42<br>
+	        Use  this decision tool to analyze a farm operation&rsquo;s current grain  harvesting and handling equipment and plan for future expansions.</td>
+	      <td><a href="crops/pdf/a3-42.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-42.html">A3-42</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="crops/xls/a3-43fuelsavingsestimator.xlsx">Fuel-Savings Cost Estimator</a> -- A3-43<br>
+	        Use	this decision tool to estimate fuel savings.  <br></td>
+	      <td><a href="crops/pdf/a3-43.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="crops/html/a3-43.html">A3-43</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p><a id="livestock"></a>
+	<h3>Livestock</h3>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Costs &amp; Returns</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><p>Livestock Enterprise Budgets (11 Decision Tools)<br>
+	        Use these decision tools to project the profitability of </p>
+	        <ul>
+	          <li><a href="livestock/xls/b1-21farrowtofinishp6.xlsx">Farrow-to-Finish</a></li>
+	          <li><a href="livestock/xls/b1-21finfeederpigsp7.xlsx">Finishing Feeder Pigs</a></li>
+	          <li><a href="livestock/xls/b1-21prodweanedpigsp8.xlsx">Producing weaned 12 lb. pigs - Total Confinement</a></li>
+	          <li><a href="livestock/xls/b1-21finweanedpigsp9.xlsx">Finishing weaned 12 lb. pigs – Total Confinement</a></li>
+	          <li><a href="livestock/xls/b1-21finyearlingsteerstp11.xlsx">Finishing Yearling Steers</a></li>
+	          <li><a href="livestock/xls/b1-21finsteercalvesp12.xlsx">Finishing Steer Calves</a></li>
+	          <li><a href="livestock/xls/b1-21finyearlingheifersp13.xlsx">Finishing Yearling Heifers</a></li>
+	          <li><a href="livestock/xls/b1-21backgroundingsteercalvesp14.xlsx">Backgrounding Steer Calves</a></li>
+	          <li><a href="livestock/xls/b1-21beefcowcalfp15.xlsx">Beef Cow-Calf</a></li>
+	          <li><a href="livestock/xls/b1-21eweflockp17.xlsx">Ewe Flock</a></li>
+	          <li><a href="livestock/xls/b1-21feederlambp19.xlsx">Finishing Feeder Lamb</a></li>
+	        </ul></td>
+	      <td><a href="livestock/pdf/b1-21.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-21.html">B1-21</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-25cowherdbudgetmodel.xlsx">Cow Herd Budget Model</a><br>
+Use this decision tool to compare cost and returns for two to four different types and or sizes of beef cattle operations.</td>
+	      <td>&nbsp;</td>
+	      <td><a href="livestock/html/b1-25.html">B1-25</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-50lrpanalysis.xlsx">Livestock Revenue Protection (LRP) Analyzer</a><br>
+Use this decision tool to compare the price risk                              protection available with Livestock Revenue Protection to using futures                              contracts, put options or no price protection.</td>
+	      <td><a href="livestock/pdf/b1-50.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-50.html">B1-50</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-60managedhayorgrazingcrpacres.xlsx">Managed Hay and Grazing of CRP Acres<br>
+	      </a>Use this  calculator to analyze costs for managed haying or grazing of CRP acres.          </td>
+	      <td><a href="livestock/pdf/b1-60.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-60.html">B1-60</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-65manurecalculator.xlsx">Manure Calculator</a><br>
+Use this decision tool to analyze the value of manure nutrient components.</td>
+	      <td><a href="livestock/pdf/b1-65.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-65.html">B1-65</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-73_buyingheifers.xlsx">Buying heifers for beef cow replacement (one replacement unit)</a><br>	        This        decision tool is for a         producer that typically develops their own heifers and is considering         purchasing replacement females in a given year.</td>
+	      <td><a href="livestock/pdf/b1-73.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-73.html">B1-73</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-73_raisingheifers.xlsx">Raising heifers for beef cow replacement (one replacement unit)<br>
+	      </a> This        decision tool is for a         producer that typically purchases replacement females and is  considering        developing heifers in a given year. </td>
+	      <td><a href="livestock/pdf/b1-73.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-73.html">B1-73</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-74netpresentvalueofbeefreplacementfemales.xlsx">Net  Present Value of Beef Replacement Females</a> (single replacement)<br>
+Use this decision tool to find the net present  value of beef replacement females.</td>
+	      <td><a href="livestock/pdf/b1-74.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-74.html">B1-74</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-74netpresentvalueofbeefreplacementfemalesgroup.xlsx">Net  Present Value of Beef Replacement Females</a> (group of replacements)<br>
+Use this decision tool to find the net present value for a group of beef replacement females.</td>
+	      <td><a href="livestock/pdf/b1-74.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-74.html">B1-74</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-78improvingmortality.xlsx">Pig Survivability Project: Wean-to-finish mortality economic modeling</a><br>
+	        Use this decision tool to analyze the impact a change in mortality has on revenue and cost for a wean-to-finish swine operation.</td>
+	      <td><a href="livestock/pdf/b1-78.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-78.html">B1-78</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b1-79improvingmortalitybreedtowean.xlsx">Pig Survivability Project: Breed-to-wean mortality economic modeling</a><br>
+	        Use this decision tool to analyze the impact a change in mortality has on revenue and cost for a breed-to-wean swine operation.	      </td>
+	      <td><a href="livestock/pdf/b1-79.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b1-79.html">B1-79</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Markets</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b2-35cowsellcalculator.xlsx">Cow Sell Calculator</a><br>
+Use                               this spreadsheet to compares opportunities for marketing cows now or                              incurring  additional costs to target other (later) markets.</td>
+	      <td><a href="livestock/pdf/b2-35.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b2-35.html">B2-35</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b2-35cowrepurchasecalculator.xlsx">Cow Repurchase Calculator</a><br>
+Use  this spreadsheet to estimate the costs saved and                              interest earned on sale  proceeds between sale and repurchase date.</td>
+	      <td><a href="livestock/pdf/b2-35.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b2-35.html">B2-35</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b2-53hogmarketcalculator.xlsx">Simple Hog Market Calculator</a><br>
+Use this decision tool to evaluate the added return per head from marketing hogs a few days later and at a heavier weight.</td>
+	      <td><a href="livestock/pdf/b2-53.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b2-53.html">B2-53</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="livestock/xls/b2-53advancedhogmarketcalculator.xlsx">Swine Marketing Decision Calculator</a><br>
+Use this decision tool for help in evaluating optimal marketing weight.</td>
+	      <td><a href="livestock/pdf/b2-53.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="livestock/html/b2-53.html">B2-53</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p><a id="wholefarm"></a> </p>
+	<h3>Whole Farm</h3>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Costs &amp; Returns</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c1-15cropandlivestocklanduse.xlsx">Crop and Livestock Land Use Analyzer<br>
+	      </a>Use this decision tool to analyze and compare  the potential long-term effects for various land use choices.</td>
+	      <td><a href="wholefarm/pdf/c1-15.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c1-15.html">C1-15</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c1-50partialbudgeting.xlsx">Partial Budgeting</a><br>
+Use this decision tool to evaluate the financial effect of incremental changes for a farm business.</td>
+	      <td><a href="wholefarm/pdf/c1-50.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c1-50.html">C1-50</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c1-55marketcomparison.xlsx">Comparison of Customer, Competition or Cost Based Pricing</a><br>
+Use this decision tool to compare product pricing based on market competition or cost based approaches.</td>
+	      <td><a href="https://store.extension.iastate.edu/product/16007">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c1-55.html">C1-55</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Leasing</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-01leasecomparison.xlsx">Estimated Returns by Farm Lease Arrangement</a><br>
+Use this decision tool to estimate returns  to a landowner and tenant under different rental agreements, including  cash rent, flexible rent, crop-share, or a custom farming agreement.</td>
+	      <td><a href="wholefarm/pdf/c2-01.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-01.html">C2-01</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-06leaseannualreport.xlsx">Farmland Lease Annual Report</a><br>	        
+	        This decision tool is an alternative to the form included in the Information File and is a communication tool for sharing information between leasing parties on an annual basis.	      </td>
+	      <td><a href="wholefarm/pdf/c2-06.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-06.html">C2-06</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-20croplandcashrent.xlsx">Cash Rental Rate Estimation</a><br>
+Use this decision tool to compare different methods of computing Cropland Cash Rent.</td>
+	      <td><a href="wholefarm/pdf/c2-20.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-20.html">C2-20</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-21flexiblerentanalysis.xlsx">Flexible Lease Agreement Worksheet</a><br>
+Use this decision tool  to analyze a flexible lease arrangement. </td>
+	      <td><a href="wholefarm/pdf/c2-21.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-21.html">C2-21</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-23pastureandhaycashrent.xlsx">Calculating Hay and Pasture Cash Rents</a><strong><br>
+	      </strong>Use this decision tool to compare different methods of computing rent for hay and pasture ground.</td>
+	      <td><a href="wholefarm/pdf/c2-23.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-23.html">C2-23</a></td>
+	      </tr>
+	    <tr>
+	      <td><p><a href="wholefarm/xls/c2-24grainstorage.xlsx">Computing a Grain Storage Rental Rate</a><br>
+	        Use this decision tool to estimate a grain storage and/or dryer rental rate.</p></td>
+	      <td><a href="wholefarm/pdf/c2-24.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-24.html">C2-24</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-26buildingrent.xlsx">Computing a Livestock Building Cash Rental Rate<br>
+	      </a> Use this decision tool  to estimate a livestock building rental rate.</td>
+	      <td><a href="wholefarm/pdf/c2-26.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-26.html">C2-26</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-30cropshareleaseanalysis.xlsx">Crop Share Analysis</a><br>
+Use this decision tool to analysis a crop-share lease arrangement based  on the  percentage of inputs provided by the tenant and owner.</td>
+	      <td><a href="wholefarm/pdf/c2-30.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-30.html">C2-30</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-36cowsshareanalysis.xls">Beef Cow Share Agreement Analysis</a><br>
+Use this decision tool to estimate costs and returns for each party in a beef cow share agreement. </td>
+	      <td><a href="wholefarm/pdf/c2-36.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-36.html">C2-36</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Land Values</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-70landpurchaseanalysis.xlsx">Farmland Purchase Analysis</a><br>
+Use this decision tool to compare the  economic and financial impacts of purchasing a parcel of farmland.</td>
+	      <td><a href="wholefarm/pdf/c2-70.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-70.html">C2-70</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-70landvalues.xlsx">Historical Farmland Value Survey (Iowa State University)</a><br>
+This spreadsheet provides historical Iowa land   values for county, district, and state beginning in 1950. </td>
+	      <td>&nbsp;</td>
+	      <td><a href="wholefarm/html/c2-70.html">C2-70</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-75rlidata.xlsx">Farmland Value Survey (REALTORS®  Land Institute)</a><br>
+	        This spreadsheet provides tables showing historical data, for Iowa and by Crop Reporting District, starting in 2003.</td>
+	      <td></td>
+	      <td><a href="wholefarm/html/c2-75.html">C2-75</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-87compositecsr.xlsx">Calculating  a Weighted Average Corn Suitability Rating</a><br>
+Use this decision tool to find the  weighted CSR2 based on information from the Web Soil Survey. </td>
+	      <td></td>
+	      <td><a href="wholefarm/html/c2-87.html">C2-87</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-88iowatownships.xlsx">Iowa Township Names and Geographic Locations by County</a><br>
+This electronic spreadsheet provides a listing of  the political townships for every county in Iowa.</td>
+	      <td></td>
+	      <td><a href="wholefarm/html/c2-88.html">C2-88</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c2-90tilinganalysis.xlsx">Farmland  Tile Drainage Investment Analysis</a><br>
+Use  this decision tool to analyze returns from a tile drainage investment. </td>
+	      <td><a href="wholefarm/pdf/c2-90.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c2-90.html">C2-90</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Financial</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-14cashflowbudget12month.xlsx">Cash Flow Budget</a> (short form - 12 periods)<strong><br>
+	      </strong>Use this decision tool to make a simple cash flow projection over 12 periods.</td>
+	      <td><a href="wholefarm/pdf/c3-14.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-14.html">C3-14</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-15cashflowbudget.xlsx">Cash Flow Budget</a> (multiple enterprises)<br>
+Use this decision tool  to calculate a detailed cash-flow budget for your farm. </td>
+	      <td><a href="wholefarm/pdf/c3-15.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-15.html">C3-15</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-19networthshortform.xlsx">Balance Sheet</a> (short form)<br>
+Use this decision tool to make a simple balance sheet (net worth statement).</td>
+	      <td><a href="wholefarm/pdf/c3-19.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-19.html">C3-19</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-26accrualnfi.xlsx">Cash to Accrual Net Farm Income Worksheet</a><br>
+	        Prepares an accrual net income statement from income tax schedules and net worth statements.</td>
+	      <td><a href="wholefarm/pdf/c3-26.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-26.html">C3-26</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-51incomecomparison.xlsx">Computing Benefits from Adding Additional Off-farm Work</a><br>
+Use this decision tool to compare various income and expenses from multiple options of employment.</td>
+	      <td><a href="wholefarm/pdf/c3-51.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-51.html">C3-51</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-55finperformancemeasures.xlsx">Financial Performance Measures</a><br>
+Use this decision tool  to calculate  financial performance measures for your farm that can be compared to  industry standards.</td>
+	      <td><a href="wholefarm/pdf/c3-55.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-55.html">C3-55</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-56interprfintrendsheet.xlsx">Interpreting Financial Performance Measures</a><br>
+Use this decision tool  to create a five-year trend analysis.</td>
+	      <td><a href="wholefarm/pdf/c3-56.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-56.html">C3-56</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-56comprfinstatements.xlsx">Comprehensive Financial Statements<br>
+	      </a>Use this decision tool to calculate a  comprehensive set of financial statements including the beginning and  ending net worth statements, the income statement, the cash-flow  statement, the statement of owner equity, and the financial performance  measures. Also available as an <a href="wholefarm/xls/c3-56cyclonefarm.xlsx">Example of Farm Financial Statements.</a></td>
+	      <td><a href="wholefarm/pdf/c3-56.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-56.html">C3-56</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-59financialperformanceanalysis.xlsx">Farm Financial Performance Analysis</a><br>
+Allows you to enter information from a  Schedule F for up to 5 years and calculate multiple financial ratios to  determine the financial health of a farm operation.</td>
+	      <td><a href="wholefarm/pdf/c3-59.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-59.html">C3-59</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-66familylivingbenchmark.xlsx">Benchmarking Family Living Expenses in Agriculture</a><br>
+Family living is another aspect for the  management of a farm business.  Use this decision tool to benchmark  internally and externally multiple  family living categories. </td>
+	      <td><a href="wholefarm/pdf/c3-64.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-64.html">C3-64</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-66familylivingbenchmark.xlsx">Benchmarking Family Living Expenses in Agriculture</a><br>
+Family living is another aspect for the  management of a farm business.  Use this decision tool to benchmark  internally and externally multiple  family living categories. </td>
+	     <td><a href="wholefarm/pdf/c3-66.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-66.html">C3-66</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c3-70loancomparison.xlsx">Comparison of Farmland Financing Options for Beginning Farmers and Ranchers in Iowa: Land Ownership Purchase</a><br>
+	        Use this decision tool to compare direct and commercial loans for land ownership purchases in Iowa.</td>
+	      <td><a href="wholefarm/pdf/c3-70.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c3-70.html">C3-70</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c4-16dividingincome.xlsx">Dividing Business Income</a><br>
+Use this decision tool to calculate how to divide income between different parties.</td>
+	      <td><a href="wholefarm/pdf/c4-16.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c4-16.html">C4-16</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Weights &amp; Measurements</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c6-80conversions.xlsx">Metric Conversions</a><br>
+Use this decision tool for converting between English and Metric units.</td>
+	      <td><a href="wholefarm/pdf/c6-80.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c6-80.html">C6-80</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c6-82storagecapacity.xlsx">Estimated Storage Capacity for Grains, Forages, and Liquids</a><br>
+  Use this decision tool to estimate the storage capacity for grain bins, bales storage, water and fuel tanks.</td>
+	      <td><a href="wholefarm/pdf/c6-82.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c6-82.html">C6-82</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<p><a id="business"></a> </p>
+	<h3>Business Decisions</h3>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Weights &amp; Measurements</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c5-08inkindmatchform.xlsx">Grant In-Kind Match Contributions</a> <br>
+Use this decision tool  to keep track of in-kind match for matching grants.</td>
+	      <td><a href="wholefarm/pdf/c5-08.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c5-08.html">C5-08</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c5-08travelexptemplate.xlsx">Travel Expense Voucher</a> <br>
+Use this decision tool  to keep track of travel expenditures for reimbursement.</td>
+	      <td><a href="wholefarm/pdf/c5-08.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c5-08.html">C5-08</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c5-113calcstartupcosts.xlsx">Value-Added Processing Facility Start-up Costs</a><br>
+Use this decision tool  to estimate the start-up cost  of a value-added processing facility. You can also use this spreadsheet  to monitor your budgeted expenditures. </td>
+	      <td><a href="wholefarm/pdf/c5-113.pdf">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c5-113.html">C5-113</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Marketing</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="wholefarm/xls/c5-32marketingoutletanalyzer.xlsx">Marketing Outlet  Analyzer</a><br>
+Use this spreadsheet to evaluate different market outlets based on  their potential contribution to overall farm net income. </td>
+	      <td><a href="https://store.extension.iastate.edu/product/16010">
+	        <button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span></button>
+	        </a></td>
+	      <td><a href="wholefarm/html/c5-32.html">C5-32</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<p><a id="energy"></a></p>
+    <h3>Renewable Energy</h3>
+	<table class="gray full-width">
+
+	  <tbody>
+	    <tr>
+	      <th width="72%">Outlook &amp; Prices</th>
+	      <th width="7%">pdf</th>
+	      <th width="7%">file</th>
+	      </tr>
+	    <tr>
+	      <td><a href="energy/xls/d1-10ethanolprofitability.xlsx">Monthly Profitability of Ethanol Production</a><br>
+View the monthly profitability and underlying assumptions.</td>
+	      <td></td>
+	      <td><a href="energy/html/d1-10.html">D1-10</a></td>
+	      </tr>
+	    <tr>
+	      <td><a href="energy/xls/d1-15biodieselprofitability.xlsx">Monthly  Profitability of Biodiesel Production</a><br>
+View the monthly profitability of biodiesel production.</td>
+	      <td>&nbsp;</td>
+	      <td><a href="energy/html/d1-15.html">D1-15</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	<p>&nbsp;</p>
+	<h6><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button> 
+		        pdf file 
+		          <button type="button" class="btn btn-success" aria-label="excel"> <span class="fa fa-file-excel-o" aria-hidden="true"></span> </button> 
+          xlsx file <button type="button" class="btn btn-warning" aria-label="teaching activity"> <span class="fa fa-book" aria-hidden="true"></span> </button> 
+		teaching activity <button type="button" class="btn btn-primary" aria-label="voiced media"> <span class="fa fa-file-video-o" aria-hidden="true"></span> </button> 
+		voiced media</h6>
+    </div>
+         
+        <p>         
+    </p>
+	</div>
+    <div class="col-xs-12 col-md-2">Legend</div>
+	
+	<div class="col-xs-12 col-md-2"> <div class="border6">     <h6><button type="button" class="btn btn-danger" aria-label="pdf"> <span class="fa fa-file-pdf-o" aria-hidden="true"></span> </button> 
+		        pdf file</h6>
+	    <h6>
+  <button type="button" class="btn btn-success" aria-label="excel"> <span class="fa fa-file-excel-o" aria-hidden="true"></span> </button> 
+	      xlsx file</h6>
+	    <h6>
+  <button type="button" class="btn btn-warning" aria-label="voiced media"> <span class="fa fa-book" aria-hidden="true"></span> </button> 
+	      teaching activity</h6>
+	    <h6>
+  <button type="button" class="btn btn-primary" aria-label="voiced media"> <span class="fa fa-file-video-o" aria-hidden="true"></span> </button> 
+	      voiced media</h6>
+						<nav class="right-nav hidden-sm hidden-xs right-nav-collapse nav-menu-affixed" id="right-nav-scroll-spy" data-spy="affix">
+	<ul class="nav">
+	<li>
+	  <h6><a href="#crops" class="target-offset">Crops</a>
+	    
+	    </h6>
+	</li>
+<li>
+	<h6><a href="#livestock" class="target-offset">Livestock</a>
+	  
+	  </h6>
+</li>
+<li>
+	<h6><a href="#wholefarm" class="target-offset">Whole Farm</a>
+	  
+	  </h6>
+</li>
+<li>
+	<h6><a href="#business" class="target-offset">Business Development</a>
+	  
+	  </h6>
+</li>
+		<li>
+		  <h6><a href="#energy" class="target-offset">Renewable Energy</a></h6>
+		  </li>
+</ul>
+</nav>
+	</div></div>
+  </div>
+
+</main>
+<!-- /main -->
+
+<!-- footer -->
+<footer role="contentinfo">
+	<div class="container">
+		<div class="row">
+
+			<!-- footer-associates -->
+			<section class="footer-associates col-sm-12 col-md-3">
+				<ul>
+					<li><a href="https://www.extension.iastate.edu"><img src="img/isu_stacked.svg" class="wordmark-isu" alt="Iowa State University Extension and Outreach"></a></li>
+					<li><a href="https://www.extension.iastate.edu/agdm/"><strong>AG DECISION MAKER</strong></a></li>
+				</ul>
+			</section>
+
+			<!-- footer-contact -->
+			<section class="footer-contact col-sm-12 col-md-3">
+				<p><a href="https://www.econ.iastate.edu/">Department of  Economics</a><br>
+				  260 Heady Hall
+				  <br>
+					<a href="https://www.google.com/maps/place/Iowa+State+University+Department+of+Economics/@42.026304,-93.6453967,17z/data=!3m1!4b1!4m5!3m4!1s0x87ee70a23def51e3:0xa7bb783b7219b35d!8m2!3d42.0263!4d-93.643208">518 Farm House Lane<br>
+				  Ames, IA 50011-1054</a>
+				</p>
+				<p><a href="mailto:agdm@iastate.edu">agdm@iastate.edu</a>
+				</p>
+				<p>&nbsp;</p>
+			</section>	
+
+			<!-- footer-social -->
+			<section class="footer-social col-sm-12 col-md-3">
+				<ul class="labeled">
+			<li><a href="https://www.facebook.com/ISUAgMgmt/" title="Facebook">Facebook</a></li>
+                  <li><a href="https://www.instagram.com/isuextension" title="@isuextension">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/ag-decision-maker-iowa-state-university-extension-and-outreach/" title="LinkedIn">LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCzR8OyC4qLpSocnQp9GvQ2A" title="YouTube">YouTube</a></li>
+                    <li><a href="https://x.com/AgDecisionMaker" title="X"><img src="images/x1.gif" alt="X" width="40" height="27" border="0"/>X</a></li>
+				</ul>
+			</section>	
+
+			<!-- footer-legal -->
+			<section class="footer-legal col-sm-12 col-md-3">
+								<p>Copyright &copy; 1995-<script>document.write(new Date().getFullYear())</script><br>
+								Iowa State University<br>
+								of Science and Technology<br>
+								All rights reserved.</p>
+				<ul>
+	<li><a href="https://www.extension.iastate.edu/legal" title="https://www.extension.iastate.edu/legal">Policies</a></li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="js/vendor/bootstrap-submenu.min.js"></script>
+	<script src="js/iastate.js"></script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9693415-1']);
+  _gaq.push(['_setDomainName', 'extension.iastate.edu']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64639947-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<a href="/pinguicula/" style="display: none;">pinguicula</a></body>
+</html>

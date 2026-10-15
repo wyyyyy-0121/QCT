@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "mode": "author_supplied_contract",
+  "author": "Development investigator; authored fixture rule, not a real workbook author",
+  "source_uri": "development-fixture:inventory-rollforward-rules",
+  "provenance_status": "development_authored",
+  "workbook_sha256": "9d07d670e54967bff367ee31ee459516cb4fac949b0ab67ec803d771770d2e54",
+  "sheet_scopes": {
+    "A": {
+      "header_row": 1,
+      "data_rows": [
+        2,
+        25
+      ],
+      "output_column": "F",
+      "output_header": "Closing inventory [units]",
+      "roles": {
+        "opening": {
+          "header": "Opening inventory [units]"
+        },
+        "receipts": {
+          "header": "Receipts [units]"
+        },
+        "issues": {
+          "header": "Issues [units]"
+        },
+        "writeoffs": {
+          "header": "Write-offs [units]"
+        }
+      },
+      "formula_template": "={opening}+{receipts}-{issues}-{writeoffs}"
+    },
+    "B": {
+      "header_row": 1,
+      "data_rows": [
+        2,
+        25
+      ],
+      "output_column": "F",
+      "output_header": "Closing inventory [units]",
+      "roles": {
+        "opening": {
+          "header": "Opening inventory [units]"
+        },
+        "receipts": {
+          "header": "Receipts [units]"
+        },
+        "issues": {
+          "header": "Issues [units]"
+        },
+        "writeoffs": {
+          "header": "Write-offs [units]"
+        }
+      },
+      "formula_template": "={opening}+{receipts}-{issues}-{writeoffs}"
+    },
+    "C": {
+      "header_row": 1,
+      "data_rows": [
+        2,
+        25
+      ],
+      "output_column": "F",
+      "output_header": "Closing inventory [units]",
+      "roles": {
+        "opening": {
+          "header": "Opening inventory [units]"
+        },
+        "receipts": {
+          "header": "Receipts [units]"
+        },
+        "issues": {
+          "header": "Issues [units]"
+        },
+        "writeoffs": {
+          "header": "Write-offs [units]"
+        }
+      },
+      "formula_template": "={opening}+{receipts}-{issues}-{writeoffs}"
+    },
+    "D": {
+      "header_row": 1,
+      "data_rows": [
+        2,
+        25
+      ],
+      "output_column": "F",
+      "output_header": "Closing inventory [units]",
+      "roles": {
+        "opening": {
+          "header": "Opening inventory [units]"
+        },
+        "receipts": {
+          "header": "Receipts [units]"
+        },
+        "issues": {
+          "header": "Issues [units]"
+        },
+        "writeoffs": {
+          "header": "Write-offs [units]"
+        }
+      },
+      "formula_template": "={opening}+{receipts}-{issues}-{writeoffs}"
+    },
+    "E": {
+      "header_row": 1,
+      "data_rows": [
+        2,
+        25
+      ],
+      "output_column": "F",
+      "output_header": "Closing inventory [units]",
+      "roles": {
+        "opening": {
+          "header": "Opening inventory [units]"
+        },
+        "receipts": {
+          "header": "Receipts [units]"
+        },
+        "issues": {
+          "header": "Issues [units]"
+        },
+        "writeoffs": {
+          "header": "Write-offs [units]"
+        }
+      },
+      "formula_template": "={opening}+{receipts}-{issues}-{writeoffs}"
+    }
+  }
+}
