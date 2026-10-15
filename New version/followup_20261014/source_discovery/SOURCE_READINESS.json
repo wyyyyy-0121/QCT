@@ -12,49 +12,76 @@
     "Integer",
     "FoRepBench",
     "SpreadsheetBench v1 and unresolved v2 ancestry",
-    "old synthetic families"
+    "old synthetic families",
+    "dgorissen/pycel and all fixture/example derivatives (public compatibility development, pinned 15c8dd17338eb2ec31c9fe9dab11ae7b77b2633b)"
   ],
   "priority_origin_groups": [
     {
       "id": "iowa_state_agdm",
       "origin_group": "Iowa State University Extension Ag Decision Maker",
-      "use": ["public_injected"],
+      "use": [
+        "public_injected"
+      ],
       "license_status": "official decision-tool index reachable; workbook-specific reuse and third-party scope not audited",
-      "candidate_families": ["crop enterprise budgets", "farm decision tools"],
-      "evidence": [{
-        "name": "iowa_state_decision_tools",
-        "url": "https://www.extension.iastate.edu/agdm/decisiontools.html",
-        "path": "source_discovery/metadata_v6/iowa_state_decision_tools.source",
-        "sha256": "d576b0c1c06087dbeb8acaf509603bb43c15b0fd8a9ee3d5c9fbed029f71bbde",
-        "status": 200
-      }],
+      "candidate_families": [
+        "crop enterprise budgets",
+        "farm decision tools"
+      ],
+      "evidence": [
+        {
+          "name": "iowa_state_decision_tools",
+          "url": "https://www.extension.iastate.edu/agdm/decisiontools.html",
+          "path": "source_discovery/metadata_v6/iowa_state_decision_tools.source",
+          "sha256": "d576b0c1c06087dbeb8acaf509603bb43c15b0fd8a9ee3d5c9fbed029f71bbde",
+          "status": 200
+        }
+      ],
       "status": "metadata candidate only",
       "accepted": false,
       "accepted_template_families": 0,
       "workbook_acquired": false,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
-      "remaining_gates": ["source/history overlap", "workbook-specific license scope", "freeze before input acquisition", "formula presence and family deduplication", "all emitted suggestions adjudicable"]
+      "remaining_gates": [
+        "source/history overlap",
+        "workbook-specific license scope",
+        "freeze before input acquisition",
+        "formula presence and family deduplication",
+        "all emitted suggestions adjudicable"
+      ]
     },
     {
       "id": "nlr_jedi",
       "origin_group": "US National Laboratory of the Rockies JEDI project",
-      "use": ["public_injected"],
+      "use": [
+        "public_injected"
+      ],
       "license_status": "official landing page reachable; explicit workbook license not established",
-      "candidate_families": ["energy project economic impact"],
-      "evidence": [{
-        "name": "nlr_jedi",
-        "url": "https://www.nlr.gov/analysis/jedi",
-        "path": "source_discovery/metadata_v6/nlr_jedi.source",
-        "sha256": "571c1f7763e7197e27da909a190365fa516be74aea8cbad64a5c8557514dcc01"
-      }],
+      "candidate_families": [
+        "energy project economic impact"
+      ],
+      "evidence": [
+        {
+          "name": "nlr_jedi",
+          "url": "https://www.nlr.gov/analysis/jedi",
+          "path": "source_discovery/metadata_v6/nlr_jedi.source",
+          "sha256": "571c1f7763e7197e27da909a190365fa516be74aea8cbad64a5c8557514dcc01"
+        }
+      ],
       "status": "metadata candidate only; no direct workbook URL verified",
       "accepted": false,
       "accepted_template_families": 0,
       "workbook_acquired": false,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
-      "remaining_gates": ["locate available workbook version", "source/history overlap", "license scope", "freeze before input acquisition", "formula presence and family deduplication", "all emitted suggestions adjudicable"]
+      "remaining_gates": [
+        "locate available workbook version",
+        "source/history overlap",
+        "license scope",
+        "freeze before input acquisition",
+        "formula presence and family deduplication",
+        "all emitted suggestions adjudicable"
+      ]
     },
     {
       "id": "18f",

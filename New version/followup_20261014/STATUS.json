@@ -13,6 +13,7 @@
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
+    "represent unsupported Excel functions and array outputs; validate execution semantics against independent references",
     "research verified business evidence for legitimate sign and coefficient exceptions",
     "develop candidate generation when every peer is wrong; preserve all adversarial misses",
     "evaluate unknown headers, unit consistency and policy scope beyond development dictionary",
@@ -61,6 +62,14 @@
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
   "upload_record_note": "previous_upload_commit is historical first checkpoint; current checkpoint lives on research/hybridguard-followup",
-  "latest_verified_remote_before_this_checkpoint": "37a0ccd73b3b0e78b61370d965062f594e86e9b5",
-  "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate"
+  "latest_verified_remote_before_this_checkpoint": "7cbb4cafc5a037ca2a556378cde869783527c56c",
+  "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate",
+  "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
+  "public_compatibility_workbooks": 14,
+  "public_compatibility_raw_formula_declarations": 5117,
+  "public_compatibility_loaded_formulas": 5054,
+  "public_compatibility_empty_array_result_declarations": 63,
+  "public_compatibility_evaluation_errors": 4118,
+  "public_compatibility_business_labels_available": false,
+  "public_compatibility_report": "PUBLIC_COMPATIBILITY_REPORT_20261015.md"
 }

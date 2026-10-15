@@ -1,0 +1,31 @@
+{
+  "commit": "15c8dd17338eb2ec31c9fe9dab11ae7b77b2633b",
+  "dev5_prediction_lock_sha256": "941b5ed43beef4d93dce64879646bdc0644b05d2406d4b634e163864575fdbea",
+  "failure_policy": "retain all failed downloads, parsing failures and unsupported functions in audit",
+  "final_validation_eligible": false,
+  "labels": "no authoritative clean/error cell labels; cached values are compatibility references only",
+  "license": "repository GPL-3.0; per-fixture third-party ancestry not fully audited; raw files not uploaded",
+  "method": "full original SG/FG paper inference and dev4/dev5; score no precision or coverage",
+  "new_final_families": 0,
+  "new_final_sources": 0,
+  "origin": "dgorissen/pycel and upstream fixture contributors, conservatively one excluded group",
+  "parallel_sheet_policy": "none declared; never assume sheets are parallel by file membership",
+  "role": "revealed public software-fixture development audit",
+  "selected_files": [
+    "example/example.xlsx",
+    "tests/fixtures/basic.xlsx",
+    "tests/fixtures/circular.xlsx",
+    "tests/fixtures/cond-format.xlsx",
+    "tests/fixtures/date-time.xlsx",
+    "tests/fixtures/excelcompiler.xlsx",
+    "tests/fixtures/information.xlsx",
+    "tests/fixtures/logical.xlsx",
+    "tests/fixtures/lookup.xlsx",
+    "tests/fixtures/npv.xlsx",
+    "tests/fixtures/pv.xlsx",
+    "tests/fixtures/stats.xlsx",
+    "tests/fixtures/text.xlsx",
+    "tests/fixtures/yearfrac.xlsx"
+  ],
+  "selection": "all XLSX files in pinned repository tree; no score-based filtering"
+}

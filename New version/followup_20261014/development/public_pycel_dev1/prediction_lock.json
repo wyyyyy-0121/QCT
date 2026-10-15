@@ -1,0 +1,40 @@
+{
+  "acquisition_receipt_sha256": "28ace2d82f9934856ceae6927b15beaef375c967b3bd6b0cb4495037b410844d",
+  "files": {
+    "audit.json": "9d61f7ba95a329262385190c3a0d0b3a851767ec94ffb6820677d5f63d5ca7ad",
+    "predictions/public01.json.gz": "ce439902d1a7182f704c3977779722b46c8578223986db2352f4b7b38acefae8",
+    "predictions/public02.json.gz": "451ec432c7fe07d81c7478a7c1d5b4145103915d0381ec37473f4b236cedfc35",
+    "predictions/public03.json.gz": "94755d226a487a496c357ae31a6a56baac46ae7545524d05e99a43ef21dc9f85",
+    "predictions/public04.json.gz": "11d322cd406385260b63684de242c607386538a56a78aa843c3a6cbcc51be6ea",
+    "predictions/public05.json.gz": "65eb9ef10ade08df3800f8d0caa6e79d575d543a319bb45a961a908a6f3667b8",
+    "predictions/public06.json.gz": "d248eb190f9fde80f215f4f77a30d4d939fe3523de51894c7ffca30ee40dfa93",
+    "predictions/public07.json.gz": "dd97ad3dee68fb000369b0d11ee620fa0c0d3ccf964cc0f2cc771e219feefb22",
+    "predictions/public08.json.gz": "2222b266fe1e98fccb80d46d9914bdc9e59e385346b08cb5c21f200dc7ec4741",
+    "predictions/public09.json.gz": "a5fc738b8f96f9efbfc76e099a3d0896150a8ce0d3cda9c6b30150de97581e52",
+    "predictions/public10.json.gz": "345fc8302930519f288809e530a68831f00159289e0ceecae3f43bebc0e0ea6d",
+    "predictions/public11.json.gz": "2d13b502f234d3b491977c1f588d4c5e6fbc05e22257c7e9eed0ea15978d059c",
+    "predictions/public12.json.gz": "e56f3d1cc659e15a6a94c05f57fdcc7a68131c83fee2cb823213d31bed79613b",
+    "predictions/public13.json.gz": "adfc796210cb0824c78c360756e8919bc3844096451351b7024e275c50faa467",
+    "predictions/public14.json.gz": "d7b888b40d57ba28587d6976170f0c708ec72e9053c1f87352dfc58aa2c51496"
+  },
+  "inputs": {
+    "raw/example/example.xlsx": "db6ac6c0fe75c1a83090e5bad592b07c8be5fb2028398619ac5ff41fc5870e2f",
+    "raw/tests/fixtures/basic.xlsx": "da6486baec3b89bc397ee181a73d007fa365873e07ea3828847bc44b0925c5a3",
+    "raw/tests/fixtures/circular.xlsx": "973b4de3d7dd162999170c90d47fba0e09be37e562246571e5c85081cd289f98",
+    "raw/tests/fixtures/cond-format.xlsx": "e43d4a4c79062e1c335ef90958a85bdf93128e28d624c6bf68f88716cbb01895",
+    "raw/tests/fixtures/date-time.xlsx": "1a6edd0515b4a13e76848f1c07460a059dcec24f4039ff273c5eecd625f80f3f",
+    "raw/tests/fixtures/excelcompiler.xlsx": "8c7687b59aa5326fd098c18c68f9030273410fc4d726ed1e50acee16f5f44dec",
+    "raw/tests/fixtures/information.xlsx": "ff81f3d343f1555a11560b5771a4ff31e554f3c3963b925a881b7e74228f53da",
+    "raw/tests/fixtures/logical.xlsx": "63120b92fb57d5d56e9f9c19b6a999f4ecc9a11d727bc9b34dc6115b30d1cabe",
+    "raw/tests/fixtures/lookup.xlsx": "cb012c5e36127cfad50f32e32b2df2205ebee3aa6b0ad82a0e4d83f8cf347131",
+    "raw/tests/fixtures/npv.xlsx": "39c6e9d7fa19bee25e14981e837e153f16030a107c88a7d4a78b182cffde3b0c",
+    "raw/tests/fixtures/pv.xlsx": "0771ce416909b75eabe153ff6543e5d29bc6c9080df296de8c1266415b30bef2",
+    "raw/tests/fixtures/stats.xlsx": "d92d1847657122d6822602a4a2e3930ce22575f8715d0ccaf8140fb890eeb4dc",
+    "raw/tests/fixtures/text.xlsx": "dee0c209a6940e4676d97f813498b9cfa260f7dbb6a391f2b4de9369378510d1",
+    "raw/tests/fixtures/yearfrac.xlsx": "dfbb4d9a9eb5fc66a17ad0e8fe45f7d424ff83b7007eee9365ac40aa458dbe00"
+  },
+  "labels_available": false,
+  "registration_sha256": "37a882402c27e87d92f8cdc91f7a1e4068a96012412d4dac1f377ec4e2f9169a",
+  "role": "unscored public-development inference audit",
+  "source_lock_sha256": "ecf0a5c575db0b8861a204e4287d0906faeb6236e6c66be6a59dfc906eb256f2"
+}
