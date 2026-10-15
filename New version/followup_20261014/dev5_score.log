@@ -1,0 +1,125 @@
+regression sparse_seed101 dev5 7 0
+regression clean_101 dev5 0 0
+regression sparse_seed202 dev5 26 0
+regression clean_202 dev5 0 0
+regression sparse_seed303 dev5 46 0
+regression clean_303 dev5 0 0
+regression systemic_seed404 dev5 650 0
+regression clean_404 dev5 0 0
+regression systemic_seed505 dev5 1000 0
+regression clean_505 dev5 0 0
+regression systemic_seed606 dev5 600 0
+regression clean_606 dev5 0 0
+regression length_1_101 dev5 1 0
+regression length_10_101 dev5 10 0
+regression length_100_101 dev5 100 0
+regression length_500_101 dev5 500 0
+regression length_1499_101 dev5 1499 0
+regression shared_101 dev5 900 0
+regression single_101 dev5 300 0
+regression heterogeneous_101 dev5 0 0
+regression exception_101 dev5 299 0
+regression length_1_202 dev5 1 0
+regression length_10_202 dev5 10 0
+regression length_100_202 dev5 100 0
+regression length_500_202 dev5 500 0
+regression length_1499_202 dev5 1499 0
+regression shared_202 dev5 900 0
+regression single_202 dev5 300 0
+regression heterogeneous_202 dev5 0 0
+regression exception_202 dev5 299 0
+regression length_1_303 dev5 1 0
+regression length_10_303 dev5 10 0
+regression length_100_303 dev5 100 0
+regression length_500_303 dev5 500 0
+regression length_1499_303 dev5 1499 0
+regression shared_303 dev5 900 0
+regression single_303 dev5 300 0
+regression heterogeneous_303 dev5 0 0
+regression exception_303 dev5 299 0
+stress c01 dev5 24 0
+stress c02 dev5 1 0
+stress c03 dev5 0 0
+stress c04 dev5 0 0
+stress c05 dev5 0 0
+stress c06 dev5 0 0
+stress c07 dev5 0 0
+stress c08 dev5 0 0
+tradeoff p01 dev5 24 0
+tradeoff p02 dev5 0 1
+tradeoff p03 dev5 0 24
+tradeoff p04 dev5 24 0
+crossdomain x11 dev5 0 0
+crossdomain x12 dev5 1 0
+crossdomain x13 dev5 24 0
+crossdomain x14 dev5 0 0
+crossdomain x15 dev5 0 0
+crossdomain x16 dev5 1 0
+crossdomain x17 dev5 96 0
+crossdomain x18 dev5 1 0
+crossdomain x21 dev5 0 0
+crossdomain x22 dev5 1 0
+crossdomain x23 dev5 24 0
+crossdomain x24 dev5 0 0
+crossdomain x25 dev5 0 0
+crossdomain x26 dev5 1 0
+crossdomain x27 dev5 96 0
+crossdomain x28 dev5 1 0
+crossdomain x31 dev5 0 0
+crossdomain x32 dev5 1 0
+crossdomain x33 dev5 24 0
+crossdomain x34 dev5 0 0
+crossdomain x35 dev5 0 0
+crossdomain x36 dev5 1 0
+crossdomain x37 dev5 96 0
+crossdomain x38 dev5 1 0
+crossdomain x41 dev5 0 0
+crossdomain x42 dev5 1 0
+crossdomain x43 dev5 24 0
+crossdomain x44 dev5 0 0
+crossdomain x45 dev5 0 0
+crossdomain x46 dev5 1 0
+crossdomain x47 dev5 96 0
+crossdomain x48 dev5 1 0
+{
+  "regression": {
+    "dev4": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    },
+    "dev5": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    }
+  },
+  "crossdomain": {
+    "dev4": {
+      "proposals": 11,
+      "correct": 8,
+      "wrong": 3,
+      "errors": 492,
+      "harmful_correct_cells": 3,
+      "precision": 0.7272727272727273,
+      "coverage": 0.016260162601626018
+    },
+    "dev5": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    }
+  }
+}

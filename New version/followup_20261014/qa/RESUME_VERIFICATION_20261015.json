@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-15T01:44:35.043961+00:00",
+  "utc": "2026-10-15T04:32:21.144133+00:00",
   "python": "3.13.13",
   "checks": [
     {
@@ -65,6 +65,24 @@
       "dev4_proposals": 11,
       "dev4_correct": 8,
       "dev4_wrong": 3
+    },
+    {
+      "lock": "development/selector_dev5/prediction_lock.json",
+      "verified_files": 84,
+      "sha256": "941b5ed43beef4d93dce64879646bdc0644b05d2406d4b634e163864575fdbea",
+      "scores_recomputed": true,
+      "cases": 83,
+      "source_lock_verified": true,
+      "score_sha256": "e619f4517dc632cb23b9798d156eb7c388a456d7323e0275b881532c2b188143"
+    },
+    {
+      "lock": "development/dev5_adversarial1/prediction_lock.json",
+      "verified_files": 25,
+      "sha256": "68be69e474215f4bf88e8685814e38a6308b4c02cab1264578272e6a41ee6e62",
+      "scores_recomputed": true,
+      "cases": 24,
+      "source_lock_verified": true,
+      "score_sha256": "0f9ae8db862aef4d594f022aa86a23f1e1cef9855938595f31b617c9c1c02078"
     }
   ],
   "development_totals_verified": {

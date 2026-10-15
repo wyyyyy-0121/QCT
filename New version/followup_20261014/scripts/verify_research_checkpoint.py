@@ -4,6 +4,10 @@ import datetime
 import hashlib
 import json
 import platform
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from run_selector_dev5 import read as read_compressed, metrics, total, verify_run
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -72,6 +76,73 @@ def verify():
                    'sha256': sha(path), 'source_lock_verified': True, 'score_sha256': sha(run / 'score.json'),
                    'revealed_development_cases': 32, 'families': 4,
                    'dev4_proposals': 11, 'dev4_correct': 8, 'dev4_wrong': 3})
+    # Verify new files and recompute scores from actual locked predictions,
+    # including all clean cells and every uncorrected error in denominators.
+    verify_run()
+    dev5_run = ROOT / 'development/selector_dev5'
+    dev5_score = read(dev5_run / 'score.json')
+    assert dev5_score['prediction_lock_sha256'] == sha(dev5_run / 'prediction_lock.json')
+    for group, folder in [('regression',None), ('stress','semantic_stress_dev1'),
+                          ('tradeoff','policy_tradeoff_dev1'), ('crossdomain','crossdomain_dev1')]:
+        entries = (read(ROOT / 'baseline/protocol/data_manifest.json') if folder is None else
+                   read(ROOT / 'development' / folder / 'truth.json')['cases'])
+        scored = {c['id']:c for c in dev5_score[group]['cases']}
+        assert set(scored) == {e['id'] for e in entries}
+        for entry in entries:
+            case = entry['id']
+            if folder is None:
+                truth = read(ROOT / 'baseline/data' / case / 'truth.json')
+                observed = read_compressed(ROOT / 'baseline/predictions' / case / 'input_formulas.json.gz')
+            else:
+                truth = entry
+                suffix = '.json.gz' if group == 'crossdomain' else '.json'
+                observed = read_compressed(ROOT / 'development' / folder / 'predictions' / (case+suffix))['observed_formulas']
+            for name in ['dev4','dev5']:
+                if name == 'dev4' and group == 'crossdomain':
+                    pred = read_compressed(ROOT / 'development/crossdomain_dev1/predictions' / (case+'.json.gz'))['dev4']
+                else:
+                    pred = read_compressed(ROOT / 'development' / ('selector_'+name) / 'predictions' / group / (case+'.json.gz'))
+                assert metrics(pred,truth,observed) == scored[case][name], (group,case,name)
+        if group in ['regression','crossdomain']:
+            assert dev5_score[group]['totals'] == {name:total(list(scored.values()),name) for name in ['dev4','dev5']}
+    assert dev5_score['regression']['totals']['dev5'] == dev5_score['regression']['totals']['dev4']
+    assert dev5_score['crossdomain']['totals']['dev5']['correct'] == 492
+    assert dev5_score['crossdomain']['totals']['dev5']['wrong'] == 0
+    checks.append({'lock':'development/selector_dev5/prediction_lock.json',
+        'verified_files':len(read(dev5_run / 'prediction_lock.json')['files']),
+        'sha256':sha(dev5_run / 'prediction_lock.json'), 'scores_recomputed':True,
+        'cases':83,'source_lock_verified':True,'score_sha256':sha(dev5_run / 'score.json')})
+    adversarial = ROOT / 'development/dev5_adversarial1'
+    lock = read(adversarial / 'prediction_lock.json')
+    assert sha(adversarial / 'source_lock.json') == lock['source_lock_sha256']
+    assert sha(adversarial / 'public_index.json') == lock['public_index_sha256']
+    for root, files in [(ROOT,read(adversarial / 'source_lock.json')['files']), (adversarial,lock['files'])]:
+        for relative, expected in files.items(): assert sha(root / relative) == expected, relative
+    assert lock['labels_read'] == []
+    for entry in read(adversarial / 'public_index.json'):
+        assert sha(adversarial / entry['input']) == entry['sha256']
+    adverse_score = read(adversarial / 'score.json')
+    assert adverse_score['prediction_lock_sha256'] == sha(adversarial / 'prediction_lock.json')
+    assert not adverse_score['pooled_acceptance_metric']
+    assert read(adversarial / 'registration.json')['dev5_prediction_lock_sha256'] == sha(dev5_run / 'prediction_lock.json')
+    scored = {c['id']:c for c in adverse_score['cases']}
+    truths = read(adversarial / 'truth.json')['cases']
+    assert len(scored) == len(truths) == 24
+    for truth in truths:
+        prediction = read_compressed(adversarial / 'predictions' / (truth['id']+'.json.gz'))
+        for name in ['paper','dev4','dev5']:
+            pred = prediction[name]
+            if name == 'paper':
+                pred = {**pred,'rows':[{**r,'status':'propose' if r.get('suggested_formula') else 'abstain'} for r in pred['rows']]}
+            assert metrics(pred,truth,prediction['observed_formulas']) == scored[truth['id']][name]
+    for scenario, counts in adverse_score['by_variant'].items():
+        assert counts == {name:total([c for c in scored.values() if c['scenario']==scenario],name)
+                          for name in ['paper','dev4','dev5']}
+    assert adverse_score['by_variant']['unmarked_reversed_role']['dev5']['wrong'] == 4
+    checks.append({'lock':'development/dev5_adversarial1/prediction_lock.json',
+        'verified_files':len(lock['files']), 'sha256':sha(adversarial / 'prediction_lock.json'),
+        'scores_recomputed':True,'cases':24,'source_lock_verified':True,
+        'score_sha256':sha(adversarial / 'score.json')})
     dev2 = read(ROOT / 'development/selector_dev2/score.json')['totals']
     dev4 = read(ROOT / 'development/selector_dev4/score.json')
     assert dev2 == dev4['regression']['totals']

@@ -1,0 +1,27 @@
+{
+  "cases": 24,
+  "dev5_prediction_lock_sha256": "941b5ed43beef4d93dce64879646bdc0644b05d2406d4b634e163864575fdbea",
+  "external_contract_cases": [
+    "unmarked_reversed_role",
+    "multiline_scope_conflict",
+    "row_exception_and_error"
+  ],
+  "families": [
+    "inventory_rollforward",
+    "loan_amortization",
+    "budget_allocation",
+    "unit_conversion"
+  ],
+  "interpretation": "unmarked reversed role intentionally has the same visible formula and inputs as an error; no pooled acceptance accuracy",
+  "new_final_families": 0,
+  "oracle": "preserved Fraction-checked source fixture formulas plus explicit exact syntactic sign mutation; no claim of real natural errors",
+  "role": "revealed adversarial development only",
+  "variants": [
+    "unmarked_reversed_role",
+    "all_peers_corrupted",
+    "unknown_output_label",
+    "peer_unit_mismatch",
+    "multiline_scope_conflict",
+    "row_exception_and_error"
+  ]
+}

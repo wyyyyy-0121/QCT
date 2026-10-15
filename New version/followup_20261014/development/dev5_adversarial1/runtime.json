@@ -1,0 +1,155 @@
+{
+  "cases": [
+    {
+      "cpu_seconds": 0.0803257519999998,
+      "cumulative_peak_rss_kib": 53612,
+      "id": "a11",
+      "wall_seconds": 0.08032575399920461
+    },
+    {
+      "cpu_seconds": 0.09543755199999993,
+      "cumulative_peak_rss_kib": 55660,
+      "id": "a12",
+      "wall_seconds": 0.09543634800138534
+    },
+    {
+      "cpu_seconds": 0.06847141999999984,
+      "cumulative_peak_rss_kib": 55916,
+      "id": "a13",
+      "wall_seconds": 0.06847095400007674
+    },
+    {
+      "cpu_seconds": 0.0697960179999999,
+      "cumulative_peak_rss_kib": 55916,
+      "id": "a14",
+      "wall_seconds": 0.06979560099898663
+    },
+    {
+      "cpu_seconds": 0.07375879999999979,
+      "cumulative_peak_rss_kib": 55916,
+      "id": "a15",
+      "wall_seconds": 0.07375819299886643
+    },
+    {
+      "cpu_seconds": 0.08029632699999967,
+      "cumulative_peak_rss_kib": 56172,
+      "id": "a16",
+      "wall_seconds": 0.08030038600008993
+    },
+    {
+      "cpu_seconds": 0.10740813500000002,
+      "cumulative_peak_rss_kib": 56172,
+      "id": "a21",
+      "wall_seconds": 0.10740660700139415
+    },
+    {
+      "cpu_seconds": 0.10981605400000038,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a22",
+      "wall_seconds": 0.1098150159996294
+    },
+    {
+      "cpu_seconds": 0.1010182180000001,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a23",
+      "wall_seconds": 0.10101676200065413
+    },
+    {
+      "cpu_seconds": 0.09183668400000045,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a24",
+      "wall_seconds": 0.09184550099962507
+    },
+    {
+      "cpu_seconds": 0.0954512989999996,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a25",
+      "wall_seconds": 0.09545059499941999
+    },
+    {
+      "cpu_seconds": 0.09810173699999947,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a26",
+      "wall_seconds": 0.09810084200034908
+    },
+    {
+      "cpu_seconds": 0.0839281930000002,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a31",
+      "wall_seconds": 0.08392766200086044
+    },
+    {
+      "cpu_seconds": 0.1025148420000006,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a32",
+      "wall_seconds": 0.1025146069987386
+    },
+    {
+      "cpu_seconds": 0.0741465649999995,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a33",
+      "wall_seconds": 0.0741458459997375
+    },
+    {
+      "cpu_seconds": 0.08105290900000028,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a34",
+      "wall_seconds": 0.08105194899872004
+    },
+    {
+      "cpu_seconds": 0.08589035699999936,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a35",
+      "wall_seconds": 0.08588983699883102
+    },
+    {
+      "cpu_seconds": 0.08687015200000037,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a36",
+      "wall_seconds": 0.0868695810004283
+    },
+    {
+      "cpu_seconds": 0.047392993999999966,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a41",
+      "wall_seconds": 0.0473920319982426
+    },
+    {
+      "cpu_seconds": 0.06476511400000007,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a42",
+      "wall_seconds": 0.06476467799984675
+    },
+    {
+      "cpu_seconds": 0.04283619699999974,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a43",
+      "wall_seconds": 0.04283604699958232
+    },
+    {
+      "cpu_seconds": 0.043962159000000334,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a44",
+      "wall_seconds": 0.04396160800024518
+    },
+    {
+      "cpu_seconds": 0.045617242999999696,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a45",
+      "wall_seconds": 0.04561665099936363
+    },
+    {
+      "cpu_seconds": 0.05694569000000005,
+      "cumulative_peak_rss_kib": 57196,
+      "id": "a46",
+      "wall_seconds": 0.05694372300058603
+    }
+  ],
+  "command": [
+    "/home/ayaka/miniforge3/bin/python",
+    "scripts/run_dev5_adversarial.py",
+    "predict"
+  ],
+  "gpu_used": false,
+  "scope": "full paper SG/FG plus dev4 and dev5 inference on fresh inputs"
+}

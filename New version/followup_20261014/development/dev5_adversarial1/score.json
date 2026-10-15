@@ -1,0 +1,1951 @@
+{
+  "by_variant": {
+    "all_peers_corrupted": {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 480,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 480,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 480,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      }
+    },
+    "multiline_scope_conflict": {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 96,
+        "precision": 0.0,
+        "proposals": 96,
+        "wrong": 96
+      }
+    },
+    "peer_unit_mismatch": {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 96,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 96,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 96,
+        "coverage": 1.0,
+        "errors": 96,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 96,
+        "wrong": 0
+      }
+    },
+    "row_exception_and_error": {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 4,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "wrong": 0
+      },
+      "dev5": {
+        "correct": 4,
+        "coverage": 1.0,
+        "errors": 4,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 4,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 4,
+        "coverage": 1.0,
+        "errors": 4,
+        "harmful_correct_cells": 4,
+        "precision": 0.5,
+        "proposals": 8,
+        "wrong": 4
+      }
+    },
+    "unknown_output_label": {
+      "dev4": {
+        "correct": 4,
+        "coverage": 1.0,
+        "errors": 4,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 4,
+        "wrong": 0
+      },
+      "dev5": {
+        "correct": 4,
+        "coverage": 1.0,
+        "errors": 4,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 4,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 4,
+        "coverage": 1.0,
+        "errors": 4,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 4,
+        "wrong": 0
+      }
+    },
+    "unmarked_reversed_role": {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 4,
+        "precision": 0.0,
+        "proposals": 4,
+        "wrong": 4
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 4,
+        "precision": 0.0,
+        "proposals": 4,
+        "wrong": 4
+      },
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 4,
+        "precision": 0.0,
+        "proposals": 4,
+        "wrong": 4
+      }
+    }
+  },
+  "cases": [
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 234
+        },
+        "statuses": {
+          "abstain": 234,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16+C16+D16-E16",
+            "observed": "=B16+C16+D16-E16",
+            "proposed": "=B16+C16-D16-E16"
+          }
+        ]
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 119,
+          "no_qualified_candidate": 115,
+          "peer_candidate_resolves_opposite_sign": 1
+        },
+        "statuses": {
+          "abstain": 234,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16+C16+D16-E16",
+            "observed": "=B16+C16+D16-E16",
+            "proposed": "=B16+C16-D16-E16"
+          }
+        ]
+      },
+      "external_contract": "External authorized row-16 convention intentionally reverses the tested role; contract not included in input. Visible input matches this family sparse_error development case.",
+      "family": "inventory_rollforward",
+      "id": "a11",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 235
+        },
+        "statuses": {
+          "abstain": 234,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16+C16+D16-E16",
+            "observed": "=B16+C16+D16-E16",
+            "proposed": "=B16+C16-D16-E16"
+          }
+        ]
+      },
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 235
+        },
+        "statuses": {
+          "abstain": 235
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 120,
+          "no_qualified_candidate": 115
+        },
+        "statuses": {
+          "abstain": 235
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "inventory_rollforward",
+      "id": "a12",
+      "paper": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "unspecified": 235
+        },
+        "statuses": {
+          "abstain": 235
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "dev4": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 234
+        },
+        "statuses": {
+          "abstain": 234,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 234
+        },
+        "statuses": {
+          "abstain": 234,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "inventory_rollforward",
+      "id": "a13",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 235
+        },
+        "statuses": {
+          "abstain": 234,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "unknown_output_label"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 211
+        },
+        "statuses": {
+          "abstain": 211,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 24,
+          "no_qualified_candidate": 211
+        },
+        "statuses": {
+          "abstain": 235
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "inventory_rollforward",
+      "id": "a14",
+      "paper": {
+        "correct": 24,
+        "coverage": 1.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 235
+        },
+        "statuses": {
+          "abstain": 211,
+          "propose": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 211
+        },
+        "statuses": {
+          "abstain": 211,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 96,
+          "no_qualified_candidate": 115,
+          "uninterpreted_policy_scope": 24
+        },
+        "statuses": {
+          "abstain": 211,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Second visible policy line authorizes opposite convention on the entire A sheet; first line alone is incomplete.",
+      "family": "inventory_rollforward",
+      "id": "a15",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 24,
+        "precision": 0.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 235
+        },
+        "statuses": {
+          "abstain": 211,
+          "propose": 24
+        },
+        "wrong": 24,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10+C10+D10-E10",
+            "observed": "=B10+C10+D10-E10",
+            "proposed": "=B10+C10-D10-E10"
+          },
+          {
+            "cell": "A!F11",
+            "expected": "=B11+C11+D11-E11",
+            "observed": "=B11+C11+D11-E11",
+            "proposed": "=B11+C11-D11-E11"
+          },
+          {
+            "cell": "A!F12",
+            "expected": "=B12+C12+D12-E12",
+            "observed": "=B12+C12+D12-E12",
+            "proposed": "=B12+C12-D12-E12"
+          },
+          {
+            "cell": "A!F13",
+            "expected": "=B13+C13+D13-E13",
+            "observed": "=B13+C13+D13-E13",
+            "proposed": "=B13+C13-D13-E13"
+          },
+          {
+            "cell": "A!F14",
+            "expected": "=B14+C14+D14-E14",
+            "observed": "=B14+C14+D14-E14",
+            "proposed": "=B14+C14-D14-E14"
+          },
+          {
+            "cell": "A!F15",
+            "expected": "=B15+C15+D15-E15",
+            "observed": "=B15+C15+D15-E15",
+            "proposed": "=B15+C15-D15-E15"
+          },
+          {
+            "cell": "A!F16",
+            "expected": "=B16+C16+D16-E16",
+            "observed": "=B16+C16+D16-E16",
+            "proposed": "=B16+C16-D16-E16"
+          },
+          {
+            "cell": "A!F17",
+            "expected": "=B17+C17+D17-E17",
+            "observed": "=B17+C17+D17-E17",
+            "proposed": "=B17+C17-D17-E17"
+          },
+          {
+            "cell": "A!F18",
+            "expected": "=B18+C18+D18-E18",
+            "observed": "=B18+C18+D18-E18",
+            "proposed": "=B18+C18-D18-E18"
+          },
+          {
+            "cell": "A!F19",
+            "expected": "=B19+C19+D19-E19",
+            "observed": "=B19+C19+D19-E19",
+            "proposed": "=B19+C19-D19-E19"
+          }
+        ]
+      },
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 233,
+          "unparsed_business_policy": 2
+        },
+        "statuses": {
+          "abstain": 233,
+          "review": 2
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 118,
+          "no_qualified_candidate": 115,
+          "peer_candidate_resolves_opposite_sign": 1,
+          "uninterpreted_policy_scope": 1
+        },
+        "statuses": {
+          "abstain": 233,
+          "propose": 1,
+          "review": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Explicit visible row-10 exception is legitimate; row-16 remains an injected error.",
+      "family": "inventory_rollforward",
+      "id": "a16",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 1,
+        "precision": 0.5,
+        "proposals": 2,
+        "reason_counts": {
+          "unspecified": 235
+        },
+        "statuses": {
+          "abstain": 233,
+          "propose": 2
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10+C10+D10-E10",
+            "observed": "=B10+C10+D10-E10",
+            "proposed": "=B10+C10-D10-E10"
+          }
+        ]
+      },
+      "scenario": "row_exception_and_error"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 354
+        },
+        "statuses": {
+          "abstain": 354,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16+D16+E16",
+            "observed": "=B16+D16+E16",
+            "proposed": "=B16+D16-E16"
+          }
+        ]
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 119,
+          "no_qualified_candidate": 235,
+          "peer_candidate_resolves_opposite_sign": 1
+        },
+        "statuses": {
+          "abstain": 354,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16+D16+E16",
+            "observed": "=B16+D16+E16",
+            "proposed": "=B16+D16-E16"
+          }
+        ]
+      },
+      "external_contract": "External authorized row-16 convention intentionally reverses the tested role; contract not included in input. Visible input matches this family sparse_error development case.",
+      "family": "loan_amortization",
+      "id": "a21",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 355
+        },
+        "statuses": {
+          "abstain": 354,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16+D16+E16",
+            "observed": "=B16+D16+E16",
+            "proposed": "=B16+D16-E16"
+          }
+        ]
+      },
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 355
+        },
+        "statuses": {
+          "abstain": 355
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 120,
+          "no_qualified_candidate": 235
+        },
+        "statuses": {
+          "abstain": 355
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "loan_amortization",
+      "id": "a22",
+      "paper": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "unspecified": 355
+        },
+        "statuses": {
+          "abstain": 355
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "dev4": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 354
+        },
+        "statuses": {
+          "abstain": 354,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 354
+        },
+        "statuses": {
+          "abstain": 354,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "loan_amortization",
+      "id": "a23",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 355
+        },
+        "statuses": {
+          "abstain": 354,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "unknown_output_label"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 331
+        },
+        "statuses": {
+          "abstain": 331,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 24,
+          "no_qualified_candidate": 331
+        },
+        "statuses": {
+          "abstain": 355
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "loan_amortization",
+      "id": "a24",
+      "paper": {
+        "correct": 24,
+        "coverage": 1.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 355
+        },
+        "statuses": {
+          "abstain": 331,
+          "propose": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 331
+        },
+        "statuses": {
+          "abstain": 331,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 96,
+          "no_qualified_candidate": 235,
+          "uninterpreted_policy_scope": 24
+        },
+        "statuses": {
+          "abstain": 331,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Second visible policy line authorizes opposite convention on the entire A sheet; first line alone is incomplete.",
+      "family": "loan_amortization",
+      "id": "a25",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 24,
+        "precision": 0.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 355
+        },
+        "statuses": {
+          "abstain": 331,
+          "propose": 24
+        },
+        "wrong": 24,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10+D10+E10",
+            "observed": "=B10+D10+E10",
+            "proposed": "=B10+D10-E10"
+          },
+          {
+            "cell": "A!F11",
+            "expected": "=B11+D11+E11",
+            "observed": "=B11+D11+E11",
+            "proposed": "=B11+D11-E11"
+          },
+          {
+            "cell": "A!F12",
+            "expected": "=B12+D12+E12",
+            "observed": "=B12+D12+E12",
+            "proposed": "=B12+D12-E12"
+          },
+          {
+            "cell": "A!F13",
+            "expected": "=B13+D13+E13",
+            "observed": "=B13+D13+E13",
+            "proposed": "=B13+D13-E13"
+          },
+          {
+            "cell": "A!F14",
+            "expected": "=B14+D14+E14",
+            "observed": "=B14+D14+E14",
+            "proposed": "=B14+D14-E14"
+          },
+          {
+            "cell": "A!F15",
+            "expected": "=B15+D15+E15",
+            "observed": "=B15+D15+E15",
+            "proposed": "=B15+D15-E15"
+          },
+          {
+            "cell": "A!F16",
+            "expected": "=B16+D16+E16",
+            "observed": "=B16+D16+E16",
+            "proposed": "=B16+D16-E16"
+          },
+          {
+            "cell": "A!F17",
+            "expected": "=B17+D17+E17",
+            "observed": "=B17+D17+E17",
+            "proposed": "=B17+D17-E17"
+          },
+          {
+            "cell": "A!F18",
+            "expected": "=B18+D18+E18",
+            "observed": "=B18+D18+E18",
+            "proposed": "=B18+D18-E18"
+          },
+          {
+            "cell": "A!F19",
+            "expected": "=B19+D19+E19",
+            "observed": "=B19+D19+E19",
+            "proposed": "=B19+D19-E19"
+          }
+        ]
+      },
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 353,
+          "unparsed_business_policy": 2
+        },
+        "statuses": {
+          "abstain": 353,
+          "review": 2
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 118,
+          "no_qualified_candidate": 235,
+          "peer_candidate_resolves_opposite_sign": 1,
+          "uninterpreted_policy_scope": 1
+        },
+        "statuses": {
+          "abstain": 353,
+          "propose": 1,
+          "review": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Explicit visible row-10 exception is legitimate; row-16 remains an injected error.",
+      "family": "loan_amortization",
+      "id": "a26",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 1,
+        "precision": 0.5,
+        "proposals": 2,
+        "reason_counts": {
+          "unspecified": 355
+        },
+        "statuses": {
+          "abstain": 353,
+          "propose": 2
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10+D10+E10",
+            "observed": "=B10+D10+E10",
+            "proposed": "=B10+D10-E10"
+          }
+        ]
+      },
+      "scenario": "row_exception_and_error"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 239
+        },
+        "statuses": {
+          "abstain": 239,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16*D16+E16",
+            "observed": "=B16*C16*D16+E16",
+            "proposed": "=B16*C16/D16+E16"
+          }
+        ]
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 119,
+          "no_qualified_candidate": 120,
+          "peer_candidate_resolves_opposite_sign": 1
+        },
+        "statuses": {
+          "abstain": 239,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16*D16+E16",
+            "observed": "=B16*C16*D16+E16",
+            "proposed": "=B16*C16/D16+E16"
+          }
+        ]
+      },
+      "external_contract": "External authorized row-16 convention intentionally reverses the tested role; contract not included in input. Visible input matches this family sparse_error development case.",
+      "family": "budget_allocation",
+      "id": "a31",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 240
+        },
+        "statuses": {
+          "abstain": 239,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16*D16+E16",
+            "observed": "=B16*C16*D16+E16",
+            "proposed": "=B16*C16/D16+E16"
+          }
+        ]
+      },
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 240
+        },
+        "statuses": {
+          "abstain": 240
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 120,
+          "no_qualified_candidate": 120
+        },
+        "statuses": {
+          "abstain": 240
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "budget_allocation",
+      "id": "a32",
+      "paper": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "unspecified": 240
+        },
+        "statuses": {
+          "abstain": 240
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "dev4": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 239
+        },
+        "statuses": {
+          "abstain": 239,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 239
+        },
+        "statuses": {
+          "abstain": 239,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "budget_allocation",
+      "id": "a33",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 240
+        },
+        "statuses": {
+          "abstain": 239,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "unknown_output_label"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 216
+        },
+        "statuses": {
+          "abstain": 216,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 24,
+          "no_qualified_candidate": 216
+        },
+        "statuses": {
+          "abstain": 240
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "budget_allocation",
+      "id": "a34",
+      "paper": {
+        "correct": 24,
+        "coverage": 1.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 240
+        },
+        "statuses": {
+          "abstain": 216,
+          "propose": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 216
+        },
+        "statuses": {
+          "abstain": 216,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 96,
+          "no_qualified_candidate": 120,
+          "uninterpreted_policy_scope": 24
+        },
+        "statuses": {
+          "abstain": 216,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Second visible policy line authorizes opposite convention on the entire A sheet; first line alone is incomplete.",
+      "family": "budget_allocation",
+      "id": "a35",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 24,
+        "precision": 0.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 240
+        },
+        "statuses": {
+          "abstain": 216,
+          "propose": 24
+        },
+        "wrong": 24,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10*C10*D10+E10",
+            "observed": "=B10*C10*D10+E10",
+            "proposed": "=B10*C10/D10+E10"
+          },
+          {
+            "cell": "A!F11",
+            "expected": "=B11*C11*D11+E11",
+            "observed": "=B11*C11*D11+E11",
+            "proposed": "=B11*C11/D11+E11"
+          },
+          {
+            "cell": "A!F12",
+            "expected": "=B12*C12*D12+E12",
+            "observed": "=B12*C12*D12+E12",
+            "proposed": "=B12*C12/D12+E12"
+          },
+          {
+            "cell": "A!F13",
+            "expected": "=B13*C13*D13+E13",
+            "observed": "=B13*C13*D13+E13",
+            "proposed": "=B13*C13/D13+E13"
+          },
+          {
+            "cell": "A!F14",
+            "expected": "=B14*C14*D14+E14",
+            "observed": "=B14*C14*D14+E14",
+            "proposed": "=B14*C14/D14+E14"
+          },
+          {
+            "cell": "A!F15",
+            "expected": "=B15*C15*D15+E15",
+            "observed": "=B15*C15*D15+E15",
+            "proposed": "=B15*C15/D15+E15"
+          },
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16*D16+E16",
+            "observed": "=B16*C16*D16+E16",
+            "proposed": "=B16*C16/D16+E16"
+          },
+          {
+            "cell": "A!F17",
+            "expected": "=B17*C17*D17+E17",
+            "observed": "=B17*C17*D17+E17",
+            "proposed": "=B17*C17/D17+E17"
+          },
+          {
+            "cell": "A!F18",
+            "expected": "=B18*C18*D18+E18",
+            "observed": "=B18*C18*D18+E18",
+            "proposed": "=B18*C18/D18+E18"
+          },
+          {
+            "cell": "A!F19",
+            "expected": "=B19*C19*D19+E19",
+            "observed": "=B19*C19*D19+E19",
+            "proposed": "=B19*C19/D19+E19"
+          }
+        ]
+      },
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 238,
+          "unparsed_business_policy": 2
+        },
+        "statuses": {
+          "abstain": 238,
+          "review": 2
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 118,
+          "no_qualified_candidate": 120,
+          "peer_candidate_resolves_opposite_sign": 1,
+          "uninterpreted_policy_scope": 1
+        },
+        "statuses": {
+          "abstain": 238,
+          "propose": 1,
+          "review": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Explicit visible row-10 exception is legitimate; row-16 remains an injected error.",
+      "family": "budget_allocation",
+      "id": "a36",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 1,
+        "precision": 0.5,
+        "proposals": 2,
+        "reason_counts": {
+          "unspecified": 240
+        },
+        "statuses": {
+          "abstain": 238,
+          "propose": 2
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10*C10*D10+E10",
+            "observed": "=B10*C10*D10+E10",
+            "proposed": "=B10*C10/D10+E10"
+          }
+        ]
+      },
+      "scenario": "row_exception_and_error"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 119
+        },
+        "statuses": {
+          "abstain": 119,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16-D16+E16",
+            "observed": "=B16*C16-D16+E16",
+            "proposed": "=B16*C16+D16+E16"
+          }
+        ]
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 119,
+          "peer_candidate_resolves_opposite_sign": 1
+        },
+        "statuses": {
+          "abstain": 119,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16-D16+E16",
+            "observed": "=B16*C16-D16+E16",
+            "proposed": "=B16*C16+D16+E16"
+          }
+        ]
+      },
+      "external_contract": "External authorized row-16 convention intentionally reverses the tested role; contract not included in input. Visible input matches this family sparse_error development case.",
+      "family": "unit_conversion",
+      "id": "a41",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 1,
+        "precision": 0.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 120
+        },
+        "statuses": {
+          "abstain": 119,
+          "propose": 1
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16-D16+E16",
+            "observed": "=B16*C16-D16+E16",
+            "proposed": "=B16*C16+D16+E16"
+          }
+        ]
+      },
+      "scenario": "unmarked_reversed_role"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 120
+        },
+        "statuses": {
+          "abstain": 120
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 120
+        },
+        "statuses": {
+          "abstain": 120
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "unit_conversion",
+      "id": "a42",
+      "paper": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 120,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "unspecified": 120
+        },
+        "statuses": {
+          "abstain": 120
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "all_peers_corrupted"
+    },
+    {
+      "dev4": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 119
+        },
+        "statuses": {
+          "abstain": 119,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "column_supported_nonconstant_anomaly": 1,
+          "no_qualified_candidate": 119
+        },
+        "statuses": {
+          "abstain": 119,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "unit_conversion",
+      "id": "a43",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "unspecified": 120
+        },
+        "statuses": {
+          "abstain": 119,
+          "propose": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "unknown_output_label"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 96
+        },
+        "statuses": {
+          "abstain": 96,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 24,
+          "no_qualified_candidate": 96
+        },
+        "statuses": {
+          "abstain": 120
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": null,
+      "family": "unit_conversion",
+      "id": "a44",
+      "paper": {
+        "correct": 24,
+        "coverage": 1.0,
+        "errors": 24,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 120
+        },
+        "statuses": {
+          "abstain": 96,
+          "propose": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "scenario": "peer_unit_mismatch"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "insufficient_semantic_or_role_evidence": 24,
+          "no_qualified_candidate": 96
+        },
+        "statuses": {
+          "abstain": 96,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "new_header_without_authorized_change": 96,
+          "uninterpreted_policy_scope": 24
+        },
+        "statuses": {
+          "abstain": 96,
+          "review": 24
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Second visible policy line authorizes opposite convention on the entire A sheet; first line alone is incomplete.",
+      "family": "unit_conversion",
+      "id": "a45",
+      "paper": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "harmful_correct_cells": 24,
+        "precision": 0.0,
+        "proposals": 24,
+        "reason_counts": {
+          "unspecified": 120
+        },
+        "statuses": {
+          "abstain": 96,
+          "propose": 24
+        },
+        "wrong": 24,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10*C10-D10+E10",
+            "observed": "=B10*C10-D10+E10",
+            "proposed": "=B10*C10+D10+E10"
+          },
+          {
+            "cell": "A!F11",
+            "expected": "=B11*C11-D11+E11",
+            "observed": "=B11*C11-D11+E11",
+            "proposed": "=B11*C11+D11+E11"
+          },
+          {
+            "cell": "A!F12",
+            "expected": "=B12*C12-D12+E12",
+            "observed": "=B12*C12-D12+E12",
+            "proposed": "=B12*C12+D12+E12"
+          },
+          {
+            "cell": "A!F13",
+            "expected": "=B13*C13-D13+E13",
+            "observed": "=B13*C13-D13+E13",
+            "proposed": "=B13*C13+D13+E13"
+          },
+          {
+            "cell": "A!F14",
+            "expected": "=B14*C14-D14+E14",
+            "observed": "=B14*C14-D14+E14",
+            "proposed": "=B14*C14+D14+E14"
+          },
+          {
+            "cell": "A!F15",
+            "expected": "=B15*C15-D15+E15",
+            "observed": "=B15*C15-D15+E15",
+            "proposed": "=B15*C15+D15+E15"
+          },
+          {
+            "cell": "A!F16",
+            "expected": "=B16*C16-D16+E16",
+            "observed": "=B16*C16-D16+E16",
+            "proposed": "=B16*C16+D16+E16"
+          },
+          {
+            "cell": "A!F17",
+            "expected": "=B17*C17-D17+E17",
+            "observed": "=B17*C17-D17+E17",
+            "proposed": "=B17*C17+D17+E17"
+          },
+          {
+            "cell": "A!F18",
+            "expected": "=B18*C18-D18+E18",
+            "observed": "=B18*C18-D18+E18",
+            "proposed": "=B18*C18+D18+E18"
+          },
+          {
+            "cell": "A!F19",
+            "expected": "=B19*C19-D19+E19",
+            "observed": "=B19*C19-D19+E19",
+            "proposed": "=B19*C19+D19+E19"
+          }
+        ]
+      },
+      "scenario": "multiline_scope_conflict"
+    },
+    {
+      "dev4": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": null,
+        "proposals": 0,
+        "reason_counts": {
+          "no_qualified_candidate": 118,
+          "unparsed_business_policy": 2
+        },
+        "statuses": {
+          "abstain": 118,
+          "review": 2
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "dev5": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 0,
+        "precision": 1.0,
+        "proposals": 1,
+        "reason_counts": {
+          "new_header_without_authorized_change": 118,
+          "peer_candidate_resolves_opposite_sign": 1,
+          "uninterpreted_policy_scope": 1
+        },
+        "statuses": {
+          "abstain": 118,
+          "propose": 1,
+          "review": 1
+        },
+        "wrong": 0,
+        "wrong_examples": []
+      },
+      "external_contract": "Explicit visible row-10 exception is legitimate; row-16 remains an injected error.",
+      "family": "unit_conversion",
+      "id": "a46",
+      "paper": {
+        "correct": 1,
+        "coverage": 1.0,
+        "errors": 1,
+        "harmful_correct_cells": 1,
+        "precision": 0.5,
+        "proposals": 2,
+        "reason_counts": {
+          "unspecified": 120
+        },
+        "statuses": {
+          "abstain": 118,
+          "propose": 2
+        },
+        "wrong": 1,
+        "wrong_examples": [
+          {
+            "cell": "A!F10",
+            "expected": "=B10*C10-D10+E10",
+            "observed": "=B10*C10-D10+E10",
+            "proposed": "=B10*C10+D10+E10"
+          }
+        ]
+      },
+      "scenario": "row_exception_and_error"
+    }
+  ],
+  "interpretation": "purpose-built counterexamples; external intent not recoverable in unmarked cases; no realistic prevalence or final generalization claim",
+  "pooled_acceptance_metric": false,
+  "prediction_lock_sha256": "68be69e474215f4bf88e8685814e38a6308b4c02cab1264578272e6a41ee6e62"
+}

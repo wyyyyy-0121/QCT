@@ -1,0 +1,200 @@
+a11 unmarked_reversed_role dev5 0 1
+a12 all_peers_corrupted dev5 0 0
+a13 unknown_output_label dev5 1 0
+a14 peer_unit_mismatch dev5 0 0
+a15 multiline_scope_conflict dev5 0 0
+a16 row_exception_and_error dev5 1 0
+a21 unmarked_reversed_role dev5 0 1
+a22 all_peers_corrupted dev5 0 0
+a23 unknown_output_label dev5 1 0
+a24 peer_unit_mismatch dev5 0 0
+a25 multiline_scope_conflict dev5 0 0
+a26 row_exception_and_error dev5 1 0
+a31 unmarked_reversed_role dev5 0 1
+a32 all_peers_corrupted dev5 0 0
+a33 unknown_output_label dev5 1 0
+a34 peer_unit_mismatch dev5 0 0
+a35 multiline_scope_conflict dev5 0 0
+a36 row_exception_and_error dev5 1 0
+a41 unmarked_reversed_role dev5 0 1
+a42 all_peers_corrupted dev5 0 0
+a43 unknown_output_label dev5 1 0
+a44 peer_unit_mismatch dev5 0 0
+a45 multiline_scope_conflict dev5 0 0
+a46 row_exception_and_error dev5 1 0
+{
+  "unmarked_reversed_role": {
+    "paper": {
+      "proposals": 4,
+      "correct": 0,
+      "wrong": 4,
+      "errors": 0,
+      "harmful_correct_cells": 4,
+      "precision": 0.0,
+      "coverage": null
+    },
+    "dev4": {
+      "proposals": 4,
+      "correct": 0,
+      "wrong": 4,
+      "errors": 0,
+      "harmful_correct_cells": 4,
+      "precision": 0.0,
+      "coverage": null
+    },
+    "dev5": {
+      "proposals": 4,
+      "correct": 0,
+      "wrong": 4,
+      "errors": 0,
+      "harmful_correct_cells": 4,
+      "precision": 0.0,
+      "coverage": null
+    }
+  },
+  "all_peers_corrupted": {
+    "paper": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 480,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "dev4": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 480,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "dev5": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 480,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": 0.0
+    }
+  },
+  "unknown_output_label": {
+    "paper": {
+      "proposals": 4,
+      "correct": 4,
+      "wrong": 0,
+      "errors": 4,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "dev4": {
+      "proposals": 4,
+      "correct": 4,
+      "wrong": 0,
+      "errors": 4,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "dev5": {
+      "proposals": 4,
+      "correct": 4,
+      "wrong": 0,
+      "errors": 4,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    }
+  },
+  "peer_unit_mismatch": {
+    "paper": {
+      "proposals": 96,
+      "correct": 96,
+      "wrong": 0,
+      "errors": 96,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "dev4": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 96,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "dev5": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 96,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": 0.0
+    }
+  },
+  "multiline_scope_conflict": {
+    "paper": {
+      "proposals": 96,
+      "correct": 0,
+      "wrong": 96,
+      "errors": 0,
+      "harmful_correct_cells": 96,
+      "precision": 0.0,
+      "coverage": null
+    },
+    "dev4": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 0,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": null
+    },
+    "dev5": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 0,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": null
+    }
+  },
+  "row_exception_and_error": {
+    "paper": {
+      "proposals": 8,
+      "correct": 4,
+      "wrong": 4,
+      "errors": 4,
+      "harmful_correct_cells": 4,
+      "precision": 0.5,
+      "coverage": 1.0
+    },
+    "dev4": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 4,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "dev5": {
+      "proposals": 4,
+      "correct": 4,
+      "wrong": 0,
+      "errors": 4,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    }
+  }
+}
