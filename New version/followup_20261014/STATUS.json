@@ -18,7 +18,9 @@
     "develop candidate generation when every peer is wrong and investigate independent business evidence",
     "retain all exception harms and unsupported failures in development regression",
     "audit independent sources and natural-error truth without final data exposure",
-    "freeze improved model and scorer before final acquisition; separate three final categories"
+    "freeze improved model and scorer before final acquisition; separate three final categories",
+    "separate author-supplied contract mode from workbook-only mode and test both fairly",
+    "retain dev6 common-peer gains with the four unmarked-reversed-role harms"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -40,14 +42,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 43,
+  "unit_test_count": 47,
   "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV5_REPORT_20261015.md",
+  "latest_report": "DEV6_CONTRACT_REPORT_20261015.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -91,4 +93,15 @@
   "typed_execution_report": "TYPED_EXECUTION_REPORT_20261015.md",
   "typed_execution_verification": "qa/TYPED_EXECUTION_DEV1_VERIFICATION_20261015.json",
   "latest_typed_execution_analysis": "development/typed_execution_dev1/analysis.json"
+  ,"development_dev6_contract_cases": 107
+  ,"development_dev6_contract_crossdomain_proposals": 492
+  ,"development_dev6_contract_crossdomain_correct": 492
+  ,"development_dev6_contract_adversarial_proposals": 467
+  ,"development_dev6_contract_adversarial_correct": 463
+  ,"development_dev6_contract_adversarial_wrong": 4
+  ,"development_dev6_contract_adversarial_precision": 0.9914346895074947
+  ,"development_dev6_contract_adversarial_coverage": 0.7928082191780822
+  ,"development_dev6_contract_common_peer_gain": "463/584 correct adversarial repairs; dev5 368/584"
+  ,"development_dev6_contract_final_validation_eligible": false
+  ,"development_dev6_contract_report": "DEV6_CONTRACT_REPORT_20261015.md"
 }

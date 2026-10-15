@@ -1,0 +1,981 @@
+{
+  "cases": [
+    {
+      "cpu_seconds": 0.9471326679999996,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "sparse_seed101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9471433519997845
+    },
+    {
+      "cpu_seconds": 1.0170025539999994,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "clean_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0176648619999469
+    },
+    {
+      "cpu_seconds": 1.028375971,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "sparse_seed202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0283825639999122
+    },
+    {
+      "cpu_seconds": 1.1833271120000006,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "clean_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.1833521460002885
+    },
+    {
+      "cpu_seconds": 1.1544780499999998,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "sparse_seed303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.154476867000085
+    },
+    {
+      "cpu_seconds": 1.056342968000001,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "clean_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0578867730000638
+    },
+    {
+      "cpu_seconds": 1.1439534029999994,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "systemic_seed404",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.1439643229996364
+    },
+    {
+      "cpu_seconds": 1.0399857040000011,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "clean_404",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0416786240002693
+    },
+    {
+      "cpu_seconds": 1.060688548,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "systemic_seed505",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.060695117999785
+    },
+    {
+      "cpu_seconds": 1.0039982920000003,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "clean_505",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.004008838000118
+    },
+    {
+      "cpu_seconds": 1.0624332620000025,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "systemic_seed606",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0635389160001978
+    },
+    {
+      "cpu_seconds": 1.0688929189999996,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "clean_606",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0688977139998315
+    },
+    {
+      "cpu_seconds": 0.9884367330000003,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_1_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.990602131000287
+    },
+    {
+      "cpu_seconds": 1.0552108870000012,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_10_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0552155339996716
+    },
+    {
+      "cpu_seconds": 1.0577739470000012,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_100_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0577806129999772
+    },
+    {
+      "cpu_seconds": 1.1025326719999988,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_500_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.1025479610002549
+    },
+    {
+      "cpu_seconds": 1.091888247,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_1499_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0918929569998
+    },
+    {
+      "cpu_seconds": 1.1160910490000013,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "shared_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.1160974699996586
+    },
+    {
+      "cpu_seconds": 0.207090216000001,
+      "formula_cells": 1501,
+      "group": "regression",
+      "id": "single_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.2070891319999646
+    },
+    {
+      "cpu_seconds": 1.0369947260000032,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "heterogeneous_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0370074830002523
+    },
+    {
+      "cpu_seconds": 1.0059281810000016,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "exception_101",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0083751209999718
+    },
+    {
+      "cpu_seconds": 1.0026844699999984,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_1_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.002720970000155
+    },
+    {
+      "cpu_seconds": 1.185599891999999,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_10_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.185624942999766
+    },
+    {
+      "cpu_seconds": 1.0228534640000007,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_100_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0228614879997622
+    },
+    {
+      "cpu_seconds": 1.0513207770000008,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_500_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0513376580001932
+    },
+    {
+      "cpu_seconds": 1.0825703860000004,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_1499_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0837236940001276
+    },
+    {
+      "cpu_seconds": 1.0140702220000009,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "shared_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0140842329997213
+    },
+    {
+      "cpu_seconds": 0.21339499199999779,
+      "formula_cells": 1501,
+      "group": "regression",
+      "id": "single_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.2133943899998485
+    },
+    {
+      "cpu_seconds": 0.9859716059999997,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "heterogeneous_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9859845910000331
+    },
+    {
+      "cpu_seconds": 0.9817546400000055,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "exception_202",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9824017569999342
+    },
+    {
+      "cpu_seconds": 1.0117443249999951,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_1_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0117732969997633
+    },
+    {
+      "cpu_seconds": 0.97654541,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_10_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9776554660002148
+    },
+    {
+      "cpu_seconds": 0.9916872800000007,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_100_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9916942710001422
+    },
+    {
+      "cpu_seconds": 0.9861467389999987,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_500_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9868563119998726
+    },
+    {
+      "cpu_seconds": 0.9808373599999953,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "length_1499_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9808561650002048
+    },
+    {
+      "cpu_seconds": 0.9965446719999989,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "shared_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9981030889998692
+    },
+    {
+      "cpu_seconds": 0.20498160700000057,
+      "formula_cells": 1501,
+      "group": "regression",
+      "id": "single_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.20498103599993556
+    },
+    {
+      "cpu_seconds": 0.9577741020000019,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "heterogeneous_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.9577722530002575
+    },
+    {
+      "cpu_seconds": 1.0051049759999984,
+      "formula_cells": 7505,
+      "group": "regression",
+      "id": "exception_303",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 1.0051036509998994
+    },
+    {
+      "cpu_seconds": 0.03199596700000029,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c01",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.03199517000030028
+    },
+    {
+      "cpu_seconds": 0.0074768489999996746,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c02",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.0074761060000128055
+    },
+    {
+      "cpu_seconds": 0.00775298199999952,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c03",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007753030999992916
+    },
+    {
+      "cpu_seconds": 0.007516223999999738,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c04",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007515692000197305
+    },
+    {
+      "cpu_seconds": 0.007244577999998114,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c05",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.0072440760000063165
+    },
+    {
+      "cpu_seconds": 0.007137144999994405,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c06",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007136603000162722
+    },
+    {
+      "cpu_seconds": 0.006292793000000074,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c07",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.006292291000136174
+    },
+    {
+      "cpu_seconds": 0.007517956999997466,
+      "formula_cells": 120,
+      "group": "stress",
+      "id": "c08",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007517364999785059
+    },
+    {
+      "cpu_seconds": 0.007692979000005096,
+      "formula_cells": 120,
+      "group": "tradeoff",
+      "id": "p01",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007692446999953972
+    },
+    {
+      "cpu_seconds": 0.0070790440000010335,
+      "formula_cells": 120,
+      "group": "tradeoff",
+      "id": "p02",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007078492000346159
+    },
+    {
+      "cpu_seconds": 0.00711397100000255,
+      "formula_cells": 120,
+      "group": "tradeoff",
+      "id": "p03",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007113429000128235
+    },
+    {
+      "cpu_seconds": 0.007562971999995227,
+      "formula_cells": 120,
+      "group": "tradeoff",
+      "id": "p04",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007562548999885621
+    },
+    {
+      "cpu_seconds": 0.017768281000002162,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x11",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01776765600016006
+    },
+    {
+      "cpu_seconds": 0.01851248700000241,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x12",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018511932999899727
+    },
+    {
+      "cpu_seconds": 0.020358367999996574,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x13",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.020357762000003277
+    },
+    {
+      "cpu_seconds": 0.01842956999999501,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x14",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01842892499962545
+    },
+    {
+      "cpu_seconds": 0.01814179499999824,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x15",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018141159000151674
+    },
+    {
+      "cpu_seconds": 0.01819394299999999,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x16",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018193307999808894
+    },
+    {
+      "cpu_seconds": 0.039999184000002685,
+      "formula_cells": 235,
+      "group": "crossdomain",
+      "id": "x17",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.0399986950001221
+    },
+    {
+      "cpu_seconds": 0.021337164000001962,
+      "formula_cells": 260,
+      "group": "crossdomain",
+      "id": "x18",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.02133659799983434
+    },
+    {
+      "cpu_seconds": 0.018627855999994836,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x21",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018626960999881703
+    },
+    {
+      "cpu_seconds": 0.01873422699999594,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x22",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01873363300001074
+    },
+    {
+      "cpu_seconds": 0.02034848800000333,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x23",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.020347894000224187
+    },
+    {
+      "cpu_seconds": 0.01809064700000107,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x24",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018090043000029254
+    },
+    {
+      "cpu_seconds": 0.018054018000000838,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x25",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018053453999982594
+    },
+    {
+      "cpu_seconds": 0.01801860100000141,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x26",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018018056000073557
+    },
+    {
+      "cpu_seconds": 0.03628865700000006,
+      "formula_cells": 355,
+      "group": "crossdomain",
+      "id": "x27",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.036293169999680686
+    },
+    {
+      "cpu_seconds": 0.020764878000001374,
+      "formula_cells": 380,
+      "group": "crossdomain",
+      "id": "x28",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.020764292999956524
+    },
+    {
+      "cpu_seconds": 0.031770550000004505,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x31",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.031769861999691784
+    },
+    {
+      "cpu_seconds": 0.032178743000002896,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x32",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.032177995999973064
+    },
+    {
+      "cpu_seconds": 0.027620458000001236,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x33",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.027630443000361993
+    },
+    {
+      "cpu_seconds": 0.031621456999999964,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x34",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.03162076899980093
+    },
+    {
+      "cpu_seconds": 0.031244231999998817,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x35",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.031243615000221325
+    },
+    {
+      "cpu_seconds": 0.031122821000003853,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x36",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.03112225499990018
+    },
+    {
+      "cpu_seconds": 0.04661181500000566,
+      "formula_cells": 240,
+      "group": "crossdomain",
+      "id": "x37",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.04661104500019064
+    },
+    {
+      "cpu_seconds": 0.03441351099999679,
+      "formula_cells": 265,
+      "group": "crossdomain",
+      "id": "x38",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.03441261299985854
+    },
+    {
+      "cpu_seconds": 0.015891256000003295,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x41",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.015890871999999945
+    },
+    {
+      "cpu_seconds": 0.016637671000005128,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x42",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01663710799994078
+    },
+    {
+      "cpu_seconds": 0.018977870000000507,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x43",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01897706499994456
+    },
+    {
+      "cpu_seconds": 0.016198869000000116,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x44",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.016198275000078866
+    },
+    {
+      "cpu_seconds": 0.015039260999998305,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x45",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.015038665999782097
+    },
+    {
+      "cpu_seconds": 0.016038044999994838,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x46",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01603749100013374
+    },
+    {
+      "cpu_seconds": 0.03749557700000139,
+      "formula_cells": 120,
+      "group": "crossdomain",
+      "id": "x47",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.037495129000035377
+    },
+    {
+      "cpu_seconds": 0.01872990899999394,
+      "formula_cells": 145,
+      "group": "crossdomain",
+      "id": "x48",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01872965499978818
+    },
+    {
+      "cpu_seconds": 0.020049421000003065,
+      "formula_cells": 235,
+      "group": "adversarial",
+      "id": "a11",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.02004894699985016
+    },
+    {
+      "cpu_seconds": 0.052351319000003116,
+      "formula_cells": 235,
+      "group": "adversarial",
+      "id": "a12",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.052350467999985995
+    },
+    {
+      "cpu_seconds": 0.009298082999997348,
+      "formula_cells": 235,
+      "group": "adversarial",
+      "id": "a13",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.00929705999988073
+    },
+    {
+      "cpu_seconds": 0.012499423999997816,
+      "formula_cells": 235,
+      "group": "adversarial",
+      "id": "a14",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.012498999999934313
+    },
+    {
+      "cpu_seconds": 0.014797121000000857,
+      "formula_cells": 235,
+      "group": "adversarial",
+      "id": "a15",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.014796727999964787
+    },
+    {
+      "cpu_seconds": 0.019399950000000388,
+      "formula_cells": 235,
+      "group": "adversarial",
+      "id": "a16",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.019398873999762145
+    },
+    {
+      "cpu_seconds": 0.02074224599999752,
+      "formula_cells": 355,
+      "group": "adversarial",
+      "id": "a21",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.020741499999985535
+    },
+    {
+      "cpu_seconds": 0.04697168700000276,
+      "formula_cells": 355,
+      "group": "adversarial",
+      "id": "a22",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.046970565999799874
+    },
+    {
+      "cpu_seconds": 0.011276433999995561,
+      "formula_cells": 355,
+      "group": "adversarial",
+      "id": "a23",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.011276020999957836
+    },
+    {
+      "cpu_seconds": 0.014161325000003444,
+      "formula_cells": 355,
+      "group": "adversarial",
+      "id": "a24",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.014160731999709242
+    },
+    {
+      "cpu_seconds": 0.015871478999997635,
+      "formula_cells": 355,
+      "group": "adversarial",
+      "id": "a25",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.015870955000082176
+    },
+    {
+      "cpu_seconds": 0.0201776339999995,
+      "formula_cells": 355,
+      "group": "adversarial",
+      "id": "a26",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.02017697999963275
+    },
+    {
+      "cpu_seconds": 0.03323864400000076,
+      "formula_cells": 240,
+      "group": "adversarial",
+      "id": "a31",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.033238067000183946
+    },
+    {
+      "cpu_seconds": 0.0651353229999998,
+      "formula_cells": 240,
+      "group": "adversarial",
+      "id": "a32",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.06513398800007053
+    },
+    {
+      "cpu_seconds": 0.009628349000003311,
+      "formula_cells": 240,
+      "group": "adversarial",
+      "id": "a33",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.009634178999931464
+    },
+    {
+      "cpu_seconds": 0.01894502700000089,
+      "formula_cells": 240,
+      "group": "adversarial",
+      "id": "a34",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.018944392999856063
+    },
+    {
+      "cpu_seconds": 0.02123273600000175,
+      "formula_cells": 240,
+      "group": "adversarial",
+      "id": "a35",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.021232119999694987
+    },
+    {
+      "cpu_seconds": 0.032080919000001984,
+      "formula_cells": 240,
+      "group": "adversarial",
+      "id": "a36",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.032080291000056604
+    },
+    {
+      "cpu_seconds": 0.01735782800000152,
+      "formula_cells": 120,
+      "group": "adversarial",
+      "id": "a41",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01735721300019577
+    },
+    {
+      "cpu_seconds": 0.041325259000004166,
+      "formula_cells": 120,
+      "group": "adversarial",
+      "id": "a42",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.04132416899983582
+    },
+    {
+      "cpu_seconds": 0.007458034000002556,
+      "formula_cells": 120,
+      "group": "adversarial",
+      "id": "a43",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.007457651000095211
+    },
+    {
+      "cpu_seconds": 0.010308669000004045,
+      "formula_cells": 120,
+      "group": "adversarial",
+      "id": "a44",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01030810600013865
+    },
+    {
+      "cpu_seconds": 0.01270356100000214,
+      "formula_cells": 120,
+      "group": "adversarial",
+      "id": "a45",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.01270285700002205
+    },
+    {
+      "cpu_seconds": 0.0162759560000012,
+      "formula_cells": 120,
+      "group": "adversarial",
+      "id": "a46",
+      "process_peak_rss_kib": 274812,
+      "rss_interpretation": "cumulative process high-water mark on Linux",
+      "wall_seconds": 0.016275382000003447
+    }
+  ],
+  "command": [
+    "/home/ayaka/miniforge3/bin/python",
+    "scripts/run_selector_dev6.py",
+    "predict"
+  ],
+  "cpu_seconds": 46.630545346000005,
+  "cwd": "/home/ayaka/hybridguard/New version/followup_20261014",
+  "gpu_used": false,
+  "peak_rss_kib": 274812,
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "python": "3.13.13",
+  "scope": "input loading and dev6 contract augmentation only; upstream execution excluded",
+  "utc": "2026-10-15T11:01:44.957782+00:00",
+  "wall_seconds": 46.65071368000008
+}
