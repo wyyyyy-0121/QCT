@@ -1,0 +1,25 @@
+{
+  "case_count": 32,
+  "copied_majority": "Four sheets intentionally share one corrupted ancestor; not independent votes",
+  "families": [
+    "inventory_rollforward",
+    "loan_amortization",
+    "budget_allocation",
+    "unit_conversion"
+  ],
+  "new_final_families": 0,
+  "new_final_sources": 0,
+  "role": "revealed authored development only",
+  "scoring": "strict expected formula match; every output and intermediate formula retained",
+  "truth_validation": "Fraction arithmetic independently checked against every expected formula",
+  "variants": [
+    "clean",
+    "sparse_error",
+    "whole_column_error",
+    "unmarked_exception",
+    "marked_exception",
+    "exception_and_error",
+    "copied_error_majority",
+    "multirow_regions"
+  ]
+}

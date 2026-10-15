@@ -1,0 +1,354 @@
+{
+  "role": "metadata and terms only; no final workbooks or answers",
+  "final_data_acquired": false,
+  "records": [
+    {
+      "name": "epa_manual",
+      "url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/cost-reports-and-guidance-air-pollution",
+      "utc": "2026-10-15T00:31:13.328082+00:00",
+      "status": 200,
+      "final_url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/cost-reports-and-guidance-air-pollution",
+      "ok": true,
+      "bytes": 71854,
+      "sha256": "e827e7bd70848d7044ae860a9b3422b55fb8bafc3a1f2040006c4addf6b681d2",
+      "path": "source_discovery/metadata_v4/epa_manual.source",
+      "potential_links": [
+        {
+          "url": "https://www.epa.gov/sites/default/files/2020-11/epa_carbon_adsorber_calc_sheet_7thedition_nov2020.xlsm",
+          "text": "Carbon Adsorbers Calculation Spreadsheet (note: updated on 11/12/2020) (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/sites/production/files/2020-11/documents/erratasheet_carbonadsorbers_costcalcspreadsheet.pdf",
+          "text": "Carbon Adsorbers Calculation Spreadsheet – Errata Sheet (pdf)"
+        },
+        {
+          "url": "https://www.epa.gov/sites/default/files/2017-12/refrigerated_condenser_calc_sheet_2017.xlsm",
+          "text": "Refrigerated Condenser Calculation Spreadsheet (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/system/files/other-files/2022-09/EPA_Flares_CostCalc_Sheet_September%202022.xlsm",
+          "text": "Flares Calculation Spreadsheet (note: updated September 2022) (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/system/files/documents/2022-09/ErrataSheet_flares_cost%20calculationspreadsheetcorrections_September%202022.pdf",
+          "text": "Errata Sheet - Corrections to Flares Cost Calculation Spreadsheet (pdf)"
+        },
+        {
+          "url": "https://www.epa.gov/system/files/other-files/2024-12/us-epa_oaqps_incineratorsoxidizers_calc_sheet_december_2024v.xlsm",
+          "text": "Incinerators and Oxidizers Calculation Spreadsheet (note: updated December 2024) (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/system/files/documents/2024-12/errata_sheet_incineratorsoxidizers_costcalculationspreadsheet_december2024.pdf",
+          "text": "Errata Sheet - Corrections to Incinerators/Oxidizers Cost Calculation Spreadsheet (pdf)"
+        },
+        {
+          "url": "https://www.epa.gov/sites/production/files/2021-03/documents/revisions_to_controlcostmanual_sncr_cost_calculation_spreadsheet_march_2021.pdf",
+          "text": "SNCR Cost Calculation Spreadsheet – Errata Sheet (pdf)"
+        },
+        {
+          "url": "https://www.epa.gov/sites/default/files/2021-03/sncrcontrolcostmanual_costcalculationspreadsheetvf_march_2021.xlsm",
+          "text": "Air Pollution Control Cost Estimation Spreadsheet For Selective Non-Catalytic Reduction (SNCR) (note: updated on 3/19/2021) (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/sites/default/files/2019-06/scrcostmanualspreadsheet_june-2019vf.xlsm",
+          "text": "SCR Cost Calculation Spreadsheet (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/system/files/other-files/2023-01/wetanddryscrubbers_controlcostmanualspreadsheet_January%202023.xlsm",
+          "text": "Wet and Dry Scrubbers for Acid Gas Control Cost Calculation Spreadsheet (note: updated on 01/26/2023) (xlsm)"
+        },
+        {
+          "url": "https://www.epa.gov/system/files/documents/2023-01/Errata_Sheet_US_EPA_cost_calculation_spreadsheet_WetandDryScrubbers_January_2023.pdf",
+          "text": "Wet and Dry Scrubbers for Acid Gas Control Cost Calculation Spreadsheet - Errata Sheet (pdf)"
+        },
+        {
+          "url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/cost-analysis-modelstools-air-pollution",
+          "text": "Cost Analysis Models/Tools"
+        },
+        {
+          "url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/economic-analysis-modelstools-air-pollution",
+          "text": "Economic Analysis Models/Tools"
+        }
+      ]
+    },
+    {
+      "name": "epa_disclaimers",
+      "url": "https://www.epa.gov/web-policies-and-procedures/epa-disclaimers",
+      "utc": "2026-10-15T00:31:13.329188+00:00",
+      "status": 200,
+      "final_url": "https://www.epa.gov/web-policies-and-procedures/epa-disclaimers",
+      "ok": true,
+      "bytes": 62569,
+      "sha256": "fea32d94230d107708b636728491550c0cfcf965361319be7e0b4887eaa04d43",
+      "path": "source_discovery/metadata_v4/epa_disclaimers.source",
+      "potential_links": []
+    },
+    {
+      "name": "renewables_license",
+      "url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/LICENSE",
+      "utc": "2026-10-15T00:31:13.329973+00:00",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "18f_license",
+      "url": "https://api.github.com/repos/18F/financial-models/license?ref=d86e8f89145bb0e29cd7268e1497de45ddbae0c8",
+      "utc": "2026-10-15T00:31:13.749749+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/18F/financial-models/license?ref=d86e8f89145bb0e29cd7268e1497de45ddbae0c8",
+      "ok": true,
+      "bytes": 2906,
+      "sha256": "b432f297fde97e4da0385831adb3fd59b208e99c70785975637d1e3753617425",
+      "path": "source_discovery/metadata_v4/18f_license.source",
+      "potential_links": []
+    },
+    {
+      "name": "nz_treasury_cba",
+      "url": "https://www.treasury.govt.nz/information-and-services/state-sector-leadership/investment-management/plan-investment-choices/cost-benefit-analysis-including-public-sector-discount-rates/treasurys-cbax-tool",
+      "utc": "2026-10-15T00:31:14.428700+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "nz_treasury_copyright",
+      "url": "https://www.treasury.govt.nz/publications/copyright",
+      "utc": "2026-10-15T00:31:14.442325+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "uk_aqua_book",
+      "url": "https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government",
+      "utc": "2026-10-15T00:31:14.758159+00:00",
+      "status": 200,
+      "final_url": "https://www.gov.uk/guidance/the-aqua-book",
+      "ok": true,
+      "bytes": 340284,
+      "sha256": "f4e54ee6fe3c1679d6024e8188fd6a7dcb2bd62e04ea616225a5330ca55d5b90",
+      "path": "source_discovery/metadata_v4/uk_aqua_book.source",
+      "potential_links": [
+        {
+          "url": "https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models",
+          "text": "Sir Nicholas Macpherson’s review of modelling in government"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models",
+          "text": "Review of quality assurance of government models"
+        },
+        {
+          "url": "https://www.nao.org.uk/insights/quality-assurance-of-models/",
+          "text": "Quality assurance of models: a guide for audit committees"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "black box models"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/energy-security-and-net-zero-modelling-quality-assurance-qa-tools-and-guidance",
+          "text": "Modelling Quality Assurance tools and guidance"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "black box models"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/analytical-quality-assurance-at-the-department-for-education",
+          "text": "Maturity Model"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/analytical-quality-assurance-at-the-department-for-education",
+          "text": "Maturity Model"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#publish",
+          "text": "external publication of models or methods"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "black box models"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "black box models"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Waterfall_model",
+          "text": "Waterfall planning"
+        },
+        {
+          "url": "https://www.nao.org.uk/wp-content/uploads/2016/03/11018-002-Framework-to-review-models_External_4DP.pdf",
+          "text": "National Audit Office Framework to review models"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "black box models"
+        },
+        {
+          "url": "https://typeset.io/pdf/guidelines-for-selecting-and-using-simulation-model-143kzp6h5s.pdf",
+          "text": "Whitener and Balci (1989)"
+        },
+        {
+          "url": "https://typeset.io/pdf/guidelines-for-selecting-and-using-simulation-model-143kzp6h5s.pdf",
+          "text": "path tracing and cause-effect testing"
+        },
+        {
+          "url": "https://www.informs-sim.org/wsc11papers/016.pdf",
+          "text": "techniques that may be useful in validation of models"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "Black box models"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bbm",
+          "text": "black-box models"
+        },
+        {
+          "url": "https://osr.statisticsauthority.gov.uk/publication/guidance-for-models-trustworthiness-quality-and-value/pages/1/",
+          "text": "published guidance"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-aqua-book#bca",
+          "text": "business critical models"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/analytical-quality-assurance-at-the-department-for-education",
+          "text": "Maturity Model"
+        },
+        {
+          "url": "https://www.nao.org.uk/wp-content/uploads/2016/03/11018-002-Framework-to-review-models_External_4DP.pdf",
+          "text": "National Audit Office Framework to review models"
+        },
+        {
+          "url": "https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.gov.uk%2Fgovernment%2Fpublications%2Fenergy-security-and-net-zero-modelling-quality-assurance-qa-tools-and-guidance&data=05%7C02%7Cmodellingintegrity%40energysecurity.gov.uk%7Cc42f8ed850c24245b91f08dc28c9b298%7Ccbac700502c143ebb497e6492d1b2dd8%7C0%7C0%7C638430094188459392%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=6pFuTNcJcz5EddPnuIE8CmbU%2BrzUcZvYKdHpdVPkGgk%3D&reserved=0",
+          "text": "Department for Energy Security and Net Zero modelling tools and QA guidance"
+        },
+        {
+          "url": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
+          "text": "© Crown copyright"
+        }
+      ]
+    },
+    {
+      "name": "uk_webtag",
+      "url": "https://www.gov.uk/guidance/transport-analysis-guidance-tag",
+      "utc": "2026-10-15T00:31:16.546151+00:00",
+      "status": 200,
+      "final_url": "https://www.gov.uk/guidance/transport-analysis-guidance",
+      "ok": true,
+      "bytes": 137450,
+      "sha256": "33b8225bcc7a6022aef73d905fa152947b10360bb51b21fa7e6eb04c19990a34",
+      "path": "source_discovery/metadata_v4/uk_webtag.source",
+      "potential_links": [
+        {
+          "url": "https://www.gov.uk/transport/transport-modelling-and-appraisal",
+          "text": "Transport modelling and appraisal"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/transport-analysis-guidance#guidance-for-the-modelling-practitioner",
+          "text": "Guidance for the modelling practitioner"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/appraisal-modelling-and-evaluation-strategy-for-transport",
+          "text": "appraisal, modelling and evaluation strategy for transport"
+        },
+        {
+          "url": "https://assets.publishing.service.gov.uk/media/5a80bf43e5274a2e87dbb962/tag-correspondence-new-old.xlsx",
+          "text": "correspondence table"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-tag-unit-m1-1-principles-of-modelling-and-forecasting",
+          "text": "TAG unit M1-1 principles of modelling and forecasting"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/tag-unit-m2-1-variable-demand-modelling",
+          "text": "TAG unit M2-1 variable demand modelling"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-tag-unit-m3-1-highway-assignment-modelling",
+          "text": "TAG unit M3-1 highway assignment modelling"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-tag-unit-m3-2-public-transport-assignment-modelling",
+          "text": "TAG unit M3-2 public transport assignment modelling"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-tag-unit-m5-1-modelling-parking-and-park-and-ride",
+          "text": "TAG unit M5-1 modelling parking and park-and-ride"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-tag-unit-m5-2-modelling-smarter-choices",
+          "text": "TAG unit M5-2 modelling smarter choices"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-tag-unit-m5-3-supplementary-economic-modelling-may-2018",
+          "text": "TAG Unit M5-3 supplementary economic modelling"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/tag-unit-m5-4-agent-based-methods-and-activity-based-demand-modelling",
+          "text": "TAG unit M5-4 agent-based methods and activity-based demand modelling"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/diadem-software",
+          "text": "DIADEM (Dynamic Integrated Assignment and DEmand Modelling)"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/tempro-downloads",
+          "text": "TEMPRO (Trip End Model Presentation Program)"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-si-bespoke-mode-choice-models",
+          "text": "TAG: bespoke mode choice models"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-si-land-use-transport-interaction-models",
+          "text": "TAG: land use/transport interaction models"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-si-mixed-logit-models",
+          "text": "TAG: mixed logit models"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/webtag-si-ntem-sub-models-july-2016",
+          "text": "TAG: NTEM sub-models"
+        },
+        {
+          "url": "https://www.gov.uk/transport/transport-modelling-and-appraisal",
+          "text": "Transport modelling and appraisal"
+        },
+        {
+          "url": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
+          "text": "© Crown copyright"
+        }
+      ]
+    },
+    {
+      "name": "nist_blcc",
+      "url": "https://www.nist.gov/services-resources/software/blcc",
+      "utc": "2026-10-15T00:31:16.562770+00:00",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "uk_desnz_models",
+      "url": "https://www.gov.uk/government/publications/energy-generation-costs-2023",
+      "utc": "2026-10-15T00:31:17.634655+00:00",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "doe_comcheck",
+      "url": "https://www.energycodes.gov/comcheck",
+      "utc": "2026-10-15T00:31:18.851331+00:00",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "damodaran_terms",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/biomission.htm",
+      "utc": "2026-10-15T00:31:19.119540+00:00",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "role": "revealed development diagnostic; labels intentionally read here only",
+  "cases": [
+    {
+      "case": "sparse_seed101",
+      "family": "sparse",
+      "errors": 12,
+      "correct": 7,
+      "missed": 5,
+      "missed_by_reason": {
+        "insufficient_semantic_or_role_evidence": 5
+      },
+      "examples": {
+        "insufficient_semantic_or_role_evidence": [
+          {
+            "cell": "Central!I662",
+            "actual": "=B662*C662*(1-D662)*(1-G662)*0.85-B662*E662-F662",
+            "expected": "=B662*C662*(1-D662)*(1-G662)-B662*E662-F662",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "Central!I930",
+            "actual": "=B930*C930*(1-D930)*(1-G930)*0.85-B930*E930-F930",
+            "expected": "=B930*C930*(1-D930)*(1-G930)-B930*E930-F930",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "East!I277",
+            "actual": "=B277*C277*(1-D277)*(1-G277)*0.85-B277*E277-F277",
+            "expected": "=B277*C277*(1-D277)*(1-G277)-B277*E277-F277",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_101",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "sparse_seed202",
+      "family": "sparse",
+      "errors": 30,
+      "correct": 26,
+      "missed": 4,
+      "missed_by_reason": {
+        "insufficient_semantic_or_role_evidence": 4
+      },
+      "examples": {
+        "insufficient_semantic_or_role_evidence": [
+          {
+            "cell": "North!I416",
+            "actual": "=B416*C416*(1-D416)*(1-G416)*0.85-B416*E416-F416",
+            "expected": "=B416*C416*(1-D416)*(1-G416)-B416*E416-F416",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "North!I541",
+            "actual": "=B541*C541*(1-D541)*(1-G541)*0.85-B541*E541-F541",
+            "expected": "=B541*C541*(1-D541)*(1-G541)-B541*E541-F541",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "West!I686",
+            "actual": "=B686*C686*(1-D686)*(1-G686)*0.85-B686*E686-F686",
+            "expected": "=B686*C686*(1-D686)*(1-G686)-B686*E686-F686",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_202",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "sparse_seed303",
+      "family": "sparse",
+      "errors": 60,
+      "correct": 46,
+      "missed": 14,
+      "missed_by_reason": {
+        "insufficient_semantic_or_role_evidence": 14
+      },
+      "examples": {
+        "insufficient_semantic_or_role_evidence": [
+          {
+            "cell": "North!I1324",
+            "actual": "=B1324*C1324*(1-D1324)*(1-G1324)*0.85-B1324*E1324-F1324",
+            "expected": "=B1324*C1324*(1-D1324)*(1-G1324)-B1324*E1324-F1324",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "South!I1092",
+            "actual": "=B1092*C1092*(1-D1092)*(1-G1092)*0.85-B1092*E1092-F1092",
+            "expected": "=B1092*C1092*(1-D1092)*(1-G1092)-B1092*E1092-F1092",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "North!I722",
+            "actual": "=B722*C722*(1-D722)*(1-G722)*0.85-B722*E722-F722",
+            "expected": "=B722*C722*(1-D722)*(1-G722)-B722*E722-F722",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_303",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "systemic_seed404",
+      "family": "systemic",
+      "errors": 2149,
+      "correct": 650,
+      "missed": 1499,
+      "missed_by_reason": {
+        "insufficient_semantic_or_role_evidence": 1499
+      },
+      "examples": {
+        "insufficient_semantic_or_role_evidence": [
+          {
+            "cell": "West!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)*0.85-B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "West!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)*0.85-B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "West!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)*0.85-B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_404",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "systemic_seed505",
+      "family": "systemic",
+      "errors": 1400,
+      "correct": 1000,
+      "missed": 400,
+      "missed_by_reason": {
+        "insufficient_semantic_or_role_evidence": 400
+      },
+      "examples": {
+        "insufficient_semantic_or_role_evidence": [
+          {
+            "cell": "East!I450",
+            "actual": "=B450*C450*(1-D450)*(1+G450)-B450*E450-F450",
+            "expected": "=B450*C450*(1-D450)*(1-G450)-B450*E450-F450",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "East!I849",
+            "actual": "=B849*C849*(1-D849)*(1+G849)-B849*E849-F849",
+            "expected": "=B849*C849*(1-D849)*(1-G849)-B849*E849-F849",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "East!I451",
+            "actual": "=B451*C451*(1-D451)*(1+G451)-B451*E451-F451",
+            "expected": "=B451*C451*(1-D451)*(1-G451)-B451*E451-F451",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_505",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "systemic_seed606",
+      "family": "systemic",
+      "errors": 2099,
+      "correct": 600,
+      "missed": 1499,
+      "missed_by_reason": {
+        "insufficient_semantic_or_role_evidence": 1499
+      },
+      "examples": {
+        "insufficient_semantic_or_role_evidence": [
+          {
+            "cell": "North!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)*0.85-B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "North!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)*0.85-B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "North!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)*0.85-B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_606",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1_101",
+      "family": "length_1",
+      "errors": 1,
+      "correct": 1,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_10_101",
+      "family": "length_10",
+      "errors": 10,
+      "correct": 10,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_100_101",
+      "family": "length_100",
+      "errors": 100,
+      "correct": 100,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_500_101",
+      "family": "length_500",
+      "errors": 500,
+      "correct": 500,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1499_101",
+      "family": "length_1499",
+      "errors": 1499,
+      "correct": 1499,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "shared_101",
+      "family": "shared",
+      "errors": 900,
+      "correct": 900,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "single_101",
+      "family": "single",
+      "errors": 300,
+      "correct": 300,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "heterogeneous_101",
+      "family": "heterogeneous",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "exception_101",
+      "family": "exception",
+      "errors": 299,
+      "correct": 299,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1_202",
+      "family": "length_1",
+      "errors": 1,
+      "correct": 1,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_10_202",
+      "family": "length_10",
+      "errors": 10,
+      "correct": 10,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_100_202",
+      "family": "length_100",
+      "errors": 100,
+      "correct": 100,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_500_202",
+      "family": "length_500",
+      "errors": 500,
+      "correct": 500,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1499_202",
+      "family": "length_1499",
+      "errors": 1499,
+      "correct": 1499,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "shared_202",
+      "family": "shared",
+      "errors": 900,
+      "correct": 900,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "single_202",
+      "family": "single",
+      "errors": 300,
+      "correct": 300,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "heterogeneous_202",
+      "family": "heterogeneous",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "exception_202",
+      "family": "exception",
+      "errors": 299,
+      "correct": 299,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1_303",
+      "family": "length_1",
+      "errors": 1,
+      "correct": 1,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_10_303",
+      "family": "length_10",
+      "errors": 10,
+      "correct": 10,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_100_303",
+      "family": "length_100",
+      "errors": 100,
+      "correct": 100,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_500_303",
+      "family": "length_500",
+      "errors": 500,
+      "correct": 500,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1499_303",
+      "family": "length_1499",
+      "errors": 1499,
+      "correct": 1499,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "shared_303",
+      "family": "shared",
+      "errors": 900,
+      "correct": 900,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "single_303",
+      "family": "single",
+      "errors": 300,
+      "correct": 300,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "heterogeneous_303",
+      "family": "heterogeneous",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "exception_303",
+      "family": "exception",
+      "errors": 299,
+      "correct": 299,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    }
+  ],
+  "wrong_proposals": [],
+  "wrong_count": 0,
+  "missed_count": 3421
+}

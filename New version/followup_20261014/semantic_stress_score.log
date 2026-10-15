@@ -1,0 +1,8 @@
+expense_sign_error {'paper': {'proposals': 24, 'correct': 24, 'wrong': 0, 'precision': 1.0, 'coverage': 1.0}, 'dev2': {'proposals': 24, 'correct': 24, 'wrong': 0, 'precision': 1.0, 'coverage': 1.0}}
+missing_shipping_error {'paper': {'proposals': 1, 'correct': 1, 'wrong': 0, 'precision': 1.0, 'coverage': 1.0}, 'dev2': {'proposals': 1, 'correct': 1, 'wrong': 0, 'precision': 1.0, 'coverage': 1.0}}
+legitimate_shipping_waiver {'paper': {'proposals': 1, 'correct': 0, 'wrong': 1, 'precision': 0.0, 'coverage': None}, 'dev2': {'proposals': 1, 'correct': 0, 'wrong': 1, 'precision': 0.0, 'coverage': None}}
+legitimate_discount_exemption {'paper': {'proposals': 24, 'correct': 0, 'wrong': 24, 'precision': 0.0, 'coverage': None}, 'dev2': {'proposals': 24, 'correct': 0, 'wrong': 24, 'precision': 0.0, 'coverage': None}}
+legitimate_revenue_factor {'paper': {'proposals': 24, 'correct': 0, 'wrong': 24, 'precision': 0.0, 'coverage': None}, 'dev2': {'proposals': 0, 'correct': 0, 'wrong': 0, 'precision': None, 'coverage': None}}
+erroneous_revenue_factor_same_observed_input {'paper': {'proposals': 24, 'correct': 24, 'wrong': 0, 'precision': 1.0, 'coverage': 1.0}, 'dev2': {'proposals': 0, 'correct': 0, 'wrong': 0, 'precision': None, 'coverage': 0.0}}
+unknown_output_role_sign_error {'paper': {'proposals': 24, 'correct': 24, 'wrong': 0, 'precision': 1.0, 'coverage': 1.0}, 'dev2': {'proposals': 0, 'correct': 0, 'wrong': 0, 'precision': None, 'coverage': 0.0}}
+legitimate_cost_reimbursement {'paper': {'proposals': 24, 'correct': 0, 'wrong': 24, 'precision': 0.0, 'coverage': None}, 'dev2': {'proposals': 24, 'correct': 0, 'wrong': 24, 'precision': 0.0, 'coverage': None}}

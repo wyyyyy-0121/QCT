@@ -1,0 +1,1248 @@
+{
+  "role": "revealed development diagnostic; labels intentionally read here only",
+  "cases": [
+    {
+      "case": "sparse_seed101",
+      "family": "sparse",
+      "errors": 12,
+      "correct": 12,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "clean_101",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "sparse_seed202",
+      "family": "sparse",
+      "errors": 30,
+      "correct": 30,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "clean_202",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "sparse_seed303",
+      "family": "sparse",
+      "errors": 60,
+      "correct": 60,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "clean_303",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "systemic_seed404",
+      "family": "systemic",
+      "errors": 2149,
+      "correct": 150,
+      "missed": 1999,
+      "missed_by_reason": {
+        "no_qualified_candidate": 1150,
+        "locally_consistent_or_unverified_reference": 849
+      },
+      "examples": {
+        "no_qualified_candidate": [
+          {
+            "cell": "South!I700",
+            "actual": "=B700*C700*(1-D700)*(1-G700)+B700*E700-F700",
+            "expected": "=B700*C700*(1-D700)*(1-G700)-B700*E700-F700",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "South!I1199",
+            "actual": "=B1199*C1199*(1-D1199)*(1-G1199)+B1199*E1199-F1199",
+            "expected": "=B1199*C1199*(1-D1199)*(1-G1199)-B1199*E1199-F1199",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "West!I1000",
+            "actual": "=B1000*C1000*(1-D1000)*(1-G1000)*0.85-B1000*E1000-F1000",
+            "expected": "=B1000*C1000*(1-D1000)*(1-G1000)-B1000*E1000-F1000",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          }
+        ],
+        "locally_consistent_or_unverified_reference": [
+          {
+            "cell": "West!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)*0.85-B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "North!I2",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2"
+              }
+            ]
+          },
+          {
+            "cell": "West!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)*0.85-B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "North!I3",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3"
+              }
+            ]
+          },
+          {
+            "cell": "West!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)*0.85-B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "North!I4",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_404",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "systemic_seed505",
+      "family": "systemic",
+      "errors": 1400,
+      "correct": 880,
+      "missed": 520,
+      "missed_by_reason": {
+        "no_qualified_candidate": 520
+      },
+      "examples": {
+        "no_qualified_candidate": [
+          {
+            "cell": "South!I590",
+            "actual": "=B590*C590*(1+D590)*(1-G590)-B590*E590-F590",
+            "expected": "=B590*C590*(1-D590)*(1-G590)-B590*E590-F590",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "East!I849",
+            "actual": "=B849*C849*(1-D849)*(1+G849)-B849*E849-F849",
+            "expected": "=B849*C849*(1-D849)*(1-G849)-B849*E849-F849",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "South!I591",
+            "actual": "=B591*C591*(1+D591)*(1-G591)-B591*E591-F591",
+            "expected": "=B591*C591*(1-D591)*(1-G591)-B591*E591-F591",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_505",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "systemic_seed606",
+      "family": "systemic",
+      "errors": 2099,
+      "correct": 600,
+      "missed": 1499,
+      "missed_by_reason": {
+        "locally_consistent_or_unverified_reference": 899,
+        "no_qualified_candidate": 600
+      },
+      "examples": {
+        "locally_consistent_or_unverified_reference": [
+          {
+            "cell": "North!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)*0.85-B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I2",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2"
+              }
+            ]
+          },
+          {
+            "cell": "North!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)*0.85-B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I3",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3"
+              }
+            ]
+          },
+          {
+            "cell": "North!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)*0.85-B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I4",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4"
+              }
+            ]
+          }
+        ],
+        "no_qualified_candidate": [
+          {
+            "cell": "North!I1000",
+            "actual": "=B1000*C1000*(1-D1000)*(1-G1000)*0.85-B1000*E1000-F1000",
+            "expected": "=B1000*C1000*(1-D1000)*(1-G1000)-B1000*E1000-F1000",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "North!I1001",
+            "actual": "=B1001*C1001*(1-D1001)*(1-G1001)*0.85-B1001*E1001-F1001",
+            "expected": "=B1001*C1001*(1-D1001)*(1-G1001)-B1001*E1001-F1001",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          },
+          {
+            "cell": "North!I1002",
+            "actual": "=B1002*C1002*(1-D1002)*(1-G1002)*0.85-B1002*E1002-F1002",
+            "expected": "=B1002*C1002*(1-D1002)*(1-G1002)-B1002*E1002-F1002",
+            "status": "abstain",
+            "candidate": null,
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "case": "clean_606",
+      "family": "clean",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1_101",
+      "family": "length_1",
+      "errors": 1,
+      "correct": 1,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_10_101",
+      "family": "length_10",
+      "errors": 10,
+      "correct": 10,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_100_101",
+      "family": "length_100",
+      "errors": 100,
+      "correct": 100,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_500_101",
+      "family": "length_500",
+      "errors": 500,
+      "correct": 500,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1499_101",
+      "family": "length_1499",
+      "errors": 1499,
+      "correct": 0,
+      "missed": 1499,
+      "missed_by_reason": {
+        "locally_consistent_or_unverified_reference": 1499
+      },
+      "examples": {
+        "locally_consistent_or_unverified_reference": [
+          {
+            "cell": "North!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)+B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I2",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2"
+              }
+            ]
+          },
+          {
+            "cell": "North!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)+B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I3",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3"
+              }
+            ]
+          },
+          {
+            "cell": "North!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)+B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I4",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "shared_101",
+      "family": "shared",
+      "errors": 900,
+      "correct": 900,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "single_101",
+      "family": "single",
+      "errors": 300,
+      "correct": 300,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "heterogeneous_101",
+      "family": "heterogeneous",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "exception_101",
+      "family": "exception",
+      "errors": 299,
+      "correct": 299,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1_202",
+      "family": "length_1",
+      "errors": 1,
+      "correct": 1,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_10_202",
+      "family": "length_10",
+      "errors": 10,
+      "correct": 10,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_100_202",
+      "family": "length_100",
+      "errors": 100,
+      "correct": 100,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_500_202",
+      "family": "length_500",
+      "errors": 500,
+      "correct": 500,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1499_202",
+      "family": "length_1499",
+      "errors": 1499,
+      "correct": 0,
+      "missed": 1499,
+      "missed_by_reason": {
+        "locally_consistent_or_unverified_reference": 1499
+      },
+      "examples": {
+        "locally_consistent_or_unverified_reference": [
+          {
+            "cell": "North!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)+B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I2",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2"
+              }
+            ]
+          },
+          {
+            "cell": "North!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)+B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I3",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3"
+              }
+            ]
+          },
+          {
+            "cell": "North!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)+B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I4",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "shared_202",
+      "family": "shared",
+      "errors": 900,
+      "correct": 900,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "single_202",
+      "family": "single",
+      "errors": 300,
+      "correct": 300,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "heterogeneous_202",
+      "family": "heterogeneous",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "exception_202",
+      "family": "exception",
+      "errors": 299,
+      "correct": 299,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1_303",
+      "family": "length_1",
+      "errors": 1,
+      "correct": 1,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_10_303",
+      "family": "length_10",
+      "errors": 10,
+      "correct": 10,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_100_303",
+      "family": "length_100",
+      "errors": 100,
+      "correct": 100,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_500_303",
+      "family": "length_500",
+      "errors": 500,
+      "correct": 500,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "length_1499_303",
+      "family": "length_1499",
+      "errors": 1499,
+      "correct": 0,
+      "missed": 1499,
+      "missed_by_reason": {
+        "locally_consistent_or_unverified_reference": 1499
+      },
+      "examples": {
+        "locally_consistent_or_unverified_reference": [
+          {
+            "cell": "North!I2",
+            "actual": "=B2*C2*(1-D2)*(1-G2)+B2*E2-F2",
+            "expected": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I2",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B2*C2*(1-D2)*(1-G2)-B2*E2-F2"
+              }
+            ]
+          },
+          {
+            "cell": "North!I3",
+            "actual": "=B3*C3*(1-D3)*(1-G3)+B3*E3-F3",
+            "expected": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I3",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B3*C3*(1-D3)*(1-G3)-B3*E3-F3"
+              }
+            ]
+          },
+          {
+            "cell": "North!I4",
+            "actual": "=B4*C4*(1-D4)*(1-G4)+B4*E4-F4",
+            "expected": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4",
+            "status": "review",
+            "candidate": null,
+            "evidence": [
+              {
+                "evidence": [
+                  {
+                    "independence": "unknown",
+                    "kind": "parallel_sheet",
+                    "ratio": 0.8,
+                    "source": "Central!I4",
+                    "support": 4
+                  }
+                ],
+                "formula": "=B4*C4*(1-D4)*(1-G4)-B4*E4-F4"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "shared_303",
+      "family": "shared",
+      "errors": 900,
+      "correct": 900,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "single_303",
+      "family": "single",
+      "errors": 300,
+      "correct": 300,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "heterogeneous_303",
+      "family": "heterogeneous",
+      "errors": 0,
+      "correct": 0,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    },
+    {
+      "case": "exception_303",
+      "family": "exception",
+      "errors": 299,
+      "correct": 299,
+      "missed": 0,
+      "missed_by_reason": {},
+      "examples": {}
+    }
+  ],
+  "wrong_proposals": [
+    {
+      "case": "systemic_seed404",
+      "cell": "South!I1200",
+      "is_error": false,
+      "actual": "=B1200*C1200*(1-D1200)*(1-G1200)-B1200*E1200-F1200",
+      "expected": "=B1200*C1200*(1-D1200)*(1-G1200)-B1200*E1200-F1200",
+      "proposed": "=B1200*C1200*(1-D1200)*(1-G1200)+B1200*E1200-F1200",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "systemic_seed404",
+      "cell": "North!I330",
+      "is_error": false,
+      "actual": "=B330*C330*(1-D330)*(1-G330)-B330*E330-F330",
+      "expected": "=B330*C330*(1-D330)*(1-G330)-B330*E330-F330",
+      "proposed": "=B330*C330*(1+D330)*(1-G330)-B330*E330-F330",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "systemic_seed505",
+      "cell": "Central!I190",
+      "is_error": false,
+      "actual": "=B190*C190*(1-D190)*(1-G190)-B190*E190-F190",
+      "expected": "=B190*C190*(1-D190)*(1-G190)-B190*E190-F190",
+      "proposed": "=B190*C190*(1-D190)*(1-G190)-B190*E190",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "systemic_seed505",
+      "cell": "East!I850",
+      "is_error": false,
+      "actual": "=B850*C850*(1-D850)*(1-G850)-B850*E850-F850",
+      "expected": "=B850*C850*(1-D850)*(1-G850)-B850*E850-F850",
+      "proposed": "=B850*C850*(1-D850)*(1+G850)-B850*E850-F850",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "systemic_seed505",
+      "cell": "South!I1490",
+      "is_error": false,
+      "actual": "=B1490*C1490*(1-D1490)*(1-G1490)-B1490*E1490-F1490",
+      "expected": "=B1490*C1490*(1-D1490)*(1-G1490)-B1490*E1490-F1490",
+      "proposed": "=B1490*C1490*(1+D1490)*(1-G1490)-B1490*E1490-F1490",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "systemic_seed606",
+      "cell": "Central!I550",
+      "is_error": false,
+      "actual": "=B550*C550*(1-D550)*(1-G550)-B550*E550-F550",
+      "expected": "=B550*C550*(1-D550)*(1-G550)-B550*E550-F550",
+      "proposed": "=B550*C550*(1-D550)*(1-G550)+B550*E550-F550",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "systemic_seed606",
+      "cell": "West!I1250",
+      "is_error": false,
+      "actual": "=B1250*C1250*(1-D1250)*(1-G1250)-B1250*E1250-F1250",
+      "expected": "=B1250*C1250*(1-D1250)*(1-G1250)-B1250*E1250-F1250",
+      "proposed": "=B1250*C1250*(1-D1250)*(1-G1250)-B1250*E1250",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_10_101",
+      "cell": "North!I12",
+      "is_error": false,
+      "actual": "=B12*C12*(1-D12)*(1-G12)-B12*E12-F12",
+      "expected": "=B12*C12*(1-D12)*(1-G12)-B12*E12-F12",
+      "proposed": "=B12*C12*(1-D12)*(1-G12)+B12*E12-F12",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_100_101",
+      "cell": "North!I102",
+      "is_error": false,
+      "actual": "=B102*C102*(1-D102)*(1-G102)-B102*E102-F102",
+      "expected": "=B102*C102*(1-D102)*(1-G102)-B102*E102-F102",
+      "proposed": "=B102*C102*(1-D102)*(1-G102)+B102*E102-F102",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_500_101",
+      "cell": "North!I502",
+      "is_error": false,
+      "actual": "=B502*C502*(1-D502)*(1-G502)-B502*E502-F502",
+      "expected": "=B502*C502*(1-D502)*(1-G502)-B502*E502-F502",
+      "proposed": "=B502*C502*(1-D502)*(1-G502)+B502*E502-F502",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_101",
+      "cell": "Central!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_101",
+      "cell": "East!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_101",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "single_101",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "exception_101",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_10_202",
+      "cell": "North!I12",
+      "is_error": false,
+      "actual": "=B12*C12*(1-D12)*(1-G12)-B12*E12-F12",
+      "expected": "=B12*C12*(1-D12)*(1-G12)-B12*E12-F12",
+      "proposed": "=B12*C12*(1-D12)*(1-G12)+B12*E12-F12",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_100_202",
+      "cell": "North!I102",
+      "is_error": false,
+      "actual": "=B102*C102*(1-D102)*(1-G102)-B102*E102-F102",
+      "expected": "=B102*C102*(1-D102)*(1-G102)-B102*E102-F102",
+      "proposed": "=B102*C102*(1-D102)*(1-G102)+B102*E102-F102",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_500_202",
+      "cell": "North!I502",
+      "is_error": false,
+      "actual": "=B502*C502*(1-D502)*(1-G502)-B502*E502-F502",
+      "expected": "=B502*C502*(1-D502)*(1-G502)-B502*E502-F502",
+      "proposed": "=B502*C502*(1-D502)*(1-G502)+B502*E502-F502",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_202",
+      "cell": "Central!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_202",
+      "cell": "East!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_202",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "single_202",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "exception_202",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_10_303",
+      "cell": "North!I12",
+      "is_error": false,
+      "actual": "=B12*C12*(1-D12)*(1-G12)-B12*E12-F12",
+      "expected": "=B12*C12*(1-D12)*(1-G12)-B12*E12-F12",
+      "proposed": "=B12*C12*(1-D12)*(1-G12)+B12*E12-F12",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_100_303",
+      "cell": "North!I102",
+      "is_error": false,
+      "actual": "=B102*C102*(1-D102)*(1-G102)-B102*E102-F102",
+      "expected": "=B102*C102*(1-D102)*(1-G102)-B102*E102-F102",
+      "proposed": "=B102*C102*(1-D102)*(1-G102)+B102*E102-F102",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "length_500_303",
+      "cell": "North!I502",
+      "is_error": false,
+      "actual": "=B502*C502*(1-D502)*(1-G502)-B502*E502-F502",
+      "expected": "=B502*C502*(1-D502)*(1-G502)-B502*E502-F502",
+      "proposed": "=B502*C502*(1-D502)*(1-G502)+B502*E502-F502",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_303",
+      "cell": "Central!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_303",
+      "cell": "East!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "shared_303",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "single_303",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "case": "exception_303",
+      "cell": "North!I600",
+      "is_error": false,
+      "actual": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "expected": "=B600*C600*(1-D600)*(1-G600)-B600*E600-F600",
+      "proposed": "=B600*C600*(1-D600)*(1-G600)+B600*E600-F600",
+      "evidence": [
+        {
+          "gain": 0.25,
+          "kind": "paper_formulaguard_peer",
+          "support": 5
+        }
+      ]
+    }
+  ],
+  "wrong_count": 31,
+  "missed_count": 8515
+}

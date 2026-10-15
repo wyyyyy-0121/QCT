@@ -2,6 +2,8 @@
 
 这里只审查来源元数据和公开目录，不含最终验证工作簿或逐项答案。候选多不等于合格来源多；尚未满足六来源十五家族。
 
+2026-10-15增量审计见 `SOURCE_READINESS.json`、`metadata_v3/RECEIPT.json`至`metadata_v5/RECEIPT.json`。18F已直接核实CC0；Packt固定commit的MIT正文已读取；Renewables README声明CC BY-NC-SA 4.0，但固定tree无LICENSE。EPA官方计算表/勘误及英国TAG、DESNZ LCOE入口已核实，仅为待查候选。以下表格保留较早发现记录，以新台账为当前状态。合格来源与家族数仍为0。
+
 | 候选 | 可能用途 | 实查及未解决问题 |
 |---|---|---|
 | Damodaran 官方模型目录 | 公开工作簿注入 | 官方页可访问，包含多类 xls/xlsx 链接；需核查许可、模板差异和原公式，不假定干净 |

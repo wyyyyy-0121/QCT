@@ -1,0 +1,696 @@
+{
+  "role": "metadata discovery only; no accepted final source or truth pair",
+  "workbooks_downloaded": false,
+  "records": [
+    {
+      "name": "18f_readme",
+      "url": "https://raw.githubusercontent.com/18F/financial-models/d86e8f89145bb0e29cd7268e1497de45ddbae0c8/README.md",
+      "utc": "2026-10-15T00:15:56.607904+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/18F/financial-models/d86e8f89145bb0e29cd7268e1497de45ddbae0c8/README.md",
+      "ok": true,
+      "bytes": 349,
+      "sha256": "35dcb2ceeeb6bf1df73a5cc10b75a58509a3e1daf78eaea9d8b5efab36cb9ebb",
+      "path": "source_discovery/metadata_v3/18f_readme.txt"
+    },
+    {
+      "name": "packt_license",
+      "url": "https://raw.githubusercontent.com/PacktPublishing/Project-Finance-and-Excel---Build-Financial-Models-from-Scratch/618787e67a7ee0e6643f60ef447a9c35d6ee9301/LICENSE",
+      "utc": "2026-10-15T00:15:56.609673+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/PacktPublishing/Project-Finance-and-Excel---Build-Financial-Models-from-Scratch/618787e67a7ee0e6643f60ef447a9c35d6ee9301/LICENSE",
+      "ok": true,
+      "bytes": 1062,
+      "sha256": "120f78b14b2b1f35b227b6ddbd47e0a3966bb2e731618e76c0c06c26b58f4e05",
+      "path": "source_discovery/metadata_v3/packt_license.txt"
+    },
+    {
+      "name": "renewables_readme",
+      "url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/README.md",
+      "utc": "2026-10-15T00:15:56.610587+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/README.md",
+      "ok": true,
+      "bytes": 1121,
+      "sha256": "82f39464caac74efb460dc62abba46c090da18de666071bf9abc7fb0d25edde5",
+      "path": "source_discovery/metadata_v3/renewables_readme.txt"
+    },
+    {
+      "name": "damodaran_directory",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm",
+      "utc": "2026-10-15T00:15:57.226359+00:00",
+      "status": 200,
+      "final_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm",
+      "ok": true,
+      "bytes": 47180,
+      "sha256": "71213a981173dd9a353a972d5200ea4a818ffdf7ae268922c3042ec20f669dd4",
+      "path": "source_discovery/metadata_v3/damodaran_directory.txt"
+    },
+    {
+      "name": "epa_cost_manual",
+      "url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/cost-reports-and-guidance-air-pollution",
+      "utc": "2026-10-15T00:15:57.255675+00:00",
+      "status": 200,
+      "final_url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/cost-reports-and-guidance-air-pollution",
+      "ok": true,
+      "bytes": 71854,
+      "sha256": "e827e7bd70848d7044ae860a9b3422b55fb8bafc3a1f2040006c4addf6b681d2",
+      "path": "source_discovery/metadata_v3/epa_cost_manual.txt"
+    },
+    {
+      "name": "uk_greenbook_supplement",
+      "url": "https://www.gov.uk/government/publications/green-book-supplementary-guidance-discounting",
+      "utc": "2026-10-15T00:15:57.265825+00:00",
+      "status": 200,
+      "final_url": "https://www.gov.uk/government/publications/green-book-supplementary-guidance-discounting",
+      "ok": true,
+      "bytes": 78557,
+      "sha256": "0287dae5c27762c8633319af5df20add2397c8ee2fbca848407e16b7088ab6bc",
+      "path": "source_discovery/metadata_v3/uk_greenbook_supplement.txt"
+    },
+    {
+      "name": "commits_0",
+      "url": "https://api.github.com/search/commits?q=%22fix%20formula%22%20xlsx&per_page=15",
+      "utc": "2026-10-15T00:15:58.368813+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/search/commits?q=%22fix%20formula%22%20xlsx&per_page=15",
+      "ok": true,
+      "bytes": 118649,
+      "sha256": "d06c63388669329047c06afb9cb7e85e8076c6eb73e5c9045a412251ecdff968",
+      "path": "source_discovery/metadata_v3/commits_0.json",
+      "total_count": 928,
+      "candidates": [
+        {
+          "repo": "two-pack/redmine_xlsx_format_issue_exporter",
+          "sha": "501ea81f4d4ea41da888a09fc1791ee850df64f7",
+          "url": "https://github.com/two-pack/redmine_xlsx_format_issue_exporter/commit/501ea81f4d4ea41da888a09fc1791ee850df64f7",
+          "message": "Merge pull request #106 from naopontan/fix-formula-misdetection-corrupts-xlsx\n\nWrite strings that look like formulas as string cells to prevent corrupted XLSX"
+        },
+        {
+          "repo": "alaarab/ogrid",
+          "sha": "5cf1f77b6cad1fe1528a3aeb81f32b811cb0c4e2",
+          "url": "https://github.com/alaarab/ogrid/commit/5cf1f77b6cad1fe1528a3aeb81f32b811cb0c4e2",
+          "message": "fix(formula): correct spill evaluation and XLSX round trips"
+        },
+        {
+          "repo": "joskapista44/euro-mcp-public",
+          "sha": "0cdb24e8035589042cf79c241c73c8d32b8d2793",
+          "url": "https://github.com/joskapista44/euro-mcp-public/commit/0cdb24e8035589042cf79c241c73c8d32b8d2793",
+          "message": "xlsx: fix formula capability probe command arguments"
+        },
+        {
+          "repo": "realtorsebastianm-cell/compdatavault.com",
+          "sha": "5241d90b060ef20dc5c076eefe2518f7f9cdc084",
+          "url": "https://github.com/realtorsebastianm-cell/compdatavault.com/commit/5241d90b060ef20dc5c076eefe2518f7f9cdc084",
+          "message": "Fix formula injection risk in .xlsx export"
+        },
+        {
+          "repo": "sverdlikdan-code/COLUMBUS",
+          "sha": "47c2305e8459dcc887d43f3c71bd851f04d9ea16",
+          "url": "https://github.com/sverdlikdan-code/COLUMBUS/commit/47c2305e8459dcc887d43f3c71bd851f04d9ea16",
+          "message": "fix(formula-road): ICE клиенты в экспорте + колонка חברה в обоих Excel\n\n- export-all-days-xlsx: добавить ICE клиентов из iceByAgent (как в /customers)\n- export-all-days-xlsx: колонка חברה = FORMULA / ICE + бирюзовый цвет строк ICE\n- export-route-xlsx (один день): hevra + iceOnly в makeRow — колонка и цвет теперь работают\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "mightyoung/software-cost-calculator",
+          "sha": "ce9fd3f00fa2819630e0bd9d7129889211aea525",
+          "url": "https://github.com/mightyoung/software-cost-calculator/commit/ce9fd3f00fa2819630e0bd9d7129889211aea525",
+          "message": "feat: add xlsx read/write, project exports and quotation template round trip\n\n- Minimal xlsx reader/writer on archive+xml: exact numeric lexemes, shared\n  strings, 1900/1904 dates, formula rejection, size limits; numeric money\n  cells that sum in Excel while keeping exact decimal text\n- Project quote sheet (customer-facing), cost budget by category, and\n  inquiry list for unmatched items; workbook-to-text for the AI list flow\n- Quotation template export/import keyed by record ID: blank keeps,\n  duplicate detection, changed-since-export flag, per-row errors\n- Fix: formula cells with empty cached values no longer pass as blank"
+        },
+        {
+          "repo": "zbynekdrlik/vyuctovanie",
+          "sha": "a1c874b3bba1d2703adb9523617f572b1c848ea4",
+          "url": "https://github.com/zbynekdrlik/vyuctovanie/commit/a1c874b3bba1d2703adb9523617f572b1c848ea4",
+          "message": "Review fixes: formula-injection guard, safe dry-run tmp, orphan-attachment log (#13)\n\nAdversarial review nálezy (0 crit, 1 warn, 5 sugg) opravené v tej istej vetve:\n- xlsx: popis začínajúci '=' sa vynúti na text (nie formula) — injektáž cez správy kanála\n- cli: dry-run píše do tempfile.mkdtemp() (symlink-safe), nie do predvídateľného /tmp\n- cli: pri zlyhaní post_message zaloguj id osirelej ir.attachment\n- xlsx: hoisted _DATA_FONT (openpyxl štýly zdieľateľné)\n- tests: info-akcia nedostáva prílohu; priamy test _sanitize_sheet_name\n\n97 testov, coverage 92,4 %."
+        },
+        {
+          "repo": "KaiserY/ooxmlsdk",
+          "sha": "2867a534a4a7b0bb06c8c1db0466521664e24fda",
+          "url": "https://github.com/KaiserY/ooxmlsdk/commit/2867a534a4a7b0bb06c8c1db0466521664e24fda",
+          "message": "Fix formula XLSX import semantics"
+        },
+        {
+          "repo": "sverdlikdan-code/COLUMBUS",
+          "sha": "b8a54040537086d2a9b649483e4ff7bc3228f762",
+          "url": "https://github.com/sverdlikdan-code/COLUMBUS/commit/b8a54040537086d2a9b649483e4ff7bc3228f762",
+          "message": "fix(formula-road): TAHSHIV path — Windows share vs Linux local file\n\nOn Linux VPS: read TAHSHIV_FORMULA.xlsx from server/ directory (copied via SCP).\nOn Windows: keep network share path.\nMonthly update: scp new file to root@31.154.67.58:/root/COLUMBUS/server/TAHSHIV_FORMULA.xlsx\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "ironcalc/IronCalc",
+          "sha": "cec5fa7de36e0dd856455675422a2677d1b1b498",
+          "url": "https://github.com/ironcalc/IronCalc/commit/cec5fa7de36e0dd856455675422a2677d1b1b498",
+          "message": "FIX: Formulas in defined names must be parsed and stringified to xlsx"
+        },
+        {
+          "repo": "GitHubNewbie0/odf-kit",
+          "sha": "cd7900aae8d69b517915f5c77da1da4ff4a66035",
+          "url": "https://github.com/GitHubNewbie0/odf-kit/commit/cd7900aae8d69b517915f5c77da1da4ff4a66035",
+          "message": "fix(xlsx-to-ods): fix formula cell interface mismatch (closes #25)"
+        },
+        {
+          "repo": "tpt-solutions/tpt-lattice",
+          "sha": "9ecb9bba8e6c619d812157fc9c8dd0abf42ac429",
+          "url": "https://github.com/tpt-solutions/tpt-lattice/commit/9ecb9bba8e6c619d812157fc9c8dd0abf42ac429",
+          "message": "Add per-crate docs, CI, wasm harness, xlsx fixture tests, and Phase 3 sync layer\n\n- Per-crate README.md + CHANGELOG.md for all 8 crates and root\n- CI workflow: fmt, clippy -D warnings, test, wasm-pack build\n- tpt-lattice-wasm: getrandom/wasm_js fix, serde tag fix, Init/DeleteCell/TakeOutbox\n  protocol; regenerate pkg; add Web Worker HTML/JS harness (verified via Node smoke test)\n- tpt-lattice-import-xlsx: real .xlsx fixture + integration tests; fix formula range\n  misalignment bug in importer\n- tpt-lattice-server: retain op history and replay to new connections for reconvergence\n- frontend (SolidJS + Vite + TS): virtualized Canvas grid, cell editing, formula bar,\n  toolbar, sheet tabs; SyncClient with IndexedDB op queue, offline replay, and a\n  convergence test; wired to the engine worker"
+        },
+        {
+          "repo": "oonufrienko/trello-excel-preview",
+          "sha": "f8104ba1b3ff11f0c19169730f46a255b53fd078",
+          "url": "https://github.com/oonufrienko/trello-excel-preview/commit/f8104ba1b3ff11f0c19169730f46a255b53fd078",
+          "message": "Merge fix/formula-empty-cells: render formula text when XLSX cell has no cached value"
+        },
+        {
+          "repo": "wilson-anysphere/formula",
+          "sha": "fd8b9cc1a69c55b0bba1efb36037021d058d6038",
+          "url": "https://github.com/wilson-anysphere/formula/commit/fd8b9cc1a69c55b0bba1efb36037021d058d6038",
+          "message": "fix: tighten workbook format detection and keep loaders compiling\n\n- Add detect_workbook_format tests (xlsx/xlsm/xlsb/xls/csv/parquet + encrypted OOXML)\n\n- Tighten CSV sniffing to avoid misclassifying arbitrary plaintext as CSV\n\n- Fix formula-engine helpers around Expr::FieldAccess in bytecode compilation\n\n- Fix formula-vba signature binding helpers missing DigestAlg/compute_vba_project_digest imports\n\n- Fix formula-xlsx rich_data module duplication (move impl into rich_data/ and remove duplicate mod decl)"
+        },
+        {
+          "repo": "opendocument-app/OpenDocument.core",
+          "sha": "c1e91a79681190302336e13541b60a2627fee37a",
+          "url": "https://github.com/opendocument-app/OpenDocument.core/commit/c1e91a79681190302336e13541b60a2627fee37a",
+          "message": "feat(formula): evaluate a parsed formula, or give no answer (#1008)\n\n* feat(formula): evaluate a parsed formula, or give no answer\n\n`formula::evaluate` computes the values, the operators and the references\nof a formula, and propagates errors. It gives a value or no answer, and\nnever a wrong value (decision 29). It gives no answer for a function it\ndoes not know, a name, a reference into another document, a cell with no\nanswer, and a text whose number depends on the locale.\n\n- `formula::Settings` holds the dialect and the settings of a document.\n  An ods follows LibreOffice and reads `table:calculation-settings`. An\n  xlsx follows Excel, which types a boolean apart and computes `0^0` as\n  `#NUM!`.\n- `internal::SheetCellSource` reads the cells of a decoded document.\n- A corpus test evaluates every formula of the test spreadsheets and\n  compares each answer with the result that the file caches. 8408 of\n  15160 formulas get an answer, and all of them match.\n\nThe corpus showed four faults in the readers:\n\n- An ods and an xlsx cell that states no value read as a string, so an\n  empty cell and an empty text were the same. They read as `unknown` now.\n- An ods error result read as a string. It reads as `error` now.\n- An ods cell with a value or a formula but no text was not read.\n- After a merge in an ods row, the cell lookup and the formula visitor\n  counted the positions wrong. Each cell run now states its first column.\n\n* fix(formula): read the old ods error form from a number cell only\n\nLibreOffice 3 and OpenOffice state an error as the number 0 that shows its\nspelling. The source read every formula cell whose text spells an error as\nthat error, so a formula whose text result is \"#N/A\" read as #N/A.\n\nAlso remove the unused SheetCellSource::sheets(), move the Number and Text\n"
+        }
+      ]
+    },
+    {
+      "name": "commits_1",
+      "url": "https://api.github.com/search/commits?q=%22incorrect%20formula%22%20excel&per_page=15",
+      "utc": "2026-10-15T00:15:58.559417+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/search/commits?q=%22incorrect%20formula%22%20excel&per_page=15",
+      "ok": true,
+      "bytes": 157863,
+      "sha256": "772c1bf8d2ad995745263d127df3850a645868f4ba4a642a2b212f488d1ee2ef",
+      "path": "source_discovery/metadata_v3/commits_1.json",
+      "total_count": 28,
+      "candidates": [
+        {
+          "repo": "a83017083-lab/OpenWAaa",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/a83017083-lab/OpenWAaa/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "Lazare-42/OfficeCLI",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/Lazare-42/OfficeCLI/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "DorianGallo/OfficeCLI",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/DorianGallo/OfficeCLI/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "13888285815/codebuddy-OfficeCLI",
+          "sha": "e97adbc35a8bc24d33b66507bc0b7368f3e1f393",
+          "url": "https://github.com/13888285815/codebuddy-OfficeCLI/commit/e97adbc35a8bc24d33b66507bc0b7368f3e1f393",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "trailer-run/OfficeCLI",
+          "sha": "e97adbc35a8bc24d33b66507bc0b7368f3e1f393",
+          "url": "https://github.com/trailer-run/OfficeCLI/commit/e97adbc35a8bc24d33b66507bc0b7368f3e1f393",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "shixianghua/OfficeCLI-Enhanced",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/shixianghua/OfficeCLI-Enhanced/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "andreyjonathann/Kerja-Praktek---PLN-UP3",
+          "sha": "0527dc17f9d857fbe6edb7b91f064949ed035914",
+          "url": "https://github.com/andreyjonathann/Kerja-Praktek---PLN-UP3/commit/0527dc17f9d857fbe6edb7b91f064949ed035914",
+          "message": "fix(susut): revert model to 3-component schema (kwh_netto, pssd, kwh_jual_309)\n\n- Matches official KM KBJ 2026 formula (Excel sheet INPUT I, rows 33-37):\n  Susut% = (kwh_netto - pssd - kwh_jual_309) / kwh_netto * 100\n- Reverts the 2-component simplification from the July 16 migration\n  which used a different, incorrect formula\n- Part of 3-step fix: migration (done) -> model (this) -> controller -> frontend"
+        },
+        {
+          "repo": "Ck1sap/OfficeCLI",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/Ck1sap/OfficeCLI/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "ai-integr8tor/iOfficeAI-OfficeCLI",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/ai-integr8tor/iOfficeAI-OfficeCLI/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "iOfficeAI/OfficeCLI",
+          "sha": "c760c873ed070fe9e398112b02f202e79389cb4b",
+          "url": "https://github.com/iOfficeAI/OfficeCLI/commit/c760c873ed070fe9e398112b02f202e79389cb4b",
+          "message": "fix(excel): delete calc chain after SetRange to prevent stale formula values\n\nSetCellProperties calls DeleteCalcChainIfPresent() but SetRange did not,\nleaving a stale calculation chain when formulas are set via a range path.\nExcel uses the stale chain and shows incorrect formula results."
+        },
+        {
+          "repo": "czmobin/boors",
+          "sha": "c295fba4f3a49204c12e560d7bba4ebf4f58822e",
+          "url": "https://github.com/czmobin/boors/commit/c295fba4f3a49204c12e560d7bba4ebf4f58822e",
+          "message": "Keep only latest Excel sheet instead of history\n\nChanged Excel behavior to overwrite file on each scan:\n- Before: mode='a' created new sheets for each scan (15-56, 15-57, etc.)\n- After: mode='w' overwrites file, keeping only latest scan\n\nBenefits:\n- Cleaner Excel file with only current data\n- Smaller file size\n- Less confusing for users\n- Old sheets with incorrect formulas are automatically removed\n\nChanges:\n- save_data: Use mode='w' to recreate file on each scan\n- create_summary_sheet: Still uses mode='a' to add filtered sheet to existing file\n\nResult: Excel will have maximum 2 sheets:\n1. Latest scan (e.g., \"15-56\")\n2. Filtered results (if filter was run)"
+        },
+        {
+          "repo": "tltoan/hugo-landing",
+          "sha": "deeb3db718b9d36ee1c241ffbac001996f43d5b5",
+          "url": "https://github.com/tltoan/hugo-landing/commit/deeb3db718b9d36ee1c241ffbac001996f43d5b5",
+          "message": "✨ Feature: Smart Error Hints & Excel-like Keyboard Navigation\n\nSmart Error Hints:\n- Automatic targeted error feedback when users enter incorrect formulas\n- Context-aware error messages based on what the user actually entered\n- Red styling to distinguish error hints from regular hints\n- Smart pattern detection (e.g., \"You're calculating 10% of revenue, not 110%. Try =B4*1.1\")\n- Auto-hide after 8 seconds for non-intrusive learning\n\nExcel-like Keyboard Shortcuts:\n- Enter: Move down one cell after editing\n- Tab: Move right one cell (wraps to next row)\n- Arrow Keys: Navigate between cells (↑↓←→)\n- Escape: Cancel editing and restore original value\n- F2: Focus and select formula bar for editing\n- All cells now focusable with proper tabIndex\n\nThis creates a familiar Excel-like experience while providing smart educational feedback.\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
+        },
+        {
+          "repo": "mslinn/git-stats-scala",
+          "sha": "891e524a29c68c755751f44d1984b711bfd91091",
+          "url": "https://github.com/mslinn/git-stats-scala/commit/891e524a29c68c755751f44d1984b711bfd91091",
+          "message": "Fix incorrect formula that led to malformed Excel with circular references"
+        },
+        {
+          "repo": "elastic/cloudbeat",
+          "sha": "ae37f5c1763c38ae5ec50930af2b3ff11ba66197",
+          "url": "https://github.com/elastic/cloudbeat/commit/ae37f5c1763c38ae5ec50930af2b3ff11ba66197",
+          "message": "fix(deps): update module github.com/xuri/excelize/v2 to v2.10.1 (main) (#5337)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n|\n[github.com/xuri/excelize/v2](https://redirect.github.com/xuri/excelize)\n| require | minor | `v2.8.1` -> `v2.10.1` |\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency\nDashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>xuri/excelize (github.com/xuri/excelize/v2)</summary>\n\n###\n[`v2.10.1`](https://redirect.github.com/qax-os/excelize/releases/tag/v2.10.1)\n\n[Compare\nSource](https://redirect.github.com/xuri/excelize/compare/v2.10.0...v2.10.1)\n\nWe are pleased to announce the release of version 2.10.1. Featured are a\nhandful of new areas of functionality and numerous bug fixes.\n\nA summary of changes is available in the [Release\nNotes](https://redirect.github.com/xuri/excelize/releases/tag/v2.10.1).\nA full list of changes is available in the\n[changelog](https://redirect.github.com/xuri/excelize/compare/v2.10.0...v2.10.1).\n\n#### Release Notes\n\nThe most notable changes in this release are:\n\n##### Breaking Change\n\nRemoved three exported error variables: `ErrStreamSetColStyle`,\n`ErrStreamSetColWidth`, and `ErrStreamSetPanes`.\n\n##### Notable Features\n\n-   Added the `ChartDataPoint` data type\n-   Added the `DataPoint` field to `ChartSeries`\n-   Added the `DropLines` and `HighLowLines` fields to `ChartAxis`\n-   Added the `Name` field to `GraphicOptions`\n- Added two constants: `MaxGraphicAltTextLength` and\n`MaxGraphicNameLength`\n- Added 7 exported error variables: `ErrFillType`,\n`ErrFillGradientColor`, `ErrFillGradientShading`, `ErrFillPatternColor`,\n`ErrFillPattern`, `ErrMaxGraphicAltTextLength` and\n`ErrMaxGraphicNameLength`\n- Added the exported functi"
+        },
+        {
+          "repo": "Pradeepgdeepu/Data_Cleaning_with_excel",
+          "sha": "f784663dad6c0ced6a403bad5c33f73789e504af",
+          "url": "https://github.com/Pradeepgdeepu/Data_Cleaning_with_excel/commit/f784663dad6c0ced6a403bad5c33f73789e504af",
+          "message": "Data cleaning with excel\n\nData cleaning with Excel refers to the process of preparing and transforming raw data to make it suitable for analysis or further processing. Excel provides several built-in tools and functions that can be used to clean and manipulate data efficiently.\r\n\r\nHere are some common data cleaning tasks that can be performed using Excel:\r\n\r\nRemoving duplicates: Excel has a built-in feature to identify and remove duplicate values within a dataset. This is useful when you have repeated entries and want to keep only unique records.\r\n\r\nHandling missing data: Excel provides various methods to deal with missing data, such as filtering, filling empty cells with values, or using functions like IFERROR and ISBLANK to identify and handle missing values.\r\n\r\nFormatting inconsistencies: Excel allows you to standardize data formats by applying formatting rules. For example, you can convert text to lowercase or uppercase, change date formats, or apply custom number formats.\r\n\r\nRemoving unwanted characters: If your data contains unnecessary characters, such as leading/trailing spaces, non-printable characters, or special characters, Excel provides functions like TRIM, CLEAN, and SUBSTITUTE to clean up the data.\r\n\r\nSplitting and merging data: Excel enables you to split text into separate columns based on delimiters like commas, spaces, or custom characters. Conversely, you can merge data from multiple columns into a single column using concatenation.\r\n\r\nCorrecting errors: Excel offers formulas and functions to identify and correct common errors in data, such as spelling mistakes, inconsistent capitalization, or incorrect formulas. Functions like VLOOKUP, IF, and REPLACE can be used for error correction.\r\n\r\nData validation: Excel allows you to define validation rules to"
+        }
+      ]
+    },
+    {
+      "name": "commits_2",
+      "url": "https://api.github.com/search/commits?q=%22fix%20spreadsheet%22%20xlsx&per_page=15",
+      "utc": "2026-10-15T00:15:59.404872+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/search/commits?q=%22fix%20spreadsheet%22%20xlsx&per_page=15",
+      "ok": true,
+      "bytes": 123694,
+      "sha256": "b356b3bcf6a9d0124e7ec13b7dd6a34363f141aa8e7117f1771a4d65f604bb47",
+      "path": "source_discovery/metadata_v3/commits_2.json",
+      "total_count": 1416,
+      "candidates": [
+        {
+          "repo": "ZHYX91/docwen",
+          "sha": "b8481c0f7b6798086baa8500a617f176feab89e1",
+          "url": "https://github.com/ZHYX91/docwen/commit/b8481c0f7b6798086baa8500a617f176feab89e1",
+          "message": "feat(gui): unify density, typography, scaling and icon resources (#34)\n\n* chore: unify workspace temporary roots and fix recycle guard\n\n* fix(runtime): keep artifact discard inside staging\n\n* test(runtime): cover linked-parent discard boundary\n\n* fix(spreadsheet): reject delimited cells that XLSX would truncate\n\n* test(spreadsheet): cover XLSX cell text length boundary\n\n* test(spreadsheet): surface delimited cell length failures\n\n* fix(spreadsheet): classify overlong hub cells as conversion failure\n\n* test(spreadsheet): cover SmartSheet overlong-cell rejection\n\n* feat(spreadsheet): warn when formula caches are unavailable\n\n* test(spreadsheet): distinguish unavailable formula caches\n\n* fix(spreadsheet): keep cancellation responsive in long loops\n\n* test(spreadsheet): cover large shapes and cancellation boundaries\n\n* test(release): bind native Office smoke evidence\n\n* test(release): verify Office host evidence in receipts\n\n* docs(release): define Office host acceptance evidence\n\n* fix(spreadsheet): close workbook views when scan is cancelled\n\n* test(spreadsheet): close views on formula-scan cancellation\n\n* style(release): format Office evidence verifier\n\n* style(spreadsheet): keep workbook fixture state instance-local\n\n* style(release): match repository formatter width\n\n* test(spreadsheet): keep long-cell pytest ids bounded on Windows\n\n* test(spreadsheet): keep long-cell pytest ids bounded on Windows\n\n* test(spreadsheet): keep long-cell pytest ids bounded on Windows\n\n* feat(gui): unify density typography scaling and icon resources\n\n* chore: unify workspace temporary roots and fix recycle guard\n\n* fix(runtime): anchor rejected artifact cleanup to OS handles\n\n* test(spreadsheet): prove persisted cell text boundaries\n\n* fix(spreadsheet): distinguish empty formula caches and "
+        },
+        {
+          "repo": "ZHYX91/docwen",
+          "sha": "b814302cc6d4296194e49633fbeace464a40deed",
+          "url": "https://github.com/ZHYX91/docwen/commit/b814302cc6d4296194e49633fbeace464a40deed",
+          "message": "Complete spreadsheet and theme fixes for 0.14.1 (#39)\n\n* fix(spreadsheet): enforce native XLSX worksheet dimensions\n\n* fix(spreadsheet): classify hub worksheet dimension failures\n\n* test(spreadsheet): cover native XLSX column boundary\n\n* test(spreadsheet): reject oversized direct XLSX grids\n\n* test(spreadsheet): reject oversized SmartSheet hub grids\n\n* refactor(spreadsheet): centralize XLSX grid limit checks\n\n* test(spreadsheet): cover native XLSX row boundary\n\n* fix(spreadsheet): preserve downstream SmartSheet warnings\n\n* test(spreadsheet): keep hub warnings through SmartSheet\n\n* fix(gui): expose requested theme mode for preview rollback\n\n* fix(gui): rollback theme previews to the requested mode\n\n* test(gui): preserve follow-system mode across cancel\n\n* test(release): cross-check Office evidence against retained files\n\n* test(release): reject inconsistent Office evidence claims\n\n* style(spreadsheet): match Ruff formatting\n\n* test(release): revalidate live Office evidence bytes\n\n* test(release): catch evidence mutation after manifest capture\n\n* fix: complete spreadsheet and settings regression coverage for 0.14.1\n\n* build: refresh 0.14.1 CLI fixture identities\n\n* build: pin updated workspace lock identity"
+        },
+        {
+          "repo": "Cloudgeni-ai/opengeni",
+          "sha": "27287eed237316fc7fea3d70e30dec005d6cdb41",
+          "url": "https://github.com/Cloudgeni-ai/opengeni/commit/27287eed237316fc7fea3d70e30dec005d6cdb41",
+          "message": "fix(artifacts): add native spreadsheet XLSX download (OPE-770) (#3940)\n\n* fix(artifacts): add native spreadsheet XLSX download (OPE-770)\n\n* fix(spreadsheets): gate download through async UI authoring"
+        },
+        {
+          "repo": "vfydr2m9wk-ops/InkDOS",
+          "sha": "a7abd33d9e226cead5ba9b37d90eea5bd49b1ebb",
+          "url": "https://github.com/vfydr2m9wk-ops/InkDOS/commit/a7abd33d9e226cead5ba9b37d90eea5bd49b1ebb",
+          "message": "Merge PR #225: keep appended XLSX cell styles across saves\n\nfix(spreadsheets): keep appended XLSX cell styles across saves"
+        },
+        {
+          "repo": "dncmaduro/dochub",
+          "sha": "0965ed2f93952247c3bba64eb9241382bf179d37",
+          "url": "https://github.com/dncmaduro/dochub/commit/0965ed2f93952247c3bba64eb9241382bf179d37",
+          "message": "fix(spreadsheet): support root-relative XLSX relationships"
+        },
+        {
+          "repo": "sunu-py-jp/LikeX",
+          "sha": "226808132d5a4bbccc0f89dc90a72ab5e15ff50b",
+          "url": "https://github.com/sunu-py-jp/LikeX/commit/226808132d5a4bbccc0f89dc90a72ab5e15ff50b",
+          "message": "Fix spreadsheet XLSX import recovery and drawing fidelity"
+        },
+        {
+          "repo": "poe-platform/poe-code",
+          "sha": "a3cb78163e265585e47f34397cd13dfccf6a221c",
+          "url": "https://github.com/poe-platform/poe-code/commit/a3cb78163e265585e47f34397cd13dfccf6a221c",
+          "message": "fix(spreadsheet): avoid false XLSX margin loss warnings"
+        },
+        {
+          "repo": "poe-platform/poe-code",
+          "sha": "ea381366f531d4e3deb7b85abd67c5d268b41ad2",
+          "url": "https://github.com/poe-platform/poe-code/commit/ea381366f531d4e3deb7b85abd67c5d268b41ad2",
+          "message": "fix(spreadsheet): transport XLSX workbook protection to BIFF"
+        },
+        {
+          "repo": "FernandaCabrera/inventory-assistant",
+          "sha": "e3a6ae4849c1069cd7edaa3c70508a653b925174",
+          "url": "https://github.com/FernandaCabrera/inventory-assistant/commit/e3a6ae4849c1069cd7edaa3c70508a653b925174",
+          "message": "Merge pull request #2 from FernandaCabrera/fix-xlsx-import\n\nFix spreadsheet import failing on workbooks with Excel tables"
+        },
+        {
+          "repo": "ULTRA-OS-Project/UltraCanvas",
+          "sha": "526e8b2b189813246ce015defbc64aa748a7d3f9",
+          "url": "https://github.com/ULTRA-OS-Project/UltraCanvas/commit/526e8b2b189813246ce015defbc64aa748a7d3f9",
+          "message": "Merge pull request #758 from ULTRA-OS-Project/claude/spreadsheet-formula-fixes\n\nSpreadsheet formulas: typed formula-cell results, dependency order, error literals, .xlsx cross-sheet syntax, ~100 Excel functions"
+        },
+        {
+          "repo": "pakistansaheb/masonyoung",
+          "sha": "38a9ffbdf323a6bec23a0266aed5a3d065a51cb8",
+          "url": "https://github.com/pakistansaheb/masonyoung/commit/38a9ffbdf323a6bec23a0266aed5a3d065a51cb8",
+          "message": "Fix spreadsheet notes extraction to support legacy .xls files\n\nexceljs's xlsx.load() only reads the modern zip-based .xlsx format,\nso any legacy Excel 97-2003 .xls attachment (a real-world floor plan\nschedule format, per the \"Can't find end of central directory: is\nthis a zip file?\" error) failed outright. Swapped to the xlsx\n(SheetJS) library, which reads .xls, .xlsx and .csv uniformly.\nVerified against a real .xls test file end to end in a browser."
+        },
+        {
+          "repo": "sainani1214/zoya",
+          "sha": "049ff7a490cd051fed0e8fd09cd408e66638040c",
+          "url": "https://github.com/sainani1214/zoya/commit/049ff7a490cd051fed0e8fd09cd408e66638040c",
+          "message": "fix: spreadsheet cells that look like formulas are stored as text (xlsx) or apostrophe-prefixed (csv)"
+        },
+        {
+          "repo": "appfbj-stack/desktop-pi-kairos",
+          "sha": "2cdcdf1348cb3aaaed11db02785a1bf44b3fe8f0",
+          "url": "https://github.com/appfbj-stack/desktop-pi-kairos/commit/2cdcdf1348cb3aaaed11db02785a1bf44b3fe8f0",
+          "message": "fix(spreadsheets): xlsx precisa default import (readFile sumia no ESM)\n\nPacote xlsx (SheetJS) e CJS. Com `import * as XLSX` em modulo ESM, o tsc +\nNode mantem readFile como undefined - funcoes ficam apenas em X.default.\nResultado: sheets:read e sheets:list quebravam com \"XLSX.readFile is not\na function\".\n\nFix: trocar pra `import XLSX from \"xlsx\"` (default import). Aplicado nos\n5 tools da extensao."
+        },
+        {
+          "repo": "Aankirz/zoya",
+          "sha": "311243c3976df60f1e0bdcba7a912ab3fdeb773d",
+          "url": "https://github.com/Aankirz/zoya/commit/311243c3976df60f1e0bdcba7a912ab3fdeb773d",
+          "message": "fix: spreadsheet cells that look like formulas are stored as text (xlsx) or apostrophe-prefixed (csv)"
+        },
+        {
+          "repo": "TheNinjask/DexTracker",
+          "sha": "1526632314347a3cc56a84dd83bb57d6f114efac",
+          "url": "https://github.com/TheNinjask/DexTracker/commit/1526632314347a3cc56a84dd83bb57d6f114efac",
+          "message": "Fix spreadsheet filename in README\n\nUpdate the reference from DexTrackerV2.xlsx to DexTracker.xlsx to match the correct filename."
+        }
+      ]
+    },
+    {
+      "name": "commits_3",
+      "url": "https://api.github.com/search/commits?q=%22formula%20error%22%20workbook&per_page=15",
+      "utc": "2026-10-15T00:16:00.148522+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/search/commits?q=%22formula%20error%22%20workbook&per_page=15",
+      "ok": true,
+      "bytes": 124352,
+      "sha256": "140e6ca7d6ff1bedfb8839447d889e67113b60aef2f528d534feb21e213629fb",
+      "path": "source_discovery/metadata_v3/commits_3.json",
+      "total_count": 561,
+      "candidates": [
+        {
+          "repo": "Tharun0127/Premium-Card-Refresh-Who-Wins-Who-Loses",
+          "sha": "aeb51ad8a4f605563ffae111f7dd2155507e3224",
+          "url": "https://github.com/Tharun0127/Premium-Card-Refresh-Who-Wins-Who-Loses/commit/aeb51ad8a4f605563ffae111f7dd2155507e3224",
+          "message": "Step 3-5: Python model, Excel workbook with live formulas, LibreOffice recalc, reconciliation tests\n\nWorkbook recalculates with 0 formula errors; 911 values match the Python model."
+        },
+        {
+          "repo": "cosmoscalibur/sheetrs",
+          "sha": "9dc036067c4a47ad57c99ddf7de54aae6aace527",
+          "url": "https://github.com/cosmoscalibur/sheetrs/commit/9dc036067c4a47ad57c99ddf7de54aae6aace527",
+          "message": "feat(sheetstats): report per-sheet used, formula, error and empty cells\n\nReport for every sheet the used cells (value or formula), formulas,\nerror values, empty cells inside the used area and the uncompressed\nXML size, plus workbook totals for each metric. Computation moves to\nsheetstats/src/stats.rs, tested on both test workbooks for XLSX/ODS\nparity.\n\nSheet::xml_size_bytes exposes the sheet XML size: the worksheet part\nin XLSX, found through the sheet relationships instead of the\nsheetN.xml number, and the byte span of <table:table> in ODS, which\npreviously had no per-sheet size.\n\nJSON output groups per-sheet metrics in a `sheets` array.\n\nRefs #10"
+        },
+        {
+          "repo": "w31r4/OfficeKit",
+          "sha": "0e1d8c8facd72bc010d555d1f98e6ef0517f8617",
+          "url": "https://github.com/w31r4/OfficeKit/commit/0e1d8c8facd72bc010d555d1f98e6ef0517f8617",
+          "message": "feat(ppj): sync fixed-formula error data with embedded workbooks"
+        },
+        {
+          "repo": "krwizxp/fcupdater",
+          "sha": "15df74736df045b87d70da56559da012e8158670",
+          "url": "https://github.com/krwizxp/fcupdater/commit/15df74736df045b87d70da56559da012e8158670",
+          "message": "Refresh Chungcheong fuel workbook from Opinet for 2026-09-29\n\nRun the native updater with --verify: update 106 price records and one brand, add 12 stations, and remove none. The workbook now contains 868 stations across seven regions.\n\nPreserve input values, formulas, styles, and manual settings. Independently verify 12,351 cached values and history comparisons, with no formula error cells."
+        },
+        {
+          "repo": "sabodaha/windpark-rechner",
+          "sha": "73e15a649c9967c492be5e60021f5d93f6994048",
+          "url": "https://github.com/sabodaha/windpark-rechner/commit/73e15a649c9967c492be5e60021f5d93f6994048",
+          "message": "Methodology: the workbook also checked in Google Sheets (E07)\n\nThe owner opened the base-case workbook in Google Sheets on 1 Oct 2026 and went through the checklist: results\nequal to the website's, no formula errors, switches limited to their values, the two in-file edits as in Excel.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "reckak/statistics-for-psychology",
+          "sha": "00e3b5d2e27600fd33b6fbc5034be38e79564368",
+          "url": "https://github.com/reckak/statistics-for-psychology/commit/00e3b5d2e27600fd33b6fbc5034be38e79564368",
+          "message": "Add chapter 6 workbook, its generator and Excel checks\n\nThe workbook has 26 sheets: inputs for the examples and exercises, the\ncomplete simulated data behind the figures and five separate calculation\nsheets with Czech formulas.\n\nThe shared generator writes purely numeric blocks of 1,000 rows or more in\none range assignment, and the formula-error check skips sheets without\nformulas. Neither change reaches the workbooks of chapters 1-5, which were\nnot rebuilt. Build, preview and check scripts now cover chapters 1-6.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "KathiriyaHardik/ai-lab",
+          "sha": "4bdb92e8c92c5b4bcef9d8b0f1d7131fb7a47cbd",
+          "url": "https://github.com/KathiriyaHardik/ai-lab/commit/4bdb92e8c92c5b4bcef9d8b0f1d7131fb7a47cbd",
+          "message": "Add AI job application tracker (Excel CRM)\n\nGenerator (openpyxl) for a job-search CRM workbook: Applications,\nInterviews, Companies, Contacts, Follow-Ups, Analytics, Dashboard,\nSettings and Guide tabs. No macros, tables or dynamic arrays.\n\nverify_tracker.py recalculates a dummy-data copy in Microsoft Excel\nand checks 141 values against an independent Python model, plus a\nzero-formula-error check on the clean workbook.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "esierra-engineer/iplp_ai",
+          "sha": "882058e5ef02cc4f45f15e8d4b9012e3865c8d33",
+          "url": "https://github.com/esierra-engineer/iplp_ai/commit/882058e5ef02cc4f45f15e8d4b9012e3865c8d33",
+          "message": "Import: tolerate live Excel formula errors instead of crashing\n\nReal-world find: importing a newer, currently-in-use xlsm crashed on a\ncached '#NAME?' formula error in the Centrales sheet (a broken/unresolved\nformula reference). Added _safe_float() and applied it to every numeric\ncell read across the importer - logs a warning and falls back to 0.0\ninstead of aborting the whole import on one bad cell.\n\nRunning it against that real case surfaced a genuine data-quality issue\nin the live workbook, not a bug in this tool: 9 major reservoirs\n(LMAULE, CIPRESES, PEHUENCHE, COLBUN, ELTORO, RAPEL, CANUTILLAR, RALCO,\nPANGUE) have #NAME? in their initial-volume column (and a few in\nrendimiento/vol_fin too) - worth fixing in the source workbook before\ntrusting this case's plpcnfce.dat output.\n\n37 passed tests (no regressions)."
+        },
+        {
+          "repo": "Zzanoni/app-hardening-baseline",
+          "sha": "38bba41c56f7f2d23f6d6efcde9a950e6af60852",
+          "url": "https://github.com/Zzanoni/app-hardening-baseline/commit/38bba41c56f7f2d23f6d6efcde9a950e6af60852",
+          "message": "Add contract export/check, v1->v2 app workbook upgrade, tests and CI\n\n- export_contract.py writes contract/controls.json (345 ASVS + custom controls)\n- check_contract.py fails on any workbook <-> contract drift, including formula errors\n  after LibreOffice recalculation\n- upgrade_app_workbook.py moves a filled-in v1 app copy onto the v2 template\n  (answers by key, statuses by ASVS ID, custom rows by Control ID)\n- tests/ cover idempotency, unchanged v1 results, Extended Characterization scenarios\n  (in-house public web, internal API, COTS with permanent vendor access, SaaS) and upgrade\n- CI runs the check and the tests on every PR\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "georgiadawg27/AppropsIntelligence",
+          "sha": "7a42cfabfffbf662e47f98e9516696c3310c6057",
+          "url": "https://github.com/georgiadawg27/AppropsIntelligence/commit/7a42cfabfffbf662e47f98e9516696c3310c6057",
+          "message": "Data files in the repo; CI builds and recalculates the workbook\n\ndata/staged.json (v38, sha256 cb0b4d86...) and scripts/build_workbook.py\n(build_final, sha256 c8b5513a...; only its two /home/claude paths changed to\ndata/staged.json and build/Approps_Pilot_Schema_Loaded.xlsx).\n\nThe data job builds the workbook (the script's checks stop it on any\nfailure), recalculates it in LibreOffice headless and fails on any formula\nerror (scripts/recalc_check.py), and uploads it as an artifact.\ntests/test_build_workbook.py holds the build to the v38 workbook sheet by\nsheet (values; tests/fixtures/workbook_v38_values.json is its fingerprint)\nand checks each kind of bad data stops the build.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01DTnngPEGmJdQJwRPELZn1s"
+        },
+        {
+          "repo": "tejalsakpal66-tech/lifemap-redesign",
+          "sha": "90a5fd3df0f4b997512d27d6c3a620ace432be86",
+          "url": "https://github.com/tejalsakpal66-tech/lifemap-redesign/commit/90a5fd3df0f4b997512d27d6c3a620ace432be86",
+          "message": "LifeMap v2.7: final app, complete workbook (47 sheets), Word spec, docs, tools and tests\n\nWeb app now includes the simpler journey (free retirement age, Date has passed,\nonly personal choices block results, Set by LifeMap standards, 'we need N\nthings' card), audit fixes and the deposit-rate default. Complete workbook with\nMake my plan engine and UI/UX screen guide; plan-vs-xlsx 208/208, calc-vs-xlsx\n161/161 + 119 gates, 0 formula errors.\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01GhUEAkgdki1q9EpFqaquGU"
+        },
+        {
+          "repo": "poojatirupati-ops/Lifemap",
+          "sha": "90a5fd3df0f4b997512d27d6c3a620ace432be86",
+          "url": "https://github.com/poojatirupati-ops/Lifemap/commit/90a5fd3df0f4b997512d27d6c3a620ace432be86",
+          "message": "LifeMap v2.7: final app, complete workbook (47 sheets), Word spec, docs, tools and tests\n\nWeb app now includes the simpler journey (free retirement age, Date has passed,\nonly personal choices block results, Set by LifeMap standards, 'we need N\nthings' card), audit fixes and the deposit-rate default. Complete workbook with\nMake my plan engine and UI/UX screen guide; plan-vs-xlsx 208/208, calc-vs-xlsx\n161/161 + 119 gates, 0 formula errors.\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01GhUEAkgdki1q9EpFqaquGU"
+        },
+        {
+          "repo": "ZCDeng/finance-skill-foundry",
+          "sha": "099b138615ef2ced35ac35847b8417d11b618621",
+          "url": "https://github.com/ZCDeng/finance-skill-foundry/commit/099b138615ef2ced35ac35847b8417d11b618621",
+          "message": "Add workbook formula health check on XLSX import\n\nfoundry/workbook_health.py reads an uploaded workbook once (bytes in, dict\nout, never raises) and reports hints: external links (file names only),\niterative calculation, hidden sheets, external references, volatile\nfunctions, hard-coded numbers in formulas, error literals, cached errors,\nformulas without a cached value, and formulas that break the copied pattern\nof their row or column. Oversized sheets are skipped and reported; the scan\nstops at 200,000 formula cells and says so.\n\nAnalysisStore.add_dataset stores the result as a top-level workbook_health\nfield for .xlsx uploads, computed after parsing and before the task lock.\nExisting refusals are unchanged and duplicates return the stored record.\nThe read-only workbook-health finance file command recomputes it for older\nsnapshots after verifying the archived bytes. The range preview now also\nopens sheets that contain error cells, so a cached-error hint can be viewed.\n\nCo-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01MApmBmcfhS7wa3QLHJRCae"
+        },
+        {
+          "repo": "nicrpayne/kit-gap-audit",
+          "sha": "8fe52fd61bbbb3b297d0b1c9be9e7e6d4bb5c9c5",
+          "url": "https://github.com/nicrpayne/kit-gap-audit/commit/8fe52fd61bbbb3b297d0b1c9be9e7e6d4bb5c9c5",
+          "message": "Harden /api/parse-spreadsheet against uncaught crashes\n\nProduction bug: uploading a real spreadsheet gave \"Couldn't read that\nspreadsheet\" with no useful detail -- the browser console showed a bare\n500, meaning something threw past the only try/catch in the route\n(around workbook.xlsx.load). The row/cell extraction loop after a\nsuccessful load wasn't guarded at all, and cellToText could throw on a\ncell shape it didn't expect (formula errors, malformed rich text, etc.).\n\nMade cellToText defensive (never throws, degrades to \"\" on anything\nunexpected) and wrapped per-sheet parsing in its own try/catch so one\nmalformed sheet can't sink the whole workbook -- partial results still\ncome back, with failures logged server-side and listed in the response\nif every sheet fails. Formula-error cells (#DIV/0!, #N/A) are now\nexplicitly handled instead of falling through unhandled.\n\nVerified against a torture-test workbook (formula errors, hyperlinks,\nrich text, booleans, dates, comments, data validation, merged banners,\nan empty sheet) built with exceljs itself and run through the real\nroute -- all handled cleanly, no crash. Re-verified both real fixtures\nfrom earlier in this session still parse correctly (no regression).\n\nStill don't have the exact file that triggered the original crash --\nthis closes every failure mode found by testing, but if it recurs the\nresponse (and Railway's server logs, via the new console.error) will\nnow say which sheet and why instead of a bare 500.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01PchxNtht5nMUBc4zMntp4c"
+        },
+        {
+          "repo": "tomwilson41986/ashcroft",
+          "sha": "47a8a756a8735b9504172ef63b867eb0bc99efeb",
+          "url": "https://github.com/tomwilson41986/ashcroft/commit/47a8a756a8735b9504172ef63b867eb0bc99efeb",
+          "message": "Today's 06:00 record as a workbook: the 535's predictions for 25 Sep, sent to the owner\n\nreports/predictions_2026-09-25_0600.xlsx, from s3://ashcroft/predictions/2026-09-25.csv\n(Daily Predictions run 196, written 06:57 UTC, the file the forward test scores)\njoined to the 06:46 card: 528 runners, 44 races, 6 meetings. Built with\nscripts/predictions_workbook.py; recalculated, no formula errors.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_016u1Fo7XhbdeBDHcXP4s8th"
+        }
+      ]
+    },
+    {
+      "name": "commits_4",
+      "url": "https://api.github.com/search/commits?q=%22fix%22%20%22xlsx%22%20%22calculation%22&per_page=15",
+      "utc": "2026-10-15T00:16:00.166127+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/search/commits?q=%22fix%22%20%22xlsx%22%20%22calculation%22&per_page=15",
+      "ok": true,
+      "bytes": 117331,
+      "sha256": "63cfb6faa5e4fee5a524df21f17d4ca27f20e43a8f181cdf7b170279c0263e45",
+      "path": "source_discovery/metadata_v3/commits_4.json",
+      "total_count": 5165,
+      "candidates": [
+        {
+          "repo": "onixus/EvaCal",
+          "sha": "701c9df1ec7611931e72092e3dd4b11cb7e1aa3e",
+          "url": "https://github.com/onixus/EvaCal/commit/701c9df1ec7611931e72092e3dd4b11cb7e1aa3e",
+          "message": "fix(xlsx): trace calculation XLSX against GOST package requirements\n\nThe calculation XLSX traceability matrix now takes requirements from the\nsame source as the hub tab (fresh studio draft or latest GOST package,\nfalling back to stage-derived requirements), so specification rows\nlinked to requirements show up in the supply column.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "arashrohani82-hub/metra-railway",
+          "sha": "88bb804254fd01c6114867bfb32c5d08386a13ae",
+          "url": "https://github.com/arashrohani82-hub/metra-railway/commit/88bb804254fd01c6114867bfb32c5d08386a13ae",
+          "message": "Fix List.xlsx sync when Excel calc properties are missing (#24)\n\n* Fix List.xlsx sync when calculation settings are missing\n\n* Add regression test for missing Excel calculation properties"
+        },
+        {
+          "repo": "OpenSourceRisk/QuantLibAddIn",
+          "sha": "ce2e7a11793e98010d8d2603e71c584500ebdfaa",
+          "url": "https://github.com/OpenSourceRisk/QuantLibAddIn/commit/ce2e7a11793e98010d8d2603e71c584500ebdfaa",
+          "message": "ACADIAQPR-14118: Add QuantExt example workbooks\n\nMove QuantExtRateHelpers.xlsx to StandaloneExamples/QuantExt and add FxIndex.xlsx, FXLinkedCashflows.xlsx and CurrencySwap.xlsx, which exercise the new QuantExt exports with flat curves and the dates and fixings of the Cross_Currency_Swap_rebalancing regression test, checking results against hand calculations. Update history.docs accordingly."
+        },
+        {
+          "repo": "Finco-Protocol/FincoProtocol",
+          "sha": "5757fd37072f701bf8d7286249057c9c2554b97d",
+          "url": "https://github.com/Finco-Protocol/FincoProtocol/commit/5757fd37072f701bf8d7286249057c9c2554b97d",
+          "message": "feat(p1.2): institutional XLSX export — Returns, Run Identity, Reconciliation sheets\n\nDelivers FINCO P1.2 Institutional XLSX Export, closing the deferred\nTRUST_PACK_SOLAR_EXCEL_RECONCILIATION marker.\n\nChanges:\n- app/export/institutional_workbook.py: add three new sheets to the\n  22-sheet workbook — Returns (Project IRR, Equity IRR, Total Sponsor XIRR),\n  Run Identity (run_id, project_id, engine version, export timestamp), and\n  Reconciliation (8 explicit numeric checks: Sources=Uses, CAPEX, Revenue,\n  OPEX, Debt service, and all three return metrics). Fix Sources=Uses\n  check for DSCR-sculpted projects on the clean G2C path (use implied\n  senior debt = CAPEX - equity when _resolve_export_senior_debt_keur\n  returns 0.0). Update INSTITUTIONAL_SHEET_DEFINITIONS and Gap Register\n  (GAP-08 CLOSED). Zero financial engine calls inside\n  export_institutional_workbook_from_bundle (PR-8 single-calculation\n  contract preserved).\n- app/templates/model_methodology.html: update\n  TRUST_PACK_SOLAR_EXCEL_RECONCILIATION from DEFERRED to PASS.\n- tests/test_p1_2_xlsx_export_reconciliation.py: 20 new acceptance tests\n  covering all required P1.2 markers.\n\nAcceptance markers satisfied:\n  XLSX_NO_PARALLEL_CALCULATION_ENGINE = PASS\n  XLSX_SOLAR_FULL_ACCEPTANCE = PASS\n  XLSX_WIND_STRUCTURE_SMOKE = PASS\n  XLSX_DATA_CENTER_STRUCTURE_SMOKE = PASS\n  XLSX_EV_CHARGING_STRUCTURE_SMOKE = PASS\n  XLSX_EXPORT_LAST_RUN_AUTHORITY = PASS\n  XLSX_EXPORT_LINEAGE = PASS\n  XLSX_SOURCES_USES_RECONCILE = PASS\n  XLSX_CAPEX_RECONCILE = PASS\n  XLSX_REVENUE_RECONCILE = PASS\n  XLSX_OPEX_RECONCILE = PASS\n  XLSX_DEBT_RECONCILE = PASS\n  XLSX_RETURNS_RECONCILE = PASS\n  TRUST_PACK_SOLAR_EXCEL_RECONCILIATION = PASS\n  FINCO_P1_2_INSTITUTIONAL_XLSX_EXPORT_COMPLETE\n\nFrozen namespaces: financial_engine/**, finco_core/**, finco_r"
+        },
+        {
+          "repo": "Shoxrux0803/morpho-check-app",
+          "sha": "31ea2810871058549c4883139c880ce36f1f1fb1",
+          "url": "https://github.com/Shoxrux0803/morpho-check-app/commit/31ea2810871058549c4883139c880ce36f1f1fb1",
+          "message": "fix(research): fix bioimpedance dynamic calculations and order in research report XLSX\n\n- Order columns: Anthropometrics -> Skinfolds -> Bioimpedance -> Indices (TVI)\n\n- Replace static acm_percent and visceral_fat with dynamic subject calculations\n\n- Add defensive getattr and address lookup for accurate ecological factor in export\n\n- Add unit tests verifying research XLSX column sequence and calculation validity"
+        },
+        {
+          "repo": "satkerit/calculator_ckpn",
+          "sha": "abe48ca5cd43148cc42bab94251e2c7e6510a1bc",
+          "url": "https://github.com/satkerit/calculator_ckpn/commit/abe48ca5cd43148cc42bab94251e2c7e6510a1bc",
+          "message": "feat(export, pd-netflow): add pd netflow detail xlsx export\n\nAdd complete pd netflow detail export functionality and improve core calculation logic:\n- Add phpoffice/phpspreadsheet composer dependency for xlsx file generation\n- Add new export route, controller action, and frontend view buttons for per-segment pd netflow export, generating multi-sheet xlsx with 3 core tables per group\n- Refactor PdNetflowService to split compound and transition period datasets, ensure all 1-14 buckets are always included in table outputs\n- Fix PdNetflowCalculator logic: correct transition rate formula, compound flow chain calculation, remove unused projection months configuration\n- Update LGD Expected Recovery and Collateral Shortfall controllers to use portfolio-level fallback LGD instead of fixed 50% rate, refine collateral eligibility rules\n- Refactor DetailCkpnController's collective group handling to support dynamic segmentation dimensions\n- Add comprehensive feature tests for pd netflow table validation rules\n- Clean up accidental temporary workbook file"
+        },
+        {
+          "repo": "PSU3D0/formualizer",
+          "sha": "259208f6a1b255dbed191eb99e90367d84c7c300",
+          "url": "https://github.com/PSU3D0/formualizer/commit/259208f6a1b255dbed191eb99e90367d84c7c300",
+          "message": "fix(xlsx): hydrate Calamine calculation names safely"
+        },
+        {
+          "repo": "PanoramaCafe/PanoramaFinanzas",
+          "sha": "a805f4038a3d44402320c69eb47221740b70d477",
+          "url": "https://github.com/PanoramaCafe/PanoramaFinanzas/commit/a805f4038a3d44402320c69eb47221740b70d477",
+          "message": "Hardening PF-V1: sync, backups and provider debt (#2)\n\n* PF hardening: remove continuous payroll polling\n\n* PF hardening: remove 1s sync polling\n\n* PF hardening: isolate XLSX export from JSON backup\n\n* PF hardening: separate JSON backup and XLSX export\n\n* Fix dashboard committed provider debt calculation"
+        },
+        {
+          "repo": "dudaanton/abele-obsidian-plugin",
+          "sha": "b0a0dc43f4414c98f37c3e49999ffa53a87b8b97",
+          "url": "https://github.com/dudaanton/abele-obsidian-plugin/commit/b0a0dc43f4414c98f37c3e49999ffa53a87b8b97",
+          "message": "fix(xlsx): bound formula dependencies before local calculation"
+        },
+        {
+          "repo": "Tawz-star/finxyora",
+          "sha": "0917b2df86e5f204d7e2d927b2f6992030efffe7",
+          "url": "https://github.com/Tawz-star/finxyora/commit/0917b2df86e5f204d7e2d927b2f6992030efffe7",
+          "message": "feat(admin): fix revenue calculations, add automated rejection/refund emails, and upgrade exports to Excel .xlsx"
+        },
+        {
+          "repo": "openooxml/betteroffice",
+          "sha": "611d36500ff7abea173c5b6398ac15966f8eb29a",
+          "url": "https://github.com/openooxml/betteroffice/commit/611d36500ff7abea173c5b6398ac15966f8eb29a",
+          "message": "fix(xlsx): TODAY and NOW in local time (#1253)\n\nTL;DR: today and now in local time\n\n## Summary\n- `TODAY()` and `NOW()` now evaluate in the host's local wall-clock\ntime, as in Excel, instead of UTC. Outside UTC the old value was offset\nby the zone, and `TODAY()` could land on the wrong date near midnight.\n- Every place that samples the clock (worker session, main-thread edit\npeer, preview and replay, and the wasm fallback) converts one sampled\ninstant with that instant's own offset, so DST and half-hour zones are\nhandled. The per-batch calculation context is still generated once and\nshipped, so the worker and the edit peer stay identical.\n- Serials that are already supplied (the `calculation` open option,\nper-request `calculation.nowSerial`, hydrated contexts) are used as\ngiven and never converted.\n- The docs example samples a single instant.\n\n## Test plan\n- New tests east and west of UTC (including a half-hour offset) for\nordinary opens, cleared contexts, retained-open hydration with edit\nreplay, and preview/replay capture in the React worker editor. They fail\non the test-only commit and pass at the fix.\n- Existing session and hydration tests updated to hold in any timezone;\nthe full `@betteroffice/xlsx` and `@betteroffice/xlsx-react` unit suites\nrun under `TZ=Asia/Kolkata` as well as the default.\n- Typecheck for both packages, `cargo fmt`, clippy and a wasm32 check of\n`xlsx-wasm`, and the worker editor browser suite.\n\n## Evidence\n- Test-only commit: the 6 new local-time tests fail (they read UTC\nvalues). At the fix: 8/8 new tests pass; unit suites 835/835 in the\ndefault zone and 835/835 under `TZ=Asia/Kolkata`; touched files 187/187\nunder `TZ=America/New_York`; both typechecks, `cargo fmt`, clippy and\nthe wasm32 check clean; worker editor browser suite 44 passed.\n\n## R"
+        },
+        {
+          "repo": "thecem/octopus_germany",
+          "sha": "f9dbfc7b4ccc9da92a8ce1d7d2cf8a73edfbb42c",
+          "url": "https://github.com/thecem/octopus_germany/commit/f9dbfc7b4ccc9da92a8ce1d7d2cf8a73edfbb42c",
+          "message": "feat: add offline XLSX cost export package\n\n- Generate XLSX and quarter-hour measurement CSV from one shared fetch\n- Support contract-specific GO/Heat zones and Module 1/3 calculations\n- Validate missing readings and daylight-saving intervals\n- Fix action UI selectors and move schedule loading off the event loop\n- Preserve existing CSV-only services\n- Update documentation and release notes for version 0.0.190\n- Remove local Home Assistant configuration from Git tracking"
+        },
+        {
+          "repo": "thecem/octopus_germany",
+          "sha": "0699c28ceeb13e6cb85bd55292a9470c91078383",
+          "url": "https://github.com/thecem/octopus_germany/commit/0699c28ceeb13e6cb85bd55292a9470c91078383",
+          "message": "feat: add offline XLSX cost export package\n\n- Generate XLSX and quarter-hour measurement CSV from one shared fetch\n- Support contract-specific GO/Heat zones and Module 1/3 calculations\n- Validate missing readings and daylight-saving intervals\n- Fix action UI selectors and move schedule loading off the event loop\n- Preserve existing CSV-only services\n- Update documentation and release notes for version 0.0.190\n- Remove local Home Assistant configuration from Git tracking"
+        },
+        {
+          "repo": "mustafaabadshah/ufone-franchise-pos",
+          "sha": "8dc35a9f3ca2da61c92f7f850d53e85243d2baa3",
+          "url": "https://github.com/mustafaabadshah/ufone-franchise-pos/commit/8dc35a9f3ca2da61c92f7f850d53e85243d2baa3",
+          "message": "fix(reconciliation): eliminate false deficit on dashboard, separate owner equity from working loans, and harmonize all August.xlsx calculations"
+        },
+        {
+          "repo": "SoAds06/major-craft-yemler",
+          "sha": "80337f848aff522cae6910a17796add9c0e0c20b",
+          "url": "https://github.com/SoAds06/major-craft-yemler/commit/80337f848aff522cae6910a17796add9c0e0c20b",
+          "message": "Fix: Use correct variant prices from XLSX\n\n- Map variant JAN codes to XLSX Column 40 (MCEU WHOLESALE EUR)\n- Set base product price as average of variant prices\n- 212 variants with exact XLSX price, 202 with base price fallback\n- Fixes price calculation: now 1.76-1.85 EUR per variant\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>"
+        }
+      ]
+    },
+    {
+      "name": "commits_5",
+      "url": "https://api.github.com/search/commits?q=%22spreadsheet%22%20%22wrong%20formula%22&per_page=15",
+      "utc": "2026-10-15T00:16:00.738007+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/search/commits?q=%22spreadsheet%22%20%22wrong%20formula%22&per_page=15",
+      "ok": true,
+      "bytes": 143634,
+      "sha256": "96832fe00df7ec4ef0fe715a728a45f8ff52d381447fba246f2a3d405a97fde3",
+      "path": "source_discovery/metadata_v3/commits_5.json",
+      "total_count": 22,
+      "candidates": [
+        {
+          "repo": "hazemhagrass/ai-compute",
+          "sha": "97977e1695199162913095e8799fb70a60652d61",
+          "url": "https://github.com/hazemhagrass/ai-compute/commit/97977e1695199162913095e8799fb70a60652d61",
+          "message": "feat(skills): add the excel-formulas skill\n\nRefs #62\n\nSpreadsheet errors are silent: a wrong formula returns a plausible number\nrather than failing, so the skill leads with the traps that produce quiet\nwrong answers (VLOOKUP column drift, unanchored ranges, blind IFERROR).\n\nIncludes README.md and generated assets/robot.svg."
+        },
+        {
+          "repo": "dominicplouffe/businessplanner",
+          "sha": "31e5587d5137559018ba16e9be9fdd64b9244de4",
+          "url": "https://github.com/dominicplouffe/businessplanner/commit/31e5587d5137559018ba16e9be9fdd64b9244de4",
+          "message": "Teach the workbook the curve, and make a missing driver fail loudly\n\nThree problems, one of which the equivalence test found the moment it was\ngiven the chance.\n\nThe driver-sheet writer only emits numeric properties, so the nested growth\ncurve was skipped entirely. The formulas would then have had no cell to point\nat — and `d()` answered a missing driver with the string \"0\", which means the\nworkbook would have shown flat growth while the engine compounded. A\nspreadsheet that looks perfect and disagrees with the plan exported beside it is\nthe single most damaging thing this product could ship, so `d()` now throws, and\n`dOpt` exists for the drivers whose absence is a shape rather than a bug.\n\n`curveAt` emits `projectCurve` as a live Excel expression, branch for branch.\nThat is why the growth module uses POWER and never EXP or LN: the evaluator in\ntests/helpers/xlsx-eval.ts has no EXP, and more importantly the TypeScript and\nthe spreadsheet have to be the same expression or the workbook stops being the\nmodel.\n\nAnd the test earned its place immediately. The new fixture — a plan whose stream\ncarries a saturating curve — failed on month two: the workbook said 5,466.24\nwhere the engine said 5,551.82. The subscription formula was still multiplying\nby the legacy growth rate, because one of my edits had silently not matched.\nEvery other stream had been converted; that one had not, and nothing else in the\nsuite would have noticed. exceljs writes formulas and never evaluates them, so a\nwrong formula ships looking perfect.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_012juekRbihybkamm4McPeUC"
+        },
+        {
+          "repo": "alcaras/owreference",
+          "sha": "90df284a92b653ea943a356d660f52ae98528c55",
+          "url": "https://github.com/alcaras/owreference/commit/90df284a92b653ea943a356d660f52ae98528c55",
+          "message": "Combat pages: full damage heatmap matrix + corrected formula\n\n- src/lib/combat.ts: shared damage math verified against Unit.cs /\n  InfoHelpers.cs (6 × ATK/DEF, round in stronger's favor, min 1; anti-trait\n  modifiers both ways, melee-only and attack-only variants).\n- Unit Damage & Counters: the spreadsheet's signature visualization — the\n  full attacker × defender heatmap (rows attack columns, 57×57) — now tops\n  the page, hot red → cold blue, sticky axes, hover tooltips.\n- Combat Damage Formula: the page documented a wrong formula\n  (HP × ratio / 2). Replaced with the real one + an ATK×DEF lookup heatmap,\n  source-true modifier list (river −50%, unlimbered −25%, hidden +10%,\n  family territory +10%), corrected worked example (Hoplite→Horseman = 9),\n  and the actual counterattack rules (flat 1 melee counter; Tactician\n  generals upgrade to 100%; cities defend at 8 + 0.5×citizens).\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "ZeroSum-Solutions/terroir-prototype",
+          "sha": "3b477d5aa45c2c61fe2cc93a6c3d4dec85c9729a",
+          "url": "https://github.com/ZeroSum-Solutions/terroir-prototype/commit/3b477d5aa45c2c61fe2cc93a6c3d4dec85c9729a",
+          "message": "feat(import): accept Excel workbooks, and spreadsheets dropped on the scanner (#148)\n\nA cellar spreadsheet had no working door. The scan screen accepted only\nimage/* and application/pdf, so a .csv or .xlsx dropped there was refused\nwith no explanation and no redirect; /import accepted .csv but rejected\nExcel outright with \"Only .csv files are accepted.\"\n\nExcel is now converted to CSV before it touches anything else, so the\nentire existing pipeline runs on it unchanged — header matching, row\nvalidation, dedup keys, LWIN matching, chunk planning, digests, revert.\nThe conversion is the only spreadsheet-aware code in the import domain;\neverything after it sees bytes indistinguishable from an uploaded .csv,\nrather than a second ingestion path that could drift from the first.\n\nThe reader runs server-side (POST /api/import/convert) because exceljs is\nfar too heavy to ship to the browser — the build confirms zero client\nchunks reference it. The client calls it the moment a workbook is chosen\nand swaps in the returned CSV, so a large sheet is split into chunks by\nexactly the same client-side splitter a large .csv is. Converting on the\nserver while the browser keeps the CSV text is what preserves chunking;\nconverting in the browser would have cost ~1MB of bundle, and converting\nwithout handing the text back would have broken every file over MAX_ROWS.\n\nA spreadsheet dropped on the scan screen is now parked and the operator is\ntaken to /import, which picks it up and behaves as if they had chosen it\nthere. The handoff is single-consumption so a later visit cannot re-import\na file already dealt with, and React's development double-invoke cannot\nimport it twice.\n\nDetails worth knowing:\n- Only the first worksheet is read, and the UI says which sheet it used\n  and how many it saw. A sil"
+        },
+        {
+          "repo": "Lodennn/Why-Start-a-Startup",
+          "sha": "cbee4e2471d0cab591daf49e5c24c1cd3fb174f7",
+          "url": "https://github.com/Lodennn/Why-Start-a-Startup/commit/cbee4e2471d0cab591daf49e5c24c1cd3fb174f7",
+          "message": "Audit pass 1 fixes: Chapters 9-21 and glossary\n\nCorrects a real dilution-math error in Ch15 (25% was computed with the\nwrong formula for a pre-money SAFE cap) and flags Ch11's CAC/CLV worked\nexample as illustrative rather than lecture-sourced numbers.\n\nRestores dropped source content per the no-loss compression rule:\nDoorDash's Chloe/macaroon-store origin story and exact Teespring/GMV\nfigures (Ch9), Rahman's actual iPod framing (Ch9b), eBay's 10x GMV\nratio and named executives plus WhatsApp's user count (Ch10), the\nK-factor worked example and SEO keyword-volume numbers (Ch11), the\nKickstarter contrast and Twitch Plays Pokémon follow-up (Ch12), the\nEinstein/panopticon super-founder anecdote (Ch4), PayPal's August 2000\nconfidence anecdote and Hoffman's \"infinite learning curve\" (Ch18), a\ncluster of Rabois material from Lecture 14 including the calendar\naudit, five-to-seven direct reports, NeXT pay bands, glass-walled\nconference rooms, and the promotion philosophy (Ch19), the demoted\nexecutive's actual role (Ch20), and FF stock, vesting alternatives,\nIreland tax structuring, the YC immigrant-founder stat, and Botha's\nFP&A spreadsheet detail (Ch21, plus a new glossary entry).\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "mike442144/gsupdater",
+          "sha": "f224ce0ed4f0df5b3e8cc1de43c4165e9f8467e6",
+          "url": "https://github.com/mike442144/gsupdater/commit/f224ce0ed4f0df5b3e8cc1de43c4165e9f8467e6",
+          "message": "feat: ingest Capital IQ's new per-statement .xlsx exports\n\nCIQ replaced its export interface: one .xlsx per statement instead of one .xls\nworkbook per company, metadata rows instead of a title row, subtotals marked by\nindent rather than bold, and several line items renamed. xlrd 2.x cannot open\n.xlsx at all, so ciq_source.py presents the new files as a legacy-shaped virtual\nworkbook and every downstream parser, column matcher and formula copier stays\nas it was. Statement and period type come from file content, because CIQ's\n\" (1)\"/\" (2)\" re-download suffixes do not say which export they are.\n\nThe traps in the new format were silent rather than loud:\n\n- Key Stats items resolve by name, and six required refs (Minority Interest,\n  Effective Tax Rate %, Total Cash & ST Investments, Net Rental Exp., Total\n  Shares Out. on Balance Sheet Date, Curr. Port. of Leases) no longer existed\n  under those names. resolve_formula mapped a missing required item to row 1,\n  the header row, producing a plausible-looking wrong formula. ALIASES maps the\n  renames back to the legacy spelling, and unresolved_items() now leaves the row\n  blank and reports it.\n- Effective Tax Rate and Payout Ratio now arrive in percentage points instead of\n  fractions; unscaled, (1 - tax rate) turned ROIC into -1348% instead of 42%.\n- extract_code_from_filename picked the export year ('2026') out of the new\n  filenames as the stock code, and batch mode would have routed each statement\n  file as its own company.\n\nFound while validating 分众传媒 (002027) into 传媒, fixed here as well: 扣非 LTM\nsummed the last four quarter columns including a not-yet-reported one; Net\nInterest Margin had no formula template, leaving that row blank and Summary's\n净利息收益率 at #DIV/0!; and quarter columns received ROE formulas that can never\nres"
+        },
+        {
+          "repo": "alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine",
+          "sha": "07d43c117259ce611d0fad1062a2785f6896ca96",
+          "url": "https://github.com/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/commit/07d43c117259ce611d0fad1062a2785f6896ca96",
+          "message": "Recompute the workbook's analytics outside the spreadsheet\n\nThe Validation tab reports 23 of 23 checks passing under a green banner.\nBoth numbers are produced by the same workbook whose formulas are the\nthing in question, so neither carries independent weight: a wrong\nformula reports a pass exactly as confidently as a right one.\n\nvalidate_portfolio.py reads only inputs, per-holding cost and market\nvalue, the sector table, the risk-free rate, the market return and beta,\nand recomputes 27 derived figures in Python. It never reads a cell\nholding a tick or a pass count. Three groups: portfolio accounting\nincluding every holding's gain, return and weight; concentration\nincluding the Herfindahl-Hirschman index and effective positions; and\nthe CAPM and risk ratios, each rebuilt from its own definition. All 27\nreconcile on this workbook.\n\nThe script is itself tested, because one that has only seen a correct\nworkbook proves nothing. Eleven tests copy the workbook, change one\ncached cell and assert that specific figure is reported wrong: a broken\ntotal, a single corrupted holding weight, a wrong index, a broken CAPM\nreturn, a broken Sharpe ratio and a cell holding a division by zero.\n\nTwo things worth recording for anyone extending this:\n\n- openpyxl holds either formulas or cached results, never both, so\n  saving a workbook with it discards every cached value and the\n  validator then reads nothing. tests/xlsx_surgery.py edits the cached\n  value directly in the sheet XML instead, leaving the formula, the\n  styles and every other cell untouched.\n- Effective positions is the reciprocal of the HOLDING-level index, not\n  the sector-level one shown in the HHI Index row. Checking it against\n  the wrong basis reported a defect that did not exist, so a test now\n  pins the right one.\n\nCI r"
+        },
+        {
+          "repo": "ChinmoyMandal74/StockPulse",
+          "sha": "5d5dd2ef4ecfa0c62badfd070d97d8361fed379c",
+          "url": "https://github.com/ChinmoyMandal74/StockPulse/commit/5d5dd2ef4ecfa0c62badfd070d97d8361fed379c",
+          "message": "Add an Excel model of the momentum calculation\n\nnode --use-system-ca momentum-model.js CRWD writes a three-sheet workbook —\nBars, Factors, Score — in which every cell is a live formula over the daily\nbars. It is not a picture of the calculation: change a close price and the score\nmoves, because the workbook does the arithmetic itself.\n\nBars carries the sessions newest-first, as the app holds them, plus the running\nintermediates the factors need — log returns, both moving averages, and RSI.\nWilder smoothing is a recursive column seeded with a simple fourteen-day average\nat the old end and smoothed upward, because Wilder runs oldest-first while the\nsheet reads newest-first.\n\nFactors shows each raw measurement as a formula reading Bars, then the curve\nthat turns it into a sub-score, with the centre and scale beside it so the fixed\nscale is visible rather than buried. Score renormalises the weights, produces\nthe 0-100 and the 1-10, and then subtracts what the app reported when the file\nwas written. That check is the point: on CRWD it reads 72.1 against 72.1, with\nevery factor agreeing within the two decimals the stored breakdown rounds to.\n\nWritten by hand because an xlsx is a zip of XML and a spreadsheet library would\nbe a fourth dependency for a one-off explainer — the same reasoning that sends\nmail over plain fetch. Excel is told to recalculate on load, since no cached\nvalues are stored.\n\nOne bug worth recording: values[k] in the app is bar k back from today, which\nlands on sheet row D+1+k. Writing D+k reads the session next door, and every\nreturn in the model is a difference between two of these — it produced four\nwrong formulas before the check against the app caught it. There is a B(k)\nhelper now so the offset is written once.\n\nThe output is gitignored. It goes stale "
+        },
+        {
+          "repo": "uptpalangkaraya2024-lang/performance-center-upt-palangkaraya",
+          "sha": "873d9fcf32ff3ed3d6fa994aef9bafc059f8df47",
+          "url": "https://github.com/uptpalangkaraya2024-lang/performance-center-upt-palangkaraya/commit/873d9fcf32ff3ed3d6fa994aef9bafc059f8df47",
+          "message": "4DX: week-of-month periods now looked up from DATASET, not computed\n\nUser caught a real discrepancy: the dashboard showed SEP-M1 as Sep 1-7,\nbut the source spreadsheet (DATASET column Z / U) has it as Sep 1-6 --\nand since every subsequent week is derived from the previous one, being\noff by even a day shifts every later period too.\n\nRoot cause: the ceil(day/7) formula this dashboard used was verified\nagainst January only (where it happens to produce clean 1-7/8-14/15-21/\n22-28 blocks) and wrongly assumed to generalize. Re-verified September\ndirectly against DATASET: M1 is only 6 days (Sep 1-6), M2/M3 are the\nnormal 7 (Sep 7-13, Sep 14-20), and M4 absorbs 10 days (Sep 21-30) -- not\na fixed per-month formula at all. There is no single formula that\nreproduces this; the sheet's own boundaries have to be read, not derived.\n\nFix: added the \"DATASET\" sheet as a new source (src/config/data-sources.ts)\nand read its DATETIME + \"WEEK NUMBER (4 WEEKS)\" columns (366 rows, one per\ncalendar day) to build a label -> real date-range lookup table\n(FourDxPeriodBoundary[], src/services/four-dx.ts's parseDatasetSheet).\nsrc/lib/four-dx-compute.ts's computeFourDxPeriodRange (a formula) is\nreplaced by resolvePeriodRange (a lookup against that table, with a\nceil(day/7) fallback only if DATASET is ever unavailable -- a wrong-but-\npresent period beats none). The month/week filter dropdowns in\nsrc/components/four-dx/four-dx-view.tsx now derive their options from\nperiodBoundaries too, since week-count-per-month genuinely varies (a\n31-day month can have a 5th week) rather than being a fixed 1-4 list.\n\nVerified against the live site: today (Sep 8, 2026) now correctly resolves\nto SEP-M2 = Sep 7-13, matching DATASET exactly (previously showed 2026-09-01\ns.d. 2026-09-07 from the wrong formula).\n\nFiles ch"
+        },
+        {
+          "repo": "datakid/ranking-builder-demo",
+          "sha": "63801780379177bf1f73e6dd9bb519ae31c30bca",
+          "url": "https://github.com/datakid/ranking-builder-demo/commit/63801780379177bf1f73e6dd9bb519ae31c30bca",
+          "message": "feat(rubric): custom equations, guided builder, calculated columns, live-formula .xlsx export, in-app controls\n\nAdds user-defined equations at every stage of scoring, a guided way to\r\nbuild them, formula-driven columns, and a native workbook export, and\r\nreplaces the browser-native controls with app-styled ones. Still a\r\nsingle index.html with no dependencies and no code comments.\r\n\r\nCustom equations\r\n- Add EXPR, a small expression engine (tokenizer, precedence-climbing\r\n  parser, evaluator) with no eval() or new Function(). Supports\r\n  + - * / % ^ (right-associative), comparisons, && || !, the ternary\r\n  operator and a whitelisted set of functions (abs, sqrt, exp, ln,\r\n  log10, log2, pow, min, max, floor, ceil, round, sign, tanh, sin, cos,\r\n  atan, clamp, if). Unknown names, unknown functions and syntax errors\r\n  are reported before anything runs.\r\n- Add a \"Custom equation\" value function: x is the raw value; min, max,\r\n  mean, median, std, n, sum, pi and e are available, plus named\r\n  constants. Output is clamped to 0-1 and flagged when out of range.\r\n  Direction is encoded in the equation, so the toggle is hidden for it.\r\n- Equation editor on criteria cards: live validation, a sample\r\n  evaluation, insert chips, a constants field, a \"Write your own\r\n  equation\" shortcut and a \"Start from a template\" menu (7 curves).\r\n- Add a \"Scoring method\" panel on the Rank tab: weighted sum, geometric\r\n  mean, harmonic mean, TOPSIS, or a custom combining equation using\r\n  per-criterion scores, w_<id> weight shares, wsum, wgeo, whm, wmin,\r\n  wmax, wpow(p), n and constants, with 4 blend templates.\r\n- Treat custom value functions that reference column statistics as\r\n  relative scoring so the Relative badge, rank-reversal check and\r\n  assumptions note stay accurate.\r\n- Centralise the "
+        },
+        {
+          "repo": "inventor1975/ZTL",
+          "sha": "2bf7ee69594135a910f37c9d5fe643db6a1efa6d",
+          "url": "https://github.com/inventor1975/ZTL/commit/2bf7ee69594135a910f37c9d5fe643db6a1efa6d",
+          "message": "db: run the cascade on a graph nobody typed — the spreadsheet test\n\nSix days established the shape and the killer. The instrument catches system\nerrors rather than fraud, and both catches rest on one condition: somebody had\nto write the citation down. That is daily work for a benefit that arrives only\nwhen something goes wrong — the shape of every ledger nobody fills in.\n\nSo the test was not a better store but whether the condition can be removed by\ngoing where the dependency graph already exists. It can, for the expensive\nhalf. A workbook is generated and read back with zipfile and ElementTree\nalone — no library, no server, no permission — and the cascade runs on it:\n\n  line_b (B2) turns out wrong -> subtotal, vat, total, margin, over_ceiling\n\nFive links, and the number of links anybody typed is ZERO. Ranges are expanded,\nso SUM(B1:B4) resolves to the four cells it names nowhere.\n\nThe generated workbook is a real .xlsx and not a private dialect: LibreOffice\nopens it and recomputes every formula (subtotal 7250, total 8700, margin 3700).\n\nWhat the human still owes, measured rather than hoped: the graph is free, the\nGROUNDS are not. A sheet knows the total is subtotal plus VAT; it has no idea\nB1 came from invoice 17. But annotation is owed only on the LEAVES — every\nderived figure inherits by computation. On this sheet that is 54%, and the\nsheet is small; the honest number is the measured one, not the flattering one\na formula-heavy model would give.\n\nNamed rather than skipped: cross-sheet and cross-file references are not\nfollowed; a pasted value is indistinguishable from a typed one, so the London\nWhale's copy-paste stays invisible exactly as it was in the model; and a wrong\nformula remains an honest dependency.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
+        },
+        {
+          "repo": "TEARN1/The_Gruvs",
+          "sha": "e2e5bfdef2cccb77b5094c13886e57fe2ea5afc9",
+          "url": "https://github.com/TEARN1/The_Gruvs/commit/e2e5bfdef2cccb77b5094c13886e57fe2ea5afc9",
+          "message": "feat: venue timezones, Event structured data, guest-list export\n\nExecuting the four I said I'd fight for. (#37, the geofence Touch Down nudge,\nalready existed as CheckInNudge — not rebuilt.)\n\nTIMEZONES (the silent global bug)\nevents stored a bare `date` + text `time` and NO zone, so `new Date('...T21:00')`\nresolved in the VIEWER's timezone. A Lagos event viewed from New York counted\ndown six hours wrong and \"Live now\" fired at the wrong moment. Invisible until\nyou have two countries — which The Gruvs now does.\n  • migration: events.timezone (IANA), backfilled Africa/Johannesburg (every\n    existing event was created in SA — honest, not a guess)\n  • src/utils/tz.js — zonedTimeToUtc via Intl only: no dependency, no data file,\n    no paid timezone API. Handles DST and zones behind UTC.\n  • countdown + end_date now resolve in the VENUE's zone. An event happens at a\n    place, in that place's time.\n  • new events stamp the host's device zone (host ≈ venue, and it's the truth\n    we actually have). Kept in the tier-3 fallback payload too: a wrong time is\n    worse than a failed save.\n\nSEO — schema.org/Event JSON-LD + per-event share meta (src/utils/seo.js).\nThe SPA serves one HTML shell for every URL, so Google and WhatsApp saw an\nidentical generic page for EVERY event. Google executes JS, so writing real\nstructured data on open earns rich results — free, keyless, no SSR. Only claims\nfields we actually know; invented markup is penalised.\n\nGUEST LIST — hosts ask for this before anything else. CSV of RSVPs next to\nVERIFIED attendance (Touch Down), which is the one thing a spreadsheet cannot\ngive them. Walk-ins (Touched Down, never RSVP'd) are included or the door count\nis wrong. Formula injection neutralised — a username like \"=1+1\" would execute\nwhen the host opens it in Excel"
+        },
+        {
+          "repo": "Saitamaxqi/enterprise",
+          "sha": "9ff49e837da27b530f560763fcba90ab45e266dc",
+          "url": "https://github.com/Saitamaxqi/enterprise/commit/9ff49e837da27b530f560763fcba90ab45e266dc",
+          "message": "[FIX] spreadsheet_dashboard_sale_subscription: salesperson\n\nfix wrong formulas in different tables:\n- in \"worst churn\" under Value, starting the 7th line, the value used was \"recurring_monthly\" instead of \"amount_signed\"\n- in \"worst contraction\", the 10th line didn't use the list 4 like the rest of the table\n- in \"top expansion\", the 10th line didn't use the list 2 like the rest of the table\n\nTask: 4711532\nX-original-commit: 442cd940a045eb7d7a09e94c840a3147cb08b3dc\nPart-of: odoo/enterprise#84361\nSigned-off-by: Adrien Minne (adrm) <adrm@odoo.com>\nSigned-off-by: Vincent Schippefilt (vsc) <vsc@odoo.com>"
+        },
+        {
+          "repo": "arshius/enterprise",
+          "sha": "9ff49e837da27b530f560763fcba90ab45e266dc",
+          "url": "https://github.com/arshius/enterprise/commit/9ff49e837da27b530f560763fcba90ab45e266dc",
+          "message": "[FIX] spreadsheet_dashboard_sale_subscription: salesperson\n\nfix wrong formulas in different tables:\n- in \"worst churn\" under Value, starting the 7th line, the value used was \"recurring_monthly\" instead of \"amount_signed\"\n- in \"worst contraction\", the 10th line didn't use the list 4 like the rest of the table\n- in \"top expansion\", the 10th line didn't use the list 2 like the rest of the table\n\nTask: 4711532\nX-original-commit: 442cd940a045eb7d7a09e94c840a3147cb08b3dc\nPart-of: odoo/enterprise#84361\nSigned-off-by: Adrien Minne (adrm) <adrm@odoo.com>\nSigned-off-by: Vincent Schippefilt (vsc) <vsc@odoo.com>"
+        },
+        {
+          "repo": "samiullah-123/enterprize_addons-latest-19",
+          "sha": "9ff49e837da27b530f560763fcba90ab45e266dc",
+          "url": "https://github.com/samiullah-123/enterprize_addons-latest-19/commit/9ff49e837da27b530f560763fcba90ab45e266dc",
+          "message": "[FIX] spreadsheet_dashboard_sale_subscription: salesperson\n\nfix wrong formulas in different tables:\n- in \"worst churn\" under Value, starting the 7th line, the value used was \"recurring_monthly\" instead of \"amount_signed\"\n- in \"worst contraction\", the 10th line didn't use the list 4 like the rest of the table\n- in \"top expansion\", the 10th line didn't use the list 2 like the rest of the table\n\nTask: 4711532\nX-original-commit: 442cd940a045eb7d7a09e94c840a3147cb08b3dc\nPart-of: odoo/enterprise#84361\nSigned-off-by: Adrien Minne (adrm) <adrm@odoo.com>\nSigned-off-by: Vincent Schippefilt (vsc) <vsc@odoo.com>"
+        }
+      ]
+    }
+  ]
+}

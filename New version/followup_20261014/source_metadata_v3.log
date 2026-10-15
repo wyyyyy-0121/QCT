@@ -1,0 +1,102 @@
+18f_readme True
+packt_license True
+renewables_readme True
+damodaran_directory True
+epa_cost_manual True
+uk_greenbook_supplement True
+commits_0 True
+two-pack/redmine_xlsx_format_issue_exporter 501ea81f4d Merge pull request #106 from naopontan/fix-formula-misdetection-corrupts-xlsx
+alaarab/ogrid 5cf1f77b6c fix(formula): correct spill evaluation and XLSX round trips
+joskapista44/euro-mcp-public 0cdb24e803 xlsx: fix formula capability probe command arguments
+realtorsebastianm-cell/compdatavault.com 5241d90b06 Fix formula injection risk in .xlsx export
+sverdlikdan-code/COLUMBUS 47c2305e84 fix(formula-road): ICE клиенты в экспорте + колонка חברה в обоих Excel
+mightyoung/software-cost-calculator ce9fd3f00f feat: add xlsx read/write, project exports and quotation template round trip
+zbynekdrlik/vyuctovanie a1c874b3bb Review fixes: formula-injection guard, safe dry-run tmp, orphan-attachment log (#13)
+KaiserY/ooxmlsdk 2867a534a4 Fix formula XLSX import semantics
+sverdlikdan-code/COLUMBUS b8a5404053 fix(formula-road): TAHSHIV path — Windows share vs Linux local file
+ironcalc/IronCalc cec5fa7de3 FIX: Formulas in defined names must be parsed and stringified to xlsx
+GitHubNewbie0/odf-kit cd7900aae8 fix(xlsx-to-ods): fix formula cell interface mismatch (closes #25)
+tpt-solutions/tpt-lattice 9ecb9bba8e Add per-crate docs, CI, wasm harness, xlsx fixture tests, and Phase 3 sync layer
+oonufrienko/trello-excel-preview f8104ba1b3 Merge fix/formula-empty-cells: render formula text when XLSX cell has no cached value
+wilson-anysphere/formula fd8b9cc1a6 fix: tighten workbook format detection and keep loaders compiling
+opendocument-app/OpenDocument.core c1e91a7968 feat(formula): evaluate a parsed formula, or give no answer (#1008)
+commits_1 True
+a83017083-lab/OpenWAaa c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+Lazare-42/OfficeCLI c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+DorianGallo/OfficeCLI c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+13888285815/codebuddy-OfficeCLI e97adbc35a fix(excel): delete calc chain after SetRange to prevent stale formula values
+trailer-run/OfficeCLI e97adbc35a fix(excel): delete calc chain after SetRange to prevent stale formula values
+shixianghua/OfficeCLI-Enhanced c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+andreyjonathann/Kerja-Praktek---PLN-UP3 0527dc17f9 fix(susut): revert model to 3-component schema (kwh_netto, pssd, kwh_jual_309)
+Ck1sap/OfficeCLI c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+ai-integr8tor/iOfficeAI-OfficeCLI c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+iOfficeAI/OfficeCLI c760c873ed fix(excel): delete calc chain after SetRange to prevent stale formula values
+czmobin/boors c295fba4f3 Keep only latest Excel sheet instead of history
+tltoan/hugo-landing deeb3db718 ✨ Feature: Smart Error Hints & Excel-like Keyboard Navigation
+mslinn/git-stats-scala 891e524a29 Fix incorrect formula that led to malformed Excel with circular references
+elastic/cloudbeat ae37f5c176 fix(deps): update module github.com/xuri/excelize/v2 to v2.10.1 (main) (#5337)
+Pradeepgdeepu/Data_Cleaning_with_excel f784663dad Data cleaning with excel
+commits_2 True
+ZHYX91/docwen b8481c0f7b feat(gui): unify density, typography, scaling and icon resources (#34)
+ZHYX91/docwen b814302cc6 Complete spreadsheet and theme fixes for 0.14.1 (#39)
+Cloudgeni-ai/opengeni 27287eed23 fix(artifacts): add native spreadsheet XLSX download (OPE-770) (#3940)
+vfydr2m9wk-ops/InkDOS a7abd33d9e Merge PR #225: keep appended XLSX cell styles across saves
+dncmaduro/dochub 0965ed2f93 fix(spreadsheet): support root-relative XLSX relationships
+sunu-py-jp/LikeX 226808132d Fix spreadsheet XLSX import recovery and drawing fidelity
+poe-platform/poe-code a3cb78163e fix(spreadsheet): avoid false XLSX margin loss warnings
+poe-platform/poe-code ea381366f5 fix(spreadsheet): transport XLSX workbook protection to BIFF
+FernandaCabrera/inventory-assistant e3a6ae4849 Merge pull request #2 from FernandaCabrera/fix-xlsx-import
+ULTRA-OS-Project/UltraCanvas 526e8b2b18 Merge pull request #758 from ULTRA-OS-Project/claude/spreadsheet-formula-fixes
+pakistansaheb/masonyoung 38a9ffbdf3 Fix spreadsheet notes extraction to support legacy .xls files
+sainani1214/zoya 049ff7a490 fix: spreadsheet cells that look like formulas are stored as text (xlsx) or apostrophe-prefixed (csv)
+appfbj-stack/desktop-pi-kairos 2cdcdf1348 fix(spreadsheets): xlsx precisa default import (readFile sumia no ESM)
+Aankirz/zoya 311243c397 fix: spreadsheet cells that look like formulas are stored as text (xlsx) or apostrophe-prefixed (csv)
+TheNinjask/DexTracker 1526632314 Fix spreadsheet filename in README
+commits_3 True
+Tharun0127/Premium-Card-Refresh-Who-Wins-Who-Loses aeb51ad8a4 Step 3-5: Python model, Excel workbook with live formulas, LibreOffice recalc, reconciliation tests
+cosmoscalibur/sheetrs 9dc036067c feat(sheetstats): report per-sheet used, formula, error and empty cells
+w31r4/OfficeKit 0e1d8c8fac feat(ppj): sync fixed-formula error data with embedded workbooks
+krwizxp/fcupdater 15df74736d Refresh Chungcheong fuel workbook from Opinet for 2026-09-29
+sabodaha/windpark-rechner 73e15a649c Methodology: the workbook also checked in Google Sheets (E07)
+reckak/statistics-for-psychology 00e3b5d2e2 Add chapter 6 workbook, its generator and Excel checks
+KathiriyaHardik/ai-lab 4bdb92e8c9 Add AI job application tracker (Excel CRM)
+esierra-engineer/iplp_ai 882058e5ef Import: tolerate live Excel formula errors instead of crashing
+Zzanoni/app-hardening-baseline 38bba41c56 Add contract export/check, v1->v2 app workbook upgrade, tests and CI
+georgiadawg27/AppropsIntelligence 7a42cfabff Data files in the repo; CI builds and recalculates the workbook
+tejalsakpal66-tech/lifemap-redesign 90a5fd3df0 LifeMap v2.7: final app, complete workbook (47 sheets), Word spec, docs, tools and tests
+poojatirupati-ops/Lifemap 90a5fd3df0 LifeMap v2.7: final app, complete workbook (47 sheets), Word spec, docs, tools and tests
+ZCDeng/finance-skill-foundry 099b138615 Add workbook formula health check on XLSX import
+nicrpayne/kit-gap-audit 8fe52fd61b Harden /api/parse-spreadsheet against uncaught crashes
+tomwilson41986/ashcroft 47a8a756a8 Today's 06:00 record as a workbook: the 535's predictions for 25 Sep, sent to the owner
+commits_4 True
+onixus/EvaCal 701c9df1ec fix(xlsx): trace calculation XLSX against GOST package requirements
+arashrohani82-hub/metra-railway 88bb804254 Fix List.xlsx sync when Excel calc properties are missing (#24)
+OpenSourceRisk/QuantLibAddIn ce2e7a1179 ACADIAQPR-14118: Add QuantExt example workbooks
+Finco-Protocol/FincoProtocol 5757fd3707 feat(p1.2): institutional XLSX export — Returns, Run Identity, Reconciliation sheets
+Shoxrux0803/morpho-check-app 31ea281087 fix(research): fix bioimpedance dynamic calculations and order in research report XLSX
+satkerit/calculator_ckpn abe48ca5cd feat(export, pd-netflow): add pd netflow detail xlsx export
+PSU3D0/formualizer 259208f6a1 fix(xlsx): hydrate Calamine calculation names safely
+PanoramaCafe/PanoramaFinanzas a805f4038a Hardening PF-V1: sync, backups and provider debt (#2)
+dudaanton/abele-obsidian-plugin b0a0dc43f4 fix(xlsx): bound formula dependencies before local calculation
+Tawz-star/finxyora 0917b2df86 feat(admin): fix revenue calculations, add automated rejection/refund emails, and upgrade exports to Excel .xlsx
+openooxml/betteroffice 611d36500f fix(xlsx): TODAY and NOW in local time (#1253)
+thecem/octopus_germany f9dbfc7b4c feat: add offline XLSX cost export package
+thecem/octopus_germany 0699c28cee feat: add offline XLSX cost export package
+mustafaabadshah/ufone-franchise-pos 8dc35a9f3c fix(reconciliation): eliminate false deficit on dashboard, separate owner equity from working loans, and harmonize all August.xlsx calculations
+SoAds06/major-craft-yemler 80337f848a Fix: Use correct variant prices from XLSX
+commits_5 True
+hazemhagrass/ai-compute 97977e1695 feat(skills): add the excel-formulas skill
+dominicplouffe/businessplanner 31e5587d51 Teach the workbook the curve, and make a missing driver fail loudly
+alcaras/owreference 90df284a92 Combat pages: full damage heatmap matrix + corrected formula
+ZeroSum-Solutions/terroir-prototype 3b477d5aa4 feat(import): accept Excel workbooks, and spreadsheets dropped on the scanner (#148)
+Lodennn/Why-Start-a-Startup cbee4e2471 Audit pass 1 fixes: Chapters 9-21 and glossary
+mike442144/gsupdater f224ce0ed4 feat: ingest Capital IQ's new per-statement .xlsx exports
+alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine 07d43c1172 Recompute the workbook's analytics outside the spreadsheet
+ChinmoyMandal74/StockPulse 5d5dd2ef4e Add an Excel model of the momentum calculation
+uptpalangkaraya2024-lang/performance-center-upt-palangkaraya 873d9fcf32 4DX: week-of-month periods now looked up from DATASET, not computed
+datakid/ranking-builder-demo 6380178037 feat(rubric): custom equations, guided builder, calculated columns, live-formula .xlsx export, in-app controls
+inventor1975/ZTL 2bf7ee6959 db: run the cascade on a graph nobody typed — the spreadsheet test
+TEARN1/The_Gruvs e2e5bfdef2 feat: venue timezones, Event structured data, guest-list export
+Saitamaxqi/enterprise 9ff49e837d [FIX] spreadsheet_dashboard_sale_subscription: salesperson
+arshius/enterprise 9ff49e837d [FIX] spreadsheet_dashboard_sale_subscription: salesperson
+samiullah-123/enterprize_addons-latest-19 9ff49e837d [FIX] spreadsheet_dashboard_sale_subscription: salesperson

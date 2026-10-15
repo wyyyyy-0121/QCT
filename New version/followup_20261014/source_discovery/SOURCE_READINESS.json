@@ -1,0 +1,336 @@
+{
+  "updated_on": "2026-10-15",
+  "role": "metadata candidates only; not final eligibility or acceptance",
+  "final_workbooks_acquired": false,
+  "correct_formula_answers_acquired": false,
+  "accepted_sources": 0,
+  "accepted_template_families": 0,
+  "prior_sources_excluded": [
+    "Enron/VEnron/SheetJS Enron",
+    "EUSES and derivatives",
+    "Info1",
+    "Integer",
+    "FoRepBench",
+    "SpreadsheetBench v1 and unresolved v2 ancestry",
+    "old synthetic families"
+  ],
+  "priority_origin_groups": [
+    {
+      "id": "iowa_state_agdm",
+      "origin_group": "Iowa State University Extension Ag Decision Maker",
+      "use": ["public_injected"],
+      "license_status": "official decision-tool index reachable; workbook-specific reuse and third-party scope not audited",
+      "candidate_families": ["crop enterprise budgets", "farm decision tools"],
+      "evidence": [{
+        "name": "iowa_state_decision_tools",
+        "url": "https://www.extension.iastate.edu/agdm/decisiontools.html",
+        "path": "source_discovery/metadata_v6/iowa_state_decision_tools.source",
+        "sha256": "d576b0c1c06087dbeb8acaf509603bb43c15b0fd8a9ee3d5c9fbed029f71bbde",
+        "status": 200
+      }],
+      "status": "metadata candidate only",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "remaining_gates": ["source/history overlap", "workbook-specific license scope", "freeze before input acquisition", "formula presence and family deduplication", "all emitted suggestions adjudicable"]
+    },
+    {
+      "id": "nlr_jedi",
+      "origin_group": "US National Laboratory of the Rockies JEDI project",
+      "use": ["public_injected"],
+      "license_status": "official landing page reachable; explicit workbook license not established",
+      "candidate_families": ["energy project economic impact"],
+      "evidence": [{
+        "name": "nlr_jedi",
+        "url": "https://www.nlr.gov/analysis/jedi",
+        "path": "source_discovery/metadata_v6/nlr_jedi.source",
+        "sha256": "571c1f7763e7197e27da909a190365fa516be74aea8cbad64a5c8557514dcc01"
+      }],
+      "status": "metadata candidate only; no direct workbook URL verified",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "remaining_gates": ["locate available workbook version", "source/history overlap", "license scope", "freeze before input acquisition", "formula presence and family deduplication", "all emitted suggestions adjudicable"]
+    },
+    {
+      "id": "18f",
+      "origin_group": "18F US government",
+      "use": [
+        "public_injected"
+      ],
+      "license_status": "CC0 verified from pinned LICENSE.md API base64 body",
+      "candidate_families": [
+        "Software acquisition model"
+      ],
+      "evidence": [
+        {
+          "name": "18f_readme",
+          "url": "https://raw.githubusercontent.com/18F/financial-models/d86e8f89145bb0e29cd7268e1497de45ddbae0c8/README.md",
+          "utc": "2026-10-15T00:15:56.607904+00:00",
+          "ok": true,
+          "sha256": "35dcb2ceeeb6bf1df73a5cc10b75a58509a3e1daf78eaea9d8b5efab36cb9ebb"
+        },
+        {
+          "name": "18f_license",
+          "url": "https://api.github.com/repos/18F/financial-models/license?ref=d86e8f89145bb0e29cd7268e1497de45ddbae0c8",
+          "utc": "2026-10-15T00:31:13.749749+00:00",
+          "ok": true,
+          "sha256": "b432f297fde97e4da0385831adb3fd59b208e99c70785975637d1e3753617425"
+        }
+      ],
+      "status": "metadata_candidate_not_accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "unknown_proposal_truth_resolved": false,
+      "remaining_gates": [
+        "history and ancestry overlap",
+        "author/origin independence",
+        "license scope",
+        "freeze before final acquisition",
+        "formula presence and template family deduplication",
+        "known correct original or natural-error pair mapping",
+        "all emitted suggestions adjudicable"
+      ]
+    },
+    {
+      "id": "packt",
+      "origin_group": "Packt project finance course author",
+      "use": [
+        "public_injected"
+      ],
+      "license_status": "MIT pinned repository LICENSE verified; workbook third-party scope pending",
+      "candidate_families": [
+        "Project finance tutorial model"
+      ],
+      "evidence": [
+        {
+          "name": "packt_license",
+          "url": "https://raw.githubusercontent.com/PacktPublishing/Project-Finance-and-Excel---Build-Financial-Models-from-Scratch/618787e67a7ee0e6643f60ef447a9c35d6ee9301/LICENSE",
+          "utc": "2026-10-15T00:15:56.609673+00:00",
+          "ok": true,
+          "sha256": "120f78b14b2b1f35b227b6ddbd47e0a3966bb2e731618e76c0c06c26b58f4e05"
+        }
+      ],
+      "status": "metadata_candidate_not_accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "unknown_proposal_truth_resolved": false,
+      "remaining_gates": [
+        "history and ancestry overlap",
+        "author/origin independence",
+        "license scope",
+        "freeze before final acquisition",
+        "formula presence and template family deduplication",
+        "known correct original or natural-error pair mapping",
+        "all emitted suggestions adjudicable"
+      ]
+    },
+    {
+      "id": "renewables",
+      "origin_group": "Renewables Valuation Institute",
+      "use": [
+        "public_injected"
+      ],
+      "license_status": "README declares CC BY-NC-SA 4.0; linked LICENSE missing from pinned tree",
+      "candidate_families": [
+        "Simplified project finance model"
+      ],
+      "evidence": [
+        {
+          "name": "renewables_readme",
+          "url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/README.md",
+          "utc": "2026-10-15T00:15:56.610587+00:00",
+          "ok": true,
+          "sha256": "82f39464caac74efb460dc62abba46c090da18de666071bf9abc7fb0d25edde5"
+        },
+        {
+          "name": "renewables_license",
+          "url": "https://raw.githubusercontent.com/RenewablesPro/rvi-sample-models/1e49ec79613c77c3fa6f8532b4e303b473f85506/LICENSE",
+          "utc": "2026-10-15T00:31:13.329973+00:00",
+          "ok": false
+        },
+        {
+          "name": "renewables_pinned_tree",
+          "url": "https://api.github.com/repos/RenewablesPro/rvi-sample-models/git/trees/1e49ec79613c77c3fa6f8532b4e303b473f85506?recursive=1",
+          "utc": "2026-10-15T00:42:33.005138+00:00",
+          "ok": true,
+          "sha256": "bc93c29b228cc81a65c86bc60d79a8f327a157d78ca94703dfd8dcbfcfff48ca"
+        }
+      ],
+      "status": "metadata_candidate_not_accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "unknown_proposal_truth_resolved": false,
+      "remaining_gates": [
+        "history and ancestry overlap",
+        "author/origin independence",
+        "license scope",
+        "freeze before final acquisition",
+        "formula presence and template family deduplication",
+        "known correct original or natural-error pair mapping",
+        "all emitted suggestions adjudicable"
+      ]
+    },
+    {
+      "id": "damodaran",
+      "origin_group": "Aswath Damodaran NYU",
+      "use": [
+        "public_injected"
+      ],
+      "license_status": "official public index accessible; explicit reuse terms unresolved",
+      "candidate_families": [],
+      "evidence": [
+        {
+          "name": "damodaran_directory",
+          "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm",
+          "utc": "2026-10-15T00:15:57.226359+00:00",
+          "ok": true,
+          "sha256": "71213a981173dd9a353a972d5200ea4a818ffdf7ae268922c3042ec20f669dd4"
+        },
+        {
+          "name": "damodaran_home",
+          "url": "https://pages.stern.nyu.edu/~adamodar/",
+          "utc": "2026-10-15T00:42:34.914696+00:00",
+          "ok": true,
+          "sha256": "0ed3ee99cb84ec2249c7dc237922c10520365c17af421d4b0c408a886b79003c"
+        },
+        {
+          "name": "damodaran_terms",
+          "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/biomission.htm",
+          "utc": "2026-10-15T00:31:19.119540+00:00",
+          "ok": false
+        }
+      ],
+      "status": "metadata_candidate_not_accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "unknown_proposal_truth_resolved": false,
+      "remaining_gates": [
+        "history and ancestry overlap",
+        "author/origin independence",
+        "license scope",
+        "freeze before final acquisition",
+        "formula presence and template family deduplication",
+        "known correct original or natural-error pair mapping",
+        "all emitted suggestions adjudicable"
+      ]
+    },
+    {
+      "id": "epa",
+      "origin_group": "US EPA control cost manual",
+      "use": [
+        "natural_error_candidate",
+        "public_injected"
+      ],
+      "license_status": "general EPA scientific/education use text read; caveat says page terms not necessarily apply to every work; document scope pending",
+      "candidate_families": [
+        "Carbon adsorber",
+        "Refrigerated condenser",
+        "Flares",
+        "Incinerators and oxidizers",
+        "SNCR",
+        "SCR",
+        "Wet/dry scrubbers"
+      ],
+      "evidence": [
+        {
+          "name": "epa_manual",
+          "url": "https://www.epa.gov/economic-and-cost-analysis-air-pollution-regulations/cost-reports-and-guidance-air-pollution",
+          "utc": "2026-10-15T00:31:13.328082+00:00",
+          "ok": true,
+          "sha256": "e827e7bd70848d7044ae860a9b3422b55fb8bafc3a1f2040006c4addf6b681d2"
+        },
+        {
+          "name": "epa_disclaimers",
+          "url": "https://www.epa.gov/web-policies-and-procedures/epa-disclaimers",
+          "utc": "2026-10-15T00:31:13.329188+00:00",
+          "ok": true,
+          "sha256": "fea32d94230d107708b636728491550c0cfcf965361319be7e0b4887eaa04d43"
+        }
+      ],
+      "status": "metadata_candidate_not_accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "unknown_proposal_truth_resolved": false,
+      "remaining_gates": [
+        "history and ancestry overlap",
+        "author/origin independence",
+        "license scope",
+        "freeze before final acquisition",
+        "formula presence and template family deduplication",
+        "known correct original or natural-error pair mapping",
+        "all emitted suggestions adjudicable",
+        "obtain genuinely erroneous archived workbook; current corrected version alone insufficient",
+        "prove erratum concerns silent formula error and locate trustworthy corrected formula"
+      ]
+    },
+    {
+      "id": "uk_government",
+      "origin_group": "UK government conservative grouped origin; DfT and DESNZ not yet counted separately",
+      "use": [
+        "natural_error_candidate",
+        "public_injected"
+      ],
+      "license_status": "official government index footer OGL link; workbook-specific third-party terms pending",
+      "candidate_families": [
+        "TAG data book - formula presence unknown",
+        "Example LCOE calculator"
+      ],
+      "evidence": [
+        {
+          "name": "uk_tag_data_book",
+          "url": "https://www.gov.uk/government/publications/tag-data-book",
+          "utc": "2026-10-15T00:42:33.006270+00:00",
+          "ok": true,
+          "sha256": "35d1c0fba163f45374d69ca4d75a89fd996f49b7c7ebd6945fe450f4fc0d40c4"
+        },
+        {
+          "name": "uk_electricity_generation_costs_2023",
+          "url": "https://www.gov.uk/government/publications/electricity-generation-costs-2023",
+          "utc": "2026-10-15T00:42:33.007185+00:00",
+          "ok": true,
+          "sha256": "a684576ae477078c5a504c77cbbdfb11503efd165965c27e2f92bc255acfa65c"
+        }
+      ],
+      "status": "metadata_candidate_not_accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "unknown_proposal_truth_resolved": false,
+      "remaining_gates": [
+        "history and ancestry overlap",
+        "author/origin independence",
+        "license scope",
+        "freeze before final acquisition",
+        "formula presence and template family deduplication",
+        "known correct original or natural-error pair mapping",
+        "all emitted suggestions adjudicable",
+        "obtain genuinely erroneous archived workbook; current corrected version alone insufficient",
+        "prove erratum concerns silent formula error and locate trustworthy corrected formula"
+      ]
+    }
+  ],
+  "candidate_family_names_not_verified": 15,
+  "note": "No number of directory names or errata links is a verified template count. Metadata-only historical keyword check is not a full overlap audit."
+}

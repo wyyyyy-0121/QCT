@@ -1,0 +1,922 @@
+{
+  "role": "metadata and terms only; no final workbooks or answers",
+  "final_data_acquired": false,
+  "records": [
+    {
+      "name": "iowa_state_decision_tools",
+      "url": "https://www.extension.iastate.edu/agdm/decisiontools.html",
+      "utc": "2026-10-15T01:28:49.017257+00:00",
+      "status": 200,
+      "final_url": "https://www.extension.iastate.edu/agdm/decisiontools.html",
+      "ok": true,
+      "bytes": 86790,
+      "sha256": "d576b0c1c06087dbeb8acaf509603bb43c15b0fd8a9ee3d5c9fbed029f71bbde",
+      "path": "source_discovery/metadata_v6/iowa_state_decision_tools.source",
+      "potential_links": [
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15SH1.xlsx",
+          "text": "Lime, Fertilizer, and Weed Control"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15SH2.xlsx",
+          "text": "Complete Renovation with a New Grass Seeding"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15SH3.xlsx",
+          "text": "Complete Renovation with a Legume-Grass Mixture"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15SH4.xlsx",
+          "text": "Interseeding and No-till Renovation"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15SH5.xlsx",
+          "text": "Frost Seeding"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15SH6.xlsx",
+          "text": "Killed Sod, No-till Renovation"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20haybudgetonly.xlsx",
+          "text": "Alfalfa or Alfalfa-grass Hay Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20haybudgetwithcompanion.xlsx",
+          "text": "Alfalfa or Alfalfa-grass Hay with Oat Companion Crop Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17asparagus.xlsx",
+          "text": "Asparagus"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17basil.xlsx",
+          "text": "Basil"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17specialtygreenbeans.xlsx",
+          "text": "Specialty Green Beans"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17carrots.xlsx",
+          "text": "Carrots"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17eggplant.xlsx",
+          "text": "Eggplant"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17garlic.xlsx",
+          "text": "Garlic"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17saladgreens.xlsx",
+          "text": "Salad Greens"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17snowpeas.xlsx",
+          "text": "Snow Peas"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17potatoes.xlsx",
+          "text": "Potatoes"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17sweetpotatoes.xlsx",
+          "text": "Sweet Potatoes"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17redraspberries.xlsx",
+          "text": "Red Raspberries"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17strawberries.xlsx",
+          "text": "Strawberries"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17cherrytomatoes.xlsx",
+          "text": "Cherry Tomatoes"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-17tomatoes.xlsx",
+          "text": "Heirloom Tomatoes"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-18corn.xlsx",
+          "text": "Organic Corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-18soybeans.xlsx",
+          "text": "Organic Soybeans"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-18oats.xlsx",
+          "text": "Organic Oats"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-18alfalfa.xlsx",
+          "text": "Organic Alfalfa"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20cfc_tbl1.xlsx",
+          "text": "Corn following Corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20cfs_tbl2.xlsx",
+          "text": "Corn following Soybean"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20cornsilage_tbl3.xlsx",
+          "text": "Corn Silage following Corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20sfc_tbl4.xlsx",
+          "text": "Herbicide tolerant Soybeans following Corn (herbicide tolerant)"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20nontolerant_sfc.xlsx",
+          "text": "Non-herbicide tolerant soybeans following corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20lowtillcfstbl6.xlsx",
+          "text": "Low-till corn following Soybeans"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20lowtillsfctbl6.xlsx",
+          "text": "Low-till drilled Soybeans following Corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20striptillcfstbl5.xlsx",
+          "text": "Strip till Corn following Soybeans"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20striptillsfctbl5.xlsx",
+          "text": "Strip till Herbicide Tolerant Soybeans following Corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20haybudgetonly.xlsx",
+          "text": "Alfalfa or Alfalfa-grass Hay Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20haybudgetwithcompanion.xlsx",
+          "text": "Alfalfa or Alfalfa-grass Hay with Oat Companion Crop Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-15-20oatsmallgrainbudget.xlsx",
+          "text": "Oat or Other Small Grain Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20maintgpimprovgrass_tbl9.xlsx",
+          "text": "Improved Grass Pasture"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20maintpimprovgrleg_tbl9.xlsx",
+          "text": "Improved Grass-legume Pasture"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20costprodgrain.xlsx",
+          "text": "Breakeven Worksheet for Crops"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20croprotation.xlsx",
+          "text": "Crop Rotation Summary"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-20croprotationanalyzer.xlsx",
+          "text": "Crop Rotation Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-24canolabudget.xlsx",
+          "text": "Production Cost for Winter Canola"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-26organictransition.xlsx",
+          "text": "Making the Transition from Conventional to Organic Production"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-27switchgrasscomparison.xlsx",
+          "text": "To Grow or not to Grow: A Tool for Comparing Returns to Switchgrass for Bioenergy with Annual Crops and CRP"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-32arcco2014calculator.xlsx",
+          "text": "ARC-CO Payment Calculator for 2014/15"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-32arcco2015calculator.xlsx",
+          "text": "ARC-CO Payment Calculator for 2015/16"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-32arcco2016calculator.xlsx",
+          "text": "ARC-CO Payment Calculator for 2016/17"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-32arcco2017calculator.xlsx",
+          "text": "ARC-CO Payment Calculator for 2017/18"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-32plcpaymentcalculator.xlsx",
+          "text": "Price Loss Coverage (PLC) Payment Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-33farmbilldata.xlsx",
+          "text": "ARC-CO & PLC Per Acre Payment Estimator for Iowa, 2024-2025"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-33farmbilldata2020.xlsx",
+          "text": "ARC-CO & PLC Per Acre Payment Estimator for Iowa, 2019-2023"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-33farmbilldata2014.xlsx",
+          "text": "ARC-CO & PLC Payments by Crop and County for Iowa, 2014-2018"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-33farmbillpaymentanalyzer.xlsx",
+          "text": "ISU Farm Bill Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-35plcyieldupdate.xlsx",
+          "text": "PLC Yield Update Tool: Farm Bill 2018"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-36farmbillcalculator.xlsx",
+          "text": "Farm Bill Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-37marketfacilitationprogramcalc.xlsx",
+          "text": "Market Facilitation Program Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-44sco-eco-yields.xlsx",
+          "text": "Supplemental Coverage Option (SCO) and Enhanced Coverage Option (ECO) County Yield History for Iowa"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-48cropinsurancecomparison.xlsx",
+          "text": "Crop Insurance Comparison"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-57delayedplantingevaluator.xlsx",
+          "text": "Delayed Planting and Replanting Evaluator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-65cornsilagepricer.xlsx",
+          "text": "Silage Pricer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-70cornstoverpricer.xlsx",
+          "text": "Corn Stover Pricer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-al.xlsx",
+          "text": "AL"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-az.xlsx",
+          "text": "AZ"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ar.xlsx",
+          "text": "AR"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ca.xlsx",
+          "text": "CA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-co.xlsx",
+          "text": "CO"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ct.xlsx",
+          "text": "CT"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-de.xlsx",
+          "text": "DE"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-dc.xlsx",
+          "text": "DC"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-fl.xlsx",
+          "text": "FL"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ga.xlsx",
+          "text": "GA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-hi.xlsx",
+          "text": "HI"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-id.xlsx",
+          "text": "ID"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-il.xlsx",
+          "text": "IL"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-in.xlsx",
+          "text": "IN"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ia.xlsx",
+          "text": "IA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ks.xlsx",
+          "text": "KS"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ky.xlsx",
+          "text": "KY"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-la.xlsx",
+          "text": "LA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-me.xlsx",
+          "text": "ME"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-md.xlsx",
+          "text": "MD"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ma.xlsx",
+          "text": "MA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-mi.xlsx",
+          "text": "MI"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-mn.xlsx",
+          "text": "MN"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ms.xlsx",
+          "text": "MS"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-mo.xlsx",
+          "text": "MO"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-mt.xlsx",
+          "text": "MT"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ne.xlsx",
+          "text": "NE"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-nv.xlsx",
+          "text": "NV"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-nh.xlsx",
+          "text": "NH"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-nj.xlsx",
+          "text": "NJ"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-nm.xlsx",
+          "text": "NM"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ny.xlsx",
+          "text": "NY"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-nc.xlsx",
+          "text": "NC"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-nd.xlsx",
+          "text": "ND"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-oh.xlsx",
+          "text": "OH"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ok.xlsx",
+          "text": "OK"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-or.xlsx",
+          "text": "OR"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-pa.xlsx",
+          "text": "PA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ri.xlsx",
+          "text": "RI"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-sc.xlsx",
+          "text": "SC"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-sd.xlsx",
+          "text": "SD"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-tn.xlsx",
+          "text": "TN"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-tx.xlsx",
+          "text": "TX"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-ut.xlsx",
+          "text": "UT"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-va.xlsx",
+          "text": "VA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-vt.xlsx",
+          "text": "VT"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-wa.xlsx",
+          "text": "WA"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-wi.xlsx",
+          "text": "WI"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-wv.xlsx",
+          "text": "WV"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-78/a1-78netreturnstocarbonfarming-wy.xlsx",
+          "text": "WY"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-80carbonintensityscorecalc.xlsx",
+          "text": "Carbon Intensity Score Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-81fungicidetreatmentanalysis.xlsx",
+          "text": "Economic Analysis of Foliar Fungicide Treatment on Corn"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-87weedmanagementalternatives_harrison.xlsx",
+          "text": "Weed Management Budgeting Tool - Harrison County"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-88herbaceousfeedstockproduction.xlsx",
+          "text": "Estimating production costs of herbaceous materials for biomass"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-91economicsofcovercrops.xlsx",
+          "text": "Economics of Cover Crops"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a1-96organictransition10year.xlsx",
+          "text": "Evaluating Organic Transitions at the Field Level"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-31dryingcosts.xlsx",
+          "text": "Comparison of Drying Systems Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-32graindryingandshrinkcomparison.xlsx",
+          "text": "Corn Drying and Shrink Comparison"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-33.xlsx",
+          "text": "Monthly Cost for Storing Grain"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-35.xlsx",
+          "text": "Grain Storage Investment Comparison"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-37haystoragecost.xlsx",
+          "text": "Hay Storage Cost Comparison"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-38CASTtool.xlsx",
+          "text": "Crop Allowable Storage Time"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-39grainfacilityenergyaudit.xlsx",
+          "text": "Grain Facility Energy Audit (GFEA) Decision Tool"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-15pricecalc.xlsx",
+          "text": "Season Average Price Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-12historiccustomrates.xlsx",
+          "text": "Historical Iowa Custom Rate Averages"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-13customshare.xlsx",
+          "text": "Determining the Custom Operator's Share of the Crop"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-21-35machfinancing.xlsx",
+          "text": "Farm Machinery Financing Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-24fieldcap.xlsx",
+          "text": "Estimating the Field Capacity of Farm Machines"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-28tractorsize.xlsx",
+          "text": "Matching Tractor Power and Implement Size"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-28fielddays.xlsx",
+          "text": "Estimating the Number of Field Days Required"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-29machcostcalc.xlsx",
+          "text": "Estimating Farm Machinery Costs"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-29graintransportation.xlsx",
+          "text": "Grain Transportation Costs"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-33ownerch.xlsx",
+          "text": "Combine Ownership or Custom Hire"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-34jointmach.xlsx",
+          "text": "Joint Machinery Ownership"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-38jointventfarmmach.xlsx",
+          "text": "Farm Machinery Joint Venture Worksheet"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-40motorvehiclecost.xlsx",
+          "text": "Motor Vehicle Cost Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a2-32-a3-41grainbidpricecomparison.xlsx",
+          "text": "Grain Bid Price Comparison"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-42g2hsystemsizing.xlsx",
+          "text": "GH2 System Sizing Tool"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/crops/xls/a3-43fuelsavingsestimator.xlsx",
+          "text": "Fuel-Savings Cost Estimator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21farrowtofinishp6.xlsx",
+          "text": "Farrow-to-Finish"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21finfeederpigsp7.xlsx",
+          "text": "Finishing Feeder Pigs"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21prodweanedpigsp8.xlsx",
+          "text": "Producing weaned 12 lb. pigs - Total Confinement"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21finweanedpigsp9.xlsx",
+          "text": "Finishing weaned 12 lb. pigs – Total Confinement"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21finyearlingsteerstp11.xlsx",
+          "text": "Finishing Yearling Steers"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21finsteercalvesp12.xlsx",
+          "text": "Finishing Steer Calves"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21finyearlingheifersp13.xlsx",
+          "text": "Finishing Yearling Heifers"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21backgroundingsteercalvesp14.xlsx",
+          "text": "Backgrounding Steer Calves"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21beefcowcalfp15.xlsx",
+          "text": "Beef Cow-Calf"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21eweflockp17.xlsx",
+          "text": "Ewe Flock"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-21feederlambp19.xlsx",
+          "text": "Finishing Feeder Lamb"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-25cowherdbudgetmodel.xlsx",
+          "text": "Cow Herd Budget Model"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-50lrpanalysis.xlsx",
+          "text": "Livestock Revenue Protection (LRP) Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-60managedhayorgrazingcrpacres.xlsx",
+          "text": "Managed Hay and Grazing of CRP Acres"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-65manurecalculator.xlsx",
+          "text": "Manure Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-73_buyingheifers.xlsx",
+          "text": "Buying heifers for beef cow replacement (one replacement unit)"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-73_raisingheifers.xlsx",
+          "text": "Raising heifers for beef cow replacement (one replacement unit)"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-74netpresentvalueofbeefreplacementfemales.xlsx",
+          "text": "Net Present Value of Beef Replacement Females"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-74netpresentvalueofbeefreplacementfemalesgroup.xlsx",
+          "text": "Net Present Value of Beef Replacement Females"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-78improvingmortality.xlsx",
+          "text": "Pig Survivability Project: Wean-to-finish mortality economic modeling"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b1-79improvingmortalitybreedtowean.xlsx",
+          "text": "Pig Survivability Project: Breed-to-wean mortality economic modeling"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b2-35cowsellcalculator.xlsx",
+          "text": "Cow Sell Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b2-35cowrepurchasecalculator.xlsx",
+          "text": "Cow Repurchase Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b2-53hogmarketcalculator.xlsx",
+          "text": "Simple Hog Market Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/livestock/xls/b2-53advancedhogmarketcalculator.xlsx",
+          "text": "Swine Marketing Decision Calculator"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c1-15cropandlivestocklanduse.xlsx",
+          "text": "Crop and Livestock Land Use Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c1-50partialbudgeting.xlsx",
+          "text": "Partial Budgeting"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c1-55marketcomparison.xlsx",
+          "text": "Comparison of Customer, Competition or Cost Based Pricing"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-01leasecomparison.xlsx",
+          "text": "Estimated Returns by Farm Lease Arrangement"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-06leaseannualreport.xlsx",
+          "text": "Farmland Lease Annual Report"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-20croplandcashrent.xlsx",
+          "text": "Cash Rental Rate Estimation"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-21flexiblerentanalysis.xlsx",
+          "text": "Flexible Lease Agreement Worksheet"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-23pastureandhaycashrent.xlsx",
+          "text": "Calculating Hay and Pasture Cash Rents"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-24grainstorage.xlsx",
+          "text": "Computing a Grain Storage Rental Rate"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-26buildingrent.xlsx",
+          "text": "Computing a Livestock Building Cash Rental Rate"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-30cropshareleaseanalysis.xlsx",
+          "text": "Crop Share Analysis"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-36cowsshareanalysis.xls",
+          "text": "Beef Cow Share Agreement Analysis"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-70landpurchaseanalysis.xlsx",
+          "text": "Farmland Purchase Analysis"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-70landvalues.xlsx",
+          "text": "Historical Farmland Value Survey (Iowa State University)"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-75rlidata.xlsx",
+          "text": "Farmland Value Survey (REALTORS® Land Institute)"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-87compositecsr.xlsx",
+          "text": "Calculating a Weighted Average Corn Suitability Rating"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-88iowatownships.xlsx",
+          "text": "Iowa Township Names and Geographic Locations by County"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c2-90tilinganalysis.xlsx",
+          "text": "Farmland Tile Drainage Investment Analysis"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-14cashflowbudget12month.xlsx",
+          "text": "Cash Flow Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-15cashflowbudget.xlsx",
+          "text": "Cash Flow Budget"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-19networthshortform.xlsx",
+          "text": "Balance Sheet"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-26accrualnfi.xlsx",
+          "text": "Cash to Accrual Net Farm Income Worksheet"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-51incomecomparison.xlsx",
+          "text": "Computing Benefits from Adding Additional Off-farm Work"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-55finperformancemeasures.xlsx",
+          "text": "Financial Performance Measures"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-56interprfintrendsheet.xlsx",
+          "text": "Interpreting Financial Performance Measures"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-56comprfinstatements.xlsx",
+          "text": "Comprehensive Financial Statements"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-56cyclonefarm.xlsx",
+          "text": "Example of Farm Financial Statements."
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-59financialperformanceanalysis.xlsx",
+          "text": "Farm Financial Performance Analysis"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-66familylivingbenchmark.xlsx",
+          "text": "Benchmarking Family Living Expenses in Agriculture"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-66familylivingbenchmark.xlsx",
+          "text": "Benchmarking Family Living Expenses in Agriculture"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c3-70loancomparison.xlsx",
+          "text": "Comparison of Farmland Financing Options for Beginning Farmers and Ranchers in Iowa: Land Ownership Purchase"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c4-16dividingincome.xlsx",
+          "text": "Dividing Business Income"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c6-80conversions.xlsx",
+          "text": "Metric Conversions"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c6-82storagecapacity.xlsx",
+          "text": "Estimated Storage Capacity for Grains, Forages, and Liquids"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c5-08inkindmatchform.xlsx",
+          "text": "Grant In-Kind Match Contributions"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c5-08travelexptemplate.xlsx",
+          "text": "Travel Expense Voucher"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c5-113calcstartupcosts.xlsx",
+          "text": "Value-Added Processing Facility Start-up Costs"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/wholefarm/xls/c5-32marketingoutletanalyzer.xlsx",
+          "text": "Marketing Outlet Analyzer"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/energy/xls/d1-10ethanolprofitability.xlsx",
+          "text": "Monthly Profitability of Ethanol Production"
+        },
+        {
+          "url": "https://www.extension.iastate.edu/agdm/energy/xls/d1-15biodieselprofitability.xlsx",
+          "text": "Monthly Profitability of Biodiesel Production"
+        }
+      ]
+    },
+    {
+      "name": "iowa_state_copyright",
+      "url": "https://www.extension.iastate.edu/agdm/info/copyright.html",
+      "utc": "2026-10-15T01:28:49.018409+00:00",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "oklahoma_state_budgets",
+      "url": "https://extension.okstate.edu/programs/farm-management-and-finance/budgets/",
+      "utc": "2026-10-15T01:28:49.019133+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "nlr_jedi",
+      "url": "https://www.nlr.gov/analysis/jedi",
+      "utc": "2026-10-15T01:28:50.616790+00:00",
+      "status": 200,
+      "final_url": "https://www.nlr.gov/analysis/jedi",
+      "ok": true,
+      "bytes": 28053,
+      "sha256": "571c1f7763e7197e27da909a190365fa516be74aea8cbad64a5c8557514dcc01",
+      "path": "source_discovery/metadata_v6/nlr_jedi.source",
+      "potential_links": [
+        {
+          "url": "https://www.nlr.gov/analysis/jedi",
+          "text": "Jobs and Economic Development Impact Models"
+        },
+        {
+          "url": "https://www.nlr.gov/analysis/jedi",
+          "text": "Jobs and Economic Development Impact Models"
+        },
+        {
+          "url": "https://www.nlr.gov/analysis/jedi",
+          "text": "Models"
+        },
+        {
+          "url": "https://www.nlr.gov/analysis/jedi/models",
+          "text": "Models"
+        },
+        {
+          "url": "https://www.nlr.gov/analysis/jedi/models",
+          "text": "Download free models"
+        }
+      ]
+    },
+    {
+      "name": "nrel_jedi_archival_redirect",
+      "url": "https://www.nrel.gov/analysis/jedi/models.html",
+      "utc": "2026-10-15T01:28:51.027355+00:00",
+      "ok": false,
+      "error": "<urlopen error [Errno -5] No address associated with hostname>"
+    },
+    {
+      "name": "penn_state_enterprise_budgets",
+      "url": "https://extension.psu.edu/business-and-operations/business-management/financial-management/enterprise-budgets",
+      "utc": "2026-10-15T01:28:51.034287+00:00",
+      "ok": false,
+      "error": "HTTP Error 405: Not allowed"
+    },
+    {
+      "name": "nz_treasury_tools_index",
+      "url": "https://www.treasury.govt.nz/information-and-services/state-sector-leadership/investment-management/plan-investment-choices/cost-benefit-analysis-including-public-sector-discount-rates",
+      "utc": "2026-10-15T01:28:51.606936+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "worldbank_project_appraisal",
+      "url": "https://ppp.worldbank.org/public-private-partnership/library/financial-modeling-ppp-projects",
+      "utc": "2026-10-15T01:28:52.388207+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

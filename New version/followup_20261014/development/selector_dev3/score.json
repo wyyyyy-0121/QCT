@@ -1,0 +1,490 @@
+{
+  "role": "revealed development only; final gate not passed",
+  "regression": {
+    "cases": [
+      {
+        "id": "sparse_seed101",
+        "family": "sparse",
+        "proposals": 7,
+        "correct": 7,
+        "errors": 12,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "clean_101",
+        "family": "clean",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "sparse_seed202",
+        "family": "sparse",
+        "proposals": 26,
+        "correct": 26,
+        "errors": 30,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "clean_202",
+        "family": "clean",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "sparse_seed303",
+        "family": "sparse",
+        "proposals": 46,
+        "correct": 46,
+        "errors": 60,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "clean_303",
+        "family": "clean",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "systemic_seed404",
+        "family": "systemic",
+        "proposals": 650,
+        "correct": 650,
+        "errors": 2149,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "clean_404",
+        "family": "clean",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "systemic_seed505",
+        "family": "systemic",
+        "proposals": 1000,
+        "correct": 1000,
+        "errors": 1400,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "clean_505",
+        "family": "clean",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "systemic_seed606",
+        "family": "systemic",
+        "proposals": 600,
+        "correct": 600,
+        "errors": 2099,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "clean_606",
+        "family": "clean",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_1_101",
+        "family": "length_1",
+        "proposals": 1,
+        "correct": 1,
+        "errors": 1,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_10_101",
+        "family": "length_10",
+        "proposals": 10,
+        "correct": 10,
+        "errors": 10,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_100_101",
+        "family": "length_100",
+        "proposals": 100,
+        "correct": 100,
+        "errors": 100,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_500_101",
+        "family": "length_500",
+        "proposals": 500,
+        "correct": 500,
+        "errors": 500,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_1499_101",
+        "family": "length_1499",
+        "proposals": 1499,
+        "correct": 1499,
+        "errors": 1499,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "shared_101",
+        "family": "shared",
+        "proposals": 900,
+        "correct": 900,
+        "errors": 900,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "single_101",
+        "family": "single",
+        "proposals": 300,
+        "correct": 300,
+        "errors": 300,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "heterogeneous_101",
+        "family": "heterogeneous",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "exception_101",
+        "family": "exception",
+        "proposals": 299,
+        "correct": 299,
+        "errors": 299,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_1_202",
+        "family": "length_1",
+        "proposals": 1,
+        "correct": 1,
+        "errors": 1,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_10_202",
+        "family": "length_10",
+        "proposals": 10,
+        "correct": 10,
+        "errors": 10,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_100_202",
+        "family": "length_100",
+        "proposals": 100,
+        "correct": 100,
+        "errors": 100,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_500_202",
+        "family": "length_500",
+        "proposals": 500,
+        "correct": 500,
+        "errors": 500,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_1499_202",
+        "family": "length_1499",
+        "proposals": 1499,
+        "correct": 1499,
+        "errors": 1499,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "shared_202",
+        "family": "shared",
+        "proposals": 900,
+        "correct": 900,
+        "errors": 900,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "single_202",
+        "family": "single",
+        "proposals": 300,
+        "correct": 300,
+        "errors": 300,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "heterogeneous_202",
+        "family": "heterogeneous",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "exception_202",
+        "family": "exception",
+        "proposals": 299,
+        "correct": 299,
+        "errors": 299,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_1_303",
+        "family": "length_1",
+        "proposals": 1,
+        "correct": 1,
+        "errors": 1,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_10_303",
+        "family": "length_10",
+        "proposals": 10,
+        "correct": 10,
+        "errors": 10,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_100_303",
+        "family": "length_100",
+        "proposals": 100,
+        "correct": 100,
+        "errors": 100,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_500_303",
+        "family": "length_500",
+        "proposals": 500,
+        "correct": 500,
+        "errors": 500,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "length_1499_303",
+        "family": "length_1499",
+        "proposals": 1499,
+        "correct": 1499,
+        "errors": 1499,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "shared_303",
+        "family": "shared",
+        "proposals": 900,
+        "correct": 900,
+        "errors": 900,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "single_303",
+        "family": "single",
+        "proposals": 300,
+        "correct": 300,
+        "errors": 300,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "heterogeneous_303",
+        "family": "heterogeneous",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "exception_303",
+        "family": "exception",
+        "proposals": 299,
+        "correct": 299,
+        "errors": 299,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      }
+    ],
+    "totals": {
+      "proposals": 13156,
+      "correct": 13156,
+      "errors": 16577,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973,
+      "harmful_correct_cells": 0
+    }
+  },
+  "stress": {
+    "cases": [
+      {
+        "id": "c01",
+        "family": "expense_sign_error",
+        "proposals": 24,
+        "correct": 24,
+        "errors": 24,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c02",
+        "family": "missing_shipping_error",
+        "proposals": 1,
+        "correct": 1,
+        "errors": 1,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c03",
+        "family": "legitimate_shipping_waiver",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 1,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c04",
+        "family": "legitimate_discount_exemption",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 24,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c05",
+        "family": "legitimate_revenue_factor",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c06",
+        "family": "erroneous_revenue_factor_same_observed_input",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 24,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c07",
+        "family": "unknown_output_role_sign_error",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 24,
+        "wrong": 0,
+        "policy_reviewed": 0,
+        "harmful_correct_cells": 0
+      },
+      {
+        "id": "c08",
+        "family": "legitimate_cost_reimbursement",
+        "proposals": 0,
+        "correct": 0,
+        "errors": 0,
+        "wrong": 0,
+        "policy_reviewed": 24,
+        "harmful_correct_cells": 0
+      }
+    ]
+  },
+  "prediction_lock_sha256": "4a7854aa818a227ad92c369bba791adb926a5b2750004685b09749fd0cf183ac"
+}

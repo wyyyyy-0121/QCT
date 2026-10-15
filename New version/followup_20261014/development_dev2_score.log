@@ -1,0 +1,108 @@
+{
+  "totals": {
+    "proposals": 13156,
+    "correct": 13156,
+    "errors": 16577,
+    "precision": 1.0,
+    "coverage": 0.7936297279362973,
+    "harmful_correct_cells": 0
+  },
+  "families": {
+    "clean": {
+      "proposals": 0,
+      "correct": 0,
+      "errors": 0,
+      "precision": null,
+      "coverage": null,
+      "harmful_correct_cells": 0
+    },
+    "exception": {
+      "proposals": 897,
+      "correct": 897,
+      "errors": 897,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "heterogeneous": {
+      "proposals": 0,
+      "correct": 0,
+      "errors": 0,
+      "precision": null,
+      "coverage": null,
+      "harmful_correct_cells": 0
+    },
+    "length_1": {
+      "proposals": 3,
+      "correct": 3,
+      "errors": 3,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "length_10": {
+      "proposals": 30,
+      "correct": 30,
+      "errors": 30,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "length_100": {
+      "proposals": 300,
+      "correct": 300,
+      "errors": 300,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "length_1499": {
+      "proposals": 4497,
+      "correct": 4497,
+      "errors": 4497,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "length_500": {
+      "proposals": 1500,
+      "correct": 1500,
+      "errors": 1500,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "shared": {
+      "proposals": 2700,
+      "correct": 2700,
+      "errors": 2700,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "single": {
+      "proposals": 900,
+      "correct": 900,
+      "errors": 900,
+      "precision": 1.0,
+      "coverage": 1.0,
+      "harmful_correct_cells": 0
+    },
+    "sparse": {
+      "proposals": 79,
+      "correct": 79,
+      "errors": 102,
+      "precision": 1.0,
+      "coverage": 0.7745098039215687,
+      "harmful_correct_cells": 0
+    },
+    "systemic": {
+      "proposals": 2250,
+      "correct": 2250,
+      "errors": 5648,
+      "precision": 1.0,
+      "coverage": 0.398371104815864,
+      "harmful_correct_cells": 0
+    }
+  }
+}

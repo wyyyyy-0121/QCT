@@ -1,0 +1,298 @@
+{
+  "role": "development diagnostics only; no pooled acceptance score",
+  "cases": [
+    {
+      "id": "c01",
+      "scenario": "expense_sign_error",
+      "errors": 24,
+      "paper": {
+        "proposals": 24,
+        "correct": 24,
+        "wrong": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11*(1-E11)-A11*C11-D11"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 24,
+        "correct": 24,
+        "wrong": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11*(1-E11)-A11*C11-D11"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c02",
+      "scenario": "missing_shipping_error",
+      "errors": 1,
+      "paper": {
+        "proposals": 1,
+        "correct": 1,
+        "wrong": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10-D10"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 1,
+        "correct": 1,
+        "wrong": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10-D10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c03",
+      "scenario": "legitimate_shipping_waiver",
+      "errors": 0,
+      "paper": {
+        "proposals": 1,
+        "correct": 0,
+        "wrong": 1,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 1,
+        "correct": 0,
+        "wrong": 1,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c04",
+      "scenario": "legitimate_discount_exemption",
+      "errors": 0,
+      "paper": {
+        "proposals": 24,
+        "correct": 0,
+        "wrong": 24,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11-A11*C11-D11"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 24,
+        "correct": 0,
+        "wrong": 24,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11-A11*C11-D11"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c05",
+      "scenario": "legitimate_revenue_factor",
+      "errors": 0,
+      "paper": {
+        "proposals": 24,
+        "correct": 0,
+        "wrong": 24,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=0.85*A10*B10*(1-E10)-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=0.85*A11*B11*(1-E11)-A11*C11-D11"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 0,
+        "correct": 0,
+        "wrong": 0,
+        "precision": null,
+        "coverage": null,
+        "examples": []
+      }
+    },
+    {
+      "id": "c06",
+      "scenario": "erroneous_revenue_factor_same_observed_input",
+      "errors": 24,
+      "paper": {
+        "proposals": 24,
+        "correct": 24,
+        "wrong": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11*(1-E11)-A11*C11-D11"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 0,
+        "correct": 0,
+        "wrong": 0,
+        "precision": null,
+        "coverage": 0.0,
+        "examples": []
+      }
+    },
+    {
+      "id": "c07",
+      "scenario": "unknown_output_role_sign_error",
+      "errors": 24,
+      "paper": {
+        "proposals": 24,
+        "correct": 24,
+        "wrong": 0,
+        "precision": 1.0,
+        "coverage": 1.0,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)-A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11*(1-E11)-A11*C11-D11"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 0,
+        "correct": 0,
+        "wrong": 0,
+        "precision": null,
+        "coverage": 0.0,
+        "examples": []
+      }
+    },
+    {
+      "id": "c08",
+      "scenario": "legitimate_cost_reimbursement",
+      "errors": 0,
+      "paper": {
+        "proposals": 24,
+        "correct": 0,
+        "wrong": 24,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)+A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11*(1-E11)+A11*C11-D11"
+          }
+        ]
+      },
+      "dev2": {
+        "proposals": 24,
+        "correct": 0,
+        "wrong": 24,
+        "precision": 0.0,
+        "coverage": null,
+        "examples": [
+          {
+            "cell": "A!F10",
+            "proposal": "=A10*B10*(1-E10)-A10*C10-D10",
+            "expected": "=A10*B10*(1-E10)+A10*C10-D10"
+          },
+          {
+            "cell": "A!F11",
+            "proposal": "=A11*B11*(1-E11)-A11*C11-D11",
+            "expected": "=A11*B11*(1-E11)+A11*C11-D11"
+          }
+        ]
+      }
+    }
+  ],
+  "identical_input_pair_predictions_equal": true,
+  "prediction_lock_sha256": "e1bf213698e5b8e5144b8724c6fab4adb8a012d37d3f6fefee5b761404b4f224"
+}
