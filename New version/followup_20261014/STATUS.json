@@ -13,10 +13,10 @@
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "represent unsupported Excel functions and array outputs; validate execution semantics against independent references",
-    "research verified business evidence for legitimate sign and coefficient exceptions",
-    "develop candidate generation when every peer is wrong; preserve all adversarial misses",
-    "evaluate unknown headers, unit consistency and policy scope beyond development dictionary",
+    "fix typed Excel error propagation in a new execution adapter; preserve literal strings and lazy IF semantics",
+    "audit independent-engine and cache discrepancies before trusting a broader formula executor",
+    "develop candidate generation when every peer is wrong and investigate independent business evidence",
+    "retain all exception harms and unsupported failures in development regression",
     "audit independent sources and natural-error truth without final data exposure",
     "freeze improved model and scorer before final acquisition; separate three final categories"
   ],
@@ -40,7 +40,7 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 25,
+  "unit_test_count": 30,
   "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
@@ -71,5 +71,15 @@
   "public_compatibility_empty_array_result_declarations": 63,
   "public_compatibility_evaluation_errors": 4118,
   "public_compatibility_business_labels_available": false,
-  "public_compatibility_report": "PUBLIC_COMPATIBILITY_REPORT_20261015.md"
+  "public_compatibility_report": "PUBLIC_COMPATIBILITY_REPORT_20261015.md",
+  "public_execution_reference_report": "EXECUTION_REFERENCE_REPORT_20261015.md",
+  "public_execution_reference_engine": "LibreOffice 26.2.6.3",
+  "public_execution_reference_cases": 14,
+  "public_execution_reference_declarations": 5117,
+  "public_execution_reference_original_error_nonerror_results": 3222,
+  "public_execution_reference_original_text_vs_error": 7,
+  "public_execution_reference_business_labels": false,
+  "public_execution_reference_final_eligible": false,
+  "latest_execution_evidence": "development/execution_reference_dev1/analysis.json",
+  "latest_verified_remote_before_execution_checkpoint": "02cdcccc433dd8cb69cd06b99d6a44fe884775bd"
 }

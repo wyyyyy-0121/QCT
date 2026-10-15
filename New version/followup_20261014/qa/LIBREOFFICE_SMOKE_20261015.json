@@ -1,0 +1,98 @@
+{
+  "all_assertions_passed": true,
+  "purpose": "execution semantics smoke only; no business labels",
+  "result": {
+    "cells": {
+      "Sheet!A1": {
+        "content_type": "FORMULA",
+        "display": "3",
+        "formula_imported": "=1+2",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 3.0
+      },
+      "Sheet!A2": {
+        "content_type": "FORMULA",
+        "display": "TRUE",
+        "formula_imported": "=TRUE()",
+        "kind": "boolean",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": true
+      },
+      "Sheet!A3": {
+        "content_type": "FORMULA",
+        "display": "hello",
+        "formula_imported": "=\"hello\"",
+        "kind": "text",
+        "result_type": "TEXT",
+        "uno_error_code": 0,
+        "value": "hello"
+      },
+      "Sheet!A4": {
+        "content_type": "FORMULA",
+        "display": "#DIV/0!",
+        "error": "#DIV/0!",
+        "formula_imported": "=1/0",
+        "kind": "error",
+        "result_type": "VALUE",
+        "uno_error_code": 532
+      },
+      "Sheet!A5": {
+        "content_type": "FORMULA",
+        "display": "7",
+        "formula_imported": "=SUM(A1;4)",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 7.0
+      },
+      "Sheet!A6": {
+        "content_type": "FORMULA",
+        "display": "",
+        "formula_imported": "=\"\"",
+        "kind": "text",
+        "result_type": "TEXT",
+        "uno_error_code": 0,
+        "value": ""
+      },
+      "Sheet!A7": {
+        "content_type": "FORMULA",
+        "display": "7",
+        "formula_imported": "{=ROW(A7:A8)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 7.0
+      },
+      "Sheet!A8": {
+        "content_type": "FORMULA",
+        "display": "8",
+        "formula_imported": "{=ROW(A7:A8)}",
+        "kind": "number",
+        "result_type": "VALUE",
+        "uno_error_code": 0,
+        "value": 8.0
+      }
+    },
+    "forced_calculate_all": true,
+    "load_options": {
+      "Hidden": true,
+      "MacroExecutionMode": 0,
+      "ReadOnly": true,
+      "UpdateDocMode": 0
+    },
+    "read_only": true,
+    "status": "complete",
+    "stderr": "",
+    "wall_seconds": 15.028113377000409,
+    "wall_seconds_parent": 15.42695424699923,
+    "workbook_saved": false,
+    "worker_returncode": 0
+  },
+  "runner_sha256": "e06ff18a82c0e7bda9177d6096389a867ef1a29a2b4af991cb7777163d7ded84",
+  "source_hash_after": "0af30cb6865fcdb9969bf12461c0d749752157b9c530c9ad0db253ed5b618071",
+  "source_hash_before": "0af30cb6865fcdb9969bf12461c0d749752157b9c530c9ad0db253ed5b618071",
+  "worker_sha256": "eee0861117d14ca3745d955ec98ac7a3f1fc269bc096e706d08237b457ccba4a"
+}

@@ -1,0 +1,5202 @@
+{
+  "cells": {
+    "Logical!B10": {
+      "content_type": "FORMULA",
+      "display": "10",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 10.0
+    },
+    "Logical!B11": {
+      "content_type": "FORMULA",
+      "display": "11",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 11.0
+    },
+    "Logical!B12": {
+      "content_type": "FORMULA",
+      "display": "12",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 12.0
+    },
+    "Logical!B13": {
+      "content_type": "FORMULA",
+      "display": "13",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 13.0
+    },
+    "Logical!B14": {
+      "content_type": "FORMULA",
+      "display": "14",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 14.0
+    },
+    "Logical!B15": {
+      "content_type": "FORMULA",
+      "display": "15",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 15.0
+    },
+    "Logical!B16": {
+      "content_type": "FORMULA",
+      "display": "16",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 16.0
+    },
+    "Logical!B17": {
+      "content_type": "FORMULA",
+      "display": "17",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 17.0
+    },
+    "Logical!B18": {
+      "content_type": "FORMULA",
+      "display": "18",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 18.0
+    },
+    "Logical!B19": {
+      "content_type": "FORMULA",
+      "display": "19",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 19.0
+    },
+    "Logical!B20": {
+      "content_type": "FORMULA",
+      "display": "20",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 20.0
+    },
+    "Logical!B21": {
+      "content_type": "FORMULA",
+      "display": "21",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 21.0
+    },
+    "Logical!B3": {
+      "content_type": "FORMULA",
+      "display": "3",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.0
+    },
+    "Logical!B4": {
+      "content_type": "FORMULA",
+      "display": "4",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.0
+    },
+    "Logical!B5": {
+      "content_type": "FORMULA",
+      "display": "5",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.0
+    },
+    "Logical!B6": {
+      "content_type": "FORMULA",
+      "display": "6",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 6.0
+    },
+    "Logical!B7": {
+      "content_type": "FORMULA",
+      "display": "7",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 7.0
+    },
+    "Logical!B8": {
+      "content_type": "FORMULA",
+      "display": "8",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 8.0
+    },
+    "Logical!B9": {
+      "content_type": "FORMULA",
+      "display": "9",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 9.0
+    },
+    "Logical!C10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A10;A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!C11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A11;A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!C12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A12;A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!C13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A13;A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!C14": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=AND(A14;A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!C15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=AND(A15;A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!C16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A16;A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!C17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A17;A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!C18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A18;A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!C19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A19;A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!C20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A20;A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!C21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A21;A22)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!C26": {
+      "content_type": "FORMULA",
+      "display": "26",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 26.0
+    },
+    "Logical!C27": {
+      "content_type": "FORMULA",
+      "display": "27",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 27.0
+    },
+    "Logical!C28": {
+      "content_type": "FORMULA",
+      "display": "28",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 28.0
+    },
+    "Logical!C29": {
+      "content_type": "FORMULA",
+      "display": "29",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 29.0
+    },
+    "Logical!C3": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=AND(A3;A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!C30": {
+      "content_type": "FORMULA",
+      "display": "30",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 30.0
+    },
+    "Logical!C31": {
+      "content_type": "FORMULA",
+      "display": "31",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 31.0
+    },
+    "Logical!C32": {
+      "content_type": "FORMULA",
+      "display": "32",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 32.0
+    },
+    "Logical!C33": {
+      "content_type": "FORMULA",
+      "display": "33",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 33.0
+    },
+    "Logical!C34": {
+      "content_type": "FORMULA",
+      "display": "34",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 34.0
+    },
+    "Logical!C35": {
+      "content_type": "FORMULA",
+      "display": "35",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 35.0
+    },
+    "Logical!C36": {
+      "content_type": "FORMULA",
+      "display": "36",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36.0
+    },
+    "Logical!C37": {
+      "content_type": "FORMULA",
+      "display": "37",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 37.0
+    },
+    "Logical!C38": {
+      "content_type": "FORMULA",
+      "display": "38",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 38.0
+    },
+    "Logical!C39": {
+      "content_type": "FORMULA",
+      "display": "39",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 39.0
+    },
+    "Logical!C4": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=AND(A4;A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!C40": {
+      "content_type": "FORMULA",
+      "display": "40",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 40.0
+    },
+    "Logical!C41": {
+      "content_type": "FORMULA",
+      "display": "41",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 41.0
+    },
+    "Logical!C42": {
+      "content_type": "FORMULA",
+      "display": "42",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 42.0
+    },
+    "Logical!C43": {
+      "content_type": "FORMULA",
+      "display": "43",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 43.0
+    },
+    "Logical!C44": {
+      "content_type": "FORMULA",
+      "display": "44",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 44.0
+    },
+    "Logical!C5": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=AND(A5;A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!C6": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=AND(A6;A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!C7": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=AND(A7;A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!C8": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=AND(A8;A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!C9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=AND(A9;A10)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!D10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A10;A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!D11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A11;A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!D12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A12;A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!D13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A13;A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!D14": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=AND(A14;A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!D15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=AND(A15;A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!D16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A16;A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!D17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A17;A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!D18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A18;A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!D19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A19;A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!D20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A20;A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!D21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=AND(A21;A22)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!D26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=IF(A26;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!D27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=IF(A27;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!D28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(A28;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!D29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IF(A29;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!D3": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=AND(A3;A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!D30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(A30;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!D31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=IF(A31;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!D32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=IF(A32;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!D33": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A33;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D34": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(A34;\"Is True\")",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!D35": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A35;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D36": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A36;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D37": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A37;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D38": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A38;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D39": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IF(A39;\"Is True\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!D4": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=AND(A4;A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!D40": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A40;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D41": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(A41;\"Is True\")",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!D42": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A42;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D43": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A43;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D44": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "=IF(A44;\"Is True\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!D5": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=AND(A5;A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!D6": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=AND(A6;A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!D7": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=AND(A7;A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!D8": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=AND(A8;A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!D9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=AND(A9;A10)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!E10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=NOT(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!E12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E16": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=NOT(A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!E17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=NOT(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!E19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=NOT(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!E26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=IF(A26;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!E27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=IF(A27;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!E28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(A28;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!E29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IF(A29;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!E3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=NOT(A3)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!E30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(A30;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!E31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=IF(A31;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!E32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=IF(A32;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!E33": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A33;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E34": {
+      "content_type": "FORMULA",
+      "display": "Is False",
+      "formula_imported": "=IF(A34;;\"Is False\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is False"
+    },
+    "Logical!E35": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A35;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E36": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A36;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E37": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A37;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E38": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A38;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E39": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IF(A39;;\"Is False\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!E4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=NOT(A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!E40": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A40;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E41": {
+      "content_type": "FORMULA",
+      "display": "Is False",
+      "formula_imported": "=IF(A41;;\"Is False\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is False"
+    },
+    "Logical!E42": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A42;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E43": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A43;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E44": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(A44;;\"Is False\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!E5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=NOT(A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!E6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=NOT(A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!E7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=NOT(A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!E8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=NOT(A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!E9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=NOT(A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!F10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A10:A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A11:A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A12:A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A13:A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F14": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=OR(A14:A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!F15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=OR(A15:A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!F16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A16:A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A17:A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A18:A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A19:A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A20:A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A21:A22)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=IF(1;A26)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!F27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=IF(1;A27)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!F28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(1;A28)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!F29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IF(1;A29)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!F3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=OR(A3:A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!F30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(1;A30)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!F31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=IF(1;A31)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!F32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=IF(1;A32)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!F33": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IF(1;A33)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Logical!F34": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;A34)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!F35": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IF(1;A35)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!F36": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=IF(1;A36)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!F37": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IF(1;A37)",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Logical!F38": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IF(1;A38)",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Logical!F39": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "=IF(1;A39)",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Logical!F4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=OR(A4:A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!F40": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=IF(1;A40)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!F41": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(1;A41)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!F42": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "=IF(1;A42)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Logical!F43": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "=IF(1;A43)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Logical!F44": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "=IF(1;A44)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Logical!F5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=OR(A5:A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!F6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=OR(A6:A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!F7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=OR(A7:A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!F8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=OR(A8:A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!F9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=OR(A9:A10)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!G10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A10;A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A11;A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A12;A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A13;A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G14": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=OR(A14;A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!G15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=OR(A15;A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!G16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A16;A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A17;A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A18;A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A19;A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A20;A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=OR(A21;A22)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!G26": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A26)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G27": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A27)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G28": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A28)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G29": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A29)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G3": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=OR(A3;A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!G30": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A30)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G31": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A31)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G32": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A32)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G33": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A33)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G34": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A34)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G35": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A35)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G36": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A36)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G37": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A37)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G38": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A38)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G39": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A39)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G4": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=OR(A4;A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!G40": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A40)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G41": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A41)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G42": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A42)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G43": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A43)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G44": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;A44)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!G5": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=OR(A5;A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!G6": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=OR(A6;A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!G7": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=OR(A7;A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!G8": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=OR(A8;A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!G9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=OR(A9;A10)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!H10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A10:A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A11:A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=XOR(A12:A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!H13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A13:A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H14": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=XOR(A14:A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!H15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=XOR(A15:A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!H16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A16:A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A17:A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A18:A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=XOR(A19:A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!H20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=XOR(A20:A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!H21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A21:A22)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!H26": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A26)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H27": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A27)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H28": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A28)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H29": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A29)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=XOR(A3:A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!H30": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A30)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H31": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A31)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H32": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A32)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H33": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A33)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H34": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A34)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H35": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A35)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H36": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A36)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H37": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A37)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H38": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A38)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H39": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A39)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=XOR(A4:A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!H40": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A40)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H41": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A41)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H42": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A42)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H43": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A43)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H44": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(1;;A44)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!H5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=XOR(A5:A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!H6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=XOR(A6:A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!H7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=XOR(A7:A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!H8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=XOR(A8:A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!H9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=XOR(A9:A10)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!I10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A10;A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A11;A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=XOR(A12;A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!I13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A13;A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I14": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=XOR(A14;A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!I15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=XOR(A15;A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!I16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A16;A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A17;A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A18;A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=XOR(A19;A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!I20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=XOR(A20;A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!I21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=XOR(A21;A22)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=IF(0;;A26)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!I27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=IF(0;;A27)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!I28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(0;;A28)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!I29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IF(0;;A29)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!I3": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=XOR(A3;A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!I30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IF(0;;A30)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!I31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=IF(0;;A31)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!I32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=IF(0;;A32)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!I33": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IF(0;;A33)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Logical!I34": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IF(0;;A34)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!I35": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IF(0;;A35)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!I36": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=IF(0;;A36)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!I37": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IF(0;;A37)",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Logical!I38": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IF(0;;A38)",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Logical!I39": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "=IF(0;;A39)",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Logical!I4": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=XOR(A4;A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!I40": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=IF(0;;A40)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!I41": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IF(0;;A41)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!I42": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "=IF(0;;A42)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Logical!I43": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "=IF(0;;A43)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Logical!I44": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "=IF(0;;A44)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Logical!I5": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=XOR(A5;A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!I6": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=XOR(A6;A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!I7": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=XOR(A7;A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!I8": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=XOR(A8;A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!I9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=XOR(A9;A10)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!J10": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IFERROR(A10;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Logical!J11": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IFERROR(A11;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!J12": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IFERROR(A12;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!J13": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=IFERROR(A13;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!J14": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IFERROR(A14;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Logical!J15": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IFERROR(A15;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Logical!J16": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "=IFERROR(A16;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Logical!J17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=IFERROR(A17;\"ERROR\")",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!J18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IFERROR(A18;\"ERROR\")",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!J19": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "=IFERROR(A19;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Logical!J20": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "=IFERROR(A20;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Logical!J21": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "=IFERROR(A21;\"ERROR\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Logical!J26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=IF(A26:C26;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!J27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=IF(A27:C27;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!J28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IF(A28:C28;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!J29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IF(A29:C29;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!J3": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A3;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!J30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IF(A30:C30;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!J31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=IF(A31:C31;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!J32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=IF(A32:C32;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!J33": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A33:C33;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J34": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=IF(A34:C34;\"Is True\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!J35": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A35:C35;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J36": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A36:C36;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J37": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IF(A37:C37;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!J38": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IF(A38:C38;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!J39": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IF(A39:C39;\"Is True\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!J4": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A4;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!J40": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A40:C40;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J41": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=IF(A41:C41;\"Is True\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!J42": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A42:C42;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J43": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A43:C43;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J44": {
+      "content_type": "FORMULA",
+      "display": "Is True",
+      "formula_imported": "{=IF(A44:C44;\"Is True\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "Is True"
+    },
+    "Logical!J5": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A5;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!J6": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A6;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!J7": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A7;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!J8": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A8;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!J9": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "=IFERROR(A9;\"ERROR\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K10": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=IFERROR(A10:B10;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Logical!K11": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=IFERROR(A11:B11;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!K12": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFERROR(A12:B12;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!K13": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "{=IFERROR(A13:B13;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!K14": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFERROR(A14:B14;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Logical!K15": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=IFERROR(A15:B15;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Logical!K16": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "{=IFERROR(A16:B16;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Logical!K17": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFERROR(A17:B17;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!K18": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=IFERROR(A18:B18;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!K19": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "{=IFERROR(A19:B19;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Logical!K20": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "{=IFERROR(A20:B20;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Logical!K21": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "{=IFERROR(A21:B21;\"ERROR\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Logical!K3": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A3:B3;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K4": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A4:B4;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K5": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A5:B5;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K6": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A6:B6;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K7": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A7:B7;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K8": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A8:B8;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!K9": {
+      "content_type": "FORMULA",
+      "display": "ERROR",
+      "formula_imported": "{=IFERROR(A9:B9;\"ERROR\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "ERROR"
+    },
+    "Logical!M10": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IFNA(A10;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Logical!M11": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=IFNA(A11;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!M12": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IFNA(A12;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!M13": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=IFNA(A13;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!M14": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=IFNA(A14;\"AN NA\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Logical!M15": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=IFNA(A15;\"AN NA\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Logical!M16": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "=IFNA(A16;\"AN NA\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Logical!M17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=IFNA(A17;\"AN NA\")",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Logical!M18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=IFNA(A18;\"AN NA\")",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Logical!M19": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "=IFNA(A19;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Logical!M20": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "=IFNA(A20;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Logical!M21": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "=IFNA(A21;\"AN NA\")",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Logical!M3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=IFNA(A3;\"AN NA\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!M4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=IFNA(A4;\"AN NA\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!M5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IFNA(A5;\"AN NA\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!M6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=IFNA(A6;\"AN NA\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!M7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=IFNA(A7;\"AN NA\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!M8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=IFNA(A8;\"AN NA\")",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!M9": {
+      "content_type": "FORMULA",
+      "display": "AN NA",
+      "formula_imported": "=IFNA(A9;\"AN NA\")",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "AN NA"
+    },
+    "Logical!N10": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=IFNA(A10:B10;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Logical!N11": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=IFNA(A11:B11;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!N12": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFNA(A12:B12;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N13": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "{=IFNA(A13:B13;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!N14": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFNA(A14:B14;\"AN NA\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Logical!N15": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=IFNA(A15:B15;\"AN NA\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Logical!N16": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "{=IFNA(A16:B16;\"AN NA\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Logical!N17": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFNA(A17:B17;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N18": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=IFNA(A18:B18;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Logical!N19": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "{=IFNA(A19:B19;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Logical!N20": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "{=IFNA(A20:B20;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Logical!N21": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "{=IFNA(A21:B21;\"AN NA\")}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Logical!N26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=IFS(A26;1;B26;2;C26;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!N27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=IFS(A27;1;B27;2;C27;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!N28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IFS(A28;1;B28;2;C28;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!N29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IFS(A29;1;B29;2;C29;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!N3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=IFNA(A3:B3;\"AN NA\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!N30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IFS(A30;1;B30;2;C30;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!N31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=IFS(A31;1;B31;2;C31;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!N32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=IFS(A32;1;B32;2;C32;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!N33": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A33;1;B33;2;C33;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N34": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "{=IFS(A34;1;B34;2;C34;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!N35": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A35;1;B35;2;C35;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N36": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A36;1;B36;2;C36;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N37": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A37;1;B37;2;C37;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N38": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A38;1;B38;2;C38;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N39": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IFS(A39;1;B39;2;C39;3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!N4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=IFNA(A4:B4;\"AN NA\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!N40": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A40;1;B40;2;C40;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N41": {
+      "content_type": "FORMULA",
+      "display": "3",
+      "formula_imported": "{=IFS(A41;1;B41;2;C41;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.0
+    },
+    "Logical!N42": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A42;1;B42;2;C42;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N43": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A43;1;B43;2;C43;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N44": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A44;1;B44;2;C44;3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!N5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IFNA(A5:B5;\"AN NA\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!N6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IFNA(A6:B6;\"AN NA\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!N7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IFNA(A7:B7;\"AN NA\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!N8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=IFNA(A8:B8;\"AN NA\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!N9": {
+      "content_type": "FORMULA",
+      "display": "AN NA",
+      "formula_imported": "{=IFNA(A9:B9;\"AN NA\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "AN NA"
+    },
+    "Logical!O26": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=IFS(A26:C26;1;B26;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Logical!O27": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=IFS(A27:C27;1;B27;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Logical!O28": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IFS(A28:C28;1;B28;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!O29": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IFS(A29:C29;1;B29;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!O30": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=IFS(A30:C30;1;B30;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Logical!O31": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=IFS(A31:C31;1;B31;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Logical!O32": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=IFS(A32:C32;1;B32;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!O33": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A33:C33;1;B33;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O34": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "{=IFS(A34:C34;1;B34;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Logical!O35": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A35:C35;1;B35;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O36": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A36:C36;1;B36;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O37": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A37:C37;1;B37;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O38": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A38:C38;1;B38;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O39": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=IFS(A39:C39;1;B39;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Logical!O40": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A40:C40;1;B40;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O41": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=IFS(A41:C41;1;B41;2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Logical!O42": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A42:C42;1;B42;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O43": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A43:C43;1;B43;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Logical!O44": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=IFS(A44:C44;1;B44;2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Switch!A44": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=SWITCH(A45:C45;FALSE(); 0; TRUE(); 1)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Switch!A45": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=FALSE()",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Switch!B10": {
+      "content_type": "FORMULA",
+      "display": "10",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 10.0
+    },
+    "Switch!B11": {
+      "content_type": "FORMULA",
+      "display": "11",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 11.0
+    },
+    "Switch!B12": {
+      "content_type": "FORMULA",
+      "display": "12",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 12.0
+    },
+    "Switch!B13": {
+      "content_type": "FORMULA",
+      "display": "13",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 13.0
+    },
+    "Switch!B14": {
+      "content_type": "FORMULA",
+      "display": "14",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 14.0
+    },
+    "Switch!B15": {
+      "content_type": "FORMULA",
+      "display": "15",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 15.0
+    },
+    "Switch!B16": {
+      "content_type": "FORMULA",
+      "display": "16",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 16.0
+    },
+    "Switch!B17": {
+      "content_type": "FORMULA",
+      "display": "17",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 17.0
+    },
+    "Switch!B18": {
+      "content_type": "FORMULA",
+      "display": "18",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 18.0
+    },
+    "Switch!B19": {
+      "content_type": "FORMULA",
+      "display": "19",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 19.0
+    },
+    "Switch!B20": {
+      "content_type": "FORMULA",
+      "display": "20",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 20.0
+    },
+    "Switch!B21": {
+      "content_type": "FORMULA",
+      "display": "21",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 21.0
+    },
+    "Switch!B25": {
+      "content_type": "FORMULA",
+      "display": "1.5",
+      "formula_imported": "=3/2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.5
+    },
+    "Switch!B27": {
+      "content_type": "FORMULA",
+      "display": "-1.5",
+      "formula_imported": "=-3/2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.5
+    },
+    "Switch!B3": {
+      "content_type": "FORMULA",
+      "display": "3",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.0
+    },
+    "Switch!B4": {
+      "content_type": "FORMULA",
+      "display": "4",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.0
+    },
+    "Switch!B45": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=FALSE()",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Switch!B5": {
+      "content_type": "FORMULA",
+      "display": "5",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.0
+    },
+    "Switch!B6": {
+      "content_type": "FORMULA",
+      "display": "6",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 6.0
+    },
+    "Switch!B7": {
+      "content_type": "FORMULA",
+      "display": "7",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 7.0
+    },
+    "Switch!B8": {
+      "content_type": "FORMULA",
+      "display": "8",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 8.0
+    },
+    "Switch!B9": {
+      "content_type": "FORMULA",
+      "display": "9",
+      "formula_imported": "=ROW()",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 9.0
+    },
+    "Switch!C10": {
+      "content_type": "FORMULA",
+      "display": "10",
+      "formula_imported": "{=SWITCH(A10;A10;B10)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 10.0
+    },
+    "Switch!C11": {
+      "content_type": "FORMULA",
+      "display": "11",
+      "formula_imported": "{=SWITCH(A11;A11;B11)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 11.0
+    },
+    "Switch!C12": {
+      "content_type": "FORMULA",
+      "display": "12",
+      "formula_imported": "{=SWITCH(A12;A12;B12)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 12.0
+    },
+    "Switch!C13": {
+      "content_type": "FORMULA",
+      "display": "13",
+      "formula_imported": "{=SWITCH(A13;A13;B13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 13.0
+    },
+    "Switch!C14": {
+      "content_type": "FORMULA",
+      "display": "14",
+      "formula_imported": "{=SWITCH(A14;A14;B14)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 14.0
+    },
+    "Switch!C15": {
+      "content_type": "FORMULA",
+      "display": "15",
+      "formula_imported": "{=SWITCH(A15;A15;B15)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 15.0
+    },
+    "Switch!C16": {
+      "content_type": "FORMULA",
+      "display": "16",
+      "formula_imported": "{=SWITCH(A16;A16;B16)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 16.0
+    },
+    "Switch!C17": {
+      "content_type": "FORMULA",
+      "display": "17",
+      "formula_imported": "{=SWITCH(A17;A17;B17)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 17.0
+    },
+    "Switch!C18": {
+      "content_type": "FORMULA",
+      "display": "18",
+      "formula_imported": "{=SWITCH(A18;A18;B18)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 18.0
+    },
+    "Switch!C19": {
+      "content_type": "FORMULA",
+      "display": "19",
+      "formula_imported": "{=SWITCH(A19;A19;B19)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 19.0
+    },
+    "Switch!C20": {
+      "content_type": "FORMULA",
+      "display": "20",
+      "formula_imported": "{=SWITCH(A20;A20;B20)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 20.0
+    },
+    "Switch!C21": {
+      "content_type": "FORMULA",
+      "display": "21",
+      "formula_imported": "{=SWITCH(A21;A21;B21)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 21.0
+    },
+    "Switch!C25": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A25;B25;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C26": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A26;B26;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C27": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A27;B27;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C28": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A28;B28;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C29": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A29;B29;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=SWITCH(A3;A3;B3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Switch!C30": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A30;B30;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C31": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A31;B31;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C32": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A32;B32;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C33": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A33;B33;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C34": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A34;B34;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C35": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A35;B35;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C36": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A36;B36;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C37": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(A37;B37;\"match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!C38": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A38;B38;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C39": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A39;B39;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=SWITCH(A4;A4;B4)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Switch!C40": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A40;B40;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C41": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A41;B41;\"match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!C45": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=TRUE()",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Switch!C5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(A5;A5;B5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!C6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(A6;A6;B6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!C7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(A7;A7;B7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!C8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=SWITCH(A8;A8;B8)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Switch!C9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(A9;A9;B9)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D10": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B10;A10;A10)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D11": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B11;A11;A11)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D12": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B12;A12;A12)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D13": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B13;A13;A13)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D14": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B14;A14;A14)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D15": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B15;A15;A15)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D16": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(B16;A16;A16)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!D17": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B17;A17;A17)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D18": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B18;A18;A18)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D19": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B19;A19;A19)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D20": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B20;A20;A20)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D21": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B21;A21;A21)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!D3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=SWITCH(B3;A3;A3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Switch!D4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=SWITCH(B4;A4;A4)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Switch!D5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(B5;A5;A5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!D6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(B6;A6;A6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!D7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(B7;A7;A7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!D8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=SWITCH(B8;A8;A8)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Switch!D9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B9;A9;A9)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!E10": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A10;0;-1;A10;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E11": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=SWITCH(A11;0;-1;A11;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Switch!E12": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A12;0;-1;A12;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E13": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A13;0;-1;A13;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E14": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A14;0;-1;A14;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E15": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A15;0;-1;A15;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E16": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A16;0;-1;A16;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E17": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A17;0;-1;A17;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E18": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=SWITCH(A18;0;-1;A18;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Switch!E19": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A19;0;-1;A19;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E20": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A20;0;-1;A20;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E21": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "{=SWITCH(A21;0;-1;A21;-2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "Switch!E3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=SWITCH(A3;0;-1;A3;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Switch!E4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=SWITCH(A4;0;-1;A4;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Switch!E44": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=SWITCH(A45:C45; FALSE(); 1; TRUE();0)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Switch!E46": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=AND(A44; E44)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Switch!E5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(A5;0;-1;A5;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!E6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(A6;0;-1;A6;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!E7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(A7;0;-1;A7;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!E8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=SWITCH(A8;0;-1;A8;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Switch!E9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(A9;0;-1;A9;-2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!F10": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A10;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F11": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A11;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!F12": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A12;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F13": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A13;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F14": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A14;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F15": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A15;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F16": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A16;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F17": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A17;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F18": {
+      "content_type": "FORMULA",
+      "display": "match",
+      "formula_imported": "{=SWITCH(A18;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "match"
+    },
+    "Switch!F19": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A19;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F20": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A20;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F21": {
+      "content_type": "FORMULA",
+      "display": "no-match",
+      "formula_imported": "{=SWITCH(A21;0;\"match\";\"no-match\")}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "no-match"
+    },
+    "Switch!F3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=SWITCH(A3;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Switch!F4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=SWITCH(A4;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Switch!F5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(A5;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!F6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(A6;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!F7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(A7;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!F8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=SWITCH(A8;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Switch!F9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(A9;0;\"match\";\"no-match\")}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G10": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B10;A10;B10)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G11": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B11;A11;B11)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G12": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B12;A12;B12)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G13": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B13;A13;B13)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G14": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B14;A14;B14)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G15": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B15;A15;B15)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G16": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(B16;A16;B16)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!G17": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B17;A17;B17)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G18": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B18;A18;B18)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G19": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B19;A19;B19)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G20": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B20;A20;B20)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G21": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B21;A21;B21)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!G3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=SWITCH(B3;A3;B3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Switch!G4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=SWITCH(B4;A4;B4)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Switch!G5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(B5;A5;B5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!G6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(B6;A6;B6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!G7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(B7;A7;B7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!G8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=SWITCH(B8;A8;B8)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Switch!G9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B9;A9;B9)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Switch!H10": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=SWITCH(B10;B10;A10)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Switch!H11": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=SWITCH(B11;B11;A11)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Switch!H12": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=SWITCH(B12;B12;A12)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Switch!H13": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "{=SWITCH(B13;B13;A13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Switch!H14": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=SWITCH(B14;B14;A14)}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "1"
+    },
+    "Switch!H15": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "{=SWITCH(B15;B15;A15)}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "-1"
+    },
+    "Switch!H16": {
+      "content_type": "FORMULA",
+      "display": "XYZZY",
+      "formula_imported": "{=SWITCH(B16;B16;A16)}",
+      "kind": "text",
+      "result_type": "TEXT",
+      "uno_error_code": 0,
+      "value": "XYZZY"
+    },
+    "Switch!H17": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=SWITCH(B17;B17;A17)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Switch!H18": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=SWITCH(B18;B18;A18)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Switch!H19": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "{=SWITCH(B19;B19;A19)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Switch!H20": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "{=SWITCH(B20;B20;A20)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Switch!H21": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "{=SWITCH(B21;B21;A21)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Switch!H3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "{=SWITCH(B3;B3;A3)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Switch!H4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "{=SWITCH(B4;B4;A4)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Switch!H5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(B5;B5;A5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!H6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=SWITCH(B6;B6;A6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Switch!H7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=SWITCH(B7;B7;A7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Switch!H8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "{=SWITCH(B8;B8;A8)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Switch!H9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "{=SWITCH(B9;B9;A9)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    }
+  },
+  "forced_calculate_all": true,
+  "load_options": {
+    "Hidden": true,
+    "MacroExecutionMode": 0,
+    "ReadOnly": true,
+    "UpdateDocMode": 0
+  },
+  "read_only": true,
+  "status": "complete",
+  "stderr": "",
+  "wall_seconds": 28.8616681909989,
+  "wall_seconds_parent": 29.079627658999016,
+  "workbook_saved": false,
+  "worker_returncode": 0
+}

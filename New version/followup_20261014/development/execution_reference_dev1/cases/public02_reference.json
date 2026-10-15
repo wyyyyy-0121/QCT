@@ -1,0 +1,72 @@
+{
+  "cells": {
+    "Sheet1!B2": {
+      "content_type": "FORMULA",
+      "display": "5",
+      "formula_imported": "=A2+A3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.0
+    },
+    "Sheet1!B3": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=B2-A4",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Sheet1!B4": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=MIN(B2; A2:A3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Sheet1!C2": {
+      "content_type": "FORMULA",
+      "display": "5",
+      "formula_imported": "=B3*B2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.0
+    },
+    "Sheet1!C3": {
+      "content_type": "FORMULA",
+      "display": "10",
+      "formula_imported": "=C2*A2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 10.0
+    },
+    "Sheet1!C4": {
+      "content_type": "FORMULA",
+      "display": "25",
+      "formula_imported": "=C2^B4",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 25.0
+    }
+  },
+  "forced_calculate_all": true,
+  "load_options": {
+    "Hidden": true,
+    "MacroExecutionMode": 0,
+    "ReadOnly": true,
+    "UpdateDocMode": 0
+  },
+  "read_only": true,
+  "status": "complete",
+  "stderr": "",
+  "wall_seconds": 13.83046084399939,
+  "wall_seconds_parent": 14.141166535000593,
+  "workbook_saved": false,
+  "worker_returncode": 0
+}

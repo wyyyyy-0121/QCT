@@ -1,0 +1,33 @@
+{
+  "cache_policy": "original cache may be stale; error cache is observed evidence, not intentional-error proof",
+  "comparison": "numeric relative/absolute tolerance 1e-8; text exact; booleans distinct",
+  "final_validation_eligible": false,
+  "logical_value_caveat": "UNO numerical outputs with a logical number format are represented as boolean",
+  "new_final_families": 0,
+  "new_final_sources": 0,
+  "no_business_repair_labels": true,
+  "previous_predictions_sha256": "a7245ab5de891c1c616c7b5f62b684f118f46c42ea3312d9920c0c086fa7a3cb",
+  "reference": "LibreOffice isolated profile, read-only import, explicit calculateAll, never store",
+  "reference_failure_policy": "retain timeout/load failure; never drop cells",
+  "role": "revealed public development: independent execution compatibility only",
+  "selected_files": [
+    "example/example.xlsx",
+    "tests/fixtures/basic.xlsx",
+    "tests/fixtures/circular.xlsx",
+    "tests/fixtures/cond-format.xlsx",
+    "tests/fixtures/date-time.xlsx",
+    "tests/fixtures/excelcompiler.xlsx",
+    "tests/fixtures/information.xlsx",
+    "tests/fixtures/logical.xlsx",
+    "tests/fixtures/lookup.xlsx",
+    "tests/fixtures/npv.xlsx",
+    "tests/fixtures/pv.xlsx",
+    "tests/fixtures/stats.xlsx",
+    "tests/fixtures/text.xlsx",
+    "tests/fixtures/yearfrac.xlsx"
+  ],
+  "selection": "all 14 previously acquired pinned Pycel workbooks, including zero-formula input",
+  "source_immutability": "verify exact input hashes before and after every run",
+  "timeout_seconds": 120,
+  "utc": "2026-10-15T04:57:07.632434+00:00"
+}

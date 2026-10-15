@@ -1,0 +1,1746 @@
+{
+  "cells": {
+    "LinestArrayExp!A10": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=1+A9",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "LinestArrayExp!A11": {
+      "content_type": "FORMULA",
+      "display": "3",
+      "formula_imported": "=1+A10",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.0
+    },
+    "LinestArrayExp!A12": {
+      "content_type": "FORMULA",
+      "display": "4",
+      "formula_imported": "=1+A11",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.0
+    },
+    "LinestArrayExp!A13": {
+      "content_type": "FORMULA",
+      "display": "5",
+      "formula_imported": "=1+A12",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.0
+    },
+    "LinestArrayExp!A3": {
+      "content_type": "FORMULA",
+      "display": "-5",
+      "formula_imported": "=1+A2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -5.0
+    },
+    "LinestArrayExp!A4": {
+      "content_type": "FORMULA",
+      "display": "-4",
+      "formula_imported": "=1+A3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -4.0
+    },
+    "LinestArrayExp!A5": {
+      "content_type": "FORMULA",
+      "display": "-3",
+      "formula_imported": "=1+A4",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -3.0
+    },
+    "LinestArrayExp!A6": {
+      "content_type": "FORMULA",
+      "display": "-2",
+      "formula_imported": "=1+A5",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.0
+    },
+    "LinestArrayExp!A7": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=1+A6",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "LinestArrayExp!A8": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=1+A7",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "LinestArrayExp!A9": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=1+A8",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "LinestArrayExp!B10": {
+      "content_type": "FORMULA",
+      "display": "2.3",
+      "formula_imported": "=B$17*A10^2+C$17*A10+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.3000000000000003
+    },
+    "LinestArrayExp!B11": {
+      "content_type": "FORMULA",
+      "display": "4.1",
+      "formula_imported": "=B$17*A11^2+C$17*A11+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.1
+    },
+    "LinestArrayExp!B12": {
+      "content_type": "FORMULA",
+      "display": "6.7",
+      "formula_imported": "=B$17*A12^2+C$17*A12+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 6.700000000000001
+    },
+    "LinestArrayExp!B13": {
+      "content_type": "FORMULA",
+      "display": "10.1",
+      "formula_imported": "=B$17*A13^2+C$17*A13+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 10.1
+    },
+    "LinestArrayExp!B18": {
+      "content_type": "FORMULA",
+      "display": "0.399575424575425",
+      "formula_imported": "{=LINEST(B2:B13;A2:A13^{1;2})}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.39957542457542455
+    },
+    "LinestArrayExp!B19": {
+      "content_type": "FORMULA",
+      "display": "0.399575424575425",
+      "formula_imported": "{=LINEST(B2:B13;A2:A13^{1;2};;TRUE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.39957542457542455
+    },
+    "LinestArrayExp!B2": {
+      "content_type": "FORMULA",
+      "display": "16.7",
+      "formula_imported": "=B$17*A2^2+C$17*A2+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 16.700000000000003
+    },
+    "LinestArrayExp!B21": {
+      "content_type": "FORMULA",
+      "display": "0.399575424575425",
+      "formula_imported": "{=LINEST(B2:B13;A2:A13^{1;2};TRUE();TRUE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.39957542457542455
+    },
+    "LinestArrayExp!B28": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(B2:B14;A2:A14^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!B29": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(B2:B14;A2:A13^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!B3": {
+      "content_type": "FORMULA",
+      "display": "12.1",
+      "formula_imported": "=B$17*A3^2+C$17*A3+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 12.1
+    },
+    "LinestArrayExp!B30": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(B2:B13;A2:A12^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!B33": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=LINEST(A2:A13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "LinestArrayExp!B34": {
+      "content_type": "FORMULA",
+      "display": "-0.601748251748252",
+      "formula_imported": "{=LINEST(B2:B13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.601748251748252
+    },
+    "LinestArrayExp!B4": {
+      "content_type": "FORMULA",
+      "display": "8.3",
+      "formula_imported": "=B$17*A4^2+C$17*A4+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 8.3
+    },
+    "LinestArrayExp!B5": {
+      "content_type": "FORMULA",
+      "display": "5.4",
+      "formula_imported": "=B$17*A5^2+C$17*A5+D$17+0.1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.4
+    },
+    "LinestArrayExp!B6": {
+      "content_type": "FORMULA",
+      "display": "3.1",
+      "formula_imported": "=B$17*A6^2+C$17*A6+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.1
+    },
+    "LinestArrayExp!B7": {
+      "content_type": "FORMULA",
+      "display": "1.7",
+      "formula_imported": "=B$17*A7^2+C$17*A7+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.7000000000000002
+    },
+    "LinestArrayExp!B8": {
+      "content_type": "FORMULA",
+      "display": "1.1",
+      "formula_imported": "=B$17*A8^2+C$17*A8+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.1
+    },
+    "LinestArrayExp!B9": {
+      "content_type": "FORMULA",
+      "display": "1.3",
+      "formula_imported": "=B$17*A9^2+C$17*A9+D$17",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.3
+    },
+    "LinestArrayExp!C28": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(C2:C13;B2:B13^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!C29": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(C2:C14;B2:B13^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!C30": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(C2:C13;B2:B12^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!D30": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST($Trend.F17:F28;C2:C12^{1;2})}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "LinestArrayExp!F21": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(F16:F18;G16:H18;;TRUE())}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!B10": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J5:N5;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B12": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J3:N3;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B13": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J4:N4;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B15": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J3:N3;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B17": {
+      "content_type": "FORMULA",
+      "display": "-2.25403535741737",
+      "formula_imported": "=SLOPE(J4:N4;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.2540353574173717
+    },
+    "Stats!B18": {
+      "content_type": "FORMULA",
+      "display": "-1.21052631578947",
+      "formula_imported": "=SLOPE(J5:N5;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.2105263157894735
+    },
+    "Stats!B19": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=SLOPE(J6:N6;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!B20": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J7:N7;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B22": {
+      "content_type": "FORMULA",
+      "display": "2.7401998462721",
+      "formula_imported": "=SLOPE(J5:N5;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.7401998462720987
+    },
+    "Stats!B23": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=SLOPE(J6:N6;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!B24": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=SLOPE(J7:N7;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!B26": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=SLOPE(J6:N6;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!B27": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=SLOPE(J7:N7;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!B29": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=SLOPE(J7:N7;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!B3": {
+      "content_type": "FORMULA",
+      "display": "-0.440977443609022",
+      "formula_imported": "=SLOPE(J3:N3;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.44097744360902247
+    },
+    "Stats!B4": {
+      "content_type": "FORMULA",
+      "display": "-0.817258883248731",
+      "formula_imported": "=SLOPE(J4:N4;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.8172588832487307
+    },
+    "Stats!B5": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J5:N5;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B6": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J6:N6;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!B8": {
+      "content_type": "FORMULA",
+      "display": "0.361928934010152",
+      "formula_imported": "=SLOPE(J3:N3;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.3619289340101522
+    },
+    "Stats!B9": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=SLOPE(J4:N4;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C10": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J5:N5;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C12": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J3:N3;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C13": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J4:N4;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C15": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J3:N3;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C17": {
+      "content_type": "FORMULA",
+      "display": "0.342428900845505",
+      "formula_imported": "=INTERCEPT(J4:N4;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.3424289008455048
+    },
+    "Stats!C18": {
+      "content_type": "FORMULA",
+      "display": "-1.78947368421052",
+      "formula_imported": "=INTERCEPT(J5:N5;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.7894736842105239
+    },
+    "Stats!C19": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=INTERCEPT(J6:N6;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!C20": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J7:N7;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C22": {
+      "content_type": "FORMULA",
+      "display": "-2.23981552651806",
+      "formula_imported": "=INTERCEPT(J5:N5;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.239815526518062
+    },
+    "Stats!C23": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=INTERCEPT(J6:N6;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!C24": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=INTERCEPT(J7:N7;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!C26": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=INTERCEPT(J6:N6;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!C27": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=INTERCEPT(J7:N7;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!C29": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=INTERCEPT(J7:N7;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!C3": {
+      "content_type": "FORMULA",
+      "display": "0.169548872180452",
+      "formula_imported": "=INTERCEPT(J3:N3;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.16954887218045167
+    },
+    "Stats!C4": {
+      "content_type": "FORMULA",
+      "display": "-1.53299492385787",
+      "formula_imported": "=INTERCEPT(J4:N4;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.5329949238578688
+    },
+    "Stats!C5": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J5:N5;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C6": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J6:N6;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!C8": {
+      "content_type": "FORMULA",
+      "display": "0.836040609137056",
+      "formula_imported": "=INTERCEPT(J3:N3;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.836040609137056
+    },
+    "Stats!C9": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=INTERCEPT(J4:N4;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D10": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J5:N5;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D12": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J3:N3;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D13": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J4:N4;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D15": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J3:N3;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D17": {
+      "content_type": "FORMULA",
+      "display": "-5.29265949269793",
+      "formula_imported": "=FORECAST(D2;J4:N4;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -5.292659492697925
+    },
+    "Stats!D18": {
+      "content_type": "FORMULA",
+      "display": "-4.81578947368421",
+      "formula_imported": "=FORECAST(D2;J5:N5;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -4.815789473684208
+    },
+    "Stats!D19": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=FORECAST(D2;J6:N6;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!D20": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J7:N7;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D22": {
+      "content_type": "FORMULA",
+      "display": "4.61068408916218",
+      "formula_imported": "=FORECAST(D2;J5:N5;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.610684089162184
+    },
+    "Stats!D23": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=FORECAST(D2;J6:N6;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!D24": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=FORECAST(D2;J7:N7;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!D26": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=FORECAST(D2;J6:N6;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!D27": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=FORECAST(D2;J7:N7;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!D29": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=FORECAST(D2;J7:N7;J3:N3)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!D3": {
+      "content_type": "FORMULA",
+      "display": "-0.932894736842104",
+      "formula_imported": "=FORECAST(D2;J3:N3;J4:N4)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.9328947368421043
+    },
+    "Stats!D37": {
+      "content_type": "FORMULA",
+      "display": "0.689655172413793",
+      "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B37;C37)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.6896551724137931
+    },
+    "Stats!D38": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B38;C38)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!D39": {
+      "content_type": "FORMULA",
+      "display": "0.689655172413793",
+      "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B39;C39)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.6896551724137931
+    },
+    "Stats!D4": {
+      "content_type": "FORMULA",
+      "display": "-3.5761421319797",
+      "formula_imported": "=FORECAST(D2;J4:N4;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -3.5761421319796955
+    },
+    "Stats!D45": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=LINEST(B$33:B$35;C$33:C$35;B45;C45)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!D5": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J5:N5;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D6": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J6:N6;J7:N7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!D8": {
+      "content_type": "FORMULA",
+      "display": "1.74086294416244",
+      "formula_imported": "=FORECAST(D2;J3:N3;J5:N5)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.7408629441624364
+    },
+    "Stats!D9": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=FORECAST(D2;J4:N4;J6:N6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Stats!E10": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J5:N5;J7:N7;E2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E12": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J3:N3;J6:N6;E2:F2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E13": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J4:N4;J7:N7;E2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J3:N3;J7:N7;E2:F2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E17": {
+      "content_type": "FORMULA",
+      "display": "-5.29265949269793",
+      "formula_imported": "{=TREND(J4:N4;J3:N3;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -5.292659492697925
+    },
+    "Stats!E18": {
+      "content_type": "FORMULA",
+      "display": "-4.81578947368421",
+      "formula_imported": "{=TREND(J5:N5;J4:N4;E2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -4.815789473684207
+    },
+    "Stats!E19": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=TREND(J6:N6;J5:N5;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!E20": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J7:N7;J6:N6;E2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E22": {
+      "content_type": "FORMULA",
+      "display": "4.61068408916218",
+      "formula_imported": "{=TREND(J5:N5;J3:N3;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.610684089162184
+    },
+    "Stats!E23": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=TREND(J6:N6;J4:N4;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!E24": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=TREND(J7:N7;J5:N5;E2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!E26": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=TREND(J6:N6;J3:N3;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Stats!E27": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=TREND(J7:N7;J4:N4;E2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!E29": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=TREND(J7:N7;J3:N3;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!E3": {
+      "content_type": "FORMULA",
+      "display": "-0.932894736842105",
+      "formula_imported": "{=TREND(J3:N3;J4:N4;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.9328947368421046
+    },
+    "Stats!E4": {
+      "content_type": "FORMULA",
+      "display": "-3.5761421319797",
+      "formula_imported": "{=TREND(J4:N4;J5:N5;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -3.5761421319796955
+    },
+    "Stats!E5": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J5:N5;J6:N6;E2:F2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J6:N6;J7:N7;E2:F2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!E8": {
+      "content_type": "FORMULA",
+      "display": "1.74086294416244",
+      "formula_imported": "{=TREND(J3:N3;J5:N5;E2:F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.7408629441624366
+    },
+    "Stats!E9": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(J4:N4;J6:N6;E2:F2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G10": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J5:N5;J7:N7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G12": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J3:N3;J6:N6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G13": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J4:N4;J7:N7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G15": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J3:N3;J7:N7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G17": {
+      "content_type": "FORMULA",
+      "display": "-2.25403535741737",
+      "formula_imported": "{=LINEST(J4:N4;J3:N3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.2540353574173717
+    },
+    "Stats!G18": {
+      "content_type": "FORMULA",
+      "display": "-1.21052631578947",
+      "formula_imported": "{=LINEST(J5:N5;J4:N4)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.2105263157894735
+    },
+    "Stats!G19": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=LINEST(J6:N6;J5:N5)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!G20": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J7:N7;J6:N6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G22": {
+      "content_type": "FORMULA",
+      "display": "2.7401998462721",
+      "formula_imported": "{=LINEST(J5:N5;J3:N3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.7401998462720987
+    },
+    "Stats!G23": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=LINEST(J6:N6;J4:N4)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!G24": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=LINEST(J7:N7;J5:N5)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!G26": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=LINEST(J6:N6;J3:N3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!G27": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=LINEST(J7:N7;J4:N4)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!G29": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=LINEST(J7:N7;J3:N3)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Stats!G3": {
+      "content_type": "FORMULA",
+      "display": "-0.440977443609022",
+      "formula_imported": "{=LINEST(J3:N3;J4:N4)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.44097744360902247
+    },
+    "Stats!G4": {
+      "content_type": "FORMULA",
+      "display": "-0.817258883248731",
+      "formula_imported": "{=LINEST(J4:N4;J5:N5)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.8172588832487307
+    },
+    "Stats!G5": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J5:N5;J6:N6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J6:N6;J7:N7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!G8": {
+      "content_type": "FORMULA",
+      "display": "0.361928934010152",
+      "formula_imported": "{=LINEST(J3:N3;J5:N5)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.3619289340101522
+    },
+    "Stats!G9": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=LINEST(J4:N4;J6:N6)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Stats!J12": {
+      "content_type": "FORMULA",
+      "display": "3.1",
+      "formula_imported": "=J11+1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.1
+    },
+    "Stats!J13": {
+      "content_type": "FORMULA",
+      "display": "4.1",
+      "formula_imported": "=J12+1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.1
+    },
+    "Stats!J14": {
+      "content_type": "FORMULA",
+      "display": "5.1",
+      "formula_imported": "=J13+1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.1
+    },
+    "Stats!K11": {
+      "content_type": "FORMULA",
+      "display": "-4",
+      "formula_imported": "=K10-2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -4.0
+    },
+    "Stats!K13": {
+      "content_type": "FORMULA",
+      "display": "-9",
+      "formula_imported": "=K12-2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -9.0
+    },
+    "Stats!K14": {
+      "content_type": "FORMULA",
+      "display": "-11",
+      "formula_imported": "=K13-2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -11.0
+    },
+    "Stats!K4": {
+      "content_type": "FORMULA",
+      "display": "-4",
+      "formula_imported": "=J4-2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -4.0
+    },
+    "Stats!L12": {
+      "content_type": "FORMULA",
+      "display": "6",
+      "formula_imported": "=L11+3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 6.0
+    },
+    "Stats!L13": {
+      "content_type": "FORMULA",
+      "display": "9",
+      "formula_imported": "=L12+3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 9.0
+    },
+    "Stats!L14": {
+      "content_type": "FORMULA",
+      "display": "12",
+      "formula_imported": "=L13+3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 12.0
+    },
+    "Stats!L24": {
+      "content_type": "FORMULA",
+      "display": "3.896425",
+      "formula_imported": "=J24*J22+K24*K22+L22",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.896425
+    },
+    "Stats!L3": {
+      "content_type": "FORMULA",
+      "display": "3.1",
+      "formula_imported": "=K3+1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 3.1
+    },
+    "Stats!L5": {
+      "content_type": "FORMULA",
+      "display": "6",
+      "formula_imported": "=K5+3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 6.0
+    },
+    "Stats!M22": {
+      "content_type": "FORMULA",
+      "display": "0.143749999999999",
+      "formula_imported": "=P10",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.14374999999999943
+    },
+    "Stats!M24": {
+      "content_type": "FORMULA",
+      "display": "-3",
+      "formula_imported": "=J24",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -3.0
+    },
+    "Stats!M3": {
+      "content_type": "FORMULA",
+      "display": "4.1",
+      "formula_imported": "=L3+1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 4.1
+    },
+    "Stats!M4": {
+      "content_type": "FORMULA",
+      "display": "-9",
+      "formula_imported": "=L4-2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -9.0
+    },
+    "Stats!M5": {
+      "content_type": "FORMULA",
+      "display": "9",
+      "formula_imported": "=L5+3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 9.0
+    },
+    "Stats!N22": {
+      "content_type": "FORMULA",
+      "display": "-0.266964285714287",
+      "formula_imported": "=Q10",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.2669642857142865
+    },
+    "Stats!N24": {
+      "content_type": "FORMULA",
+      "display": "5",
+      "formula_imported": "=K24",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.0
+    },
+    "Stats!N3": {
+      "content_type": "FORMULA",
+      "display": "5.1",
+      "formula_imported": "=M3+1",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 5.1
+    },
+    "Stats!N4": {
+      "content_type": "FORMULA",
+      "display": "-11",
+      "formula_imported": "=M4-2",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -11.0
+    },
+    "Stats!N5": {
+      "content_type": "FORMULA",
+      "display": "12",
+      "formula_imported": "=M5+3",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 12.0
+    },
+    "Stats!O22": {
+      "content_type": "FORMULA",
+      "display": "0.426785714285713",
+      "formula_imported": "=R10",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.42678571428571255
+    },
+    "Stats!O24": {
+      "content_type": "FORMULA",
+      "display": "-1.33928571428572",
+      "formula_imported": "=M24*M22+N24*N22+O22",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.3392857142857182
+    },
+    "Stats!P10": {
+      "content_type": "FORMULA",
+      "display": "0.143749999999999",
+      "formula_imported": "{=LINEST(J3:N3;J4:N5;TRUE();FALSE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.14374999999999943
+    },
+    "Stats!P11": {
+      "content_type": "FORMULA",
+      "display": "0.143749999999999",
+      "formula_imported": "{=LINEST(J10:J14;K10:L14;TRUE();FALSE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.14374999999999943
+    },
+    "Stats!P13": {
+      "content_type": "FORMULA",
+      "display": "-0.0443518518518517",
+      "formula_imported": "{=LINEST(J3:N3;J4:N5;FALSE();FALSE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.04435185185185172
+    },
+    "Stats!P14": {
+      "content_type": "FORMULA",
+      "display": "-0.0443518518518517",
+      "formula_imported": "{=LINEST(J10:J14;K10:L14;FALSE();TRUE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.04435185185185172
+    },
+    "Stats!P3": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=SLOPE(J3:N3;J4:N5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!P4": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=INTERCEPT(J3:N3;J4:N5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!P5": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=FORECAST(2.5; J3:N3;J4:N5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!P6": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=TREND(J3:N3;J4:N5;2.5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!P7": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(J3:N4;J5:N7)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!Q16": {
+      "content_type": "FORMULA",
+      "display": "-0.440977443609022",
+      "formula_imported": "{=LINEST(J3:N3;J4:N4;;TRUE())}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -0.44097744360902247
+    },
+    "Stats!Q3": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=SLOPE(J3:N4;J5:N5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!Q4": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=INTERCEPT(J3:N4;J5:N5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!Q5": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=FORECAST(2.5;J3:N4;J5:N5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!Q6": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=TREND(J3:N4;J5:N5;2.5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!Q7": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(J3:N4;J5:N5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!R3": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=SLOPE(J3:N3;K4:N4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!R4": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=INTERCEPT(J3:N3;K4:N4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!R5": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "=FORECAST(2.5;J3:N3;K4:N4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!R6": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=TREND(J3:N3;K4:N4;2.5)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Stats!R7": {
+      "content_type": "FORMULA",
+      "display": "Err:502",
+      "error": "Err:502",
+      "formula_imported": "{=LINEST(J3:N3;K4:N4)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 502
+    },
+    "Trend!B17": {
+      "content_type": "FORMULA",
+      "display": "16.7101648351648",
+      "formula_imported": "{=TREND($LinestArrayExp.B2:B13;$LinestArrayExp.A2:A13^{1;2})}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 16.710164835164836
+    },
+    "Trend!B2": {
+      "content_type": "FORMULA",
+      "display": "-6",
+      "formula_imported": "{=TREND($LinestArrayExp.A2:A13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -6.0
+    },
+    "Trend!B31": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "{=TREND(D31:D33;E31:F33)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Trend!C17": {
+      "content_type": "FORMULA",
+      "display": "16.7101648351648",
+      "formula_imported": "{=TREND($LinestArrayExp.B2:B13;$LinestArrayExp.A2:A13^{1;2}; $LinestArrayExp.A2:A13^{1;2})}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 16.710164835164836
+    },
+    "Trend!C2": {
+      "content_type": "FORMULA",
+      "display": "9.38461538461539",
+      "formula_imported": "{=TREND($LinestArrayExp.B2:B13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 9.384615384615387
+    },
+    "Trend!D17": {
+      "content_type": "FORMULA",
+      "display": "1.30981518481518",
+      "formula_imported": "{=TREND($LinestArrayExp.B2:B13;$LinestArrayExp.A2:A13^{1;2}; $Trend.F17:G28)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.3098151848151849
+    },
+    "Trend!D2": {
+      "content_type": "FORMULA",
+      "display": "-6",
+      "formula_imported": "{=TREND($LinestArrayExp.A2:A13;$LinestArrayExp.A2:A13)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -6.0
+    }
+  },
+  "forced_calculate_all": true,
+  "load_options": {
+    "Hidden": true,
+    "MacroExecutionMode": 0,
+    "ReadOnly": true,
+    "UpdateDocMode": 0
+  },
+  "read_only": true,
+  "status": "complete",
+  "stderr": "",
+  "wall_seconds": 19.1029715220011,
+  "wall_seconds_parent": 19.30131549699945,
+  "workbook_saved": false,
+  "worker_returncode": 0
+}

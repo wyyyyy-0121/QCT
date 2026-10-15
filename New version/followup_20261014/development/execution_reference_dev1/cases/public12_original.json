@@ -1,0 +1,770 @@
+{
+  "LinestArrayExp!A10": {
+    "kind": "number",
+    "value": 2.0
+  },
+  "LinestArrayExp!A11": {
+    "kind": "number",
+    "value": 3.0
+  },
+  "LinestArrayExp!A12": {
+    "kind": "number",
+    "value": 4.0
+  },
+  "LinestArrayExp!A13": {
+    "kind": "number",
+    "value": 5.0
+  },
+  "LinestArrayExp!A3": {
+    "kind": "number",
+    "value": -5.0
+  },
+  "LinestArrayExp!A4": {
+    "kind": "number",
+    "value": -4.0
+  },
+  "LinestArrayExp!A5": {
+    "kind": "number",
+    "value": -3.0
+  },
+  "LinestArrayExp!A6": {
+    "kind": "number",
+    "value": -2.0
+  },
+  "LinestArrayExp!A7": {
+    "kind": "number",
+    "value": -1.0
+  },
+  "LinestArrayExp!A8": {
+    "kind": "number",
+    "value": 0.0
+  },
+  "LinestArrayExp!A9": {
+    "kind": "number",
+    "value": 1.0
+  },
+  "LinestArrayExp!B10": {
+    "kind": "number",
+    "value": 2.3000000000000003
+  },
+  "LinestArrayExp!B11": {
+    "kind": "number",
+    "value": 4.1
+  },
+  "LinestArrayExp!B12": {
+    "kind": "number",
+    "value": 6.700000000000001
+  },
+  "LinestArrayExp!B13": {
+    "kind": "number",
+    "value": 10.1
+  },
+  "LinestArrayExp!B18": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!B19": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2},,TRUE)'",
+    "kind": "error"
+  },
+  "LinestArrayExp!B2": {
+    "kind": "number",
+    "value": 16.700000000000003
+  },
+  "LinestArrayExp!B21": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2},TRUE,TRUE)'",
+    "kind": "error"
+  },
+  "LinestArrayExp!B28": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!B29": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!B3": {
+    "kind": "number",
+    "value": 12.1
+  },
+  "LinestArrayExp!B30": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!B33": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "LinestArrayExp!B34": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "LinestArrayExp!B4": {
+    "kind": "number",
+    "value": 8.3
+  },
+  "LinestArrayExp!B5": {
+    "kind": "number",
+    "value": 5.4
+  },
+  "LinestArrayExp!B6": {
+    "kind": "number",
+    "value": 3.1
+  },
+  "LinestArrayExp!B7": {
+    "kind": "number",
+    "value": 1.7000000000000002
+  },
+  "LinestArrayExp!B8": {
+    "kind": "number",
+    "value": 1.1
+  },
+  "LinestArrayExp!B9": {
+    "kind": "number",
+    "value": 1.3
+  },
+  "LinestArrayExp!C28": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!C29": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!C30": {
+    "error": "FormulaSyntaxError: Unsupported token at column 22: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!D30": {
+    "error": "FormulaSyntaxError: Unsupported token at column 29: '{1,2})'",
+    "kind": "error"
+  },
+  "LinestArrayExp!F21": {
+    "error": "FormulaSyntaxError: Unexpected token ',' in '=LINEST(F16:F18,G16:H18,,TRUE)'",
+    "kind": "error"
+  },
+  "Stats!B10": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B12": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B13": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B15": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B17": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B18": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B19": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B20": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B22": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B23": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B24": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B26": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B27": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B29": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B3": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B4": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B5": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B6": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B8": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!B9": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!C10": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C12": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C13": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C15": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C17": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C18": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C19": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C20": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C22": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C23": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C24": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C26": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C27": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C29": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C3": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C4": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C5": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C6": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C8": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!C9": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!D10": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D12": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D13": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D15": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D17": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D18": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D19": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D20": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D22": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D23": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D24": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D26": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D27": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D29": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D3": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D37": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!D38": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!D39": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!D4": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D45": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!D5": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D6": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D8": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!D9": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!E10": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E12": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E13": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E15": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E17": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E18": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E19": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E20": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E22": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E23": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E24": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E26": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E27": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E29": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E3": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E4": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E5": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E6": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E8": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!E9": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!G10": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G12": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G13": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G15": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G17": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G18": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G19": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G20": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G22": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G23": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G24": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G26": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G27": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G29": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G3": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G4": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G5": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G6": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G8": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!G9": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!J12": {
+    "kind": "number",
+    "value": 3.1
+  },
+  "Stats!J13": {
+    "kind": "number",
+    "value": 4.1
+  },
+  "Stats!J14": {
+    "kind": "number",
+    "value": 5.1
+  },
+  "Stats!K11": {
+    "kind": "number",
+    "value": -4.0
+  },
+  "Stats!K13": {
+    "kind": "number",
+    "value": -9.0
+  },
+  "Stats!K14": {
+    "kind": "number",
+    "value": -11.0
+  },
+  "Stats!K4": {
+    "kind": "number",
+    "value": -4.0
+  },
+  "Stats!L12": {
+    "kind": "number",
+    "value": 6.0
+  },
+  "Stats!L13": {
+    "kind": "number",
+    "value": 9.0
+  },
+  "Stats!L14": {
+    "kind": "number",
+    "value": 12.0
+  },
+  "Stats!L24": {
+    "kind": "number",
+    "value": 3.896425
+  },
+  "Stats!L3": {
+    "kind": "number",
+    "value": 3.1
+  },
+  "Stats!L5": {
+    "kind": "number",
+    "value": 6.0
+  },
+  "Stats!M22": {
+    "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+    "kind": "error"
+  },
+  "Stats!M24": {
+    "kind": "number",
+    "value": -3
+  },
+  "Stats!M3": {
+    "kind": "number",
+    "value": 4.1
+  },
+  "Stats!M4": {
+    "kind": "number",
+    "value": -9.0
+  },
+  "Stats!M5": {
+    "kind": "number",
+    "value": 9.0
+  },
+  "Stats!N22": {
+    "kind": "number",
+    "value": -0.2669642857142858
+  },
+  "Stats!N24": {
+    "kind": "number",
+    "value": 5
+  },
+  "Stats!N3": {
+    "kind": "number",
+    "value": 5.1
+  },
+  "Stats!N4": {
+    "kind": "number",
+    "value": -11.0
+  },
+  "Stats!N5": {
+    "kind": "number",
+    "value": 12.0
+  },
+  "Stats!O22": {
+    "kind": "number",
+    "value": 0.42678571428571443
+  },
+  "Stats!O24": {
+    "error": "ValueError: FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+    "kind": "error"
+  },
+  "Stats!P10": {
+    "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,TRUE,FALSE)'",
+    "kind": "error"
+  },
+  "Stats!P11": {
+    "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J10:J14,K10:L14,TRUE,FALSE)'",
+    "kind": "error"
+  },
+  "Stats!P13": {
+    "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J3:N3,J4:N5,FALSE,FALSE)'",
+    "kind": "error"
+  },
+  "Stats!P14": {
+    "error": "FormulaSyntaxError: Expected '(', found ',' in '=LINEST(J10:J14,K10:L14,FALSE,TRUE)'",
+    "kind": "error"
+  },
+  "Stats!P3": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!P4": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!P5": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!P6": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!P7": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!Q16": {
+    "error": "FormulaSyntaxError: Unexpected token ',' in '=LINEST(J3:N3,J4:N4,,TRUE)'",
+    "kind": "error"
+  },
+  "Stats!Q3": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!Q4": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!Q5": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!Q6": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!Q7": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Stats!R3": {
+    "error": "ValueError: Unsupported function SLOPE",
+    "kind": "error"
+  },
+  "Stats!R4": {
+    "error": "ValueError: Unsupported function INTERCEPT",
+    "kind": "error"
+  },
+  "Stats!R5": {
+    "error": "ValueError: Unsupported function FORECAST",
+    "kind": "error"
+  },
+  "Stats!R6": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Stats!R7": {
+    "error": "ValueError: Unsupported function LINEST",
+    "kind": "error"
+  },
+  "Trend!B17": {
+    "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2})'",
+    "kind": "error"
+  },
+  "Trend!B2": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Trend!B31": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Trend!C17": {
+    "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2}, LinestArrayEx'",
+    "kind": "error"
+  },
+  "Trend!C2": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  },
+  "Trend!D17": {
+    "error": "FormulaSyntaxError: Unsupported token at column 51: '{1,2}, Trend!F17:G28'",
+    "kind": "error"
+  },
+  "Trend!D2": {
+    "error": "ValueError: Unsupported function TREND",
+    "kind": "error"
+  }
+}

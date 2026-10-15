@@ -1,0 +1,2124 @@
+{
+  "cells": {
+    "Information!A3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=1/0",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Information!A5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "{=na}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!A9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=NA()",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Information!B10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B2": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISBLANK(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!B20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B22": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=CELL(\"contents\"; B2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Information!B3": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B4": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B5": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B6": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B7": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B8": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!B9": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISBLANK(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C2": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!C22": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=CELL(\"contents\"; C2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!C3": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERR(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!C4": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERR(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!C5": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERR(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!C6": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERR(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!C7": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERR(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!C8": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERR(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!C9": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERR(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D2": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISERROR(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!D22": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=CELL(\"contents\"; D2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!D3": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!D4": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!D5": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!D6": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!D7": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!D8": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!D9": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISERROR(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!E10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISEVEN(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!E11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISEVEN(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!E12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISEVEN(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!E13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISEVEN(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!E14": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISEVEN(A14)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!E15": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISEVEN(A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!E16": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISEVEN(A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!E17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISEVEN(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!E18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISEVEN(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!E19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISEVEN(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!E2": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISEVEN(A2)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!E20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISEVEN(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!E21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISEVEN(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!E22": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "{=CELL(\"contents\"; E2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!E3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=ISEVEN(A3)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Information!E4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=ISEVEN(A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Information!E5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=ISEVEN(A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!E6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=ISEVEN(A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Information!E7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=ISEVEN(A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!E8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=ISEVEN(A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Information!E9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=ISEVEN(A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Information!F10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISLOGICAL(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!F18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISLOGICAL(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!F19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F2": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F22": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=CELL(\"contents\"; F2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!F3": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F4": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F5": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F6": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F7": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F8": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!F9": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISLOGICAL(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G2": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G22": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=CELL(\"contents\"; G2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!G3": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G4": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G5": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G6": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G7": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G8": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNA(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!G9": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNA(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNONTEXT(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!H15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNONTEXT(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!H16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNONTEXT(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!H17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H2": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H22": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "{=CELL(\"contents\"; H2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Information!H3": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H4": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H5": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H6": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H7": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H8": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!H9": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNONTEXT(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I11": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I13": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I14": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I15": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I16": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I18": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I2": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I20": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I21": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISNUMBER(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!I22": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=CELL(\"contents\"; I2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!I3": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I4": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I5": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I6": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I7": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I8": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!I9": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISNUMBER(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!J10": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISODD(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!J11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISODD(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!J12": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISODD(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!J13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISODD(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!J14": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISODD(A14)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!J15": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISODD(A15)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!J16": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISODD(A16)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!J17": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISODD(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!J18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISODD(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!J19": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISODD(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!J2": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "=ISODD(A2)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!J20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISODD(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!J21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISODD(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!J22": {
+      "content_type": "FORMULA",
+      "display": "Err:504",
+      "error": "Err:504",
+      "formula_imported": "{=CELL(\"contents\"; J2)}",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 504
+    },
+    "Information!J3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=ISODD(A3)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Information!J4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=ISODD(A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Information!J5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=ISODD(A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!J6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=ISODD(A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Information!J7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=ISODD(A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!J8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=ISODD(A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Information!J9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=ISODD(A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Information!K10": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A10)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K11": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A11)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K12": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A12)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K13": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A13)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K14": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISTEXT(A14)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!K15": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISTEXT(A15)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!K16": {
+      "content_type": "FORMULA",
+      "display": "TRUE",
+      "formula_imported": "=ISTEXT(A16)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": true
+    },
+    "Information!K17": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A17)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K18": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A18)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K19": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A19)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K2": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A2)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K20": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A20)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K21": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A21)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K22": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "{=CELL(\"contents\"; K2)}",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!K3": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A3)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K4": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A4)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K5": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A5)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K6": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A6)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K7": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A7)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K8": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A8)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!K9": {
+      "content_type": "FORMULA",
+      "display": "FALSE",
+      "formula_imported": "=ISTEXT(A9)",
+      "kind": "boolean",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": false
+    },
+    "Information!L10": {
+      "content_type": "FORMULA",
+      "display": "-1",
+      "formula_imported": "=N(A10)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -1.0
+    },
+    "Information!L11": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=N(A11)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!L12": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=N(A12)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Information!L13": {
+      "content_type": "FORMULA",
+      "display": "2",
+      "formula_imported": "=N(A13)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 2.0
+    },
+    "Information!L14": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=N(A14)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!L15": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=N(A15)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!L16": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=N(A16)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!L17": {
+      "content_type": "FORMULA",
+      "display": "1",
+      "formula_imported": "=N(A17)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.0
+    },
+    "Information!L18": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=N(A18)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!L19": {
+      "content_type": "FORMULA",
+      "display": "1.23",
+      "formula_imported": "=N(A19)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 1.23
+    },
+    "Information!L2": {
+      "content_type": "FORMULA",
+      "display": "0",
+      "formula_imported": "=N(A2)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 0.0
+    },
+    "Information!L20": {
+      "content_type": "FORMULA",
+      "display": "-2.34",
+      "formula_imported": "=N(A20)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": -2.34
+    },
+    "Information!L21": {
+      "content_type": "FORMULA",
+      "display": "36526",
+      "formula_imported": "=N(A21)",
+      "kind": "number",
+      "result_type": "VALUE",
+      "uno_error_code": 0,
+      "value": 36526.0
+    },
+    "Information!L3": {
+      "content_type": "FORMULA",
+      "display": "#DIV/0!",
+      "error": "#DIV/0!",
+      "formula_imported": "=N(A3)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 532
+    },
+    "Information!L4": {
+      "content_type": "FORMULA",
+      "display": "#NUM!",
+      "error": "#NUM!",
+      "formula_imported": "=N(A4)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 503
+    },
+    "Information!L5": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=N(A5)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!L6": {
+      "content_type": "FORMULA",
+      "display": "#VALUE!",
+      "error": "#VALUE!",
+      "formula_imported": "=N(A6)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 519
+    },
+    "Information!L7": {
+      "content_type": "FORMULA",
+      "display": "#NAME?",
+      "error": "#NAME?",
+      "formula_imported": "=N(A7)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 525
+    },
+    "Information!L8": {
+      "content_type": "FORMULA",
+      "display": "#NULL!",
+      "error": "#NULL!",
+      "formula_imported": "=N(A8)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 521
+    },
+    "Information!L9": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=N(A9)",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    },
+    "Information!M2": {
+      "content_type": "FORMULA",
+      "display": "#N/A",
+      "error": "#N/A",
+      "formula_imported": "=NA()",
+      "kind": "error",
+      "result_type": "VALUE",
+      "uno_error_code": 32767
+    }
+  },
+  "forced_calculate_all": true,
+  "load_options": {
+    "Hidden": true,
+    "MacroExecutionMode": 0,
+    "ReadOnly": true,
+    "UpdateDocMode": 0
+  },
+  "read_only": true,
+  "status": "complete",
+  "stderr": "",
+  "wall_seconds": 20.97318987899962,
+  "wall_seconds_parent": 21.213279030000194,
+  "workbook_saved": false,
+  "worker_returncode": 0
+}
