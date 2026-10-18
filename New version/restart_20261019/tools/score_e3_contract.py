@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNS = ROOT / 'e3_contract_v4/outputs'
@@ -17,10 +18,21 @@ def sha(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, default=None)
+    args = parser.parse_args()
     lock = json.loads(LOCK.read_text())
     expected = json.loads(EXPECTED.read_text())
     if sha(EXPECTED) != lock['expected_sha256']:
         raise SystemExit('Locked score key changed')
+    manifest_path = LOCK.parent / 'manifest.jsonl'
+    if sha(manifest_path) != lock['manifest_sha256']:
+        raise SystemExit('Locked task manifest changed')
+    for relative, digest in lock['files'].items():
+        path = (ROOT / 'source_evidence/raw/epa_pairs/xlsx_export/oxidizers_before.xlsx'
+                if relative == 'external:epa_oxidizers_before.xlsx' else LOCK.parent / relative)
+        if sha(path) != digest:
+            raise SystemExit(f'Locked input changed: {relative}')
     if sha(ROOT / 'tools/e3_contract.py') != lock['implementation_sha256']:
         raise SystemExit('Frozen implementation changed after input lock')
     if sha(ROOT / 'tools/batch_runner.py') != lock['runner_sha256']:
@@ -47,7 +59,14 @@ def main():
                 raise SystemExit(f'Incomplete prediction: {row["id"]}/{workers}')
             if sha(pred_path) != row['output_sha256']['prediction.json']:
                 raise SystemExit(f'Prediction hash mismatch: {row["id"]}/{workers}')
-            actual[row['id']] = json.loads(pred_path.read_text())
+            prediction = json.loads(pred_path.read_text())
+            request_path = LOCK.parent / f'requests/{row["id"]}.json'
+            request = json.loads(request_path.read_text())
+            if prediction.get('request_sha256') != sha(request_path):
+                raise SystemExit(f'{row["id"]}: prediction request hash mismatch')
+            if prediction.get('workbook_sha256') != request['workbook_sha256']:
+                raise SystemExit(f'{row["id"]}: prediction workbook hash mismatch')
+            actual[row['id']] = prediction
         observed_hashes[workers] = {case: sha(RUNS / f'workers_{workers}/tasks/{case}/prediction.json')
                                     for case in sorted(expected)}
         summaries[workers] = {
@@ -89,7 +108,9 @@ def main():
         'resource_measurements': summaries,
         'interpretation': 'Prototype engineering pass only. Candidate selection under supplied constraints; no natural error accuracy, coverage, or model improvement claim.',
     }
-    output = LOCK.parent / 'score.json'
+    output = args.output or LOCK.parent / 'score_independent_v2.json'
+    if not output.is_absolute():
+        output = LOCK.parent / output
     if output.exists():
         raise SystemExit(f'Preserving existing score: {output}')
     output.write_text(json.dumps(report, sort_keys=True, indent=2) + '\n')
