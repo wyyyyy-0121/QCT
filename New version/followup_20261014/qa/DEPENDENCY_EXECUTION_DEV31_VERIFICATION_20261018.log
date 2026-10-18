@@ -1,0 +1,95 @@
+DEV31 replay public01 374 formulas; unsupported 22
+DEV31 replay public02 752 formulas; unsupported 67
+DEV31 replay public03 116 formulas; unsupported 1
+DEV31 replay public04 1052 formulas; unsupported 544
+DEV31 replay public08 1349 formulas; unsupported 124
+DEV31 replay public09 12 formulas; unsupported 6
+DEV31 replay public10 2973 formulas; unsupported 2
+DEV31 replay public11 10219 formulas; unsupported 9845
+DEV31 replay controls 98 formulas; unsupported 10
+{
+  "passed": false,
+  "graph": {
+    "cells": 317,
+    "formulas": 166,
+    "functions": {
+      "IF": 119,
+      "PPMT": 39,
+      "SUM": 83,
+      "MAX": 80,
+      "INDEX": 3
+    },
+    "targets": 39,
+    "hidden_cells": 0,
+    "independent_graph_exact_agreement": true,
+    "input_cells": 151,
+    "blank_missing_cells": [
+      [
+        "Construction",
+        "D26"
+      ]
+    ]
+  },
+  "full_replay_formulas": 16945,
+  "independent_formula_inventory_checks": 16945,
+  "comparisons": 264,
+  "independent_agreements": 245,
+  "same_errors": 6,
+  "reference_unsupported": 10,
+  "disagreements": [
+    {
+      "id": "controls",
+      "cell": "Cases!B81",
+      "comparison": "disagreement",
+      "actual": {
+        "kind": "number",
+        "value": 100.0
+      },
+      "reference": {
+        "kind": "number",
+        "value": 101.0
+      }
+    },
+    {
+      "id": "controls",
+      "cell": "Cases!B83",
+      "comparison": "disagreement",
+      "actual": {
+        "kind": "number",
+        "value": 10.0
+      },
+      "reference": {
+        "kind": "number",
+        "value": 1.0
+      }
+    },
+    {
+      "id": "controls",
+      "cell": "Cases!B84",
+      "comparison": "disagreement",
+      "actual": {
+        "kind": "number",
+        "value": 0
+      },
+      "reference": {
+        "kind": "number",
+        "value": 1.0
+      }
+    }
+  ],
+  "main_candidate_changed": false,
+  "repair_improvement_established": false,
+  "final_validation_eligible": false,
+  "accepted_final_sources": 0,
+  "accepted_final_families": 0,
+  "execution_lock_sha256": "363d0adab810d5e8492141afdd7763c9adc2cdf88da51fe7ed57273a89bc21f5",
+  "reference_lock_sha256": "0a0ab2b204b8df026fba93d2be8f0d9a28bdb23088cc15fcc5a6d51d99c23af3",
+  "comparison_sha256": "5ac54a7e721468dff39f24cd5d7ffdaa2ddb7238833a6249d4086cbf883d3251"
+}
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/verify_dependency_execution_dev31.py", line 140, in <module>
+    main()
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/verify_dependency_execution_dev31.py", line 136, in main
+    assert not disagreements, 'Preserve failed v1 evidence; any change requires new registered version.'
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Preserve failed v1 evidence; any change requires new registered version.

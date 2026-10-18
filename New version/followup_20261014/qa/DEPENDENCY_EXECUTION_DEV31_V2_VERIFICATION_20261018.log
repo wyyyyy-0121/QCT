@@ -1,0 +1,48 @@
+DEV31 replay public01 374 formulas; unsupported 22
+DEV31 replay public02 752 formulas; unsupported 67
+DEV31 replay public03 116 formulas; unsupported 1
+DEV31 replay public04 1052 formulas; unsupported 544
+DEV31 replay public08 1349 formulas; unsupported 124
+DEV31 replay public09 12 formulas; unsupported 6
+DEV31 replay public10 2973 formulas; unsupported 2
+DEV31 replay public11 10219 formulas; unsupported 9845
+DEV31 replay controls 98 formulas; unsupported 14
+{
+  "passed": true,
+  "graph": {
+    "cells": 317,
+    "formulas": 166,
+    "functions": {
+      "IF": 119,
+      "PPMT": 39,
+      "SUM": 83,
+      "MAX": 80,
+      "INDEX": 3
+    },
+    "targets": 39,
+    "hidden_cells": 0,
+    "independent_graph_exact_agreement": true,
+    "input_cells": 151,
+    "blank_missing_cells": [
+      [
+        "Construction",
+        "D26"
+      ]
+    ]
+  },
+  "full_replay_formulas": 16945,
+  "independent_formula_inventory_checks": 16945,
+  "comparisons": 264,
+  "independent_agreements": 244,
+  "same_errors": 6,
+  "reference_unsupported": 14,
+  "disagreements": [],
+  "main_candidate_changed": false,
+  "repair_improvement_established": false,
+  "final_validation_eligible": false,
+  "accepted_final_sources": 0,
+  "accepted_final_families": 0,
+  "execution_lock_sha256": "91ed6f3b99d264f86a21143b1d4b0afe9c71594e5429c497e79d1fbb825a041b",
+  "reference_lock_sha256": "b826ebc5bb4195f5abd21ad7a83d091633db16877de6378a754b9670641f21d2",
+  "comparison_sha256": "c6a54f175b49f4219c57fa5c663edccb60e6531a284009ba667f8db0135c4d4e"
+}

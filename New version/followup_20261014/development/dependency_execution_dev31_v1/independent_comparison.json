@@ -1,0 +1,3439 @@
+{
+  "all_unsupported_retained": 10621,
+  "business_truth_claimed": false,
+  "counts": {
+    "agreement": 245,
+    "disagreement": 3,
+    "retained_unsupported": 10,
+    "same_error": 6
+  },
+  "disagreements": [
+    {
+      "actual": {
+        "kind": "number",
+        "value": 100.0
+      },
+      "cell": "Cases!B81",
+      "comparison": "disagreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 101.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 10.0
+      },
+      "cell": "Cases!B83",
+      "comparison": "disagreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 1.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0
+      },
+      "cell": "Cases!B84",
+      "comparison": "disagreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 1.0
+      }
+    }
+  ],
+  "full_replay_formulas": 16945,
+  "graph": {
+    "blank_missing_cells": [
+      [
+        "Construction",
+        "D26"
+      ]
+    ],
+    "cells": 317,
+    "formulas": 166,
+    "functions": {
+      "IF": 119,
+      "INDEX": 3,
+      "MAX": 80,
+      "PPMT": 39,
+      "SUM": 83
+    },
+    "hidden_cells": 0,
+    "independent_graph_exact_agreement": true,
+    "input_cells": 151,
+    "targets": 39
+  },
+  "independent_inventory_checks": 16945,
+  "rows": [
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B1",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B10",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B11",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B12",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B13",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B14",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B15",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B16",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -112.82541002081541
+      },
+      "cell": "Cases!B17",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -112.82541002081541
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -62.82541002081541
+      },
+      "cell": "Cases!B18",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -62.82541002081541
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -80.18291246606947
+      },
+      "cell": "Cases!B19",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -80.18291246606947
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B2",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -107.45277144839562
+      },
+      "cell": "Cases!B20",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -107.45277144839568
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -125.39049202497849
+      },
+      "cell": "Cases!B21",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -125.39049202497849
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -75.39049202497849
+      },
+      "cell": "Cases!B22",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -75.39049202497849
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -96.21949495928334
+      },
+      "cell": "Cases!B23",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -96.21949495928335
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -128.94332573807475
+      },
+      "cell": "Cases!B24",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -128.9433257380748
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -107.45277144839562
+      },
+      "cell": "Cases!B25",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -107.45277144839565
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -107.45277144839562
+      },
+      "cell": "Cases!B26",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -107.45277144839565
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -76.36467853911377
+      },
+      "cell": "Cases!B27",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -76.36467853911381
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -102.33597280799583
+      },
+      "cell": "Cases!B28",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -102.33597280799593
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -119.41951621426522
+      },
+      "cell": "Cases!B29",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -119.41951621426524
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B3",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -119.41951621426522
+      },
+      "cell": "Cases!B30",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -119.41951621426524
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -91.6376142469365
+      },
+      "cell": "Cases!B31",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -91.63761424693655
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -122.80316736959499
+      },
+      "cell": "Cases!B32",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -122.80316736959507
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -72.90085299223475
+      },
+      "cell": "Cases!B33",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -72.90085299223475
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -92.90085299223475
+      },
+      "cell": "Cases!B34",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -92.90085299223475
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.9750130601405
+      },
+      "cell": "Cases!B35",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.9750130601405
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -74.38862550228035
+      },
+      "cell": "Cases!B36",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -74.38862550228035
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -91.4810235906817
+      },
+      "cell": "Cases!B37",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -91.4810235906817
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -111.4810235906817
+      },
+      "cell": "Cases!B38",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -111.4810235906817
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.7700156721686
+      },
+      "cell": "Cases!B39",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.7700156721686
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B4",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -89.26635060273642
+      },
+      "cell": "Cases!B40",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -89.26635060273641
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -74.38862550228035
+      },
+      "cell": "Cases!B41",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -74.38862550228035
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -74.38862550228035
+      },
+      "cell": "Cases!B42",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -74.38862550228035
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -85.68878883687806
+      },
+      "cell": "Cases!B43",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -85.68878883687805
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -75.9067607166126
+      },
+      "cell": "Cases!B44",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -75.90676071661258
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -93.34798325579766
+      },
+      "cell": "Cases!B45",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -93.34798325579764
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -93.34798325579766
+      },
+      "cell": "Cases!B46",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -93.34798325579764
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -102.82654660425368
+      },
+      "cell": "Cases!B47",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -102.82654660425365
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -91.08811285993514
+      },
+      "cell": "Cases!B48",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -91.0881128599351
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333387499
+      },
+      "cell": "Cases!B49",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333387499
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B5",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333287499
+      },
+      "cell": "Cases!B50",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333287499
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333329166
+      },
+      "cell": "Cases!B51",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333329169
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333379166
+      },
+      "cell": "Cases!B52",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333379174
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.00000000044999
+      },
+      "cell": "Cases!B53",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.00000000044999
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -99.99999999944998
+      },
+      "cell": "Cases!B54",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -99.99999999944998
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -99.99999999994999
+      },
+      "cell": "Cases!B55",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -99.99999999995003
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.00000000054999
+      },
+      "cell": "Cases!B56",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.00000000055009
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333379164
+      },
+      "cell": "Cases!B57",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333379167
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333379164
+      },
+      "cell": "Cases!B58",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333379167
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333320832
+      },
+      "cell": "Cases!B59",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333320837
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B6",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333370831
+      },
+      "cell": "Cases!B60",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333370841
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.00000000034997
+      },
+      "cell": "Cases!B61",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.00000000035
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.00000000034997
+      },
+      "cell": "Cases!B62",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.00000000035
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -99.99999999984998
+      },
+      "cell": "Cases!B63",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -99.99999999985003
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.00000000044997
+      },
+      "cell": "Cases!B64",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.00000000045009
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1000.0000000000001
+      },
+      "cell": "Cases!B65",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -1000.0000000000005
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1000.0000000000002
+      },
+      "cell": "Cases!B66",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -1000.0000000000007
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 20
+      },
+      "cell": "Cases!B67",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 20.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 30
+      },
+      "cell": "Cases!B68",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 30.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 40
+      },
+      "cell": "Cases!B69",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 40.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B7",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 20
+      },
+      "cell": "Cases!B70",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 20.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "cell": "Cases!B71",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 12.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Cases!B72",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "error": "#REF!",
+        "kind": "error"
+      },
+      "cell": "Cases!B73",
+      "comparison": "same_error",
+      "id": "controls",
+      "reference": {
+        "error": "#REF!",
+        "kind": "error"
+      }
+    },
+    {
+      "cell": "Cases!B74",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "index_array_return"
+    },
+    {
+      "cell": "Cases!B75",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "noninteger_index"
+    },
+    {
+      "cell": "Cases!B76",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "index_missing_dimension"
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "cell": "Cases!B77",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 12.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "cell": "Cases!B78",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 12.0
+      }
+    },
+    {
+      "actual": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "cell": "Cases!B79",
+      "comparison": "same_error",
+      "id": "controls",
+      "reference": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -100.0
+      },
+      "cell": "Cases!B8",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -100.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "boolean",
+        "value": false
+      },
+      "cell": "Cases!B80",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "boolean",
+        "value": false
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 100.0
+      },
+      "cell": "Cases!B81",
+      "comparison": "disagreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 101.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 40.0
+      },
+      "cell": "Cases!B82",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 40.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 10.0
+      },
+      "cell": "Cases!B83",
+      "comparison": "disagreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 1.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0
+      },
+      "cell": "Cases!B84",
+      "comparison": "disagreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 1.0
+      }
+    },
+    {
+      "actual": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "cell": "Cases!B85",
+      "comparison": "same_error",
+      "id": "controls",
+      "reference": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 100000000000000.0
+      },
+      "cell": "Cases!B86",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 100000000000000.0
+      }
+    },
+    {
+      "actual": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "cell": "Cases!B87",
+      "comparison": "same_error",
+      "id": "controls",
+      "reference": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      }
+    },
+    {
+      "actual": {
+        "error": "#NUM!",
+        "kind": "error"
+      },
+      "cell": "Cases!B88",
+      "comparison": "same_error",
+      "id": "controls",
+      "reference": {
+        "error": "#NUM!",
+        "kind": "error"
+      }
+    },
+    {
+      "actual": {
+        "kind": "boolean",
+        "value": false
+      },
+      "cell": "Cases!B89",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "boolean",
+        "value": false
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -83.33333333333333
+      },
+      "cell": "Cases!B9",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": -83.33333333333333
+      }
+    },
+    {
+      "cell": "Cases!B90",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "text_numeric_coercion"
+    },
+    {
+      "cell": "Cases!B91",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "unsupported_function:SQRT"
+    },
+    {
+      "cell": "Cases!B92",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "multiple_power_operators"
+    },
+    {
+      "cell": "Cases!B93",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "financial_period_domain"
+    },
+    {
+      "cell": "Cases!B94",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "financial_period_domain"
+    },
+    {
+      "cell": "Cases!B95",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "financial_domain"
+    },
+    {
+      "cell": "Cases!B96",
+      "comparison": "retained_unsupported",
+      "id": "controls",
+      "reason": "circular_reference"
+    },
+    {
+      "actual": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      },
+      "cell": "Input data!A5",
+      "comparison": "same_error",
+      "id": "controls",
+      "reference": {
+        "error": "#DIV/0!",
+        "kind": "error"
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 12.0
+      },
+      "cell": "Input data!B5",
+      "comparison": "agreement",
+      "id": "controls",
+      "reference": {
+        "kind": "number",
+        "value": 12.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AA26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AA27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AA34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AB26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AB27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AB34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AC26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AC27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AC34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AD26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AD27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AD34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AE26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AE27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AE34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AF26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AF27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AF34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AG26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AG27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AG34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AH26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AH27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AH34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AI26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AI27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AI34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AJ26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AJ27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AJ34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AK26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AK27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AK34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AL26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AL27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AL34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AM26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AM27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AM34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AN26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AN27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AN34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AO26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AO27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AO34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AP26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AP27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AP34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AQ26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AQ27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AQ34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AR26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AR27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!AR34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 330058.7379865134
+      },
+      "cell": "Construction!C20",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 330058.7379865134
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 115520.55829527968
+      },
+      "cell": "Construction!C22",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 115520.55829527968
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 214538.17969123376
+      },
+      "cell": "Construction!C34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 214538.17969123376
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 82610.73983726824
+      },
+      "cell": "Construction!E26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 82610.73983726824
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!E27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!E34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 32909.81845801145
+      },
+      "cell": "Construction!F26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 32909.81845801145
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 46482.849566458375
+      },
+      "cell": "Construction!F27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 46482.849566458375
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 46482.849566458375
+      },
+      "cell": "Construction!F34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 46482.849566458375
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!G26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 81857.42070921118
+      },
+      "cell": "Construction!G27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 81857.42070921118
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 81857.42070921118
+      },
+      "cell": "Construction!G34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 81857.42070921118
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!H26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 86197.90941556421
+      },
+      "cell": "Construction!H27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 86197.90941556421
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 86197.90941556421
+      },
+      "cell": "Construction!H34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 86197.90941556421
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!I26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!I27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!I34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!J26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!J27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!J34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!K26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!K27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!K34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!L26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!L27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!L34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!M26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!M27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!M34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!N26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!N27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!N34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!O26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!O27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!O34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!P26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!P27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!P34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Q26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Q27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Q34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!R26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!R27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!R34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!S26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!S27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!S34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!T26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!T27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!T34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!U26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!U27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!U34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!V26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!V27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!V34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!W26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!W27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!W34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!X26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!X27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!X34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Y26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Y27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Y34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Z26",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Z27",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Construction!Z34",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -4443.65424685273
+      },
+      "cell": "Debt!AA10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -4443.654246852746
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -4770.262833996414
+      },
+      "cell": "Debt!AB10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -4770.262833996414
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -5120.877152295143
+      },
+      "cell": "Debt!AC10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -5120.877152295152
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -5497.26162298885
+      },
+      "cell": "Debt!AD10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -5497.26162298885
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -5901.310352278522
+      },
+      "cell": "Debt!AE10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -5901.310352278539
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -6335.056663170984
+      },
+      "cell": "Debt!AF10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -6335.056663171001
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -6800.683327914074
+      },
+      "cell": "Debt!AG10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -6800.683327914074
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -7300.5335525157425
+      },
+      "cell": "Debt!AH10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -7300.533552515752
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -7837.122768625644
+      },
+      "cell": "Debt!AI10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -7837.122768625679
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -8413.151292119626
+      },
+      "cell": "Debt!AJ10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -8413.15129211966
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -9031.517912090438
+      },
+      "cell": "Debt!AK10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -9031.517912090454
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -9695.33447862909
+      },
+      "cell": "Debt!AL10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -9695.334478629109
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -10407.94156280831
+      },
+      "cell": "Debt!AM10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -10407.941562808344
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -11172.925267674742
+      },
+      "cell": "Debt!AN10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -11172.925267674758
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -11994.135274848799
+      },
+      "cell": "Debt!AO10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -11994.13527484885
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -12875.704217550194
+      },
+      "cell": "Debt!AP10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -12875.704217550261
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -13822.068477540144
+      },
+      "cell": "Debt!AQ10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -13822.068477540179
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -14837.990510639354
+      },
+      "cell": "Debt!AR10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -14837.990510639389
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Debt!F10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Debt!G10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Debt!H10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0
+      },
+      "cell": "Debt!I10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1330.7774426337419
+      },
+      "cell": "Debt!J10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -1330.7774426337419
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1428.5895846673193
+      },
+      "cell": "Debt!K10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -1428.589584667323
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1533.5909191403698
+      },
+      "cell": "Debt!L10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -1533.590919140368
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1646.3098516971859
+      },
+      "cell": "Debt!M10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -1646.309851697184
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1767.313625796929
+      },
+      "cell": "Debt!N10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -1767.3136257969309
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -1897.2111772930057
+      },
+      "cell": "Debt!O10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -1897.2111772930002
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -2036.6561988240355
+      },
+      "cell": "Debt!P10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -2036.6561988240392
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -2186.3504294376053
+      },
+      "cell": "Debt!Q10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -2186.350429437609
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -2347.047186001273
+      },
+      "cell": "Debt!R10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -2347.047186001273
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -2519.5551541723653
+      },
+      "cell": "Debt!S10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -2519.555154172367
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -2704.7424580040333
+      },
+      "cell": "Debt!T10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -2704.742458004037
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -2903.541028667336
+      },
+      "cell": "Debt!U10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -2903.5410286673323
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -3116.9512942743786
+      },
+      "cell": "Debt!V10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -3116.951294274384
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -3346.0472144035393
+      },
+      "cell": "Debt!W10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -3346.0472144035484
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -3591.981684662207
+      },
+      "cell": "Debt!X10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -3591.981684662207
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -3855.9923384848717
+      },
+      "cell": "Debt!Y10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -3855.9923384848844
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": -4139.407775363517
+      },
+      "cell": "Debt!Z10",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": -4139.407775363521
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.015
+      },
+      "cell": "Input Assumptions!D35",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.015
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.0585
+      },
+      "cell": "Input Assumptions!D36",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.0585
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 0.65
+      },
+      "cell": "Input Assumptions!D40",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 0.65
+      }
+    },
+    {
+      "actual": {
+        "kind": "number",
+        "value": 36.0
+      },
+      "cell": "TBA!C18",
+      "comparison": "agreement",
+      "id": "public10",
+      "reference": {
+        "kind": "number",
+        "value": 36.0
+      }
+    }
+  ],
+  "workbook_saved": false
+}

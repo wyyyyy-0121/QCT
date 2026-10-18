@@ -1,0 +1,13 @@
+DEV31 {'id': 'public01', 'formulas': 374, 'status': 'complete', 'counts': {'unsupported_syntax': 20, 'unsupported_function:TODAY': 2, 'executed_number': 346, 'executed_error': 6}}
+DEV31 {'id': 'public02', 'formulas': 752, 'status': 'complete', 'counts': {'unsupported_function:TODAY': 6, 'executed_number': 675, 'unsupported_syntax': 17, 'executed_text': 10, 'unsupported_function:CHOOSE': 44}}
+DEV31 {'id': 'public03', 'formulas': 116, 'status': 'complete', 'counts': {'unsupported_function:TODAY': 1, 'executed_number': 91, 'executed_text': 24}}
+DEV31 {'id': 'public04', 'formulas': 1052, 'status': 'complete', 'counts': {'executed_number': 473, 'unsupported_function:VLOOKUP': 117, 'unsupported_syntax': 276, 'executed_text': 35, 'multiple_power_operators': 149, 'unsupported_function:ROUND': 2}}
+DEV31 {'id': 'public05', 'formulas': 0, 'status': 'retained_original_rejection', 'counts': {}}
+DEV31 {'id': 'public06', 'formulas': 0, 'status': 'retained_original_rejection', 'counts': {}}
+DEV31 {'id': 'public07', 'formulas': 0, 'status': 'retained_original_rejection', 'counts': {}}
+DEV31 {'id': 'public08', 'formulas': 1349, 'status': 'complete', 'counts': {'unsupported_syntax': 124, 'executed_number': 1225}}
+DEV31 {'id': 'public09', 'formulas': 12, 'status': 'complete', 'counts': {'executed_number': 6, 'unsupported_function:PV': 5, 'unsupported_function:ROUND': 1}}
+DEV31 {'id': 'public10', 'formulas': 2973, 'status': 'complete', 'counts': {'executed_number': 2891, 'executed_boolean': 80, 'unsupported_function:IRR': 2}}
+DEV31 {'id': 'public11', 'formulas': 10219, 'status': 'complete', 'counts': {'executed_number': 245, 'unsupported_function:AND': 2214, 'unsupported_function:YEAR': 39, 'unsupported_syntax': 5323, 'array_or_special_formula': 1798, 'unsupported_function:SUMPRODUCT': 365, 'unsupported_function:LOOKUP': 78, 'executed_text': 129, 'unsupported_function:XIRR': 3, 'unsupported_function:XNPV': 2, 'unsupported_function:AVERAGE': 3, 'unsupported_function:_XLFN.NORM.INV': 20}}
+DEV31 {'id': 'controls', 'formulas': 98, 'status': 'complete', 'counts': {'executed_number': 76, 'executed_error': 6, 'index_array_return': 1, 'noninteger_index': 1, 'index_missing_dimension': 1, 'executed_boolean': 2, 'aggregate_boolean_coercion_unverified': 4, 'text_numeric_coercion': 1, 'unsupported_function:SQRT': 1, 'multiple_power_operators': 1, 'financial_period_domain': 2, 'financial_domain': 1, 'circular_reference': 1}}
+DEV31 executions locked before independent reference

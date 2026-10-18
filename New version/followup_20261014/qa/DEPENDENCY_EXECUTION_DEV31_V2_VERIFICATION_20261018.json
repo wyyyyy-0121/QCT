@@ -1,0 +1,170 @@
+{
+  "accepted_final_families": 0,
+  "accepted_final_sources": 0,
+  "comparison_sha256": "c6a54f175b49f4219c57fa5c663edccb60e6531a284009ba667f8db0135c4d4e",
+  "comparisons": 264,
+  "disagreements": [],
+  "execution_lock_sha256": "91ed6f3b99d264f86a21143b1d4b0afe9c71594e5429c497e79d1fbb825a041b",
+  "files": [
+    {
+      "counts": {
+        "executed_error": 6,
+        "executed_number": 346,
+        "unsupported_function:TODAY": 2,
+        "unsupported_syntax": 20
+      },
+      "formulas": 374,
+      "id": "public01",
+      "unsupported": 22
+    },
+    {
+      "counts": {
+        "executed_number": 675,
+        "executed_text": 10,
+        "unsupported_function:CHOOSE": 44,
+        "unsupported_function:TODAY": 6,
+        "unsupported_syntax": 17
+      },
+      "formulas": 752,
+      "id": "public02",
+      "unsupported": 67
+    },
+    {
+      "counts": {
+        "executed_number": 91,
+        "executed_text": 24,
+        "unsupported_function:TODAY": 1
+      },
+      "formulas": 116,
+      "id": "public03",
+      "unsupported": 1
+    },
+    {
+      "counts": {
+        "executed_number": 473,
+        "executed_text": 35,
+        "multiple_power_operators": 149,
+        "unsupported_function:ROUND": 2,
+        "unsupported_function:VLOOKUP": 117,
+        "unsupported_syntax": 276
+      },
+      "formulas": 1052,
+      "id": "public04",
+      "unsupported": 544
+    },
+    {
+      "formulas": null,
+      "id": "public05",
+      "retained_rejection": true
+    },
+    {
+      "formulas": null,
+      "id": "public06",
+      "retained_rejection": true
+    },
+    {
+      "formulas": null,
+      "id": "public07",
+      "retained_rejection": true
+    },
+    {
+      "counts": {
+        "executed_number": 1225,
+        "unsupported_syntax": 124
+      },
+      "formulas": 1349,
+      "id": "public08",
+      "unsupported": 124
+    },
+    {
+      "counts": {
+        "executed_number": 6,
+        "unsupported_function:PV": 5,
+        "unsupported_function:ROUND": 1
+      },
+      "formulas": 12,
+      "id": "public09",
+      "unsupported": 6
+    },
+    {
+      "counts": {
+        "executed_boolean": 80,
+        "executed_number": 2891,
+        "unsupported_function:IRR": 2
+      },
+      "formulas": 2973,
+      "id": "public10",
+      "unsupported": 2
+    },
+    {
+      "counts": {
+        "array_or_special_formula": 1798,
+        "executed_number": 245,
+        "executed_text": 129,
+        "unsupported_function:AND": 2214,
+        "unsupported_function:AVERAGE": 3,
+        "unsupported_function:LOOKUP": 78,
+        "unsupported_function:SUMPRODUCT": 365,
+        "unsupported_function:XIRR": 3,
+        "unsupported_function:XNPV": 2,
+        "unsupported_function:YEAR": 39,
+        "unsupported_function:_XLFN.NORM.INV": 20,
+        "unsupported_syntax": 5323
+      },
+      "formulas": 10219,
+      "id": "public11",
+      "unsupported": 9845
+    },
+    {
+      "counts": {
+        "aggregate_boolean_coercion_unverified": 4,
+        "circular_reference": 1,
+        "executed_boolean": 2,
+        "executed_error": 6,
+        "executed_number": 76,
+        "financial_domain": 1,
+        "financial_period_domain": 2,
+        "index_array_return": 1,
+        "index_missing_dimension": 1,
+        "multiple_power_operators": 1,
+        "noninteger_index": 1,
+        "text_numeric_coercion": 1,
+        "unsupported_function:SQRT": 1
+      },
+      "formulas": 98,
+      "id": "controls",
+      "unsupported": 14
+    }
+  ],
+  "final_validation_eligible": false,
+  "full_replay_formulas": 16945,
+  "graph": {
+    "blank_missing_cells": [
+      [
+        "Construction",
+        "D26"
+      ]
+    ],
+    "cells": 317,
+    "formulas": 166,
+    "functions": {
+      "IF": 119,
+      "INDEX": 3,
+      "MAX": 80,
+      "PPMT": 39,
+      "SUM": 83
+    },
+    "hidden_cells": 0,
+    "independent_graph_exact_agreement": true,
+    "input_cells": 151,
+    "targets": 39
+  },
+  "independent_agreements": 244,
+  "independent_formula_inventory_checks": 16945,
+  "main_candidate_changed": false,
+  "passed": true,
+  "reference_lock_sha256": "b826ebc5bb4195f5abd21ad7a83d091633db16877de6378a754b9670641f21d2",
+  "reference_unsupported": 14,
+  "repair_improvement_established": false,
+  "same_errors": 6
+}

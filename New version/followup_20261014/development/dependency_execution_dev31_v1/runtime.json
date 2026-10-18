@@ -1,0 +1,140 @@
+{
+  "cpu_seconds": 13.824982316999998,
+  "files": [
+    {
+      "counts": {
+        "executed_error": 6,
+        "executed_number": 346,
+        "unsupported_function:TODAY": 2,
+        "unsupported_syntax": 20
+      },
+      "formulas": 374,
+      "id": "public01",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "executed_number": 675,
+        "executed_text": 10,
+        "unsupported_function:CHOOSE": 44,
+        "unsupported_function:TODAY": 6,
+        "unsupported_syntax": 17
+      },
+      "formulas": 752,
+      "id": "public02",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "executed_number": 91,
+        "executed_text": 24,
+        "unsupported_function:TODAY": 1
+      },
+      "formulas": 116,
+      "id": "public03",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "executed_number": 473,
+        "executed_text": 35,
+        "multiple_power_operators": 149,
+        "unsupported_function:ROUND": 2,
+        "unsupported_function:VLOOKUP": 117,
+        "unsupported_syntax": 276
+      },
+      "formulas": 1052,
+      "id": "public04",
+      "status": "complete"
+    },
+    {
+      "counts": {},
+      "formulas": 0,
+      "id": "public05",
+      "status": "retained_original_rejection"
+    },
+    {
+      "counts": {},
+      "formulas": 0,
+      "id": "public06",
+      "status": "retained_original_rejection"
+    },
+    {
+      "counts": {},
+      "formulas": 0,
+      "id": "public07",
+      "status": "retained_original_rejection"
+    },
+    {
+      "counts": {
+        "executed_number": 1225,
+        "unsupported_syntax": 124
+      },
+      "formulas": 1349,
+      "id": "public08",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "executed_number": 6,
+        "unsupported_function:PV": 5,
+        "unsupported_function:ROUND": 1
+      },
+      "formulas": 12,
+      "id": "public09",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "executed_boolean": 80,
+        "executed_number": 2891,
+        "unsupported_function:IRR": 2
+      },
+      "formulas": 2973,
+      "id": "public10",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "array_or_special_formula": 1798,
+        "executed_number": 245,
+        "executed_text": 129,
+        "unsupported_function:AND": 2214,
+        "unsupported_function:AVERAGE": 3,
+        "unsupported_function:LOOKUP": 78,
+        "unsupported_function:SUMPRODUCT": 365,
+        "unsupported_function:XIRR": 3,
+        "unsupported_function:XNPV": 2,
+        "unsupported_function:YEAR": 39,
+        "unsupported_function:_XLFN.NORM.INV": 20,
+        "unsupported_syntax": 5323
+      },
+      "formulas": 10219,
+      "id": "public11",
+      "status": "complete"
+    },
+    {
+      "counts": {
+        "circular_reference": 1,
+        "executed_boolean": 2,
+        "executed_error": 6,
+        "executed_number": 80,
+        "financial_domain": 1,
+        "financial_period_domain": 2,
+        "index_array_return": 1,
+        "index_missing_dimension": 1,
+        "multiple_power_operators": 1,
+        "noninteger_index": 1,
+        "text_numeric_coercion": 1,
+        "unsupported_function:SQRT": 1
+      },
+      "formulas": 98,
+      "id": "controls",
+      "status": "complete"
+    }
+  ],
+  "gpu_used": false,
+  "peak_rss_kib": 1017872,
+  "python": "3.11.16",
+  "wall_seconds": 13.84647282700098
+}
