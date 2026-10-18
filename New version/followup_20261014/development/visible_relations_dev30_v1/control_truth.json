@@ -1,0 +1,463 @@
+{
+  "cases": [
+    {
+      "case": "new_control/clean",
+      "errors": [],
+      "expected_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "injection_records": [],
+      "observed_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/operator_error",
+      "errors": [
+        "Ledger!B4",
+        "Ledger!C4",
+        "Ledger!D4",
+        "Ledger!E4",
+        "Ledger!F4",
+        "Ledger!G4",
+        "Ledger!H4",
+        "Ledger!I4"
+      ],
+      "expected_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "injection_records": [
+        {
+          "cell": "Ledger!B4",
+          "injected_formula": "=B2+B3",
+          "original_formula": "=B2-B3"
+        },
+        {
+          "cell": "Ledger!C4",
+          "injected_formula": "=C2+C3",
+          "original_formula": "=C2-C3"
+        },
+        {
+          "cell": "Ledger!D4",
+          "injected_formula": "=D2+D3",
+          "original_formula": "=D2-D3"
+        },
+        {
+          "cell": "Ledger!E4",
+          "injected_formula": "=E2+E3",
+          "original_formula": "=E2-E3"
+        },
+        {
+          "cell": "Ledger!F4",
+          "injected_formula": "=F2+F3",
+          "original_formula": "=F2-F3"
+        },
+        {
+          "cell": "Ledger!G4",
+          "injected_formula": "=G2+G3",
+          "original_formula": "=G2-G3"
+        },
+        {
+          "cell": "Ledger!H4",
+          "injected_formula": "=H2+H3",
+          "original_formula": "=H2-H3"
+        },
+        {
+          "cell": "Ledger!I4",
+          "injected_formula": "=I2+I3",
+          "original_formula": "=I2-I3"
+        }
+      ],
+      "observed_formulas": {
+        "Ledger!B4": "=B2+B3",
+        "Ledger!C4": "=C2+C3",
+        "Ledger!D4": "=D2+D3",
+        "Ledger!E4": "=E2+E3",
+        "Ledger!F4": "=F2+F3",
+        "Ledger!G4": "=G2+G3",
+        "Ledger!H4": "=H2+H3",
+        "Ledger!I4": "=I2+I3"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/reference_error",
+      "errors": [
+        "Ledger!B4",
+        "Ledger!C4",
+        "Ledger!D4",
+        "Ledger!E4",
+        "Ledger!F4",
+        "Ledger!G4",
+        "Ledger!H4",
+        "Ledger!I4"
+      ],
+      "expected_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "injection_records": [
+        {
+          "cell": "Ledger!B4",
+          "injected_formula": "=B2-B5",
+          "original_formula": "=B2-B3"
+        },
+        {
+          "cell": "Ledger!C4",
+          "injected_formula": "=C2-C5",
+          "original_formula": "=C2-C3"
+        },
+        {
+          "cell": "Ledger!D4",
+          "injected_formula": "=D2-D5",
+          "original_formula": "=D2-D3"
+        },
+        {
+          "cell": "Ledger!E4",
+          "injected_formula": "=E2-E5",
+          "original_formula": "=E2-E3"
+        },
+        {
+          "cell": "Ledger!F4",
+          "injected_formula": "=F2-F5",
+          "original_formula": "=F2-F3"
+        },
+        {
+          "cell": "Ledger!G4",
+          "injected_formula": "=G2-G5",
+          "original_formula": "=G2-G3"
+        },
+        {
+          "cell": "Ledger!H4",
+          "injected_formula": "=H2-H5",
+          "original_formula": "=H2-H3"
+        },
+        {
+          "cell": "Ledger!I4",
+          "injected_formula": "=I2-I5",
+          "original_formula": "=I2-I3"
+        }
+      ],
+      "observed_formulas": {
+        "Ledger!B4": "=B2-B5",
+        "Ledger!C4": "=C2-C5",
+        "Ledger!D4": "=D2-D5",
+        "Ledger!E4": "=E2-E5",
+        "Ledger!F4": "=F2-F5",
+        "Ledger!G4": "=G2-G5",
+        "Ledger!H4": "=H2-H5",
+        "Ledger!I4": "=I2-I5"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/coefficient_error",
+      "errors": [
+        "Ledger!B4",
+        "Ledger!C4",
+        "Ledger!D4",
+        "Ledger!E4",
+        "Ledger!F4",
+        "Ledger!G4",
+        "Ledger!H4",
+        "Ledger!I4"
+      ],
+      "expected_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "injection_records": [
+        {
+          "cell": "Ledger!B4",
+          "injected_formula": "=(B2-B3)*1.1",
+          "original_formula": "=B2-B3"
+        },
+        {
+          "cell": "Ledger!C4",
+          "injected_formula": "=(C2-C3)*1.1",
+          "original_formula": "=C2-C3"
+        },
+        {
+          "cell": "Ledger!D4",
+          "injected_formula": "=(D2-D3)*1.1",
+          "original_formula": "=D2-D3"
+        },
+        {
+          "cell": "Ledger!E4",
+          "injected_formula": "=(E2-E3)*1.1",
+          "original_formula": "=E2-E3"
+        },
+        {
+          "cell": "Ledger!F4",
+          "injected_formula": "=(F2-F3)*1.1",
+          "original_formula": "=F2-F3"
+        },
+        {
+          "cell": "Ledger!G4",
+          "injected_formula": "=(G2-G3)*1.1",
+          "original_formula": "=G2-G3"
+        },
+        {
+          "cell": "Ledger!H4",
+          "injected_formula": "=(H2-H3)*1.1",
+          "original_formula": "=H2-H3"
+        },
+        {
+          "cell": "Ledger!I4",
+          "injected_formula": "=(I2-I3)*1.1",
+          "original_formula": "=I2-I3"
+        }
+      ],
+      "observed_formulas": {
+        "Ledger!B4": "=(B2-B3)*1.1",
+        "Ledger!C4": "=(C2-C3)*1.1",
+        "Ledger!D4": "=(D2-D3)*1.1",
+        "Ledger!E4": "=(E2-E3)*1.1",
+        "Ledger!F4": "=(F2-F3)*1.1",
+        "Ledger!G4": "=(G2-G3)*1.1",
+        "Ledger!H4": "=(H2-H3)*1.1",
+        "Ledger!I4": "=(I2-I3)*1.1"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/marked_adjustment",
+      "errors": [],
+      "expected_formulas": {
+        "Ledger!B4": "=(B2-B3)+10",
+        "Ledger!C4": "=(C2-C3)+10",
+        "Ledger!D4": "=(D2-D3)+10",
+        "Ledger!E4": "=(E2-E3)+10",
+        "Ledger!F4": "=(F2-F3)+10",
+        "Ledger!G4": "=(G2-G3)+10",
+        "Ledger!H4": "=(H2-H3)+10",
+        "Ledger!I4": "=(I2-I3)+10"
+      },
+      "injection_records": [],
+      "observed_formulas": {
+        "Ledger!B4": "=(B2-B3)+10",
+        "Ledger!C4": "=(C2-C3)+10",
+        "Ledger!D4": "=(D2-D3)+10",
+        "Ledger!E4": "=(E2-E3)+10",
+        "Ledger!F4": "=(F2-F3)+10",
+        "Ledger!G4": "=(G2-G3)+10",
+        "Ledger!H4": "=(H2-H3)+10",
+        "Ledger!I4": "=(I2-I3)+10"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/unmarked_adjustment",
+      "errors": [],
+      "expected_formulas": {
+        "Ledger!B4": "=(B2-B3)+10",
+        "Ledger!C4": "=(C2-C3)+10",
+        "Ledger!D4": "=(D2-D3)+10",
+        "Ledger!E4": "=(E2-E3)+10",
+        "Ledger!F4": "=(F2-F3)+10",
+        "Ledger!G4": "=(G2-G3)+10",
+        "Ledger!H4": "=(H2-H3)+10",
+        "Ledger!I4": "=(I2-I3)+10"
+      },
+      "injection_records": [],
+      "observed_formulas": {
+        "Ledger!B4": "=(B2-B3)+10",
+        "Ledger!C4": "=(C2-C3)+10",
+        "Ledger!D4": "=(D2-D3)+10",
+        "Ledger!E4": "=(E2-E3)+10",
+        "Ledger!F4": "=(F2-F3)+10",
+        "Ledger!G4": "=(G2-G3)+10",
+        "Ledger!H4": "=(H2-H3)+10",
+        "Ledger!I4": "=(I2-I3)+10"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/conflicting_instruction",
+      "errors": [
+        "Ledger!B4",
+        "Ledger!C4",
+        "Ledger!D4",
+        "Ledger!E4",
+        "Ledger!F4",
+        "Ledger!G4",
+        "Ledger!H4",
+        "Ledger!I4"
+      ],
+      "expected_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "injection_records": [
+        {
+          "cell": "Ledger!B4",
+          "injected_formula": "=B2+B3",
+          "original_formula": "=B2-B3"
+        },
+        {
+          "cell": "Ledger!C4",
+          "injected_formula": "=C2+C3",
+          "original_formula": "=C2-C3"
+        },
+        {
+          "cell": "Ledger!D4",
+          "injected_formula": "=D2+D3",
+          "original_formula": "=D2-D3"
+        },
+        {
+          "cell": "Ledger!E4",
+          "injected_formula": "=E2+E3",
+          "original_formula": "=E2-E3"
+        },
+        {
+          "cell": "Ledger!F4",
+          "injected_formula": "=F2+F3",
+          "original_formula": "=F2-F3"
+        },
+        {
+          "cell": "Ledger!G4",
+          "injected_formula": "=G2+G3",
+          "original_formula": "=G2-G3"
+        },
+        {
+          "cell": "Ledger!H4",
+          "injected_formula": "=H2+H3",
+          "original_formula": "=H2-H3"
+        },
+        {
+          "cell": "Ledger!I4",
+          "injected_formula": "=I2+I3",
+          "original_formula": "=I2-I3"
+        }
+      ],
+      "observed_formulas": {
+        "Ledger!B4": "=B2+B3",
+        "Ledger!C4": "=C2+C3",
+        "Ledger!D4": "=D2+D3",
+        "Ledger!E4": "=E2+E3",
+        "Ledger!F4": "=F2+F3",
+        "Ledger!G4": "=G2+G3",
+        "Ledger!H4": "=H2+H3",
+        "Ledger!I4": "=I2+I3"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    },
+    {
+      "case": "new_control/duplicate_role",
+      "errors": [
+        "Ledger!B4",
+        "Ledger!C4",
+        "Ledger!D4",
+        "Ledger!E4",
+        "Ledger!F4",
+        "Ledger!G4",
+        "Ledger!H4",
+        "Ledger!I4"
+      ],
+      "expected_formulas": {
+        "Ledger!B4": "=B2-B3",
+        "Ledger!C4": "=C2-C3",
+        "Ledger!D4": "=D2-D3",
+        "Ledger!E4": "=E2-E3",
+        "Ledger!F4": "=F2-F3",
+        "Ledger!G4": "=G2-G3",
+        "Ledger!H4": "=H2-H3",
+        "Ledger!I4": "=I2-I3"
+      },
+      "injection_records": [
+        {
+          "cell": "Ledger!B4",
+          "injected_formula": "=B2+B3",
+          "original_formula": "=B2-B3"
+        },
+        {
+          "cell": "Ledger!C4",
+          "injected_formula": "=C2+C3",
+          "original_formula": "=C2-C3"
+        },
+        {
+          "cell": "Ledger!D4",
+          "injected_formula": "=D2+D3",
+          "original_formula": "=D2-D3"
+        },
+        {
+          "cell": "Ledger!E4",
+          "injected_formula": "=E2+E3",
+          "original_formula": "=E2-E3"
+        },
+        {
+          "cell": "Ledger!F4",
+          "injected_formula": "=F2+F3",
+          "original_formula": "=F2-F3"
+        },
+        {
+          "cell": "Ledger!G4",
+          "injected_formula": "=G2+G3",
+          "original_formula": "=G2-G3"
+        },
+        {
+          "cell": "Ledger!H4",
+          "injected_formula": "=H2+H3",
+          "original_formula": "=H2-H3"
+        },
+        {
+          "cell": "Ledger!I4",
+          "injected_formula": "=I2+I3",
+          "original_formula": "=I2-I3"
+        }
+      ],
+      "observed_formulas": {
+        "Ledger!B4": "=B2+B3",
+        "Ledger!C4": "=C2+C3",
+        "Ledger!D4": "=D2+D3",
+        "Ledger!E4": "=E2+E3",
+        "Ledger!F4": "=F2+F3",
+        "Ledger!G4": "=G2+G3",
+        "Ledger!H4": "=H2+H3",
+        "Ledger!I4": "=I2+I3"
+      },
+      "scope": "development-authored intent fixed before predictions; not natural or unseen final data"
+    }
+  ],
+  "final_validation_eligible": false
+}

@@ -1,0 +1,488 @@
+{
+  "business_intent_not_supplied_by_reference": true,
+  "input_sha256": "ec8aebb8906359a11f8e4eb155566c4eaa9947fdd7a537979c87a0632f3a2cc0",
+  "reference_sha256": "36e3de61dcaa838514209b93a521e5c683665dc88f17bab15f63c960a2cf7347",
+  "rows": [
+    {
+      "candidate": "operator_error!B10",
+      "candidate_value": {
+        "kind": "float",
+        "value": 100.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!B4",
+      "original_value": {
+        "kind": "float",
+        "value": 144.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!C11",
+      "candidate_value": {
+        "kind": "float",
+        "value": 110.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!C4",
+      "original_value": {
+        "kind": "float",
+        "value": 156.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!D12",
+      "candidate_value": {
+        "kind": "float",
+        "value": 120.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!D4",
+      "original_value": {
+        "kind": "float",
+        "value": 168.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!E13",
+      "candidate_value": {
+        "kind": "float",
+        "value": 130.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!E4",
+      "original_value": {
+        "kind": "float",
+        "value": 180.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!F14",
+      "candidate_value": {
+        "kind": "float",
+        "value": 140.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!F4",
+      "original_value": {
+        "kind": "float",
+        "value": 192.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!G15",
+      "candidate_value": {
+        "kind": "float",
+        "value": 150.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!G4",
+      "original_value": {
+        "kind": "float",
+        "value": 204.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!H16",
+      "candidate_value": {
+        "kind": "float",
+        "value": 160.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!H4",
+      "original_value": {
+        "kind": "float",
+        "value": 216.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "operator_error!I17",
+      "candidate_value": {
+        "kind": "float",
+        "value": 170.0
+      },
+      "case": "new_control/operator_error",
+      "error": true,
+      "original": "operator_error!I4",
+      "original_value": {
+        "kind": "float",
+        "value": 228.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!B10",
+      "candidate_value": {
+        "kind": "float",
+        "value": 100.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!B4",
+      "original_value": {
+        "kind": "float",
+        "value": 116.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!C11",
+      "candidate_value": {
+        "kind": "float",
+        "value": 110.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!C4",
+      "original_value": {
+        "kind": "float",
+        "value": 126.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!D12",
+      "candidate_value": {
+        "kind": "float",
+        "value": 120.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!D4",
+      "original_value": {
+        "kind": "float",
+        "value": 136.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!E13",
+      "candidate_value": {
+        "kind": "float",
+        "value": 130.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!E4",
+      "original_value": {
+        "kind": "float",
+        "value": 146.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!F14",
+      "candidate_value": {
+        "kind": "float",
+        "value": 140.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!F4",
+      "original_value": {
+        "kind": "float",
+        "value": 156.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!G15",
+      "candidate_value": {
+        "kind": "float",
+        "value": 150.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!G4",
+      "original_value": {
+        "kind": "float",
+        "value": 166.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!H16",
+      "candidate_value": {
+        "kind": "float",
+        "value": 160.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!H4",
+      "original_value": {
+        "kind": "float",
+        "value": 176.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "reference_error!I17",
+      "candidate_value": {
+        "kind": "float",
+        "value": 170.0
+      },
+      "case": "new_control/reference_error",
+      "error": true,
+      "original": "reference_error!I4",
+      "original_value": {
+        "kind": "float",
+        "value": 186.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!B10",
+      "candidate_value": {
+        "kind": "float",
+        "value": 100.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!B4",
+      "original_value": {
+        "kind": "float",
+        "value": 110.00000000000001
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!C11",
+      "candidate_value": {
+        "kind": "float",
+        "value": 110.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!C4",
+      "original_value": {
+        "kind": "float",
+        "value": 121.00000000000001
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!D12",
+      "candidate_value": {
+        "kind": "float",
+        "value": 120.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!D4",
+      "original_value": {
+        "kind": "float",
+        "value": 132.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!E13",
+      "candidate_value": {
+        "kind": "float",
+        "value": 130.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!E4",
+      "original_value": {
+        "kind": "float",
+        "value": 143.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!F14",
+      "candidate_value": {
+        "kind": "float",
+        "value": 140.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!F4",
+      "original_value": {
+        "kind": "float",
+        "value": 154.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!G15",
+      "candidate_value": {
+        "kind": "float",
+        "value": 150.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!G4",
+      "original_value": {
+        "kind": "float",
+        "value": 165.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!H16",
+      "candidate_value": {
+        "kind": "float",
+        "value": 160.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!H4",
+      "original_value": {
+        "kind": "float",
+        "value": 176.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "coefficient_error!I17",
+      "candidate_value": {
+        "kind": "float",
+        "value": 170.0
+      },
+      "case": "new_control/coefficient_error",
+      "error": true,
+      "original": "coefficient_error!I4",
+      "original_value": {
+        "kind": "float",
+        "value": 187.00000000000003
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!B10",
+      "candidate_value": {
+        "kind": "float",
+        "value": 100.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!B4",
+      "original_value": {
+        "kind": "float",
+        "value": 110.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!C11",
+      "candidate_value": {
+        "kind": "float",
+        "value": 110.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!C4",
+      "original_value": {
+        "kind": "float",
+        "value": 120.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!D12",
+      "candidate_value": {
+        "kind": "float",
+        "value": 120.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!D4",
+      "original_value": {
+        "kind": "float",
+        "value": 130.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!E13",
+      "candidate_value": {
+        "kind": "float",
+        "value": 130.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!E4",
+      "original_value": {
+        "kind": "float",
+        "value": 140.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!F14",
+      "candidate_value": {
+        "kind": "float",
+        "value": 140.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!F4",
+      "original_value": {
+        "kind": "float",
+        "value": 150.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!G15",
+      "candidate_value": {
+        "kind": "float",
+        "value": 150.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!G4",
+      "original_value": {
+        "kind": "float",
+        "value": 160.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!H16",
+      "candidate_value": {
+        "kind": "float",
+        "value": 160.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!H4",
+      "original_value": {
+        "kind": "float",
+        "value": 170.0
+      },
+      "output_changed": true
+    },
+    {
+      "candidate": "unmarked_adjustment!I17",
+      "candidate_value": {
+        "kind": "float",
+        "value": 170.0
+      },
+      "case": "new_control/unmarked_adjustment",
+      "error": false,
+      "original": "unmarked_adjustment!I4",
+      "original_value": {
+        "kind": "float",
+        "value": 180.0
+      },
+      "output_changed": true
+    }
+  ],
+  "source_unchanged": true
+}
