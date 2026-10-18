@@ -86,3 +86,19 @@ API元数据回执及响应SHA-256见`source_evidence/ZENODO_METADATA_SCREEN_202
 ## faultsfw 预测与评分结果
 
 按预登记先锁定225个`.xlsx`故障变体及逐文件哈希，再读取配置和注入前原始模板。冻结论文模型完成225/225项推理；1进程与8进程预测哈希逐文件一致。219项有可映射的配置和原模板，确认374个公式故障格；6项因缺配置/原模板而标记格级真值未知，其建议仍进入全部建议精确率分母。论文模型全文本精确恢复149格，正确修复覆盖率`149/374=39.84%`；全部建议`149/2,116=7.04%`精确。另27个`.xls`版本未送入`.xlsx`入口，保留为格式支持限制。已计分模板家族31个，属于该公开注入基准内部家族，不计自然来源或最终验证门槛。各错误类型、并行资源、范围限制及逐输入锁见`FAULTSFW_RESULTS_20261019.md`和`source_evidence/FAULTSFW_INPUT_LOCK_20261019.json`。该结果显示该注入机制上的误报和覆盖不足；不得针对同一公开基准调参后重新宣称独立验证，也不支持自然错误精度或90%结论。
+
+## AEDIST Err:510 natural development replication
+
+2026-10-19取得`MinhHaDuong/aedist-technical-report`同一ODS工作簿的缺陷版与同日修订版。仓库许可元数据为CC-BY-4.0；Git历史和`data/reference/PROVENANCE.md`明确披露`Power plants!N254:N255`的Err:510修复，因此该案例在任何模型预测前已属于揭示案例，永久排除最终盲测。原版和修订版通过LibreOffice转换后，目标公式分别保持为原版畸形嵌套公式及修订公式`=1330/2`、`=N254`。
+
+按预登记对两个版本分别运行冻结论文模型和dev11，不调参。论文模型把两个单元均排入局部异常，但分别建议邻格的错误公式；两格精确修复均失败（0/2）。dev11对两格均弃权，精确修复也为0/2。两输入在1与8 worker下的预测输出SHA-256逐一一致，所有源文件哈希校验保持不变。两项任务使请求8 worker批次实际至多两项并行，墙钟7.34秒、子进程CPU合计14.49秒、采样峰值RSS约283.3 MiB，相对单worker约1.90倍加速；这不证明八路饱和。全部原始文件、输出和运行日志留在忽略的`source_evidence/raw/aedist_err510/`。逐格结果与局限见`research/aedist_err510/RESULTS.md`及预登记。
+
+该案例仅新增一个已揭示自然开发来源线索，不计最终验证来源或模板家族；最终验证计数仍为`0/0`。不能计算全工作簿建议精确率，不用于调参。
+
+## 2026-10-19 benchmark/source lead screening
+
+GitHub repository search returned `plasma-umass/DataDebug` (https://github.com/plasma-umass/DataDebug), an Excel data-debugging system. Its README describes ranking cells for human review, and the repository is GPL-2.0. The tree contains one `CheckCellTests/TestData/grades_spreadsheet.xlsx` plus `ErrorGenerator` and simulation tests, but no author-corrected workbook pair or independently documented natural error labels. It is a methods/code lead, not a natural-error dataset; no model was run.
+
+The same search surfaced `RUCKBReasoning/SpreadsheetBench-2` (https://github.com/RUCKBReasoning/SpreadsheetBench-2). Its README lists a `Debugging` category with input and golden-response workbooks hosted on Hugging Face, but GitHub repository metadata has no license, the repository tree does not include the dataset files, and the Hugging Face dataset API timed out during this screen. The task benchmark description alone does not establish naturally occurring silent formula errors, source-authored correction lineage, or independent cell-level truth. Defer pending accessible dataset terms and provenance audit; do not infer that the dataset has zero eligible cases from the timeout.
+
+These two screens add no qualified natural source or template family. They do not change the final-validation count (`0/0`) or justify model tuning.
