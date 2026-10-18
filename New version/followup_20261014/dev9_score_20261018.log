@@ -1,0 +1,137 @@
+{
+  "regression": {
+    "dev6_totals": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    },
+    "totals": {
+      "proposals": 20677,
+      "correct": 16177,
+      "wrong": 4500,
+      "errors": 16577,
+      "harmful_correct_cells": 4500,
+      "precision": 0.7823668810755913,
+      "coverage": 0.9758701815768837
+    },
+    "changed_cases": 11,
+    "delta": {
+      "added_proposals": 7521,
+      "added_correct": 3021,
+      "added_wrong": 4500,
+      "added_harmful_correct_cells": 4500
+    }
+  },
+  "stress": {
+    "dev6_totals": {
+      "proposals": 25,
+      "correct": 25,
+      "wrong": 0,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.3424657534246575
+    },
+    "totals": {
+      "proposals": 73,
+      "correct": 49,
+      "wrong": 24,
+      "errors": 73,
+      "harmful_correct_cells": 24,
+      "precision": 0.6712328767123288,
+      "coverage": 0.6712328767123288
+    },
+    "changed_cases": 2,
+    "delta": {
+      "added_proposals": 48,
+      "added_correct": 24,
+      "added_wrong": 24,
+      "added_harmful_correct_cells": 24
+    }
+  },
+  "tradeoff": {
+    "dev6_totals": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    },
+    "totals": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    },
+    "changed_cases": 0,
+    "delta": {
+      "added_proposals": 0,
+      "added_correct": 0,
+      "added_wrong": 0,
+      "added_harmful_correct_cells": 0
+    }
+  },
+  "crossdomain": {
+    "dev6_totals": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "totals": {
+      "proposals": 493,
+      "correct": 492,
+      "wrong": 1,
+      "errors": 492,
+      "harmful_correct_cells": 1,
+      "precision": 0.9979716024340771,
+      "coverage": 1.0
+    },
+    "changed_cases": 1,
+    "delta": {
+      "added_proposals": 1,
+      "added_correct": 0,
+      "added_wrong": 1,
+      "added_harmful_correct_cells": 1
+    }
+  },
+  "adversarial": {
+    "dev6_totals": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    },
+    "totals": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    },
+    "changed_cases": 0,
+    "delta": {
+      "added_proposals": 0,
+      "added_correct": 0,
+      "added_wrong": 0,
+      "added_harmful_correct_cells": 0
+    }
+  }
+}

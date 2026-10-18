@@ -1,0 +1,36 @@
+{
+  "version": "dev9-bounded-peer-scalar-hypothesis-v1",
+  "date": "2026-10-18",
+  "role": "revealed development, not final validation",
+  "hypothesis": "A unique repeated peer single-positive-scalar candidate may recover coverage but can erase undocumented business exceptions.",
+  "base": "immutable dev6 behavior with dev8 corrected metadata",
+  "cases": 107,
+  "groups": [
+    "regression",
+    "stress",
+    "tradeoff",
+    "crossdomain",
+    "adversarial"
+  ],
+  "selection_inputs": [
+    "observed workbook arithmetic AST",
+    "visible output and precedent headers",
+    "frozen parallel-sheet metadata",
+    "recognized policy scopes"
+  ],
+  "candidate_rule": "exactly one positive multiplicative literal insertion/removal/replacement; local references, arithmetic only",
+  "acceptance_rule": "at least two matching candidate peers and strict majority of all present peers; same header signatures; no marked target/peer policy scope",
+  "forbidden_selection_inputs": [
+    "truth",
+    "scores",
+    "case names",
+    "source paths",
+    "mutation logs",
+    "cached results"
+  ],
+  "preservation": "all existing dev6 proposals retained; all error and clean-control denominators retained",
+  "ordering": "write source and tests then freeze; predict all cases; lock predictions; separate-process score; exact replay",
+  "interpretation": "Peer majority is correlated evidence, never business correctness proof; development gains alone cannot qualify final model.",
+  "zero_proposal_precision": null,
+  "final_validation_eligible": false
+}
