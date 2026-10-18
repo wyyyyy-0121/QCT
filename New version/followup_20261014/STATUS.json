@@ -51,7 +51,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 110,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -71,7 +71,7 @@
   "dev5_adversarial_all_peer_wrong_misses": 480,
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
-  "upload_record_note": "dev12 experiment commit verified against remote; receipt documentation commit follows",
+  "upload_record_note": "source expansion checkpoint dcf9a25 verified against remote; documentation commit follows",
   "latest_verified_remote_before_this_checkpoint": "4781019f1ba9d17519e51855b5a96ef10fa8b195",
   "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate",
   "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
@@ -202,7 +202,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev12 experiment verified at 496e034; source expansion and diagnosis checkpoint local pending upload",
+  "new_work_pushed_scope": "dev12 experiment and source expansion checkpoint verified on GitHub; receipt documentation follows",
   "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -356,5 +356,7 @@
     "new_final_acceptance_evidence": false
   },
   "latest_source_expansion_report": "source_discovery/SOURCE_EXPANSION_REPORT_20261018.md",
-  "dev11_over_abstention_diagnosis": "qa/DEV11_DEV12_ABSTENTION_DIAGNOSIS_20261018.json"
+  "dev11_over_abstention_diagnosis": "qa/DEV11_DEV12_ABSTENTION_DIAGNOSIS_20261018.json",
+  "latest_verified_source_checkpoint_remote_commit": "dcf9a252198d933af8d3d740db4d44f66369c257",
+  "source_expansion_upload_receipt": "qa/SOURCE_EXPANSION_UPLOAD_RECEIPT_20261018.json"
 }
