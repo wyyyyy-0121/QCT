@@ -1,0 +1,14 @@
+test_calibration_can_release_low_raw_but_never_bypass_gates (test_nested_calibration_dev25.CalibrationTests.test_calibration_can_release_low_raw_but_never_bypass_gates) ... ok
+test_nonfinite_raw_is_rejected (test_nested_calibration_dev25.CalibrationTests.test_nonfinite_raw_is_rejected) ... ok
+test_source_and_family_weights_not_formula_count_weights (test_nested_calibration_dev25.CalibrationTests.test_source_and_family_weights_not_formula_count_weights) ... ok
+test_tie_abstains_and_no_promotion (test_nested_calibration_dev25.CalibrationTests.test_tie_abstains_and_no_promotion) ... ok
+test_top_without_raw_threshold_but_margin_and_units_preserved (test_nested_calibration_dev25.CalibrationTests.test_top_without_raw_threshold_but_margin_and_units_preserved) ... ok
+test_unknown_not_accepted_and_insufficient_evidence_abstains (test_nested_calibration_dev25.CalibrationTests.test_unknown_not_accepted_and_insufficient_evidence_abstains) ... ok
+test_weighted_isotonic_known_pool_and_no_extrapolation (test_nested_calibration_dev25.CalibrationTests.test_weighted_isotonic_known_pool_and_no_extrapolation) ... ok
+test_preflight_denies_nested_and_old_label_hashes (test_nested_calibration_dev25.IsolationTests.test_preflight_denies_nested_and_old_label_hashes) ... ok
+test_wrong_fold_author_and_old_outer_reads_denied (test_nested_calibration_dev25.IsolationTests.test_wrong_fold_author_and_old_outer_reads_denied) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.787s
+
+OK

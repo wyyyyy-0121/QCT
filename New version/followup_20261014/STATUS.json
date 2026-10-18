@@ -48,8 +48,8 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 249,
-  "new_work_pushed": true,
+  "unit_test_count": 259,
+  "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -1183,5 +1183,16 @@
     "verification": "qa/ABSOLUTE_SELECTION_DEV24_VERIFICATION_20261018.json",
     "performance_tradeoff_adopted": false
   },
-  "development_metrics_scope": "All 213 annotated development cases, dev11 adopted candidate; older synthetic-only metrics are retained in detailed historical entries"
+  "development_metrics_scope": "All 213 annotated development cases, dev11 adopted candidate; older synthetic-only metrics are retained in detailed historical entries",
+  "dev25_nested_calibration": {
+    "phase": "registered and independently audited; 10 three-origin inner models running",
+    "plan": "NESTED_CALIBRATION_DEV25_PREREGISTRATION_20261018.md",
+    "run": "development/nested_calibration_dev25_v1",
+    "tests_passed": 259,
+    "nested_folds": 10,
+    "training_data_audited": true,
+    "outer_predictions_locked": false,
+    "main_candidate_adopted": false,
+    "final_validation_eligible": false
+  }
 }
