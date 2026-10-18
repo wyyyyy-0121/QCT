@@ -1,0 +1,609 @@
+{
+  "auditor_sha256": "91d64abe7f2496d9f748707d567e8ac6fc529f063a738e1408cc22dede954eb2",
+  "case_counts": {
+    "inference_complete_unscored": 8,
+    "inference_failed": 3
+  },
+  "cases": [
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 344,
+      "evaluation_errors": 30,
+      "id": "public01",
+      "input_sha256": "ca188a3776314d7a17e0c40564bdc2737ada2e6dc705186cd20964b9c42026ec",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 374,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 0,
+        "dev4": 0,
+        "dev5": 0,
+        "dev6": 0,
+        "dev9": 0,
+        "paper": 182
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 374,
+      "raw_nonempty_formula_texts": 311,
+      "raw_shared_followers": 63,
+      "recorded_originals_compared": {
+        "dev2": 374,
+        "dev4": 374,
+        "dev5": 374,
+        "dev6": 374,
+        "dev9": 374,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Hay Budget",
+        "Hay Budget-Blank"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 0.24020960800000024,
+      "worker_peak_rss_kib": 50712
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 685,
+      "evaluation_errors": 67,
+      "id": "public02",
+      "input_sha256": "87411c767743b3fdb60a883dffe3140d0bc8b2a42ac5363499f5a31b9ff3faf6",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 752,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 0,
+        "dev4": 0,
+        "dev5": 0,
+        "dev6": 0,
+        "dev9": 0,
+        "paper": 416
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 752,
+      "raw_nonempty_formula_texts": 562,
+      "raw_shared_followers": 190,
+      "recorded_originals_compared": {
+        "dev2": 752,
+        "dev4": 752,
+        "dev5": 752,
+        "dev6": 752,
+        "dev9": 752,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Summary",
+        "Corn-C",
+        "Corn-Sb",
+        "Soybeans-C",
+        "Soybeans-C-C",
+        "Oat-Small grain"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 0.4737462699999999,
+      "worker_peak_rss_kib": 55480
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 43,
+      "evaluation_errors": 73,
+      "id": "public03",
+      "input_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 116,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 0,
+        "dev4": 0,
+        "dev5": 0,
+        "dev6": 0,
+        "dev9": 0,
+        "paper": 75
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 116,
+      "raw_nonempty_formula_texts": 25,
+      "raw_shared_followers": 91,
+      "recorded_originals_compared": {
+        "dev2": 116,
+        "dev4": 116,
+        "dev5": 116,
+        "dev6": 116,
+        "dev9": 116,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Cash Flow Budget"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 0.05145970100000019,
+      "worker_peak_rss_kib": 55268
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 516,
+      "evaluation_errors": 536,
+      "id": "public04",
+      "input_sha256": "32ccdad0e50d87226908162ab512e067a7614fbbe26b9291b7f0de155d2b7115",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 1052,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 1,
+        "dev4": 1,
+        "dev5": 1,
+        "dev6": 1,
+        "dev9": 1,
+        "paper": 531
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 1052,
+      "raw_nonempty_formula_texts": 539,
+      "raw_shared_followers": 513,
+      "recorded_originals_compared": {
+        "dev2": 1052,
+        "dev4": 1052,
+        "dev5": 1052,
+        "dev6": 1052,
+        "dev9": 1052,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "READ ME 1ST",
+        "FAQs",
+        "Inputs",
+        "Optimal CS Worksheet",
+        "Marginal tax rate by country",
+        "Operating leases",
+        "Default Spreads and Ratios",
+        "ERP Calculator",
+        "Country ERP ",
+        "Repurchase price Worksheet",
+        "Value&WACC Chart",
+        "Summary Table",
+        "Input choices page",
+        "Sheet1"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 0.9038348010000004,
+      "worker_peak_rss_kib": 61356
+    },
+    {
+      "acquisition_sha_matches": true,
+      "failure": "protected_answer_sheet",
+      "formula_contents_read_by_this_audit": false,
+      "id": "public05",
+      "input_sha256": "d6ffb67d965dc22463e4d013636befab3da431e7fc608936a82612fa73198e72",
+      "input_unchanged_during_independent_audit": true,
+      "sheet_manifest": [
+        "Input sheet",
+        "Valuation output",
+        "Stories to Numbers",
+        "Valuation as picture",
+        "Diagnostics",
+        "Option value",
+        "Synthetic rating",
+        "R& D converter",
+        "Operating lease converter",
+        "Cost of capital worksheet",
+        "Failure Rate worksheet",
+        "Country equity risk premiums",
+        "Industry Averages(US)",
+        "Industry Averages (Global)",
+        "Input Stat Distributioons",
+        "Trailing 12 month Worskheet",
+        "Answer keys"
+      ],
+      "status": "inference_failed"
+    },
+    {
+      "acquisition_sha_matches": true,
+      "failure": "xlsm_not_supported",
+      "formula_contents_read_by_this_audit": false,
+      "id": "public06",
+      "input_sha256": "15814b7e4a3d45113c08b00eb4b99a0d226ea1a937955eda8c397c0c6f736c38",
+      "input_unchanged_during_independent_audit": true,
+      "sheet_manifest": [
+        "Read Me",
+        "Data Inputs",
+        "Design Parameters",
+        "Cost Estimate",
+        "Table A",
+        "Table B"
+      ],
+      "status": "inference_failed"
+    },
+    {
+      "acquisition_sha_matches": true,
+      "failure": "xlsm_not_supported",
+      "formula_contents_read_by_this_audit": false,
+      "id": "public07",
+      "input_sha256": "ca983db99d6c11abd3a8aad1faacc0ca18e2871ee93d6602409b70cdc9fbfad4",
+      "input_unchanged_during_independent_audit": true,
+      "sheet_manifest": [
+        "Read Me",
+        "Data Inputs",
+        "Design Parameters",
+        "Cost Estimate",
+        "Table A",
+        "Table B"
+      ],
+      "status": "inference_failed"
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 1225,
+      "evaluation_errors": 124,
+      "id": "public08",
+      "input_sha256": "b0f15382e8c9c9b74d944a0ab8301a3326fb3bfbf4a950896a66f29c52000357",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 1349,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 0,
+        "dev4": 0,
+        "dev5": 0,
+        "dev6": 0,
+        "dev9": 0,
+        "paper": 1181
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 1349,
+      "raw_nonempty_formula_texts": 186,
+      "raw_shared_followers": 1163,
+      "recorded_originals_compared": {
+        "dev2": 1349,
+        "dev4": 1349,
+        "dev5": 1349,
+        "dev6": 1349,
+        "dev9": 1349,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Description of variables",
+        "Offshore LCOE",
+        "CCGT LCOE calc",
+        "Deflators"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 1.264856902,
+      "worker_peak_rss_kib": 79764
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 6,
+      "evaluation_errors": 6,
+      "id": "public09",
+      "input_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 12,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 0,
+        "dev4": 0,
+        "dev5": 0,
+        "dev6": 0,
+        "dev9": 0,
+        "paper": 12
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 12,
+      "raw_nonempty_formula_texts": 12,
+      "raw_shared_followers": 0,
+      "recorded_originals_compared": {
+        "dev2": 12,
+        "dev4": 12,
+        "dev5": 12,
+        "dev6": 12,
+        "dev9": 12,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Welcome!",
+        "Enter Your Model Here",
+        "Optimistic Inucrring Technical ",
+        "Realistic Steady-State"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 0.014652642999999799,
+      "worker_peak_rss_kib": 104824
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 21,
+      "evaluation_errors": 2952,
+      "id": "public10",
+      "input_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 2973,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 0,
+        "dev4": 0,
+        "dev5": 0,
+        "dev6": 0,
+        "dev9": 0,
+        "paper": 2526
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 2973,
+      "raw_nonempty_formula_texts": 1853,
+      "raw_shared_followers": 1120,
+      "recorded_originals_compared": {
+        "dev2": 2973,
+        "dev4": 2973,
+        "dev5": 2973,
+        "dev6": 2973,
+        "dev9": 2973,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Input Assumptions",
+        "TBA",
+        "Construction",
+        "Operation",
+        "Amortization",
+        "Debt",
+        "P&L",
+        "CFS",
+        "Balance Sheet",
+        "Ratios"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 2.379406699,
+      "worker_peak_rss_kib": 104824
+    },
+    {
+      "acquisition_sha_matches": true,
+      "evaluated_without_error": 374,
+      "evaluation_errors": 9845,
+      "id": "public11",
+      "input_sha256": "3b9a8b47f3cf9ad506698c6cf89082472401b9c8b851ed78ba944101c35b43f2",
+      "input_unchanged_during_independent_audit": true,
+      "loaded_formula_cells": 10219,
+      "openpyxl_formulas_absent_from_prediction": [],
+      "original_formula_consistency_verified": true,
+      "proposals": {
+        "dev2": 17,
+        "dev4": 17,
+        "dev5": 17,
+        "dev6": 17,
+        "dev9": 17,
+        "paper": 5290
+      },
+      "raw_declarations_absent_from_prediction": [],
+      "raw_formula_declarations": 10219,
+      "raw_nonempty_formula_texts": 1826,
+      "raw_shared_followers": 8393,
+      "recorded_originals_compared": {
+        "dev2": 10219,
+        "dev4": 10219,
+        "dev5": 10219,
+        "dev6": 10219,
+        "dev9": 10219,
+        "paper": 0
+      },
+      "sheet_manifest": [
+        "Cover Page",
+        "Top Shortcuts",
+        "PF Model"
+      ],
+      "status": "inference_complete_unscored",
+      "worker_cpu_seconds": 35.184279354000005,
+      "worker_peak_rss_kib": 181468
+    }
+  ],
+  "coverage": null,
+  "final_validation_eligible": false,
+  "limitations": [
+    "Original audit paper proposal totals incorrectly require status=propose; corrected here.",
+    "Input hashes now match original acquisition receipts, but no historical pre-run hash evidence is added.",
+    "Recorded original formulas agree with independent readers; this does not prove no transient in-memory mutation.",
+    "public05 loaded WorkbookModel before SG rejected Answer keys; embedded answer isolation was not established.",
+    "No external answer files are used here; public05 formula contents are not read by this independent audit.",
+    "Current 11 records have no timeout; the historical runner does not persist a timeout prediction file.",
+    "No business truth exists; all 18 dev6 suggestions remain unscored.",
+    "Empty parallel-sheet metadata means the parallel-sheet component was not exercised."
+  ],
+  "precision": null,
+  "prediction_lock_sha256": "84474718620ba6292ba5078c9239edd889b762f535795d8b8bb55f4e66ef8de8",
+  "proposal_totals": {
+    "dev2": 18,
+    "dev4": 18,
+    "dev5": 18,
+    "dev6": 18,
+    "dev9": 18,
+    "paper": 10213
+  },
+  "risks": [
+    {
+      "cell": "Country ERP !B228",
+      "correctness": null,
+      "id": "public04",
+      "original": "=B1+E228",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "unlabelled_reference_change",
+      "suggested": "=$B$1+E228"
+    },
+    {
+      "cell": "PF Model!E13",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_balance_sheet",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E14",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_negative_cash",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E15",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_further_equity",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E16",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_debt_gearing",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E20",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_payment_plan",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E21",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_minimum_DSCR",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E116",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"'000/MW\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E124",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"/MWh\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E120",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"'000/MW\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E117",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"'000/MW\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E125",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"/MWh\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E128",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"/MWh\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E119",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"'000/MW\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E118",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"'000/MW\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E127",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"/MWh\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E126",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Applied_currency & \"/MWh\"",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    },
+    {
+      "cell": "PF Model!E3",
+      "correctness": null,
+      "id": "public11",
+      "original": "=Check_master",
+      "reason": "column_supported_nonconstant_anomaly",
+      "risk_class": "string_unit_or_check_name",
+      "suggested": "=Applied_currency & \"'000\""
+    }
+  ],
+  "role": "independent post-prediction integrity audit; revealed development only",
+  "runtime": {
+    "failed_workers_cpu_seconds": null,
+    "gpu_used": false,
+    "parent_only_cpu_seconds": 2.5816578210000003,
+    "scope": "SG/FG/Hybrid and developer candidates; no parallel sheet list supplied",
+    "successful_workers_cpu_seconds": 40.512445978,
+    "wall_seconds": 45.96035930400012
+  },
+  "totals": {
+    "evaluated_without_error": 3214,
+    "evaluation_errors": 13633,
+    "loaded_formula_cells": 16847,
+    "raw_formula_declarations": 16847,
+    "raw_nonempty_formula_texts": 5314,
+    "raw_shared_followers": 11533,
+    "worker_cpu_seconds": 40.512445978
+  },
+  "utc": "2026-10-18T04:40:12.866460+00:00",
+  "verified_source_files": 82
+}
