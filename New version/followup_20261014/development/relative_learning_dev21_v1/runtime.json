@@ -1,0 +1,151 @@
+{
+  "cpu_seconds": 2429.443799077,
+  "folds": [
+    {
+      "class_weight_sums": [
+        831054.0000000003,
+        831054.0000000003
+      ],
+      "cpu_seconds": 563.191308617,
+      "features": 712,
+      "fold": "source__18f",
+      "max_negatives_per_cell": 32,
+      "mirrored_rows": 1662108,
+      "negative": 831054,
+      "positive": 831054,
+      "selected_original_rows": 831054,
+      "selection_sha256": "1f581e77975d696f801f54479195914069376d9ef0b5951b95f54484e8d23bd4",
+      "storage": "read-only float64 mmap of exact float32-rounded features",
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0,
+        "learned_unfiltered": 0
+      },
+      "training_matrix_sha256": "d75a4f8b86e21b9b0c6abc20917746f41a7d1094f0caf14bf0ce7176339d1677",
+      "wall_seconds": 207.908301553
+    },
+    {
+      "class_weight_sums": [
+        39893.99999999999,
+        39893.99999999999
+      ],
+      "cpu_seconds": 91.71104441600005,
+      "features": 712,
+      "fold": "source__authored_development",
+      "max_negatives_per_cell": 32,
+      "mirrored_rows": 79788,
+      "negative": 39894,
+      "positive": 39894,
+      "selected_original_rows": 39894,
+      "selection_sha256": "638e179769fc8ed84f82f4ae5a2b69f5aafe816daedf92d2cd004348a5e61d7a",
+      "storage": "read-only float64 mmap of exact float32-rounded features",
+      "suggestions": {
+        "dev11": 14213,
+        "keep_base_plus_learned": 14213,
+        "learned_only": 0,
+        "learned_unfiltered": 0
+      },
+      "training_matrix_sha256": "dab44596253c805a16917c2252ffb6d237de3932dde0b39d54ddb29762522663",
+      "wall_seconds": 58.15436639799998
+    },
+    {
+      "class_weight_sums": [
+        826153.0000000006,
+        826153.0000000002
+      ],
+      "cpu_seconds": 589.5588268739999,
+      "features": 712,
+      "fold": "source__iowa_state_agdm",
+      "max_negatives_per_cell": 32,
+      "mirrored_rows": 1652306,
+      "negative": 826153,
+      "positive": 826153,
+      "selected_original_rows": 826153,
+      "selection_sha256": "b7376c0303fb9fb3dd1eb4f9dddb55927312963fce3bd7880a163f7d35e4684a",
+      "storage": "read-only float64 mmap of exact float32-rounded features",
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 3,
+        "learned_only": 3,
+        "learned_unfiltered": 3
+      },
+      "training_matrix_sha256": "675a440742e20023cb9800ddb3708e64e0d9fa86c7d1f747e8316c6575bcf374",
+      "wall_seconds": 214.75378301399996
+    },
+    {
+      "class_weight_sums": [
+        825801.0000000012,
+        825801.0000000008
+      ],
+      "cpu_seconds": 571.0173115729999,
+      "features": 712,
+      "fold": "source__packt",
+      "max_negatives_per_cell": 32,
+      "mirrored_rows": 1651602,
+      "negative": 825801,
+      "positive": 825801,
+      "selected_original_rows": 825801,
+      "selection_sha256": "1116c7aaecd9864a684fbf8173e1c5ccb27f2556bc517ed0b3da4b32f0fa639a",
+      "storage": "read-only float64 mmap of exact float32-rounded features",
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 3,
+        "learned_only": 3,
+        "learned_unfiltered": 3
+      },
+      "training_matrix_sha256": "82fd0ac7aec4d9164c9affc6198291ebc52a7151a89c1dfd812cae9931618bf1",
+      "wall_seconds": 204.61200838899993
+    },
+    {
+      "class_weight_sums": [
+        803910.0000000002,
+        803910.0000000005
+      ],
+      "cpu_seconds": 613.6670288209998,
+      "features": 712,
+      "fold": "source__uk_government",
+      "max_negatives_per_cell": 32,
+      "mirrored_rows": 1607820,
+      "negative": 803910,
+      "positive": 803910,
+      "selected_original_rows": 803910,
+      "selection_sha256": "a74a49341906dde5a71dd4061bb764b43929f317f603a7b3c9d42a3e49df4f28",
+      "storage": "read-only float64 mmap of exact float32-rounded features",
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0,
+        "learned_unfiltered": 0
+      },
+      "training_matrix_sha256": "ef7213498530f83bb015eb93c7bd2667d9bf94e33d93624ee6d70bde8e2a0683",
+      "wall_seconds": 219.57805478399996
+    }
+  ],
+  "gpu_used": false,
+  "margin": 0.05,
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.0"
+  },
+  "parameters": {
+    "early_stopping": false,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "max_depth": 6,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "random_state": 1618
+  },
+  "peak_rss_kib": 12387800,
+  "python": "3.11.16",
+  "scope": "relative preference experiment fits/inference; feature extraction and paper pipeline excluded",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "threshold": 0.9,
+  "wall_seconds": 905.2309758650001
+}

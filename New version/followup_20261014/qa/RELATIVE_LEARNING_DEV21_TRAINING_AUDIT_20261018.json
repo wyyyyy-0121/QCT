@@ -1,0 +1,84 @@
+{
+  "all_positive_candidates_preserved": true,
+  "all_source_weight_checks_passed": true,
+  "all_unknown_candidates_excluded": true,
+  "audit_source_sha256": "fc2ee8206ed6556bdf1ceb30d18822351f5ff18031358cd9b0316bc403b2e432",
+  "final_validation_eligible": false,
+  "folds": [
+    {
+      "fold": "source__18f",
+      "mirrored_negative": 831054,
+      "mirrored_positive": 831054,
+      "original_rows": 1301528,
+      "positive_original": 18011,
+      "selected_rows": 831054,
+      "selection_sha256": "1f581e77975d696f801f54479195914069376d9ef0b5951b95f54484e8d23bd4",
+      "source_weight_sums": {
+        "authored_development": 207763.50000243363,
+        "iowa_state_agdm": 207763.49999999968,
+        "packt": 207763.5000000031,
+        "uk_government": 207763.5000001001
+      }
+    },
+    {
+      "fold": "source__authored_development",
+      "mirrored_negative": 39894,
+      "mirrored_positive": 39894,
+      "original_rows": 39894,
+      "positive_original": 171,
+      "selected_rows": 39894,
+      "selection_sha256": "638e179769fc8ed84f82f4ae5a2b69f5aafe816daedf92d2cd004348a5e61d7a",
+      "source_weight_sums": {
+        "18f": 9973.500000000051,
+        "iowa_state_agdm": 9973.49999999945,
+        "packt": 9973.500000000487,
+        "uk_government": 9973.500000001375
+      }
+    },
+    {
+      "fold": "source__iowa_state_agdm",
+      "mirrored_negative": 826153,
+      "mirrored_positive": 826153,
+      "original_rows": 1296627,
+      "positive_original": 18001,
+      "selected_rows": 826153,
+      "selection_sha256": "b7376c0303fb9fb3dd1eb4f9dddb55927312963fce3bd7880a163f7d35e4684a",
+      "source_weight_sums": {
+        "18f": 206538.24999999726,
+        "authored_development": 206538.25000032596,
+        "packt": 206538.2500000171,
+        "uk_government": 206538.25000011118
+      }
+    },
+    {
+      "fold": "source__packt",
+      "mirrored_negative": 825801,
+      "mirrored_positive": 825801,
+      "original_rows": 1296275,
+      "positive_original": 17974,
+      "selected_rows": 825801,
+      "selection_sha256": "1116c7aaecd9864a684fbf8173e1c5ccb27f2556bc517ed0b3da4b32f0fa639a",
+      "source_weight_sums": {
+        "18f": 206450.24999999898,
+        "authored_development": 206450.25000095894,
+        "iowa_state_agdm": 206450.24999999793,
+        "uk_government": 206450.2499999724
+      }
+    },
+    {
+      "fold": "source__uk_government",
+      "mirrored_negative": 803910,
+      "mirrored_positive": 803910,
+      "original_rows": 1274384,
+      "positive_original": 17931,
+      "selected_rows": 803910,
+      "selection_sha256": "a74a49341906dde5a71dd4061bb764b43929f317f603a7b3c9d42a3e49df4f28",
+      "source_weight_sums": {
+        "18f": 200977.49999999843,
+        "authored_development": 200977.49999878724,
+        "iowa_state_agdm": 200977.50000001042,
+        "packt": 200977.50000000146
+      }
+    }
+  ]
+}
