@@ -49,7 +49,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 286,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -242,8 +242,8 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev30 actual 251-case hypothesis experiment, 286 tests, 28 real development gains and eight unmarked-exception harms; GitHub verification follows",
-  "latest_verified_experiment_remote_commit": "80407a9",
+  "new_work_pushed_scope": "dev30 experiment commit d38bcdb8bd7be1595422f77c15ae29c1151589b7 verified on GitHub; upload-receipt documentation follows",
+  "latest_verified_experiment_remote_commit": "d38bcdb8bd7be1595422f77c15ae29c1151589b7",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
   "dev10_report": "DEV10_PUBLIC_PIPELINE_REPORT_20261018.md",
@@ -1374,5 +1374,6 @@
     "old_development_gain_established": true,
     "new_origin_generalization_improvement_established": false,
     "final_validation_eligible": false
-  }
+  },
+  "dev30_upload_receipt": "qa/DEV30_UPLOAD_RECEIPT_20261018.json"
 }
