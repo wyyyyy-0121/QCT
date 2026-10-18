@@ -50,7 +50,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 84,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -70,7 +70,7 @@
   "dev5_adversarial_all_peer_wrong_misses": 480,
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
-  "upload_record_note": "4781019 checkpoint independently verified on remote 2026-10-18; dev9 pending at report creation; post-push receipt records remote verification",
+  "upload_record_note": "dev9 experiment commit verified against remote; historical receipt in qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "latest_verified_remote_before_this_checkpoint": "4781019f1ba9d17519e51855b5a96ef10fa8b195",
   "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate",
   "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
@@ -200,5 +200,8 @@
     "utc": "2026-10-18T04:14:43.337345+00:00",
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
-  }
+  },
+  "new_work_pushed_scope": "dev9 experiment checkpoint e88c293; receipt documentation commit follows",
+  "latest_verified_experiment_remote_commit": "e88c2937619dd4ea7a04706c12d618b5a1783119",
+  "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json"
 }
