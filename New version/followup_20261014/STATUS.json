@@ -51,7 +51,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 134,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -202,7 +202,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "static OOXML dev1/dev2 and source metadata v9/v10 checkpoint pending upload",
+  "new_work_pushed_scope": "static OOXML dev1/dev2, v9/v10 source metadata and current reports verified on GitHub; receipt documentation follows",
   "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -381,5 +381,7 @@
     "new_final_template_families": 0
   },
   "latest_natural_error_metadata_report": "source_discovery/NATURAL_ERROR_METADATA_UPDATE_20261018.md",
-  "latest_source_metadata_audit": "qa/SOURCE_METADATA_V9_V10_AUDIT_20261018.json"
+  "latest_source_metadata_audit": "qa/SOURCE_METADATA_V9_V10_AUDIT_20261018.json",
+  "latest_verified_static_view_remote_commit": "a9292671a5a7a2a4a767dd78c904fea529804307",
+  "static_view_upload_receipt": "qa/STATIC_VIEW_UPLOAD_RECEIPT_20261018.json"
 }
