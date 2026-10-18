@@ -1,0 +1,4684 @@
+[
+  {
+    "case": "regression/sparse_seed101",
+    "group": "regression",
+    "id": "sparse_seed101",
+    "input": "baseline/data/sparse_seed101/input.xlsx",
+    "input_sha256": "726d218f6392481df61ad18c9c2cf870d73f9fe97d4a94ddff527d7d4aed7e2f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/sparse_seed101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/sparse_seed101.json.gz",
+      "paper_pack": "baseline/predictions/sparse_seed101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/clean_101",
+    "group": "regression",
+    "id": "clean_101",
+    "input": "baseline/data/clean_101/input.xlsx",
+    "input_sha256": "b84a255ef33eb24de48decfce302532f9ffdb73d80505bc54a8b3a4687d0bcce",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/clean_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/clean_101.json.gz",
+      "paper_pack": "baseline/predictions/clean_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/sparse_seed202",
+    "group": "regression",
+    "id": "sparse_seed202",
+    "input": "baseline/data/sparse_seed202/input.xlsx",
+    "input_sha256": "be11838df275f8009dadabb1677113ba0e8f141d4591892bf3e8ce1673becb33",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/sparse_seed202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/sparse_seed202.json.gz",
+      "paper_pack": "baseline/predictions/sparse_seed202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/clean_202",
+    "group": "regression",
+    "id": "clean_202",
+    "input": "baseline/data/clean_202/input.xlsx",
+    "input_sha256": "d5659a78046b9000f10acba5302cb92dc21ec40146dcfc68270a6477b413ef2a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/clean_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/clean_202.json.gz",
+      "paper_pack": "baseline/predictions/clean_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/sparse_seed303",
+    "group": "regression",
+    "id": "sparse_seed303",
+    "input": "baseline/data/sparse_seed303/input.xlsx",
+    "input_sha256": "c9c1310ccd9a46a83c5dd065c7b2530e127056503bdbefe24d1ec97d1cc39a46",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/sparse_seed303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/sparse_seed303.json.gz",
+      "paper_pack": "baseline/predictions/sparse_seed303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/clean_303",
+    "group": "regression",
+    "id": "clean_303",
+    "input": "baseline/data/clean_303/input.xlsx",
+    "input_sha256": "b5402b2871fb51bd7b710dcb0ca3a009b09b1b9f4e2ed60491537b898adc3003",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/clean_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/clean_303.json.gz",
+      "paper_pack": "baseline/predictions/clean_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/systemic_seed404",
+    "group": "regression",
+    "id": "systemic_seed404",
+    "input": "baseline/data/systemic_seed404/input.xlsx",
+    "input_sha256": "1cce0c499cfa351791620a736c215f6b98d412bae4caefdca30542bb8bced15d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/systemic_seed404.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/systemic_seed404.json.gz",
+      "paper_pack": "baseline/predictions/systemic_seed404/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/clean_404",
+    "group": "regression",
+    "id": "clean_404",
+    "input": "baseline/data/clean_404/input.xlsx",
+    "input_sha256": "806fc214cd2bf6c91f3e6be5eb44614c55198f8f96cfce69619b20790423bc26",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/clean_404.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/clean_404.json.gz",
+      "paper_pack": "baseline/predictions/clean_404/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/systemic_seed505",
+    "group": "regression",
+    "id": "systemic_seed505",
+    "input": "baseline/data/systemic_seed505/input.xlsx",
+    "input_sha256": "19cbe2371b10fba77d473dec2f15b40624d2316fdc9c323b148f95ae5da9b161",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/systemic_seed505.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/systemic_seed505.json.gz",
+      "paper_pack": "baseline/predictions/systemic_seed505/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/clean_505",
+    "group": "regression",
+    "id": "clean_505",
+    "input": "baseline/data/clean_505/input.xlsx",
+    "input_sha256": "744219c5c6a0334f8fb5e3967735876172b202ab4e8ac2a5af8480c0afa2ea05",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/clean_505.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/clean_505.json.gz",
+      "paper_pack": "baseline/predictions/clean_505/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/systemic_seed606",
+    "group": "regression",
+    "id": "systemic_seed606",
+    "input": "baseline/data/systemic_seed606/input.xlsx",
+    "input_sha256": "513866b0bd29acb1a7fc332105d5b28ec91568d0f470e72f101f3b884096b2fd",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/systemic_seed606.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/systemic_seed606.json.gz",
+      "paper_pack": "baseline/predictions/systemic_seed606/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/clean_606",
+    "group": "regression",
+    "id": "clean_606",
+    "input": "baseline/data/clean_606/input.xlsx",
+    "input_sha256": "e9a8ebd6d51c4eba3755773d032917d8dfe393da8ce1ca85a663d03c39758acf",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/clean_606.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/clean_606.json.gz",
+      "paper_pack": "baseline/predictions/clean_606/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_1_101",
+    "group": "regression",
+    "id": "length_1_101",
+    "input": "baseline/data/length_1_101/input.xlsx",
+    "input_sha256": "ccf261f425ae6f9f7413e0608db00274bc370a7862fb01c99982b6a850be3e23",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_1_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_1_101.json.gz",
+      "paper_pack": "baseline/predictions/length_1_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_10_101",
+    "group": "regression",
+    "id": "length_10_101",
+    "input": "baseline/data/length_10_101/input.xlsx",
+    "input_sha256": "936cc7b82ee3a60cc43da74c1bf50f047ba450bea18881661d21e31d69e6bbd4",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_10_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_10_101.json.gz",
+      "paper_pack": "baseline/predictions/length_10_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_100_101",
+    "group": "regression",
+    "id": "length_100_101",
+    "input": "baseline/data/length_100_101/input.xlsx",
+    "input_sha256": "a9b484940470c9ca0089388bdb1511a627f2ff15a3c4a65dc764e8a5271eacb9",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_100_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_100_101.json.gz",
+      "paper_pack": "baseline/predictions/length_100_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_500_101",
+    "group": "regression",
+    "id": "length_500_101",
+    "input": "baseline/data/length_500_101/input.xlsx",
+    "input_sha256": "dd2f51db77af7a4b9e3f7358c73f38430c1cb3d8f7c36d3f6ea8c8c925168fea",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_500_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_500_101.json.gz",
+      "paper_pack": "baseline/predictions/length_500_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_1499_101",
+    "group": "regression",
+    "id": "length_1499_101",
+    "input": "baseline/data/length_1499_101/input.xlsx",
+    "input_sha256": "1e0eac32092e2935a50b4e29ac1f3b29f0cde469e02286544fa3072aacc42c63",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_1499_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_1499_101.json.gz",
+      "paper_pack": "baseline/predictions/length_1499_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/shared_101",
+    "group": "regression",
+    "id": "shared_101",
+    "input": "baseline/data/shared_101/input.xlsx",
+    "input_sha256": "4e0af8d17d3c627dc4706dbb5adc46899000612738717a261f172b8999a410f8",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/shared_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/shared_101.json.gz",
+      "paper_pack": "baseline/predictions/shared_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/single_101",
+    "group": "regression",
+    "id": "single_101",
+    "input": "baseline/data/single_101/input.xlsx",
+    "input_sha256": "578526306aac610c0f36ee794bf31ae0aeb81ddef6b5213f0958b22ac4e8d777",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/single_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/single_101.json.gz",
+      "paper_pack": "baseline/predictions/single_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/heterogeneous_101",
+    "group": "regression",
+    "id": "heterogeneous_101",
+    "input": "baseline/data/heterogeneous_101/input.xlsx",
+    "input_sha256": "20d6cd41ec34f5b3d0f25ef6cbf3d5336aa79bdca5804c799c8ee49cb83dc29f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/heterogeneous_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/heterogeneous_101.json.gz",
+      "paper_pack": "baseline/predictions/heterogeneous_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/exception_101",
+    "group": "regression",
+    "id": "exception_101",
+    "input": "baseline/data/exception_101/input.xlsx",
+    "input_sha256": "b0cdaa3834cd91da288f0027cd194c07f2c80d5b37967c1ef0238df84e398176",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/exception_101.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/exception_101.json.gz",
+      "paper_pack": "baseline/predictions/exception_101/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_1_202",
+    "group": "regression",
+    "id": "length_1_202",
+    "input": "baseline/data/length_1_202/input.xlsx",
+    "input_sha256": "55d267aaae97db9232b49b58ba1e2c8ac0c2617b1fa6200676195d95923e13a5",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_1_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_1_202.json.gz",
+      "paper_pack": "baseline/predictions/length_1_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_10_202",
+    "group": "regression",
+    "id": "length_10_202",
+    "input": "baseline/data/length_10_202/input.xlsx",
+    "input_sha256": "bc8f1900afa3be0e935817d03e259f6d528f56523e9b446c015276320ae14acb",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_10_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_10_202.json.gz",
+      "paper_pack": "baseline/predictions/length_10_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_100_202",
+    "group": "regression",
+    "id": "length_100_202",
+    "input": "baseline/data/length_100_202/input.xlsx",
+    "input_sha256": "ed5af593bd9ede9c5c2e57c5c7338bcae217dce187b8b8c68dc97b64531ecd1b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_100_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_100_202.json.gz",
+      "paper_pack": "baseline/predictions/length_100_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_500_202",
+    "group": "regression",
+    "id": "length_500_202",
+    "input": "baseline/data/length_500_202/input.xlsx",
+    "input_sha256": "be464db0fba6ca3de034d07315977b06be2a287dc2427364a3ea1e6261b2b2f3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_500_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_500_202.json.gz",
+      "paper_pack": "baseline/predictions/length_500_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_1499_202",
+    "group": "regression",
+    "id": "length_1499_202",
+    "input": "baseline/data/length_1499_202/input.xlsx",
+    "input_sha256": "a52556bb35d628211b0e860e4506fa0875be36304af37936adf4b2a84d47e24a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_1499_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_1499_202.json.gz",
+      "paper_pack": "baseline/predictions/length_1499_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/shared_202",
+    "group": "regression",
+    "id": "shared_202",
+    "input": "baseline/data/shared_202/input.xlsx",
+    "input_sha256": "28ff11242a0ac614b88e2fb01485b5d6fe58f77037a0c5bec82f1d3d027d30f5",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/shared_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/shared_202.json.gz",
+      "paper_pack": "baseline/predictions/shared_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/single_202",
+    "group": "regression",
+    "id": "single_202",
+    "input": "baseline/data/single_202/input.xlsx",
+    "input_sha256": "81a71c73c96a7d9604f5681806008f7b8504fbb42c17f6406b02df16b182defb",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/single_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/single_202.json.gz",
+      "paper_pack": "baseline/predictions/single_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/heterogeneous_202",
+    "group": "regression",
+    "id": "heterogeneous_202",
+    "input": "baseline/data/heterogeneous_202/input.xlsx",
+    "input_sha256": "3a931364114d4f2494a43e7ba5bf0992d8226d5a5947a3259b99ffa6abe20dab",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/heterogeneous_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/heterogeneous_202.json.gz",
+      "paper_pack": "baseline/predictions/heterogeneous_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/exception_202",
+    "group": "regression",
+    "id": "exception_202",
+    "input": "baseline/data/exception_202/input.xlsx",
+    "input_sha256": "fb1b9ac1f4e79ef679b2490a3a895ff48358db1cbb42c10a38fa3dd0f46766e6",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/exception_202.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/exception_202.json.gz",
+      "paper_pack": "baseline/predictions/exception_202/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_1_303",
+    "group": "regression",
+    "id": "length_1_303",
+    "input": "baseline/data/length_1_303/input.xlsx",
+    "input_sha256": "e6207366e7ad6ca3c87e2dab205c44a9f1e6a55ccac8763dec41ff8d5de0b35a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_1_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_1_303.json.gz",
+      "paper_pack": "baseline/predictions/length_1_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_10_303",
+    "group": "regression",
+    "id": "length_10_303",
+    "input": "baseline/data/length_10_303/input.xlsx",
+    "input_sha256": "76ba3e3e4bbc006f97e4d92d98a51c657c39455e3a99c7f176e0d2b1b2202481",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_10_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_10_303.json.gz",
+      "paper_pack": "baseline/predictions/length_10_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_100_303",
+    "group": "regression",
+    "id": "length_100_303",
+    "input": "baseline/data/length_100_303/input.xlsx",
+    "input_sha256": "e4d769171211addaa52cc3b93848b13a69d5ae4092f722292107d996a590bffa",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_100_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_100_303.json.gz",
+      "paper_pack": "baseline/predictions/length_100_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_500_303",
+    "group": "regression",
+    "id": "length_500_303",
+    "input": "baseline/data/length_500_303/input.xlsx",
+    "input_sha256": "5e5d514523875fa0eb730db682bf413402e36647b1e71beb9820086d1eef974d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_500_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_500_303.json.gz",
+      "paper_pack": "baseline/predictions/length_500_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/length_1499_303",
+    "group": "regression",
+    "id": "length_1499_303",
+    "input": "baseline/data/length_1499_303/input.xlsx",
+    "input_sha256": "d3f344fb35c747ebf0c781ab87179133038757adad807da04ca87fa75f52551b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/length_1499_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/length_1499_303.json.gz",
+      "paper_pack": "baseline/predictions/length_1499_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/shared_303",
+    "group": "regression",
+    "id": "shared_303",
+    "input": "baseline/data/shared_303/input.xlsx",
+    "input_sha256": "1177ad6aaaa45b0a762461b8ddc931c311bda12f93f071ac96ab8feecdfb500f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/shared_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/shared_303.json.gz",
+      "paper_pack": "baseline/predictions/shared_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/single_303",
+    "group": "regression",
+    "id": "single_303",
+    "input": "baseline/data/single_303/input.xlsx",
+    "input_sha256": "d12e8fc39fedf24f545de174b727a2078635318d203e45a212dddeb42bd688eb",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/single_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/single_303.json.gz",
+      "paper_pack": "baseline/predictions/single_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/heterogeneous_303",
+    "group": "regression",
+    "id": "heterogeneous_303",
+    "input": "baseline/data/heterogeneous_303/input.xlsx",
+    "input_sha256": "c71891076b77150f5867e92601e59cddefa3e4cb4413799f1e7068b93ad2784f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/heterogeneous_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/heterogeneous_303.json.gz",
+      "paper_pack": "baseline/predictions/heterogeneous_303/full.json.gz"
+    }
+  },
+  {
+    "case": "regression/exception_303",
+    "group": "regression",
+    "id": "exception_303",
+    "input": "baseline/data/exception_303/input.xlsx",
+    "input_sha256": "2fd84982147eacb45efac2103d1dacaa2424b5bd14402f377a1466c1dd44ee72",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "North",
+      "Central",
+      "East",
+      "South",
+      "West"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/regression/exception_303.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/regression/exception_303.json.gz",
+      "paper_pack": "baseline/predictions/exception_303/full.json.gz"
+    }
+  },
+  {
+    "case": "stress/c01",
+    "group": "stress",
+    "id": "c01",
+    "input": "development/semantic_stress_dev1/inputs/c01.xlsx",
+    "input_sha256": "41ed485197cb2ca93470cc0fe1cb8d6ef90ca97165af5aecc9d426ab8caca505",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c01.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c01.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c01.json"
+    }
+  },
+  {
+    "case": "stress/c02",
+    "group": "stress",
+    "id": "c02",
+    "input": "development/semantic_stress_dev1/inputs/c02.xlsx",
+    "input_sha256": "70499caf0cbb62759b1e3bf440962c58d5cd73fcab93e4b0a52d5be120cb79b3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c02.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c02.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c02.json"
+    }
+  },
+  {
+    "case": "stress/c03",
+    "group": "stress",
+    "id": "c03",
+    "input": "development/semantic_stress_dev1/inputs/c03.xlsx",
+    "input_sha256": "aa8fa8ac89267774c781fc016eda18d57990c4498d528e005f9848fa9e11c828",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c03.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c03.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c03.json"
+    }
+  },
+  {
+    "case": "stress/c04",
+    "group": "stress",
+    "id": "c04",
+    "input": "development/semantic_stress_dev1/inputs/c04.xlsx",
+    "input_sha256": "3f127e4e37a288ad6e2d5bf9415f6849dee1374324368f796f6822a3f0e03f57",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c04.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c04.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c04.json"
+    }
+  },
+  {
+    "case": "stress/c05",
+    "group": "stress",
+    "id": "c05",
+    "input": "development/semantic_stress_dev1/inputs/c05.xlsx",
+    "input_sha256": "6de26a885d51beb3442e63799487776fc982460015171252f04f7acc113e81a1",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c05.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c05.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c05.json"
+    }
+  },
+  {
+    "case": "stress/c06",
+    "group": "stress",
+    "id": "c06",
+    "input": "development/semantic_stress_dev1/inputs/c06.xlsx",
+    "input_sha256": "6de26a885d51beb3442e63799487776fc982460015171252f04f7acc113e81a1",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c06.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c06.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c06.json"
+    }
+  },
+  {
+    "case": "stress/c07",
+    "group": "stress",
+    "id": "c07",
+    "input": "development/semantic_stress_dev1/inputs/c07.xlsx",
+    "input_sha256": "e815dba962e398d99759527210d293948b3928ab4464bd40a0e60b6fb8542ed6",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c07.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c07.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c07.json"
+    }
+  },
+  {
+    "case": "stress/c08",
+    "group": "stress",
+    "id": "c08",
+    "input": "development/semantic_stress_dev1/inputs/c08.xlsx",
+    "input_sha256": "9549ce779947d39437e860416d95870960003126e8f79d4c588dd31367dc8e92",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/stress/c08.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/stress/c08.json.gz",
+      "paper_pack": "development/semantic_stress_dev1/predictions/c08.json"
+    }
+  },
+  {
+    "case": "tradeoff/p01",
+    "group": "tradeoff",
+    "id": "p01",
+    "input": "development/policy_tradeoff_dev1/inputs/p01.xlsx",
+    "input_sha256": "c9bbb0523fb9c56ad2313ddc55f752a71e54aff9df88e39abd3bb067d98ae7d7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/tradeoff/p01.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/tradeoff/p01.json.gz",
+      "paper_pack": "development/policy_tradeoff_dev1/predictions/p01.json"
+    }
+  },
+  {
+    "case": "tradeoff/p02",
+    "group": "tradeoff",
+    "id": "p02",
+    "input": "development/policy_tradeoff_dev1/inputs/p02.xlsx",
+    "input_sha256": "0db21855b138c253844966b3faed27924a53c53e9e5f15e4c583cf2e1b2be0ec",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/tradeoff/p02.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/tradeoff/p02.json.gz",
+      "paper_pack": "development/policy_tradeoff_dev1/predictions/p02.json"
+    }
+  },
+  {
+    "case": "tradeoff/p03",
+    "group": "tradeoff",
+    "id": "p03",
+    "input": "development/policy_tradeoff_dev1/inputs/p03.xlsx",
+    "input_sha256": "92db8a0bf500d1dd098bb52f19a972eb9fa96dace677e8708571b08aaab52caa",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/tradeoff/p03.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/tradeoff/p03.json.gz",
+      "paper_pack": "development/policy_tradeoff_dev1/predictions/p03.json"
+    }
+  },
+  {
+    "case": "tradeoff/p04",
+    "group": "tradeoff",
+    "id": "p04",
+    "input": "development/policy_tradeoff_dev1/inputs/p04.xlsx",
+    "input_sha256": "a4bc36dfd9ed0ef383addb4dc9f5462fedd28c6c6e920f608bb22bdf6f34535a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/tradeoff/p04.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/tradeoff/p04.json.gz",
+      "paper_pack": "development/policy_tradeoff_dev1/predictions/p04.json"
+    }
+  },
+  {
+    "case": "crossdomain/x11",
+    "group": "crossdomain",
+    "id": "x11",
+    "input": "development/crossdomain_dev1/inputs/x11.xlsx",
+    "input_sha256": "9d07d670e54967bff367ee31ee459516cb4fac949b0ab67ec803d771770d2e54",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x11.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x11.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x11.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x12",
+    "group": "crossdomain",
+    "id": "x12",
+    "input": "development/crossdomain_dev1/inputs/x12.xlsx",
+    "input_sha256": "101398a9e8147d9a9faa2656cbf12f96101083eae8aa70649d549e1a85111fe0",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x12.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x12.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x12.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x13",
+    "group": "crossdomain",
+    "id": "x13",
+    "input": "development/crossdomain_dev1/inputs/x13.xlsx",
+    "input_sha256": "be5eaed8d04a718e2a04942e9a7dae9b558423f38f9c23097f0dcc1d915f6c66",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x13.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x13.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x13.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x14",
+    "group": "crossdomain",
+    "id": "x14",
+    "input": "development/crossdomain_dev1/inputs/x14.xlsx",
+    "input_sha256": "7c5b8b8a461044554713399dc7d50d7cd03acb49024f2ce27c065aca7a97f5f7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x14.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x14.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x14.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x15",
+    "group": "crossdomain",
+    "id": "x15",
+    "input": "development/crossdomain_dev1/inputs/x15.xlsx",
+    "input_sha256": "b55a0dadf8b7628b96ccbd0710b9f2943029af62630c25483286fa702279c3f3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x15.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x15.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x15.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x16",
+    "group": "crossdomain",
+    "id": "x16",
+    "input": "development/crossdomain_dev1/inputs/x16.xlsx",
+    "input_sha256": "bb4ac243a1684c1e613b4efb75d564f9c30c5d044bddafff4d8a942fee658d03",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x16.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x16.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x16.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x17",
+    "group": "crossdomain",
+    "id": "x17",
+    "input": "development/crossdomain_dev1/inputs/x17.xlsx",
+    "input_sha256": "154b1d471a8155b5dc3d21564e976b6d2767d279c084c5858e5d485dbf84f4a9",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x17.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x17.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x17.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x18",
+    "group": "crossdomain",
+    "id": "x18",
+    "input": "development/crossdomain_dev1/inputs/x18.xlsx",
+    "input_sha256": "5307273023ce1475bb6ee3986ff324284f3037d9093a10f959d2dbbec6fe2d66",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x18.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x18.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x18.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x21",
+    "group": "crossdomain",
+    "id": "x21",
+    "input": "development/crossdomain_dev1/inputs/x21.xlsx",
+    "input_sha256": "92d5e15cb024bdb88d181399bd680cd2138931d583f173fe249121e8f9cfa790",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x21.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x21.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x21.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x22",
+    "group": "crossdomain",
+    "id": "x22",
+    "input": "development/crossdomain_dev1/inputs/x22.xlsx",
+    "input_sha256": "ce2a3b38a7d19c9e881e244bf5724a5baedba1d3d8fd356bce4c55686e288cad",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x22.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x22.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x22.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x23",
+    "group": "crossdomain",
+    "id": "x23",
+    "input": "development/crossdomain_dev1/inputs/x23.xlsx",
+    "input_sha256": "a1be9c2151e977f5fd97f1c88e0a672d29ae37d7b27bdfd629df56d4a5a74338",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x23.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x23.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x23.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x24",
+    "group": "crossdomain",
+    "id": "x24",
+    "input": "development/crossdomain_dev1/inputs/x24.xlsx",
+    "input_sha256": "73f9c86df01edac1fc60705de996bcbb5b76e97fba31d00e774042d58341a799",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x24.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x24.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x24.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x25",
+    "group": "crossdomain",
+    "id": "x25",
+    "input": "development/crossdomain_dev1/inputs/x25.xlsx",
+    "input_sha256": "09459f827fe919bc7d007cc40c33dc6f10fd8b7481e58f03ce473157c33af315",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x25.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x25.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x25.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x26",
+    "group": "crossdomain",
+    "id": "x26",
+    "input": "development/crossdomain_dev1/inputs/x26.xlsx",
+    "input_sha256": "3b883d7176715ae5f768f00435393328082e424aa822d018888a7c2f7482c292",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x26.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x26.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x26.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x27",
+    "group": "crossdomain",
+    "id": "x27",
+    "input": "development/crossdomain_dev1/inputs/x27.xlsx",
+    "input_sha256": "45d2974a397c9026c6ecfdf5716ece71a58d321c161cca962bde2a57033a2607",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x27.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x27.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x27.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x28",
+    "group": "crossdomain",
+    "id": "x28",
+    "input": "development/crossdomain_dev1/inputs/x28.xlsx",
+    "input_sha256": "567c5f3217386612dd764b42778e2bafa0e07330e435a757d8ee3a953a5b773d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x28.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x28.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x28.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x31",
+    "group": "crossdomain",
+    "id": "x31",
+    "input": "development/crossdomain_dev1/inputs/x31.xlsx",
+    "input_sha256": "f6ae93ae5071d945f162a429bb317bf6417a96c85bcd2f71325f92a84765c298",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x31.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x31.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x31.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x32",
+    "group": "crossdomain",
+    "id": "x32",
+    "input": "development/crossdomain_dev1/inputs/x32.xlsx",
+    "input_sha256": "31201679718a669afe42c98bdbbdc29d0cf28c20592778cb77f31c983c5eb74f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x32.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x32.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x32.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x33",
+    "group": "crossdomain",
+    "id": "x33",
+    "input": "development/crossdomain_dev1/inputs/x33.xlsx",
+    "input_sha256": "fe3bcb0bbadb327e0f96749213aea0f292829b1ee1d04e30b1f4ca8a952c344b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x33.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x33.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x33.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x34",
+    "group": "crossdomain",
+    "id": "x34",
+    "input": "development/crossdomain_dev1/inputs/x34.xlsx",
+    "input_sha256": "b10c55a6a5711a9cd3fa7f0d517dec49747da96de2b44d982dff475c3db9a44f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x34.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x34.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x34.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x35",
+    "group": "crossdomain",
+    "id": "x35",
+    "input": "development/crossdomain_dev1/inputs/x35.xlsx",
+    "input_sha256": "09e8ad88dddfd8e8020c663220e80fc2da43898d0b0e20a8ce48af57a2eab90b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x35.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x35.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x35.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x36",
+    "group": "crossdomain",
+    "id": "x36",
+    "input": "development/crossdomain_dev1/inputs/x36.xlsx",
+    "input_sha256": "c847d145a412062ab85757b17a50550333fcc1155814812ef4c13ba95b5355b4",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x36.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x36.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x36.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x37",
+    "group": "crossdomain",
+    "id": "x37",
+    "input": "development/crossdomain_dev1/inputs/x37.xlsx",
+    "input_sha256": "8d3408176500decffd79feabc4fc33966db1f32cb53d5f7935fa30b6b20faab2",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x37.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x37.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x37.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x38",
+    "group": "crossdomain",
+    "id": "x38",
+    "input": "development/crossdomain_dev1/inputs/x38.xlsx",
+    "input_sha256": "eadc4ce883a2ec7187babbf41b28720473b3eb1478110ce564101b04cfc97e51",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x38.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x38.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x38.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x41",
+    "group": "crossdomain",
+    "id": "x41",
+    "input": "development/crossdomain_dev1/inputs/x41.xlsx",
+    "input_sha256": "7fdbabc4127defcf63a05058f7c0f24e7e139d41c4eb55ddda6d90baa5ac1620",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x41.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x41.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x41.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x42",
+    "group": "crossdomain",
+    "id": "x42",
+    "input": "development/crossdomain_dev1/inputs/x42.xlsx",
+    "input_sha256": "6342ceb738c3befdd60108c0e1353c74488811edb97a56cbde517bb81afda2f8",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x42.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x42.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x42.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x43",
+    "group": "crossdomain",
+    "id": "x43",
+    "input": "development/crossdomain_dev1/inputs/x43.xlsx",
+    "input_sha256": "f2cf3e1b3045cc5e33d8c4ae10909e3149eeff5f3951a94c2d4d2316b9f10296",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x43.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x43.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x43.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x44",
+    "group": "crossdomain",
+    "id": "x44",
+    "input": "development/crossdomain_dev1/inputs/x44.xlsx",
+    "input_sha256": "8badcb7bf46a276e8404a110f67baae145508b158f0be7d6bf39649609f7e7c7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x44.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x44.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x44.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x45",
+    "group": "crossdomain",
+    "id": "x45",
+    "input": "development/crossdomain_dev1/inputs/x45.xlsx",
+    "input_sha256": "b82374bc02dc4ce4ca66eb53b3e89ef7e68a790136ddac56fe7358dbc64ac1b0",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x45.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x45.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x45.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x46",
+    "group": "crossdomain",
+    "id": "x46",
+    "input": "development/crossdomain_dev1/inputs/x46.xlsx",
+    "input_sha256": "6c9026535d17a53cfd3e7e40c829ae189dcc47a701dc5e5820ff8d179e9b4c1e",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x46.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x46.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x46.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x47",
+    "group": "crossdomain",
+    "id": "x47",
+    "input": "development/crossdomain_dev1/inputs/x47.xlsx",
+    "input_sha256": "7112742ad8a050fa88c4f2e6fa426c4a58f70a200b7558592afcdbbf66a58658",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x47.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x47.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x47.json.gz"
+    }
+  },
+  {
+    "case": "crossdomain/x48",
+    "group": "crossdomain",
+    "id": "x48",
+    "input": "development/crossdomain_dev1/inputs/x48.xlsx",
+    "input_sha256": "61bed0869c91806c60c0536de79b0ddd55a609f4d47ac3afe25925994f0cca6c",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/crossdomain/x48.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/crossdomain/x48.json.gz",
+      "paper_pack": "development/crossdomain_dev1/predictions/x48.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a11",
+    "group": "adversarial",
+    "id": "a11",
+    "input": "development/dev5_adversarial1/inputs/a11.xlsx",
+    "input_sha256": "0c384e0756a54efa67418bb77e950bade27721cc66350486e22791c3e60961f1",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a11.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a11.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a11.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a12",
+    "group": "adversarial",
+    "id": "a12",
+    "input": "development/dev5_adversarial1/inputs/a12.xlsx",
+    "input_sha256": "fbd3de9863cf560d67cb9046c31a7043cbb12e79d39d011c6d9e09af58170f8c",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a12.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a12.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a12.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a13",
+    "group": "adversarial",
+    "id": "a13",
+    "input": "development/dev5_adversarial1/inputs/a13.xlsx",
+    "input_sha256": "11eb47109fce0df6df6984e358c0c0cb34abf60188b4c33fb71e1f5eeb31c870",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a13.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a13.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a13.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a14",
+    "group": "adversarial",
+    "id": "a14",
+    "input": "development/dev5_adversarial1/inputs/a14.xlsx",
+    "input_sha256": "2b7cd3cef1bc5eef58d81d66fbe00a02b2ad254cd27b8aae7435c07297f2e42b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a14.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a14.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a14.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a15",
+    "group": "adversarial",
+    "id": "a15",
+    "input": "development/dev5_adversarial1/inputs/a15.xlsx",
+    "input_sha256": "d215a16dce805d0f61035f9fd529f60446e656d3a8167baf996ce695f21801d3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a15.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a15.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a15.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a16",
+    "group": "adversarial",
+    "id": "a16",
+    "input": "development/dev5_adversarial1/inputs/a16.xlsx",
+    "input_sha256": "521e46cde16f442a0939c744245e53987a5ae9f10a6dc28b28d1bc60d765d84e",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a16.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a16.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a16.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a21",
+    "group": "adversarial",
+    "id": "a21",
+    "input": "development/dev5_adversarial1/inputs/a21.xlsx",
+    "input_sha256": "202a80f0985cc67ee7ab0cf8095c0fd80680ce1f9f64d3dc8720f9804f837b14",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a21.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a21.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a21.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a22",
+    "group": "adversarial",
+    "id": "a22",
+    "input": "development/dev5_adversarial1/inputs/a22.xlsx",
+    "input_sha256": "ff6232b2d7e25f7d8efac65c3d32e4500e9beef1797d0d22a70f81492e28dde7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a22.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a22.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a22.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a23",
+    "group": "adversarial",
+    "id": "a23",
+    "input": "development/dev5_adversarial1/inputs/a23.xlsx",
+    "input_sha256": "45f6004745edd6c88db5bc9e8096fd6ba8c8bb390166a49220f5901b061ffdc2",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a23.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a23.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a23.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a24",
+    "group": "adversarial",
+    "id": "a24",
+    "input": "development/dev5_adversarial1/inputs/a24.xlsx",
+    "input_sha256": "0f1ac59266946efb417497639d51ad2959a2c94625655061b1bf9b0e1288b1c6",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a24.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a24.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a24.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a25",
+    "group": "adversarial",
+    "id": "a25",
+    "input": "development/dev5_adversarial1/inputs/a25.xlsx",
+    "input_sha256": "6ba269d6bd92824f39542e231224e7a6001d7034dea857d985beeb666a19c5ae",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a25.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a25.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a25.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a26",
+    "group": "adversarial",
+    "id": "a26",
+    "input": "development/dev5_adversarial1/inputs/a26.xlsx",
+    "input_sha256": "9f4bcaa2148f072c96f671fa3d127c86285a72637a2a8fc928d769f9180bf1e7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a26.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a26.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a26.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a31",
+    "group": "adversarial",
+    "id": "a31",
+    "input": "development/dev5_adversarial1/inputs/a31.xlsx",
+    "input_sha256": "333054bd4667d30267362370ebddda4fb81f08d0da17844a54b58d5f29ce20ce",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a31.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a31.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a31.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a32",
+    "group": "adversarial",
+    "id": "a32",
+    "input": "development/dev5_adversarial1/inputs/a32.xlsx",
+    "input_sha256": "5730f7585b24b66a258126e0990ff10bb763dd46555edc3ac06e42ac5358a77e",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a32.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a32.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a32.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a33",
+    "group": "adversarial",
+    "id": "a33",
+    "input": "development/dev5_adversarial1/inputs/a33.xlsx",
+    "input_sha256": "90910e109e427b94544cf043549fffa6f182aad73acb9a8a6148c2cf7a159407",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a33.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a33.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a33.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a34",
+    "group": "adversarial",
+    "id": "a34",
+    "input": "development/dev5_adversarial1/inputs/a34.xlsx",
+    "input_sha256": "752f300d61faed283974bc18cd46d8d890d33a52e27f37957a4b7c727fa4f1b7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a34.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a34.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a34.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a35",
+    "group": "adversarial",
+    "id": "a35",
+    "input": "development/dev5_adversarial1/inputs/a35.xlsx",
+    "input_sha256": "0f28fc89a69e47cc8d53d2d2731ad98f29b6a9f2631c38e1b41a44f278d9b0b0",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a35.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a35.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a35.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a36",
+    "group": "adversarial",
+    "id": "a36",
+    "input": "development/dev5_adversarial1/inputs/a36.xlsx",
+    "input_sha256": "1f938346f0b086c9fed23394e1520dec781749ee46a0f0d720fb386c0be8d1b1",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a36.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a36.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a36.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a41",
+    "group": "adversarial",
+    "id": "a41",
+    "input": "development/dev5_adversarial1/inputs/a41.xlsx",
+    "input_sha256": "42e5fe7f42c9290446872c60a075621fdb69b04f69d1fc62880488cecdde071c",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a41.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a41.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a41.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a42",
+    "group": "adversarial",
+    "id": "a42",
+    "input": "development/dev5_adversarial1/inputs/a42.xlsx",
+    "input_sha256": "21a96aa99a281d1cad19819de24fdee3ac263188e475906434dfb6d6b75da18a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a42.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a42.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a42.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a43",
+    "group": "adversarial",
+    "id": "a43",
+    "input": "development/dev5_adversarial1/inputs/a43.xlsx",
+    "input_sha256": "98820b601f0555335c1666f3e884f78effab699120b9321bf9402722d2424b25",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a43.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a43.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a43.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a44",
+    "group": "adversarial",
+    "id": "a44",
+    "input": "development/dev5_adversarial1/inputs/a44.xlsx",
+    "input_sha256": "0a3c6fc1332db8acce2492af6e91d7173fb6110ce14cf23bd2c93adc31c98d64",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a44.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a44.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a44.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a45",
+    "group": "adversarial",
+    "id": "a45",
+    "input": "development/dev5_adversarial1/inputs/a45.xlsx",
+    "input_sha256": "7d5dcc96a413da3f6fea03f44b83a3ceb0e8b67620d0082d5d2b8c432b6eb906",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a45.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a45.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a45.json.gz"
+    }
+  },
+  {
+    "case": "adversarial/a46",
+    "group": "adversarial",
+    "id": "a46",
+    "input": "development/dev5_adversarial1/inputs/a46.xlsx",
+    "input_sha256": "d7906f84e899941107ef171c140a8e236c58392dacafac90c35bfc383603d257",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/adversarial/a46.json.gz",
+      "dev9": "development/selector_dev9_peer_scalar_v1/predictions/adversarial/a46.json.gz",
+      "paper_pack": "development/dev5_adversarial1/predictions/a46.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_01",
+    "group": "controlled_reconciliation",
+    "id": "rc01_01",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_01.xlsx",
+    "input_sha256": "81f49955a78bb6398a718115eec77325ed663027080a157945c17031af16ee76",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_01.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_02",
+    "group": "controlled_reconciliation",
+    "id": "rc01_02",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_02.xlsx",
+    "input_sha256": "c3a619d94183c4adbed5c199896dd6359999f5d8e64a36a20f908316a31ca21d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_02.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_03",
+    "group": "controlled_reconciliation",
+    "id": "rc01_03",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_03.xlsx",
+    "input_sha256": "538fb0a62a280445e343cc45f4a039ca52a11bd2c3a5ac442dd27a00b95e3618",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_03.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_04",
+    "group": "controlled_reconciliation",
+    "id": "rc01_04",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_04.xlsx",
+    "input_sha256": "4f0a81eae274ecceaa74ce8fdd8563184deb582e05dd4020df12ed82a32ce5bf",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_04.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_05",
+    "group": "controlled_reconciliation",
+    "id": "rc01_05",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_05.xlsx",
+    "input_sha256": "33cacf5937633d12c697e2cac18d0f0eecf5911dd099a8bf19d069baafe4eac2",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_05.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_06",
+    "group": "controlled_reconciliation",
+    "id": "rc01_06",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_06.xlsx",
+    "input_sha256": "436cfa30a38ed7c03e929d1483166baf002ccb93bd123e33c4398698ce6259a9",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_06.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_07",
+    "group": "controlled_reconciliation",
+    "id": "rc01_07",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_07.xlsx",
+    "input_sha256": "ed72aac7228bb40a7b02deed60a9dce4c0a108f16b18ebd8fd11bd46ac78b498",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_07.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_08",
+    "group": "controlled_reconciliation",
+    "id": "rc01_08",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_08.xlsx",
+    "input_sha256": "0bcc09d8866493c0ae5741b9dc07f9e0a33adb2064d80e819b31d84f0332dc2c",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_08.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_09",
+    "group": "controlled_reconciliation",
+    "id": "rc01_09",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_09.xlsx",
+    "input_sha256": "6de506271a4f4206f0461edb7d3012c44fb12fa015fab249a6b97a123c9c9979",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_09.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc01_10",
+    "group": "controlled_reconciliation",
+    "id": "rc01_10",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc01_10.xlsx",
+    "input_sha256": "b2d01cc90f920fb2c64234db0fa2e30be0013e2a9692ebfecb48fbef7bc8bd2d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_10.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_01",
+    "group": "controlled_reconciliation",
+    "id": "rc02_01",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_01.xlsx",
+    "input_sha256": "377af6f829fb7e2d142ad94d130d4578117ac3e96d55eedfab7778856e93cdf3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_01.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_02",
+    "group": "controlled_reconciliation",
+    "id": "rc02_02",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_02.xlsx",
+    "input_sha256": "b48fce69e24b8a89ae2c2fba91f7258d75ce3de4c4b944a13bab99083c676b78",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_02.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_03",
+    "group": "controlled_reconciliation",
+    "id": "rc02_03",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_03.xlsx",
+    "input_sha256": "002c51e18a8eb256a64c088edc647f42eae30f1056d12ba98f314d9de7cb47a0",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_03.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_04",
+    "group": "controlled_reconciliation",
+    "id": "rc02_04",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_04.xlsx",
+    "input_sha256": "90367d63fdc980e3733e7c9660df0fc235b75b552581b91eb662b5b427436ae2",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_04.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_05",
+    "group": "controlled_reconciliation",
+    "id": "rc02_05",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_05.xlsx",
+    "input_sha256": "adc40f9ef4b716eb418dd4056969a21cfbb7f4dd33fba78661d69c06368a0a7f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_05.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_06",
+    "group": "controlled_reconciliation",
+    "id": "rc02_06",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_06.xlsx",
+    "input_sha256": "f8629787677e94640223662798de4aecab64f2c397e46a19ef7d1e15c26d148c",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_06.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_07",
+    "group": "controlled_reconciliation",
+    "id": "rc02_07",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_07.xlsx",
+    "input_sha256": "f9d15a85c28b1385bc27e748c36f1c4754e1ec3b7fd8a695d91335ebe2cbbdbd",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_07.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_08",
+    "group": "controlled_reconciliation",
+    "id": "rc02_08",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_08.xlsx",
+    "input_sha256": "646c7a186537d0dcad71bb1600598692288fb383aeb45327180f39ebe149d6e3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_08.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_09",
+    "group": "controlled_reconciliation",
+    "id": "rc02_09",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_09.xlsx",
+    "input_sha256": "1d1f6f4709d3471b3687960d22ab105f9f745ac60843cff17c8334250f4b52c1",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_09.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc02_10",
+    "group": "controlled_reconciliation",
+    "id": "rc02_10",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc02_10.xlsx",
+    "input_sha256": "a731dbf0d797c2f853e5a42e501baddb56e380d25bbbf73b01621e3eddfd9c55",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_10.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_01",
+    "group": "controlled_reconciliation",
+    "id": "rc03_01",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_01.xlsx",
+    "input_sha256": "cb0307ec5ac55fddf5e32d1769660f15f302920eb37425ec8ba073579849e4c2",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_01.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_02",
+    "group": "controlled_reconciliation",
+    "id": "rc03_02",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_02.xlsx",
+    "input_sha256": "958270610b85c92e81dd9140e3f89698aa7e63d6df48bad90f40da6ff829634f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_02.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_03",
+    "group": "controlled_reconciliation",
+    "id": "rc03_03",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_03.xlsx",
+    "input_sha256": "2d1ee8821fb380082688e41478e5c58ecd031f2ea86f9c69d32ba1bf3360a0c0",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_03.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_04",
+    "group": "controlled_reconciliation",
+    "id": "rc03_04",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_04.xlsx",
+    "input_sha256": "62c2b6aa51d0872fd56a0dc9adb373ecbbc5415f78d0bcab4a470fefb765190e",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_04.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_05",
+    "group": "controlled_reconciliation",
+    "id": "rc03_05",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_05.xlsx",
+    "input_sha256": "218b7cc71f81da5609695672d68b3d13372230762a43d25500c8147ab869a857",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_05.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_06",
+    "group": "controlled_reconciliation",
+    "id": "rc03_06",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_06.xlsx",
+    "input_sha256": "c398f2a3371200135913638f59d2e48007e60922ce7c1abebde6f089aa4c0ad6",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_06.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_07",
+    "group": "controlled_reconciliation",
+    "id": "rc03_07",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_07.xlsx",
+    "input_sha256": "093853169c8caaac5ed87ed1ebda830a1f145e22835935d5799f1c0d7c3f688a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_07.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_08",
+    "group": "controlled_reconciliation",
+    "id": "rc03_08",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_08.xlsx",
+    "input_sha256": "9a2bea0696e98189930dff63d76b0fc3b4c73bd6c332e42a67ee88a5b13f8d78",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_08.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_09",
+    "group": "controlled_reconciliation",
+    "id": "rc03_09",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_09.xlsx",
+    "input_sha256": "10204e8d664647b3bcf61d312e2650143d18fba449e19851d8b15282c8b08908",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_09.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc03_10",
+    "group": "controlled_reconciliation",
+    "id": "rc03_10",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc03_10.xlsx",
+    "input_sha256": "c0be4daec689fc1b5b2bb891daf77ab6de36aebfed7c662ed6273d08db70f2c9",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_10.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_01",
+    "group": "controlled_reconciliation",
+    "id": "rc04_01",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_01.xlsx",
+    "input_sha256": "385c7c0ba266ba151bd8c0c0c27df621dbc3051cc5d650ed56e295e093bfd17b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_01.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_02",
+    "group": "controlled_reconciliation",
+    "id": "rc04_02",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_02.xlsx",
+    "input_sha256": "f57270dfdd4e22cf3a472179c5fffbaeb785d0c464fba4a5958226ca02370371",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_02.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_03",
+    "group": "controlled_reconciliation",
+    "id": "rc04_03",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_03.xlsx",
+    "input_sha256": "2c18425efb8eb7f0077b63db5d587ed2fc78e36e465283f29e953b916f22cbfb",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_03.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_04",
+    "group": "controlled_reconciliation",
+    "id": "rc04_04",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_04.xlsx",
+    "input_sha256": "28e6491ee0643add183a536e0d76497ca7744d1e1de76f0dec94f2b73a7f4e29",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_04.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_05",
+    "group": "controlled_reconciliation",
+    "id": "rc04_05",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_05.xlsx",
+    "input_sha256": "aabfb1912f3789ce3e46f4ab97fd72c1e4c204347c482c61a989008336473bab",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_05.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_06",
+    "group": "controlled_reconciliation",
+    "id": "rc04_06",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_06.xlsx",
+    "input_sha256": "80c6ec44c43f62ac34fcfe599d42c6113143580ebce1c3bf5b41d402603ca9c3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_06.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_07",
+    "group": "controlled_reconciliation",
+    "id": "rc04_07",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_07.xlsx",
+    "input_sha256": "8856e834e75fabf3a412b0b1c056810773ac005a958b193978a346da8be4cba6",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_07.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_08",
+    "group": "controlled_reconciliation",
+    "id": "rc04_08",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_08.xlsx",
+    "input_sha256": "0881880320ae1b8f396205dc13ba8d03ee618201d279617e6a2e5dfc0fc694bc",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_08.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_09",
+    "group": "controlled_reconciliation",
+    "id": "rc04_09",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_09.xlsx",
+    "input_sha256": "cfd53c68883bd8730f685b49f41f400d09dc07a65273772ddc3624741bab01d1",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_09.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc04_10",
+    "group": "controlled_reconciliation",
+    "id": "rc04_10",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc04_10.xlsx",
+    "input_sha256": "e1918664c3718a91992e1f7b60ecdb7f59e73b1c66dcda3227624e40805ab34c",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_10.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_01",
+    "group": "controlled_reconciliation",
+    "id": "rc05_01",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_01.xlsx",
+    "input_sha256": "2137f35ddceab2e8b85eafd5755f6b2e1621661ffe6194d18bdf0e544752906d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_01.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_02",
+    "group": "controlled_reconciliation",
+    "id": "rc05_02",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_02.xlsx",
+    "input_sha256": "6c8bf371fcc7bb538711bdc18d12c4b881184b0d8f0df1c20c75f201dd3ab65e",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_02.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_03",
+    "group": "controlled_reconciliation",
+    "id": "rc05_03",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_03.xlsx",
+    "input_sha256": "7a608128e23eae89f0777c976cce0be6a68fa0952e9ac40944e252df0622190d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_03.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_04",
+    "group": "controlled_reconciliation",
+    "id": "rc05_04",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_04.xlsx",
+    "input_sha256": "b17cc4b5d17a2923717a1274aa16e5ebccfa438f904c9cb7668a49ff8da1e081",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_04.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_05",
+    "group": "controlled_reconciliation",
+    "id": "rc05_05",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_05.xlsx",
+    "input_sha256": "8f0d90da44029d9cc1da658d4e4c0f9fb227bfb761bb75332223f959b349263f",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_05.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_06",
+    "group": "controlled_reconciliation",
+    "id": "rc05_06",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_06.xlsx",
+    "input_sha256": "3bd195296dadd878af46e175af0a41b01820f89c7e4700369d90f27735c4e415",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_06.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_07",
+    "group": "controlled_reconciliation",
+    "id": "rc05_07",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_07.xlsx",
+    "input_sha256": "820e30b07d735c61c7fd15639a0969f371400e87916c86dfd13ab5be6cea4d4a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_07.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_08",
+    "group": "controlled_reconciliation",
+    "id": "rc05_08",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_08.xlsx",
+    "input_sha256": "d459bfc812616b8a4cf2f7c1b06af7111047c03971f6d23ada8e1e615ac08e10",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_08.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_09",
+    "group": "controlled_reconciliation",
+    "id": "rc05_09",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_09.xlsx",
+    "input_sha256": "dd9d1167a26a2a461b0bc44cedbc95a53416178843daca5aa866e38209add7b3",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_09.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc05_10",
+    "group": "controlled_reconciliation",
+    "id": "rc05_10",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc05_10.xlsx",
+    "input_sha256": "c70498956e80d0c9d0374139a9321872e7a697fce33893b955088d1c6a25953b",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_10.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_01",
+    "group": "controlled_reconciliation",
+    "id": "rc06_01",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_01.xlsx",
+    "input_sha256": "0c8b2e29c51878c2ddc8f63f48eccee96433f7d4a346a52d0d742a08c89c9202",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_01.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_02",
+    "group": "controlled_reconciliation",
+    "id": "rc06_02",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_02.xlsx",
+    "input_sha256": "a7e68b5584146496cddffc7cdea5e81833a02ddfa05bc13b80e9080d264c123d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_02.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_03",
+    "group": "controlled_reconciliation",
+    "id": "rc06_03",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_03.xlsx",
+    "input_sha256": "0f5789d0ad8023afa306ac868d7dbd76917f52a6c24adaf469fc44054f0e94c7",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_03.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_04",
+    "group": "controlled_reconciliation",
+    "id": "rc06_04",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_04.xlsx",
+    "input_sha256": "746c0ebf525e165bfaa72634ff5694d36dd7534ff122daadca17a694f5f322a4",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_04.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_05",
+    "group": "controlled_reconciliation",
+    "id": "rc06_05",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_05.xlsx",
+    "input_sha256": "90f215422ee935971972732800085efd2711e6de7a5b90fbcd0abd5582758ee6",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_05.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_06",
+    "group": "controlled_reconciliation",
+    "id": "rc06_06",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_06.xlsx",
+    "input_sha256": "9ef3857ad5f9dd20a03eacfd36b3a238a9638bbae8213cba52bad7946a6ccfea",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_06.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_07",
+    "group": "controlled_reconciliation",
+    "id": "rc06_07",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_07.xlsx",
+    "input_sha256": "dd3f490728da4c99ebf59310be25c1a6ae860206006058e6c7b35031c4693e2a",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_07.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_08",
+    "group": "controlled_reconciliation",
+    "id": "rc06_08",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_08.xlsx",
+    "input_sha256": "2ebcb3146787c691d57beef8ed3b02c58fc58ee3f0b2e1dbb88ee7a85fee10cd",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_08.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_09",
+    "group": "controlled_reconciliation",
+    "id": "rc06_09",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_09.xlsx",
+    "input_sha256": "bb4a9448340ff498fcef7017755a92a15f6cb6dddcb8937750ddc131059760d2",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_09.json.gz"
+    }
+  },
+  {
+    "case": "controlled_reconciliation/rc06_10",
+    "group": "controlled_reconciliation",
+    "id": "rc06_10",
+    "input": "development/reconciliation_dev12_inputs_v1/inputs/rc06_10.xlsx",
+    "input_sha256": "d2f9f180193fbdfa63c4cae6ad0cc0ea63ddda0f4402b8455ca37d64a2bf210d",
+    "origin_group": "authored_development",
+    "parallel_sheets": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "stratum": "old213",
+    "upstream": {
+      "dev12_pack": "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_10.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation01",
+    "group": "lcoe",
+    "id": "annotation01",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation01.xlsx",
+    "input_sha256": "b0f15382e8c9c9b74d944a0ab8301a3326fb3bfbf4a950896a66f29c52000357",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation01.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation02",
+    "group": "lcoe",
+    "id": "annotation02",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation02.xlsx",
+    "input_sha256": "1c92d082a27fdeb31df33641e5a514680ce3d98b59aa88a1d9147a7783281deb",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation02.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation03",
+    "group": "lcoe",
+    "id": "annotation03",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation03.xlsx",
+    "input_sha256": "5fae800052032d6bc4f751c7ade781b2ebd54522522fb2c468c53c38a5cdd2c6",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation03.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation04",
+    "group": "lcoe",
+    "id": "annotation04",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation04.xlsx",
+    "input_sha256": "be04813f49e5a954e32f4bb6e715917ff6bdfdb6cfba5e8d3dbf05d644bb3fe3",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation04.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation05",
+    "group": "lcoe",
+    "id": "annotation05",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation05.xlsx",
+    "input_sha256": "5efc2688171658f7df079f7c2e806fdb12efa203255237279494bfe3c2add594",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation05.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation06",
+    "group": "lcoe",
+    "id": "annotation06",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation06.xlsx",
+    "input_sha256": "b5535b6f53ae50d8aa308727282c76689f9d47e81d6c24c7feda91b3e674edea",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation06.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation07",
+    "group": "lcoe",
+    "id": "annotation07",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation07.xlsx",
+    "input_sha256": "257df043f6458e2e4a8d8805f2c80899feccce5ea5ce8e9b4363c67623786cd6",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation07.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation08",
+    "group": "lcoe",
+    "id": "annotation08",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation08.xlsx",
+    "input_sha256": "974981730896ff33e9a496ce54b0b4381d722d99ad5d46081871195435a7e656",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation08.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation09",
+    "group": "lcoe",
+    "id": "annotation09",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation09.xlsx",
+    "input_sha256": "6c1324f5673c8180bc7cc9c3af61e621b0d8c363d76fc4589e267f57a4c2ae88",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation09.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation10",
+    "group": "lcoe",
+    "id": "annotation10",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation10.xlsx",
+    "input_sha256": "85da45e290348719b9593cc8ab3b26d474e211686dc97483cc05c576dff6ada7",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation10.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation11",
+    "group": "lcoe",
+    "id": "annotation11",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation11.xlsx",
+    "input_sha256": "6c7bf2f2d8fa90b7be053e0dc065fb70750d75cc34ba6434fea18e8817eafd28",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation11.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation12",
+    "group": "lcoe",
+    "id": "annotation12",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation12.xlsx",
+    "input_sha256": "6e431ae254a802e6165c258c624c2cc6b6c214cf43b46e855467116133882dcc",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation12.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation13",
+    "group": "lcoe",
+    "id": "annotation13",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation13.xlsx",
+    "input_sha256": "ecef73b611575806f9e566b034c46b9923d768ecaa1576d04e49b713af97e04a",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation13.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation14",
+    "group": "lcoe",
+    "id": "annotation14",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation14.xlsx",
+    "input_sha256": "20a29fe9419b65feb14965885c504098b0e123b0126d9adbba3c8d60cb4b14ed",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation14.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation15",
+    "group": "lcoe",
+    "id": "annotation15",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation15.xlsx",
+    "input_sha256": "cd7a64054154aa5c4776da014d79c7483cb7543e103a7ebdc687d088ad50c92b",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation15.json.gz"
+    }
+  },
+  {
+    "case": "lcoe/annotation16",
+    "group": "lcoe",
+    "id": "annotation16",
+    "input": "development/annotation_dev14_inputs_v1/workbooks/annotation16.xlsx",
+    "input_sha256": "60c114638f856924c2fc9c53707e5ce5b237701f4f1d35cf8dfc04acd9a87fdc",
+    "origin_group": "uk_government",
+    "parallel_sheets": [],
+    "stratum": "old213",
+    "upstream": {
+      "note_pack": "development/annotation_dev15_v1/predictions/annotation16.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_01",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_01",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_01.xlsx",
+    "input_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_01.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_02",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_02",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_02.xlsx",
+    "input_sha256": "27f9f0ede41f0e8d09ef56ba28d5deaaedaa466160af5e4290f2c6e98b1d3a4e",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_02.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_03",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_03",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_03.xlsx",
+    "input_sha256": "de929629e682161f5b6dd8a8bf3089ff2d822e12d05acb7bcbc65dfec2b94f7a",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_03.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_04",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_04",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_04.xlsx",
+    "input_sha256": "d497bfa6cda2deabdc7eccc1773b4cc32ee07321c347aad87f23d321372e4318",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_04.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_05",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_05",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_05.xlsx",
+    "input_sha256": "919ab42d89779fe5e4768316091c43c3af8eeac89467e3179eddefdc7b9af50a",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_05.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_06",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_06",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_06.xlsx",
+    "input_sha256": "6d2fc8345fcb21c01d7fbc68344c5469f2e12ef4036a9d2647f8193d75087fbe",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_06.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_07",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_07",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_07.xlsx",
+    "input_sha256": "bb2d6117c3a4089761f4fa2a73dee3e5f07134a0998222d897a643113634cdc5",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_07.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_08",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_08",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_08.xlsx",
+    "input_sha256": "4cc733a738ef1af049b05ee6d050eaa8941400fe3335471e222554dcd4eab960",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_08.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_09",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_09",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_09.xlsx",
+    "input_sha256": "7c5c1ed3c449796717cc288d0c8a90c6443c97b52253ad1c0e13e2cd7a0f8b36",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_09.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms01_10",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms01_10",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms01_10.xlsx",
+    "input_sha256": "dd96648685f6153071ed7b2d3df03a613b92ad1cd04f6f74f40c3fde101031ee",
+    "origin": "iowa_state_agdm",
+    "origin_group": "iowa_state_agdm",
+    "parallel_sheets": [],
+    "source_id": "public03",
+    "source_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms01_10.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_01",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_01",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_01.xlsx",
+    "input_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_01.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_02",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_02",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_02.xlsx",
+    "input_sha256": "cdce5dd8940c8df63f356c74fed5af027671ddd1db3c745a7b1847b55d8c01cf",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_02.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_03",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_03",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_03.xlsx",
+    "input_sha256": "a96bb36469f919799d434dfa4772554292d101ebe6827da8a043e3c22b540471",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_03.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_04",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_04",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_04.xlsx",
+    "input_sha256": "cceb5ae2918edf00e73c0c365425c72caf6f2a78cdf4b4a4b3c72cfb7cfb6d59",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_04.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_05",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_05",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_05.xlsx",
+    "input_sha256": "fd491cac7606caa26f8b0944ff2c79f10c284659360eb07ecc8cb4cebee5e451",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_05.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_06",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_06",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_06.xlsx",
+    "input_sha256": "6efe29f6751e3fff97e88412cfa95e3073eef016c20b73518060272f89ff719e",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_06.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_07",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_07",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_07.xlsx",
+    "input_sha256": "fe9445c0003db11ef7aed533d429f6cf8299c7259fcddd24962608701173173e",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_07.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_08",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_08",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_08.xlsx",
+    "input_sha256": "fcc0831942786013799661ec68bf62c175c7877cd949833e14029dd61126cd93",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_08.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_09",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_09",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_09.xlsx",
+    "input_sha256": "d0dfcdb3fdaf64148d220afc8c1563cd30f59927f5d677bcc384d4f6e812633f",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_09.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms02_10",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms02_10",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms02_10.xlsx",
+    "input_sha256": "d0bbfe66602f7fe79b7116aff9985447d05ddf32ea7bbce5a4d956fdfc2b727b",
+    "origin": "18f",
+    "origin_group": "18f",
+    "parallel_sheets": [],
+    "source_id": "public09",
+    "source_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms02_10.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_01",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_01",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_01.xlsx",
+    "input_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_01.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_02",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_02",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_02.xlsx",
+    "input_sha256": "12dfa083daa1b3c8b90f3d4d31141e2d97a2d788a61a5f33ebe3947b9b672f9a",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_02.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_03",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_03",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_03.xlsx",
+    "input_sha256": "a74be2ee895db4ef325fc7c84d36c7da3e71e3eae711739d50dd83f7f73e4f72",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_03.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_04",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_04",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_04.xlsx",
+    "input_sha256": "cf79ae99d84cc79c8835d87eecddfa245f05696d7f3c9ed0db9081c54bd21b14",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_04.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_05",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_05",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_05.xlsx",
+    "input_sha256": "18c2263b3b04a8ad338beec5fdb73e4619fd9f23f6641ef8821b7eb9678b1a2f",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_05.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_06",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_06",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_06.xlsx",
+    "input_sha256": "e9d02130b309ffb8a739721bd21e00261ef70ebd5b2c76600817cba72ff09e28",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_06.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_07",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_07",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_07.xlsx",
+    "input_sha256": "f77a483d4f7063110855c69cafb74286d5fbfe5d40a9046f147a7fad8eedbe05",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_07.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_08",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_08",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_08.xlsx",
+    "input_sha256": "34cfcd062e51ae443fcaeeb1783697462f76bbea5a29a4e2b5ec69b4492a7368",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_08.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_09",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_09",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_09.xlsx",
+    "input_sha256": "14539a296b186ac66405158c3bd4392898acf50d3bca0e6712f915499bbf954c",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_09.json.gz"
+    }
+  },
+  {
+    "case": "multisource/ms03_10",
+    "final_validation_eligible": false,
+    "group": "public_relations",
+    "id": "ms03_10",
+    "input": "development/multisource_dev17_inputs_v1/workbooks/ms03_10.xlsx",
+    "input_sha256": "8c080762a3fc9ba451f08acf03df924b65d0eac0df1b5ee236089476b09c8653",
+    "origin": "packt",
+    "origin_group": "packt",
+    "parallel_sheets": [],
+    "source_id": "public10",
+    "source_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "stratum": "old213",
+    "upstream": {
+      "public_pack": "development/multisource_dev17_v1/predictions/ms03_10.json.gz"
+    }
+  },
+  {
+    "case": "public/public01",
+    "id": "public01",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/iowa_state_agdm/hay_budget.xlsx",
+    "input_sha256": "ca188a3776314d7a17e0c40564bdc2737ada2e6dc705186cd20964b9c42026ec",
+    "origin_group": "iowa_state_agdm",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public01.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public02",
+    "id": "public02",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/iowa_state_agdm/crop_rotation.xlsx",
+    "input_sha256": "87411c767743b3fdb60a883dffe3140d0bc8b2a42ac5363499f5a31b9ff3faf6",
+    "origin_group": "iowa_state_agdm",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public02.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public03",
+    "id": "public03",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/iowa_state_agdm/farm_finance.xlsx",
+    "input_sha256": "d2423725cfada6d03a0a6ae0fff447b1d96741b99f8f67898addfe899958e06d",
+    "origin_group": "iowa_state_agdm",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public03.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public04",
+    "id": "public04",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/damodaran/capital_structure.xlsx",
+    "input_sha256": "32ccdad0e50d87226908162ab512e067a7614fbbe26b9291b7f0de155d2b7115",
+    "origin_group": "damodaran",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public04.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public05",
+    "id": "public05",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/damodaran/fcff_simple.xlsx",
+    "input_sha256": "d6ffb67d965dc22463e4d013636befab3da431e7fc608936a82612fa73198e72",
+    "origin_group": "damodaran",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public05.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_failed"
+  },
+  {
+    "case": "public/public06",
+    "id": "public06",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/epa/refrigerated_condenser.xlsm",
+    "input_sha256": "15814b7e4a3d45113c08b00eb4b99a0d226ea1a937955eda8c397c0c6f736c38",
+    "origin_group": "epa",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public06.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_failed"
+  },
+  {
+    "case": "public/public07",
+    "id": "public07",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/epa/carbon_adsorber.xlsm",
+    "input_sha256": "ca983db99d6c11abd3a8aad1faacc0ca18e2871ee93d6602409b70cdc9fbfad4",
+    "origin_group": "epa",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public07.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_failed"
+  },
+  {
+    "case": "public/public08",
+    "id": "public08",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/uk_government/lcoe_calculator.xlsx",
+    "input_sha256": "b0f15382e8c9c9b74d944a0ab8301a3326fb3bfbf4a950896a66f29c52000357",
+    "origin_group": "uk_government",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public08.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public09",
+    "id": "public09",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/18f/software_model.xlsx",
+    "input_sha256": "bd33f96dd6c5ab8d9b8215b7e8f7a45aa43854a61fa11d74e8793cb9e58a5464",
+    "origin_group": "18f",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public09.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public10",
+    "id": "public10",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/packt/financial_model.xlsx",
+    "input_sha256": "d8de77e6af2da56983101b74d3099ca77a9641dd7bd89f3cb76f03425c4a5acc",
+    "origin_group": "packt",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public10.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "public/public11",
+    "id": "public11",
+    "input": "../../data/external/hybridguard_candidate_audit_dev1/workbooks/renewables/simplified_project_finance.xlsx",
+    "input_sha256": "3b9a8b47f3cf9ad506698c6cf89082472401b9c8b851ed78ba944101c35b43f2",
+    "origin_group": "renewables",
+    "public_report": "development/public_candidate_pipeline_dev10/predictions/public11.json.gz",
+    "stratum": "public_original",
+    "upstream_status": "inference_complete_unscored"
+  },
+  {
+    "case": "natural/cv500",
+    "id": "cv500",
+    "input": "development/natural_cv500_dev27_v1/raw/before.xlsx",
+    "input_sha256": "b6cdb872bc8aca288c1606ea10eacad9c4095e9983b374164f3b2478b2b71d4f",
+    "origin_group": "cv500",
+    "public_report": "development/natural_cv500_dev27_v1/prediction.json.gz",
+    "stratum": "natural_original"
+  },
+  {
+    "case": "natural/ldas",
+    "id": "ldas",
+    "input": "development/natural_ldas_dev27_v1/raw/before.xlsx",
+    "input_sha256": "8bf652abb09294852bed4221be0e4d3a40dd620e639343d4533dc5a12f4772a3",
+    "origin_group": "ldas",
+    "public_report": "development/natural_ldas_dev27_v1/prediction.json.gz",
+    "stratum": "natural_original"
+  },
+  {
+    "case": "natural/hobyah",
+    "id": "hobyah",
+    "input": "development/natural_hobyah_dev26_v1/raw/before.xlsx",
+    "input_sha256": "3c08817d13c044d5ab0868eb8fad137ac35498aff3634a66cbf1226dcfe5ccc3",
+    "origin_group": "hobyah",
+    "public_report": "development/natural_hobyah_dev26_v1/prediction.json.gz",
+    "stratum": "natural_original"
+  },
+  {
+    "case": "string_control/forward",
+    "id": "forward",
+    "input": "development/record_candidates_dev29_v1/controls/forward.xlsx",
+    "input_sha256": "10da2583b85afb3d784465adf6c46f389586624fb26082c565a97a4aee2798d3",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/backward",
+    "id": "backward",
+    "input": "development/record_candidates_dev29_v1/controls/backward.xlsx",
+    "input_sha256": "31b7726bab59fde18dfe7b360e1b551771f6ca8b9dd7c932047a92d5ebc6348d",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/nested",
+    "id": "nested",
+    "input": "development/record_candidates_dev29_v1/controls/nested.xlsx",
+    "input_sha256": "2db0003cb5c4c6be5f8cb4ef6eeaf5281f3e46a0bff636083fdeaf95448d56b5",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/ampersand",
+    "id": "ampersand",
+    "input": "development/record_candidates_dev29_v1/controls/ampersand.xlsx",
+    "input_sha256": "d115dab63854cb6c1af3cd00b94bd0baf8c9f6d61de4c9283f01886204b5c9c4",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/escaped",
+    "id": "escaped",
+    "input": "development/record_candidates_dev29_v1/controls/escaped.xlsx",
+    "input_sha256": "142e74a64e1109af932397fca2a8bfb627d44b69e4aab0564540158582903c63",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/absolute_column",
+    "id": "absolute_column",
+    "input": "development/record_candidates_dev29_v1/controls/absolute_column.xlsx",
+    "input_sha256": "796f1291347bb385605fcba927ee99ea51f033c57ee2ed02152cd2373725360b",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/repeated",
+    "id": "repeated",
+    "input": "development/record_candidates_dev29_v1/controls/repeated.xlsx",
+    "input_sha256": "9b2b60c771818db48161b92561eb88d39fda483d92893299c5b26bab327aaad8",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/other_columns",
+    "id": "other_columns",
+    "input": "development/record_candidates_dev29_v1/controls/other_columns.xlsx",
+    "input_sha256": "8bd3ace39c8f5298d2a02940a6999a301465e4774b6e6a6e063a5fb143364e00",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/legal_lead",
+    "id": "legal_lead",
+    "input": "development/record_candidates_dev29_v1/controls/legal_lead.xlsx",
+    "input_sha256": "10da2583b85afb3d784465adf6c46f389586624fb26082c565a97a4aee2798d3",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/legal_lag",
+    "id": "legal_lag",
+    "input": "development/record_candidates_dev29_v1/controls/legal_lag.xlsx",
+    "input_sha256": "31b7726bab59fde18dfe7b360e1b551771f6ca8b9dd7c932047a92d5ebc6348d",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/legal_nested",
+    "id": "legal_nested",
+    "input": "development/record_candidates_dev29_v1/controls/legal_nested.xlsx",
+    "input_sha256": "2db0003cb5c4c6be5f8cb4ef6eeaf5281f3e46a0bff636083fdeaf95448d56b5",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/legal_ampersand",
+    "id": "legal_ampersand",
+    "input": "development/record_candidates_dev29_v1/controls/legal_ampersand.xlsx",
+    "input_sha256": "d115dab63854cb6c1af3cd00b94bd0baf8c9f6d61de4c9283f01886204b5c9c4",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/absolute_row",
+    "id": "absolute_row",
+    "input": "development/record_candidates_dev29_v1/controls/absolute_row.xlsx",
+    "input_sha256": "7e0e308070561e1d93863783bc6dd646be7f3adab9b205879a8c66351a7e63bc",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/cross_sheet",
+    "id": "cross_sheet",
+    "input": "development/record_candidates_dev29_v1/controls/cross_sheet.xlsx",
+    "input_sha256": "69b696f9ff7c5465961d385e44149631bbee1dfe22ef9634dd47a0e103279e87",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/two_anchors",
+    "id": "two_anchors",
+    "input": "development/record_candidates_dev29_v1/controls/two_anchors.xlsx",
+    "input_sha256": "ab235f45a37fe67eb4a369673c3fa04cd9fb109e0143429b2273793433c99825",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "string_control/two_dissent",
+    "id": "two_dissent",
+    "input": "development/record_candidates_dev29_v1/controls/two_dissent.xlsx",
+    "input_sha256": "6bef7fb195f84059708dbb1894ddf3ba686188acef776e9a331ad06b69489d97",
+    "origin_group": "authored_string_control",
+    "stratum": "string_control"
+  },
+  {
+    "case": "new_control/clean",
+    "id": "clean",
+    "input": "development/visible_relations_dev30_v1/controls/clean.xlsx",
+    "input_sha256": "32bf0b35221cadfe3de0df44a54f7ffcd0b1ee85b9fb75874439017bffff08e1",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/operator_error",
+    "id": "operator_error",
+    "input": "development/visible_relations_dev30_v1/controls/operator_error.xlsx",
+    "input_sha256": "6923b200afeb54a837cecb180771a40e8072b231df2e50dc1e48d3eb963c88bc",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/reference_error",
+    "id": "reference_error",
+    "input": "development/visible_relations_dev30_v1/controls/reference_error.xlsx",
+    "input_sha256": "88d57c1e0c6ead9b652d988fb1ac6251eb12776da1c985b9a46d6c391a0bc8f6",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/coefficient_error",
+    "id": "coefficient_error",
+    "input": "development/visible_relations_dev30_v1/controls/coefficient_error.xlsx",
+    "input_sha256": "e09a86ec80bcc69576d08456a73e87e72d8a6ee5ce18b71a1df438d2939a7a5e",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/marked_adjustment",
+    "id": "marked_adjustment",
+    "input": "development/visible_relations_dev30_v1/controls/marked_adjustment.xlsx",
+    "input_sha256": "4f353f8c9546c35e595491e06ecc1d2f50c9fac46f459c0a3ad12a8958544e8f",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/unmarked_adjustment",
+    "id": "unmarked_adjustment",
+    "input": "development/visible_relations_dev30_v1/controls/unmarked_adjustment.xlsx",
+    "input_sha256": "b36b24d01aa7d3f482692862efb7b442352ff59bdb69d77da671275368aa5011",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/conflicting_instruction",
+    "id": "conflicting_instruction",
+    "input": "development/visible_relations_dev30_v1/controls/conflicting_instruction.xlsx",
+    "input_sha256": "dcd75cd83815c040fce982fb197ee3c1ebf81acc029a3b05a8b3e4d82a3f55fb",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "new_control/duplicate_role",
+    "id": "duplicate_role",
+    "input": "development/visible_relations_dev30_v1/controls/duplicate_role.xlsx",
+    "input_sha256": "e6158557054f5946dc2d04dbf1f3cf01c3e04960c74e4bad3dc7bb24278477f5",
+    "origin_group": "authored_role_control",
+    "stratum": "new_control"
+  },
+  {
+    "case": "conditioned_control/profit__clean",
+    "family": "profit",
+    "id": "profit__clean",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__clean.xlsx",
+    "input_sha256": "a881d3717c3362affb91154d4f3fb39abb1fc0cd68d00db3fc03df3f045361dc",
+    "origin_group": "authored_profit_control",
+    "scenario": "clean",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__operator_error",
+    "family": "profit",
+    "id": "profit__operator_error",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__operator_error.xlsx",
+    "input_sha256": "9d67008388676e46f8049de6cd517e0af82ec7d803027bc5a98098545d29ae26",
+    "origin_group": "authored_profit_control",
+    "scenario": "operator_error",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__reference_error",
+    "family": "profit",
+    "id": "profit__reference_error",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__reference_error.xlsx",
+    "input_sha256": "7be27cba36939f19ee47c34976cd75e2d6bf02c5ca08e7b03cef6097cdb5c5f3",
+    "origin_group": "authored_profit_control",
+    "scenario": "reference_error",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__coefficient_error",
+    "family": "profit",
+    "id": "profit__coefficient_error",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__coefficient_error.xlsx",
+    "input_sha256": "7a2cb6936559b4a0f49347b2da648b78ed84d91bf8d614f0734199aa782ff488",
+    "origin_group": "authored_profit_control",
+    "scenario": "coefficient_error",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__marked_share",
+    "family": "profit",
+    "id": "profit__marked_share",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__marked_share.xlsx",
+    "input_sha256": "3927d54e32c6f5aba67a7269367fedd79f2b2479abcc4d0ae98809180283982d",
+    "origin_group": "authored_profit_control",
+    "scenario": "marked_share",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__unmarked_share",
+    "family": "profit",
+    "id": "profit__unmarked_share",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__unmarked_share.xlsx",
+    "input_sha256": "b3ae7b79e134858718f417e7bce32f1a69df2ca94debd4386c88f5006b461ed4",
+    "origin_group": "authored_profit_control",
+    "scenario": "unmarked_share",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__marked_adjustment",
+    "family": "profit",
+    "id": "profit__marked_adjustment",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__marked_adjustment.xlsx",
+    "input_sha256": "f2828326fbba8b50518e053050529c394beb8b0f84c1b8f73782a54ad7216db8",
+    "origin_group": "authored_profit_control",
+    "scenario": "marked_adjustment",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__unmarked_adjustment",
+    "family": "profit",
+    "id": "profit__unmarked_adjustment",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__unmarked_adjustment.xlsx",
+    "input_sha256": "a1152f583befda0fd397a82a189e8ab4b33759451d9ad508476e06b90ace877e",
+    "origin_group": "authored_profit_control",
+    "scenario": "unmarked_adjustment",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__conflicting_instruction",
+    "family": "profit",
+    "id": "profit__conflicting_instruction",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__conflicting_instruction.xlsx",
+    "input_sha256": "858895fa92d6dab51167c27e9f36dca3aec959dfe353672f96f361985fc84a1c",
+    "origin_group": "authored_profit_control",
+    "scenario": "conflicting_instruction",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__duplicate_role",
+    "family": "profit",
+    "id": "profit__duplicate_role",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__duplicate_role.xlsx",
+    "input_sha256": "5d67c7bea6cdb907f70055faa10cb901556e65132aec5e6ac8b950c26571139e",
+    "origin_group": "authored_profit_control",
+    "scenario": "duplicate_role",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__hidden_input",
+    "family": "profit",
+    "id": "profit__hidden_input",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__hidden_input.xlsx",
+    "input_sha256": "33d545f71f684d5722665d816d54388fb6ff6ce42d8fbb53d171a7dedf84c3a6",
+    "origin_group": "authored_profit_control",
+    "scenario": "hidden_input",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__unsupported_input",
+    "family": "profit",
+    "id": "profit__unsupported_input",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__unsupported_input.xlsx",
+    "input_sha256": "500dd7eaad91f1fc8155a2db910bdde3423ebb1ada3ae899a9c53db2a84871a3",
+    "origin_group": "authored_profit_control",
+    "scenario": "unsupported_input",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__rate_outside",
+    "family": "profit",
+    "id": "profit__rate_outside",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__rate_outside.xlsx",
+    "input_sha256": "ba11ffb2e38c37dfbb3b541675f3373e5d217db29a350bb6e6eaeb039b74493b",
+    "origin_group": "authored_profit_control",
+    "scenario": "rate_outside",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/profit__unknown_output",
+    "family": "profit",
+    "id": "profit__unknown_output",
+    "input": "development/conditioned_relations_dev32_v2/controls/profit__unknown_output.xlsx",
+    "input_sha256": "077ba0248d4eecc470487bd41fc8fe0ff775a190bed1c559d7007274fd563eee",
+    "origin_group": "authored_profit_control",
+    "scenario": "unknown_output",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__clean",
+    "family": "debt",
+    "id": "debt__clean",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__clean.xlsx",
+    "input_sha256": "9f6f5c18c155e5c1049aa4dc95ae4432dc0555ed2fb989e193be4e1d8a6c1db3",
+    "origin_group": "authored_debt_control",
+    "scenario": "clean",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__operator_error",
+    "family": "debt",
+    "id": "debt__operator_error",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__operator_error.xlsx",
+    "input_sha256": "8b77fcc4b9153327f3edff13932a8c805b11155c4fe745fb5016dbf759c88170",
+    "origin_group": "authored_debt_control",
+    "scenario": "operator_error",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__reference_error",
+    "family": "debt",
+    "id": "debt__reference_error",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__reference_error.xlsx",
+    "input_sha256": "6e592731f471081e570ad11b35e5487adff01344a8ee2fa65fbca52ef1358edb",
+    "origin_group": "authored_debt_control",
+    "scenario": "reference_error",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__coefficient_error",
+    "family": "debt",
+    "id": "debt__coefficient_error",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__coefficient_error.xlsx",
+    "input_sha256": "0798b555ae73347625eb9c79adf537dc1fd7a86942d583d81a45f024a2e6f27c",
+    "origin_group": "authored_debt_control",
+    "scenario": "coefficient_error",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__marked_adjustment",
+    "family": "debt",
+    "id": "debt__marked_adjustment",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__marked_adjustment.xlsx",
+    "input_sha256": "9447e9bad7292dd662ad61232eda3386cf06b2fca07b64cef1553b84a38e966b",
+    "origin_group": "authored_debt_control",
+    "scenario": "marked_adjustment",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__unmarked_adjustment",
+    "family": "debt",
+    "id": "debt__unmarked_adjustment",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__unmarked_adjustment.xlsx",
+    "input_sha256": "2011f0600e59d38f089c895cd1838e53b74ab382ef83c213cb118f445701076d",
+    "origin_group": "authored_debt_control",
+    "scenario": "unmarked_adjustment",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__positive_principal",
+    "family": "debt",
+    "id": "debt__positive_principal",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__positive_principal.xlsx",
+    "input_sha256": "35c9253c26f4552c7cb8b4f5daf598fd43ba8f54e5cb95881d48694f7b5dedb0",
+    "origin_group": "authored_debt_control",
+    "scenario": "positive_principal",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__duplicate_role",
+    "family": "debt",
+    "id": "debt__duplicate_role",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__duplicate_role.xlsx",
+    "input_sha256": "5bb89dffd0f2aa0d14181cfa5f78f025a0f0cd257529ffa0df6f1f838658b101",
+    "origin_group": "authored_debt_control",
+    "scenario": "duplicate_role",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__hidden_upstream",
+    "family": "debt",
+    "id": "debt__hidden_upstream",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__hidden_upstream.xlsx",
+    "input_sha256": "171463be8b9c2862d8b97039ded77a279069f03065be2d845c03675e94e3a9a7",
+    "origin_group": "authored_debt_control",
+    "scenario": "hidden_upstream",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__conflicting_instruction",
+    "family": "debt",
+    "id": "debt__conflicting_instruction",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__conflicting_instruction.xlsx",
+    "input_sha256": "0c453ac14a596fbec779664ad00f41ea0f70a633b516cad3212b67cd37d7e8fe",
+    "origin_group": "authored_debt_control",
+    "scenario": "conflicting_instruction",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__non_ppmt",
+    "family": "debt",
+    "id": "debt__non_ppmt",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__non_ppmt.xlsx",
+    "input_sha256": "7e0afbf3ab2cb702ded86e1278c0ae78b59d35b2294c65ab64b5898fa5a06d13",
+    "origin_group": "authored_debt_control",
+    "scenario": "non_ppmt",
+    "stratum": "conditioned_control"
+  },
+  {
+    "case": "conditioned_control/debt__unsupported_upstream",
+    "family": "debt",
+    "id": "debt__unsupported_upstream",
+    "input": "development/conditioned_relations_dev32_v2/controls/debt__unsupported_upstream.xlsx",
+    "input_sha256": "f9687c0879c172b95280a4893f504d43d3d2b9ca8c4b1d08a4ca668fe280741d",
+    "origin_group": "authored_debt_control",
+    "scenario": "unsupported_upstream",
+    "stratum": "conditioned_control"
+  }
+]

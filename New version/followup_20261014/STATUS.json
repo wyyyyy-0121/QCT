@@ -1410,5 +1410,25 @@
     "repair_improvement_established": false,
     "final_validation_eligible": false
   },
-  "dev31_upload_receipt": "qa/DEV31_UPLOAD_RECEIPT_20261018.json"
+  "dev31_upload_receipt": "qa/DEV31_UPLOAD_RECEIPT_20261018.json",
+  "dev32_conditioned_relations": {
+    "phase": "development implementation checkpoint; prediction and scoring incomplete",
+    "preregistration": "CONDITIONED_RELATIONS_DEV32_PREREGISTRATION_20261018.md",
+    "progress_report": "DEV32_PROGRESS_CHECKPOINT_20261018.md",
+    "failed_preparation": "development/conditioned_relations_dev32_preparation_failed_v1",
+    "interrupted_prediction": "development/conditioned_relations_dev32_prediction_interrupted_v2",
+    "planned_next_run": "development/conditioned_relations_dev32_v3",
+    "planned_cases": 277,
+    "authored_controls": 26,
+    "completed_prediction_lock": false,
+    "score_verified": false,
+    "full_tests_passed_before_verifier_edits": 317,
+    "verifier_import_preflight_passed": true,
+    "independent_replay_complete": false,
+    "independent_libreoffice_verification_complete": false,
+    "main_candidate_adopted": false,
+    "final_validation_complete": false,
+    "accepted_final_sources": 0,
+    "accepted_final_families": 0
+  }
 }
