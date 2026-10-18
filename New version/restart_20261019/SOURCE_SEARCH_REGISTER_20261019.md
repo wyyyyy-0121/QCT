@@ -108,3 +108,15 @@ These two screens add no qualified natural source or template family. They do no
 本轮跟进GitHub文章提交中关于JPMorgan London Whale公式错误的线索，仅核查报告书目/官方目录，不读取工作簿或错误标签、不运行模型。Bing精确查询`"JPMorgan Chase Whale Trades" "S. Prt."`可返回搜索页，但前列结果与目标报告无关，未获得可靠报告编号；Google连接超时。Congress.gov搜索请求返回Cloudflare 403。GovInfo `committee-publications`集合页返回HTTP 200，但页面内容是集合介绍而非目标报告条目。对猜测的包路径`CPRT-112SPRT76071`及`CPRT-113SPRT81946`请求均返回HTTP 200、约44 KB HTML错误页（并非PDF）；`file`检查确认响应不是PDF，因此这些路径不能用来确认报告编号或附件。上述端点和响应只说明访问/路径状态，不构成报告不存在的证据。
 
 此前线索文章称其引用2013年美国参议院常设调查小组委员会报告，描述某替换模型公式把两个值相加而未取平均；但当前未取得正式报告书目、附件清单、原始/修订工作簿、明确再分发许可或逐格独立真值。该候选继续停留在来源级线索，不获取可疑工作簿、不计来源或模板家族、不作准确率评分。检索回执：Bing `https://www.bing.com/search?q=%22JPMorgan+Chase+Whale+Trades%22+%22S.+Prt.%22`；GovInfo集合 `https://www.govinfo.gov/collection/committee-publications`；Congress.gov搜索端点被拦截。后续若重试，先从GovInfo官方API/目录按标题与委员会元数据定位唯一包ID，再核对报告正文的引用与附件索引；只有发现允许公开使用且可证实版本链的工作簿对，才继续准入审查。
+
+## 2026-10-19 GitHub 公式错误提交元数据筛查
+
+使用GitHub commit search API查询`"spreadsheet error" formula extension:xlsx`、`"corrected formula" spreadsheet extension:xlsx`、`"incorrect formula" spreadsheet`、`"formula errors" workbook`及`"spreadsheet mistake" formula`。前两项各返回0条；后三项分别返回10、594和4条。宽泛结果中近期软件工程和生成型仓库噪声较多；仅从`"formula errors" workbook`返回结果中检查前20项提交元数据并核查3个可能包含真实工作簿的仓库/提交，不把搜索命中总数视作已审样本。
+
+| 候选 | 提交级核查 | 处置 |
+|---|---|---|
+| `nathaliejoyfutolan-ai/act-da-tracker-updater`，`360ac92b8a` | 提交标题为“Report exact workbook formula errors”，但差异只有`src/update.mjs`的7行新增、3行删除；仓库创建于2026-10-17，GitHub许可字段为空。 | 软件/报告代码，不含工作簿修订对或公式真值；排除，不下载其他文件。 |
+| `krwizxp/fcupdater`，`15df74736d` | 提交标题称更新Chungcheong燃油工作簿，差异API列出`.xlsx`路径但文件增删统计均为0；仓库许可字段为空。 | 目前只有定期数据刷新元数据，没有公式错误修订证据及可核许可；不取工作簿正文，不计来源。 |
+| `sabodaha/windpark-rechner`，`73e15a649c` | 提交涉及风电计算器方法说明页面，未修改工作簿；仓库许可字段为空。 | 方法文档不是错误修订对；排除。 |
+
+本轮无可准入自然错误来源或新模板家族。GitHub提交搜索只用于发现候选，工作簿文件被提及或更新不等于公式错误被更正；最终验证仍为`0/0`，模型和规则保持冻结。
