@@ -1,0 +1,3 @@
+Oct 18 17:19:00 Ayaka kernel: python invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Oct 18 17:19:00 Ayaka kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/init.scope,task=python,pid=25768,uid=1000
+Oct 18 17:19:00 Ayaka kernel: Out of memory: Killed process 25768 (python) total-vm:17401164kB, anon-rss:13351036kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:33332kB oom_score_adj:0

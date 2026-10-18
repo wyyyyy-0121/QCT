@@ -3,11 +3,13 @@ from collections import Counter,defaultdict
 from pathlib import Path
 import argparse
 import gc
+import hashlib
 import os
 import platform
 import resource
 import sys
 import time
+import tempfile
 import joblib
 import numpy as np
 import sklearn
@@ -21,6 +23,7 @@ from build_signed_features_dev19 import order_digest
 from run_candidate_learning_dev18 import training_protection,weights
 from run_candidate_learning_dev16 import metrics,totals
 from relative_learning_dev21 import PARAMETERS,THRESHOLD,MARGIN,MAX_NEGATIVES_PER_CELL,selected_rows,representation,infer as relative_infer
+from relative_matrix_storage import build_matrix
 RUN=ROOT/'development/relative_learning_dev21_v1'
 MODES=['dev11','learned_only','keep_base_plus_learned','learned_unfiltered']
 
@@ -45,29 +48,30 @@ def fit(fold,index):
             if c['id'] in ids:enriched.append({**ids[c['id']],'cell':c['cell']})
     assert len(enriched)==len(original)
     rows=selected_rows(enriched);del labels,original,enriched,by_case
+    selection_sha=hashlib.sha256('\n'.join(r['case']+'\t'+r['id']+'\t'+str(r['label']) for r in rows).encode()).hexdigest()
     width=read(DATA/'feature_schema.json')['base_width'];count=len(rows)
-    x=np.empty((2*count,2*width),dtype=np.float32)
     labels=np.asarray([r['label'] for r in rows],dtype=np.int8);y=np.concatenate([labels,1-labels])
-    positions=defaultdict(dict)
-    for n,r in enumerate(rows):positions[r['case']][r['id']]=n
-    for case,ids in positions.items():
-        payload,values,k,offsets=case_data(index[case]);found=0
-        for n,c in enumerate(payload['candidates']):
-            if c['id'] not in ids:continue
-            out=ids[c['id']];keep=k[offsets[n]];delta=values[n]-keep
-            x[out,:width]=keep;x[out,width:]=delta
-            x[out+count,:width]=keep;x[out+count,width:]=-delta;found+=1
-        assert found==len(ids)
     w0=weights(rows);w=np.concatenate([w0,w0])
     assert abs(w[y==1].sum()-w[y==0].sum())<1e-5
-    model=HistGradientBoostingClassifier(**PARAMETERS);model.fit(x,y,sample_weight=w)
+    class_sums=[float(w[y==v].sum()) for v in [0,1]]
+    print('selected relative',fold['id'],count,'rows; building disk-backed input',flush=True)
+    (ROOT/'tmp').mkdir(exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='dev21_',dir=ROOT/'tmp') as tmp:
+        x,matrix_sha=build_matrix(Path(tmp)/'training.npy',rows,width,index,case_data)
+        del rows,labels,w0
+        gc.collect()
+        print('fitting relative',fold['id'],x.shape,'disk bytes',x.nbytes,flush=True)
+        model=HistGradientBoostingClassifier(**PARAMETERS);model.fit(x,y,sample_weight=w)
+        del x
     return model,{'selected_original_rows':count,'mirrored_rows':len(y),'positive':int(y.sum()),'negative':int((y==0).sum()),
-                  'features':2*width,'class_weight_sums':[float(w[y==v].sum()) for v in [0,1]],'max_negatives_per_cell':MAX_NEGATIVES_PER_CELL}
+                  'features':2*width,'class_weight_sums':class_sums,'max_negatives_per_cell':MAX_NEGATIVES_PER_CELL,
+                  'selection_sha256':selection_sha,
+                  'training_matrix_sha256':matrix_sha,'storage':'read-only float64 mmap of exact float32-rounded features'}
 
 def predict():
     if RUN.exists():raise SystemExit('Preserve dev21')
     verify_features();sources=sorted((ROOT/'scripts').glob('*.py'))+sorted((ROOT/'tests').glob('*.py'))
-    sources+=[ROOT/'RELATIVE_LEARNING_DEV21_PLAN_20261018.md']
+    sources+=[ROOT/'RELATIVE_LEARNING_DEV21_PLAN_20261018.md',ROOT/'DEV21_MEMORY_RECOVERY_20261018.md']
     save(RUN/'source_lock.json',{'files':{str(p.relative_to(ROOT)):sha(p) for p in sources}})
     index={i['case']:i for i in read(BASE/'public_index.json')}
     active,accesses,allowed,reads=training_protection();files={};runtime=[];wall,cpu=time.perf_counter(),time.process_time()
@@ -96,6 +100,7 @@ def predict():
     files['runtime.json']=sha(RUN/'runtime.json')
     save(RUN/'prediction_lock.json',{'files':files,'source_lock_sha256':sha(RUN/'source_lock.json'),
          'feature_lock_sha256':sha(DATA/'feature_lock.json'),'base_prediction_lock_sha256':sha(ROOT/'development/unit_learning_dev20_v1/prediction_lock.json'),
+         'fold_index_sha256':sha(BASE/'fold_index.json'),'label_preparation_lock_sha256':sha(BASE/'label_preparation_lock.json'),
          'training_labels_read':sorted(reads),'heldout_labels_read':[],'accesses':sorted(accesses),'final_validation_eligible':False})
     print('DEV21 PREDICTIONS LOCKED',flush=True)
 
@@ -106,6 +111,7 @@ def verify():
     for rel,v in lock['files'].items():assert sha(RUN/rel)==v,rel
     assert sha(DATA/'feature_lock.json')==lock['feature_lock_sha256']
     assert sha(ROOT/'development/unit_learning_dev20_v1/prediction_lock.json')==lock['base_prediction_lock_sha256']
+    for name in ['fold_index','label_preparation_lock']:assert sha(BASE/(name+'.json'))==lock[name+'_sha256']
     assert lock['heldout_labels_read']==[]
 
 def score():
