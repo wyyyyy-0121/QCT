@@ -20,7 +20,8 @@
     "Renewables Valuation Institute",
     "Aswath Damodaran NYU",
     "US EPA control cost manual",
-    "UK government conservative grouped origin; DfT and DESNZ not yet counted separately"
+    "UK government conservative grouped origin; DfT and DESNZ not yet counted separately",
+    "ECB2020/Hobyah (historical correction commit metadata disclosed error locations and mechanism during dev25 discovery; excluded from unseen final validation)"
   ],
   "priority_origin_groups": [
     {
@@ -963,5 +964,15 @@
     "accepted_final_sources": 0,
     "accepted_final_template_families": 0,
     "additional_links_include_archives_correction_and_data_only_candidates": true
+  },
+  "historical_natural_discovery_dev25": {
+    "report": "source_discovery/HISTORICAL_NATURAL_FIX_CANDIDATES_DEV25_20261018.md",
+    "changed_workbook_repositories": 5,
+    "same_path_blob_changes": 7,
+    "verified_truth_pairs": 0,
+    "accepted_sources": 0,
+    "accepted_families": 0,
+    "workbook_bodies_acquired": false,
+    "exposed_development_origin": "ECB2020/Hobyah"
   }
 }

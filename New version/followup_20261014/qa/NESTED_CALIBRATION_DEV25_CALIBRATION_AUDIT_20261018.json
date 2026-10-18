@@ -1,0 +1,79 @@
+{
+  "all_nested_top_rows_reconstructed": true,
+  "all_training_only_repair_labels_verified": true,
+  "auditor_sha256": "7f4a501b8ca21941907c1a44291c59a9d1a1393f83cb009c57f1147e4e4da899",
+  "final_validation_eligible": false,
+  "folds": [
+    {
+      "all_original_clean_labels_zero": true,
+      "counts": {
+        "known": 963,
+        "raw_margin": 41408,
+        "top_candidates": 67445,
+        "unit_incompatible": 112,
+        "unknown_excluded": 24962
+      },
+      "fold": "source__18f",
+      "independently_checked_outer_tops": 79,
+      "pava_maximum_error": 1.1102230246251565e-16,
+      "rows": 963
+    },
+    {
+      "all_original_clean_labels_zero": true,
+      "counts": {
+        "known": 472,
+        "raw_margin": 32183,
+        "top_candidates": 42634,
+        "unit_incompatible": 389,
+        "unknown_excluded": 9590
+      },
+      "fold": "source__authored_development",
+      "independently_checked_outer_tops": 24890,
+      "pava_maximum_error": 1.6653345369377348e-16,
+      "rows": 472
+    },
+    {
+      "all_original_clean_labels_zero": true,
+      "counts": {
+        "known": 14442,
+        "raw_margin": 27904,
+        "top_candidates": 66767,
+        "unit_incompatible": 119,
+        "unknown_excluded": 24302
+      },
+      "fold": "source__iowa_state_agdm",
+      "independently_checked_outer_tops": 757,
+      "pava_maximum_error": 0.0,
+      "rows": 14442
+    },
+    {
+      "all_original_clean_labels_zero": true,
+      "counts": {
+        "known": 22843,
+        "raw_margin": 16264,
+        "top_candidates": 42654,
+        "unit_incompatible": 224,
+        "unknown_excluded": 3323
+      },
+      "fold": "source__packt",
+      "independently_checked_outer_tops": 24870,
+      "pava_maximum_error": 5.551115123125783e-17,
+      "rows": 22843
+    },
+    {
+      "all_original_clean_labels_zero": true,
+      "counts": {
+        "known": 21433,
+        "raw_margin": 19854,
+        "top_candidates": 50596,
+        "unknown_excluded": 9309
+      },
+      "fold": "source__uk_government",
+      "independently_checked_outer_tops": 16928,
+      "pava_maximum_error": 0.0,
+      "rows": 21433
+    }
+  ],
+  "independent_pava_matches": true,
+  "prediction_lock_sha256": "9ae88160835d65cfb1a9d82c499934154d4434919db6ac5bd561eb94e3029d89"
+}

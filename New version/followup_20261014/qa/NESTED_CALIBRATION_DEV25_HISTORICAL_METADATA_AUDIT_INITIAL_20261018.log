@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/audit_historical_fix_metadata_dev25.py", line 84, in <module>
+    main()
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/audit_historical_fix_metadata_dev25.py", line 29, in main
+    assert not data['incomplete_results']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

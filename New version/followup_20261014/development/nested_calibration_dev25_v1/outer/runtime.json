@@ -1,0 +1,286 @@
+{
+  "calibration": "weighted increasing isotonic, no out-of-support extrapolation",
+  "cpu_seconds": 87.19376270699999,
+  "folds": [
+    {
+      "class_weight_sums": [
+        763.5224771341464,
+        199.47752286585364
+      ],
+      "counts": {
+        "known": 963,
+        "raw_margin": 41408,
+        "top_candidates": 67445,
+        "unit_incompatible": 112,
+        "unknown_excluded": 24962
+      },
+      "cpu_seconds": 2.292851217,
+      "fold": "source__18f",
+      "negative": 890,
+      "positive": 73,
+      "rows": 963,
+      "selection_sha256": "3ea234896e64c2ede978f19a284af8e5f53e53f9a2fb966567ef8567ee480d8c",
+      "source_weight_sums": {
+        "authored_development": 240.75000000000006,
+        "iowa_state_agdm": 240.75,
+        "packt": 240.75,
+        "uk_government": 240.75000000000003
+      },
+      "status": "fitted",
+      "suggestions": {
+        "calibrated_only": 0,
+        "dev11": 0,
+        "keep_base_plus_calibrated": 0,
+        "keep_base_plus_raw": 0,
+        "raw_only": 0
+      },
+      "wall_seconds": 2.159770676000335,
+      "x_thresholds": [
+        0.0959393642564848,
+        0.10536593445167342,
+        0.12468230431495941,
+        0.3050456349693369,
+        0.3064157969134115,
+        0.521119913336351,
+        0.5394761422134506,
+        0.6965678082171756,
+        0.8137478041301502,
+        0.9547032286252967
+      ],
+      "y_thresholds": [
+        0.0,
+        0.0,
+        0.1176679758845302,
+        0.1176679758845302,
+        0.24528437340657122,
+        0.24528437340657122,
+        0.32618195520258064,
+        0.32618195520258064,
+        0.8737247353224253,
+        0.8737247353224253
+      ]
+    },
+    {
+      "class_weight_sums": [
+        259.36511470985147,
+        212.63488529014836
+      ],
+      "counts": {
+        "known": 472,
+        "raw_margin": 32183,
+        "top_candidates": 42634,
+        "unit_incompatible": 389,
+        "unknown_excluded": 9590
+      },
+      "cpu_seconds": 57.011168170999994,
+      "fold": "source__authored_development",
+      "negative": 401,
+      "positive": 71,
+      "rows": 472,
+      "selection_sha256": "cca1a38b6b8359286dd65e426566eff92d679ff0395cee6ec712924167bac5ae",
+      "source_weight_sums": {
+        "18f": 117.99999999999996,
+        "iowa_state_agdm": 117.99999999999997,
+        "packt": 117.99999999999999,
+        "uk_government": 117.99999999999997
+      },
+      "status": "fitted",
+      "suggestions": {
+        "calibrated_only": 0,
+        "dev11": 14213,
+        "keep_base_plus_calibrated": 14213,
+        "keep_base_plus_raw": 14213,
+        "raw_only": 0
+      },
+      "wall_seconds": 38.54732288699961,
+      "x_thresholds": [
+        0.08117676513248728,
+        0.9045699893355723,
+        0.9433332551491703,
+        0.9463993223132192,
+        0.9658893731012945,
+        0.9807539675056975
+      ],
+      "y_thresholds": [
+        0.3778527789197923,
+        0.3778527789197923,
+        0.9924712293406948,
+        0.9924712293406948,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "class_weight_sums": [
+        10827.27958039809,
+        3614.720419601912
+      ],
+      "counts": {
+        "known": 14442,
+        "raw_margin": 27904,
+        "top_candidates": 66767,
+        "unit_incompatible": 119,
+        "unknown_excluded": 24302
+      },
+      "cpu_seconds": 2.1151112679999997,
+      "fold": "source__iowa_state_agdm",
+      "negative": 7757,
+      "positive": 6685,
+      "rows": 14442,
+      "selection_sha256": "f8fe5fcd0992938440e231bd7320b61f6ff1b6e0b7c39156b30372f68840c26d",
+      "source_weight_sums": {
+        "authored_development": 4814.0,
+        "packt": 4814.000000000001,
+        "uk_government": 4814.000000000003
+      },
+      "status": "fitted",
+      "suggestions": {
+        "calibrated_only": 0,
+        "dev11": 0,
+        "keep_base_plus_calibrated": 0,
+        "keep_base_plus_raw": 25,
+        "raw_only": 25
+      },
+      "wall_seconds": 1.8900694990006741,
+      "x_thresholds": [
+        0.20935757286902734,
+        0.2484822866268675,
+        0.30129494157151737,
+        0.9512829057101189,
+        0.9597958931773949,
+        0.968087393589677,
+        0.9791423299663436,
+        0.9813328112695769
+      ],
+      "y_thresholds": [
+        0.0,
+        0.0,
+        0.18317716500698578,
+        0.18317716500698578,
+        0.8,
+        0.8,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "class_weight_sums": [
+        18181.3491473059,
+        4661.650852694099
+      ],
+      "counts": {
+        "known": 22843,
+        "raw_margin": 16264,
+        "top_candidates": 42654,
+        "unit_incompatible": 224,
+        "unknown_excluded": 3323
+      },
+      "cpu_seconds": 14.796785153000002,
+      "fold": "source__packt",
+      "negative": 5929,
+      "positive": 16914,
+      "rows": 22843,
+      "selection_sha256": "3925bd8baa50db7097567610763de008f705400483cac8ca3ec05b4e3963e9fe",
+      "source_weight_sums": {
+        "18f": 5710.75,
+        "authored_development": 5710.75,
+        "iowa_state_agdm": 5710.749999999998,
+        "uk_government": 5710.749999999999
+      },
+      "status": "fitted",
+      "suggestions": {
+        "calibrated_only": 0,
+        "dev11": 0,
+        "keep_base_plus_calibrated": 0,
+        "keep_base_plus_raw": 0,
+        "raw_only": 0
+      },
+      "wall_seconds": 11.17373246599891,
+      "x_thresholds": [
+        0.08396123130993316,
+        0.09075240941374085,
+        0.12991897573189393,
+        0.13537149601738324,
+        0.9723135164913754
+      ],
+      "y_thresholds": [
+        0.0,
+        0.061259460231329436,
+        0.061259460231329436,
+        0.26355554991963215,
+        0.26355554991963215
+      ]
+    },
+    {
+      "class_weight_sums": [
+        20371.53983440171,
+        1061.4601655982906
+      ],
+      "counts": {
+        "known": 21433,
+        "raw_margin": 19854,
+        "top_candidates": 50596,
+        "unknown_excluded": 9309
+      },
+      "cpu_seconds": 10.634322612999995,
+      "fold": "source__uk_government",
+      "negative": 20991,
+      "positive": 442,
+      "rows": 21433,
+      "selection_sha256": "87ecc22027d552c0251aee0aaa5fac69fa4d1aacb440a27b9e60fc96654c0c6f",
+      "source_weight_sums": {
+        "18f": 5358.250000000001,
+        "authored_development": 5358.25,
+        "iowa_state_agdm": 5358.249999999998,
+        "packt": 5358.25
+      },
+      "status": "fitted",
+      "suggestions": {
+        "calibrated_only": 0,
+        "dev11": 0,
+        "keep_base_plus_calibrated": 0,
+        "keep_base_plus_raw": 53,
+        "raw_only": 53
+      },
+      "wall_seconds": 8.362149286000204,
+      "x_thresholds": [
+        0.08761806470201272,
+        0.32357325529706904,
+        0.3339179150702193,
+        0.37362264244741933,
+        0.3777130535912482,
+        0.9304632062868492,
+        0.939079634686987,
+        0.9829248960373262,
+        0.9884825952244809
+      ],
+      "y_thresholds": [
+        0.0,
+        0.0,
+        0.02136709862498764,
+        0.02136709862498764,
+        0.07776789986076403,
+        0.07776789986076403,
+        0.7122302158273381,
+        0.7122302158273381,
+        1.0
+      ]
+    }
+  ],
+  "gpu_used": false,
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.0"
+  },
+  "peak_rss_kib": 2089568,
+  "python": "3.11.16",
+  "raw_margin": 0.05,
+  "scope": "5 calibrators and 213 outer predictions using frozen dev24 rankers",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "threshold": 0.9,
+  "wall_seconds": 62.40714229399964
+}

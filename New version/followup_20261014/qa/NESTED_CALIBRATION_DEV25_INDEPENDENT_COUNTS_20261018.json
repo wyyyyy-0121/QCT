@@ -1,0 +1,2229 @@
+{
+  "all_counts_strata_ratios_and_NA_identical": true,
+  "all_wrong_and_unknown_suggestions": [
+    {
+      "case": "tradeoff/p02",
+      "cell": "A!F10",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A10*B10*(1-E10)-A10*C10-D10"
+    },
+    {
+      "case": "tradeoff/p02",
+      "cell": "A!F10",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A10*B10*(1-E10)-A10*C10-D10"
+    },
+    {
+      "case": "tradeoff/p02",
+      "cell": "A!F10",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A10*B10*(1-E10)-A10*C10-D10"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F10",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A10*B10*(1-E10)-A10*C10-D10"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F11",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A11*B11*(1-E11)-A11*C11-D11"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F12",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A12*B12*(1-E12)-A12*C12-D12"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F13",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A13*B13*(1-E13)-A13*C13-D13"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F14",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A14*B14*(1-E14)-A14*C14-D14"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F15",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A15*B15*(1-E15)-A15*C15-D15"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F16",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A16*B16*(1-E16)-A16*C16-D16"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F17",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A17*B17*(1-E17)-A17*C17-D17"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F18",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A18*B18*(1-E18)-A18*C18-D18"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F19",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A19*B19*(1-E19)-A19*C19-D19"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F2",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A2*B2*(1-E2)-A2*C2-D2"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F20",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A20*B20*(1-E20)-A20*C20-D20"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F21",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A21*B21*(1-E21)-A21*C21-D21"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F22",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A22*B22*(1-E22)-A22*C22-D22"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F23",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A23*B23*(1-E23)-A23*C23-D23"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F24",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A24*B24*(1-E24)-A24*C24-D24"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F25",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A25*B25*(1-E25)-A25*C25-D25"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F3",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A3*B3*(1-E3)-A3*C3-D3"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F4",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A4*B4*(1-E4)-A4*C4-D4"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F5",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A5*B5*(1-E5)-A5*C5-D5"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F6",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A6*B6*(1-E6)-A6*C6-D6"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F7",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A7*B7*(1-E7)-A7*C7-D7"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F8",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A8*B8*(1-E8)-A8*C8-D8"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F9",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A9*B9*(1-E9)-A9*C9-D9"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F10",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A10*B10*(1-E10)-A10*C10-D10"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F11",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A11*B11*(1-E11)-A11*C11-D11"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F12",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A12*B12*(1-E12)-A12*C12-D12"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F13",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A13*B13*(1-E13)-A13*C13-D13"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F14",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A14*B14*(1-E14)-A14*C14-D14"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F15",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A15*B15*(1-E15)-A15*C15-D15"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A16*B16*(1-E16)-A16*C16-D16"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F17",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A17*B17*(1-E17)-A17*C17-D17"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F18",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A18*B18*(1-E18)-A18*C18-D18"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F19",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A19*B19*(1-E19)-A19*C19-D19"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F2",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A2*B2*(1-E2)-A2*C2-D2"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F20",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A20*B20*(1-E20)-A20*C20-D20"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F21",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A21*B21*(1-E21)-A21*C21-D21"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F22",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A22*B22*(1-E22)-A22*C22-D22"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F23",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A23*B23*(1-E23)-A23*C23-D23"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F24",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A24*B24*(1-E24)-A24*C24-D24"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F25",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A25*B25*(1-E25)-A25*C25-D25"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F3",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A3*B3*(1-E3)-A3*C3-D3"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F4",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A4*B4*(1-E4)-A4*C4-D4"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F5",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A5*B5*(1-E5)-A5*C5-D5"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F6",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A6*B6*(1-E6)-A6*C6-D6"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F7",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A7*B7*(1-E7)-A7*C7-D7"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F8",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A8*B8*(1-E8)-A8*C8-D8"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F9",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A9*B9*(1-E9)-A9*C9-D9"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F10",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A10*B10*(1-E10)-A10*C10-D10"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F11",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A11*B11*(1-E11)-A11*C11-D11"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F12",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A12*B12*(1-E12)-A12*C12-D12"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F13",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A13*B13*(1-E13)-A13*C13-D13"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F14",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A14*B14*(1-E14)-A14*C14-D14"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F15",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A15*B15*(1-E15)-A15*C15-D15"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A16*B16*(1-E16)-A16*C16-D16"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F17",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A17*B17*(1-E17)-A17*C17-D17"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F18",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A18*B18*(1-E18)-A18*C18-D18"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F19",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A19*B19*(1-E19)-A19*C19-D19"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F2",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A2*B2*(1-E2)-A2*C2-D2"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F20",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A20*B20*(1-E20)-A20*C20-D20"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F21",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A21*B21*(1-E21)-A21*C21-D21"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F22",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A22*B22*(1-E22)-A22*C22-D22"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F23",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A23*B23*(1-E23)-A23*C23-D23"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F24",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A24*B24*(1-E24)-A24*C24-D24"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F25",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A25*B25*(1-E25)-A25*C25-D25"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F3",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A3*B3*(1-E3)-A3*C3-D3"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F4",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A4*B4*(1-E4)-A4*C4-D4"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F5",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A5*B5*(1-E5)-A5*C5-D5"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F6",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A6*B6*(1-E6)-A6*C6-D6"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F7",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A7*B7*(1-E7)-A7*C7-D7"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F8",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A8*B8*(1-E8)-A8*C8-D8"
+    },
+    {
+      "case": "tradeoff/p03",
+      "cell": "A!F9",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=A9*B9*(1-E9)-A9*C9-D9"
+    },
+    {
+      "case": "adversarial/a11",
+      "cell": "A!F16",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16+C16-D16-E16"
+    },
+    {
+      "case": "adversarial/a11",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16+C16-D16-E16"
+    },
+    {
+      "case": "adversarial/a11",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16+C16-D16-E16"
+    },
+    {
+      "case": "adversarial/a21",
+      "cell": "A!F16",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16+D16-E16"
+    },
+    {
+      "case": "adversarial/a21",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16+D16-E16"
+    },
+    {
+      "case": "adversarial/a21",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16+D16-E16"
+    },
+    {
+      "case": "adversarial/a31",
+      "cell": "A!F16",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16*C16/D16+E16"
+    },
+    {
+      "case": "adversarial/a31",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16*C16/D16+E16"
+    },
+    {
+      "case": "adversarial/a31",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16*C16/D16+E16"
+    },
+    {
+      "case": "adversarial/a41",
+      "cell": "A!F16",
+      "mode": "dev11",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16*C16+D16+E16"
+    },
+    {
+      "case": "adversarial/a41",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_calibrated",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16*C16+D16+E16"
+    },
+    {
+      "case": "adversarial/a41",
+      "cell": "A!F16",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "status": "propose",
+      "suggested_formula": "=B16*C16+D16+E16"
+    },
+    {
+      "candidate_id": "fdec80a92d9bde8d1345e04b9fe0e1d937859d559ccb5dbb060518529a3ce69d",
+      "case": "multisource/ms01_01",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "5cdedaa07af72393c9ac825b5d13d373e5b08be1685364a52b14d70912cf1bea",
+      "case": "multisource/ms01_01",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "fdec80a92d9bde8d1345e04b9fe0e1d937859d559ccb5dbb060518529a3ce69d",
+      "case": "multisource/ms01_01",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "5cdedaa07af72393c9ac825b5d13d373e5b08be1685364a52b14d70912cf1bea",
+      "case": "multisource/ms01_01",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "33d15ce95542ee8ed4af5af51b023fb223d85b88d36a8bccc3a6d31fbccbee95",
+      "case": "multisource/ms01_02",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "30947350818dbec167a28df34066ed539b1ea14b468d3992e630dadc48814434",
+      "case": "multisource/ms01_02",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "33d15ce95542ee8ed4af5af51b023fb223d85b88d36a8bccc3a6d31fbccbee95",
+      "case": "multisource/ms01_02",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "30947350818dbec167a28df34066ed539b1ea14b468d3992e630dadc48814434",
+      "case": "multisource/ms01_02",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "6503216767474866f2842227f97dd026286490d6f622cee69f4ee971c8f53d0e",
+      "case": "multisource/ms01_03",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "7c3bdcb41ad74f054a8891e4ac4049c583095a2b56847bef91dca2ade54b9329",
+      "case": "multisource/ms01_03",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "6503216767474866f2842227f97dd026286490d6f622cee69f4ee971c8f53d0e",
+      "case": "multisource/ms01_03",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "7c3bdcb41ad74f054a8891e4ac4049c583095a2b56847bef91dca2ade54b9329",
+      "case": "multisource/ms01_03",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "090d5567a06a3f11e514611e9bd303412e3de1495d918fa8e5d471a792496149",
+      "case": "multisource/ms01_04",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "4ee2a01f3e6e2a227c8fd323c0ddce7053b35f02f5121fa34a477704214d206d",
+      "case": "multisource/ms01_04",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "090d5567a06a3f11e514611e9bd303412e3de1495d918fa8e5d471a792496149",
+      "case": "multisource/ms01_04",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "4ee2a01f3e6e2a227c8fd323c0ddce7053b35f02f5121fa34a477704214d206d",
+      "case": "multisource/ms01_04",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "c874bd8157113f69614566c38f0141ef2b2a2534a8efb9b6b021b186ab02c3c1",
+      "case": "multisource/ms01_05",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "3b299d37a4a4a49d0bb7e0b256e10f18c3405b809cc90307a8f1a042b97f98cd",
+      "case": "multisource/ms01_05",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "c874bd8157113f69614566c38f0141ef2b2a2534a8efb9b6b021b186ab02c3c1",
+      "case": "multisource/ms01_05",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "3b299d37a4a4a49d0bb7e0b256e10f18c3405b809cc90307a8f1a042b97f98cd",
+      "case": "multisource/ms01_05",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "d261e0cf4f10404d0cdd70ec452d3416124125f00bb8f4e2d8743ba7324e35a8",
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "e1cf0437318a8542d98a926a0b32d359476b041334709f302695fb01f31f2950",
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "d261e0cf4f10404d0cdd70ec452d3416124125f00bb8f4e2d8743ba7324e35a8",
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "e1cf0437318a8542d98a926a0b32d359476b041334709f302695fb01f31f2950",
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "fb5b8e0ebdbaa9945baafd09327f4a50f4939537a3c9871199e2cccff9289006",
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "efe48596dfe68910d9f9bd18f4d15e57185e5cd0903be35f0c7d7d0a33d8a5ef",
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "fb5b8e0ebdbaa9945baafd09327f4a50f4939537a3c9871199e2cccff9289006",
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "efe48596dfe68910d9f9bd18f4d15e57185e5cd0903be35f0c7d7d0a33d8a5ef",
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "77ee35d19455bef9cddce17a0b53b3f68331554bf9a1f986cf818e85d4f914b5",
+      "case": "multisource/ms01_08",
+      "cell": "Cash Flow Budget!B56",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9940549969562648,
+      "runner_up_probability": 0.05876455819267701,
+      "status": "propose",
+      "suggested_formula": "=B26-B52"
+    },
+    {
+      "candidate_id": "242ded48e0d0c97f4256f9654a8a6ee93168f0f5a5c755c2cd79ce56c20dfddb",
+      "case": "multisource/ms01_08",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "bcf2d05d550b4220c1958b839e606604ef7c5beb854d271f979e6fba965d9f2f",
+      "case": "multisource/ms01_08",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "77ee35d19455bef9cddce17a0b53b3f68331554bf9a1f986cf818e85d4f914b5",
+      "case": "multisource/ms01_08",
+      "cell": "Cash Flow Budget!B56",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9940549969562648,
+      "runner_up_probability": 0.05876455819267701,
+      "status": "propose",
+      "suggested_formula": "=B26-B52"
+    },
+    {
+      "candidate_id": "242ded48e0d0c97f4256f9654a8a6ee93168f0f5a5c755c2cd79ce56c20dfddb",
+      "case": "multisource/ms01_08",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "bcf2d05d550b4220c1958b839e606604ef7c5beb854d271f979e6fba965d9f2f",
+      "case": "multisource/ms01_08",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "2e23b3529128c21f38e7bc68e77116b36d2b8229b17eb204f9609e32d3ff707a",
+      "case": "multisource/ms01_09",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "69581fa8b9dde88270b3374269f89b3808c8b3aaaf4baac5faf8f08caa9dd48a",
+      "case": "multisource/ms01_09",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "2e23b3529128c21f38e7bc68e77116b36d2b8229b17eb204f9609e32d3ff707a",
+      "case": "multisource/ms01_09",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "69581fa8b9dde88270b3374269f89b3808c8b3aaaf4baac5faf8f08caa9dd48a",
+      "case": "multisource/ms01_09",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "a8b92d7b00dec849063213d515260a43266681fa32a43846497ea22f832209f5",
+      "case": "multisource/ms01_10",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "5447a6b6c99dfbcc0807250b01b8904eabebf13d5ab600c0db56a09a98d31447",
+      "case": "multisource/ms01_10",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "a8b92d7b00dec849063213d515260a43266681fa32a43846497ea22f832209f5",
+      "case": "multisource/ms01_10",
+      "cell": "Cash Flow Budget!N26",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N10:N25)"
+    },
+    {
+      "candidate_id": "5447a6b6c99dfbcc0807250b01b8904eabebf13d5ab600c0db56a09a98d31447",
+      "case": "multisource/ms01_10",
+      "cell": "Cash Flow Budget!N52",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9142475506462319,
+      "runner_up_probability": 0.821896641191386,
+      "status": "propose",
+      "suggested_formula": "=SUM(N30:N51)"
+    },
+    {
+      "candidate_id": "3a4c5112c5a085a44d9f9495f4eded855f692274e360bc2d0d20e5dac8a0c387",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AA81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AA79-AA80)*AA76*10^-9"
+    },
+    {
+      "candidate_id": "cbe657dce2e47238ffa16b05537e2fa2c688deef7ebb8fbd00bd864457a40465",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AB81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AB79-AB80)*AB76*10^-9"
+    },
+    {
+      "candidate_id": "48b3f23c6ba5e50d29a0804be49a89246c07d711edf904ecbb5b86f6a3e85082",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AC81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AC79-AC80)*AC76*10^-9"
+    },
+    {
+      "candidate_id": "44612606d36e8d279eca3889ec7159cbae888b5973d3ca09c324fe30cf591fa0",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AD81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AD79-AD80)*AD76*10^-9"
+    },
+    {
+      "candidate_id": "ac9b76c12854fd8b64186f84be03aa575ecda5e90d6bd34dfa605ea6826ac5fb",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AE81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AE79-AE80)*AE76*10^-9"
+    },
+    {
+      "candidate_id": "57368ad91816d1ab69f55f551bb237f57a7c41a76244fe475b258c913e2e6b23",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AF81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AF79-AF80)*AF76*10^-9"
+    },
+    {
+      "candidate_id": "6e9cc0613f3e8cc5c7a7f81509bf7119c7ab608809b51723546c02c8db89d67e",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AG81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AG79-AG80)*AG76*10^-9"
+    },
+    {
+      "candidate_id": "ef65b07e45d5614fe4a611178401f4c17a187702b753780c44de9b7504c654c8",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AH81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AH79-AH80)*AH76*10^-9"
+    },
+    {
+      "candidate_id": "752cf93260c69f8ee63aa0f4ccb7b2605acf52b2ad997f356755c33da0cf5817",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AI81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AI79-AI80)*AI76*10^-9"
+    },
+    {
+      "candidate_id": "87d1a1611a82ecbd2326e862f754268457d330c9e58c8133e0eb1c1ba9681975",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AJ81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AJ79-AJ80)*AJ76*10^-9"
+    },
+    {
+      "candidate_id": "21bfa0e20125e65d681a8ca956e7c7ae535759bf49279f0951bce89857d16f52",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AK81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AK79-AK80)*AK76*10^-9"
+    },
+    {
+      "candidate_id": "8180cc323b99e72f74ef4a353f2460543353c22f029400b2232799af5edcbeae",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!M81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(M79-M80)*M76*10^-9"
+    },
+    {
+      "candidate_id": "8f7e589b441f6baac8ea8d6123d6e70f6142c4037bcd1651f3925f5e11d57dce",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!N81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(N79-N80)*N76*10^-9"
+    },
+    {
+      "candidate_id": "5b20a241980869824a3eb97b01f8033fd9d2f2cf2284c901babbfb14d0386245",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!O81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(O79-O80)*O76*10^-9"
+    },
+    {
+      "candidate_id": "2f88c290e17186622ee4604ea582ed246a4462457bd999522325ff9f1a4dd999",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!P81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(P79-P80)*P76*10^-9"
+    },
+    {
+      "candidate_id": "6d6b7ca1c18619a9f452e9784176d46191c2c24ca60196e868acb4e04c114a88",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Q81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(Q79-Q80)*Q76*10^-9"
+    },
+    {
+      "candidate_id": "47e980dd0844e94b3b59bea378d28ba0d729c93883012fd89e95c3f97012c213",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!R81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(R79-R80)*R76*10^-9"
+    },
+    {
+      "candidate_id": "082e26e4b023e1e9d161738f2b804a58b5dbd6615c8faadeb25c1c600e96fbb4",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!S81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(S79-S80)*S76*10^-9"
+    },
+    {
+      "candidate_id": "2c983d7e663d095b38817b1f32b78de17737abcb98733e1c444101a3acc668e1",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!T81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(T79-T80)*T76*10^-9"
+    },
+    {
+      "candidate_id": "69302c974292389a5cbb1896b27ff1525e90024767967648ce0c39439e1100a7",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!U81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(U79-U80)*U76*10^-9"
+    },
+    {
+      "candidate_id": "767c6f873510705251ab2277c094b216f91f90f4e4fb599e2e9f129eca289a11",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!V81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(V79-V80)*V76*10^-9"
+    },
+    {
+      "candidate_id": "6e27db2df7fa315b5d5e6f59da0cc1a59c69d333b43e9c4f0bca69203629a643",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!W81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(W79-W80)*W76*10^-9"
+    },
+    {
+      "candidate_id": "088d8f0797e414b0bfa642d76248b9899d1a3c86c3ba60e71459992b03212796",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!X81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(X79-X80)*X76*10^-9"
+    },
+    {
+      "candidate_id": "cc44ed56ed53568960313f5276e294683ffca95a03eb1ff5789836b0c77ce05c",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Y81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(Y79-Y80)*Y76*10^-9"
+    },
+    {
+      "candidate_id": "85e2d354645acb82df26fdb67c16b6fff8b541d0c77c652feacd96e58dc4197d",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Z81",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(Z79-Z80)*Z76*10^-9"
+    },
+    {
+      "candidate_id": "3a4c5112c5a085a44d9f9495f4eded855f692274e360bc2d0d20e5dac8a0c387",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AA81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AA79-AA80)*AA76*10^-9"
+    },
+    {
+      "candidate_id": "cbe657dce2e47238ffa16b05537e2fa2c688deef7ebb8fbd00bd864457a40465",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AB81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AB79-AB80)*AB76*10^-9"
+    },
+    {
+      "candidate_id": "48b3f23c6ba5e50d29a0804be49a89246c07d711edf904ecbb5b86f6a3e85082",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AC81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AC79-AC80)*AC76*10^-9"
+    },
+    {
+      "candidate_id": "44612606d36e8d279eca3889ec7159cbae888b5973d3ca09c324fe30cf591fa0",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AD81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AD79-AD80)*AD76*10^-9"
+    },
+    {
+      "candidate_id": "ac9b76c12854fd8b64186f84be03aa575ecda5e90d6bd34dfa605ea6826ac5fb",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AE81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AE79-AE80)*AE76*10^-9"
+    },
+    {
+      "candidate_id": "57368ad91816d1ab69f55f551bb237f57a7c41a76244fe475b258c913e2e6b23",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AF81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AF79-AF80)*AF76*10^-9"
+    },
+    {
+      "candidate_id": "6e9cc0613f3e8cc5c7a7f81509bf7119c7ab608809b51723546c02c8db89d67e",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AG81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AG79-AG80)*AG76*10^-9"
+    },
+    {
+      "candidate_id": "ef65b07e45d5614fe4a611178401f4c17a187702b753780c44de9b7504c654c8",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AH81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AH79-AH80)*AH76*10^-9"
+    },
+    {
+      "candidate_id": "752cf93260c69f8ee63aa0f4ccb7b2605acf52b2ad997f356755c33da0cf5817",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AI81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AI79-AI80)*AI76*10^-9"
+    },
+    {
+      "candidate_id": "87d1a1611a82ecbd2326e862f754268457d330c9e58c8133e0eb1c1ba9681975",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AJ81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AJ79-AJ80)*AJ76*10^-9"
+    },
+    {
+      "candidate_id": "21bfa0e20125e65d681a8ca956e7c7ae535759bf49279f0951bce89857d16f52",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AK81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.0686999874349078,
+      "status": "propose",
+      "suggested_formula": "=(AK79-AK80)*AK76*10^-9"
+    },
+    {
+      "candidate_id": "8180cc323b99e72f74ef4a353f2460543353c22f029400b2232799af5edcbeae",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!M81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(M79-M80)*M76*10^-9"
+    },
+    {
+      "candidate_id": "8f7e589b441f6baac8ea8d6123d6e70f6142c4037bcd1651f3925f5e11d57dce",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!N81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(N79-N80)*N76*10^-9"
+    },
+    {
+      "candidate_id": "5b20a241980869824a3eb97b01f8033fd9d2f2cf2284c901babbfb14d0386245",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!O81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(O79-O80)*O76*10^-9"
+    },
+    {
+      "candidate_id": "2f88c290e17186622ee4604ea582ed246a4462457bd999522325ff9f1a4dd999",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!P81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(P79-P80)*P76*10^-9"
+    },
+    {
+      "candidate_id": "6d6b7ca1c18619a9f452e9784176d46191c2c24ca60196e868acb4e04c114a88",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Q81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(Q79-Q80)*Q76*10^-9"
+    },
+    {
+      "candidate_id": "47e980dd0844e94b3b59bea378d28ba0d729c93883012fd89e95c3f97012c213",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!R81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(R79-R80)*R76*10^-9"
+    },
+    {
+      "candidate_id": "082e26e4b023e1e9d161738f2b804a58b5dbd6615c8faadeb25c1c600e96fbb4",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!S81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(S79-S80)*S76*10^-9"
+    },
+    {
+      "candidate_id": "2c983d7e663d095b38817b1f32b78de17737abcb98733e1c444101a3acc668e1",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!T81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(T79-T80)*T76*10^-9"
+    },
+    {
+      "candidate_id": "69302c974292389a5cbb1896b27ff1525e90024767967648ce0c39439e1100a7",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!U81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(U79-U80)*U76*10^-9"
+    },
+    {
+      "candidate_id": "767c6f873510705251ab2277c094b216f91f90f4e4fb599e2e9f129eca289a11",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!V81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(V79-V80)*V76*10^-9"
+    },
+    {
+      "candidate_id": "6e27db2df7fa315b5d5e6f59da0cc1a59c69d333b43e9c4f0bca69203629a643",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!W81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(W79-W80)*W76*10^-9"
+    },
+    {
+      "candidate_id": "088d8f0797e414b0bfa642d76248b9899d1a3c86c3ba60e71459992b03212796",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!X81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(X79-X80)*X76*10^-9"
+    },
+    {
+      "candidate_id": "cc44ed56ed53568960313f5276e294683ffca95a03eb1ff5789836b0c77ce05c",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Y81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(Y79-Y80)*Y76*10^-9"
+    },
+    {
+      "candidate_id": "85e2d354645acb82df26fdb67c16b6fff8b541d0c77c652feacd96e58dc4197d",
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Z81",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9036481155130365,
+      "runner_up_probability": 0.06768815998405325,
+      "status": "propose",
+      "suggested_formula": "=(Z79-Z80)*Z76*10^-9"
+    },
+    {
+      "candidate_id": "4c4ad8e5cc1f207e7f1b1903c2d9c8268b5be66c5d56cba75c619ee9a64385cc",
+      "case": "lcoe/annotation13",
+      "cell": "Offshore LCOE!O27",
+      "mode": "raw_only",
+      "outcome": "wrong",
+      "probability": 0.9251148736110055,
+      "runner_up_probability": 0.044021295279036754,
+      "status": "propose",
+      "suggested_formula": "=$D$11*O25*O26*$D$14"
+    },
+    {
+      "candidate_id": "4c4ad8e5cc1f207e7f1b1903c2d9c8268b5be66c5d56cba75c619ee9a64385cc",
+      "case": "lcoe/annotation13",
+      "cell": "Offshore LCOE!O27",
+      "mode": "keep_base_plus_raw",
+      "outcome": "wrong",
+      "probability": 0.9251148736110055,
+      "runner_up_probability": 0.044021295279036754,
+      "status": "propose",
+      "suggested_formula": "=$D$11*O25*O26*$D$14"
+    }
+  ],
+  "auditor_sha256": "9a1a6326873483c83d0d2c3c5bb756157ec203051059b29f5d3a468658fc69a8",
+  "changes_vs_raw": {
+    "added": {
+      "count": 0,
+      "outcomes": {},
+      "suggestions": []
+    },
+    "removed": {
+      "count": 78,
+      "outcomes": {
+        "correct": 31,
+        "wrong": 47
+      },
+      "suggestions": [
+        {
+          "case": "lcoe/annotation05",
+          "cell": "Offshore LCOE!Q27",
+          "formula": "=$D$11*Q25*Q26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AA27",
+          "formula": "=$D$11*AA25*AA26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AB27",
+          "formula": "=$D$11*AB25*AB26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AC27",
+          "formula": "=$D$11*AC25*AC26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AD27",
+          "formula": "=$D$11*AD25*AD26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AE27",
+          "formula": "=$D$11*AE25*AE26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AF27",
+          "formula": "=$D$11*AF25*AF26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AG27",
+          "formula": "=$D$11*AG25*AG26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AH27",
+          "formula": "=$D$11*AH25*AH26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AI27",
+          "formula": "=$D$11*AI25*AI26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AJ27",
+          "formula": "=$D$11*AJ25*AJ26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!AK27",
+          "formula": "=$D$11*AK25*AK26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!M27",
+          "formula": "=$D$11*M25*M26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!N27",
+          "formula": "=$D$11*N25*N26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!O27",
+          "formula": "=$D$11*O25*O26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!P27",
+          "formula": "=$D$11*P25*P26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!Q27",
+          "formula": "=$D$11*Q25*Q26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!R27",
+          "formula": "=$D$11*R25*R26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!S27",
+          "formula": "=$D$11*S25*S26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!T27",
+          "formula": "=$D$11*T25*T26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!U27",
+          "formula": "=$D$11*U25*U26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!V27",
+          "formula": "=$D$11*V25*V26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!W27",
+          "formula": "=$D$11*W25*W26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!X27",
+          "formula": "=$D$11*X25*X26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!Y27",
+          "formula": "=$D$11*Y25*Y26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation07",
+          "cell": "CCGT LCOE calc!Z27",
+          "formula": "=$D$11*Z25*Z26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AA81",
+          "formula": "=(AA79-AA80)*AA76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AB81",
+          "formula": "=(AB79-AB80)*AB76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AC81",
+          "formula": "=(AC79-AC80)*AC76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AD81",
+          "formula": "=(AD79-AD80)*AD76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AE81",
+          "formula": "=(AE79-AE80)*AE76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AF81",
+          "formula": "=(AF79-AF80)*AF76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AG81",
+          "formula": "=(AG79-AG80)*AG76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AH81",
+          "formula": "=(AH79-AH80)*AH76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AI81",
+          "formula": "=(AI79-AI80)*AI76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AJ81",
+          "formula": "=(AJ79-AJ80)*AJ76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!AK81",
+          "formula": "=(AK79-AK80)*AK76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!M81",
+          "formula": "=(M79-M80)*M76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!N81",
+          "formula": "=(N79-N80)*N76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!O81",
+          "formula": "=(O79-O80)*O76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!P81",
+          "formula": "=(P79-P80)*P76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!Q81",
+          "formula": "=(Q79-Q80)*Q76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!R81",
+          "formula": "=(R79-R80)*R76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!S81",
+          "formula": "=(S79-S80)*S76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!T81",
+          "formula": "=(T79-T80)*T76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!U81",
+          "formula": "=(U79-U80)*U76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!V81",
+          "formula": "=(V79-V80)*V76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!W81",
+          "formula": "=(W79-W80)*W76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!X81",
+          "formula": "=(X79-X80)*X76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!Y81",
+          "formula": "=(Y79-Y80)*Y76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation08",
+          "cell": "CCGT LCOE calc!Z81",
+          "formula": "=(Z79-Z80)*Z76*10^-9",
+          "outcome": "wrong"
+        },
+        {
+          "case": "lcoe/annotation09",
+          "cell": "CCGT LCOE calc!N27",
+          "formula": "=$D$11*N25*N26*$D$14",
+          "outcome": "correct"
+        },
+        {
+          "case": "lcoe/annotation13",
+          "cell": "Offshore LCOE!O27",
+          "formula": "=$D$11*O25*O26*$D$14",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_01",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_01",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_02",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_02",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_03",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_03",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_04",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_04",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_05",
+          "cell": "Cash Flow Budget!B56",
+          "formula": "=B26-B52",
+          "outcome": "correct"
+        },
+        {
+          "case": "multisource/ms01_05",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_05",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_06",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_06",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_07",
+          "cell": "Cash Flow Budget!B56",
+          "formula": "=B26-B52",
+          "outcome": "correct"
+        },
+        {
+          "case": "multisource/ms01_07",
+          "cell": "Cash Flow Budget!H58",
+          "formula": "=G58+H56",
+          "outcome": "correct"
+        },
+        {
+          "case": "multisource/ms01_07",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_07",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_07",
+          "cell": "Cash Flow Budget!N56",
+          "formula": "=N26-N52",
+          "outcome": "correct"
+        },
+        {
+          "case": "multisource/ms01_08",
+          "cell": "Cash Flow Budget!B56",
+          "formula": "=B26-B52",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_08",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_08",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_09",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_09",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_10",
+          "cell": "Cash Flow Budget!N26",
+          "formula": "=SUM(N10:N25)",
+          "outcome": "wrong"
+        },
+        {
+          "case": "multisource/ms01_10",
+          "cell": "Cash Flow Budget!N52",
+          "formula": "=SUM(N30:N51)",
+          "outcome": "wrong"
+        }
+      ]
+    },
+    "shared": {
+      "count": 0,
+      "outcomes": {},
+      "suggestions": []
+    }
+  },
+  "final_validation_eligible": false,
+  "integer_count_checks": 7455,
+  "prediction_lock_sha256": "9ae88160835d65cfb1a9d82c499934154d4434919db6ac5bd561eb94e3029d89",
+  "score_sha256": "fd5075ff7cb4b74ef28d2a83a9b2a5b1b3b5d6e572fe86f57fa17b79f9852a70"
+}

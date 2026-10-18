@@ -1,0 +1,141 @@
+{
+  "total_count": 47,
+  "incomplete_results": false,
+  "candidates": [
+    {
+      "repo": "veb86/fpspreadsheet",
+      "sha": "46b1a458b88d82b1e351fff2580d022082ee8589",
+      "url": "https://github.com/veb86/fpspreadsheet/commit/46b1a458b88d82b1e351fff2580d022082ee8589",
+      "message": "fpspreadsheet: Fix formulas with general UTF8 sheet names in xlsx\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn/components/fpspreadsheet@8942 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "parents": [
+        "69cb2657436adfa61213e7201bd508a6fae627bd"
+      ]
+    },
+    {
+      "repo": "skalogryz/chelper",
+      "sha": "5b51e855961e7b34c4276ec5358f9860db38cf5a",
+      "url": "https://github.com/skalogryz/chelper/commit/5b51e855961e7b34c4276ec5358f9860db38cf5a",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.",
+      "parents": [
+        "313cc879aa20f576fb5fe28ee35d4e17196a6a6d"
+      ]
+    },
+    {
+      "repo": "cutec-chris/richmemo",
+      "sha": "185982bbdbf59b724eae1bacccc3fdc5acf54941",
+      "url": "https://github.com/cutec-chris/richmemo/commit/185982bbdbf59b724eae1bacccc3fdc5acf54941",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.",
+      "parents": [
+        "ced0e96636bd3158ef36963df45ffec45fb9a6a0"
+      ]
+    },
+    {
+      "repo": "MarkPflug/Sylvan.Data.Excel",
+      "sha": "9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+      "url": "https://github.com/MarkPflug/Sylvan.Data.Excel/commit/9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+      "message": "Beta 2 (#1)\n\n* Fix formula reading code.\r\n* Clean up and fix unit tests.\r\n* Fix worksheet names for xlsx\r\n* Fix formatting for xlsx.\r\n* Add github action to build and test.\r\n* Disable tests requiring external data.\r\n* fix file casing for linux.",
+      "parents": [
+        "79b41cf9c9827091c936f0403d4658f44075b329"
+      ]
+    },
+    {
+      "repo": "tcs-ulli/fpspreadsheet",
+      "sha": "623688ec2de566dff5833fc8ab4e5462ca8c1637",
+      "url": "https://github.com/tcs-ulli/fpspreadsheet/commit/623688ec2de566dff5833fc8ab4e5462ca8c1637",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.",
+      "parents": [
+        "df1eae69109be66ff356bb0ce43473487908ad51"
+      ]
+    },
+    {
+      "repo": "pedroc191/xlsx-style-formula",
+      "sha": "9eccd226495c9bb6b556e0e15eb0bf022051867f",
+      "url": "https://github.com/pedroc191/xlsx-style-formula/commit/9eccd226495c9bb6b556e0e15eb0bf022051867f",
+      "message": "Fix Formula XLSX",
+      "parents": [
+        "0aa4fd9d14351f5f316d0c32d9c8e1ab0b64b797"
+      ]
+    },
+    {
+      "repo": "veb86/fpspreadsheet",
+      "sha": "13580434348288379f477acadc70175d22de119f",
+      "url": "https://github.com/veb86/fpspreadsheet/commit/13580434348288379f477acadc70175d22de119f",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn/components/fpspreadsheet@4058 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "parents": [
+        "84e47035c3a38398b2638d99147a017ced1a448c"
+      ]
+    },
+    {
+      "repo": "cuba-platform/yarg",
+      "sha": "e5e562bc1c7a764a5b9990ec0bb5a3e5f089f8c0",
+      "url": "https://github.com/cuba-platform/yarg/commit/e5e562bc1c7a764a5b9990ec0bb5a3e5f089f8c0",
+      "message": "Fix formula  issue with empty cells in xlsx",
+      "parents": [
+        "0c1f9cd4be3c552eff308db1f7f220967934a485"
+      ]
+    },
+    {
+      "repo": "cuba-platform/yarg",
+      "sha": "0c1f9cd4be3c552eff308db1f7f220967934a485",
+      "url": "https://github.com/cuba-platform/yarg/commit/0c1f9cd4be3c552eff308db1f7f220967934a485",
+      "message": "Fix formula  issue with empty cells in xlsx",
+      "parents": [
+        "fdbdb631756d0793e5cc3a25cf4e6d7dffe395ce"
+      ]
+    },
+    {
+      "repo": "svn2github/lazarus-ccr",
+      "sha": "beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "url": "https://github.com/svn2github/lazarus-ccr/commit/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn@4058 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "parents": [
+        "34ec8774147a573768a6f58b9b11aad84603d703"
+      ]
+    },
+    {
+      "repo": "krisfremen/lazarus-ccr",
+      "sha": "beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "url": "https://github.com/krisfremen/lazarus-ccr/commit/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn@4058 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "parents": [
+        "34ec8774147a573768a6f58b9b11aad84603d703"
+      ]
+    },
+    {
+      "repo": "jiagangzhang/myownsync",
+      "sha": "dff76f6d912a1a2603460d5afe607e795d68b841",
+      "url": "https://github.com/jiagangzhang/myownsync/commit/dff76f6d912a1a2603460d5afe607e795d68b841",
+      "message": "split_xlsx.py fix bug,  add sheet title, and use data_only mode to fix formula value issue. pip installed scrapy on venv py27",
+      "parents": [
+        "dbd469ea4a78ed40c78d6464eaa285c2a75b7901"
+      ]
+    },
+    {
+      "repo": "skalogryz/chelper",
+      "sha": "6ba74bd3fe137eba79399579663a4e7c25083e8d",
+      "url": "https://github.com/skalogryz/chelper/commit/6ba74bd3fe137eba79399579663a4e7c25083e8d",
+      "message": "fpspreadsheet: Fix formulas from prev sheet overrunning other formulas in sheet, xlsx issue (SharedFormulaBase list must be reset for each sheet) - see http://forum.lazarus.freepascal.org/index.php/topic,35903.0.html)",
+      "parents": [
+        "9a7eb024bf48357236397f38ce91f7b523c0f1a1"
+      ]
+    },
+    {
+      "repo": "Gh0st0ne/LDAS",
+      "sha": "f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+      "url": "https://github.com/Gh0st0ne/LDAS/commit/f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+      "message": "Update template_taini_worksheet_laser.xlsx\n\nFix formulas to keep accurate trial-counts when any box might be empty. Add extra guidance-comments. Specify how STIM= setting should be used to define \"atypical\" blocks of trials, such as audio-stimulus delivery.",
+      "parents": [
+        "5eab71c50f579611f6a1709d5a00ebd22e993834"
+      ]
+    },
+    {
+      "repo": "LibreOffice/core",
+      "sha": "fcd96df8f648439ea191d8c2070e8b21ff0b1001",
+      "url": "https://github.com/LibreOffice/core/commit/fcd96df8f648439ea191d8c2070e8b21ff0b1001",
+      "message": "tdf#113013 XLSX import: fix \"Formula is\" type conditional formatting\n\nrule when the formula contains a reference to another worksheet.\n\nChange-Id: I873fad97a88df64e885fef20d4259ef6bfeaa06b\nReviewed-on: https://gerrit.libreoffice.org/c/core/+/108850\nTested-by: Jenkins\nTested-by: László Németh <nemeth@numbertext.org>\nReviewed-by: László Németh <nemeth@numbertext.org>",
+      "parents": [
+        "b4b7e92cbf5a212cc1c648af86df2dee364d48c8"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "role": "Pinned historical correction lineage; no workbook or patch acquisition",
+  "utc": "2026-10-18T12:04:31.398939+00:00",
+  "records": [
+    {
+      "repo": "ECB2020/Hobyah",
+      "commit_sha": "a6c7cd441ff1aca4915e8bc2b61d719643927cac",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/ECB2020/Hobyah/git/commits/a6c7cd441ff1aca4915e8bc2b61d719643927cac",
+          "status": 200,
+          "response_bytes": 2245,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/ECB2020__Hobyah/commit.json",
+          "saved_bytes": 540,
+          "saved_sha256": "fc53c5acb90bd6b4afe0d6cdc72faf6730b95052f1863aa9da633ca05574de5d"
+        },
+        {
+          "url": "https://api.github.com/repos/ECB2020/Hobyah/git/commits/7fd04102210d9d830ff23b497b8ce20f8e5dc215",
+          "status": 200,
+          "response_bytes": 2611,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/ECB2020__Hobyah/parent.json",
+          "saved_bytes": 540,
+          "saved_sha256": "4bbda8b400485bf602ab503bd14d1752652bc08a100ab13762cf7dbba8808790"
+        },
+        {
+          "url": "https://api.github.com/repos/ECB2020/Hobyah/git/trees/29aa18c055861ca3e0a188774a6fb4eb3f87317f?recursive=1",
+          "status": 200,
+          "response_bytes": 49619,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/ECB2020__Hobyah/before.json",
+          "saved_bytes": 61093,
+          "saved_sha256": "f364230fa9b6e4fc00bd204d0fa4a5c923ae2f346b70b55b3b4d835b5326cd40"
+        },
+        {
+          "url": "https://api.github.com/repos/ECB2020/Hobyah/git/trees/907f37343ebc88bd0a08b1194fae09aba5067f8d?recursive=1",
+          "status": 200,
+          "response_bytes": 49619,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/ECB2020__Hobyah/after.json",
+          "saved_bytes": 61093,
+          "saved_sha256": "92440f556d085018307a7bea9231fef0e912512c6896dce9bd14552d941c73f2"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "7fd04102210d9d830ff23b497b8ce20f8e5dc215",
+      "before_workbooks": 2,
+      "after_workbooks": 2,
+      "changed_workbook_paths": [
+        {
+          "path": "slug-flow-quadratics.ods",
+          "before_sha": "6169e5061a9d225317871511dbc17a7a7a78c1cf",
+          "after_sha": "76a6c72277d064b6e59331e33659e9ce43344df2",
+          "before_bytes": 231364,
+          "after_bytes": 202784
+        },
+        {
+          "path": "slug-flow-quadratics.xlsx",
+          "before_sha": "ad8314387ae589ad7186296db29b32ac9ccd943c",
+          "after_sha": "0e36540c9817f565ae5c00c17d8b94c438db7d65",
+          "before_bytes": 228582,
+          "after_bytes": 180101
+        }
+      ],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "CASPER-Baylor/VDRIAD",
+      "commit_sha": "220061c408beb0b2b9c7d686d4431a36e1d7bc56",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/CASPER-Baylor/VDRIAD/git/commits/220061c408beb0b2b9c7d686d4431a36e1d7bc56",
+          "status": 200,
+          "response_bytes": 1341,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/CASPER-Baylor__VDRIAD/commit.json",
+          "saved_bytes": 558,
+          "saved_sha256": "994cfaddf1e5e6907690776330468f6677aa8154588bf4069f7aca299d1f16bf"
+        },
+        {
+          "url": "https://api.github.com/repos/CASPER-Baylor/VDRIAD/git/commits/b577c240320cd52c30dbed94c650bc79f9ed4a90",
+          "status": 200,
+          "response_bytes": 1117,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/CASPER-Baylor__VDRIAD/parent.json",
+          "saved_bytes": 558,
+          "saved_sha256": "8c75b585fca71f6896499e570bd2004dbbeafb444be02eb432c48577f23c92cc"
+        },
+        {
+          "url": "https://api.github.com/repos/CASPER-Baylor/VDRIAD/git/trees/8a5715f2c1fa92666e037448ee76bfb6be8f0c9c?recursive=1",
+          "status": 200,
+          "response_bytes": 7383,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/CASPER-Baylor__VDRIAD/before.json",
+          "saved_bytes": 9065,
+          "saved_sha256": "47f5444ad6428d09534020d82a6b4f7d2c78282c7985f228fb1dfa96febc3177"
+        },
+        {
+          "url": "https://api.github.com/repos/CASPER-Baylor/VDRIAD/git/trees/6d773748bcef4474ecc11b8271a911c0624190e4?recursive=1",
+          "status": 200,
+          "response_bytes": 7383,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/CASPER-Baylor__VDRIAD/after.json",
+          "saved_bytes": 9065,
+          "saved_sha256": "8700d5c95c7eccf7a9e22ae2d914ccf01732bb5e2805d7aeb3335feae2f025ec"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "b577c240320cd52c30dbed94c650bc79f9ed4a90",
+      "before_workbooks": 3,
+      "after_workbooks": 3,
+      "changed_workbook_paths": [
+        {
+          "path": "data/Couedel_PhysRevE_105_015210_fig08_sheathHeight.xlsx",
+          "before_sha": "3ed90571615b877f52dc89fd772b4b97770df161",
+          "after_sha": "62124db110366eb6e724cb06fe6c8f31430cd1b3",
+          "before_bytes": 9373,
+          "after_bytes": 9376
+        }
+      ],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "mirontoli/cv-500",
+      "commit_sha": "48a359e080afb4d793994be3da225d509a683b73",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/mirontoli/cv-500/git/commits/48a359e080afb4d793994be3da225d509a683b73",
+          "status": 200,
+          "response_bytes": 1122,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/mirontoli__cv-500/commit.json",
+          "saved_bytes": 546,
+          "saved_sha256": "3b1b6bc60cc6ff249e7f056fbfd16a2f92412cf18ebd456e1c6723b4e5accab5"
+        },
+        {
+          "url": "https://api.github.com/repos/mirontoli/cv-500/git/commits/562e569eae04263ca01ef41c109c2a8b98a1c7ff",
+          "status": 200,
+          "response_bytes": 1107,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/mirontoli__cv-500/parent.json",
+          "saved_bytes": 546,
+          "saved_sha256": "ff1634f3c4ef4f87368d3e5195a49d48c0081acf8289e77e75c953a907db48a7"
+        },
+        {
+          "url": "https://api.github.com/repos/mirontoli/cv-500/git/trees/7725be4b61642263187f6b256e6adf3823ec93d5?recursive=1",
+          "status": 200,
+          "response_bytes": 1933,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/mirontoli__cv-500/before.json",
+          "saved_bytes": 2301,
+          "saved_sha256": "390e0297f642089299c876dad8edb26d0cbbf427a5a1a3bccbd9a7a26be45af9"
+        },
+        {
+          "url": "https://api.github.com/repos/mirontoli/cv-500/git/trees/d2332e9d943f0696bea308a57b88c729e1f993cf?recursive=1",
+          "status": 200,
+          "response_bytes": 1933,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/mirontoli__cv-500/after.json",
+          "saved_bytes": 2301,
+          "saved_sha256": "f54bfb3bc7935c415fa2229c5f4203289538675665ab87a49631d370b06c17d5"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "562e569eae04263ca01ef41c109c2a8b98a1c7ff",
+      "before_workbooks": 2,
+      "after_workbooks": 2,
+      "changed_workbook_paths": [
+        {
+          "path": "data/500samah-values.xlsx",
+          "before_sha": "d8f73fa99176ec227cf91c14adf70db4c2d5c9b7",
+          "after_sha": "b3eb6b881b1f6506e1c009ff5b26299a370fbf66",
+          "before_bytes": 285065,
+          "after_bytes": 284679
+        }
+      ],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "Gh0st0ne/LDAS",
+      "commit_sha": "f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/commits/f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+          "status": 200,
+          "response_bytes": 1330,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/Gh0st0ne__LDAS/commit.json",
+          "saved_bytes": 537,
+          "saved_sha256": "efcfc81ffaf9ad40317f4a779ff75710f516cf7feaa50ec9cf9f16cd60e70345"
+        },
+        {
+          "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/commits/5eab71c50f579611f6a1709d5a00ebd22e993834",
+          "status": 200,
+          "response_bytes": 1162,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/Gh0st0ne__LDAS/parent.json",
+          "saved_bytes": 537,
+          "saved_sha256": "33521018f5771c2dd5d27213d46e1df19d4021b4e971c321f9c9fa55b5b29568"
+        },
+        {
+          "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/trees/05d9d491dd8b2544fc2e6864386cdbcdd569c91d?recursive=1",
+          "status": 200,
+          "response_bytes": 161874,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/Gh0st0ne__LDAS/before.json",
+          "saved_bytes": 203095,
+          "saved_sha256": "4ea493257b79606dff47150251bfd79e5b126bb626b9dc8e2ebb26df016cd39f"
+        },
+        {
+          "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/trees/dbe1e9d3415ebbb49f0e364a732be46da6687cfa?recursive=1",
+          "status": 200,
+          "response_bytes": 161874,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/Gh0st0ne__LDAS/after.json",
+          "saved_bytes": 203095,
+          "saved_sha256": "67caaec524eb2f1a311c5a1751929592a739c51004e3c1d5d1f4f566e6bbbb5a"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "5eab71c50f579611f6a1709d5a00ebd22e993834",
+      "before_workbooks": 1,
+      "after_workbooks": 1,
+      "changed_workbook_paths": [
+        {
+          "path": "docs/templates/template_taini_worksheet_laser.xlsx",
+          "before_sha": "a7130e0b7efcabf8f8698e1c4bc4dc6432e5c585",
+          "after_sha": "7d20714a0868d40abc804669c4a9d82ebc3891f7",
+          "before_bytes": 15077,
+          "after_bytes": 24630
+        }
+      ],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "New-College-of-Florida/Planned-Parenthood-Drug-Inventory",
+      "commit_sha": "d7f90d19dc8dd65e3fd352acee7406453af413a3",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/New-College-of-Florida/Planned-Parenthood-Drug-Inventory/git/commits/d7f90d19dc8dd65e3fd352acee7406453af413a3",
+          "status": 200,
+          "response_bytes": 1341,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/New-College-of-Florida__Planned-Parenthood-Drug-Inventory/commit.json",
+          "saved_bytes": 666,
+          "saved_sha256": "74647c7b43481e3f0c967477fa766bdfe61e5cf0f6ae4421e159ed0fe640fdfa"
+        },
+        {
+          "url": "https://api.github.com/repos/New-College-of-Florida/Planned-Parenthood-Drug-Inventory/git/commits/4066b5fc9b1c485562408ad44a961edd492c0f96",
+          "status": 200,
+          "response_bytes": 1326,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/New-College-of-Florida__Planned-Parenthood-Drug-Inventory/parent.json",
+          "saved_bytes": 666,
+          "saved_sha256": "20f7da3d57b9e5e3b420b1f8dad6ac1b90cb59a86f1363212d6e14f0f8bf2796"
+        },
+        {
+          "url": "https://api.github.com/repos/New-College-of-Florida/Planned-Parenthood-Drug-Inventory/git/trees/86ecbc41b1c9022337398d0f1fb64ba2b7cac587?recursive=1",
+          "status": 200,
+          "response_bytes": 100508,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/New-College-of-Florida__Planned-Parenthood-Drug-Inventory/before.json",
+          "saved_bytes": 120908,
+          "saved_sha256": "223f25ca33a45634bd8862352eecc60433745a9d20b27eeaddb87f29043a9a23"
+        },
+        {
+          "url": "https://api.github.com/repos/New-College-of-Florida/Planned-Parenthood-Drug-Inventory/git/trees/681db813dc2537bf897a5878270bcd581d9dbb09?recursive=1",
+          "status": 200,
+          "response_bytes": 100508,
+          "saved_path": "source_discovery/historical_fix_lineage_dev25_20261018/New-College-of-Florida__Planned-Parenthood-Drug-Inventory/after.json",
+          "saved_bytes": 120908,
+          "saved_sha256": "8aa4cda1ccba808cf850a92a82323dcc89d96aac7c0e02a3816632bed52e08b6"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "4066b5fc9b1c485562408ad44a961edd492c0f96",
+      "before_workbooks": 8,
+      "after_workbooks": 8,
+      "changed_workbook_paths": [
+        {
+          "path": "data/20141021/Purchase Log.xls",
+          "before_sha": "de8c5c5efacbedeaee0643ea24dabae57aefb41a",
+          "after_sha": "fc270c0670f2e25b4731670d87ac0a9b7791d7dd",
+          "before_bytes": 41472,
+          "after_bytes": 40960
+        },
+        {
+          "path": "data/init/manager.xls",
+          "before_sha": "4ecf3bd35a8eab6a2cc1785fe389bbfc503fbd2e",
+          "after_sha": "a986d75e715f5a4e6f80264e56d1940e87536bea",
+          "before_bytes": 6144,
+          "after_bytes": 6656
+        }
+      ],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    }
+  ],
+  "search_receipt_sha256": "03e0f880a76e716016069e9c8aa7b0746d112bd6f2a9fd2f726c52572321a1b9",
+  "script_sha256": "8e565dd3f267fd9b31587502d3ddcf6bbaa6d73aac5c131b684a1da5cb9cd8f0",
+  "lineage_client_sha256": "31a898896f5521485016552dde3aa9615aa2355502a94dc3b857685112ba95a7",
+  "accepted_sources": 0,
+  "accepted_families": 0,
+  "verified_natural_truth_pairs": 0
+}

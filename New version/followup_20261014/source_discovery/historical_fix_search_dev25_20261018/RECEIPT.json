@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-18T12:03:46.483944+00:00",
+  "role": "Correction provenance metadata only; messages are not formula truth",
+  "records": [
+    {
+      "query": "\"fix formula\" \"xlsx\" committer-date:<2024-01-01",
+      "url": "https://api.github.com/search/commits?q=%22fix+formula%22+%22xlsx%22+committer-date%3A%3C2024-01-01&per_page=15",
+      "workbook_bodies_acquired": false,
+      "status": 200,
+      "rate_limit_remaining": "9",
+      "ok": true,
+      "response_bytes": 97694,
+      "saved_path": "source_discovery/historical_fix_search_dev25_20261018/search_01.json",
+      "saved_sha256": "76dac038dcd33f6d600c061fbb23bbfc9e92d7629026b642a37895af83bdc5a8",
+      "returned_candidates": 15,
+      "total_count": 47
+    },
+    {
+      "query": "\"corrected\" \"spreadsheet\" committer-date:<2024-01-01",
+      "url": "https://api.github.com/search/commits?q=%22corrected%22+%22spreadsheet%22+committer-date%3A%3C2024-01-01&per_page=15",
+      "workbook_bodies_acquired": false,
+      "status": 200,
+      "rate_limit_remaining": "8",
+      "ok": true,
+      "response_bytes": 129788,
+      "saved_path": "source_discovery/historical_fix_search_dev25_20261018/search_02.json",
+      "saved_sha256": "131f5d1df647b224b639ac9e8f5dad53c86d1f0230a90babd9f7ba2ceb77c504",
+      "returned_candidates": 15,
+      "total_count": 137826
+    },
+    {
+      "query": "\"formula error\" \"xls\" committer-date:<2024-01-01",
+      "url": "https://api.github.com/search/commits?q=%22formula+error%22+%22xls%22+committer-date%3A%3C2024-01-01&per_page=15",
+      "workbook_bodies_acquired": false,
+      "status": 200,
+      "rate_limit_remaining": "7",
+      "ok": true,
+      "response_bytes": 171430,
+      "saved_path": "source_discovery/historical_fix_search_dev25_20261018/search_03.json",
+      "saved_sha256": "b028d7ab4aa4a40ac6d41b8d3c05511bda97507c00a81f87c72a0a79c88ced52",
+      "returned_candidates": 15,
+      "total_count": 33
+    },
+    {
+      "query": "\"wrong formula\" \"excel\" committer-date:<2024-01-01",
+      "url": "https://api.github.com/search/commits?q=%22wrong+formula%22+%22excel%22+committer-date%3A%3C2024-01-01&per_page=15",
+      "workbook_bodies_acquired": false,
+      "status": 200,
+      "rate_limit_remaining": "6",
+      "ok": true,
+      "response_bytes": 162300,
+      "saved_path": "source_discovery/historical_fix_search_dev25_20261018/search_04.json",
+      "saved_sha256": "e75b0723ccc08a90403b33ca601537a531e155e1c57d58af5a24d4e273154706",
+      "returned_candidates": 12,
+      "total_count": 12
+    }
+  ],
+  "workbook_bodies_acquired": false,
+  "verified_natural_truth_pairs": 0,
+  "accepted_sources": 0,
+  "accepted_families": 0,
+  "script_sha256": "29ce4954f034b22f6286c802b79337301a83f35e1029e245e8e5fada59806f01"
+}
