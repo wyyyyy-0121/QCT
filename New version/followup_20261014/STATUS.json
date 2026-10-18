@@ -2,7 +2,7 @@
   "goal_status": "active",
   "resumed_on": "2026-10-18",
   "resume_reason": "User requested continuation after verified GitHub upload",
-  "previous_upload_commit": "3bf73bb138cf777608f39b1245cf49b2486946c4",
+  "previous_upload_commit": "0d3c1f0f6eac177e55310b6c8da69dea955caa92",
   "git_branch": "research/hybridguard-followup",
   "final_validation_complete": false,
   "public_candidate_audit_dev7": {
@@ -50,7 +50,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 173,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -201,7 +201,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev17 three public development source labels and complete transfer experiment awaiting verified upload",
+  "new_work_pushed_scope": "dev17 three public development source labels, complete transfer run, replay and audits independently verified on GitHub",
   "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -559,6 +559,7 @@
     "full_predictions_replayed": 30,
     "source_originals_unchanged": true,
     "main_candidate_adopted": false,
-    "final_validation_eligible": false
+    "final_validation_eligible": false,
+    "upload_receipt": "qa/MULTISOURCE_DEV17_UPLOAD_RECEIPT_20261018.json"
   }
 }
