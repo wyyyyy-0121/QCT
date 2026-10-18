@@ -2,7 +2,7 @@
   "goal_status": "active",
   "resumed_on": "2026-10-18",
   "resume_reason": "User requested continuation after verified GitHub upload",
-  "previous_upload_commit": "ce9c5f08ea0992ce5c5b2e8f9bb2f03f8cd64250",
+  "previous_upload_commit": "e1f57c3c43e5730228390b96d6323e6afe151888",
   "git_branch": "research/hybridguard-followup",
   "final_validation_complete": false,
   "public_candidate_audit_dev7": {
@@ -50,7 +50,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 196,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -1096,6 +1096,7 @@
         "sha256": "1b927385e55876b8979dbe8f1086e31c8410999c47eab2beb84c5000c8bce65e"
       }
     },
-    "upload_state": "source and features verified ce9c5f0; results to push"
+    "upload_state": "complete; independently verified e1f57c3c43e5730228390b96d6323e6afe151888",
+    "upload_receipt": "qa/SIGNED_LEARNING_DEV19_UPLOAD_RECEIPT_20261018.json"
   }
 }
