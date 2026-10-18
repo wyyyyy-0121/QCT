@@ -7,9 +7,9 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-RUNS = ROOT / 'e3_contract_v2/outputs'
-EXPECTED = ROOT / 'e3_contract_v2/scoring/expected.json'
-LOCK = ROOT / 'e3_contract_v2/input_lock.json'
+RUNS = ROOT / 'e3_contract_v3/outputs'
+EXPECTED = ROOT / 'e3_contract_v3/scoring/expected.json'
+LOCK = ROOT / 'e3_contract_v3/input_lock.json'
 
 
 def sha(path):

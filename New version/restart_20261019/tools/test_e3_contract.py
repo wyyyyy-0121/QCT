@@ -16,6 +16,13 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(out['suggested_formula'], '=B2/C2')
         self.assertFalse(out['candidate_diagnostics'][0]['matches'])
 
+    def test_opposite_contracts_reverse_candidate_selection(self):
+        candidates = ['=B2/C2', '=B2*(2-C2)']
+        ratio = select(self.request(constraints=['q/d'], candidates=candidates), '=B2*(3-C2)/2')
+        affine = select(self.request(constraints=['q*(2-d)'], candidates=candidates), '=B2*(3-C2)/2')
+        self.assertEqual(ratio['suggested_formula'], '=B2/C2')
+        self.assertEqual(affine['suggested_formula'], '=B2*(2-C2)')
+
     def test_missing_and_conflicting_relations_abstain(self):
         for constraints in ([], ['q/d', 'q*(2-d)']):
             self.assertEqual(select(self.request(constraints=constraints), '=B2*(2-C2)')['status'], 'abstain')

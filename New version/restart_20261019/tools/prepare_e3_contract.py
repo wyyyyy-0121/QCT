@@ -13,7 +13,7 @@ import sympy
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / 'source_evidence'
 EPA = EVIDENCE / 'raw/epa_pairs/xlsx_export/oxidizers_before.xlsx'
-OUT = ROOT / 'e3_contract_v2'
+OUT = ROOT / 'e3_contract_v3'
 
 
 def sha(path):
@@ -50,14 +50,14 @@ def main():
         sheet.title = 'Model'
         sheet['B2'] = 10
         sheet['C2'] = 1
-        sheet['D2'] = '=B2*(2-C2)'
+        sheet['D2'] = '=B2*(3-C2)/2'
         book.save(micro)
         book.close()
     else:
         book = load_workbook(micro, data_only=False, read_only=True)
         try:
             sheet = book['Model']
-            if (sheet['B2'].value, sheet['C2'].value, sheet['D2'].value) != (10, 1, '=B2*(2-C2)'):
+            if (sheet['B2'].value, sheet['C2'].value, sheet['D2'].value) != (10, 1, '=B2*(3-C2)/2'):
                 raise SystemExit('Existing partial counterfactual does not match preregistration')
         finally:
             book.close()
