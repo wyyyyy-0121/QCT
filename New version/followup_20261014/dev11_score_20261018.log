@@ -1,0 +1,205 @@
+{
+  "regression": {
+    "dev6": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    },
+    "dev11": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    }
+  },
+  "stress": {
+    "dev6": {
+      "proposals": 25,
+      "correct": 25,
+      "wrong": 0,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.3424657534246575
+    },
+    "dev11": {
+      "proposals": 25,
+      "correct": 25,
+      "wrong": 0,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.3424657534246575
+    }
+  },
+  "tradeoff": {
+    "dev6": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    },
+    "dev11": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    }
+  },
+  "crossdomain": {
+    "dev6": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "dev11": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    }
+  },
+  "adversarial": {
+    "dev6": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    },
+    "dev11": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    }
+  }
+}
+[
+  {
+    "id": "public01",
+    "status": "inference_complete_unscored",
+    "rows": 374,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public02",
+    "status": "inference_complete_unscored",
+    "rows": 752,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public03",
+    "status": "inference_complete_unscored",
+    "rows": 116,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public04",
+    "status": "inference_complete_unscored",
+    "rows": 1052,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 1,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public05",
+    "status": "inference_failed",
+    "rows": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public06",
+    "status": "inference_failed",
+    "rows": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public07",
+    "status": "inference_failed",
+    "rows": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public08",
+    "status": "inference_complete_unscored",
+    "rows": 1349,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public09",
+    "status": "inference_complete_unscored",
+    "rows": 12,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public10",
+    "status": "inference_complete_unscored",
+    "rows": 2973,
+    "blocked_proposals": 0,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  },
+  {
+    "id": "public11",
+    "status": "inference_complete_unscored",
+    "rows": 10219,
+    "blocked_proposals": 17,
+    "final_validation_eligible": false,
+    "remaining_proposals": 0,
+    "precision": null,
+    "coverage": null
+  }
+]

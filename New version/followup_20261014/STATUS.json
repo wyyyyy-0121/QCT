@@ -49,14 +49,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 84,
+  "unit_test_count": 92,
   "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV10_PUBLIC_PIPELINE_REPORT_20261018.md",
+  "latest_report": "DEV11_AST_REPORT_20261018.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -70,7 +70,7 @@
   "dev5_adversarial_all_peer_wrong_misses": 480,
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
-  "upload_record_note": "dev9 experiment commit verified against remote; historical receipt in qa/DEV9_UPLOAD_RECEIPT_20261018.json",
+  "upload_record_note": "dev10 commit cdc005082b421b594f703ed16dffaaffcb8d2fe1 verified with git ls-remote on 2026-10-18; dev11 checkpoint pending upload",
   "latest_verified_remote_before_this_checkpoint": "4781019f1ba9d17519e51855b5a96ef10fa8b195",
   "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate",
   "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
@@ -201,8 +201,8 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev9 experiment checkpoint e88c293; receipt documentation commit follows",
-  "latest_verified_experiment_remote_commit": "e88c2937619dd4ea7a04706c12d618b5a1783119",
+  "new_work_pushed_scope": "dev11 AST gate checkpoint pending upload",
+  "latest_verified_experiment_remote_commit": "cdc005082b421b594f703ed16dffaaffcb8d2fe1",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
   "dev10_report": "DEV10_PUBLIC_PIPELINE_REPORT_20261018.md",
@@ -223,5 +223,70 @@
   "dev10_embedded_answer_isolation_verified": false,
   "dev10_gpu_used": false,
   "dev10_successful_worker_cpu_seconds": 40.512445978,
-  "dev10_original_acquisition_sha_verified": true
+  "dev10_original_acquisition_sha_verified": true,
+  "dev11_report": "DEV11_AST_REPORT_20261018.md",
+  "dev11_run": "development/selector_dev11_complete_ast_v1",
+  "dev11_replay": "qa/DEV11_REPLAY_20261018.json",
+  "dev11_cases": 118,
+  "dev11_replay_verified": true,
+  "dev11_legacy_proposals_changed": 0,
+  "dev11_public_blocked_unscored": 17,
+  "dev11_public_remaining_unscored": 1,
+  "dev11_results": {
+    "adversarial": {
+      "correct": 463,
+      "coverage": 0.7928082191780822,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "proposals": 467,
+      "wrong": 4
+    },
+    "crossdomain": {
+      "correct": 492,
+      "coverage": 1.0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "proposals": 492,
+      "wrong": 0
+    },
+    "regression": {
+      "correct": 13156,
+      "coverage": 0.7936297279362973,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "proposals": 13156,
+      "wrong": 0
+    },
+    "stress": {
+      "correct": 25,
+      "coverage": 0.3424657534246575,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "proposals": 25,
+      "wrong": 0
+    },
+    "tradeoff": {
+      "correct": 48,
+      "coverage": 1.0,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "proposals": 73,
+      "wrong": 25
+    }
+  },
+  "dev11_final_validation_eligible": false,
+  "dev11_runtime": {
+    "cpu_seconds": 94.696466315,
+    "gpu_used": false,
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "process_peak_rss_kib": 265280,
+    "python": "3.11.16",
+    "scope": "Legacy dev6 replay, workbook reload, AST gate; public upstream SG/FG excluded",
+    "wall_seconds": 94.7550350950005
+  }
 }
