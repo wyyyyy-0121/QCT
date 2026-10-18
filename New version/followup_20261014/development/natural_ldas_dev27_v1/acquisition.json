@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "version": "before",
+      "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/blobs/a7130e0b7efcabf8f8698e1c4bc4dc6432e5c585",
+      "expected_git_blob": "a7130e0b7efcabf8f8698e1c4bc4dc6432e5c585",
+      "ok": true,
+      "status": 200,
+      "path": "development/natural_ldas_dev27_v1/raw/before.xlsx",
+      "bytes": 15077,
+      "sha256": "8bf652abb09294852bed4221be0e4d3a40dd620e639343d4533dc5a12f4772a3"
+    },
+    {
+      "version": "after",
+      "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/blobs/7d20714a0868d40abc804669c4a9d82ebc3891f7",
+      "expected_git_blob": "7d20714a0868d40abc804669c4a9d82ebc3891f7",
+      "ok": true,
+      "status": 200,
+      "path": "development/natural_ldas_dev27_v1/raw/after.xlsx",
+      "bytes": 24630,
+      "sha256": "40e1dc09bb785115fe7a37e20c1dd016cb546da9d9288dd4f2780bd98c9eb60e"
+    }
+  ],
+  "role": "Explicitly excluded natural-error development source",
+  "final_validation_eligible": false,
+  "prior_correction_mechanism_metadata_exposed": true,
+  "preregistration_sha256": "63bed0df1742de57ac8c486fb6bff13fc6e7e84cb1ce644ff8785ffc4b15d7f4",
+  "license_sha256": "23ce6fa772c356924fcb89771f4e5d800fb1f24a9b4dc865461ad4b5393f3076",
+  "script_sha256": "40e0e44d611d187bca444ea513f84b32075815e5afee1d0a9438e6e6ec6064c9"
+}
