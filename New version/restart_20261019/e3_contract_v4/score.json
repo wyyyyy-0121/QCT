@@ -1,0 +1,58 @@
+{
+  "accepted_natural_sources": 0,
+  "all_eight_conditions_match_preregistered_expectations": true,
+  "conditions_scored": 8,
+  "expected_key_sha256": "9e58ad26722e8e1373716a8eda17566548b96a570c852ebb5685d416458645d4",
+  "input_lock_sha256": "725b457b81a822251614a45960476e02dabfed3f65eb463465361bd7e6f68a43",
+  "interpretation": "Prototype engineering pass only. Candidate selection under supplied constraints; no natural error accuracy, coverage, or model improvement claim.",
+  "multiple_rational_point_checks": [
+    {
+      "affine": "10",
+      "d": 1,
+      "equal": true,
+      "q": 10,
+      "ratio": "10"
+    },
+    {
+      "affine": "0",
+      "d": 2,
+      "equal": false,
+      "q": 10,
+      "ratio": "5"
+    },
+    {
+      "affine": "-9",
+      "d": 3,
+      "equal": false,
+      "q": 9,
+      "ratio": "3"
+    },
+    {
+      "affine": "-26",
+      "d": 4,
+      "equal": false,
+      "q": 13,
+      "ratio": "13/4"
+    }
+  ],
+  "natural_accuracy_claim": false,
+  "original_model_modified_or_scored": false,
+  "per_case_prediction_hashes_identical_1_8_workers": true,
+  "resource_measurements": {
+    "1": {
+      "child_cpu_seconds": 1.6899999999999997,
+      "sampled_peak_aggregate_rss_bytes": 84860928,
+      "speedup_vs_1_worker": null,
+      "throughput_cases_per_second": 3.9476633926630424,
+      "wall_seconds": 2.0265152330030105
+    },
+    "8": {
+      "child_cpu_seconds": 2.9599999999999995,
+      "sampled_peak_aggregate_rss_bytes": 665677824,
+      "speedup_vs_1_worker": 4.724334833621591,
+      "throughput_cases_per_second": 18.650083677370798,
+      "wall_seconds": 0.4289524990017526
+    }
+  },
+  "schema": "hybridguard-e3-independent-score-v1"
+}

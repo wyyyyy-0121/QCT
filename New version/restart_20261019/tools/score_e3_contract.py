@@ -7,9 +7,9 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-RUNS = ROOT / 'e3_contract_v3/outputs'
-EXPECTED = ROOT / 'e3_contract_v3/scoring/expected.json'
-LOCK = ROOT / 'e3_contract_v3/input_lock.json'
+RUNS = ROOT / 'e3_contract_v4/outputs'
+EXPECTED = ROOT / 'e3_contract_v4/scoring/expected.json'
+LOCK = ROOT / 'e3_contract_v4/input_lock.json'
 
 
 def sha(path):
@@ -25,6 +25,14 @@ def main():
         raise SystemExit('Frozen implementation changed after input lock')
     if sha(ROOT / 'tools/batch_runner.py') != lock['runner_sha256']:
         raise SystemExit('Frozen batch runner changed after input lock')
+    if sha(ROOT / 'tools/prepare_e3_contract.py') != lock['input_builder_sha256']:
+        raise SystemExit('Frozen input builder changed after input lock')
+    no_units = json.loads((LOCK.parent / 'requests/counter_none.json').read_text())
+    units_only = json.loads((LOCK.parent / 'requests/counter_units.json').read_text())
+    no_units.pop('workbook_sha256')
+    units_only.pop('workbook_sha256')
+    if no_units['constraints'] != units_only['constraints'] or no_units['symbols'] == units_only['symbols']:
+        raise SystemExit('Unit-only control does not differ by unit metadata alone')
     observed_hashes = {}
     summaries = {}
     for workers in (1, 8):
@@ -81,7 +89,7 @@ def main():
         'resource_measurements': summaries,
         'interpretation': 'Prototype engineering pass only. Candidate selection under supplied constraints; no natural error accuracy, coverage, or model improvement claim.',
     }
-    output = ROOT / 'e3_contract_v1/score.json'
+    output = LOCK.parent / 'score.json'
     if output.exists():
         raise SystemExit(f'Preserving existing score: {output}')
     output.write_text(json.dumps(report, sort_keys=True, indent=2) + '\n')

@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    "=B2*(2-C2)"
+  ],
+  "cell": "D2",
+  "constraints": [
+    "q/d"
+  ],
+  "references": {
+    "B2": "q",
+    "C2": "d"
+  },
+  "sheet": "Model",
+  "symbols": {
+    "d": {
+      "units": {}
+    },
+    "q": {
+      "units": {
+        "flow": 1
+      }
+    }
+  },
+  "workbook": "/home/ayaka/hybridguard/New version/restart_20261019/e3_contract_v4/workbooks/counterfactual.xlsx",
+  "workbook_sha256": "fa553348d94a0c797316d4a20ab7b4f3d349b6912402c8e4069b90dc114ee08d"
+}

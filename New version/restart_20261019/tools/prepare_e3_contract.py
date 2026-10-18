@@ -13,7 +13,7 @@ import sympy
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / 'source_evidence'
 EPA = EVIDENCE / 'raw/epa_pairs/xlsx_export/oxidizers_before.xlsx'
-OUT = ROOT / 'e3_contract_v3'
+OUT = ROOT / 'e3_contract_v4'
 
 
 def sha(path):
@@ -79,6 +79,7 @@ def main():
         raise SystemExit('EPA D36 formula differs from registered symbols')
 
     symbols = {'q': {'units': {'flow': 1}}, 'd': {'units': {}}}
+    no_unit_metadata = {'q': {'units': {}}, 'd': {'units': {}}}
     cases = [
         ('epa_none', EPA, epa_sheet, epa_cell,
          {"'Data Inputs'!B23": 'q', 'D34': 'd'}, symbols, [], [original, corrected],
@@ -87,7 +88,7 @@ def main():
          {"'Data Inputs'!B23": 'q', 'D34': 'd'}, symbols, ['q/d'], [original, corrected],
          {'guard': guard, 'inactive': inactive}, 'propose', corrected,
          'candidate_satisfies_explicit_relation'),
-        ('counter_none', micro, 'Model', 'D2', {'B2': 'q', 'C2': 'd'}, symbols, [],
+        ('counter_none', micro, 'Model', 'D2', {'B2': 'q', 'C2': 'd'}, no_unit_metadata, [],
          ['=B2/C2', '=B2*(2-C2)'], None, 'abstain', None, 'missing_business_relation'),
         ('counter_units', micro, 'Model', 'D2', {'B2': 'q', 'C2': 'd'}, symbols, [],
          ['=B2/C2', '=B2*(2-C2)'], None, 'abstain', None, 'missing_business_relation'),

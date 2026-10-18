@@ -1,0 +1,32 @@
+{
+  "counterfactual_workbook_sha256": "fa553348d94a0c797316d4a20ab7b4f3d349b6912402c8e4069b90dc114ee08d",
+  "created_utc": "2026-10-18T20:50:20.447846+00:00",
+  "environment": {
+    "openpyxl": "3.1.5",
+    "python": "3.11.16",
+    "sympy": "1.14.0"
+  },
+  "expected_sha256": "9e58ad26722e8e1373716a8eda17566548b96a570c852ebb5685d416458645d4",
+  "files": {
+    "external:epa_oxidizers_before.xlsx": "0acb06582e7f898b5bcbfe262b2f55294bd4b3a6d2eab63461f03c89ad86358c",
+    "requests/counter_affine.json": "f7c89d10ff063a93c42507105a579ffd089d3f14c6889b9783ab0e38f16252ba",
+    "requests/counter_conflict.json": "38c2f6f2374a50b063baebe18a444d523b391cd30e56155272831b65b8d10240",
+    "requests/counter_missing.json": "62a4b4334806eb8e23194b9dfa66e62a340316184feb7faf5c517f9513f8ada9",
+    "requests/counter_none.json": "9b048d2b9999328a7b1ccb3127e4a865bfdb15d61c1a8abc932cd7b373ea736d",
+    "requests/counter_ratio.json": "da33d696912a18e6dde712b3b9c5b3d2fc920bd43a47f5f0d11bafa2275a741f",
+    "requests/counter_units.json": "38b8cb545d3da4d2f0c68060ecb78b8a08b28008b23cea1950eec9623a4f8dee",
+    "requests/epa_none.json": "84ecf4e68dd60a8e252070ff059d4cc60f97f3c78d8f21f51d179853e2aef051",
+    "requests/epa_ratio.json": "745e8058c43693a390b127fb44e9cd13b8a06f66f3e51fbbd4abe2062b2a2994",
+    "workbooks/counterfactual.xlsx": "fa553348d94a0c797316d4a20ab7b4f3d349b6912402c8e4069b90dc114ee08d"
+  },
+  "implementation_sha256": "5489057349840abd6f3d406bce63f8bb5a3ff2265aba397e5e04f8e2e4f06b0d",
+  "input_builder_sha256": "c2fe0df18f81a31f5c2e74822bd750ae11b1d403de59879454b7f006498b6610",
+  "manifest_sha256": "0726b1164566900580469530a5a672652502ed5b383625d68ded1d46ff5c5fda",
+  "prediction_reads_expected_file": false,
+  "preregistration_sha256": "5a855ecbe41781f9769fa2618b7e4442033404219df12badfacd0089a7f84db6",
+  "purpose": "Development-only test of explicit rational-contract candidate selection; not natural accuracy.",
+  "runner_sha256": "7406c5746fd96dca2dba5cbefa0e7b93a061772c5e3ab9359b1278e21ec59382",
+  "schema": "hybridguard-e3-input-lock-v1",
+  "source_workbook_sha256": "0acb06582e7f898b5bcbfe262b2f55294bd4b3a6d2eab63461f03c89ad86358c",
+  "workbooks_identical_across_counterfactual_conditions": true
+}

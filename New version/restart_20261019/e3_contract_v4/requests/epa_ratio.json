@@ -1,0 +1,31 @@
+{
+  "branch": {
+    "guard": "D35=\"Not applicable\"",
+    "inactive": "'Data Inputs'!B23"
+  },
+  "candidates": [
+    "=IF(D35=\"Not applicable\", 'Data Inputs'!B23, (('Data Inputs'!B23*(1-D34))+'Data Inputs'!B23))",
+    "=IF(D35=\"Not applicable\",'Data Inputs'!B23,('Data Inputs'!B23/D34))"
+  ],
+  "cell": "D36",
+  "constraints": [
+    "q/d"
+  ],
+  "references": {
+    "'Data Inputs'!B23": "q",
+    "D34": "d"
+  },
+  "sheet": "Design Parameters",
+  "symbols": {
+    "d": {
+      "units": {}
+    },
+    "q": {
+      "units": {
+        "flow": 1
+      }
+    }
+  },
+  "workbook": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_export/oxidizers_before.xlsx",
+  "workbook_sha256": "0acb06582e7f898b5bcbfe262b2f55294bd4b3a6d2eab63461f03c89ad86358c"
+}

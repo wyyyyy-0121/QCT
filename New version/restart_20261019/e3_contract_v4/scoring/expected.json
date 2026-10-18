@@ -1,0 +1,42 @@
+{
+  "counter_affine": {
+    "reason": "candidate_satisfies_explicit_relation",
+    "status": "propose",
+    "suggested_formula": "=B2*(2-C2)"
+  },
+  "counter_conflict": {
+    "reason": "conflicting_business_relations",
+    "status": "abstain",
+    "suggested_formula": null
+  },
+  "counter_missing": {
+    "reason": "no_candidate_satisfies_relation",
+    "status": "abstain",
+    "suggested_formula": null
+  },
+  "counter_none": {
+    "reason": "missing_business_relation",
+    "status": "abstain",
+    "suggested_formula": null
+  },
+  "counter_ratio": {
+    "reason": "candidate_satisfies_explicit_relation",
+    "status": "propose",
+    "suggested_formula": "=B2/C2"
+  },
+  "counter_units": {
+    "reason": "missing_business_relation",
+    "status": "abstain",
+    "suggested_formula": null
+  },
+  "epa_none": {
+    "reason": "missing_business_relation",
+    "status": "abstain",
+    "suggested_formula": null
+  },
+  "epa_ratio": {
+    "reason": "candidate_satisfies_explicit_relation",
+    "status": "propose",
+    "suggested_formula": "=IF(D35=\"Not applicable\",'Data Inputs'!B23,('Data Inputs'!B23/D34))"
+  }
+}

@@ -51,5 +51,6 @@ cd '/home/ayaka/hybridguard/New version/restart_20261019'
 - `METRICS_PAIR_AUDIT.md`：Software Metrics 28个非空数据行求和遗漏候选、冻结模型预测及替代公式未知状态；原始工作簿不公开。
 - `E1_E3_RESULTS.md`：首轮E1冻结基线评分和独立Calc执行复核、E2停止决定、E3业务说明路线准入条件。E1复算工具为`tools/score_e1_metrics.py`，Calc核验为`tools/verify_e1_calc.py`；结果是已揭示开发审计，不是盲测。
 - `E1_E3_PREREGISTRATION.md`：首轮有限实验的问题、控制、指标与停止条件。实现和阈值冻结，实验开始前须补齐标签。
+- `E3_CONTRACT_PREREGISTRATION.md`与`E3_CONTRACT_RESULTS.md`：结构化有理关系约束原型的预登记和结果；只验证给定候选的受限选择，不含自然语言理解、自然错误准确率或原模型提升主张。v4输入锁、清单、请求和独立评分保存在本地`e3_contract_v4/`；失败与修正迭代v1至v3另行保留。
 
 新运行器测试：`python -m unittest discover -s tools -p 'test_*.py' -v`。这4项覆盖输出隔离、线程限制、失败/超时保留、路径与重名校验和已有证据保护。历史研究321项测试的记录在dev32审计中核对，本轮没有将其冒称为重新运行。
