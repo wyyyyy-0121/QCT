@@ -16,3 +16,7 @@
 # These directories contain published scores, not disposable outputs.
 !/followup_20261014/baseline/results/
 !/followup_20261014/baseline/results/**
+
+# Rebuildable per-fold concatenations; individual files exceed GitHub 100 MiB.
+# Case-level certified states/pairs and preparation hashes remain published.
+/followup_20261014/development/certified_preferences_dev22_data_v1/training_labels/

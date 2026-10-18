@@ -15,6 +15,7 @@ from build_keep_features_dev21 import BASE, case_path
 def audit(check_runtime=False):
     verify_preparation(); summaries = []; coverage = Counter()
     truth = read(BASE/'heldout_truth.json.gz')['cases']
+    metadata = {case: (t['origin_group'], t['family']) for case, t in truth.items()}
     for item in read(BASE/'public_index.json'):
         case = item['case']; t = truth[case]; expected = t['expected_formulas']; errors = set(t['errors'])
         payload = read(BASE/'features'/(case_path(case)+'.json.gz'))
@@ -42,8 +43,15 @@ def audit(check_runtime=False):
         for state in states:
             assert state['case'] in fold['train_cases'] and state['case'] not in fold['test_cases']
             grouped[state['case'], state['cell']].append(state)
+        offset = 0
+        for case in fold['train_cases']:
+            original = read(LABELS/'author_case_states'/(case_path(case)+'.json.gz'))['alternatives']
+            assert states[offset:offset+len(original)] == original
+            offset += len(original)
+        assert offset == len(states)
         expected = []
-        for (case, cell), options in sorted(grouped.items()):
+        order = {case: n for n, case in enumerate(fold['train_cases'])}
+        for (case, cell), options in sorted(grouped.items(), key=lambda item: (order[item[0][0]], item[0][1])):
             assert sum(r['kind'] == 'keep' for r in options) == 1
             assert len({r['id'] for r in options}) == len(options)
             positive = sorted((r['id'] for r in options if r['label'] == 1))
@@ -55,6 +63,7 @@ def audit(check_runtime=False):
         actual = [tuple(r[k] for k in ['case', 'cell', 'left_id', 'right_id', 'label']) for r in rows]
         assert actual == expected
         assert all(r['source'] != fold['origin'] for r in rows)
+        assert all((r['source'], r['family']) == metadata[r['case']] for r in rows)
         w = weights(rows); assert all(w[n] == w[n+1] for n in range(0, len(w), 2))
         # Independent source/family/case balancing formula.
         source_families = defaultdict(set); family_cases = defaultdict(set)
