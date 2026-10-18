@@ -129,10 +129,33 @@ These two screens add no qualified natural source or template family. They do no
 |---|---|---|
 | DataCite 目录检索 | API全文查询`spreadsheet formula error`返回98条，`spreadsheet error correction`返回152条；这些是全文索引命中数，不是已逐项审阅的来源数。补做题名字段检索后，题名同时含`spreadsheet`与`formula`的16条主要是公式研究、代码或理解度数据集；题名同时含`spreadsheet`与`correction`的3条中，Zenodo 1014025/1014026标题为`Correction occurrence analysis spreadsheet`。 | 宽泛命中不作为来源进展指标；逐一检查显著候选的描述、版本关系和许可后再决定是否获取文件。 |
 | Zenodo 1014025/1014026 | DataCite记录把两条DOI列为同一数据集的版本关系，许可为CC BY-NC 4.0。摘要明确说明该Excel记录京剧演唱训练中的教师反馈、信号分析方法及分类维度；1014026文件清单列出`Correction_occurrence_spreadsheet.xlsx`（94,217字节）。 | `correction occurrence`指教学反馈事件，不是工作簿公式纠错；不下载、不计自然错误来源或模板家族。 |
-| ONS GERD年度修订表 | 官方页说明内容是“首次发布值与五年后的值”，提供当前`.xls`及previous versions入口，页面标注Open Government Licence v3.0。只读获取当前版及一个历史版，转换副本各有32个公式单元格；两版`annual`表的公式地址和值完全一致。 | 适合作为候选干净控制，检查模型是否对合法统计公式作出建议；修订表不是公式勘误，不能计自然错误来源。当前和历史版属同一业务表模板，不另计多个模板家族。原文件为`.xls`，用于模型前必须单独验证转换保真和入口支持。 |
-| ONS BERD年度修订表 | 官方页同样描述首次发布值与五年后值，提供当前`.xls`，页面标注Open Government Licence v3.0。转换副本含两张工作表、34个公式单元格；`annual`表布局和公式地址与GERD高度相似。 | 可与GERD共同作为统计类干净控制候选，但目前只支持一个近似模板家族，不计公式错误来源或新的独立家族。原文件为`.xls`，转换保真尚未认证。 |
+| ONS GERD年度修订表 | 官方页说明内容是“首次发布值与五年后的值”，提供当前`.xls`及previous versions入口，页面标注Open Government Licence v3.0。独立BIFF审计确认当前版与历史版各有32个公式；转换地址完整，但每本有7处缓存非完全相等及6处公式反编译写法差异。 | 修订表不是公式勘误，不能计自然错误来源。原始缓存/Calc重算差异及反编译写法未解决，预登记停止条件触发；结论`inconclusive`，不进入模型控制实验。当前和历史版属同一业务表模板，不另计模板家族。 |
+| ONS BERD年度修订表 | 官方页同样描述首次发布值与五年后的值，提供当前`.xls`，页面标注Open Government Licence v3.0。独立BIFF审计确认34个公式；地址完整，但有7处缓存非完全相等及8处公式反编译写法差异。 | 该表不能计自然错误来源。与GERD相同，转换保真结论`inconclusive`，不进入模型控制实验；与GERD共同只构成近似控制模板候选，不计错误来源或独立错误家族。 |
 | ONS产品分类更正数据 | 官方更正页提供`.xlsx`、标注Open Government Licence v3.0；说明问题源自少数产品历史人工分类不一致，属于统计数据分类修正。 | 明确排除公式错误评分；只作为“非公式错误更正”边界案例记录，不作为公式真值。 |
 
 官方页面：GERD https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd ；BERD https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd ；产品分类更正 https://www.ons.gov.uk/economy/inflationandpriceindices/adhocs/3621datasetaccompanyingtheproductclassificationerrorcorrectionfebruarytojuly2026 。DataCite查询使用`https://api.datacite.org/dois`的全文及题名字段查询；Zenodo候选DOI为`10.5281/zenodo.1014025`和`10.5281/zenodo.1014026`。
 
-本轮新增合格自然错误来源和最终模板家族均为0，最终验证仍为`0/0`。ONS表只提升为控制候选，须先针对`.xls`转`.xlsx`固定输入做公式/结果保真审计并预登记控制实验；不基于该控制结果调整原模型或规则。宽泛DataCite命中数不得表述成穷尽搜索。
+本轮新增合格自然错误来源和最终模板家族均为0，最终验证仍为`0/0`。ONS表仅为未通过格式保真门槛的控制候选；已按预登记完成`.xls`转`.xlsx`审计，因21处缓存差异和20处反编译写法差异判为`inconclusive`，不运行控制实验，也不基于它们调整原模型或规则。宽泛DataCite命中数不得表述成穷尽搜索。
+
+## 2026-10-19 官方目录定向复查
+
+本轮继续优先寻找官方审计/勘误、政府更正档案或作者修订对；不下载未通过来源/授权审查的工作簿，不运行模型。
+
+| 渠道 | 本轮请求与结果 | 结论和边界 |
+|---|---|---|
+| DataCite | 初始探索用了非标准`title:`字段，其零计数已撤回；正式以`titles.title:`查询。`spreadsheet AND erratum`、`spreadsheet AND revision AND formula`返回0；`spreadsheet AND correction`返回3项，分别为一篇终端用户纠错行为研究及此前排除的京剧数据两版本。全文`spreadsheet formula error`首批40条题名以无关数据集、教程和代码为主；`spreadsheet erratum`的11项题名未形成修订对。 | 规范字段回执见`source_evidence/OFFICIAL_CATALOG_SCREEN_20261019.json`；仅完成限定结果集筛查，不代表穷尽。纠错行为研究不提供本轮可认证修订对。 |
+| Crossref | `spreadsheet error correction`、`spreadsheet errors government audit`、`formula error workbook corrected spreadsheet`三次请求均返回HTTP 429。 | 限流，不能记为零命中；本轮不重试。 |
+| Bing | 5条英文精确短语查询均HTTP 200，但结果页仍主要返回本地化词典、通用Office产品及无关网页。 | 搜索结果不具备可核来源价值，排除本轮判断；不是无来源证据。 |
+| GOV.UK Search API | 精确短语`"spreadsheet error"`返回0，`"formula error"`返回10条，`"spreadsheet correction"`返回8条，`"spreadsheet mistake"`返回0。进一步检查8个发布页及8个HTML正文，找到MOD关于2018年VCC年龄比例的明确公式错误修订说明。 | 初始只查标题不足以排除正文勘误，已补查正文并取得一条真实事件线索；来源资格仍待公式库存与原修订链审计，见下节。索引不代表完整官方档案。 |
+| Hugging Face / GovInfo / HSGAC | SpreadsheetBench-2数据集元数据请求超时；GovInfo试探的旧式`wssearch`路径返回404；Senate HSGAC WordPress搜索接口返回403。 | 访问受阻或端点不适用，均不解释为数据不存在；SpreadsheetBench-2维持未审候选，不下载。 |
+| ONS GERD / BERD | 已按预登记下载三个官方`.xls`并完成独立BIFF库存及两轮转换比较；98个公式地址全部保留，但原始缓存与Calc结果有21处非完全一致，公式写法另有20处差异。 | 结果inconclusive，触发控制停机条件，不运行模型；见`ONS_CONTROL_CONVERSION_RESULTS.md`。不计自然错误来源/模板家族。 |
+
+正式目录回执及原始响应哈希见`source_evidence/OFFICIAL_CATALOG_SCREEN_20261019.json`；发布页与正文分别见`source_evidence/GOVUK_CANDIDATE_FOLLOWUP_20261019.json`、`source_evidence/GOVUK_CHILD_SCREEN_20261019.json`。只有目录和元数据请求使用8个网络线程，这不是模型8进程吞吐实验。初始探索请求未全部落盘，不将其声称为完整可重放搜索。
+
+## 2026-10-19 MOD cadet statistics 官方勘误线索
+
+官方[2021年统计正文](https://www.gov.uk/government/statistics/mod-sponsored-cadet-forces-statistics-2021/mod-sponsored-cadet-forces-1-april-2021)明确记载：2018年4月1日VCC的Table 2因公式错误修订年龄比例，实际人数不变。本轮在查正文时已看到该说明，因此是已披露来源线索；没有声称盲测资格。按`MOD_CADETS_SOURCE_PREREGISTRATION.md`和后续元数据限定补充，先核[2018年原发布页](https://www.gov.uk/government/statistics/mod-sponsored-cadet-forces-statistics-2018)的OGL v3声明及附件，再取得附件、记录哈希，仅统计公式元素并映射工作表名，未阅读公式正文或数值。
+
+2018年附件HTTP 200，958,874字节，SHA-256为`22a05449aee79b4143ece5c7b7911dc1ae3ebc82ac523c18326f65f253cb16ff`，服务器Last-Modified为2018-05-25（该时间不单独证明未经修订）。9张表共82个公式元素，全部位于隐藏的`Graphs16dnu`；`Table 2`及其余公开统计表均无公式。工作簿另有三个external-link XML文件，未解析其内容、未访问链接。公开Table 2不提供底层错误公式，不能用变动后的比例代替原公式真值；停止本候选模型实验，不再为评分获取修订表。该真实错误事件保留为底层源文件未公开的线索，不计自然错误来源/最终家族。
+
+取得回执、表级库存、工作表映射见`source_evidence/MOD_CADETS_ACQUISITION_20261019.json`、`source_evidence/MOD_CADETS_INVENTORY_20261019.json`和`source_evidence/MOD_CADETS_SHEET_MAP_20261019.json`；原文件留在忽略目录。最终验证仍为`0/0`。ONS控制审计也因未解决保真差异停止。下一步继续寻找能取得底层原始/修订公式的官方公开源文件，不能以报道、输出统计表或搜索命中替代。

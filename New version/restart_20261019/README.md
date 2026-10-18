@@ -38,6 +38,9 @@ cd '/home/ayaka/hybridguard/New version/restart_20261019'
 
 ## 新证据
 
+- `ONS_CONTROL_CONVERSION_PREREGISTRATION.md`与`ONS_CONTROL_CONVERSION_RESULTS.md`：三份ONS候选控制的独立BIFF库存和转换核验；存在缓存/写法差异，结论inconclusive，未运行模型。工具`tools/audit_ons_conversion.py`与取得/审计回执可复核，工作簿正文留本地。
+- `MOD_CADETS_SOURCE_PREREGISTRATION.md`、`MOD_CADETS_METADATA_AMENDMENT.md`及`source_evidence/MOD_CADETS_*_20261019.json`：MOD官方公式错误勘误线索与已锁元数据库存；Table 2无公式，不能用于修复评测。
+- `source_evidence/OFFICIAL_CATALOG_SCREEN_20261019.json`及`GOVUK_*_20261019.json`：规范DataCite字段检索、官方发布页及正文审查回执；接口超时、限流与题名筛查边界单列，不作为零命中。
 - `DEV32_METRIC_VERIFICATION.json`：复算7,713项指标，108项独立执行结果；42次不能证明的关系不计正确。重放依据为保留的首版277案例日志，未再运行一次耗时重放。
 - `DEV32_EXACT_MATCH_SCORE.json`：保留原论文含等号全文本精确匹配口径；不能把关系等价分数混称原论文分数。
 - `../followup_20261014/development/natural_weights_dev33_v1/`：原表锁、重放、修订取得回执、双解析器和布局审计；未认证任何自然错误。原文件和含第三方正文的差异留本地，git忽略。

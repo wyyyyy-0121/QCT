@@ -1,0 +1,71 @@
+{
+  "page_receipts": [
+    {
+      "page_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd",
+      "final_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd",
+      "retrieved_utc": "2026-10-18T22:05:47.144269+00:00",
+      "http_status": 200,
+      "sha256": "506d5d093b9cbc22c8205acda4937cd9c6d36f3ac565d2b71937608e8a89fed7",
+      "bytes": 41799,
+      "ogl_v3_link_present": true,
+      "file_links": [
+        "/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current/prtrevisionstable2014.xls"
+      ]
+    },
+    {
+      "page_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current",
+      "final_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current",
+      "retrieved_utc": "2026-10-18T22:05:47.907305+00:00",
+      "http_status": 200,
+      "sha256": "77b19e56b44ad88794d1806cfe581dfab8ed151859c0ba2bcc27d4199ade4c42",
+      "bytes": 36483,
+      "ogl_v3_link_present": false,
+      "file_links": [
+        "/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current/prtrevisionstable2014.xls",
+        "/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current/previous/v1/revisionsspreadsheet_tcm77-398550.xls"
+      ]
+    },
+    {
+      "page_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd",
+      "final_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd",
+      "retrieved_utc": "2026-10-18T22:05:48.700990+00:00",
+      "http_status": 200,
+      "sha256": "1cc143dc20d899e5d7abf76f671e655ef5820d32e3cc975184e588225e5e4020",
+      "bytes": 41333,
+      "ogl_v3_link_present": true,
+      "file_links": [
+        "/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd/current/rftrevisionsspreadsheet2013_tcm77-385800.xls"
+      ]
+    },
+    {
+      "page_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd/current",
+      "final_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd/current",
+      "retrieved_utc": "2026-10-18T22:05:49.472430+00:00",
+      "http_status": 200,
+      "sha256": "1b7be04100ffcfcb45fdb1f922d712b7efa0f49308f9cf1525edcaf89d6e6d30",
+      "bytes": 34137,
+      "ogl_v3_link_present": false,
+      "file_links": [
+        "/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd/current/rftrevisionsspreadsheet2013_tcm77-385800.xls"
+      ]
+    }
+  ],
+  "file_acquisition_observation": {
+    "all_three_http_status": 200,
+    "content_type": "application/vnd.ms-excel;charset=utf-8",
+    "metadata_origin": "curl terminal output; exact request start times not logged; local file mtimes are retained in conversion audit"
+  },
+  "conversion": {
+    "program": "LibreOffice 26.2.6.3 620(Build:3)",
+    "stage1": "libreoffice -env:UserInstallation=file:///tmp/lo_ons_control_audit --headless --convert-to xlsx --outdir <raw>/converted1 <raw>/GERD_current.xls <raw>/GERD_previous_v1.xls <raw>/BERD_current.xls",
+    "stage2": "libreoffice -env:UserInstallation=file:///tmp/lo_ons_control_roundtrip --headless --convert-to xlsx --outdir <raw>/converted2 <raw>/converted1/GERD_current.xlsx <raw>/converted1/GERD_previous_v1.xlsx <raw>/converted1/BERD_current.xlsx",
+    "stage1_exit_code": 0,
+    "stage2_exit_code": 0,
+    "observed_diagnostics": "Six successful conversion messages; no conversion warning in terminal output. stdout was not separately persisted."
+  },
+  "parser_install": {
+    "package": "xlrd==2.0.1",
+    "location": "/tmp/ons_audit_xlrd",
+    "scope": "isolated pip --target; system environment unchanged"
+  }
+}

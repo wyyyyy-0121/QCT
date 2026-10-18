@@ -1,0 +1,301 @@
+{
+  "created_utc": "2026-10-18T22:05:04.250745+00:00",
+  "parser_version": "2.0.1",
+  "model_runs": 0,
+  "accepted_natural_sources": 0,
+  "accepted_final_families": 0,
+  "workbooks": [
+    {
+      "name": "GERD_current",
+      "source_sha256": "cd6b52f66254ce2b41248bbb1a0d3c934ee2001cf1bcd51b937340bef6bbe87e",
+      "source_bytes": 39424,
+      "source_file_url": "https://www.ons.gov.uk/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current/prtrevisionstable2014.xls",
+      "local_source_mtime_utc": "2026-10-18T22:01:41.706286+00:00",
+      "first_conversion_sha256": "a79ff4a407cc63d2a7199a8bde3cb2abd1b1f25a128a51a08107ad72d55164fb",
+      "second_conversion_sha256": "29afb841c8f2579922f76f296e09c4e9ca198f5b3ec2ca138cc71bc39472f8fc",
+      "original_formula_count": 32,
+      "converted_formula_count": 32,
+      "decompile_errors": [],
+      "formula_address_difference": [],
+      "formula_spelling_difference_count": 6,
+      "original_cache_exact_match_count": 25,
+      "original_cache_differences": [
+        {
+          "cell": "annual!J7",
+          "original_cache": -3.0559264958079986,
+          "calc_cache": -3.055926495808,
+          "absolute_difference": 1.3322676295501878e-15
+        },
+        {
+          "cell": "annual!J8",
+          "original_cache": 2.57058183469754,
+          "calc_cache": 2.57058183563632,
+          "absolute_difference": 9.387797206272808e-10
+        },
+        {
+          "cell": "annual!L4",
+          "original_cache": 0.8953798965062202,
+          "calc_cache": 0.89537989650622,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "cell": "annual!L5",
+          "original_cache": 74830.43737602289,
+          "calc_cache": 74830.4373760229,
+          "absolute_difference": 1.4551915228366852e-11
+        },
+        {
+          "cell": "annual!L7",
+          "original_cache": -0.7179634596561844,
+          "calc_cache": -0.717963459656185,
+          "absolute_difference": 6.661338147750939e-16
+        },
+        {
+          "cell": "annual!L8",
+          "original_cache": 12.70620473398699,
+          "calc_cache": 12.7062047361747,
+          "absolute_difference": 2.187709569057006e-09
+        },
+        {
+          "cell": "annual!N8",
+          "original_cache": 0.5502976997500025,
+          "calc_cache": 0.550297699750003,
+          "absolute_difference": 4.440892098500626e-16
+        }
+      ],
+      "roundtrip_differing_fields": [],
+      "converted_sheets": [
+        {
+          "name": "annual",
+          "visibility": "visible",
+          "dimensions": "A1:IW39",
+          "merged": [
+            "B1:L1",
+            "B2:L2",
+            "B3:B5",
+            "C3:C5",
+            "D3:D5",
+            "E3:E5",
+            "F3:F5",
+            "G3:G5",
+            "I11:J11",
+            "I15:L15",
+            "I16:L16",
+            "I3:J3",
+            "J17:L17",
+            "J18:L18",
+            "K3:L3"
+          ]
+        },
+        {
+          "name": "Table for Background Notes",
+          "visibility": "visible",
+          "dimensions": "B1:L16",
+          "merged": []
+        }
+      ],
+      "converted_defined_names": [],
+      "converted_external_link_count": 0
+    },
+    {
+      "name": "GERD_previous_v1",
+      "source_sha256": "fe2eaa8bbc7a54462e2ef562d8aa1f9b697cbed3ab15eb744d33c78cdc208294",
+      "source_bytes": 34816,
+      "source_file_url": "https://www.ons.gov.uk/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd/current/previous/v1/revisionsspreadsheet_tcm77-398550.xls",
+      "local_source_mtime_utc": "2026-10-18T22:01:42.234259+00:00",
+      "first_conversion_sha256": "50bf17dd066e5c9bfff0aec386b7b380ee17688a141fce0ca2613f27e7a56879",
+      "second_conversion_sha256": "ba9778af938863f4cbda7ee21875b2a7cfc0ff610c56526566487412cde30686",
+      "original_formula_count": 32,
+      "converted_formula_count": 32,
+      "decompile_errors": [],
+      "formula_address_difference": [],
+      "formula_spelling_difference_count": 6,
+      "original_cache_exact_match_count": 25,
+      "original_cache_differences": [
+        {
+          "cell": "annual!J7",
+          "original_cache": -10.187708378122386,
+          "calc_cache": -10.1877083781224,
+          "absolute_difference": 1.4210854715202004e-14
+        },
+        {
+          "cell": "annual!J8",
+          "original_cache": 2.57058183469754,
+          "calc_cache": 2.57058183563632,
+          "absolute_difference": 9.387797206272808e-10
+        },
+        {
+          "cell": "annual!L4",
+          "original_cache": -0.01071600362299367,
+          "calc_cache": -0.0107160036229937,
+          "absolute_difference": 2.949029909160572e-17
+        },
+        {
+          "cell": "annual!L5",
+          "original_cache": 603.6425900635136,
+          "calc_cache": 603.642590063514,
+          "absolute_difference": 4.547473508864641e-13
+        },
+        {
+          "cell": "annual!L7",
+          "original_cache": -10.297471158368236,
+          "calc_cache": -10.2974711583682,
+          "absolute_difference": 3.552713678800501e-14
+        },
+        {
+          "cell": "annual!L8",
+          "original_cache": 2.57058183469754,
+          "calc_cache": 2.57058183563632,
+          "absolute_difference": 9.387797206272808e-10
+        },
+        {
+          "cell": "annual!N8",
+          "original_cache": 4.998851804513947,
+          "calc_cache": 4.99885180451395,
+          "absolute_difference": 2.6645352591003757e-15
+        }
+      ],
+      "roundtrip_differing_fields": [],
+      "converted_sheets": [
+        {
+          "name": "annual",
+          "visibility": "visible",
+          "dimensions": "A1:IW39",
+          "merged": [
+            "B1:L1",
+            "B2:L2",
+            "B3:B5",
+            "C3:C5",
+            "D3:D5",
+            "E3:E5",
+            "F3:F5",
+            "G3:G5",
+            "I11:J11",
+            "I15:L15",
+            "I16:L16",
+            "I19:L19",
+            "I20:L21",
+            "I22:L22",
+            "I23:L25",
+            "I3:J3",
+            "J17:L17",
+            "J18:L18",
+            "K3:L3"
+          ]
+        }
+      ],
+      "converted_defined_names": [],
+      "converted_external_link_count": 0
+    },
+    {
+      "name": "BERD_current",
+      "source_sha256": "44c87345720921b7bec6c8294dfd976347d3e50823ab969a06a59101473af742",
+      "source_bytes": 43008,
+      "source_file_url": "https://www.ons.gov.uk/file?uri=/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd/current/rftrevisionsspreadsheet2013_tcm77-385800.xls",
+      "local_source_mtime_utc": "2026-10-18T22:01:42.814229+00:00",
+      "first_conversion_sha256": "f5d9cf8f63fb90993763f2021d250f6f8cb52cb897676c9b5fb96176cb764d0d",
+      "second_conversion_sha256": "dc7354b54ed1b74a89d0b8a1afe1571b750da5e5953d1cd400745759bed7e475",
+      "original_formula_count": 34,
+      "converted_formula_count": 34,
+      "decompile_errors": [],
+      "formula_address_difference": [],
+      "formula_spelling_difference_count": 8,
+      "original_cache_exact_match_count": 27,
+      "original_cache_differences": [
+        {
+          "cell": "annual!J7",
+          "original_cache": -2.4429367585710144,
+          "calc_cache": -2.44293675857101,
+          "absolute_difference": 4.440892098500626e-15
+        },
+        {
+          "cell": "annual!J8",
+          "original_cache": 2.57058183469754,
+          "calc_cache": 2.57058183563632,
+          "absolute_difference": 9.387797206272808e-10
+        },
+        {
+          "cell": "annual!L4",
+          "original_cache": -0.06364408460402302,
+          "calc_cache": -0.063644084604023,
+          "absolute_difference": 1.3877787807814457e-17
+        },
+        {
+          "cell": "annual!L5",
+          "original_cache": 3710.449683706139,
+          "calc_cache": 3710.44968370614,
+          "absolute_difference": 1.3642420526593924e-12
+        },
+        {
+          "cell": "annual!L7",
+          "original_cache": -2.603693804407801,
+          "calc_cache": -2.6036938044078,
+          "absolute_difference": 8.881784197001252e-16
+        },
+        {
+          "cell": "annual!L8",
+          "original_cache": 2.57058183469754,
+          "calc_cache": 2.57058183563632,
+          "absolute_difference": 9.387797206272808e-10
+        },
+        {
+          "cell": "annual!N8",
+          "original_cache": 4.959657714181859,
+          "calc_cache": 4.95965771418186,
+          "absolute_difference": 8.881784197001252e-16
+        }
+      ],
+      "roundtrip_differing_fields": [],
+      "converted_sheets": [
+        {
+          "name": "annual",
+          "visibility": "visible",
+          "dimensions": "A1:IW39",
+          "merged": [
+            "B1:L1",
+            "B2:L2",
+            "B3:B5",
+            "C3:C5",
+            "D3:D5",
+            "E3:E5",
+            "F3:F5",
+            "G3:G5",
+            "I11:J11",
+            "I15:L15",
+            "I16:L16",
+            "I19:L19",
+            "I20:L21",
+            "I22:L22",
+            "I23:L25",
+            "I3:J3",
+            "J17:L17",
+            "J18:L18",
+            "K3:L3"
+          ]
+        },
+        {
+          "name": "Table for Background Notes",
+          "visibility": "visible",
+          "dimensions": "A1:N19",
+          "merged": []
+        }
+      ],
+      "converted_defined_names": [],
+      "converted_external_link_count": 0
+    }
+  ],
+  "decision": "inconclusive",
+  "control_inference_permitted": false,
+  "limits": [
+    "BIFF decompilation spelling is not original author text.",
+    "No semantic normalization or business correctness certification.",
+    "Original cache versus Calc differences trigger preregistered stop.",
+    "No concurrency/performance claim from this serial format audit."
+  ],
+  "gerd_current_vs_previous": {
+    "formula_maps_equal": true,
+    "non_formula_changes": 30,
+    "note": "Version differences are not formula-error labels."
+  },
+  "private_inventory_sha256": "736b81b06856f874bb2db31caa7dd9738d54eb54c5a4d63f1aadac6ef2eb755b"
+}
