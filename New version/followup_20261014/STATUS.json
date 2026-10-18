@@ -48,7 +48,7 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 237,
+  "unit_test_count": 249,
   "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
@@ -242,8 +242,8 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev23 audit/report pending upload; a07ff6c certificate push still in progress at this update",
-  "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
+  "new_work_pushed_scope": "dev23 verified remotely at 934c326; dev24 preregistration/data pending upload",
+  "latest_verified_experiment_remote_commit": "934c326c68a7ca2dcd37aea8fba9c2557720112b",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
   "dev10_report": "DEV10_PUBLIC_PIPELINE_REPORT_20261018.md",
@@ -1155,5 +1155,17 @@
     "report": "DEV23_TRISTATE_RELATIONS_REPORT_20261018.md",
     "verification": "qa/TRISTATE_RELATIONS_DEV23_VERIFICATION_20261018.json",
     "independent_audit_passed": true
+  },
+  "dev24_absolute_selection": {
+    "phase": "registered and independently audited; 10 source-heldout fits running",
+    "plan": "ABSOLUTE_SELECTION_DEV24_PREREGISTRATION_20261018.md",
+    "run": "development/absolute_selection_dev24_v1",
+    "options": 813899,
+    "directed_pairs": 1579268,
+    "tests_passed": 249,
+    "training_data_audited": true,
+    "predictions_locked": false,
+    "main_candidate_adopted": false,
+    "final_validation_eligible": false
   }
 }

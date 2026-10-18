@@ -1,0 +1,191 @@
+{
+  "all_options_and_pairs_independently_rebuilt": true,
+  "all_weights_verified": true,
+  "auditor_sha256": "822a00c98ff399361b62eaa71bb0525c3a5886539dab44e801e4b6b604b54200",
+  "cases": 213,
+  "final_validation_eligible": false,
+  "folds": [
+    {
+      "arm": "absolute",
+      "class_weight_sums": [
+        576158.8525409315,
+        237231.14748149176
+      ],
+      "fold": "source__18f",
+      "negative": 787829,
+      "positive": 25561,
+      "rows": 813390,
+      "selection_sha256": "92dd4c67857d7ee96f23c7d3d44abdf422247df68b1b625c5a57b7a8ebbafa8b",
+      "source_weight_sums": {
+        "authored_development": 203347.50000150202,
+        "iowa_state_agdm": 203347.50000079983,
+        "packt": 203347.5000007893,
+        "uk_government": 203347.50000083848
+      }
+    },
+    {
+      "arm": "relative",
+      "class_weight_sums": [
+        789010.9999863531,
+        789010.9999863531
+      ],
+      "fold": "source__18f",
+      "negative": 789011,
+      "positive": 789011,
+      "rows": 1578022,
+      "selection_sha256": "3607296a70d5a3d2b23acf8a6a8c79b66c17c8a12ecaac77c7a5d07472262b0e",
+      "source_weight_sums": {
+        "authored_development": 394505.49997549294,
+        "iowa_state_agdm": 394505.49999139505,
+        "packt": 394505.4999914099,
+        "uk_government": 394505.4999912752
+      }
+    },
+    {
+      "arm": "absolute",
+      "class_weight_sums": [
+        14569.556118433211,
+        7725.443881566952
+      ],
+      "fold": "source__authored_development",
+      "negative": 20390,
+      "positive": 1905,
+      "rows": 22295,
+      "selection_sha256": "59cb2dc3a4d0abc6050f425084eb975ffbeff4dde9c0564230f0396f95c8b833",
+      "source_weight_sums": {
+        "18f": 5573.749999999658,
+        "iowa_state_agdm": 5573.749999999582,
+        "packt": 5573.749999999671,
+        "uk_government": 5573.750000001111
+      }
+    },
+    {
+      "arm": "relative",
+      "class_weight_sums": [
+        20890.000000000466,
+        20890.000000000466
+      ],
+      "fold": "source__authored_development",
+      "negative": 20890,
+      "positive": 20890,
+      "rows": 41780,
+      "selection_sha256": "57f2f40ebdbd80861cb8f64b3ec233b0fa39bf809fe9f93688370f37fd2c54d1",
+      "source_weight_sums": {
+        "18f": 10445.000000000817,
+        "iowa_state_agdm": 10444.99999999937,
+        "packt": 10445.000000000584,
+        "uk_government": 10445.000000001586
+      }
+    },
+    {
+      "arm": "absolute",
+      "class_weight_sums": [
+        565620.2467657867,
+        245105.75323431625
+      ],
+      "fold": "source__iowa_state_agdm",
+      "negative": 785884,
+      "positive": 24842,
+      "rows": 810726,
+      "selection_sha256": "047ba8c787881c01b758aea0f7aef6ca01fd2c5c2a647ff6803751d9ac39226d",
+      "source_weight_sums": {
+        "18f": 202681.50000079046,
+        "authored_development": 202681.4999990513,
+        "packt": 202681.5000007903,
+        "uk_government": 202681.5000007349
+      }
+    },
+    {
+      "arm": "relative",
+      "class_weight_sums": [
+        786555.9999782463,
+        786555.9999782463
+      ],
+      "fold": "source__iowa_state_agdm",
+      "negative": 786556,
+      "positive": 786556,
+      "rows": 1573112,
+      "selection_sha256": "41a46e90a321d5497c14de982d55d3fd7cd0752ac9400782944d940ca4a0c1df",
+      "source_weight_sums": {
+        "18f": 393277.9999914498,
+        "authored_development": 393277.9999887279,
+        "packt": 393277.999991444,
+        "uk_government": 393277.9999915566
+      }
+    },
+    {
+      "arm": "absolute",
+      "class_weight_sums": [
+        679959.5211788157,
+        133889.47881411543
+      ],
+      "fold": "source__packt",
+      "negative": 788181,
+      "positive": 25668,
+      "rows": 813849,
+      "selection_sha256": "7abbb2186214a68267d4cf7922a826f21d35980b2b0ccc42fee31c840e679541",
+      "source_weight_sums": {
+        "18f": 203462.25000079212,
+        "authored_development": 203462.25000295544,
+        "iowa_state_agdm": 203462.2500007965,
+        "uk_government": 203462.25000074253
+      }
+    },
+    {
+      "arm": "relative",
+      "class_weight_sums": [
+        789593.9999793635,
+        789593.9999793635
+      ],
+      "fold": "source__packt",
+      "negative": 789594,
+      "positive": 789594,
+      "rows": 1579188,
+      "selection_sha256": "92b21a54f581074bb1bece4dbbadbd630f8618678234cca195b95a7fab0916a2",
+      "source_weight_sums": {
+        "18f": 394796.99999139365,
+        "authored_development": 394796.9999939027,
+        "iowa_state_agdm": 394796.99999136484,
+        "uk_government": 394796.9999914751
+      }
+    },
+    {
+      "arm": "absolute",
+      "class_weight_sums": [
+        514546.1816865535,
+        280789.8183069338
+      ],
+      "fold": "source__uk_government",
+      "negative": 770480,
+      "positive": 24856,
+      "rows": 795336,
+      "selection_sha256": "3e67cde3aec65066aa0a9b4acaf9bcd824a3954419c2fe4ac410ec4603896b85",
+      "source_weight_sums": {
+        "18f": 198834.00000073775,
+        "authored_development": 198834.0000027055,
+        "iowa_state_agdm": 198834.00000074523,
+        "packt": 198834.0000007374
+      }
+    },
+    {
+      "arm": "relative",
+      "class_weight_sums": [
+        772484.9999846785,
+        772484.9999846785
+      ],
+      "fold": "source__uk_government",
+      "negative": 772485,
+      "positive": 772485,
+      "rows": 1544970,
+      "selection_sha256": "ae10fab9509b3c2de400ef5e42a451d0c363bdf3f0a10b480989faee0478b220",
+      "source_weight_sums": {
+        "18f": 386242.49999157933,
+        "authored_development": 386242.4999937014,
+        "iowa_state_agdm": 386242.49999158364,
+        "packt": 386242.4999915747
+      }
+    }
+  ],
+  "preparation_lock_sha256": "cf55b6b8e4aca299603dfdfe5308d3a9b1953ddcbb9745b5d25b08cd8b73501e",
+  "runtime_checked": false
+}

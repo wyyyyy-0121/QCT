@@ -1,0 +1,17 @@
+test_current_fold_only_and_author_options_forbidden (test_absolute_selection_dev24.IsolationTests.test_current_fold_only_and_author_options_forbidden) ... ok
+test_preflight_denies_all_label_bodies_including_hash_access (test_absolute_selection_dev24.IsolationTests.test_preflight_denies_all_label_bodies_including_hash_access) ... ok
+test_absolute_matrix_preserves_float32_and_keep_mapping (test_absolute_selection_dev24.SelectionTests.test_absolute_matrix_preserves_float32_and_keep_mapping) ... ok
+test_ineligible_top_not_used_as_suggestion_or_runner (test_absolute_selection_dev24.SelectionTests.test_ineligible_top_not_used_as_suggestion_or_runner) ... ok
+test_invalid_state_and_duplicate_keep_rejected (test_absolute_selection_dev24.SelectionTests.test_invalid_state_and_duplicate_keep_rejected) ... ok
+test_known_wrong_keep_bypasses_candidate_cap (test_absolute_selection_dev24.SelectionTests.test_known_wrong_keep_bypasses_candidate_cap) ... ok
+test_nonfinite_rejected (test_absolute_selection_dev24.SelectionTests.test_nonfinite_rejected) ... ok
+test_same_score_and_insufficient_keep_advantage_abstain (test_absolute_selection_dev24.SelectionTests.test_same_score_and_insufficient_keep_advantage_abstain) ... ok
+test_threshold_and_candidate_margin_still_apply (test_absolute_selection_dev24.SelectionTests.test_threshold_and_candidate_margin_still_apply) ... ok
+test_tristate_sampling_and_keep_are_shared_with_pairs (test_absolute_selection_dev24.SelectionTests.test_tristate_sampling_and_keep_are_shared_with_pairs) ... ok
+test_unit_rejection_does_not_promote_second_candidate (test_absolute_selection_dev24.SelectionTests.test_unit_rejection_does_not_promote_second_candidate) ... ok
+test_unknown_keep_never_assumed_negative (test_absolute_selection_dev24.SelectionTests.test_unknown_keep_never_assumed_negative) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.609s
+
+OK
