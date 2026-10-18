@@ -40,6 +40,7 @@ cd '/home/ayaka/hybridguard/New version/restart_20261019'
 - `source_evidence/EPA_ERRATA_RECEIPT.json`：3份官方勘误的URL与哈希；文档不是可评分原始/修订工作簿对。
 - `EPA_ERRATA_FOLLOWUP.md`：较早的EPA文件追索记录；后续取得的历史版本对和更新后的逐格资格以`EPA_PAIR_AUDIT.md`为准。
 - `source_evidence/NATURAL_REVISION_SEARCH.json`：3个成功查询、18个提交细查、5个含工作簿变化的提交；新增路径、删表、计算兼容错误和AI生成来源不能自动视为自然静默公式错误。
+- `source_evidence/NATURAL_REVISION_SEARCH_20261019_2.json`：4个成功查询、19个提交细查、0个含工作簿变化的提交；该轮没有新增可审计来源。
 - `STAMPZ_SEMANTIC_AUDIT.md`：StampZ原/修订版98个Hue公式存在一致的+5行偏移且修订改为同行；因原表输入和结果均为空，只记公式级候选，不能计准确率、覆盖率或自然来源准入数。原件未提交且全来源排除最终验证。
 - `EPA_PAIR_AUDIT.md`：官方EPA历史版本的格式失败、揭示顺序和逐格证据边界；认证Flares!B39:B43及Oxidizers!D36。
 - `METRICS_PAIR_AUDIT.md`：Software Metrics 28个非空数据行求和遗漏候选、冻结模型预测及替代公式未知状态；原始工作簿不公开。
