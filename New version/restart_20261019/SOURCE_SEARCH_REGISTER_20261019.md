@@ -174,4 +174,14 @@ These two screens add no qualified natural source or template family. They do no
 
 本轮用IPv4重试Hugging Face官方数据集API、数据集文件树和原始GitHub README端点：Hugging Face连接阶段超时（HTTP 000），raw.githubusercontent.com在25秒内无响应；GitHub官方API成功提供仓库README与文件树。未下载工作簿、未读取公式/标签、未运行模型。证据入口：仓库元数据 https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench-2 ，README https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/main/README.md ，仓库树 https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench-2/git/trees/main?recursive=1 ，数据集 https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2 。
 
-处置：此项目是工作流/代理评测基准，`Debugging`类仍可能包含有用纠错任务，但现有公开说明和许可不足以把它认定为自然发生的静默公式错误语料；根仓库没有许可证，数据文件当前不可达。维持“待审/访问受阻”，不算来源或模板家族，不下载、不评分、不把超时解释成零个合格样本。下一次可达时依序核对数据卡与数据文件许可、版本/提交时间、任务构造来源、输入与golden的公式级差异、修订真值依据以及样本是否来自公开注入/合成；先完成来源与标签审计，再决定它只作为工作流控制、注入错误基准还是自然错误来源。
+处置：本项目不是自然错误来源候选，而是可能属于公开注入错误评测的候选；仍不计来源或模板家族、不运行模型、不把超时解释成零个合格样本。许可方面，论文中的数据集许可声明比GitHub根仓库元数据更具体，但仍需取得数据集自身的`README`/许可文件与版本记录，并核对其是否与论文声明一致。
+
+### 论文全文复核：重新分类为注入错误候选
+
+从arXiv官方API和PDF取得论文*SpreadsheetBench 2: Evaluating Agents on End-to-End Business Spreadsheet Workflows*（arXiv:2606.29955v1，2026-06-29）。PDF SHA-256：`4c72f1fc306242cab478e10dca03e41cd8d55730b1db85b9c895899ae04eeaa6`。摘要称基于真实商业数据、专家标注并验证，共321项任务；B.1列出BSE India、Bloomberg、Screener.in及NYU Stern/Damodaran来源。论文A.2说明为控制版权，不再分发原始来源文档，发布的是专家构造的派生任务，必要时修改数值和结构；A.4声明数据集采用CC BY-SA 4.0，评估代码采用MIT。论文所述许可是重要证据，但尚未取得Hugging Face数据卡/许可文件作版本一致性核验。
+
+论文第2.1节与B.4进一步明确：Debugging共100项任务；任务说明不告知错误类型或位置；十类错误经真实金融建模/会计实践中的错误迭代归纳，每个Debugging任务含一个或多个`injected errors`，要求修复至预期状态。专家在构造阶段投入约500小时，选取任务还经过双专家独立解决/一致性检查。故这100项不是自然发生错误样本，不能充当自然错误来源，但可能构成公开工作簿注入错误类别中的独立基准。该基准覆盖双重计数、硬编码、公式错误、错误平均范围、跨表引用、符号、相对/绝对引用、单位等多类业务/公式机制；它是端到端任务集，不能把全部单元格修改都当成公式错误。
+
+本次只审阅官方论文文本及先前已审的GitHub README/树，未取回Hugging Face数据卡、文件清单、输入表或golden文件，未检查任何公式/标签，未运行模型。实验前仍须确认数据文件许可/版本、Debugging子集完整清单、输入与golden差异、每类目标错误及干净格、错误是否仅由作者注入、golden公式是否可作为正确修复真值、自由文本指令中未标目标/错误类型是否会造成额外信息不足，并审计README要求重算工作簿造成的公式/缓存变化。通过这些门槛前不列入可评分注入基准；通过后需冻结本模型和评分器，预登记后再运行。
+
+官方证据入口：论文记录 https://arxiv.org/abs/2606.29955v1 ，PDF https://arxiv.org/pdf/2606.29955v1 ，数据页 https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2 ，项目代码 https://github.com/RUCKBReasoning/SpreadsheetBench-2 。本轮arXiv API/PDF及GitHub API可访问；Hugging Face API/文件树和`raw.githubusercontent.com`超时。自然错误来源/模板家族仍为`0/0`；本候选暂不计入注入错误实验数据。
