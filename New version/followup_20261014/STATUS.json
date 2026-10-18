@@ -50,7 +50,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 92,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -70,7 +70,7 @@
   "dev5_adversarial_all_peer_wrong_misses": 480,
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
-  "upload_record_note": "dev10 commit cdc005082b421b594f703ed16dffaaffcb8d2fe1 verified with git ls-remote on 2026-10-18; dev11 checkpoint pending upload",
+  "upload_record_note": "dev11 experiment commit verified against remote; receipt documentation commit follows",
   "latest_verified_remote_before_this_checkpoint": "4781019f1ba9d17519e51855b5a96ef10fa8b195",
   "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate",
   "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
@@ -201,8 +201,8 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev11 AST gate checkpoint pending upload",
-  "latest_verified_experiment_remote_commit": "cdc005082b421b594f703ed16dffaaffcb8d2fe1",
+  "new_work_pushed_scope": "dev11 experiment checkpoint 8d54ab7ed5cbeacea1316fce47cb838778a336b8",
+  "latest_verified_experiment_remote_commit": "8d54ab7ed5cbeacea1316fce47cb838778a336b8",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
   "dev10_report": "DEV10_PUBLIC_PIPELINE_REPORT_20261018.md",
@@ -288,5 +288,6 @@
     "python": "3.11.16",
     "scope": "Legacy dev6 replay, workbook reload, AST gate; public upstream SG/FG excluded",
     "wall_seconds": 94.7550350950005
-  }
+  },
+  "dev11_upload_receipt": "qa/DEV11_UPLOAD_RECEIPT_20261018.json"
 }
