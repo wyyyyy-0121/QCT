@@ -1,0 +1,181 @@
+{
+  "cpu_seconds": 14.186031342,
+  "folds": [
+    {
+      "cases_with_candidates": 151,
+      "cpu_seconds": 2.0558949980000003,
+      "families": 8,
+      "fold": "family__0",
+      "max_weight": 359.93055555555554,
+      "negative": 8264,
+      "positive": 17651,
+      "rows": 25915,
+      "sample_weight_sum": 25915.000000000004,
+      "scheme": "family",
+      "suggestions": {
+        "dev11": 246,
+        "keep_base_plus_learned": 283,
+        "learned_only": 281
+      },
+      "test_cases": 24,
+      "train_cases": 159,
+      "training_label_sha256": "6cf45f0e9b27dba52a51bcb4a942804257ffee42c61dea47c04db051a8258210",
+      "wall_seconds": 0.7432096409993392
+    },
+    {
+      "cases_with_candidates": 142,
+      "cpu_seconds": 2.020790671,
+      "families": 8,
+      "fold": "family__1",
+      "max_weight": 360.04166666666663,
+      "negative": 8264,
+      "positive": 17659,
+      "rows": 25923,
+      "sample_weight_sum": 25923.000000000004,
+      "scheme": "family",
+      "suggestions": {
+        "dev11": 221,
+        "keep_base_plus_learned": 276,
+        "learned_only": 276
+      },
+      "test_cases": 34,
+      "train_cases": 149,
+      "training_label_sha256": "0a2c0e99a135f5c96c6a880bccc87d3f73cebd6de798c145af52b2041ffc8b33",
+      "wall_seconds": 0.7248008909991768
+    },
+    {
+      "cases_with_candidates": 155,
+      "cpu_seconds": 2.0584401320000003,
+      "families": 8,
+      "fold": "family__2",
+      "max_weight": 364.2083333333333,
+      "negative": 8320,
+      "positive": 17903,
+      "rows": 26223,
+      "sample_weight_sum": 26223.0,
+      "scheme": "family",
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 26,
+        "learned_only": 26
+      },
+      "test_cases": 20,
+      "train_cases": 163,
+      "training_label_sha256": "bb528fa7422cbe7c203b8fa9392a7fb2d4ca7f348a2cef260d3a50b9e1044f03",
+      "wall_seconds": 0.7361248159995739
+    },
+    {
+      "cases_with_candidates": 109,
+      "cpu_seconds": 1.3080605620000005,
+      "families": 8,
+      "fold": "family__3",
+      "max_weight": 33.93055555555556,
+      "negative": 1473,
+      "positive": 970,
+      "rows": 2443,
+      "sample_weight_sum": 2443.0000000000005,
+      "scheme": "family",
+      "suggestions": {
+        "dev11": 13500,
+        "keep_base_plus_learned": 13524,
+        "learned_only": 3027
+      },
+      "test_cases": 65,
+      "train_cases": 118,
+      "training_label_sha256": "b1584ba0995dbf0518bf4ac93312b41b291c47c33fe411eb8e267b6514b4d4e8",
+      "wall_seconds": 0.46558754599936947
+    },
+    {
+      "cases_with_candidates": 135,
+      "cpu_seconds": 2.3585953790000005,
+      "families": 8,
+      "fold": "family__4",
+      "max_weight": 340.9444444444444,
+      "negative": 6983,
+      "positive": 17565,
+      "rows": 24548,
+      "sample_weight_sum": 24548.0,
+      "scheme": "family",
+      "suggestions": {
+        "dev11": 246,
+        "keep_base_plus_learned": 283,
+        "learned_only": 281
+      },
+      "test_cases": 40,
+      "train_cases": 143,
+      "training_label_sha256": "799c0243ab7965f09572a7dc5b97999813da2acb00c2e708609118be3ffb0e48",
+      "wall_seconds": 0.8095466160011711
+    },
+    {
+      "cases_with_candidates": 16,
+      "cpu_seconds": 1.6600742139999998,
+      "families": 1,
+      "fold": "source__authored_development",
+      "max_weight": 1.0679687500000001,
+      "negative": 1281,
+      "positive": 86,
+      "rows": 1367,
+      "sample_weight_sum": 1367.0000000000002,
+      "scheme": "source",
+      "suggestions": {
+        "dev11": 14213,
+        "keep_base_plus_learned": 24297,
+        "learned_only": 23645
+      },
+      "test_cases": 167,
+      "train_cases": 16,
+      "training_label_sha256": "2fe42a5717634de56f024fc0cd4e238c9a2b6b787ab86e18ee08c490233b24e6",
+      "wall_seconds": 0.72912407199874
+    },
+    {
+      "cases_with_candidates": 157,
+      "cpu_seconds": 2.4713994800000005,
+      "families": 9,
+      "fold": "source__uk_government",
+      "max_weight": 307.358024691358,
+      "negative": 7045,
+      "positive": 17851,
+      "rows": 24896,
+      "sample_weight_sum": 24896.0,
+      "scheme": "source",
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0
+      },
+      "test_cases": 16,
+      "train_cases": 167,
+      "training_label_sha256": "92647e93f12cb7bf7382aedb0b7e610cdcd8658afbdbc609914b8851c480c4f2",
+      "wall_seconds": 0.9030658159990708
+    }
+  ],
+  "gpu_used": false,
+  "margin": 0.05,
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0"
+  },
+  "parameters": {
+    "early_stopping": false,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "max_depth": 6,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "random_state": 1618
+  },
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "process_peak_rss_kib": 357012,
+  "python": "3.11.16",
+  "scope": "training and inference from frozen feature/candidate pool; feature extraction and original SG/FG costs excluded",
+  "thread_environment": {
+    "MKL_NUM_THREADS": null,
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "threshold": 0.9,
+  "wall_seconds": 5.248734286999024
+}

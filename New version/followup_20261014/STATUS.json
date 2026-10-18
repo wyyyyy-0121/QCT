@@ -17,16 +17,16 @@
     "accepted_template_families": 0
   },
   "baseline_reproduced": true,
-  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev15 experimental only",
+  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev16 experimental only",
   "development_precision": 1.0,
   "development_coverage": 0.7936297279362973,
   "development_gate_passed": false,
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "develop independent checks for note provenance, scope, and executable business constraints; polluted notes cannot authorize repairs",
-    "expand excluded development workbooks across domains with independently reviewable business relations and adverse controls",
-    "preserve dev11 main control; dev15 auxiliary has 86 correct, 1 wrong and 33 misses on one-source development data",
+    "independently verify business relations in excluded Iowa cashflow, 18F software cost and Packt debt workbooks before new labels",
+    "expand real development origins and adverse controls before further cross-origin candidate learning and calibration",
+    "separate missing-candidate errors from selection errors; do not adopt dev16 after source holdout precision failure",
     "freeze model scorer and inclusion rules before acquiring reserved final workbook and correction-answer bodies"
   ],
   "original_locks_unchanged": true,
@@ -49,14 +49,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 155,
-  "new_work_pushed": true,
+  "unit_test_count": 165,
+  "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV14_DEV15_ANNOTATION_REPORT_20261018.md",
+  "latest_report": "DEV16_GROUPED_LEARNING_REPORT_20261018.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -201,7 +201,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev13 ablation, independent audits, v11-v13 source discovery verified on GitHub; receipt documentation follows",
+  "new_work_pushed_scope": "dev16 candidate learning, blocked-fold metrics and audits awaiting verified upload",
   "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -441,5 +441,97 @@
     "main_candidate_adopted": false,
     "final_validation_eligible": false,
     "report": "DEV14_DEV15_ANNOTATION_REPORT_20261018.md"
+  },
+  "candidate_learning_dev16": {
+    "report": "DEV16_GROUPED_LEARNING_REPORT_20261018.md",
+    "input_cases": 183,
+    "candidate_records": 43879,
+    "feature_count": 101,
+    "registered_families": 10,
+    "conservative_source_groups": 2,
+    "models_trained": 7,
+    "case_predictions": 366,
+    "known_errors": 17995,
+    "family_holdout": {
+      "dev11": {
+        "correct": 14184,
+        "correct_errors": 14184,
+        "coverage": 0.7882189497082523,
+        "errors": 17995,
+        "precision_confirmed_lower_bound": 0.9979596144374868,
+        "suggestions": 14213,
+        "unknown": 0,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "keep_base_plus_learned": {
+        "correct": 14362,
+        "correct_errors": 14362,
+        "coverage": 0.798110586273965,
+        "errors": 17995,
+        "precision_confirmed_lower_bound": 0.9979155086158977,
+        "suggestions": 14392,
+        "unknown": 0,
+        "wrong": 30,
+        "wrong_clean_cells": 30
+      },
+      "learned_only": {
+        "correct": 3889,
+        "correct_errors": 3889,
+        "coverage": 0.2161155876632398,
+        "errors": 17995,
+        "precision_confirmed_lower_bound": 0.9994859933179131,
+        "suggestions": 3891,
+        "unknown": 0,
+        "wrong": 2,
+        "wrong_clean_cells": 2
+      }
+    },
+    "source_holdout": {
+      "dev11": {
+        "correct": 14184,
+        "correct_errors": 14184,
+        "coverage": 0.7882189497082523,
+        "errors": 17995,
+        "precision_confirmed_lower_bound": 0.9979596144374868,
+        "suggestions": 14213,
+        "unknown": 0,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "keep_base_plus_learned": {
+        "correct": 17722,
+        "correct_errors": 17722,
+        "coverage": 0.9848291191997777,
+        "errors": 17995,
+        "precision_confirmed_lower_bound": 0.7293904597275384,
+        "suggestions": 24297,
+        "unknown": 0,
+        "wrong": 6575,
+        "wrong_clean_cells": 6569
+      },
+      "learned_only": {
+        "correct": 17075,
+        "correct_errors": 17075,
+        "coverage": 0.9488746874131703,
+        "errors": 17995,
+        "precision_confirmed_lower_bound": 0.7221399873123282,
+        "suggestions": 23645,
+        "unknown": 0,
+        "wrong": 6570,
+        "wrong_clean_cells": 6564
+      }
+    },
+    "family_new_correct": 178,
+    "family_new_wrong": 1,
+    "candidate_pool_correct_error_ceiling": 17937,
+    "ceiling_is_model_performance": false,
+    "unknown_candidate_count": 17616,
+    "all_probabilities_and_decisions_refit_reproduced": true,
+    "independent_case_method_count_checks": 1098,
+    "model_adopted": false,
+    "source_holdout_failed_precision": true,
+    "lcoe_heldout_coverage": 0.0,
+    "final_validation_eligible": false
   }
 }

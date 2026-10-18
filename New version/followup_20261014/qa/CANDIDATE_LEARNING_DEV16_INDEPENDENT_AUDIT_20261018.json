@@ -1,0 +1,124 @@
+{
+  "aggregate_counts": {
+    "family": {
+      "dev11": {
+        "correct": 14184,
+        "correct_errors": 14184,
+        "errors": 17995,
+        "suggestions": 14213,
+        "unknown": 0,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "keep_base_plus_learned": {
+        "correct": 14362,
+        "correct_errors": 14362,
+        "errors": 17995,
+        "suggestions": 14392,
+        "unknown": 0,
+        "wrong": 30,
+        "wrong_clean_cells": 30
+      },
+      "learned_only": {
+        "correct": 3889,
+        "correct_errors": 3889,
+        "errors": 17995,
+        "suggestions": 3891,
+        "unknown": 0,
+        "wrong": 2,
+        "wrong_clean_cells": 2
+      }
+    },
+    "source": {
+      "dev11": {
+        "correct": 14184,
+        "correct_errors": 14184,
+        "errors": 17995,
+        "suggestions": 14213,
+        "unknown": 0,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "keep_base_plus_learned": {
+        "correct": 17722,
+        "correct_errors": 17722,
+        "errors": 17995,
+        "suggestions": 24297,
+        "unknown": 0,
+        "wrong": 6575,
+        "wrong_clean_cells": 6569
+      },
+      "learned_only": {
+        "correct": 17075,
+        "correct_errors": 17075,
+        "errors": 17995,
+        "suggestions": 23645,
+        "unknown": 0,
+        "wrong": 6570,
+        "wrong_clean_cells": 6564
+      }
+    }
+  },
+  "all_count_checks_passed": true,
+  "audit_script_sha256": "fcf5e7ed1647f39dd3c7d19e25811def5a85a1bd1ef8de97e35d371620c9b1a1",
+  "candidate_labels_independently_checked": 43879,
+  "case_method_count_checks": 1098,
+  "feature_answer_isolation_verified": true,
+  "final_validation_eligible": false,
+  "fold_group_checks": [
+    {
+      "fold": "family__0",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 24,
+      "train_cases": 159
+    },
+    {
+      "fold": "family__1",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 34,
+      "train_cases": 149
+    },
+    {
+      "fold": "family__2",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 20,
+      "train_cases": 163
+    },
+    {
+      "fold": "family__3",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 65,
+      "train_cases": 118
+    },
+    {
+      "fold": "family__4",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 40,
+      "train_cases": 143
+    },
+    {
+      "fold": "source__authored_development",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 167,
+      "train_cases": 16
+    },
+    {
+      "fold": "source__uk_government",
+      "group_overlap": false,
+      "semantic_overlap": false,
+      "test_cases": 16,
+      "train_cases": 167
+    }
+  ],
+  "known_correct_candidate_records": 17937,
+  "main_candidate_adopted": false,
+  "prediction_lock_sha256": "d52567fb8cfcd7f1ba5767052b6a8680ec3d9bb407d6a0fb3f899524f1a35445",
+  "semantic_duplicate_groups": 7,
+  "unknown_candidates": 17616
+}

@@ -1,0 +1,325 @@
+{
+  "audit_script_sha256": "4aca17ef0bc92e3ffc27f724d40d021c048b6341a72ee0cee0e1a9221be0fb97",
+  "groups": {
+    "family/authored_development": {
+      "case_mean_brier": 0.17323989163080503,
+      "known_eligible_candidates": 24896,
+      "probability_at_least_0_9_actual_fraction_correct": 0.9994859933179131,
+      "probability_at_least_0_9_candidates": 3891,
+      "reliability_bins": [
+        {
+          "candidates": 10002,
+          "fraction_correct": 0.34933013397320534,
+          "lower": 0.0,
+          "mean_probability": 0.04476201927439794,
+          "upper": 0.1
+        },
+        {
+          "candidates": 70,
+          "fraction_correct": 0.15714285714285714,
+          "lower": 0.1,
+          "mean_probability": 0.16205113005466795,
+          "upper": 0.2
+        },
+        {
+          "candidates": 9078,
+          "fraction_correct": 0.993280458250716,
+          "lower": 0.2,
+          "mean_probability": 0.2692314065474274,
+          "upper": 0.3
+        },
+        {
+          "candidates": 10,
+          "fraction_correct": 0.0,
+          "lower": 0.3,
+          "mean_probability": 0.31197181697186316,
+          "upper": 0.4
+        },
+        {
+          "candidates": 88,
+          "fraction_correct": 0.125,
+          "lower": 0.4,
+          "mean_probability": 0.4593168947617458,
+          "upper": 0.5
+        },
+        {
+          "candidates": 763,
+          "fraction_correct": 0.5871559633027523,
+          "lower": 0.5,
+          "mean_probability": 0.5903616303150456,
+          "upper": 0.6
+        },
+        {
+          "candidates": 9,
+          "fraction_correct": 0.6666666666666666,
+          "lower": 0.6,
+          "mean_probability": 0.6443387633008576,
+          "upper": 0.7
+        },
+        {
+          "candidates": 27,
+          "fraction_correct": 0.7777777777777778,
+          "lower": 0.7,
+          "mean_probability": 0.7479431348388635,
+          "upper": 0.8
+        },
+        {
+          "candidates": 958,
+          "fraction_correct": 0.9958246346555324,
+          "lower": 0.8,
+          "mean_probability": 0.8829724385236509,
+          "upper": 0.9
+        },
+        {
+          "candidates": 3891,
+          "fraction_correct": 0.9994859933179131,
+          "lower": 0.9,
+          "mean_probability": 0.9809719968131452,
+          "upper": 1.0
+        }
+      ],
+      "row_pooled_brier": 0.3305341733181907
+    },
+    "family/uk_government": {
+      "case_mean_brier": 0.051208636417030294,
+      "known_eligible_candidates": 1367,
+      "probability_at_least_0_9_actual_fraction_correct": null,
+      "probability_at_least_0_9_candidates": 0,
+      "reliability_bins": [
+        {
+          "candidates": 1367,
+          "fraction_correct": 0.06291148500365765,
+          "lower": 0.0,
+          "mean_probability": 0.01519645099454032,
+          "upper": 0.1
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.1,
+          "mean_probability": null,
+          "upper": 0.2
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.2,
+          "mean_probability": null,
+          "upper": 0.3
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.3,
+          "mean_probability": null,
+          "upper": 0.4
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.4,
+          "mean_probability": null,
+          "upper": 0.5
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.5,
+          "mean_probability": null,
+          "upper": 0.6
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.6,
+          "mean_probability": null,
+          "upper": 0.7
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.7,
+          "mean_probability": null,
+          "upper": 0.8
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.8,
+          "mean_probability": null,
+          "upper": 0.9
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.9,
+          "mean_probability": null,
+          "upper": 1.0
+        }
+      ],
+      "row_pooled_brier": 0.06260163858899889
+    },
+    "source/authored_development": {
+      "case_mean_brier": 0.48350236908716154,
+      "known_eligible_candidates": 24896,
+      "probability_at_least_0_9_actual_fraction_correct": 0.7221399873123282,
+      "probability_at_least_0_9_candidates": 23645,
+      "reliability_bins": [
+        {
+          "candidates": 785,
+          "fraction_correct": 0.42547770700636944,
+          "lower": 0.0,
+          "mean_probability": 0.0015243996856629904,
+          "upper": 0.1
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.1,
+          "mean_probability": null,
+          "upper": 0.2
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.2,
+          "mean_probability": null,
+          "upper": 0.3
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.3,
+          "mean_probability": null,
+          "upper": 0.4
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.4,
+          "mean_probability": null,
+          "upper": 0.5
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.5,
+          "mean_probability": null,
+          "upper": 0.6
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.6,
+          "mean_probability": null,
+          "upper": 0.7
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.7,
+          "mean_probability": null,
+          "upper": 0.8
+        },
+        {
+          "candidates": 466,
+          "fraction_correct": 0.9484978540772532,
+          "lower": 0.8,
+          "mean_probability": 0.8585998458801181,
+          "upper": 0.9
+        },
+        {
+          "candidates": 23645,
+          "fraction_correct": 0.7221399873123282,
+          "lower": 0.9,
+          "mean_probability": 0.9862873079572408,
+          "upper": 1.0
+        }
+      ],
+      "row_pooled_brier": 0.27123963217241065
+    },
+    "source/uk_government": {
+      "case_mean_brier": 0.05086083808808926,
+      "known_eligible_candidates": 1367,
+      "probability_at_least_0_9_actual_fraction_correct": null,
+      "probability_at_least_0_9_candidates": 0,
+      "reliability_bins": [
+        {
+          "candidates": 1367,
+          "fraction_correct": 0.06291148500365765,
+          "lower": 0.0,
+          "mean_probability": 0.004773133405077096,
+          "upper": 0.1
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.1,
+          "mean_probability": null,
+          "upper": 0.2
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.2,
+          "mean_probability": null,
+          "upper": 0.3
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.3,
+          "mean_probability": null,
+          "upper": 0.4
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.4,
+          "mean_probability": null,
+          "upper": 0.5
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.5,
+          "mean_probability": null,
+          "upper": 0.6
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.6,
+          "mean_probability": null,
+          "upper": 0.7
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.7,
+          "mean_probability": null,
+          "upper": 0.8
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.8,
+          "mean_probability": null,
+          "upper": 0.9
+        },
+        {
+          "candidates": 0,
+          "fraction_correct": null,
+          "lower": 0.9,
+          "mean_probability": null,
+          "upper": 1.0
+        }
+      ],
+      "row_pooled_brier": 0.06227145429655948
+    }
+  },
+  "prediction_lock_sha256": "d52567fb8cfcd7f1ba5767052b6a8680ec3d9bb407d6a0fb3f899524f1a35445",
+  "predictions_and_threshold_unchanged": true,
+  "scope": "post-hoc candidate probability diagnostic, not recalibration or model selection",
+  "unknown_candidates_excluded_from_calibration_but_not_repair_precision": true
+}
