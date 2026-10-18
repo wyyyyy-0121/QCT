@@ -1,6 +1,6 @@
 {
   "goal_status": "active",
-  "resumed_on": "2026-10-15",
+  "resumed_on": "2026-10-18",
   "resume_reason": "User requested continuation after verified GitHub upload",
   "previous_upload_commit": "1b792b4bf05aa794978b8a5fad4c9055b315fc55",
   "git_branch": "research/hybridguard-followup",
@@ -17,22 +17,17 @@
     "accepted_template_families": 0
   },
   "baseline_reproduced": true,
-  "development_candidate": "selector-dev5",
+  "development_candidate": "selector-dev6 with dev8 corrected-metadata control",
   "development_precision": 1.0,
   "development_coverage": 0.7936297279362973,
   "development_gate_passed": false,
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "fix typed Excel error propagation in a new execution adapter; preserve literal strings and lazy IF semantics",
-    "audit independent-engine and cache discrepancies before trusting a broader formula executor",
-    "develop candidate generation when every peer is wrong and investigate independent business evidence",
-    "retain all exception harms and unsupported failures in development regression",
-    "audit independent sources and natural-error truth without final data exposure",
-    "freeze improved model and scorer before final acquisition; separate three final categories",
-    "separate author-supplied contract mode from workbook-only mode and test both fairly",
-    "retain dev6 common-peer gains with the four unmarked-reversed-role harms",
-    "freeze contract schema and source audit before acquiring any final workbook body"
+    "measure generic peer-backed coefficient candidate tradeoff on all revealed cases while retaining dev6 contract gains",
+    "audit observationally identical workbooks with conflicting external intent; retain all metric denominators",
+    "investigate independent workbook constraints or author documents without answer leakage",
+    "freeze model and scorer before final dataset acquisition; report three independent categories separately"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -54,14 +49,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 47,
-  "new_work_pushed": true,
+  "unit_test_count": 76,
+  "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV6_CONTRACT_REPORT_20261015.md",
+  "latest_report": "DEV8_METADATA_CONTROL_REPORT_20261018.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -95,8 +90,8 @@
   "public_execution_reference_business_labels": false,
   "public_execution_reference_final_eligible": false,
   "latest_execution_evidence": "development/execution_reference_dev1/analysis.json",
-  "latest_verified_remote_before_execution_checkpoint": "02cdcccc433dd8cb69cd06b99d6a44fe884775bd"
-  ,"typed_execution_adapter": "typed-execution-adapter-dev1",
+  "latest_verified_remote_before_execution_checkpoint": "02cdcccc433dd8cb69cd06b99d6a44fe884775bd",
+  "typed_execution_adapter": "typed-execution-adapter-dev1",
   "typed_execution_cases": 14,
   "typed_execution_raw_formula_declarations": 5117,
   "typed_execution_vs_libreoffice_agreements": 967,
@@ -104,27 +99,37 @@
   "typed_execution_final_validation_eligible": false,
   "typed_execution_report": "TYPED_EXECUTION_REPORT_20261015.md",
   "typed_execution_verification": "qa/TYPED_EXECUTION_DEV1_VERIFICATION_20261015.json",
-  "latest_typed_execution_analysis": "development/typed_execution_dev1/analysis.json"
-  ,"development_dev6_contract_cases": 107
-  ,"development_dev6_contract_crossdomain_proposals": 492
-  ,"development_dev6_contract_crossdomain_correct": 492
-  ,"development_dev6_contract_adversarial_proposals": 467
-  ,"development_dev6_contract_adversarial_correct": 463
-  ,"development_dev6_contract_adversarial_wrong": 4
-  ,"development_dev6_contract_adversarial_precision": 0.9914346895074947
-  ,"development_dev6_contract_adversarial_coverage": 0.7928082191780822
-  ,"development_dev6_contract_common_peer_gain": "463/584 correct adversarial repairs; dev5 368/584"
-  ,"development_dev6_contract_final_validation_eligible": false
-  ,"development_dev6_contract_report": "DEV6_CONTRACT_REPORT_20261015.md"
-  ,"contract_mode_version": "hybridguard-contract-mode-dev1"
-  ,"contract_mode_unit_tests": 16
-  ,"contract_mode_main_acceptance_eligible": false
-  ,"contract_mode_report": "CONTRACT_MODE_REPORT_20261015.md"
-  ,"contract_mode_smoke_cases": 1
-  ,"source_index_audit_report": "source_discovery/index_audit_20261015/RECEIPT.json"
-  ,"source_index_audit_origin_groups_with_workbook_links": 7
-  ,"source_index_audit_final_workbooks_acquired": false
-  ,"source_index_audit_accepted_sources": 0
-  ,"dev6_independent_audit": "qa/DEV6_INDEPENDENT_AUDIT_20261015.json"
-  ,"dev6_replay": "qa/DEV6_REPLAY_20261015.json"
+  "latest_typed_execution_analysis": "development/typed_execution_dev1/analysis.json",
+  "development_dev6_contract_cases": 107,
+  "development_dev6_contract_crossdomain_proposals": 492,
+  "development_dev6_contract_crossdomain_correct": 492,
+  "development_dev6_contract_adversarial_proposals": 467,
+  "development_dev6_contract_adversarial_correct": 463,
+  "development_dev6_contract_adversarial_wrong": 4,
+  "development_dev6_contract_adversarial_precision": 0.9914346895074947,
+  "development_dev6_contract_adversarial_coverage": 0.7928082191780822,
+  "development_dev6_contract_common_peer_gain": "463/584 correct adversarial repairs; dev5 368/584",
+  "development_dev6_contract_final_validation_eligible": false,
+  "development_dev6_contract_report": "DEV6_CONTRACT_REPORT_20261015.md",
+  "contract_mode_version": "hybridguard-contract-mode-dev1",
+  "contract_mode_unit_tests": 16,
+  "contract_mode_main_acceptance_eligible": false,
+  "contract_mode_report": "CONTRACT_MODE_REPORT_20261015.md",
+  "contract_mode_smoke_cases": 1,
+  "source_index_audit_report": "source_discovery/index_audit_20261015/RECEIPT.json",
+  "source_index_audit_origin_groups_with_workbook_links": 7,
+  "source_index_audit_final_workbooks_acquired": false,
+  "source_index_audit_accepted_sources": 0,
+  "dev6_independent_audit": "qa/DEV6_INDEPENDENT_AUDIT_20261015.json",
+  "dev6_replay": "qa/DEV6_REPLAY_20261015.json",
+  "dev8_control_run": "development/selector_dev8_metadata_control_v1",
+  "dev8_prediction_cases": 107,
+  "dev8_predictions_changed_vs_dev6": 0,
+  "dev8_replay": "qa/DEV8_METADATA_CONTROL_REPLAY_20261018.json",
+  "dev8_configuration_bug_fixed": true,
+  "dev8_performance_gain": false,
+  "dev7_effective_improvement": false,
+  "observational_conflicts_audit": "development/observational_conflicts_dev1/AUDIT.json",
+  "observational_conflicts_groups": 7,
+  "observational_conflicts_distinct_inputs": 100
 }

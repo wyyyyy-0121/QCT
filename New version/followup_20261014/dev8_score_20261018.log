@@ -1,0 +1,107 @@
+{
+  "regression": {
+    "dev6_totals": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    },
+    "totals": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    },
+    "changed_cases": 0
+  },
+  "stress": {
+    "dev6_totals": {
+      "proposals": 25,
+      "correct": 25,
+      "wrong": 0,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.3424657534246575
+    },
+    "totals": {
+      "proposals": 25,
+      "correct": 25,
+      "wrong": 0,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.3424657534246575
+    },
+    "changed_cases": 0
+  },
+  "tradeoff": {
+    "dev6_totals": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    },
+    "totals": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    },
+    "changed_cases": 0
+  },
+  "crossdomain": {
+    "dev6_totals": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "totals": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    "changed_cases": 0
+  },
+  "adversarial": {
+    "dev6_totals": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    },
+    "totals": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    },
+    "changed_cases": 0
+  }
+}

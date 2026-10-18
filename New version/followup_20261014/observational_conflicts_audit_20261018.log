@@ -1,0 +1,13 @@
+{
+  "cases": 107,
+  "distinct_observed_inputs": 100,
+  "conflicting_groups": 7,
+  "pair_limit": {
+    "scope": "c05/c06 only, equal case weighting and identical semantic inputs",
+    "erroneous_cells_in_c06": 24,
+    "clean_cells_in_c05_at_same_positions": 24,
+    "maximum_pooled_precision_for_any_correct_repair": 0.5,
+    "reason": "Every correct repair of c06 necessarily proposes the same wrong change in c05.",
+    "coverage_if_abstaining_on_all_conflicts": 0.0
+  }
+}

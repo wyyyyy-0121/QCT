@@ -1,0 +1,151 @@
+{
+  "adversarial": {
+    "counts": {
+      "formula_cells": 5700,
+      "errors": 584,
+      "prior_correct": 463,
+      "review_inventory_rows": 100,
+      "candidate_hypotheses": 2325,
+      "clean_rows_with_multiple_hypotheses": 100,
+      "missed_errors": 121,
+      "missed_without_inventory": 121,
+      "missed_with_exact_target_in_inventory": 0,
+      "missed_with_ast_target_in_inventory": 0,
+      "missed_target_absent_from_requested_inventory": 0,
+      "missed_target_unit_compatible": 0,
+      "missed_target_unit_unknown": 0,
+      "missed_target_unit_incompatible": 0,
+      "missed_with_multiple_hypotheses": 0,
+      "missed_with_truncated_inventory": 0
+    },
+    "unit_confusion": {
+      "clean/compatible": 2043,
+      "error/compatible": 435,
+      "clean/unknown": 3073,
+      "error/unknown": 149
+    },
+    "unchanged_dev6": {
+      "proposals": 467,
+      "correct": 463,
+      "wrong": 4,
+      "errors": 584,
+      "harmful_correct_cells": 4,
+      "precision": 0.9914346895074947,
+      "coverage": 0.7928082191780822
+    }
+  },
+  "crossdomain": {
+    "counts": {
+      "formula_cells": 7700,
+      "errors": 492,
+      "prior_correct": 492,
+      "review_inventory_rows": 91,
+      "candidate_hypotheses": 839,
+      "clean_rows_with_multiple_hypotheses": 91
+    },
+    "unit_confusion": {
+      "clean/compatible": 4371,
+      "error/compatible": 369,
+      "clean/unknown": 2837,
+      "error/unknown": 123
+    },
+    "unchanged_dev6": {
+      "proposals": 492,
+      "correct": 492,
+      "wrong": 0,
+      "errors": 492,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    }
+  },
+  "regression": {
+    "counts": {
+      "formula_cells": 274683,
+      "errors": 16577,
+      "prior_correct": 13156,
+      "review_inventory_rows": 9752,
+      "candidate_hypotheses": 532688,
+      "clean_rows_with_multiple_hypotheses": 6331,
+      "missed_errors": 3421,
+      "missed_without_inventory": 0,
+      "missed_with_exact_target_in_inventory": 3421,
+      "missed_with_ast_target_in_inventory": 3421,
+      "missed_target_absent_from_requested_inventory": 0,
+      "missed_target_unit_compatible": 0,
+      "missed_target_unit_unknown": 3421,
+      "missed_target_unit_incompatible": 0,
+      "missed_with_multiple_hypotheses": 3421,
+      "missed_with_truncated_inventory": 0
+    },
+    "unit_confusion": {
+      "clean/unknown": 258106,
+      "error/unknown": 16577
+    },
+    "unchanged_dev6": {
+      "proposals": 13156,
+      "correct": 13156,
+      "wrong": 0,
+      "errors": 16577,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.7936297279362973
+    }
+  },
+  "stress": {
+    "counts": {
+      "formula_cells": 960,
+      "errors": 73,
+      "prior_correct": 25,
+      "review_inventory_rows": 121,
+      "candidate_hypotheses": 4785,
+      "clean_rows_with_multiple_hypotheses": 73,
+      "missed_errors": 48,
+      "missed_without_inventory": 0,
+      "missed_with_exact_target_in_inventory": 48,
+      "missed_with_ast_target_in_inventory": 48,
+      "missed_target_absent_from_requested_inventory": 0,
+      "missed_target_unit_compatible": 0,
+      "missed_target_unit_unknown": 48,
+      "missed_target_unit_incompatible": 0,
+      "missed_with_multiple_hypotheses": 48,
+      "missed_with_truncated_inventory": 0
+    },
+    "unit_confusion": {
+      "error/unknown": 73,
+      "clean/unknown": 887
+    },
+    "unchanged_dev6": {
+      "proposals": 25,
+      "correct": 25,
+      "wrong": 0,
+      "errors": 73,
+      "harmful_correct_cells": 0,
+      "precision": 1.0,
+      "coverage": 0.3424657534246575
+    }
+  },
+  "tradeoff": {
+    "counts": {
+      "formula_cells": 480,
+      "errors": 48,
+      "prior_correct": 48,
+      "review_inventory_rows": 0,
+      "candidate_hypotheses": 0,
+      "clean_rows_with_multiple_hypotheses": 0
+    },
+    "unit_confusion": {
+      "error/unknown": 48,
+      "clean/unknown": 432
+    },
+    "unchanged_dev6": {
+      "proposals": 73,
+      "correct": 48,
+      "wrong": 25,
+      "errors": 48,
+      "harmful_correct_cells": 25,
+      "precision": 0.6575342465753424,
+      "coverage": 1.0
+    }
+  }
+}

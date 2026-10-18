@@ -1,0 +1,154 @@
+regression sparse_seed101 dev7 7 0
+regression clean_101 dev7 0 0
+regression sparse_seed202 dev7 26 0
+regression clean_202 dev7 0 0
+regression sparse_seed303 dev7 46 0
+regression clean_303 dev7 0 0
+regression systemic_seed404 dev7 650 0
+regression clean_404 dev7 0 0
+regression systemic_seed505 dev7 1000 0
+regression clean_505 dev7 0 0
+regression systemic_seed606 dev7 600 0
+regression clean_606 dev7 0 0
+regression length_1_101 dev7 1 0
+regression length_10_101 dev7 10 0
+regression length_100_101 dev7 100 0
+regression length_500_101 dev7 500 0
+regression length_1499_101 dev7 1499 0
+regression shared_101 dev7 900 0
+regression single_101 dev7 300 0
+regression heterogeneous_101 dev7 0 0
+regression exception_101 dev7 299 0
+regression length_1_202 dev7 1 0
+regression length_10_202 dev7 10 0
+regression length_100_202 dev7 100 0
+regression length_500_202 dev7 500 0
+regression length_1499_202 dev7 1499 0
+regression shared_202 dev7 900 0
+regression single_202 dev7 300 0
+regression heterogeneous_202 dev7 0 0
+regression exception_202 dev7 299 0
+regression length_1_303 dev7 1 0
+regression length_10_303 dev7 10 0
+regression length_100_303 dev7 100 0
+regression length_500_303 dev7 500 0
+regression length_1499_303 dev7 1499 0
+regression shared_303 dev7 900 0
+regression single_303 dev7 300 0
+regression heterogeneous_303 dev7 0 0
+regression exception_303 dev7 299 0
+stress c01 dev7 24 0
+stress c02 dev7 1 0
+stress c03 dev7 0 0
+stress c04 dev7 0 0
+stress c05 dev7 0 0
+stress c06 dev7 0 0
+stress c07 dev7 0 0
+stress c08 dev7 0 0
+tradeoff p01 dev7 24 0
+tradeoff p02 dev7 0 1
+tradeoff p03 dev7 0 24
+tradeoff p04 dev7 24 0
+crossdomain x11 dev7 0 0
+crossdomain x12 dev7 1 0
+crossdomain x13 dev7 24 0
+crossdomain x14 dev7 0 0
+crossdomain x15 dev7 0 0
+crossdomain x16 dev7 1 0
+crossdomain x17 dev7 96 0
+crossdomain x18 dev7 1 0
+crossdomain x21 dev7 0 0
+crossdomain x22 dev7 1 0
+crossdomain x23 dev7 24 0
+crossdomain x24 dev7 0 0
+crossdomain x25 dev7 0 0
+crossdomain x26 dev7 1 0
+crossdomain x27 dev7 96 0
+crossdomain x28 dev7 1 0
+crossdomain x31 dev7 0 0
+crossdomain x32 dev7 1 0
+crossdomain x33 dev7 24 0
+crossdomain x34 dev7 0 0
+crossdomain x35 dev7 0 0
+crossdomain x36 dev7 1 0
+crossdomain x37 dev7 96 0
+crossdomain x38 dev7 1 0
+crossdomain x41 dev7 0 0
+crossdomain x42 dev7 1 0
+crossdomain x43 dev7 24 0
+crossdomain x44 dev7 0 0
+crossdomain x45 dev7 0 0
+crossdomain x46 dev7 1 0
+crossdomain x47 dev7 96 0
+crossdomain x48 dev7 1 0
+adversarial a11 dev7 0 1
+adversarial a12 dev7 0 0
+adversarial a13 dev7 1 0
+adversarial a14 dev7 0 0
+adversarial a15 dev7 0 0
+adversarial a16 dev7 1 0
+adversarial a21 dev7 0 1
+adversarial a22 dev7 0 0
+adversarial a23 dev7 1 0
+adversarial a24 dev7 0 0
+adversarial a25 dev7 0 0
+adversarial a26 dev7 1 0
+adversarial a31 dev7 0 1
+adversarial a32 dev7 0 0
+adversarial a33 dev7 1 0
+adversarial a34 dev7 0 0
+adversarial a35 dev7 0 0
+adversarial a36 dev7 1 0
+adversarial a41 dev7 0 1
+adversarial a42 dev7 0 0
+adversarial a43 dev7 1 0
+adversarial a44 dev7 0 0
+adversarial a45 dev7 0 0
+adversarial a46 dev7 1 0
+{
+  "regression": {
+    "proposals": 13156,
+    "correct": 13156,
+    "wrong": 0,
+    "errors": 16577,
+    "harmful_correct_cells": 0,
+    "precision": 1.0,
+    "coverage": 0.7936297279362973
+  },
+  "stress": {
+    "proposals": 25,
+    "correct": 25,
+    "wrong": 0,
+    "errors": 73,
+    "harmful_correct_cells": 0,
+    "precision": 1.0,
+    "coverage": 0.3424657534246575
+  },
+  "tradeoff": {
+    "proposals": 73,
+    "correct": 48,
+    "wrong": 25,
+    "errors": 48,
+    "harmful_correct_cells": 25,
+    "precision": 0.6575342465753424,
+    "coverage": 1.0
+  },
+  "crossdomain": {
+    "proposals": 492,
+    "correct": 492,
+    "wrong": 0,
+    "errors": 492,
+    "harmful_correct_cells": 0,
+    "precision": 1.0,
+    "coverage": 1.0
+  },
+  "adversarial": {
+    "proposals": 12,
+    "correct": 8,
+    "wrong": 4,
+    "errors": 584,
+    "harmful_correct_cells": 4,
+    "precision": 0.6666666666666666,
+    "coverage": 0.0136986301369863
+  }
+}

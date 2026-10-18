@@ -1,0 +1,629 @@
+{
+  "byte_identical_c05_c06_pair": true,
+  "cases": 107,
+  "conflicting_groups": [
+    {
+      "conflicting_cells": 24,
+      "conflicts": [
+        {
+          "cell": "A!F10",
+          "expected_by_case": {
+            "stress/c01": "=A10*B10*(1-E10)-A10*C10-D10",
+            "tradeoff/p03": "=A10*B10*(1-E10)+A10*C10-D10"
+          },
+          "observed": "=A10*B10*(1-E10)+A10*C10-D10"
+        },
+        {
+          "cell": "A!F11",
+          "expected_by_case": {
+            "stress/c01": "=A11*B11*(1-E11)-A11*C11-D11",
+            "tradeoff/p03": "=A11*B11*(1-E11)+A11*C11-D11"
+          },
+          "observed": "=A11*B11*(1-E11)+A11*C11-D11"
+        },
+        {
+          "cell": "A!F12",
+          "expected_by_case": {
+            "stress/c01": "=A12*B12*(1-E12)-A12*C12-D12",
+            "tradeoff/p03": "=A12*B12*(1-E12)+A12*C12-D12"
+          },
+          "observed": "=A12*B12*(1-E12)+A12*C12-D12"
+        },
+        {
+          "cell": "A!F13",
+          "expected_by_case": {
+            "stress/c01": "=A13*B13*(1-E13)-A13*C13-D13",
+            "tradeoff/p03": "=A13*B13*(1-E13)+A13*C13-D13"
+          },
+          "observed": "=A13*B13*(1-E13)+A13*C13-D13"
+        },
+        {
+          "cell": "A!F14",
+          "expected_by_case": {
+            "stress/c01": "=A14*B14*(1-E14)-A14*C14-D14",
+            "tradeoff/p03": "=A14*B14*(1-E14)+A14*C14-D14"
+          },
+          "observed": "=A14*B14*(1-E14)+A14*C14-D14"
+        },
+        {
+          "cell": "A!F15",
+          "expected_by_case": {
+            "stress/c01": "=A15*B15*(1-E15)-A15*C15-D15",
+            "tradeoff/p03": "=A15*B15*(1-E15)+A15*C15-D15"
+          },
+          "observed": "=A15*B15*(1-E15)+A15*C15-D15"
+        },
+        {
+          "cell": "A!F16",
+          "expected_by_case": {
+            "stress/c01": "=A16*B16*(1-E16)-A16*C16-D16",
+            "tradeoff/p03": "=A16*B16*(1-E16)+A16*C16-D16"
+          },
+          "observed": "=A16*B16*(1-E16)+A16*C16-D16"
+        },
+        {
+          "cell": "A!F17",
+          "expected_by_case": {
+            "stress/c01": "=A17*B17*(1-E17)-A17*C17-D17",
+            "tradeoff/p03": "=A17*B17*(1-E17)+A17*C17-D17"
+          },
+          "observed": "=A17*B17*(1-E17)+A17*C17-D17"
+        },
+        {
+          "cell": "A!F18",
+          "expected_by_case": {
+            "stress/c01": "=A18*B18*(1-E18)-A18*C18-D18",
+            "tradeoff/p03": "=A18*B18*(1-E18)+A18*C18-D18"
+          },
+          "observed": "=A18*B18*(1-E18)+A18*C18-D18"
+        },
+        {
+          "cell": "A!F19",
+          "expected_by_case": {
+            "stress/c01": "=A19*B19*(1-E19)-A19*C19-D19",
+            "tradeoff/p03": "=A19*B19*(1-E19)+A19*C19-D19"
+          },
+          "observed": "=A19*B19*(1-E19)+A19*C19-D19"
+        },
+        {
+          "cell": "A!F2",
+          "expected_by_case": {
+            "stress/c01": "=A2*B2*(1-E2)-A2*C2-D2",
+            "tradeoff/p03": "=A2*B2*(1-E2)+A2*C2-D2"
+          },
+          "observed": "=A2*B2*(1-E2)+A2*C2-D2"
+        },
+        {
+          "cell": "A!F20",
+          "expected_by_case": {
+            "stress/c01": "=A20*B20*(1-E20)-A20*C20-D20",
+            "tradeoff/p03": "=A20*B20*(1-E20)+A20*C20-D20"
+          },
+          "observed": "=A20*B20*(1-E20)+A20*C20-D20"
+        },
+        {
+          "cell": "A!F21",
+          "expected_by_case": {
+            "stress/c01": "=A21*B21*(1-E21)-A21*C21-D21",
+            "tradeoff/p03": "=A21*B21*(1-E21)+A21*C21-D21"
+          },
+          "observed": "=A21*B21*(1-E21)+A21*C21-D21"
+        },
+        {
+          "cell": "A!F22",
+          "expected_by_case": {
+            "stress/c01": "=A22*B22*(1-E22)-A22*C22-D22",
+            "tradeoff/p03": "=A22*B22*(1-E22)+A22*C22-D22"
+          },
+          "observed": "=A22*B22*(1-E22)+A22*C22-D22"
+        },
+        {
+          "cell": "A!F23",
+          "expected_by_case": {
+            "stress/c01": "=A23*B23*(1-E23)-A23*C23-D23",
+            "tradeoff/p03": "=A23*B23*(1-E23)+A23*C23-D23"
+          },
+          "observed": "=A23*B23*(1-E23)+A23*C23-D23"
+        },
+        {
+          "cell": "A!F24",
+          "expected_by_case": {
+            "stress/c01": "=A24*B24*(1-E24)-A24*C24-D24",
+            "tradeoff/p03": "=A24*B24*(1-E24)+A24*C24-D24"
+          },
+          "observed": "=A24*B24*(1-E24)+A24*C24-D24"
+        },
+        {
+          "cell": "A!F25",
+          "expected_by_case": {
+            "stress/c01": "=A25*B25*(1-E25)-A25*C25-D25",
+            "tradeoff/p03": "=A25*B25*(1-E25)+A25*C25-D25"
+          },
+          "observed": "=A25*B25*(1-E25)+A25*C25-D25"
+        },
+        {
+          "cell": "A!F3",
+          "expected_by_case": {
+            "stress/c01": "=A3*B3*(1-E3)-A3*C3-D3",
+            "tradeoff/p03": "=A3*B3*(1-E3)+A3*C3-D3"
+          },
+          "observed": "=A3*B3*(1-E3)+A3*C3-D3"
+        },
+        {
+          "cell": "A!F4",
+          "expected_by_case": {
+            "stress/c01": "=A4*B4*(1-E4)-A4*C4-D4",
+            "tradeoff/p03": "=A4*B4*(1-E4)+A4*C4-D4"
+          },
+          "observed": "=A4*B4*(1-E4)+A4*C4-D4"
+        },
+        {
+          "cell": "A!F5",
+          "expected_by_case": {
+            "stress/c01": "=A5*B5*(1-E5)-A5*C5-D5",
+            "tradeoff/p03": "=A5*B5*(1-E5)+A5*C5-D5"
+          },
+          "observed": "=A5*B5*(1-E5)+A5*C5-D5"
+        },
+        {
+          "cell": "A!F6",
+          "expected_by_case": {
+            "stress/c01": "=A6*B6*(1-E6)-A6*C6-D6",
+            "tradeoff/p03": "=A6*B6*(1-E6)+A6*C6-D6"
+          },
+          "observed": "=A6*B6*(1-E6)+A6*C6-D6"
+        },
+        {
+          "cell": "A!F7",
+          "expected_by_case": {
+            "stress/c01": "=A7*B7*(1-E7)-A7*C7-D7",
+            "tradeoff/p03": "=A7*B7*(1-E7)+A7*C7-D7"
+          },
+          "observed": "=A7*B7*(1-E7)+A7*C7-D7"
+        },
+        {
+          "cell": "A!F8",
+          "expected_by_case": {
+            "stress/c01": "=A8*B8*(1-E8)-A8*C8-D8",
+            "tradeoff/p03": "=A8*B8*(1-E8)+A8*C8-D8"
+          },
+          "observed": "=A8*B8*(1-E8)+A8*C8-D8"
+        },
+        {
+          "cell": "A!F9",
+          "expected_by_case": {
+            "stress/c01": "=A9*B9*(1-E9)-A9*C9-D9",
+            "tradeoff/p03": "=A9*B9*(1-E9)+A9*C9-D9"
+          },
+          "observed": "=A9*B9*(1-E9)+A9*C9-D9"
+        }
+      ],
+      "members": [
+        {
+          "errors": 24,
+          "group": "stress",
+          "id": "c01",
+          "input": "development/semantic_stress_dev1/inputs/c01.xlsx",
+          "input_sha256": "41ed485197cb2ca93470cc0fe1cb8d6ef90ca97165af5aecc9d426ab8caca505",
+          "scenario": "expense_sign_error"
+        },
+        {
+          "errors": 0,
+          "group": "tradeoff",
+          "id": "p03",
+          "input": "development/policy_tradeoff_dev1/inputs/p03.xlsx",
+          "input_sha256": "92db8a0bf500d1dd098bb52f19a972eb9fa96dace677e8708571b08aaab52caa",
+          "scenario": "unmarked_legitimate_cost_reimbursement"
+        }
+      ],
+      "observed_fingerprint": "ed7e6959b5606d75bf2c73b11f3809ccddef3e6a32b961af070158065f2f3d0b"
+    },
+    {
+      "conflicting_cells": 1,
+      "conflicts": [
+        {
+          "cell": "A!F10",
+          "expected_by_case": {
+            "stress/c02": "=A10*B10*(1-E10)-A10*C10-D10",
+            "tradeoff/p02": "=A10*B10*(1-E10)-A10*C10"
+          },
+          "observed": "=A10*B10*(1-E10)-A10*C10"
+        }
+      ],
+      "members": [
+        {
+          "errors": 1,
+          "group": "stress",
+          "id": "c02",
+          "input": "development/semantic_stress_dev1/inputs/c02.xlsx",
+          "input_sha256": "70499caf0cbb62759b1e3bf440962c58d5cd73fcab93e4b0a52d5be120cb79b3",
+          "scenario": "missing_shipping_error"
+        },
+        {
+          "errors": 0,
+          "group": "tradeoff",
+          "id": "p02",
+          "input": "development/policy_tradeoff_dev1/inputs/p02.xlsx",
+          "input_sha256": "0db21855b138c253844966b3faed27924a53c53e9e5f15e4c583cf2e1b2be0ec",
+          "scenario": "unmarked_legitimate_shipping_waiver"
+        }
+      ],
+      "observed_fingerprint": "546a8811c3268ad585a3958dfb67d27d9795fd035b07196f0af82d0a9a8301f2"
+    },
+    {
+      "conflicting_cells": 24,
+      "conflicts": [
+        {
+          "cell": "A!F10",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A10*B10*(1-E10)-A10*C10-D10",
+            "stress/c06": "=A10*B10*(1-E10)-A10*C10-D10"
+          },
+          "observed": "=0.85*A10*B10*(1-E10)-A10*C10-D10"
+        },
+        {
+          "cell": "A!F11",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A11*B11*(1-E11)-A11*C11-D11",
+            "stress/c06": "=A11*B11*(1-E11)-A11*C11-D11"
+          },
+          "observed": "=0.85*A11*B11*(1-E11)-A11*C11-D11"
+        },
+        {
+          "cell": "A!F12",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A12*B12*(1-E12)-A12*C12-D12",
+            "stress/c06": "=A12*B12*(1-E12)-A12*C12-D12"
+          },
+          "observed": "=0.85*A12*B12*(1-E12)-A12*C12-D12"
+        },
+        {
+          "cell": "A!F13",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A13*B13*(1-E13)-A13*C13-D13",
+            "stress/c06": "=A13*B13*(1-E13)-A13*C13-D13"
+          },
+          "observed": "=0.85*A13*B13*(1-E13)-A13*C13-D13"
+        },
+        {
+          "cell": "A!F14",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A14*B14*(1-E14)-A14*C14-D14",
+            "stress/c06": "=A14*B14*(1-E14)-A14*C14-D14"
+          },
+          "observed": "=0.85*A14*B14*(1-E14)-A14*C14-D14"
+        },
+        {
+          "cell": "A!F15",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A15*B15*(1-E15)-A15*C15-D15",
+            "stress/c06": "=A15*B15*(1-E15)-A15*C15-D15"
+          },
+          "observed": "=0.85*A15*B15*(1-E15)-A15*C15-D15"
+        },
+        {
+          "cell": "A!F16",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A16*B16*(1-E16)-A16*C16-D16",
+            "stress/c06": "=A16*B16*(1-E16)-A16*C16-D16"
+          },
+          "observed": "=0.85*A16*B16*(1-E16)-A16*C16-D16"
+        },
+        {
+          "cell": "A!F17",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A17*B17*(1-E17)-A17*C17-D17",
+            "stress/c06": "=A17*B17*(1-E17)-A17*C17-D17"
+          },
+          "observed": "=0.85*A17*B17*(1-E17)-A17*C17-D17"
+        },
+        {
+          "cell": "A!F18",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A18*B18*(1-E18)-A18*C18-D18",
+            "stress/c06": "=A18*B18*(1-E18)-A18*C18-D18"
+          },
+          "observed": "=0.85*A18*B18*(1-E18)-A18*C18-D18"
+        },
+        {
+          "cell": "A!F19",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A19*B19*(1-E19)-A19*C19-D19",
+            "stress/c06": "=A19*B19*(1-E19)-A19*C19-D19"
+          },
+          "observed": "=0.85*A19*B19*(1-E19)-A19*C19-D19"
+        },
+        {
+          "cell": "A!F2",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A2*B2*(1-E2)-A2*C2-D2",
+            "stress/c06": "=A2*B2*(1-E2)-A2*C2-D2"
+          },
+          "observed": "=0.85*A2*B2*(1-E2)-A2*C2-D2"
+        },
+        {
+          "cell": "A!F20",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A20*B20*(1-E20)-A20*C20-D20",
+            "stress/c06": "=A20*B20*(1-E20)-A20*C20-D20"
+          },
+          "observed": "=0.85*A20*B20*(1-E20)-A20*C20-D20"
+        },
+        {
+          "cell": "A!F21",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A21*B21*(1-E21)-A21*C21-D21",
+            "stress/c06": "=A21*B21*(1-E21)-A21*C21-D21"
+          },
+          "observed": "=0.85*A21*B21*(1-E21)-A21*C21-D21"
+        },
+        {
+          "cell": "A!F22",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A22*B22*(1-E22)-A22*C22-D22",
+            "stress/c06": "=A22*B22*(1-E22)-A22*C22-D22"
+          },
+          "observed": "=0.85*A22*B22*(1-E22)-A22*C22-D22"
+        },
+        {
+          "cell": "A!F23",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A23*B23*(1-E23)-A23*C23-D23",
+            "stress/c06": "=A23*B23*(1-E23)-A23*C23-D23"
+          },
+          "observed": "=0.85*A23*B23*(1-E23)-A23*C23-D23"
+        },
+        {
+          "cell": "A!F24",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A24*B24*(1-E24)-A24*C24-D24",
+            "stress/c06": "=A24*B24*(1-E24)-A24*C24-D24"
+          },
+          "observed": "=0.85*A24*B24*(1-E24)-A24*C24-D24"
+        },
+        {
+          "cell": "A!F25",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A25*B25*(1-E25)-A25*C25-D25",
+            "stress/c06": "=A25*B25*(1-E25)-A25*C25-D25"
+          },
+          "observed": "=0.85*A25*B25*(1-E25)-A25*C25-D25"
+        },
+        {
+          "cell": "A!F3",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A3*B3*(1-E3)-A3*C3-D3",
+            "stress/c06": "=A3*B3*(1-E3)-A3*C3-D3"
+          },
+          "observed": "=0.85*A3*B3*(1-E3)-A3*C3-D3"
+        },
+        {
+          "cell": "A!F4",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A4*B4*(1-E4)-A4*C4-D4",
+            "stress/c06": "=A4*B4*(1-E4)-A4*C4-D4"
+          },
+          "observed": "=0.85*A4*B4*(1-E4)-A4*C4-D4"
+        },
+        {
+          "cell": "A!F5",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A5*B5*(1-E5)-A5*C5-D5",
+            "stress/c06": "=A5*B5*(1-E5)-A5*C5-D5"
+          },
+          "observed": "=0.85*A5*B5*(1-E5)-A5*C5-D5"
+        },
+        {
+          "cell": "A!F6",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A6*B6*(1-E6)-A6*C6-D6",
+            "stress/c06": "=A6*B6*(1-E6)-A6*C6-D6"
+          },
+          "observed": "=0.85*A6*B6*(1-E6)-A6*C6-D6"
+        },
+        {
+          "cell": "A!F7",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A7*B7*(1-E7)-A7*C7-D7",
+            "stress/c06": "=A7*B7*(1-E7)-A7*C7-D7"
+          },
+          "observed": "=0.85*A7*B7*(1-E7)-A7*C7-D7"
+        },
+        {
+          "cell": "A!F8",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A8*B8*(1-E8)-A8*C8-D8",
+            "stress/c06": "=A8*B8*(1-E8)-A8*C8-D8"
+          },
+          "observed": "=0.85*A8*B8*(1-E8)-A8*C8-D8"
+        },
+        {
+          "cell": "A!F9",
+          "expected_by_case": {
+            "stress/c05": "=0.85*A9*B9*(1-E9)-A9*C9-D9",
+            "stress/c06": "=A9*B9*(1-E9)-A9*C9-D9"
+          },
+          "observed": "=0.85*A9*B9*(1-E9)-A9*C9-D9"
+        }
+      ],
+      "members": [
+        {
+          "errors": 0,
+          "group": "stress",
+          "id": "c05",
+          "input": "development/semantic_stress_dev1/inputs/c05.xlsx",
+          "input_sha256": "6de26a885d51beb3442e63799487776fc982460015171252f04f7acc113e81a1",
+          "scenario": "legitimate_revenue_factor"
+        },
+        {
+          "errors": 24,
+          "group": "stress",
+          "id": "c06",
+          "input": "development/semantic_stress_dev1/inputs/c06.xlsx",
+          "input_sha256": "6de26a885d51beb3442e63799487776fc982460015171252f04f7acc113e81a1",
+          "scenario": "erroneous_revenue_factor_same_observed_input"
+        }
+      ],
+      "observed_fingerprint": "35766f89f3e1cf648f752ea18bdae98e71c174c705c0780912a0fd76d10d7213"
+    },
+    {
+      "conflicting_cells": 1,
+      "conflicts": [
+        {
+          "cell": "A!F16",
+          "expected_by_case": {
+            "adversarial/a11": "=B16+C16+D16-E16",
+            "crossdomain/x12": "=B16+C16-D16-E16"
+          },
+          "observed": "=B16+C16+D16-E16"
+        }
+      ],
+      "members": [
+        {
+          "errors": 1,
+          "group": "crossdomain",
+          "id": "x12",
+          "input": "development/crossdomain_dev1/inputs/x12.xlsx",
+          "input_sha256": "101398a9e8147d9a9faa2656cbf12f96101083eae8aa70649d549e1a85111fe0",
+          "scenario": "sparse_error"
+        },
+        {
+          "errors": 0,
+          "group": "adversarial",
+          "id": "a11",
+          "input": "development/dev5_adversarial1/inputs/a11.xlsx",
+          "input_sha256": "0c384e0756a54efa67418bb77e950bade27721cc66350486e22791c3e60961f1",
+          "scenario": "unmarked_reversed_role"
+        }
+      ],
+      "observed_fingerprint": "7b7a4027967a5cb1e9f7ea62663702bf491009bc1b77e09fa688c0e542f64111"
+    },
+    {
+      "conflicting_cells": 1,
+      "conflicts": [
+        {
+          "cell": "A!F16",
+          "expected_by_case": {
+            "adversarial/a21": "=B16+D16+E16",
+            "crossdomain/x22": "=B16+D16-E16"
+          },
+          "observed": "=B16+D16+E16"
+        }
+      ],
+      "members": [
+        {
+          "errors": 1,
+          "group": "crossdomain",
+          "id": "x22",
+          "input": "development/crossdomain_dev1/inputs/x22.xlsx",
+          "input_sha256": "ce2a3b38a7d19c9e881e244bf5724a5baedba1d3d8fd356bce4c55686e288cad",
+          "scenario": "sparse_error"
+        },
+        {
+          "errors": 0,
+          "group": "adversarial",
+          "id": "a21",
+          "input": "development/dev5_adversarial1/inputs/a21.xlsx",
+          "input_sha256": "202a80f0985cc67ee7ab0cf8095c0fd80680ce1f9f64d3dc8720f9804f837b14",
+          "scenario": "unmarked_reversed_role"
+        }
+      ],
+      "observed_fingerprint": "2dfedda70b2e37205d4c5a3c797f526a997d19474cd0305ff0da5197eac6c780"
+    },
+    {
+      "conflicting_cells": 1,
+      "conflicts": [
+        {
+          "cell": "A!F16",
+          "expected_by_case": {
+            "adversarial/a31": "=B16*C16*D16+E16",
+            "crossdomain/x32": "=B16*C16/D16+E16"
+          },
+          "observed": "=B16*C16*D16+E16"
+        }
+      ],
+      "members": [
+        {
+          "errors": 1,
+          "group": "crossdomain",
+          "id": "x32",
+          "input": "development/crossdomain_dev1/inputs/x32.xlsx",
+          "input_sha256": "31201679718a669afe42c98bdbbdc29d0cf28c20592778cb77f31c983c5eb74f",
+          "scenario": "sparse_error"
+        },
+        {
+          "errors": 0,
+          "group": "adversarial",
+          "id": "a31",
+          "input": "development/dev5_adversarial1/inputs/a31.xlsx",
+          "input_sha256": "333054bd4667d30267362370ebddda4fb81f08d0da17844a54b58d5f29ce20ce",
+          "scenario": "unmarked_reversed_role"
+        }
+      ],
+      "observed_fingerprint": "fd78955a64b5737f1caf1e0f081be9e8e3d47c0d4cf0f1056b56ebc265c76367"
+    },
+    {
+      "conflicting_cells": 1,
+      "conflicts": [
+        {
+          "cell": "A!F16",
+          "expected_by_case": {
+            "adversarial/a41": "=B16*C16-D16+E16",
+            "crossdomain/x42": "=B16*C16+D16+E16"
+          },
+          "observed": "=B16*C16-D16+E16"
+        }
+      ],
+      "members": [
+        {
+          "errors": 1,
+          "group": "crossdomain",
+          "id": "x42",
+          "input": "development/crossdomain_dev1/inputs/x42.xlsx",
+          "input_sha256": "6342ceb738c3befdd60108c0e1353c74488811edb97a56cbde517bb81afda2f8",
+          "scenario": "sparse_error"
+        },
+        {
+          "errors": 0,
+          "group": "adversarial",
+          "id": "a41",
+          "input": "development/dev5_adversarial1/inputs/a41.xlsx",
+          "input_sha256": "42e5fe7f42c9290446872c60a075621fdb69b04f69d1fc62880488cecdde071c",
+          "scenario": "unmarked_reversed_role"
+        }
+      ],
+      "observed_fingerprint": "c28ff5d80bb26a3eb446f4bec021de8b93089b92427ea777912c2e49744abfbe"
+    }
+  ],
+  "control_public_index_sha256": "75dec980a7cc3b822b0c937b6642e76744755c12c013368c844d33a9dac40f51",
+  "distinct_observed_inputs": 100,
+  "final_validation_eligible": false,
+  "metric_denominators_unchanged": true,
+  "observed_fields": [
+    "cells",
+    "formulas",
+    "cell_visibility",
+    "number_formats",
+    "sheet_visibility",
+    "formula_kinds",
+    "shared_formula_groups",
+    "shared_formula_regions",
+    "header_partition_metadata_complete",
+    "hidden_rows",
+    "hidden_columns",
+    "merged_ranges",
+    "formula_regions"
+  ],
+  "pair_limit": {
+    "clean_cells_in_c05_at_same_positions": 24,
+    "coverage_if_abstaining_on_all_conflicts": 0.0,
+    "erroneous_cells_in_c06": 24,
+    "maximum_pooled_precision_for_any_correct_repair": 0.5,
+    "reason": "Every correct repair of c06 necessarily proposes the same wrong change in c05.",
+    "scope": "c05/c06 only, equal case weighting and identical semantic inputs"
+  },
+  "role": "revealed diagnostic only; answers deliberately read; never predictor input",
+  "script_sha256": "d2567cee09299f9c65fd4802cf0b3d55767a879cfa2f60d964239cb0578db304",
+  "source_paths_and_transient_caches_excluded": true,
+  "utc": "2026-10-18T04:04:24.528804+00:00"
+}

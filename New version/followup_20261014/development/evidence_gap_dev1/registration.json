@@ -1,0 +1,35 @@
+{
+  "all_other_formula_cells_retained": true,
+  "candidate_generator": "immutable formula_candidates_dev1.py",
+  "candidate_selection": "dev6 status review or unsupported only; no labels",
+  "cases": 107,
+  "limits": [
+    "developer-selected revealed data",
+    "no automatic unit conversion",
+    "unit compatibility cannot resolve sign or dimensionless coefficient intent",
+    "header units are unverified declarations; never business truth"
+  ],
+  "new_final_families": 0,
+  "new_final_sources": 0,
+  "purpose": "distinguish missing hypotheses from missing authorization; unit evidence is necessary only when explicit annotations are trusted",
+  "repair_proposals_generated": false,
+  "role": "revealed development evidence-gap audit; no final acceptance",
+  "unit_parameters": {
+    "functions": [
+      "SUM",
+      "AVERAGE",
+      "MIN",
+      "MAX",
+      "ABS"
+    ],
+    "literal_zero_polymorphic": true,
+    "max_range_cells": 256,
+    "max_tokens": 512,
+    "repair_authority": false,
+    "unit_aliases": {},
+    "unit_source": "nearest visible nonformula text above each cell; trailing [unit]",
+    "unknown_is_compatible": false
+  },
+  "utc": "2026-10-15T12:52:42.847675+00:00",
+  "version": "hybridguard-symbolic-unit-evidence-dev1"
+}
