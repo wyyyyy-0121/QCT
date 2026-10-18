@@ -1,0 +1,1204 @@
+{
+  "all": {
+    "contradictory_vectors": 93,
+    "minimum_option_classification_errors": 273,
+    "options": 813899,
+    "options_in_contradictory_vectors": 832,
+    "unique_vectors": 20160
+  },
+  "auditor_sha256": "84b86ff176080dfa71c12ce05dd7d9ece33661e94b4cf07207bfd6b752943124",
+  "by_source": {
+    "18f": {
+      "contradictory_vectors": 0,
+      "minimum_option_classification_errors": 0,
+      "options": 509,
+      "options_in_contradictory_vectors": 0,
+      "unique_vectors": 136
+    },
+    "authored_development": {
+      "contradictory_vectors": 53,
+      "minimum_option_classification_errors": 181,
+      "options": 791604,
+      "options_in_contradictory_vectors": 580,
+      "unique_vectors": 11716
+    },
+    "iowa_state_agdm": {
+      "contradictory_vectors": 40,
+      "minimum_option_classification_errors": 92,
+      "options": 3173,
+      "options_in_contradictory_vectors": 252,
+      "unique_vectors": 946
+    },
+    "packt": {
+      "contradictory_vectors": 0,
+      "minimum_option_classification_errors": 0,
+      "options": 50,
+      "options_in_contradictory_vectors": 0,
+      "unique_vectors": 15
+    },
+    "uk_government": {
+      "contradictory_vectors": 0,
+      "minimum_option_classification_errors": 0,
+      "options": 18563,
+      "options_in_contradictory_vectors": 0,
+      "unique_vectors": 7347
+    }
+  },
+  "examples": [
+    {
+      "counts": [
+        42,
+        28
+      ],
+      "feature_sha256": "0380603b159f9229535222f5ced812691e98ba972fb291a78c79633280a5ed67",
+      "negative": {
+        "case": "stress/c01",
+        "cell": "A!F10",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c08",
+        "cell": "A!F10",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        14,
+        14
+      ],
+      "feature_sha256": "3ad634387b8eaa980ba3cdf4c9d138f048141b102341cf52f9c9f76a78de427a",
+      "negative": {
+        "case": "stress/c06",
+        "cell": "A!F10",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c05",
+        "cell": "A!F10",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        14,
+        42
+      ],
+      "feature_sha256": "b889d7950043f87b6b45af137987905e9798404bb0f7234add143d189dff295b",
+      "negative": {
+        "case": "tradeoff/p03",
+        "cell": "A!F10",
+        "id": "6e43e3fdfd5a4adef3f3a3a266611a94e71e024881385a230111288cf30f6e7a",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c01",
+        "cell": "A!F10",
+        "id": "c488c7bbed67bd3027c7f9793346cc98b1fd64544d656d9b6662581e15c0ad35",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        42,
+        14
+      ],
+      "feature_sha256": "babd934e319096be4ba22eb4726e5a3a6f7afcdaf6b78985b97fbd4dc388059f",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F10",
+        "id": "582dce0a517863e154dd50e07ce697ea8570b5c7ec96845f949d2293c00ebd31",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F10",
+        "id": "5995e1d4b68ec300dc3f14dcb0180c6c2eb41b4003fcc9caba6a21de3fcb9c16",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        39,
+        13
+      ],
+      "feature_sha256": "26f453b97a70b00f7539fa789d5276ca54ad93fbf3bd5fc0e9b8f6cd9a60c99f",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F11",
+        "id": "006aa36c9ccf297b103d9ed73fb11cc5c491ca1e27b5e163f0d9cb5e879f062e",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F11",
+        "id": "f3462977273b73f51f4fa68c32280a85d19b4a7c0739f1f042faf91dd7a5005e",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        18,
+        12
+      ],
+      "feature_sha256": "ee1ac5a6ebd58e265ffb7926d3aff3cdae3580df7580dbb548e98b6d2481acd7",
+      "negative": {
+        "case": "stress/c01",
+        "cell": "A!F4",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c08",
+        "cell": "A!F4",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        11,
+        14
+      ],
+      "feature_sha256": "c1646b2b819e707b2d93767c4c4cd36e11c43d552a043c0650d55d9622c74a69",
+      "negative": {
+        "case": "stress/c05",
+        "cell": "A!F11",
+        "id": "2f640565eab831c00537c1fa09f20a6e6f1631579dd5ff5bc0e01572e0cfb001",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c06",
+        "cell": "A!F10",
+        "id": "3e9f55144f98cd048bb9e1e5381f06cd394e8d5d09e44151805a35ea6f789780",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        8,
+        8
+      ],
+      "feature_sha256": "050ce81aa8017e71451fffe20ee32c524fa21c430d45f3992e0bab543dcbf6ca",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!F56",
+        "id": "751318ad1f65899f90104c94b84969520ed91c753cb8e7e8ac658ccd68aa8704",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!F56",
+        "id": "4ab2f0fa451fe3fda536afe984bef029277a3a322918dc234946e79f6d805e91",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        8,
+        8
+      ],
+      "feature_sha256": "06a392e2e3a0d381beb1116c078c1532c40819c9d3fb743715f7ab4decfba127",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!F56",
+        "id": "07b39b947d3c44b07b7977812a60a0354fb0d88fadcad347d7e0a9fa592a3213",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!F56",
+        "id": "5190e8050ca873f5c0a8fb4a6335f23af4d1e6a6ea9af6c4039b00ca913a5a30",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        8,
+        8
+      ],
+      "feature_sha256": "7966bd5b5108f58fbf6bc03e70651618a8f92d0af39c3830355aa888a3fdf890",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!E56",
+        "id": "2add0184db2c6ca327b84f2a0017701abbd95024d49a2672aa4947597a06b77a",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!E56",
+        "id": "ac8e0f0a06995df78270ad8c937def0a82f0ccb21cc434d71ba55a1a5f5cff02",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        8,
+        8
+      ],
+      "feature_sha256": "a6a1545e44db57d0fc541753157bb45ebb3b484f4a07e86ba903ab66a0c9b75e",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!E56",
+        "id": "3f155a4faba4a3724cbee2ffa3f105b546c97eb31308f8b78d0deab798e6ffb7",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!E56",
+        "id": "0c16f92eef28d08833cc5b67f9d5b12594faed0589f978f47de0906c13077188",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        6,
+        18
+      ],
+      "feature_sha256": "0731a883dea57256f84dc4f33d02df79d14cbe83c24e952f173d26a78f381c80",
+      "negative": {
+        "case": "tradeoff/p03",
+        "cell": "A!F4",
+        "id": "484cbc4b21310d8616b24c800eceade4b3f20090c6b8fa99e5e591add5712cc1",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c01",
+        "cell": "A!F4",
+        "id": "b69a2d5422f9f6ce4d84bbf08c1c98ffe29a5ce62dc0125a14e0d8154fbbf4a1",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        18,
+        6
+      ],
+      "feature_sha256": "863035a8098293201c828404727624f2aff7ebdb8b8514807a5a07b6b75d184e",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F4",
+        "id": "569e22b344b24b48144fcfe5ea9bd47f473e7cd6ec6bcaff2ab5b071630e1fb2",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F4",
+        "id": "5b619ad58164a9d9af08e3721329a3b1b55fa0c8a0d02dde8f0bd7483b84b1fc",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        6,
+        6
+      ],
+      "feature_sha256": "c7067530dd49200b28864e7fc31030ab2d662cbbd948e6223c20204cb84b4a7e",
+      "negative": {
+        "case": "stress/c06",
+        "cell": "A!F4",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c05",
+        "cell": "A!F4",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        5,
+        6
+      ],
+      "feature_sha256": "a4965692f43fe4567086caff1569e5afbd569b366d29a7d6f89cbc768cf254de",
+      "negative": {
+        "case": "stress/c05",
+        "cell": "A!F4",
+        "id": "3eb9da6ec166260f5dc7c37be948f0652ee1d43b1b933203e023985818cf24a7",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c06",
+        "cell": "A!F4",
+        "id": "00ebf42ca7258b6f0754d684a8791b724e7ed9ec41703b2d178e9f82a59ed552",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        15,
+        5
+      ],
+      "feature_sha256": "ecbb708bd77abd8cb75ea64187152a8dc943ad1e958788002bfcc8b6fcc82548",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F4",
+        "id": "1fe89d67d7d9a1e98129321621e562d3758effd123aac04fec7fe9cc0ea8a642",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F4",
+        "id": "adda55ea6c1cecd698e8cea3a3734ff201e36e642bf2894782aec8c82778bc22",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "feature_sha256": "0b6d20eb8d6ff1c97c8f788e539a7946fde1dbd33c1cf2e66578a28d860b936b",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!F56",
+        "id": "a0d61c8e7f105e29019d1830a82e0ed88a2f62543fe70821b6a59ba293bde6ba",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!F56",
+        "id": "2aa5eff091d03601d468cae650a6b0c599732cf187c9ed9b44fcf2398d7b28e0",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "feature_sha256": "131390ae8329e81740f8bd252da78b55999a724a1754a4c3e58941cbff833a06",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!F56",
+        "id": "c03cbc55a6c5ce4a403f6727b7ebc9fab93259e0bb44285a0246b021c92fd8aa",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!F56",
+        "id": "92b61d29d78bde8e05fee6d504f1cf1310f5c52988f80ecee8aa98073cf4d25d",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "feature_sha256": "4e126bad6ef96dc95e5348f1062afb358cfd4d7b341a8c174189521dd161cacf",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!E56",
+        "id": "6390ddae5cf0df3c568fc95075d1b76be965f487e649c55adfbb3262083015ab",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!E56",
+        "id": "092cdddce8297d97017ec5855e54b4fd500bb2fd99ae3fc244a031c63837f0ea",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "feature_sha256": "a26f822ba47f5223b866b4adc8e1c2c80ec9e291fa80cc05fa0e812b2550c09b",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!E56",
+        "id": "4a7d20216444983a14a027ef43a0051eb128069a21ef9fcb79df37536809b05e",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!E56",
+        "id": "2d494bc48bc198e965b293109106015adca2bca3d02153276cc286b3d225d977",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "feature_sha256": "ce0a6b57d80c423f3a2e23d5b11484ea302e893d642c089b5805548ea3799e30",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!F56",
+        "id": "157eab85c8de0cc63cca7b78823a670e7a8fb9938bbceb492aa863ed3ceffce1",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!F56",
+        "id": "8e00ceb45593257ea126650a88471846159b8ba3e7c18e24c5ba7e2ca3095609",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "feature_sha256": "debb91f2ecd8e364f71740fac40dead58698cd52fb8aae268ef68e47d9a0bf22",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!E56",
+        "id": "93b4e0f8bf0ef09db1b5566f7900283cc7fdd4dd3bf18741750b40a1b0332f3d",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!E56",
+        "id": "a56dc541fdbb17ce918fee022159ac291fb490d7a54393a06d9504bc2550c2e7",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        10,
+        2
+      ],
+      "feature_sha256": "05aac9a5a3aa2579e112a292221f19599b014b47f3944468af64c764681714de",
+      "negative": {
+        "case": "controlled_reconciliation/rc05_02",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "controlled_reconciliation/rc05_04",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "feature_sha256": "10e26928230d87e18ec2d6a4c069f8bb500200294d666e2ad843995cc25048ad",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!C56",
+        "id": "75ef6b79b6ddb381d228bf27be7d65d35cb5be0d02c14fa287d80247c2b58406",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!C56",
+        "id": "dc27fac32d930158c741f67a3eadcd4c60085ad540bdebfb8fff30eb9310f699",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        10,
+        2
+      ],
+      "feature_sha256": "17155171465fcc8c9fe336e16aa8bd2018a22b6c008e3cc32fd0d1ebdfe11d68",
+      "negative": {
+        "case": "controlled_reconciliation/rc02_02",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "controlled_reconciliation/rc02_04",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        3,
+        2
+      ],
+      "feature_sha256": "32c24c57684a651b433fa547eafaeb9d87573212e0938bda4f1e42d52771ed0f",
+      "negative": {
+        "case": "stress/c01",
+        "cell": "A!F3",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c08",
+        "cell": "A!F3",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "feature_sha256": "431feff76527b8410f167bdc400baa588c8f4d546cb924d752d5250fb83033a9",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!D56",
+        "id": "a41b2b3beb00185e0ed870dd15c3f7e71512d788d4e01e5546ceae2b3b9a19f2",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!D56",
+        "id": "28c224e422e4dc5a660eccf7c95445c137a9238ef5d630c59ea0261a4d55c90d",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        3,
+        2
+      ],
+      "feature_sha256": "8623511c4ea3f8b769de45f50353584671303327ca53696fa5213827a3695a81",
+      "negative": {
+        "case": "stress/c01",
+        "cell": "A!F24",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c08",
+        "cell": "A!F24",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "feature_sha256": "8b11a7ed455cd368fff62b419e427b396a9766d251213cc5df1f11426d9d471b",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!B56",
+        "id": "2dd97a62cb669922142c2cc81b47353dc941c8030062fc82422fb8c3be65df0f",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!B56",
+        "id": "0d4672dfb23a59dbafcee9a7de6d54d44e469deebf8b94125154c92daf610655",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        3,
+        2
+      ],
+      "feature_sha256": "9c6961cfaf1dd72c709972f270582945381b9c116a19f5b1fa8a168a53c10c03",
+      "negative": {
+        "case": "stress/c01",
+        "cell": "A!F25",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c08",
+        "cell": "A!F25",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "feature_sha256": "9e9439c97404f8b9483f65f38c4a498f8f14efb49ae8531ae717f059ef348056",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!C56",
+        "id": "27973846338c03ee12be2dad5ceb20a95473a940f9045d2c7067e2cabbd71ba6",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!C56",
+        "id": "7d67dd0b38d8bdef1169d0ee12d77f597fc8182f6c7ece2a724d8ee0322ba8a2",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "feature_sha256": "c8d420ada474099a117700f5f7c01317d8bbd80972633395c03da7443af426b0",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!M56",
+        "id": "3f8e1209920ad8f7193a42b04ed9cac141c08aa31c0774b8860c2688407702cd",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!M56",
+        "id": "3cdb69ba1f881b4b32506622012b776b910c926270a58dd490748e7e0055fe0a",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        3,
+        2
+      ],
+      "feature_sha256": "f46e0bf74519886b58ea692d7387982c8a5e885d48a38afbbd8754fe397c6859",
+      "negative": {
+        "case": "stress/c01",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c08",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "feature_sha256": "fd98151006f0351d4b430c26e2bb948266d4a1be8d10e43c927b6714873b73f0",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!D56",
+        "id": "1f0af0e4c2c93724be78475921144546a5d1e9bf6a881acdca66602d93533220",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!D56",
+        "id": "107851203055eec424fe63a2839268c00deffb21aeeab18e213b8545d11d4bb8",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "feature_sha256": "02a8c596fff0ccbfa557b5eeddf674259dfb37536f8aba8155199667a0c16967",
+      "negative": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!N58",
+        "id": "d1057a8163675cc094b50cf300a078149b77a55d87a96c050af710dfbbc85830",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!N58",
+        "id": "faf335f3374b5b5ac38aa91ed9ff966a1682230cce3d702d5686592c9cbaf540",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        3,
+        1
+      ],
+      "feature_sha256": "04959d832ba52be5d20103fd6cebe8b4fb1e0c9145f3af4f91dd1cc1321e0c70",
+      "negative": {
+        "case": "adversarial/a31",
+        "cell": "A!F16",
+        "id": "53b3ebb306208c35495dadbd0283263e5b715442897a0cb7baacdae3da3147d4",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a31",
+        "cell": "A!F16",
+        "id": "6a4501995f947c936523024e9c65ab3895a1f420e6e4b24f821a9daa74dec602",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "feature_sha256": "056bca138ed65bb9f1832c75ac30165d8548e99792890e91c1108c237f8b0322",
+      "negative": {
+        "case": "stress/c06",
+        "cell": "A!F3",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c05",
+        "cell": "A!F3",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "feature_sha256": "08c41b6aac7e04c79f22afd99c8308927c2fa7115406921976057db31ae08123",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!C56",
+        "id": "0de6683d86fe4e2bf57d64341e57e90c988d78bd6a41a0c005fc7330590c3fb5",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!C56",
+        "id": "e24f8af28b5a9e57da2057e3960f2390984969bc97cd87f5175aa8dad1df8d99",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "feature_sha256": "0aac1652b43f957fadd7a2258af7e940011cc748da56239641f91bc798955afd",
+      "negative": {
+        "case": "stress/c06",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c05",
+        "cell": "A!F2",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        3,
+        1
+      ],
+      "feature_sha256": "1961e19109de09b692386b60ad30541b5921e1c6350a62d822e3d9c2b033d675",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F24",
+        "id": "246c2bf51b66eaaafb4d16ed45a8766685b64d5bf7305fe79839a0f3fa294d8a",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F24",
+        "id": "6b09111ca6f44dc46f9e79e6427fc7145cde63a0ff3ce6369098717115fb7b10",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        7,
+        1
+      ],
+      "feature_sha256": "21434e98d54290dfb942b0b6612a7552f955de8ca2f3bce8f73a954c57da2b19",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!D58",
+        "id": "02946d1e9d25a9a154857573e346378f89c893394c59d1304e162b46816a72ff",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!D58",
+        "id": "925139bdd8061c53f93769d737d1b963ab385eee14395d51674602c1efcdda01",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "feature_sha256": "3030b01ef5a12bbcfe52bcd8a1a9f3fc3d10970eb04d54cfd47f169a3e2ce811",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!M56",
+        "id": "215587b3c4c055f543425a7f08063d762dbb64547c82fb9929e634dbea91e0fa",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!M56",
+        "id": "56564e0df7ed24bd6799faf81c8487edc951b4494a1dcb910a9dab30af9cb79a",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        7,
+        1
+      ],
+      "feature_sha256": "3710d9975b111451e201641fa441f78f84e2fd69585fc1e63832a5e959fa4c73",
+      "negative": {
+        "case": "multisource/ms01_02",
+        "cell": "Cash Flow Budget!C58",
+        "id": "b42d943365ea23937b5d45a692fb850a5b9b2361474b11c08c179c8b140fe15e",
+        "kind": "candidate",
+        "label": 0,
+        "source": "iowa_state_agdm"
+      },
+      "positive": {
+        "case": "multisource/ms01_01",
+        "cell": "Cash Flow Budget!C58",
+        "id": "bfce47be88265e2834711ec861057e1039d35e707f254ce3c81fb3172620bed9",
+        "kind": "candidate",
+        "label": 1,
+        "source": "iowa_state_agdm"
+      }
+    },
+    {
+      "counts": [
+        3,
+        1
+      ],
+      "feature_sha256": "37794b6db88c1998d137dbca5191502c8d439c1c90fa8451257c75609a5f1c1e",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F2",
+        "id": "72fc235e0c558345e85a154d191aa5d5939f573ae9966fc35f9c1989d608a465",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F2",
+        "id": "68acfa7ea0725bcdc9664db6e55f8b8d877dbbd9fa87ecec0c2ffe09e7815b0d",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        3,
+        1
+      ],
+      "feature_sha256": "387b259a6187e60494edd32d1dde2d4d2838bcd75cb9f45fdf8cc3e2a4c4c35d",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F25",
+        "id": "37e40d02b93190caf8af4f2536323c258e4dd9ec610df6c8c6df40ebef0c33bf",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F25",
+        "id": "c0223e918ac705b8d618384b700055657c76e1ce06b432fec9a81d0ed9c64abc",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        3,
+        1
+      ],
+      "feature_sha256": "38b4945a8b312cb5e9a224f2d0ef90dde438afa4b1e1ac7255d580675fab7321",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F10",
+        "id": "44445d4275d04451fc6e310cfaffbd3bb9b1711af1c660654d98b3ed11bc196f",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F10",
+        "id": "c8774ae9b7f21a1547571038f6e60c386ef4d8f7c576f75243ba5263ecc9f860",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "feature_sha256": "3a7e00079b209c72aa0191fc8ae1c6640bdbee4d7f0ccbceece174c8d08d6d13",
+      "negative": {
+        "case": "stress/c05",
+        "cell": "A!F2",
+        "id": "b74714bae0e5453df94964c99f339badb0381e3cadeea01e45abee0b902e8ef7",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c06",
+        "cell": "A!F2",
+        "id": "31231c3080f242ff7a9ed99071bdad0263c1c2f60440f54fef3af94e6e5121c3",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        3,
+        1
+      ],
+      "feature_sha256": "3d004e8773559afecd59652d370db524c45c1fb6c13105d57554c14b3f15fd16",
+      "negative": {
+        "case": "adversarial/a35",
+        "cell": "A!F3",
+        "id": "597f4dee8ee828642bbf57e192c952b6da1f14599daf85432c859f5b81f55358",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "adversarial/a35",
+        "cell": "A!F3",
+        "id": "085febc670e7a56c72d3c36a2578877e2bbb05ed3b73f40c9ca8a3c6f7a61102",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        1,
+        3
+      ],
+      "feature_sha256": "3ee819f9fad6f9df0f8d0818f8310a01fa73912a1d3e37c9898462c87ccd05fb",
+      "negative": {
+        "case": "controlled_reconciliation/rc01_04",
+        "cell": "A!F2",
+        "id": "5409a34a954d95826abf3440e4691a00cd6df58e6d875bf2b2a00261417225c3",
+        "kind": "candidate",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "controlled_reconciliation/rc01_05",
+        "cell": "A!F2",
+        "id": "dda999856ecf5ccc25908894d7f0e799cae07a201c6ccfb798ae6a4beb44f617",
+        "kind": "candidate",
+        "label": 1,
+        "source": "authored_development"
+      }
+    },
+    {
+      "counts": [
+        1,
+        2
+      ],
+      "feature_sha256": "44040c87359155fde9d335fc45aab23b039605547cd959e145a4fcb8e8c80e27",
+      "negative": {
+        "case": "stress/c02",
+        "cell": "A!F10",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 0,
+        "source": "authored_development"
+      },
+      "positive": {
+        "case": "stress/c03",
+        "cell": "A!F10",
+        "id": "__observed_formula__",
+        "kind": "keep",
+        "label": 1,
+        "source": "authored_development"
+      }
+    }
+  ],
+  "final_validation_eligible": false,
+  "heldout_labels_used_for_model": false,
+  "minimum_error_scope": "unweighted option classification on this revealed finite pool only",
+  "prediction_lock_sha256": "e824722820094b6efd7b3f9118fbf343efc64217ea41384740c359c24a7f12cb",
+  "scope": "exact pointwise 356-dimensional feature identity on selected certified development options; no repair-performance bound"
+}
