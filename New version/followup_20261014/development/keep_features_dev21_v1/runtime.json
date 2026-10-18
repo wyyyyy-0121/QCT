@@ -1,0 +1,1073 @@
+{
+  "cases": [
+    {
+      "candidates": 716,
+      "case": "regression/sparse_seed101",
+      "targets": 22
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_101",
+      "targets": 10
+    },
+    {
+      "candidates": 1660,
+      "case": "regression/sparse_seed202",
+      "targets": 40
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_202",
+      "targets": 10
+    },
+    {
+      "candidates": 3182,
+      "case": "regression/sparse_seed303",
+      "targets": 70
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_303",
+      "targets": 10
+    },
+    {
+      "candidates": 117938,
+      "case": "regression/systemic_seed404",
+      "targets": 2161
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_404",
+      "targets": 10
+    },
+    {
+      "candidates": 72447,
+      "case": "regression/systemic_seed505",
+      "targets": 1413
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_505",
+      "targets": 10
+    },
+    {
+      "candidates": 113239,
+      "case": "regression/systemic_seed606",
+      "targets": 2111
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_606",
+      "targets": 10
+    },
+    {
+      "candidates": 142,
+      "case": "regression/length_1_101",
+      "targets": 11
+    },
+    {
+      "candidates": 662,
+      "case": "regression/length_10_101",
+      "targets": 21
+    },
+    {
+      "candidates": 5342,
+      "case": "regression/length_100_101",
+      "targets": 111
+    },
+    {
+      "candidates": 26142,
+      "case": "regression/length_500_101",
+      "targets": 511
+    },
+    {
+      "candidates": 78038,
+      "case": "regression/length_1499_101",
+      "targets": 1509
+    },
+    {
+      "candidates": 78246,
+      "case": "regression/shared_101",
+      "targets": 1513
+    },
+    {
+      "candidates": 15670,
+      "case": "regression/single_101",
+      "targets": 303
+    },
+    {
+      "candidates": 84034,
+      "case": "regression/heterogeneous_101",
+      "targets": 1509
+    },
+    {
+      "candidates": 15746,
+      "case": "regression/exception_101",
+      "targets": 311
+    },
+    {
+      "candidates": 142,
+      "case": "regression/length_1_202",
+      "targets": 11
+    },
+    {
+      "candidates": 662,
+      "case": "regression/length_10_202",
+      "targets": 21
+    },
+    {
+      "candidates": 5342,
+      "case": "regression/length_100_202",
+      "targets": 111
+    },
+    {
+      "candidates": 26142,
+      "case": "regression/length_500_202",
+      "targets": 511
+    },
+    {
+      "candidates": 78038,
+      "case": "regression/length_1499_202",
+      "targets": 1509
+    },
+    {
+      "candidates": 78246,
+      "case": "regression/shared_202",
+      "targets": 1513
+    },
+    {
+      "candidates": 15670,
+      "case": "regression/single_202",
+      "targets": 303
+    },
+    {
+      "candidates": 84034,
+      "case": "regression/heterogeneous_202",
+      "targets": 1509
+    },
+    {
+      "candidates": 15746,
+      "case": "regression/exception_202",
+      "targets": 311
+    },
+    {
+      "candidates": 142,
+      "case": "regression/length_1_303",
+      "targets": 11
+    },
+    {
+      "candidates": 662,
+      "case": "regression/length_10_303",
+      "targets": 21
+    },
+    {
+      "candidates": 5342,
+      "case": "regression/length_100_303",
+      "targets": 111
+    },
+    {
+      "candidates": 26142,
+      "case": "regression/length_500_303",
+      "targets": 511
+    },
+    {
+      "candidates": 78038,
+      "case": "regression/length_1499_303",
+      "targets": 1509
+    },
+    {
+      "candidates": 78246,
+      "case": "regression/shared_303",
+      "targets": 1513
+    },
+    {
+      "candidates": 15670,
+      "case": "regression/single_303",
+      "targets": 303
+    },
+    {
+      "candidates": 84034,
+      "case": "regression/heterogeneous_303",
+      "targets": 1509
+    },
+    {
+      "candidates": 15746,
+      "case": "regression/exception_303",
+      "targets": 311
+    },
+    {
+      "candidates": 960,
+      "case": "stress/c01",
+      "targets": 24
+    },
+    {
+      "candidates": 34,
+      "case": "stress/c02",
+      "targets": 1
+    },
+    {
+      "candidates": 34,
+      "case": "stress/c03",
+      "targets": 1
+    },
+    {
+      "candidates": 744,
+      "case": "stress/c04",
+      "targets": 24
+    },
+    {
+      "candidates": 1056,
+      "case": "stress/c05",
+      "targets": 24
+    },
+    {
+      "candidates": 1056,
+      "case": "stress/c06",
+      "targets": 24
+    },
+    {
+      "candidates": 960,
+      "case": "stress/c07",
+      "targets": 24
+    },
+    {
+      "candidates": 960,
+      "case": "stress/c08",
+      "targets": 24
+    },
+    {
+      "candidates": 960,
+      "case": "tradeoff/p01",
+      "targets": 24
+    },
+    {
+      "candidates": 34,
+      "case": "tradeoff/p02",
+      "targets": 1
+    },
+    {
+      "candidates": 960,
+      "case": "tradeoff/p03",
+      "targets": 24
+    },
+    {
+      "candidates": 960,
+      "case": "tradeoff/p04",
+      "targets": 24
+    },
+    {
+      "candidates": 0,
+      "case": "crossdomain/x11",
+      "targets": 0
+    },
+    {
+      "candidates": 25,
+      "case": "crossdomain/x12",
+      "targets": 1
+    },
+    {
+      "candidates": 600,
+      "case": "crossdomain/x13",
+      "targets": 24
+    },
+    {
+      "candidates": 19,
+      "case": "crossdomain/x14",
+      "targets": 1
+    },
+    {
+      "candidates": 19,
+      "case": "crossdomain/x15",
+      "targets": 1
+    },
+    {
+      "candidates": 44,
+      "case": "crossdomain/x16",
+      "targets": 2
+    },
+    {
+      "candidates": 3000,
+      "case": "crossdomain/x17",
+      "targets": 120
+    },
+    {
+      "candidates": 70,
+      "case": "crossdomain/x18",
+      "targets": 6
+    },
+    {
+      "candidates": 0,
+      "case": "crossdomain/x21",
+      "targets": 0
+    },
+    {
+      "candidates": 18,
+      "case": "crossdomain/x22",
+      "targets": 1
+    },
+    {
+      "candidates": 432,
+      "case": "crossdomain/x23",
+      "targets": 24
+    },
+    {
+      "candidates": 12,
+      "case": "crossdomain/x24",
+      "targets": 1
+    },
+    {
+      "candidates": 12,
+      "case": "crossdomain/x25",
+      "targets": 1
+    },
+    {
+      "candidates": 30,
+      "case": "crossdomain/x26",
+      "targets": 2
+    },
+    {
+      "candidates": 2160,
+      "case": "crossdomain/x27",
+      "targets": 120
+    },
+    {
+      "candidates": 63,
+      "case": "crossdomain/x28",
+      "targets": 6
+    },
+    {
+      "candidates": 0,
+      "case": "crossdomain/x31",
+      "targets": 0
+    },
+    {
+      "candidates": 25,
+      "case": "crossdomain/x32",
+      "targets": 1
+    },
+    {
+      "candidates": 600,
+      "case": "crossdomain/x33",
+      "targets": 24
+    },
+    {
+      "candidates": 29,
+      "case": "crossdomain/x34",
+      "targets": 1
+    },
+    {
+      "candidates": 29,
+      "case": "crossdomain/x35",
+      "targets": 1
+    },
+    {
+      "candidates": 54,
+      "case": "crossdomain/x36",
+      "targets": 2
+    },
+    {
+      "candidates": 3000,
+      "case": "crossdomain/x37",
+      "targets": 120
+    },
+    {
+      "candidates": 70,
+      "case": "crossdomain/x38",
+      "targets": 6
+    },
+    {
+      "candidates": 0,
+      "case": "crossdomain/x41",
+      "targets": 0
+    },
+    {
+      "candidates": 25,
+      "case": "crossdomain/x42",
+      "targets": 1
+    },
+    {
+      "candidates": 600,
+      "case": "crossdomain/x43",
+      "targets": 24
+    },
+    {
+      "candidates": 19,
+      "case": "crossdomain/x44",
+      "targets": 1
+    },
+    {
+      "candidates": 19,
+      "case": "crossdomain/x45",
+      "targets": 1
+    },
+    {
+      "candidates": 44,
+      "case": "crossdomain/x46",
+      "targets": 2
+    },
+    {
+      "candidates": 3000,
+      "case": "crossdomain/x47",
+      "targets": 120
+    },
+    {
+      "candidates": 70,
+      "case": "crossdomain/x48",
+      "targets": 6
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a11",
+      "targets": 1
+    },
+    {
+      "candidates": 3000,
+      "case": "adversarial/a12",
+      "targets": 120
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a13",
+      "targets": 1
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a14",
+      "targets": 24
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a15",
+      "targets": 24
+    },
+    {
+      "candidates": 50,
+      "case": "adversarial/a16",
+      "targets": 2
+    },
+    {
+      "candidates": 18,
+      "case": "adversarial/a21",
+      "targets": 1
+    },
+    {
+      "candidates": 2160,
+      "case": "adversarial/a22",
+      "targets": 120
+    },
+    {
+      "candidates": 18,
+      "case": "adversarial/a23",
+      "targets": 1
+    },
+    {
+      "candidates": 432,
+      "case": "adversarial/a24",
+      "targets": 24
+    },
+    {
+      "candidates": 432,
+      "case": "adversarial/a25",
+      "targets": 24
+    },
+    {
+      "candidates": 36,
+      "case": "adversarial/a26",
+      "targets": 2
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a31",
+      "targets": 1
+    },
+    {
+      "candidates": 3000,
+      "case": "adversarial/a32",
+      "targets": 120
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a33",
+      "targets": 1
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a34",
+      "targets": 24
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a35",
+      "targets": 24
+    },
+    {
+      "candidates": 50,
+      "case": "adversarial/a36",
+      "targets": 2
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a41",
+      "targets": 1
+    },
+    {
+      "candidates": 2375,
+      "case": "adversarial/a42",
+      "targets": 95
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a43",
+      "targets": 1
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a44",
+      "targets": 24
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a45",
+      "targets": 24
+    },
+    {
+      "candidates": 50,
+      "case": "adversarial/a46",
+      "targets": 2
+    },
+    {
+      "candidates": 0,
+      "case": "controlled_reconciliation/rc01_01",
+      "targets": 0
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_02",
+      "targets": 1
+    },
+    {
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc01_03",
+      "targets": 5
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_04",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_05",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_06",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_07",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_08",
+      "targets": 1
+    },
+    {
+      "candidates": 144,
+      "case": "controlled_reconciliation/rc01_09",
+      "targets": 8
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_10",
+      "targets": 1
+    },
+    {
+      "candidates": 0,
+      "case": "controlled_reconciliation/rc02_01",
+      "targets": 0
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_02",
+      "targets": 1
+    },
+    {
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc02_03",
+      "targets": 5
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_04",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_05",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_06",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_07",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_08",
+      "targets": 1
+    },
+    {
+      "candidates": 144,
+      "case": "controlled_reconciliation/rc02_09",
+      "targets": 8
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_10",
+      "targets": 1
+    },
+    {
+      "candidates": 0,
+      "case": "controlled_reconciliation/rc03_01",
+      "targets": 0
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_02",
+      "targets": 1
+    },
+    {
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc03_03",
+      "targets": 5
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_04",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_05",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_06",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_07",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_08",
+      "targets": 1
+    },
+    {
+      "candidates": 108,
+      "case": "controlled_reconciliation/rc03_09",
+      "targets": 6
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_10",
+      "targets": 1
+    },
+    {
+      "candidates": 0,
+      "case": "controlled_reconciliation/rc04_01",
+      "targets": 0
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_02",
+      "targets": 1
+    },
+    {
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc04_03",
+      "targets": 5
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_04",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_05",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_06",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_07",
+      "targets": 1
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_08",
+      "targets": 1
+    },
+    {
+      "candidates": 108,
+      "case": "controlled_reconciliation/rc04_09",
+      "targets": 6
+    },
+    {
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_10",
+      "targets": 1
+    },
+    {
+      "candidates": 0,
+      "case": "controlled_reconciliation/rc05_01",
+      "targets": 0
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_02",
+      "targets": 1
+    },
+    {
+      "candidates": 125,
+      "case": "controlled_reconciliation/rc05_03",
+      "targets": 5
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_04",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_05",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_06",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_07",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_08",
+      "targets": 1
+    },
+    {
+      "candidates": 200,
+      "case": "controlled_reconciliation/rc05_09",
+      "targets": 8
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_10",
+      "targets": 1
+    },
+    {
+      "candidates": 0,
+      "case": "controlled_reconciliation/rc06_01",
+      "targets": 0
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_02",
+      "targets": 1
+    },
+    {
+      "candidates": 125,
+      "case": "controlled_reconciliation/rc06_03",
+      "targets": 5
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_04",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_05",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_06",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_07",
+      "targets": 1
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_08",
+      "targets": 1
+    },
+    {
+      "candidates": 150,
+      "case": "controlled_reconciliation/rc06_09",
+      "targets": 6
+    },
+    {
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_10",
+      "targets": 1
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation01",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation02",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation03",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation04",
+      "targets": 1181
+    },
+    {
+      "candidates": 15703,
+      "case": "lcoe/annotation05",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation06",
+      "targets": 1181
+    },
+    {
+      "candidates": 15799,
+      "case": "lcoe/annotation07",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation08",
+      "targets": 1181
+    },
+    {
+      "candidates": 15703,
+      "case": "lcoe/annotation09",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation10",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation11",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation12",
+      "targets": 1181
+    },
+    {
+      "candidates": 15703,
+      "case": "lcoe/annotation13",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation14",
+      "targets": 1181
+    },
+    {
+      "candidates": 15700,
+      "case": "lcoe/annotation15",
+      "targets": 1181
+    },
+    {
+      "candidates": 15699,
+      "case": "lcoe/annotation16",
+      "targets": 1181
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_01",
+      "targets": 77
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_02",
+      "targets": 77
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_03",
+      "targets": 77
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_04",
+      "targets": 77
+    },
+    {
+      "candidates": 677,
+      "case": "multisource/ms01_05",
+      "targets": 77
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_06",
+      "targets": 77
+    },
+    {
+      "candidates": 685,
+      "case": "multisource/ms01_07",
+      "targets": 77
+    },
+    {
+      "candidates": 677,
+      "case": "multisource/ms01_08",
+      "targets": 77
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_09",
+      "targets": 77
+    },
+    {
+      "candidates": 673,
+      "case": "multisource/ms01_10",
+      "targets": 77
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_01",
+      "targets": 12
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_02",
+      "targets": 12
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_03",
+      "targets": 12
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_04",
+      "targets": 12
+    },
+    {
+      "candidates": 194,
+      "case": "multisource/ms02_05",
+      "targets": 12
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_06",
+      "targets": 12
+    },
+    {
+      "candidates": 202,
+      "case": "multisource/ms02_07",
+      "targets": 12
+    },
+    {
+      "candidates": 193,
+      "case": "multisource/ms02_08",
+      "targets": 12
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_09",
+      "targets": 12
+    },
+    {
+      "candidates": 190,
+      "case": "multisource/ms02_10",
+      "targets": 12
+    },
+    {
+      "candidates": 33847,
+      "case": "multisource/ms03_01",
+      "targets": 2533
+    },
+    {
+      "candidates": 33847,
+      "case": "multisource/ms03_02",
+      "targets": 2533
+    },
+    {
+      "candidates": 33858,
+      "case": "multisource/ms03_03",
+      "targets": 2533
+    },
+    {
+      "candidates": 33847,
+      "case": "multisource/ms03_04",
+      "targets": 2533
+    },
+    {
+      "candidates": 33851,
+      "case": "multisource/ms03_05",
+      "targets": 2533
+    },
+    {
+      "candidates": 34238,
+      "case": "multisource/ms03_06",
+      "targets": 2533
+    },
+    {
+      "candidates": 33859,
+      "case": "multisource/ms03_07",
+      "targets": 2533
+    },
+    {
+      "candidates": 33851,
+      "case": "multisource/ms03_08",
+      "targets": 2533
+    },
+    {
+      "candidates": 33857,
+      "case": "multisource/ms03_09",
+      "targets": 2533
+    },
+    {
+      "candidates": 33858,
+      "case": "multisource/ms03_10",
+      "targets": 2533
+    }
+  ],
+  "cpu_seconds": 109.748177961,
+  "gpu_used": false,
+  "scope": "observed comparator features only; existing candidate/upstream costs excluded",
+  "wall_seconds": 109.80960717500056
+}
