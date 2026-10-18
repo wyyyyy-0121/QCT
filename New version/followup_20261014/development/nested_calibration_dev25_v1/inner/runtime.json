@@ -1,0 +1,279 @@
+{
+  "cpu_seconds": 3228.2872785030004,
+  "folds": [
+    {
+      "class_weight_sums": [
+        20267.0,
+        20267.0
+      ],
+      "cpu_seconds": 75.425068394,
+      "excluded_origins": [
+        "18f",
+        "authored_development"
+      ],
+      "features": 712,
+      "negative": 20267,
+      "pair": "pair_01",
+      "positive": 20267,
+      "prediction_cases": 177,
+      "rows": 40534,
+      "selection_sha256": "827b775917f10b7f4e6a2fb46e23b890b889c8525c3ba5b43b8bc59a6e0599d1",
+      "source_weight_sums": {
+        "iowa_state_agdm": 13511.333333333332,
+        "packt": 13511.333333333334,
+        "uk_government": 13511.333333333334
+      },
+      "training_matrix_sha256": "ffc5fa70cdb5b08cf364bea927f89ec058dfdaf4c8d5e3e8ef05d8d8f652af27",
+      "wall_seconds": 49.009049011999195
+    },
+    {
+      "class_weight_sums": [
+        785932.9999999993,
+        785932.9999999993
+      ],
+      "cpu_seconds": 501.98813823600005,
+      "excluded_origins": [
+        "18f",
+        "iowa_state_agdm"
+      ],
+      "features": 712,
+      "negative": 785933,
+      "pair": "pair_02",
+      "positive": 785933,
+      "prediction_cases": 20,
+      "rows": 1571866,
+      "selection_sha256": "511757bec299e2c5ae146b81b69a5009358fbe7af74cc93c7624087618a926c4",
+      "source_weight_sums": {
+        "authored_development": 523955.3333333323,
+        "packt": 523955.33333333256,
+        "uk_government": 523955.3333333325
+      },
+      "training_matrix_sha256": "956e3f5cda9a1cba8c2659bb7016b026beec0a1118ab893255c10cca73e0897f",
+      "wall_seconds": 165.37344091499926
+    },
+    {
+      "class_weight_sums": [
+        788970.9999999971,
+        788970.9999999971
+      ],
+      "cpu_seconds": 485.9133606569999,
+      "excluded_origins": [
+        "18f",
+        "packt"
+      ],
+      "features": 712,
+      "negative": 788971,
+      "pair": "pair_03",
+      "positive": 788971,
+      "prediction_cases": 20,
+      "rows": 1577942,
+      "selection_sha256": "ebc85af2414746b3d01b87b8a1c8dbdaddb9f719be764756e1859520a0c935f6",
+      "source_weight_sums": {
+        "authored_development": 525980.6666666672,
+        "iowa_state_agdm": 525980.6666666657,
+        "uk_government": 525980.6666666657
+      },
+      "training_matrix_sha256": "5a79dc749d1d2a05912da851efb697e01e4175a526027f6ab871a088b540b87e",
+      "wall_seconds": 162.19530625800053
+    },
+    {
+      "class_weight_sums": [
+        771862.0000000001,
+        771862.0000000001
+      ],
+      "cpu_seconds": 474.688821729,
+      "excluded_origins": [
+        "18f",
+        "uk_government"
+      ],
+      "features": 712,
+      "negative": 771862,
+      "pair": "pair_04",
+      "positive": 771862,
+      "prediction_cases": 26,
+      "rows": 1543724,
+      "selection_sha256": "ffca36f6943a7ce147b456670f6329e6d9909c5f479324220527a4ea36f9a9bf",
+      "source_weight_sums": {
+        "authored_development": 514574.66666666634,
+        "iowa_state_agdm": 514574.6666666658,
+        "packt": 514574.66666666564
+      },
+      "training_matrix_sha256": "4590d0e1ec095eaf881918be657d626481708134d22afc3ef6f82b41b2ab48fd",
+      "wall_seconds": 159.49108103199978
+    },
+    {
+      "class_weight_sums": [
+        17812.0,
+        17812.0
+      ],
+      "cpu_seconds": 68.85606458999996,
+      "excluded_origins": [
+        "authored_development",
+        "iowa_state_agdm"
+      ],
+      "features": 712,
+      "negative": 17812,
+      "pair": "pair_05",
+      "positive": 17812,
+      "prediction_cases": 177,
+      "rows": 35624,
+      "selection_sha256": "e1d2977bdbae4dc1451442acad8483c8af8f5ffce47fb173d286ee1c6dd219d0",
+      "source_weight_sums": {
+        "18f": 11874.666666666668,
+        "packt": 11874.66666666667,
+        "uk_government": 11874.666666666664
+      },
+      "training_matrix_sha256": "383cc5375c126e5f6f45bbd0f2b554e6099ed1347ad17c3ee6dfc19507091bf0",
+      "wall_seconds": 46.213008578999506
+    },
+    {
+      "class_weight_sums": [
+        20849.999999999996,
+        20849.999999999996
+      ],
+      "cpu_seconds": 79.05766793199996,
+      "excluded_origins": [
+        "authored_development",
+        "packt"
+      ],
+      "features": 712,
+      "negative": 20850,
+      "pair": "pair_06",
+      "positive": 20850,
+      "prediction_cases": 177,
+      "rows": 41700,
+      "selection_sha256": "c9e818098614785edad06a367421e287b237a6d3ef334f9ea8afa038d67a5b0b",
+      "source_weight_sums": {
+        "18f": 13899.999999999996,
+        "iowa_state_agdm": 13899.999999999998,
+        "uk_government": 13899.999999999995
+      },
+      "training_matrix_sha256": "eee415fbdc037405a0bcfd337db5ea59b55d6873aeff98c258f7f4a13bb04470",
+      "wall_seconds": 51.001014206000036
+    },
+    {
+      "class_weight_sums": [
+        3740.9999999999995,
+        3740.9999999999995
+      ],
+      "cpu_seconds": 69.28688675700005,
+      "excluded_origins": [
+        "authored_development",
+        "uk_government"
+      ],
+      "features": 712,
+      "negative": 3741,
+      "pair": "pair_07",
+      "positive": 3741,
+      "prediction_cases": 183,
+      "rows": 7482,
+      "selection_sha256": "9f68d0573953bf4ef79609a7a66f6d5ae4de63bdf4ee758834f86d451f9e5b77",
+      "source_weight_sums": {
+        "18f": 2494.0,
+        "iowa_state_agdm": 2493.9999999999995,
+        "packt": 2494.0000000000005
+      },
+      "training_matrix_sha256": "fa181429056c57db506fea332cdf50d3041b82357c18036f2f334d4b074d4b64",
+      "wall_seconds": 48.36842651199913
+    },
+    {
+      "class_weight_sums": [
+        786515.9999999981,
+        786515.9999999981
+      ],
+      "cpu_seconds": 506.15394330899994,
+      "excluded_origins": [
+        "iowa_state_agdm",
+        "packt"
+      ],
+      "features": 712,
+      "negative": 786516,
+      "pair": "pair_08",
+      "positive": 786516,
+      "prediction_cases": 20,
+      "rows": 1573032,
+      "selection_sha256": "ae88382c43e6c49d8252d939e10a7f43270433ab76b5915f2ad45fda0ad10f74",
+      "source_weight_sums": {
+        "18f": 524343.999999999,
+        "authored_development": 524344.0000000005,
+        "uk_government": 524343.9999999991
+      },
+      "training_matrix_sha256": "13b5e83d00ddf94f5e69c4598cbc47ee0baf4e13db76515ecfed7bafefa72946",
+      "wall_seconds": 168.5850418200007
+    },
+    {
+      "class_weight_sums": [
+        769406.9999999965,
+        769406.9999999965
+      ],
+      "cpu_seconds": 475.33919109800036,
+      "excluded_origins": [
+        "iowa_state_agdm",
+        "uk_government"
+      ],
+      "features": 712,
+      "negative": 769407,
+      "pair": "pair_09",
+      "positive": 769407,
+      "prediction_cases": 26,
+      "rows": 1538814,
+      "selection_sha256": "44add93820e3598e4ca6785ca4bc093aee90659fbd25c1ba9e01ebd7aca1b9f3",
+      "source_weight_sums": {
+        "18f": 512937.9999999993,
+        "authored_development": 512937.999999999,
+        "packt": 512937.99999999924
+      },
+      "training_matrix_sha256": "9c3d6b120a09f81790ab141be9a1a05a01deade3827934ad12a8cfbf7157517f",
+      "wall_seconds": 159.87031497600037
+    },
+    {
+      "class_weight_sums": [
+        772444.9999999976,
+        772444.9999999976
+      ],
+      "cpu_seconds": 490.9289508319998,
+      "excluded_origins": [
+        "packt",
+        "uk_government"
+      ],
+      "features": 712,
+      "negative": 772445,
+      "pair": "pair_10",
+      "positive": 772445,
+      "prediction_cases": 26,
+      "rows": 1544890,
+      "selection_sha256": "8583ee4b302927765dd648c1b617b14d2ae0d9686ebc20153a24e003a0fbdad2",
+      "source_weight_sums": {
+        "18f": 514963.33333333244,
+        "authored_development": 514963.333333334,
+        "iowa_state_agdm": 514963.3333333325
+      },
+      "training_matrix_sha256": "601b66b3c3b174e9cb31dccf549a394ba54b083672577ff7741bd03488d3d805",
+      "wall_seconds": 164.01811278099922
+    }
+  ],
+  "gpu_used": false,
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.0"
+  },
+  "parameters": {
+    "early_stopping": false,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "max_depth": 6,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "random_state": 1618
+  },
+  "peak_rss_kib": 11580368,
+  "python": "3.11.16",
+  "scope": "10 nested three-origin fits and 852 heldout case predictions",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "wall_seconds": 1174.664061204001
+}

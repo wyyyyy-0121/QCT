@@ -1185,7 +1185,7 @@
   },
   "development_metrics_scope": "All 213 annotated development cases, dev11 adopted candidate; older synthetic-only metrics are retained in detailed historical entries",
   "dev25_nested_calibration": {
-    "phase": "registered and independently audited; 10 three-origin inner models running",
+    "phase": "10 inner models and 852 predictions locked; outer calibration and full inner replay running",
     "plan": "NESTED_CALIBRATION_DEV25_PREREGISTRATION_20261018.md",
     "run": "development/nested_calibration_dev25_v1",
     "tests_passed": 259,
@@ -1193,6 +1193,12 @@
     "training_data_audited": true,
     "outer_predictions_locked": false,
     "main_candidate_adopted": false,
-    "final_validation_eligible": false
+    "final_validation_eligible": false,
+    "inner_models_trained": 10,
+    "inner_predictions_locked": true,
+    "inner_case_predictions": 852,
+    "inner_wall_seconds": 1174.664061204001,
+    "inner_cpu_seconds": 3228.2872785030004,
+    "inner_peak_rss_kib": 11580368
   }
 }
