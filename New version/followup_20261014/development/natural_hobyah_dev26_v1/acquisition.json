@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-18T12:13:37.652050+00:00",
+  "records": [
+    {
+      "version": "before",
+      "url": "https://raw.githubusercontent.com/ECB2020/Hobyah/7fd04102210d9d830ff23b497b8ce20f8e5dc215/slug-flow-quadratics.xlsx",
+      "commit": "7fd04102210d9d830ff23b497b8ce20f8e5dc215",
+      "expected_git_blob": "ad8314387ae589ad7186296db29b32ac9ccd943c",
+      "ok": true,
+      "prior_raw_error": "TimeoutError: The read operation timed out",
+      "fallback_url": "https://api.github.com/repos/ECB2020/Hobyah/git/blobs/ad8314387ae589ad7186296db29b32ac9ccd943c",
+      "status": 200,
+      "bytes": 228582,
+      "git_blob": "ad8314387ae589ad7186296db29b32ac9ccd943c",
+      "sha256": "3c08817d13c044d5ab0868eb8fad137ac35498aff3634a66cbf1226dcfe5ccc3",
+      "path": "development/natural_hobyah_dev26_v1/raw/before.xlsx"
+    },
+    {
+      "version": "after",
+      "url": "https://raw.githubusercontent.com/ECB2020/Hobyah/a6c7cd441ff1aca4915e8bc2b61d719643927cac/slug-flow-quadratics.xlsx",
+      "commit": "a6c7cd441ff1aca4915e8bc2b61d719643927cac",
+      "expected_git_blob": "0e36540c9817f565ae5c00c17d8b94c438db7d65",
+      "ok": true,
+      "prior_raw_error": "TimeoutError: The read operation timed out",
+      "fallback_url": "https://api.github.com/repos/ECB2020/Hobyah/git/blobs/0e36540c9817f565ae5c00c17d8b94c438db7d65",
+      "status": 200,
+      "bytes": 180101,
+      "git_blob": "0e36540c9817f565ae5c00c17d8b94c438db7d65",
+      "sha256": "51435cd8dec43086e7a07c07c453aaf574b31e5b426f93c814a69e3c5f9a0853",
+      "path": "development/natural_hobyah_dev26_v1/raw/after.xlsx"
+    }
+  ],
+  "role": "Excluded-origin natural-error development acquisition",
+  "final_validation_eligible": false,
+  "accepted_sources": 0,
+  "accepted_families": 0,
+  "prior_metadata_truth_exposure": true,
+  "preregistration_sha256": "92f25902321f4f2e70eb73b918001ff5b79f57b575b920987373e39c04510427",
+  "license_review_sha256": "003c4584171c2196db41f7af9b5bec926b51a43aab863cabe62c4fd6ad232ea8",
+  "acquisition_script_sha256": "a5ad7592c38b5e98a32a0236fa7d57d38b43aaa52f0368fd725a34f36a20e781",
+  "initial_raw_timeout_receipt_sha256": "f2c4649f6b7c1e8129f37d9d0f166efde6e20c25072051eb42303f5d49b5c1d0"
+}

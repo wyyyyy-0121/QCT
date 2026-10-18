@@ -1,0 +1,7 @@
+# Hobyah已排除开发来源的许可记录
+
+固定修订`a6c7cd441ff1aca4915e8bc2b61d719643927cac`的仓库根LICENSE为BSD 2-Clause，Copyright (c) 2020, Ewan Bennett。文件从Git blob `91e7690f5d7706842019380f54e8c7a5adc1fcfc`取得并验证Git内容哈希。README列明本仓库包含隧道通风不可压流计算表以及对应Excel版本。
+
+在保留原作者声明和BSD条款的前提下，允许本次本地研究获取与使用。未完整审查工作簿内嵌第三方声明，因此原始工作簿先只保存在被git忽略的raw目录，不上传二进制；这份记录不声称第三方内容权利全部清理。今后若分发原表，须带完整版权、条款及免责声明并先核对工作簿内声明。
+
+许可证和README的正文、请求及SHA保存在`hobyah_docs_dev26_20261018/`。初次raw LICENSE请求超时，README成功；随后改用固定Git blob API取得LICENSE，没有替换版本。该来源因提交文本披露错误位置已排除未见最终验证，许可确认不改变这点。

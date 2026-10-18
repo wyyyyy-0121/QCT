@@ -1,0 +1,25 @@
+{
+  "role": "Already-excluded Hobyah development provenance and license",
+  "commit": "a6c7cd441ff1aca4915e8bc2b61d719643927cac",
+  "records": [
+    {
+      "name": "README.md",
+      "url": "https://raw.githubusercontent.com/ECB2020/Hobyah/a6c7cd441ff1aca4915e8bc2b61d719643927cac/README.md",
+      "status": 200,
+      "bytes": 1740,
+      "sha256": "4d6f6032229467706ec0c8ad523f48d1d9ed0223808da362d39b6456c3fc85bf",
+      "ok": true
+    },
+    {
+      "name": "LICENSE",
+      "url": "https://api.github.com/repos/ECB2020/Hobyah/git/blobs/91e7690f5d7706842019380f54e8c7a5adc1fcfc",
+      "prior_raw_request": "timed out after README succeeded; no license body received",
+      "status": 200,
+      "bytes": 1322,
+      "sha256": "e69e3cef963b1a2bb9c076972bf0c047acd428b0989a70c033023289b61dec88",
+      "ok": true
+    }
+  ],
+  "workbook_bodies_acquired": false,
+  "final_validation_eligible": false
+}
