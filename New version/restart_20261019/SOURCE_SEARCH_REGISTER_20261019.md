@@ -185,3 +185,9 @@ These two screens add no qualified natural source or template family. They do no
 本次只审阅官方论文文本及先前已审的GitHub README/树，未取回Hugging Face数据卡、文件清单、输入表或golden文件，未检查任何公式/标签，未运行模型。实验前仍须确认数据文件许可/版本、Debugging子集完整清单、输入与golden差异、每类目标错误及干净格、错误是否仅由作者注入、golden公式是否可作为正确修复真值、自由文本指令中未标目标/错误类型是否会造成额外信息不足，并审计README要求重算工作簿造成的公式/缓存变化。通过这些门槛前不列入可评分注入基准；通过后需冻结本模型和评分器，预登记后再运行。
 
 官方证据入口：论文记录 https://arxiv.org/abs/2606.29955v1 ，PDF https://arxiv.org/pdf/2606.29955v1 ，数据页 https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2 ，项目代码 https://github.com/RUCKBReasoning/SpreadsheetBench-2 。本轮arXiv API/PDF及GitHub API可访问；Hugging Face API/文件树和`raw.githubusercontent.com`超时。自然错误来源/模板家族仍为`0/0`；本候选暂不计入注入错误实验数据。
+
+### 本地取得与归类更新（2026-10-19）
+
+通过`hf-mirror.com`镜像revision `5a2215ed4121945ab09d8723df2995602090b042`取得`spreadsheetbench-v2-09-10.zip`。再次读取镜像递归文件树，确认LFS SHA-256及本地归档SHA-256同为`52699c974c30aced7125f3d12cdaabbbcbba8db804373d7397a5d3bdf68e5b3e`，大小134,232,213字节。归档ZIP完整性检查通过，清单含`Debugging`目录下100个`*_input.xlsx`和10个`*_golden.xlsx`，覆盖10个任务目录。仅据文件名和目录确认清单，未解析`dataset.json`、工作簿公式或golden内容。
+
+数据卡front matter标注MIT，而论文A.4声明数据集CC BY-SA 4.0；本地未取得独立LICENSE文件。保留两项证据及冲突，按更严格的CC BY-SA 4.0边界仅作本地研究，不推送归档、工作簿、逐格标签或衍生数据。该数据仍只归类为公开专家注入错误基准，绝不计入自然错误来源或自然模板家族数。冻结模型预测由预登记流程执行；输入/黄金哈希锁和预测锁位于被忽略的本地`source_evidence/raw/spreadsheetbench2/`目录，逐任务结果锁定前不读任务JSON或golden工作簿。
