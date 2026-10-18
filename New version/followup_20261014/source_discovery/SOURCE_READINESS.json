@@ -1,6 +1,6 @@
 {
-  "updated_on": "2026-10-15",
-  "role": "metadata candidates only; not final eligibility or acceptance",
+  "updated_on": "2026-10-18",
+  "role": "metadata ledger with development exclusions; not final eligibility",
   "final_workbooks_acquired": false,
   "correct_formula_answers_acquired": false,
   "accepted_sources": 0,
@@ -13,7 +13,14 @@
     "FoRepBench",
     "SpreadsheetBench v1 and unresolved v2 ancestry",
     "old synthetic families",
-    "dgorissen/pycel and all fixture/example derivatives (public compatibility development, pinned 15c8dd17338eb2ec31c9fe9dab11ae7b77b2633b)"
+    "dgorissen/pycel and all fixture/example derivatives (public compatibility development, pinned 15c8dd17338eb2ec31c9fe9dab11ae7b77b2633b)",
+    "Iowa State University Extension Ag Decision Maker",
+    "18F US government",
+    "Packt project finance course author",
+    "Renewables Valuation Institute",
+    "Aswath Damodaran NYU",
+    "US EPA control cost manual",
+    "UK government conservative grouped origin; DfT and DESNZ not yet counted separately"
   ],
   "priority_origin_groups": [
     {
@@ -36,18 +43,21 @@
           "status": 200
         }
       ],
-      "status": "metadata candidate only",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "remaining_gates": [
-        "source/history overlap",
-        "workbook-specific license scope",
-        "freeze before input acquisition",
-        "formula presence and family deduplication",
-        "all emitted suggestions adjudicable"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public01",
+        "public02",
+        "public03"
       ]
     },
     {
@@ -109,21 +119,20 @@
           "sha256": "b432f297fde97e4da0385831adb3fd59b208e99c70785975637d1e3753617425"
         }
       ],
-      "status": "metadata_candidate_not_accepted",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "unknown_proposal_truth_resolved": false,
       "remaining_gates": [
-        "history and ancestry overlap",
-        "author/origin independence",
-        "license scope",
-        "freeze before final acquisition",
-        "formula presence and template family deduplication",
-        "known correct original or natural-error pair mapping",
-        "all emitted suggestions adjudicable"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public09"
       ]
     },
     {
@@ -145,21 +154,20 @@
           "sha256": "120f78b14b2b1f35b227b6ddbd47e0a3966bb2e731618e76c0c06c26b58f4e05"
         }
       ],
-      "status": "metadata_candidate_not_accepted",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "unknown_proposal_truth_resolved": false,
       "remaining_gates": [
-        "history and ancestry overlap",
-        "author/origin independence",
-        "license scope",
-        "freeze before final acquisition",
-        "formula presence and template family deduplication",
-        "known correct original or natural-error pair mapping",
-        "all emitted suggestions adjudicable"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public10"
       ]
     },
     {
@@ -194,21 +202,20 @@
           "sha256": "bc93c29b228cc81a65c86bc60d79a8f327a157d78ca94703dfd8dcbfcfff48ca"
         }
       ],
-      "status": "metadata_candidate_not_accepted",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "unknown_proposal_truth_resolved": false,
       "remaining_gates": [
-        "history and ancestry overlap",
-        "author/origin independence",
-        "license scope",
-        "freeze before final acquisition",
-        "formula presence and template family deduplication",
-        "known correct original or natural-error pair mapping",
-        "all emitted suggestions adjudicable"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public11"
       ]
     },
     {
@@ -241,21 +248,21 @@
           "ok": false
         }
       ],
-      "status": "metadata_candidate_not_accepted",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "unknown_proposal_truth_resolved": false,
       "remaining_gates": [
-        "history and ancestry overlap",
-        "author/origin independence",
-        "license scope",
-        "freeze before final acquisition",
-        "formula presence and template family deduplication",
-        "known correct original or natural-error pair mapping",
-        "all emitted suggestions adjudicable"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public04",
+        "public05"
       ]
     },
     {
@@ -291,23 +298,21 @@
           "sha256": "fea32d94230d107708b636728491550c0cfcf965361319be7e0b4887eaa04d43"
         }
       ],
-      "status": "metadata_candidate_not_accepted",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "unknown_proposal_truth_resolved": false,
       "remaining_gates": [
-        "history and ancestry overlap",
-        "author/origin independence",
-        "license scope",
-        "freeze before final acquisition",
-        "formula presence and template family deduplication",
-        "known correct original or natural-error pair mapping",
-        "all emitted suggestions adjudicable",
-        "obtain genuinely erroneous archived workbook; current corrected version alone insufficient",
-        "prove erratum concerns silent formula error and locate trustworthy corrected formula"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public06",
+        "public07"
       ]
     },
     {
@@ -338,26 +343,34 @@
           "sha256": "a684576ae477078c5a504c77cbbdfb11503efd165965c27e2f92bc255acfa65c"
         }
       ],
-      "status": "metadata_candidate_not_accepted",
+      "status": "excluded_from_final_after_development_acquisition",
       "accepted": false,
       "accepted_template_families": 0,
-      "workbook_acquired": false,
+      "workbook_acquired": true,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "unknown_proposal_truth_resolved": false,
       "remaining_gates": [
-        "history and ancestry overlap",
-        "author/origin independence",
-        "license scope",
-        "freeze before final acquisition",
-        "formula presence and template family deduplication",
-        "known correct original or natural-error pair mapping",
-        "all emitted suggestions adjudicable",
-        "obtain genuinely erroneous archived workbook; current corrected version alone insufficient",
-        "prove erratum concerns silent formula error and locate trustworthy corrected formula"
+        "Entire origin already used for development; cannot qualify for final validation"
+      ],
+      "acquisition_role": "development only; whole origin excluded from final validation",
+      "final_validation_eligible": false,
+      "development_workbook_ids": [
+        "public08"
       ]
     }
   ],
   "candidate_family_names_not_verified": 15,
-  "note": "No number of directory names or errata links is a verified template count. Metadata-only historical keyword check is not a full overlap audit."
+  "note": "No number of directory names or errata links is a verified template count. Metadata-only historical keyword check is not a full overlap audit.",
+  "development_acquired_origins": [
+    "18f",
+    "damodaran",
+    "epa",
+    "iowa_state_agdm",
+    "packt",
+    "renewables",
+    "uk_government"
+  ],
+  "development_acquisition_evidence": "development/public_candidate_pipeline_dev10/public_index.json",
+  "development_acquisition_sha256": "27f82b6668dacf2bcfec0aa366a03a7a5cae12615af9f83b0db2557ba95f8e8c"
 }

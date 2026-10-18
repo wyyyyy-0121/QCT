@@ -1,0 +1,57 @@
+{
+  "registration_hashes_verified": true,
+  "generator_and_protocol_verified": true,
+  "independently_recounted_metrics": {
+    "paper": {
+      "proposals": 114,
+      "correct": 102,
+      "wrong": 12,
+      "errors": 102,
+      "harmful_correct_cells": 12
+    },
+    "dev11": {
+      "proposals": 0,
+      "correct": 0,
+      "wrong": 0,
+      "errors": 102,
+      "harmful_correct_cells": 0
+    },
+    "dev12": {
+      "proposals": 78,
+      "correct": 72,
+      "wrong": 6,
+      "errors": 102,
+      "harmful_correct_cells": 0
+    }
+  },
+  "raw_status_counts": {
+    "paper": {
+      "low_risk": 2508,
+      "validated_local_and_systemic": 78,
+      "local_anomaly": 54
+    },
+    "dev11": {
+      "abstain": 2526,
+      "review": 114
+    },
+    "dev12": {
+      "abstain": 2070,
+      "propose": 78,
+      "review": 492
+    }
+  },
+  "reconciliation_reasons": {
+    "declared_checks_preserve_original": 1596,
+    "unique_candidate_satisfies_declared_checks": 78,
+    "control depends on target": 240,
+    "ambiguous_declared_checks": 6,
+    "hidden control or precedent": 240
+  },
+  "legacy_unchanged_cases": 107,
+  "replay_verified_cases": 167,
+  "prediction_access_log_clean": true,
+  "score_sha256": "63da4aacde4913c627c660272cc261641365ae944ad8ba4c18d8316605850220",
+  "truth_sha256": "733746236380752aecae212121808c0a0f0b77b5287823599a98bf183e9634b6",
+  "registration_sha256": "ca3bd156d221e278a4c2603230c598fc5d590772ebd06c3b40f8b0f87de7424f",
+  "final_validation_eligible": false
+}

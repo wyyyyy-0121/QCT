@@ -24,10 +24,10 @@
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "analyze dev10 unsupported syntax and legal coefficient risk without treating suggestions as labels",
-    "develop independently checkable business constraints on fresh development families",
-    "freeze model scorer and inclusion rules before acquiring final validation datasets",
-    "acquire separate AI synthetic, natural-error and injected-error validation categories"
+    "investigate dev11 over-abstention on unknown business mechanisms without assuming majority is correct",
+    "retain dev12 as controlled auxiliary experiment; wrong controls remain unresolved",
+    "establish reliable natural-error labels and review remaining metadata origins; seven development origins excluded",
+    "freeze model scorer and inclusion rules before acquiring final validation datasets"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -49,14 +49,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 92,
-  "new_work_pushed": true,
+  "unit_test_count": 110,
+  "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV11_AST_REPORT_20261018.md",
+  "latest_report": "DEV12_RECONCILIATION_REPORT_20261018.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -201,7 +201,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev11 experiment checkpoint 8d54ab7ed5cbeacea1316fce47cb838778a336b8",
+  "new_work_pushed_scope": "dev12 local; pending upload",
   "latest_verified_experiment_remote_commit": "8d54ab7ed5cbeacea1316fce47cb838778a336b8",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -289,5 +289,56 @@
     "scope": "Legacy dev6 replay, workbook reload, AST gate; public upstream SG/FG excluded",
     "wall_seconds": 94.7550350950005
   },
-  "dev11_upload_receipt": "qa/DEV11_UPLOAD_RECEIPT_20261018.json"
+  "dev11_upload_receipt": "qa/DEV11_UPLOAD_RECEIPT_20261018.json",
+  "dev12_report": "DEV12_RECONCILIATION_REPORT_20261018.md",
+  "dev12_run": "development/selector_dev12_reconciliation_v1",
+  "dev12_replay": "qa/DEV12_REPLAY_20261018.json",
+  "dev12_independent_audit": "qa/DEV12_INDEPENDENT_AUDIT_20261018.json",
+  "dev12_cases": 167,
+  "dev12_controlled_cases": 60,
+  "dev12_legacy_cases": 107,
+  "dev12_results": {
+    "dev11": {
+      "correct": 0,
+      "coverage": 0.0,
+      "errors": 102,
+      "harmful_correct_cells": 0,
+      "precision": null,
+      "proposals": 0,
+      "wrong": 0
+    },
+    "dev12": {
+      "correct": 72,
+      "coverage": 0.7058823529411765,
+      "errors": 102,
+      "harmful_correct_cells": 0,
+      "precision": 0.9230769230769231,
+      "proposals": 78,
+      "wrong": 6
+    },
+    "paper": {
+      "correct": 102,
+      "coverage": 1.0,
+      "errors": 102,
+      "harmful_correct_cells": 12,
+      "precision": 0.8947368421052632,
+      "proposals": 114,
+      "wrong": 12
+    }
+  },
+  "dev12_replay_verified": true,
+  "dev12_final_validation_eligible": false,
+  "dev12_main_candidate_adopted": false,
+  "dev12_control_provenance_verified": false,
+  "dev12_wrong_control_failures": 6,
+  "dev12_legacy_rows_changed": 0,
+  "dev12_runtime": {
+    "cpu_seconds": 132.712187679,
+    "gpu_used": false,
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "process_peak_rss_kib": 280432,
+    "python": "3.11.16",
+    "scope": "60 complete paper/dev11/dev12 cases; 107 dev6 replay + dev11/dev12 from frozen upstream",
+    "wall_seconds": 132.81841103100032
+  }
 }

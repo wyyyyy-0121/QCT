@@ -1,5 +1,7 @@
 # 新来源候选状态
 
+2026-10-18状态更正：Iowa State、Damodaran、EPA、英国政府、18F、Packt和Renewables七个来源已经用于dev7/dev10开发，整个来源均排除最终验证；SOURCE_READINESS.json已据11个实际输入及哈希修正。下文是历史发现记录，其中“未下载”“待查候选”不能继续当作未见来源证明。最终合格来源/家族仍为0。
+
 这里只审查来源元数据和公开目录，不含最终验证工作簿或逐项答案。候选多不等于合格来源多；尚未满足六来源十五家族。
 
 2026-10-15增量审计见 `SOURCE_READINESS.json`、`metadata_v3/RECEIPT.json`至`metadata_v5/RECEIPT.json`。18F已直接核实CC0；Packt固定commit的MIT正文已读取；Renewables README声明CC BY-NC-SA 4.0，但固定tree无LICENSE。EPA官方计算表/勘误及英国TAG、DESNZ LCOE入口已核实，仅为待查候选。以下表格保留较早发现记录，以新台账为当前状态。合格来源与家族数仍为0。
