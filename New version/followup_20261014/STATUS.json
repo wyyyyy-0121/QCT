@@ -51,7 +51,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 142,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -202,7 +202,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev13 bidirectional ablation, independent scoring/context audits, and v11-v13 source discovery pending upload",
+  "new_work_pushed_scope": "dev13 ablation, independent audits, v11-v13 source discovery verified on GitHub; receipt documentation follows",
   "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -407,5 +407,7 @@
     "Excel Easy",
     "NSW Treasury"
   ],
-  "natural_original_correction_pair_verified": false
+  "natural_original_correction_pair_verified": false,
+  "latest_verified_dev13_source_remote_commit": "9690ac82e8fb10faabf1c38ea3b37377b57ef80b",
+  "dev13_source_upload_receipt": "qa/DEV13_SOURCE_UPLOAD_RECEIPT_20261018.json"
 }
