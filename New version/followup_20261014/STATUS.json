@@ -24,9 +24,9 @@
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "Complete preregistered v2 boolean-concatenation rejection and independent reference audit, preserving v1 mismatch",
-    "Study repair under visible auditable record rules with legitimate cross-row, absent-rule and misleading-rule controls; do not hardcode cv500 answer",
-    "Verify source-isolated development and old regressions before adoption; final three-category double-90 and six-new-source/fifteen-family acceptance unchanged"
+    "Develop bounded reference-scope constraints only when record ownership and exceptions have separately auditable evidence; missing/conflicting rules must abstain",
+    "Evaluate any proposed repair separately for autonomous and external-schema-assisted modes, with legitimate cross-row and misleading-rule controls; no hardcoded cv500 correction",
+    "Use source-isolated development before final freeze; acquire reserved unseen final workbooks only through the registered blind validation protocol"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -48,7 +48,7 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 268,
+  "unit_test_count": 272,
   "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
@@ -112,7 +112,7 @@
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
   "upload_record_note": "source expansion checkpoint dcf9a25 verified against remote; documentation commit follows",
-  "latest_verified_remote_before_this_checkpoint": "7951bb6e42150c72b2f713e3e81864bdada2a008",
+  "latest_verified_remote_before_this_checkpoint": "edcf21942bc0bedad2ebdf88231c245c15e39c67",
   "development_metric_scope": "old39 revealed regression only; crossdomain and adversarial results separate",
   "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
   "public_compatibility_workbooks": 14,
@@ -242,7 +242,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev28 v1 complete execution, explicit hard recalculation, retained independent smoke mismatch, and v2 preregistration",
+  "new_work_pushed_scope": "dev28 v2 conservative boolean handling, 272 tests, 1027 declaration replay and 522 exact independent execution matches; remote verification follows",
   "latest_verified_experiment_remote_commit": "80407a9",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -447,7 +447,7 @@
     "Excel Easy",
     "NSW Treasury"
   ],
-  "natural_original_correction_pair_verified": false,
+  "natural_original_correction_pair_verified": true,
   "latest_verified_dev13_source_remote_commit": "9690ac82e8fb10faabf1c38ea3b37377b57ef80b",
   "dev13_source_upload_receipt": "qa/DEV13_SOURCE_UPLOAD_RECEIPT_20261018.json",
   "annotation_dev14_dev15": {
@@ -1269,7 +1269,7 @@
     "verification": "qa/NATURAL_PAIRS_DEV27_VERIFICATION_20261018.json"
   },
   "dev28_string_execution": {
-    "phase": "v1 executed and independent hard recalculation audited; boolean smoke mismatch retained; v2 preregistered",
+    "phase": "v2 all declarations replayed and independent supported results matched; v1 mismatch preserved",
     "report": "DEV28_STRING_EXECUTION_REPORT_20261018.md",
     "run": "development/string_execution_dev28_v1",
     "formula_cells": 1003,
@@ -1283,9 +1283,21 @@
     "smoke_unsupported": 6,
     "v1_independent_smoke_fully_passed": false,
     "boolean_reference_semantics_unresolved": true,
-    "tests_passed": 268,
+    "tests_passed": 272,
     "main_candidate_changed": false,
     "performance_improvement_established": false,
-    "final_validation_eligible": false
-  }
+    "final_validation_eligible": false,
+    "v2_run": "development/string_execution_dev28_v2",
+    "v2_smoke_cells": 24,
+    "v2_smoke_executed": 17,
+    "v2_smoke_unsupported": 7,
+    "v2_smoke_agreements": 17,
+    "v2_independent_compared": 522,
+    "v2_independent_exact_agreements": 522,
+    "v2_all_declarations_replayed": 1027,
+    "verification": "qa/STRING_EXECUTION_DEV28_VERIFICATION_20261018.json",
+    "old_locks_verified": true,
+    "v2_boolean_coercion": "explicit unsupported; independent reference does not settle Excel semantics"
+  },
+  "natural_original_correction_pair_verified_scope": "one revealed development pair (cv500); no independent final natural pair accepted"
 }

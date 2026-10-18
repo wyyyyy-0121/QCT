@@ -1,0 +1,26 @@
+{
+  "files": {
+    "STRING_EXECUTION_DEV28_V2_REGISTRATION_20261018.md": "cb8d13f14c322e3bf460493de4e0fd50f25eed8ed39bca64200bb260a7eb9e4c",
+    "qa/hard_reference_string_execution_dev28.py": "dab9a4cd2def5f916252fd1bd27e800490241f0d0f622a6cac1df025485512aa",
+    "qa/run_string_execution_dev28.py": "5e9389a2652a7f76da1903fa518f9fbd908ccca05aadaca7329fb7ad925c771b",
+    "qa/run_string_execution_dev28_v2.py": "fdc0fa3724b07638cb03fa8fd333298cf6caa60f4ac3c5379dae2f9505fa6ad2",
+    "scripts/run_selector_dev5.py": "bab4b5d5548314a34d6869c8e4c92ff201d10ae7aa5e8ae7a790623ff524f58e",
+    "scripts/string_execution_dev28.py": "455348ce7111cacbae136aea289bb67505e2d0629a8d2d85793860abf26e1d23",
+    "scripts/string_execution_dev28_v2.py": "1f2c68ec199b6a465d3a501435333d160203b475ad25defbf23723b5686b785f",
+    "scripts/typed_execution_adapter.py": "655feee1e141f63c04cb27fcdb6b0cf04c6907e6770c50216856cf17bc8b6535",
+    "tests/test_string_execution_dev28_v2.py": "600d3eaaab119f6b22c19dfb904c9fa3c9dbb26b63d9d36c26490798d5e93c90"
+  },
+  "inputs": {
+    "cv500": "b6cdb872bc8aca288c1606ea10eacad9c4095e9983b374164f3b2478b2b71d4f",
+    "hobyah": "3c08817d13c044d5ab0868eb8fad137ac35498aff3634a66cbf1226dcfe5ccc3",
+    "ldas": "8bf652abb09294852bed4221be0e4d3a40dd620e639343d4533dc5a12f4772a3"
+  },
+  "local_references": {
+    "development/string_execution_dev28_v1/local/hard_reference_cv500_uno.json.gz": "1efad6fa991fceb898d01655a9f2da13ab773e6b5ddfa05d87fd753846a3a6ce",
+    "development/string_execution_dev28_v1/local/hard_reference_smoke.xlsx": "b10866bfdd3a00d71c338fb1e5bb8a33573053cc36abdfa384ae37cf79af107e",
+    "development/string_execution_dev28_v1/local/hard_reference_smoke_uno.json.gz": "5a4f39836f460f01c6b072b3af8dedb662b60d3dee1c84540d30f000516034e5"
+  },
+  "prior_execution_lock_sha256": "00375f19d67707c5632184bbe2dafea266cdd12400c0ebf715d0173d6a709d0c",
+  "prior_hard_reference_sha256": "ec537b14e85a3c2c9378fe2e227e401e7c3e10c36b20dd494a295eecd57e5100",
+  "version": "typed-string-execution-dev28-v2-conservative-boolean"
+}

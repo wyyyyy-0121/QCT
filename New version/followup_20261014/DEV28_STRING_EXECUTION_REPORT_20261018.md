@@ -21,3 +21,13 @@ v2已另行登记：布尔参与连接时明确不支持，后续验证另存。
 下一步将研究范围转向显式可审计的记录归属规则，并保留合法跨行引用、缺少规则及误导规则作为反例。不得把本来源已揭示的C列修复答案硬编码为一般规则。
 
 证据入口：`development/string_execution_dev28_v1/`、`qa/STRING_EXECUTION_DEV28_HARD_REFERENCE_20261018.log`、`qa/hard_reference_string_execution_dev28.py`。完整公开词库、参考文本及工作簿仍仅存本地忽略目录。
+
+## v2核验完成
+
+按独立登记新增包装模块`string_execution_dev28_v2.py`，保留v1完整实现，仅对布尔参与连接返回`boolean_text_coercion_unverified`。不根据LibreOffice输出改猜Excel结果。272项测试通过；1003原公式与24格样例全部1027格重放一致。原公式505执行/498不支持，样例17执行/7不支持；共522个执行结果与先前已冻结的calculateAll参考逐字或按类型相同。unsupported完整保留；522/522只指受支持表达式的执行核对，不是检出率或修复精确率。
+
+旧dev11/dev24/dev25/dev26/dev27源码、输入及预测锁核对通过。v1原始失败、转换格式的不充分参考和五个换行差异记录全部保留。直接布尔引用的类型由单元测试检查，其跨引擎行为未据此普遍认证。
+
+`qa/verify_string_execution_dev28.py`可重新核对锁与逐格执行。完整复现需要按dev26/dev27的获取脚本恢复已锁定原始文件，随后在独立实验目录运行v1/v2执行及参考脚本，不能覆盖已提交结果。已提交的纯合成小型工作簿及UNO参考位于`development/string_execution_dev28_v2/synthetic_reference/`；恢复到v1忽略目录时应逐项核对v2 source_lock中local_references的SHA。公开词库原始文本及UNO完整词库输出不重新分发：可从原工作簿用已冻结UNO worker只读calculateAll重建，并按已提交逐格哈希核对；重建运行的耗时字段不会逐字相同。
+
+下一轮优先做可核查引用归属约束：规则必须有明确适用范围和合法跨行例外，缺规则或规则冲突时拒绝。外部说明辅助模式单独报告，不把事后根据cv-500答案写出的规则称为自动发现。最终主模型及验收要求不变。
