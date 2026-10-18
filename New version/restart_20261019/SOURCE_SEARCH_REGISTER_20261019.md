@@ -45,6 +45,12 @@
 
 本轮后合格最终公开来源/模板家族仍为`0/0`。提交搜索的页面结果只作为线索筛查，不替代源文件、版本沿革、许可、模板去重及逐格独立真值审核。下一步优先转向有正式版本存档与明确开放许可的政府审计勘误/更正档案；在找到具体修订工作簿前继续冻结原模型和所有评分。
 
+## 2026-10-19 DOE/OSTI 替代端点复查
+
+本轮只复核元数据与公开目录可达性，未下载报告全文或工作簿，未查看公式内容，未运行模型或改变准入规则。Crossref DOI API（HTTP 200）和OpenAlex DOI记录（HTTP 200）再次确认题名`Strontium-90 Error Discovered in Subcontract Laboratory Spreadsheet`、1999-07-31发布日期，以及DOI资源指向OSTI PURL；OpenAlex标为开放获取，但`license`与`license_id`均为null，记录没有列出工作簿附件或修订文件。原始JSON响应已保存于忽略目录`source_evidence/raw/NATURAL_SOURCE_RETRY_20261019/`，SHA-256分别为Crossref `7aef963b23ae5a5cd1005b7bc494511f9d7d19c8827d2496408cbdca201904eb`、OpenAlex `21af77b9fce7c4c0f1c6a9867b7e54daac012b159e18d6b24f44ba6242ec1bcc`。
+
+对`www.osti.gov/api/v1/records?doi=10.2172%2F12185`、OSTI PURL `https://www.osti.gov/servlets/purl/12185-3MGwCS/webviewable/`、UNT检索页及Internet Archive CDX的重试分别超时（约20-25秒）；`api.osti.gov`替代主机无法解析。Crossref/OpenAlex只能支持报告书目及错误事件线索，不能证明工作簿附件、许可、原修订链或逐格公式真值。因此该候选继续标为“真实错误事件、工作簿级证据未取得”，不计自然来源或模板家族，也不启动预测；访问失败不解释为零命中。
+
 补充检索边界：2026-10-19尝试以Google和DuckDuckGo搜索官方审计/政府工作簿更正线索，连接均超时；Bing请求虽返回搜索页，但本次抽取未取得可核查的结果条目。该检索受阻，不解释为“没有来源”，也不改变`0/0`准入计数。
 
 ## DOE/OSTI 候选线索
