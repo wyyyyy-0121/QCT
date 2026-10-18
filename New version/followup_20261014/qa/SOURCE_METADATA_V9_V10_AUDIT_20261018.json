@@ -1,0 +1,107 @@
+{
+  "role": "metadata integrity and credential-pattern check, not source acceptance",
+  "requests_checked": [
+    {
+      "version": 9,
+      "id": "core_econ_repository_search",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 9,
+      "id": "excelint_core_readme",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 9,
+      "id": "rr_hap_ref",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 9,
+      "id": "rr_mcginn_tree",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 9,
+      "id": "rr_science_readme_branch",
+      "status": null,
+      "saved_response_hash_verified": false
+    },
+    {
+      "version": 9,
+      "id": "rr_science_ref",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 9,
+      "id": "rr_vincent_tree",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 9,
+      "id": "spreadsheet_audit_corpus_search",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "corpus_paper_readme",
+      "status": 404,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "rr_critique_oup",
+      "status": 403,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "rr_original_aea",
+      "status": null,
+      "saved_response_hash_verified": false
+    },
+    {
+      "version": 10,
+      "id": "rr_reinhart_data",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "rr_reinhart_topic",
+      "status": 404,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "rr_rogoff_publication",
+      "status": 403,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "rr_science_readme_api",
+      "status": 200,
+      "saved_response_hash_verified": true
+    },
+    {
+      "version": 10,
+      "id": "rr_vincent_readme_api",
+      "status": 200,
+      "saved_response_hash_verified": true
+    }
+  ],
+  "files_pattern_scanned": 18,
+  "credential_pattern_findings": [],
+  "workbook_bodies_acquired": false,
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "audit_script_sha256": "f8419bf845ee7d114c17f5702893f6b5fc0b1b9ebcaf4ea4b0e62be18c17257f"
+}

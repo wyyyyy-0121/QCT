@@ -1,0 +1,87 @@
+{
+  "auditor_sha256": "ce671d53fc25bfb8f31d9f850e91581095e61d06c0f19d2b1ee54b1d05452084",
+  "business_labels_available": false,
+  "cases": [
+    {
+      "all_cell_values_and_types_equal": true,
+      "control": {
+        "dev11_exactly_matches_frozen_dev11": true,
+        "paper_exactly_matches_frozen_dev10": true
+      },
+      "evaluation_errors": 30,
+      "hidden_sheet_row_column_states_equal": true,
+      "id": "public01",
+      "loaded_formula_cells": 374,
+      "original_input_unchanged": true,
+      "original_sg_extension_rejection_confirmed": null,
+      "peak_rss_kib": 54732,
+      "proposals": {
+        "dev11": 0,
+        "paper": 182
+      },
+      "raw_formula_declarations": 374,
+      "source_sha256": "ca188a3776314d7a17e0c40564bdc2737ada2e6dc705186cd20964b9c42026ec",
+      "status": "static_inference_complete_unscored",
+      "worker_cpu_seconds": 0.2626437730000002,
+      "worker_wall_seconds": 0.26559660200109647,
+      "worksheet_bytes_equal": true
+    },
+    {
+      "formula_bodies_read_by_audit": false,
+      "id": "public05",
+      "original_input_unchanged": true,
+      "protected_manifest_rejection_retained": true,
+      "source_sha256": "d6ffb67d965dc22463e4d013636befab3da431e7fc608936a82612fa73198e72",
+      "status": "input_rejected"
+    },
+    {
+      "all_cell_values_and_types_equal": true,
+      "control": {},
+      "evaluation_errors": 219,
+      "hidden_sheet_row_column_states_equal": true,
+      "id": "public06",
+      "loaded_formula_cells": 234,
+      "original_input_unchanged": true,
+      "original_sg_extension_rejection_confirmed": true,
+      "peak_rss_kib": 52132,
+      "proposals": {
+        "dev11": 0,
+        "paper": 160
+      },
+      "raw_formula_declarations": 234,
+      "source_sha256": "15814b7e4a3d45113c08b00eb4b99a0d226ea1a937955eda8c397c0c6f736c38",
+      "status": "static_inference_complete_unscored",
+      "worker_cpu_seconds": 0.18076760199999997,
+      "worker_wall_seconds": 0.18081907799933106,
+      "worksheet_bytes_equal": true
+    },
+    {
+      "all_cell_values_and_types_equal": true,
+      "control": {},
+      "evaluation_errors": 177,
+      "hidden_sheet_row_column_states_equal": true,
+      "id": "public07",
+      "loaded_formula_cells": 268,
+      "original_input_unchanged": true,
+      "original_sg_extension_rejection_confirmed": true,
+      "peak_rss_kib": 52312,
+      "proposals": {
+        "dev11": 0,
+        "paper": 217
+      },
+      "raw_formula_declarations": 268,
+      "source_sha256": "ca983db99d6c11abd3a8aad1faacc0ca18e2871ee93d6602409b70cdc9fbfad4",
+      "status": "static_inference_complete_unscored",
+      "worker_cpu_seconds": 0.20543608199999985,
+      "worker_wall_seconds": 0.20553274099984264,
+      "worksheet_bytes_equal": true
+    }
+  ],
+  "coverage": null,
+  "final_validation_eligible": false,
+  "new_final_families": 0,
+  "new_final_sources": 0,
+  "precision": null,
+  "prediction_lock_sha256": "607adcaec8394e92c1739bc81626ef36b7c2957ee8d23d4873487ca67df5ad97",
+  "utc": "2026-10-18T06:18:27.520543+00:00"
+}

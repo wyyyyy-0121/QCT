@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "deterministic_fields_replayed_exactly": true,
+      "id": "public01",
+      "status": "static_inference_complete_unscored"
+    },
+    {
+      "deterministic_fields_replayed_exactly": true,
+      "id": "public05",
+      "status": "input_rejected"
+    },
+    {
+      "deterministic_fields_replayed_exactly": true,
+      "id": "public06",
+      "status": "static_inference_complete_unscored"
+    },
+    {
+      "deterministic_fields_replayed_exactly": true,
+      "id": "public07",
+      "status": "static_inference_complete_unscored"
+    }
+  ],
+  "final_validation_eligible": false,
+  "prediction_lock_sha256": "607adcaec8394e92c1739bc81626ef36b7c2957ee8d23d4873487ca67df5ad97",
+  "view_and_predictions_replayed": true
+}
