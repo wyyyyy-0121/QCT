@@ -50,7 +50,7 @@
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
   "unit_test_count": 304,
-  "new_work_pushed": false,
+  "new_work_pushed": true,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
@@ -113,7 +113,7 @@
   "dev5_adversarial_unit_mismatch_misses": 96,
   "dev5_unseen_generalization_tested": false,
   "upload_record_note": "source expansion checkpoint dcf9a25 verified against remote; documentation commit follows",
-  "latest_verified_remote_before_this_checkpoint": "27f9982a6963d2c55ff76a7ae46a9ea9447a3c60",
+  "latest_verified_remote_before_this_checkpoint": "f1be3774e9c0c0502f3b507fdf37bcc03e07c762",
   "development_metric_scope": "All 213 annotated development cases, dev11 adopted candidate; older synthetic-only metrics are retained in detailed historical entries",
   "public_compatibility_development_origin": "dgorissen/pycel (excluded from final)",
   "public_compatibility_workbooks": 14,
@@ -1409,5 +1409,6 @@
     "main_candidate_changed": false,
     "repair_improvement_established": false,
     "final_validation_eligible": false
-  }
+  },
+  "dev31_upload_receipt": "qa/DEV31_UPLOAD_RECEIPT_20261018.json"
 }
