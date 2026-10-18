@@ -1,0 +1,918 @@
+{
+  "archive_sha256": "47d6950a9275e68b4b3c51177893b2a9dbc3053243e30b7eb88c32bbc6829aec",
+  "baseline_source_lock_sha256": "1c346caac23ccbdc8c7462fbf56f0a22a3507dbb29247fde86325363cfe6424d",
+  "dataset": "Zenodo 581672 faultsfw",
+  "input_count": 225,
+  "inputs": [
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_amortization_1Faults_Fault1.xlsx",
+      "sha256": "d540338bcb8a25ca9c19f90253d3d4f0faf20f72a204ae66648a6b95ece0829d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_amortization_1Faults_Fault2.xlsx",
+      "sha256": "abc4764d72c03f9a3eff1e1c294fb967ac4810b0b1a0a69553150fc5b70a9aa1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_amortization_2Faults_Fault1.xlsx",
+      "sha256": "e5e5d80ab51e4c905931bc18faffbb179664be03ed628f99595e05a8b8b3c7bd"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_amortization_2Faults_Fault2.xlsx",
+      "sha256": "c8217ff8e6f1ec88bd8ce332aa1bba94a01638aa75e7c1816849e5522fe54580"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_amortization_2Faults_Fault3.xlsx",
+      "sha256": "e4c5f426db9e6705a0e120534db5d026d23357229683caeaced88dc0c71618fc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_amortization_3Faults_Fault1.xlsx",
+      "sha256": "3e757b5f511c562fd2ab3c1f3d628ca5e9f8941533c5e7b542d3a8f7408464eb"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_area_2Faults_Fault1.xlsx",
+      "sha256": "50c815b9d4166e1c51dff7bd169216a6c562759973d5a6255f4ab6ea8ac93d18"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_area_2Faults_Fault2.xlsx",
+      "sha256": "2a33bb841e66d5d4f5d536b2de3611f2dc3ff4159b96a4f99d4c4f090ab84138"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_area_2Faults_Fault3.xlsx",
+      "sha256": "f4d4f072ca2d99540ebb6ab9d237e7b551f9d847614d09a46db341097abd12ff"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_area_3Faults_Fault1.xlsx",
+      "sha256": "9758220376ad8e04e553ec7fb6222dafd028b587dd27f165369d4c98bd86dab0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_1Faults_Fault1.xlsx",
+      "sha256": "305868aeb9e3deff9ec7cf0522c117af7bb9ae7906dc8e256080ded1e496bd36"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_1Faults_Fault2.xlsx",
+      "sha256": "e0fed798089a314d0ce163e4e5a87e7f218a3ed37ce9ce078a6ed564b47fc311"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_1Faults_Fault3.xlsx",
+      "sha256": "7bcd82abbfc28c2fcffbb63c40d169c0bd9ed60413174b8f6b39cee8a2b40313"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_2Faults_Fault1.xlsx",
+      "sha256": "f3a2425f58387b5b9621545b2490387572dde06238b1fae78d716d44dc33ec31"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_2Faults_Fault2.xlsx",
+      "sha256": "3e63a8622ea5845470565fdb0c7dc3612e0bfd557b5ab934cc12bf31b6675e9d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_2Faults_Fault3.xlsx",
+      "sha256": "a5012d5b01fda003abd49e4ee4b02f436694035f582a07901bad2fcd62b688b0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics00_3Faults_Fault1.xlsx",
+      "sha256": "9d30fee716ff4e0ceab72201319048781a764e97585fc81a44e12507c9628b49"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_1Faults_Fault1.xlsx",
+      "sha256": "91fcecfd8bff13e4fef312a8fd4594f29972850832239211dd63ee1eeec7bc24"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_1Faults_Fault2.xlsx",
+      "sha256": "32a1e72c5abea60832cdca69bbe45d19b860deb6495f0860b026920ec60fc308"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_1Faults_Fault3.xlsx",
+      "sha256": "75f5c2a67b3230eac773263c8dcabd99d6f0c58e262d338667a625667b11fd3b"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_2Faults_Fault1.xlsx",
+      "sha256": "6e480fce317d761bf7d54683d4f4de305c222ed8ec3f448e00ff1361065f4b99"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_2Faults_Fault2.xlsx",
+      "sha256": "033af7beb70dc5e8e6e41bab65a6127ede9086658a7c3b61f1a47d5ab904243a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_2Faults_Fault3.xlsx",
+      "sha256": "39390ca76b693fa0afb56f51ddcbdfe2576feedae297c68a983c4e2f6a152887"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics01_3Faults_Fault1.xlsx",
+      "sha256": "6957ba876c2f821689b4d29477ce16595d7c3181c8d5da7bb15295edba3aa30a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_1Faults_Fault1.xlsx",
+      "sha256": "3c3d9184720d92e9587d72b9fbb5552e5a85076e44315f4325d23387b4c0376d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_1Faults_Fault2.xlsx",
+      "sha256": "e4ed67a8323411823b73c4db5da0f62b342d32a65999849459482b4e8f322194"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_1Faults_Fault3.xlsx",
+      "sha256": "b7b3a8297182c2c5fd0a2c014dd60d4855647ea24731b180f3a3412e4b682132"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_2Faults_Fault1.xlsx",
+      "sha256": "3e9dc3d11ea2517fae797bd34648f2ee522ac01091e1887cca9413273133dc62"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_2Faults_Fault2.xlsx",
+      "sha256": "69601b0a4bff7e4eb98caa40a7cde1a5cdc15fd309625efb16d083e4a24e54be"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_2Faults_Fault3.xlsx",
+      "sha256": "b103ad5cb28f790c3b4ed1e524da76b59483b12f5bf62160985393a3a9aa299c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics02_3Faults_Fault1.xlsx",
+      "sha256": "24b8b6093aaccbe20c95f6bfab6efddf7d3cb631c8e1ebc75371df53b7724311"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_1Faults_Fault1.xlsx",
+      "sha256": "2b2b6941f9d3f0c4f049d34835e0d0e387599c28fd0643464f0c36cc6be0fd66"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_1Faults_Fault2.xlsx",
+      "sha256": "43f5005d2197bbc2f9bea15d8aafdfc79661bfacd61c96717f74fea3286b6ad8"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_1Faults_Fault3.xlsx",
+      "sha256": "9cc71e05854327760b1d9dc95d1657f02e9ff8100e4944d692d8300009c54788"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_2Faults_Fault1.xlsx",
+      "sha256": "22b991158096f520a671662f99c1b3c1582aedda7a593ffd3f54a1fb9dcb28e8"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_2Faults_Fault2.xlsx",
+      "sha256": "8540748ec2a68b3e374ad8c6b2c3e9714efaece5bf5d0ea0fffa506e5104c3c7"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_2Faults_Fault3.xlsx",
+      "sha256": "f0eb496e7304273fee68fda364be93d43c82e0d6a0e00b1f9fdee97f7623d045"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics03_3Faults_Fault1.xlsx",
+      "sha256": "e5cfc1eb686dce158884b6ce7e3084efb691906d5490e04b60b5ba5ca2b0365b"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_1Faults_Fault1.xlsx",
+      "sha256": "cde2bc8fa8c0bb1dde1e071ada4c1c16d57fda99f83151ad3bfb2602908c52cc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_1Faults_Fault2.xlsx",
+      "sha256": "f863212c91ff5f58b0e612a6a6bc74c7939995d4f6a069c98e42a9092a6a2b53"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_1Faults_Fault3.xlsx",
+      "sha256": "60584d168c602e8930ee130c05399c81a003a849ff356c4a5cde71ba6eaf3fce"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_1Faults_Fault4.xlsx",
+      "sha256": "f55c0bf37f82633a5bb55010d553aaff4ec6ec44cea82a496b344c28c62fb62f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_1Faults_Fault5.xlsx",
+      "sha256": "9511ae7dd490e2f821f470515e8ce88dd05497ebe7cc89ee6af617cd2ea96bf0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_2Faults_Fault1.xlsx",
+      "sha256": "36c0b0016b0ff7d9e07644a266e2b42417e6762af0a2540a9464d30943c5076c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_2Faults_Fault2.xlsx",
+      "sha256": "f4b0d01eedffaa6947c427ae52e71e1951c0a84136c5267c05fea08782280b79"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_2Faults_Fault3.xlsx",
+      "sha256": "314a1fa483274ac7efee8433204ac82d81bf5688cf8bbde05201234e13f1ea9a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_arithmetics04_3Faults_Fault1.xlsx",
+      "sha256": "3309beef2bb350b161bf8e37373582ccee18d9ee8a5a5e93a1c9a140d167f4cc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_1Faults_Fault1.xlsx",
+      "sha256": "c0d40b6f92bf2218a58b753c6790133a566c21e7cb366b458f2bc94b82a6a2da"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_1Faults_Fault2.xlsx",
+      "sha256": "e038aee372a1bc358c4e57dbc37cfafb54c3b7a5b292dd4c333997d5c360ed0c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_1Faults_Fault3.xlsx",
+      "sha256": "fbd4cd91c86a296f03a875895c3aba5ab73d843559aff9e22f45a43719f73055"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_1Faults_Fault4.xlsx",
+      "sha256": "42edf324e6f33d6bb2130f2f196ad6f307e00463d7a6fd7afb26d7b710e823e9"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_2Faults_Fault1.xlsx",
+      "sha256": "7379575f60d7e35fc6e553f8ac32a2ec3547a75da25c3fdad777a63c70944687"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_2Faults_Fault2.xlsx",
+      "sha256": "f18fecb032d2b5b7223d3fb0f7c5e8ff466d0531353483dde4a83cc5f081c78f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_2Faults_Fault3.xlsx",
+      "sha256": "69d72bec9378d957302ea71102d7fef7d8d473c76c6c8a1bbcf4010b646e0cbb"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_austrian_league_3Faults_Fault1.xlsx",
+      "sha256": "6dd1299cfbcbd4853f27a3f9f8642b3d08962c42cdaf27a25f0c9cc7f9c8e72d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_1Faults_Fault1.xlsx",
+      "sha256": "8d5b61d8fd2fda0c2c360e17484ddad0c5d9943e4920f3ea985ad227a11a7ed6"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_1Faults_Fault2.xlsx",
+      "sha256": "4e0e68ed238d90228ab13b2b45d48e44625ceb371894e63ad7472172d380e9d0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_1Faults_Fault3.xlsx",
+      "sha256": "0a50a84029240b8db622e12268e423fa513e40f99c8fc8d272c8a4770529093d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_1Faults_Fault4.xlsx",
+      "sha256": "0790a3e6ecffbe962d0bddb62d7c17bb4570166bf8274b94b9bdad633f637ea3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_1Faults_Fault5.xlsx",
+      "sha256": "1a09420e77fb75325ca77f9f882f1555fadb2bc73cd6908c7b7ff394900dcffc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_2Faults_Fault1.xlsx",
+      "sha256": "f48a9c078d7bcb1559c8fd9803a4ab220d1ca93e9d5d2d33c213d9ade874229f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_2Faults_Fault2.xlsx",
+      "sha256": "60b63d7ce0c8a7a7aa0062e02c93b0d5862fce8a5cbfc06be1cb79b5e4d32ce1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_2Faults_Fault3.xlsx",
+      "sha256": "e1176456d1bbe6c4aaa2d22085a25664b17feaaa216792def759158b666cfa49"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_bank_account_3Faults_Fault1.xlsx",
+      "sha256": "f791debd99987951c2c3a53101d70008ce249ce0e3f8632fc1fa091b16851a01"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_1Faults_Fault1.xlsx",
+      "sha256": "e8a1f9fb0f7e980c65e87092cb5471f2a8219c71cdd595e8ed470066f59adbba"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_1Faults_Fault2.xlsx",
+      "sha256": "d70beca3db3ca76b1cb772b4b353a85c335ba2278c3201122549a387d9adb9cd"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_1Faults_Fault3.xlsx",
+      "sha256": "a7d89caa2e69e21e57c194ed07e061aa8da68d2ffb3008b1522d51ea7612352e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_1Faults_Fault4.xlsx",
+      "sha256": "8d5415788b9c561a9ec55c517a018bbd4042e48df0527697d858866861ef6246"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_1Faults_Fault5.xlsx",
+      "sha256": "2d510fb856499943c6360769de93221f8c29551b888094d05dd032c00a4ebc67"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_2Faults_Fault1.xlsx",
+      "sha256": "362a608c33e749150c7688ebe23eac8130d719e676c26bd6d734e283114365b1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_2Faults_Fault2.xlsx",
+      "sha256": "5962763da0f6d90b4bea91f62a24ae812fae4ca13a262e8917f903876ab01e0e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_2Faults_Fault3.xlsx",
+      "sha256": "15742c4baa9b49319794ce01bbf54e16216e70382397082c916ff9729c08ab83"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_birthdays_3Faults_Fault1.xlsx",
+      "sha256": "7fcbe443d84b3b54f76f2f819967e11a0a93d1bf1b94ef6d200cd5f0ec4b4f71"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_1Faults_Fault1.xlsx",
+      "sha256": "1df32b080a0403f60dff52d96b9a0a194ad0724f3ff94f3dec23657cffaf5649"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_1Faults_Fault2.xlsx",
+      "sha256": "0a85a2520f1bd2fafe76b8d81b4069f30055bd4da1b104fdd37c97483b088dad"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_1Faults_Fault3.xlsx",
+      "sha256": "1483974abc831ff5a6fd633f43536483d2b433031c7186857d933d20e0270ebd"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_1Faults_Fault4.xlsx",
+      "sha256": "d0402e7e2b184d247ab2b4e5bf4a806c82dc87eb80ba68b68b46134604270ce0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_2Faults_Fault1.xlsx",
+      "sha256": "bcf3736b85244542e528f13d9851cc95654f6ce6c1dd397a4b17f8fbc75d3433"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_2Faults_Fault2.xlsx",
+      "sha256": "07d8ad4b0ea7445fa7f1a0da10833c0a4901483c5539474a96c12170a8eda78e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_2Faults_Fault3.xlsx",
+      "sha256": "731d302d80321f467a552743e5f3a03a2368413277b60453b9af84cced50e5b2"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_book_recommendation_3Faults_Fault1.xlsx",
+      "sha256": "532806b8445d1db2ed808d167ae99b0e3770aab090c506a7e44cba5c6dc13d00"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_cake_1Faults_Fault1.xlsx",
+      "sha256": "7232e2aef854b74a646dcffd352559764763a1f910ee540ae0213413ef70e546"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_cake_2Faults_Fault1.xlsx",
+      "sha256": "5b8b7ee6c5f7deec16d655752e29604dc1fbd2144cf4b55716e6a2a43f987a07"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_cake_2Faults_Fault2.xlsx",
+      "sha256": "29527d621b31b0e15078b3582477655107240977ada2d0adab787524b3aa9d18"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_cake_2Faults_Fault3.xlsx",
+      "sha256": "d6da54a58562eaec5c4bd70868743fe430b57aae3bd48e1510bd70904c13e08c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_cake_3Faults_Fault1.xlsx",
+      "sha256": "c0990cc440d45649991955424e5b807669e7a4d6b6697d424e6df71825abfa23"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_computer_shopping_1Faults_Fault1.xlsx",
+      "sha256": "e56fe883707a94836d75cd5cbbef7ff14740b9e5bd9e3864a3e7e1e2a6043444"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_computer_shopping_1Faults_Fault2.xlsx",
+      "sha256": "b996f4208ab4234d38fe2807694683079246fda4335f9e2154f71a5f9ce8a1fa"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_computer_shopping_2Faults_Fault1.xlsx",
+      "sha256": "81c9bcaa9354273e5e3539050da5a379b3f326a9fe14e98d603c8347cc042ba0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_computer_shopping_2Faults_Fault2.xlsx",
+      "sha256": "c4b5aed6889c5e5d5423dce41919cda30fed0a8b2b920688000fc73167806d87"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_computer_shopping_2Faults_Fault3.xlsx",
+      "sha256": "1cefd9ec9b80da9d3bfaaa82f7dd9a8175eb8cc641e275ce97462a1859e22013"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_computer_shopping_3Faults_Fault1.xlsx",
+      "sha256": "09deb346d3f56cf3d4ae287c6f001f9660e6886c3f01eaed387405035e663c6a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_1Faults_Fault1.xlsx",
+      "sha256": "b7e6cc005b40d992f76d93d633d723b31c4b5029e8977d2359c30f54d1feafb7"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_1Faults_Fault2.xlsx",
+      "sha256": "bba769f927da5f1c8a7c66560b076d66dd0304e9135871568ea76e5d0eaea998"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_1Faults_Fault3.xlsx",
+      "sha256": "a8fd22e562fb9cb557cb9f2412cc0322afa42f19d10d2c708083e819ed23ea43"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_2Faults_Fault1.xlsx",
+      "sha256": "9b634a5c18b200885b889599542734a9a8553a7178c1f27936c0942dfebea998"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_2Faults_Fault2.xlsx",
+      "sha256": "33174bf2ab3c8f3884d32659afa7a89ce4a0666776717db53b3566207187d13d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_2Faults_Fault3.xlsx",
+      "sha256": "be41793e3becc364538a55a6352c59f99008b5423afa867cc93ba10194f993a7"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals01_3Faults_Fault1.xlsx",
+      "sha256": "51b1894925985f7ef63b5d6d26926d222d7bfbcdc8d7b60f5b8164374814e9b6"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_1Faults_Fault1.xlsx",
+      "sha256": "58ff323cc086b1a0b16d75afc0a67e53d2f40ebcf0c25ff07f064996b2815bb0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_1Faults_Fault2.xlsx",
+      "sha256": "8a4dc7e59405b56ed3c214a6b02edf41978005b8fc5d29cd61bc46a7da38eed0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_1Faults_Fault3.xlsx",
+      "sha256": "6a1cb721e99d8e7a55845c3b06b5aabeafaf7dc8349608b24c9dce11ebfd159d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_2Faults_Fault1.xlsx",
+      "sha256": "42a798e47a8eb74fb5e80390580c4273e69d0cdd9692e06d445dd13f9a67f4df"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_2Faults_Fault2.xlsx",
+      "sha256": "e05e7371a7ededb963ac364ac51458836aeb886a6244b69bc382044b2cf6440f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_2Faults_Fault3.xlsx",
+      "sha256": "b150137e7355484f1f9516fae50bbff3b0d9b190547bf41990254973ff415c95"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_conditionals02_3Faults_Fault1.xlsx",
+      "sha256": "f2eb8e0afc22c647f6c181578993eed5600b6dafbd3beedd4a3d14a07fd47c02"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_dice_rolling_1Faults_Fault1.xlsx",
+      "sha256": "21c889155981e24ae124283bc6d77ea568797bb77f826164248ff18c9876c2e3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_dice_rolling_2Faults_Fault1.xlsx",
+      "sha256": "fe98ddff19f4554b8296f8a8c64c42d60df6c3473dedf69031eb714c9674c4f6"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_dice_rolling_2Faults_Fault2.xlsx",
+      "sha256": "1de06ac43dbf4b6df2a268a46e71586ba28e43488405700cb6b72bf75a674509"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_dice_rolling_2Faults_Fault3.xlsx",
+      "sha256": "edd130b98bd887d2b2e3069bc2ed8c21c53226666572b2192bce59bd992cff2a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_dice_rolling_3Faults_Fault1.xlsx",
+      "sha256": "b3b0a47314cb1d2d61f794c9b647b5a233dfd13fdab22dc9770daccace7ff445"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_1Faults_Fault1.xlsx",
+      "sha256": "12050122e25eb3a0801db6bf58e240646816e4847d27b89068928a730b70d8cd"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_1Faults_Fault2.xlsx",
+      "sha256": "5e5659175660fe12d5447435ee76c95e326576c1cf731739b06e5309b471e5c3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_1Faults_Fault3.xlsx",
+      "sha256": "2a2107d27a53b2cea7986d1dced80f04f53db57256b6973087a9da3784dc8fa2"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_1Faults_Fault4.xlsx",
+      "sha256": "0e411d474dbbc5b7249a501a51da245021329d7a24f29997c277b44e117b24bf"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_1Faults_Fault5.xlsx",
+      "sha256": "f89c534325082aec948b5c9b058d7568b24caaf981bc4ac26a8b629896a7497f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_2Faults_Fault1.xlsx",
+      "sha256": "8118dad467a6bcdd5f121d51c45b2a313966e8e78fc10df9fadeb0cf5a226c9f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_2Faults_Fault2.xlsx",
+      "sha256": "f6bcab2205169b75cf6ae73dffcbae0eb670e17809b341bca72963adbf1d52fe"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_2Faults_Fault3.xlsx",
+      "sha256": "9280e6a78eeacb333ffa92da1f3faa4b00c96502f391b2e087aad545175479d1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_energy_3Faults_Fault1.xlsx",
+      "sha256": "ad086bcc2c9f29f697f4c94ecfab8c02c97d923c25e554b748be17ab8f2f0296"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_1Faults_Fault1.xlsx",
+      "sha256": "c6b635219c9eb63813cb6155e5a55707f79292ef50a4b4eed2de4e5ba78a54d0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_1Faults_Fault2.xlsx",
+      "sha256": "ef3f79be43de54eea078b0a34f00d9cfeca81a344eb7d6c58c412a01f0117b1a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_1Faults_Fault3.xlsx",
+      "sha256": "0edde1d68e79a232e14e7d74d52fd43228f180c49758d1155769d3e6d90d39eb"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_2Faults_Fault1.xlsx",
+      "sha256": "3e83ae2100f20d755c9e3611749a29307ce97b0c5af86963fb0da789a38e734c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_2Faults_Fault2.xlsx",
+      "sha256": "0569f39f16ede61fe93ca495f06f1e01b065eafb1f147933da89be2768422f33"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_2Faults_Fault3.xlsx",
+      "sha256": "76c8d5cc4b829ec049e7603666e445a71fee92f41ade5e092a8c53b24d272a6c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_3Faults_Fault1.xlsx",
+      "sha256": "839a84f86b6a9782acc892d00cdbb1290831a86c4ca37d18839489eccb27a7c4"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_1Faults_Fault1.xlsx",
+      "sha256": "5e2d4eefe5af5203bc78df330cdac926795c2ed8e3fb9cfb243f62d34bfc5c0e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_1Faults_Fault2.xlsx",
+      "sha256": "09d42649743b86388e84928d3a5b1aff03abd8a85458272c1603519b497f117b"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_1Faults_Fault3.xlsx",
+      "sha256": "11f5dd7383aae0b7c62f60ecd8e8f0d6a6a08851ea7e463e586b590cafc19be2"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_2Faults_Fault1.xlsx",
+      "sha256": "3fdc561012f75733df526e5e4889119198ad4e90818dacfd6079fd875e07672d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_2Faults_Fault2.xlsx",
+      "sha256": "7a69eef813686bc07192be6a539759cbb73a07a4612201d23305847bedb27473"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_2Faults_Fault3.xlsx",
+      "sha256": "aa0448b612e47b9ee4e47e10fa2f30929056f040078540239f88a636aa203ec3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_euclidean_algorithm_small_3Faults_Fault1.xlsx",
+      "sha256": "df545d56ef9d18df47e856ed288fed8710a590ea496883ad2eef77fa09be53b1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_1Faults_Fault1.xlsx",
+      "sha256": "ce98b22847e00cd69cc5d67a726fa3e84c9d5704a8e1e1e37ca7435fbe8166f4"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_1Faults_Fault2.xlsx",
+      "sha256": "d08cbac05c3e7729c583119efcae7750e36289b800af01eee1079eca0a1b7506"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_1Faults_Fault3.xlsx",
+      "sha256": "d970623dc4f0a485f66650e810752505d583cdc00a41c3cd7521d3fcc216dcdc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_2Faults_Fault1.xlsx",
+      "sha256": "2348116b27a1b30345506e88192ee3c6de95790f57deb536aec199480e4162b1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_2Faults_Fault2.xlsx",
+      "sha256": "cc27d646f1f7481aa82080f429d92581121a9c66366aa0fc71585c8df8cf7ef6"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_2Faults_Fault3.xlsx",
+      "sha256": "4a91a338885bcf87c7f5639a47a3d4e6887d7db6e40703099ab0741b4dc2d95d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_fibonacci_3Faults_Fault1.xlsx",
+      "sha256": "aa79d1bc5297bbde76d2f59d27ee793823c02bd239fbae2dd94220c0eda17b7c"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_matrix_1Faults_Fault1.xlsx",
+      "sha256": "4aab14a8f2eae211cc6a54d0cdc87a57cbdd73a7de6c23b552a1fbb43f3ab329"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_matrix_1Faults_Fault2.xlsx",
+      "sha256": "c5b12caa90c8593c78447f8b549e865f240b5ca531efc633a404f95dc26eba7f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_matrix_2Faults_Fault1.xlsx",
+      "sha256": "ebeb1718443f9d6b5e02be9d59d9eed0f7920a89c44d2fe06e17d04a41c56c2f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_matrix_2Faults_Fault2.xlsx",
+      "sha256": "e32475f1ff98c924fe4e9750541778eacebeae559178b8c3012536ff788d1d5d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_matrix_2Faults_Fault3.xlsx",
+      "sha256": "4da5af33776a00c98ce06f3ead02dd41454a28748f7c60a98a46ba2b27932068"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_matrix_3Faults_Fault1.xlsx",
+      "sha256": "e920949cd713bfb4b381f329ce2488ec2b23b3f239a57d8d8abb03bdb588b3f1"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_1Faults_Fault1.xlsx",
+      "sha256": "846c438ea926e785231a8454780f098b29cfb6ee8c5af62345f228059553eed4"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_1Faults_Fault2.xlsx",
+      "sha256": "3eb626f22a32fc8ada7aabb3b6141dd5aa97da7e39d9fdf3d37a032776d87449"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_1Faults_Fault3.xlsx",
+      "sha256": "6e73d7e6e68ed830e07c344b7d62a50d52396b3f259eb4b772e6572845755a01"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_1Faults_Fault4.xlsx",
+      "sha256": "77abfdcd17fe32df42236ea607c6abf33c242446dd52e79cde752264d3877b53"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_1Faults_Fault5.xlsx",
+      "sha256": "8be3f3e5e3be214d20b15864bae71c50ae7e900e2c6b36145c841b7cf62490ae"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_2Faults_Fault1.xlsx",
+      "sha256": "f4ca0635beb4c0d59e8a07b1b79fa9f019d8873e662aa5822292db15bd629eb3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_2Faults_Fault2.xlsx",
+      "sha256": "496f62d802c739ec5e0503eb81bae0240292411ebb2a01aabae1e75fb4f58a1e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_2Faults_Fault3.xlsx",
+      "sha256": "52075037f99bb7aa8be5f07467c7256c7e1a93d48487f7d3553f2f0a7ae5c031"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_oscars2012_3Faults_Fault1.xlsx",
+      "sha256": "1dbefc0b93c6970d99575367955b1e6c07fb6b2740191100a022bc405de7a41f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_parabola_1Faults_Fault1.xlsx",
+      "sha256": "d22f3d21600f2a658fb6092246a05fcf5f7bff9ffb2f21221e854992e6a48a65"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_parabola_2Faults_Fault1.xlsx",
+      "sha256": "fc04f9f2bcc0867a841e0808c250ddab94c5f0ac958a07ed318a7bcde5478a13"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_parabola_2Faults_Fault2.xlsx",
+      "sha256": "32399bd1536c7f67b5b6527958f09b2539f52436c145cdc5449b568d69d934bc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_parabola_2Faults_Fault3.xlsx",
+      "sha256": "7f8ca1a7472c54c208e4435abd5cccb3216f165551b4cb93071e3b57b8985405"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_parabola_3Faults_Fault1.xlsx",
+      "sha256": "7c8b1d3418e7d4590868eebead06892d6240cdc079ac35952bd19aa54fef1134"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_prom_calculator_1Faults_Fault1.xlsx",
+      "sha256": "0bdcb3ef76fe30935e7fd69f5569c69ceda098cb77fad85b0e945ea9a533a589"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_prom_calculator_2Faults_Fault1.xlsx",
+      "sha256": "370aee570070ccdca2f46295832814ce47ddc7c6257b7c747855c1afaa0c9a4a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_prom_calculator_2Faults_Fault2.xlsx",
+      "sha256": "b8e690516a5dd66b782d2a04a778af8506f1af1885fe7c5c24d0c6b6decda9b3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_prom_calculator_2Faults_Fault3.xlsx",
+      "sha256": "8a358ea866e2f19b57f26988031d76cc9f2f323bdcad8e42a6b49e08cf25d9f2"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_prom_calculator_3Faults_Fault1.xlsx",
+      "sha256": "6178c8b09f593049c3cf8b5b398b5957fd60ec8c8127c2db717a68798722d8c5"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_ranking_1Faults_Fault1.xlsx",
+      "sha256": "0dbe75702a91b0c5f1b23d2dc1d74657579b16c933e32068859589d277edd5c5"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_ranking_1Faults_Fault2.xlsx",
+      "sha256": "83be0b6c9a87f5e24c2ccc59f6459fac291cbbe98c41087145ca9120ea8b1ace"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_ranking_2Faults_Fault1.xlsx",
+      "sha256": "9a6e8fd84473447f283712a7bc5fbecfc24736da317fea983390f2c3e7306b0d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_ranking_2Faults_Fault2.xlsx",
+      "sha256": "cbf8b0bb769c1570a4b09bceafaa305358dc242a34b38e90e21060bc34e12517"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_ranking_2Faults_Fault3.xlsx",
+      "sha256": "f920963cf427c6b4302a9cd74fdc7c60e17774dab76456d67cecb558835d1d63"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_ranking_3Faults_Fault1.xlsx",
+      "sha256": "7b8bb8fcb33eb8ab32b8591b22a62b2fcf312bd62c9657c2df156c05891249ca"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_1Faults_Fault1.xlsx",
+      "sha256": "cc6cfca5ee2d54a6cae0090792ed5a80f3a072e8d649a1f493a759b64dd8148f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_1Faults_Fault2.xlsx",
+      "sha256": "0e3e8e1a238526856911e7b7a59759d99578aa325495b3cedf6786de27e66e73"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_1Faults_Fault3.xlsx",
+      "sha256": "b8f811b84ff06704d0bc4c3bc8317f0ab0711ed1aadc376190a2db326504387b"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_1Faults_Fault4.xlsx",
+      "sha256": "205776924ab32aae75da72038beb7694f41945e6879a466b5cf2b73c5a6239c7"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_1Faults_Fault5.xlsx",
+      "sha256": "3f8d8419dfa85d7c8d6498b91f8ef94f68b8a36ed63a92f9ed5f4fff2c0f8362"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_2Faults_Fault1.xlsx",
+      "sha256": "e73a8a353e9abced17d1e404e347a4d52b9cf21866b425c010e4782cb21df053"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_2Faults_Fault2.xlsx",
+      "sha256": "ed21b62674a336cab08e94867cc9d73cf845abad5697cb9266e9eb1ac1e64993"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_2Faults_Fault3.xlsx",
+      "sha256": "6b08724047b4ea19f3caf075269b96b55428fce79035103b49cde86954a1b768"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shares_3Faults_Fault1.xlsx",
+      "sha256": "88b59b062cbfc3eb3f00d9df001aad1eaf6796a98e61f0cd4aad62d166df70f7"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom1_1Faults_Fault1.xlsx",
+      "sha256": "6c1fb5a5d1b2fa0ba89bbff113a56f56af3260befd40576bfff89e7ccd1992f9"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom1_1Faults_Fault2.xlsx",
+      "sha256": "df13af6827bab4c03b3488b5586600de2b7eb49dd89a22eff3971737445c6429"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom1_2Faults_Fault1.xlsx",
+      "sha256": "a21576dd17479ffb3ecf6836850b4ebf42057adc917b5f34e783120a6429b378"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom1_2Faults_Fault2.xlsx",
+      "sha256": "47e8c3fa3a2432db05ed4889b77d17c0da5f1bae85895618b202a6937cb16743"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom1_2Faults_Fault3.xlsx",
+      "sha256": "500043c070910c22908497cdbcc514ac8efa32e6393ed77ba55cdc328c34d222"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom1_3Faults_Fault1.xlsx",
+      "sha256": "bb09d60173cc313b6cd30bbece2c9b6448eb2e22c3bb75f10456e08c2f20fcc3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_1Faults_Fault1.xlsx",
+      "sha256": "f07e76066be5af2e3308efa48fba3565731ed3ffd205deae0a87abb82ded278e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_1Faults_Fault2.xlsx",
+      "sha256": "b5414c7f1b12894614440da0dc85691f842b8fbc3d2e9e4eb822a7f38f6c4c7f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_1Faults_Fault3.xlsx",
+      "sha256": "13533bc428500f4f4cf0747e1ffba38062ca84de35fa34d17a9a3a9b42fa3f8e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_1Faults_Fault4.xlsx",
+      "sha256": "3a6c9052d67b979ea595bc6117b1d910b2ad95338dd401b398fffe5cc52ef35d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_1Faults_Fault5.xlsx",
+      "sha256": "7e0ae1cebda5b519d8e0807f9c550a9cbe3c217370329b0c216f614533eedebc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_2Faults_Fault1.xlsx",
+      "sha256": "3a1535608be432fe9cde409a5ea626f29849a6eb84d059bee150b8af1a111aec"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_2Faults_Fault2.xlsx",
+      "sha256": "837a36c5133612f5c12a9d895fb2b3b35ce4b8d30cfc30fa06968946655a98c5"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_2Faults_Fault3.xlsx",
+      "sha256": "6e4db7b03e555b6235feb726d50f24cd40f5a6b3ae96f76c34241f63225aea3f"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_shopping_bedroom2_3Faults_Fault1.xlsx",
+      "sha256": "a016b376764452a4696cd190fda5354db712cc7640185d3be61cb0267c2883cc"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_1Faults_Fault1.xlsx",
+      "sha256": "6c432b9e6ff61c6bb100977945756b18247109ed394e14b5aee68e507b1b13a3"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_1Faults_Fault2.xlsx",
+      "sha256": "f96c658195403d1717b90c22953d4b8fa94314d978e342a429989b43985309b2"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_1Faults_Fault3.xlsx",
+      "sha256": "69b2cd0360e4124a19e499e59f07e1e5a9ab5b39f59dfecbee103cf987721be0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_1Faults_Fault4.xlsx",
+      "sha256": "8befad2cc661687d85dd337c5ba43d1f8c11cecd6938ed8a7a9d31148caa2a09"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_1Faults_Fault5.xlsx",
+      "sha256": "9a10d3ec547f79a5ce0158087e698c68b466732eae0ab2eed7b2c7041aefb8e8"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_2Faults_Fault1.xlsx",
+      "sha256": "2dbb7d6e484a39968987dd8aa016b5cce5d8b1c0a9b7a2f143bb78ea33faed4e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_2Faults_Fault2.xlsx",
+      "sha256": "69500110cac157c5a437e3c58979e4552eb3369df7390be535561c5097ae3b0d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_2Faults_Fault3.xlsx",
+      "sha256": "757fbdf8bc39bbde73476c0af6044b71edfca904ad44e2c42bc203ea475ec3d9"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_training_3Faults_Fault1.xlsx",
+      "sha256": "c3768b18fd1fb2a978db765c50efca4c645be25208e0d7e251054f6c00173f3e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_1Faults_Fault1.xlsx",
+      "sha256": "60b8449e41cd2f7106390b620c913e74f65fc4b5d18d58d57c615027d8d8a052"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_1Faults_Fault2.xlsx",
+      "sha256": "0f3a8959d4c08ff52670feaf543e9218a920bebc8642ddf67d520a81044194db"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_1Faults_Fault3.xlsx",
+      "sha256": "976f2ca4f8bdfccf1c795b7b1b5fb970e4088e4d1f67eeacea22b3a77a04221a"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_1Faults_Fault4.xlsx",
+      "sha256": "dde0037640d5621b6c0e81a4f04f04d043474a2dca4558805b002d9f878d44f0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_2Faults_Fault1.xlsx",
+      "sha256": "1e8335664ccb26d4cede27e75fcefcd18e6396fc2e5a95465275380968e57d0e"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_2Faults_Fault2.xlsx",
+      "sha256": "5e1fd34f04ea48413e113727d0050eb64f29bcab46e515e4bc3730d78dc99d93"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_2Faults_Fault3.xlsx",
+      "sha256": "b616e742736b31e5ba70ec53bf070de407632d0a6de266eff05e6b02420511ef"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_weather_3Faults_Fault1.xlsx",
+      "sha256": "b39a7e5cb17039b96a46f0a53b70ddf2cf30fd621c7bee206e7f3c2c478a0a63"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_1Faults_Fault1.xlsx",
+      "sha256": "f5d3274a97196c08c906585240da746003af06f48caf9a766e2a419615012b89"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_1Faults_Fault2.xlsx",
+      "sha256": "a1d4bfa202d888d8d3ff73044c263073a9a9f4662c499745a4b3a8260575aef8"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_1Faults_Fault3.xlsx",
+      "sha256": "149eacc7e784f53c864d08af59f568dd08d47c2d6b50523ff7d758609a8541ff"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_2Faults_Fault1.xlsx",
+      "sha256": "b0392708b3ee0509f5ab831583c0f60d76a2eafe03bd8520911c882d155fbae6"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_2Faults_Fault2.xlsx",
+      "sha256": "b82f58582e76d024aa31cd996e8fbc79e958ead8164414cb53f0cf5295c9c823"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_2Faults_Fault3.xlsx",
+      "sha256": "e0055c818dddf930649b2e817c37f20e3ae4653c6f1085564893571b277201b0"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/fromAFW/SEEDED/AFW_wimbledon2012_3Faults_Fault1.xlsx",
+      "sha256": "b4941d2a9e5a0422c9765bf6fb0e2fabab34f80399edde36ce117ea807f7ba8d"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/others/SEEDED/If_example_Fault1.xlsx",
+      "sha256": "07e230be0d22cede6d1ca7da61f56cf24d76488743d21eec3a458c773bd67efb"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/others/SEEDED/If_example_Fault2.xlsx",
+      "sha256": "b305bcb5a580580061f64e571f3845992782cc5737e32cf4152870946078fabd"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/others/SEEDED/If_example_Fault3.xlsx",
+      "sha256": "edbef9827f9bedf30e754ea376d401d66fe7fa08b12df062a1f003e12b2d771b"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/others/SEEDED/If_example_Fault4.xlsx",
+      "sha256": "1cf3280bf5067d764aed3393ab1798ee706018363632bd0145d5a47811f03766"
+    },
+    {
+      "relative_path": "INTEGER/spreadsheets/others/SEEDED/If_example_Fault5.xlsx",
+      "sha256": "016810e7de5b3693bc241e54f943ce6bef714bda0247fea343891efe1eb9c34e"
+    }
+  ],
+  "label_files_read_during_prediction": [],
+  "license": "CC BY 4.0 (record metadata)",
+  "manifest_sha256": "8f14214062aa01399b62eac4c01eed3465c2d6d4018fd3337d5bb27bc2e14d19",
+  "paper_adapter_sha256": "286e01533e43572ddb67b4b40256d32beda06f65c502ecf81ec74ec070fbffb3",
+  "parallel_sheets": [],
+  "prediction_adapter_sha256": "3158296c2db3a6d453eb33666ef47e5f2522c80550d3a9fb1c1ad886693b76e3",
+  "preregistration_sha256": "118230e4fea5b41baeebc1fcd16129d0c6f655063e1ba789c4f9e4d665c6617c",
+  "record_url": "https://doi.org/10.5281/zenodo.581672",
+  "schema": "hybridguard-faultsfw-input-lock-v1",
+  "scope": "all xlsx filenames containing fault under SEEDED extraction; no label/config files read"
+}

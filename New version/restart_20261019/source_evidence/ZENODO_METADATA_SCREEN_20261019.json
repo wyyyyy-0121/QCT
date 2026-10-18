@@ -1,0 +1,78 @@
+{
+  "schema": "hybridguard-source-metadata-screen-v1",
+  "retrieved_at_utc": "2026-10-18T21:07:23Z",
+  "scope": "metadata-only; no workbook body acquired or inspected",
+  "zenodo_api": {
+    "4091366": {
+      "url": "https://zenodo.org/api/records/4091366",
+      "response_sha256": "9103ddf685997228843302694fdaee91cfa88f08db971a25ed24de56fc88b897",
+      "doi": "10.5281/zenodo.4091366",
+      "concept_doi": "10.5281/zenodo.3929150",
+      "title": "Survey data, models and dated samples of the Pliocene shorelines of Camarones, Argentina (Ver 1.1).",
+      "version": "1.1",
+      "license": "CC BY 4.0",
+      "description_evidence": "Version 1.1 contains fixes to small errors and formulas.",
+      "files": [
+        "Argentina_Camarones.xlsx",
+        "Argentina_Camarones_v1.1.xlsx"
+      ],
+      "disposition": "candidate; author metadata supports a formula-correction lead, but does not identify corrected cells or prove pair semantics"
+    },
+    "6594745": {
+      "url": "https://zenodo.org/api/records/6594745",
+      "response_sha256": "82c73d18b4d52ba5f0d97a3e378590b4428c0da27fab5008b44f38b37a9454bb",
+      "doi": "10.5281/zenodo.6594745",
+      "concept_doi": "10.5281/zenodo.800557",
+      "title": "CAESAR-Lisflood existing applications parameter listings - Updated May 2022",
+      "license": "CC BY 4.0",
+      "description_evidence": "Parameter listing; may contain omissions or errors and should be used as a guide.",
+      "files": [
+        "CL model parameter sets May 2017.xlsx",
+        "CL model parameter sets May 2022 updated.xlsx"
+      ],
+      "disposition": "not a formula-correction source on metadata evidence; updates and generic omissions/errors do not establish formula labels"
+    },
+    "12586563": {
+      "url": "https://zenodo.org/api/records/12586563",
+      "response_sha256": "bfc7e86d37b333a2833e942a089bb68a38ff490ee240ece9a5c646332e2ba457",
+      "doi": "10.5281/zenodo.12586563",
+      "concept_doi": "10.5281/zenodo.12586562",
+      "title": "Messy Spreadsheet Example for Instruction",
+      "license": "CC BY 4.0",
+      "files": [
+        "netflix-series-example.xlsx"
+      ],
+      "description_evidence": "Disorganized toy spreadsheet used for teaching learners to identify errors and reorganize data.",
+      "disposition": "teaching example, not a natural-error revision pair"
+    },
+    "14512695": {
+      "url": "https://zenodo.org/api/records/14512695",
+      "response_sha256": "5c1fac8aaf179918b8e9f363c1d4485de480321070f387238170a9161b290e85",
+      "doi": "10.5281/zenodo.14512695",
+      "concept_doi": "10.5281/zenodo.11228421",
+      "title": "Polarimetric Radar Signatures of Lightning Initiation Processes Imaged with VHF Broadband Interferometer",
+      "license": "CC BY 4.0",
+      "files": [
+        "20180808_SpreadSheet_Revision01.xlsx"
+      ],
+      "disposition": "one revision-named file; no original pair or correction claim identified"
+    }
+  },
+  "dataverse_api": {
+    "doi:10.7910/DVN/OQRP6B": {
+      "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/OQRP6B",
+      "response_sha256": "6000b3693fd32736339ae231907007cc0bf08a8a02249f3370abde5954be6fe4",
+      "title": "Benninga 4th edition - Chap 6 pro forma model of CAT without formula errors",
+      "release_date": "2018-12-08",
+      "version": "1.0",
+      "license": "CC0 1.0",
+      "file": "Benninga 4th edition - Chap 6 pro forma model of CAT without formula errors.xlsx",
+      "disposition": "clean-control candidate only; not an error source or correction pair"
+    }
+  },
+  "qualification_counts": {
+    "new_qualified_natural_sources": 0,
+    "new_qualified_template_families": 0,
+    "candidate_for_followup": 1
+  }
+}
