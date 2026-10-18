@@ -24,9 +24,9 @@
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "Develop complete typed string-formula parsing and reference provenance with explicit unsupported handling; preserve original paper parser unchanged",
-    "Study repair only under visible, auditable record rules; keep legitimate cross-row associations as negative controls and do not give source answer formulas to inference",
-    "Verify source-isolated development behaviour and all old regressions before adopting any new model; final three-category double-90 and 6-new-source/15-family acceptance unchanged"
+    "Complete preregistered v2 boolean-concatenation rejection and independent reference audit, preserving v1 mismatch",
+    "Study repair under visible auditable record rules with legitimate cross-row, absent-rule and misleading-rule controls; do not hardcode cv500 answer",
+    "Verify source-isolated development and old regressions before adoption; final three-category double-90 and six-new-source/fifteen-family acceptance unchanged"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -48,14 +48,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 259,
+  "unit_test_count": 268,
   "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV27_NATURAL_PAIRS_REPORT_20261018.md",
+  "latest_report": "DEV28_STRING_EXECUTION_REPORT_20261018.md",
   "dev21_relative_learning": {
     "run": "development/relative_learning_dev21_v1",
     "report": "DEV21_RELATIVE_LEARNING_REPORT_20261018.md",
@@ -242,7 +242,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev27 reliable 505-cell natural-error development evidence and independent audits; remote verification follows",
+  "new_work_pushed_scope": "dev28 v1 complete execution, explicit hard recalculation, retained independent smoke mismatch, and v2 preregistration",
   "latest_verified_experiment_remote_commit": "80407a9",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -1267,5 +1267,25 @@
     "accepted_final_families": 0,
     "main_candidate_changed": false,
     "verification": "qa/NATURAL_PAIRS_DEV27_VERIFICATION_20261018.json"
+  },
+  "dev28_string_execution": {
+    "phase": "v1 executed and independent hard recalculation audited; boolean smoke mismatch retained; v2 preregistered",
+    "report": "DEV28_STRING_EXECUTION_REPORT_20261018.md",
+    "run": "development/string_execution_dev28_v1",
+    "formula_cells": 1003,
+    "executed": 505,
+    "unsupported": 498,
+    "cv500_hard_recalculation_agreements": 505,
+    "cv500_hard_recalculation_compared": 505,
+    "smoke_cells": 24,
+    "smoke_executed": 18,
+    "smoke_agreements": 17,
+    "smoke_unsupported": 6,
+    "v1_independent_smoke_fully_passed": false,
+    "boolean_reference_semantics_unresolved": true,
+    "tests_passed": 268,
+    "main_candidate_changed": false,
+    "performance_improvement_established": false,
+    "final_validation_eligible": false
   }
 }

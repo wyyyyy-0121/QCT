@@ -1,0 +1,9 @@
+DEV28 hard calculateAll exact agreement 505 / 505
+DEV28 independent smoke 17 / 18 executed; 6 retained unsupported
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/hard_reference_string_execution_dev28.py", line 198, in <module>
+    main()
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/hard_reference_string_execution_dev28.py", line 194, in main
+    assert small['agreements'] == small['executed'] == 18 and small['unsupported'] == 6
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/libreoffice",
+    "-env:UserInstallation=file:///home/ayaka/hybridguard/New%20version/followup_20261014/development/string_execution_dev28_v1/local/lo-profile",
+    "--headless",
+    "--convert-to",
+    "xlsx",
+    "--outdir",
+    "/home/ayaka/hybridguard/New version/followup_20261014/development/string_execution_dev28_v1/local/reference",
+    "/home/ayaka/hybridguard/New version/followup_20261014/development/natural_cv500_dev27_v1/raw/before.xlsx"
+  ],
+  "source_sha256": "b6cdb872bc8aca288c1606ea10eacad9c4095e9983b374164f3b2478b2b71d4f",
+  "status": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "convert /home/ayaka/hybridguard/New version/followup_20261014/development/natural_cv500_dev27_v1/raw/before.xlsx as a Calc document -> /home/ayaka/hybridguard/New version/followup_20261014/development/string_execution_dev28_v1/local/reference/before.xlsx using filter : Calc Office Open XML\n",
+    "wall_seconds": 5.729394686000887
+  }
+}
