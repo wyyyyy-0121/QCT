@@ -83,6 +83,22 @@ def refit():
          'heldout_labels_read':[],'training_labels_read':sorted(reads),'accesses':sorted(accesses),
          'wall_seconds':time.perf_counter()-wall,'prediction_lock_sha256':sha(RUN/'prediction_lock.json')})
 
+def feature_replay():
+    from build_candidates_dev18 import case_features,OLD,protection
+    verify();active,accesses=protection();names=read(OLD/'feature_schema.json')['names']
+    wall=time.perf_counter();count=candidates=0
+    for item in read(DATA/'public_index.json'):
+        payload,schema=case_features(item,names)
+        assert schema==read(DATA/'feature_schema.json')['names']
+        assert payload==read(DATA/'features'/(item['case'].replace('/','__')+'.json.gz')),item['case']
+        count+=1;candidates+=len(payload['candidates'])
+        print('feature replay',item['case'],flush=True)
+    active[0]=False
+    path=ROOT/'qa/CANDIDATE_LEARNING_DEV18_FEATURE_REPLAY_20261018.json';assert not path.exists()
+    save(path,{'cases':count,'candidates':candidates,'all_features_candidates_and_baselines_identical':True,
+         'labels_read':[],'accesses':sorted(accesses),'wall_seconds':time.perf_counter()-wall,
+         'feature_lock_sha256':sha(DATA/'feature_lock.json')})
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('mode',choices=['recount','refit']);a=p.parse_args()
-    {'recount':recount,'refit':refit}[a.mode]()
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=['recount','refit','feature_replay']);a=p.parse_args()
+    {'recount':recount,'refit':refit,'feature_replay':feature_replay}[a.mode]()

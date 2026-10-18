@@ -133,6 +133,7 @@ def verify():
     for rel,v in read(RUN/'source_lock.json')['files'].items(): assert sha(ROOT/rel)==v,rel
     for rel,v in lock['files'].items(): assert sha(RUN/rel)==v,rel
     for n in ['feature_lock','label_preparation_lock','fold_index']: assert sha(DATA/(n+'.json'))==lock[n+'_sha256']
+    for rel,v in read(DATA/'label_preparation_lock.json')['upstream_labels'].items(): assert sha(ROOT/rel)==v,rel
     assert lock['heldout_labels_read']==[]
 
 def score():

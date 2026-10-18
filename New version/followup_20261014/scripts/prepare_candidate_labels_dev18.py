@@ -22,6 +22,9 @@ def prepare():
     if (DATA/'label_preparation_lock.json').exists(): raise SystemExit('Preserve labels')
     lock = read(DATA/'feature_lock.json')
     for rel, digest in lock['files'].items(): assert sha(DATA/rel) == digest
+    public_data = ROOT/'development/multisource_dev17_inputs_v1'
+    for parent, name in [(OLD, 'label_preparation_lock.json'), (public_data, 'preparation_lock.json')]:
+        for rel, digest in read(parent/name)['files'].items(): assert sha(parent/rel) == digest, rel
     old = read(OLD/'heldout_truth.json.gz')['cases']
     public = {t['id']:t for t in read(ROOT/'development/multisource_dev17_inputs_v1/truth.json')['cases']}
     cases = {}; duplicate = defaultdict(list); files = {}; summaries = []
@@ -69,6 +72,8 @@ def prepare():
     save(DATA/'label_counts.json', summaries)
     for n in ['fold_index.json', 'heldout_truth.json.gz', 'label_counts.json']: files[n] = sha(DATA/n)
     save(DATA/'label_preparation_lock.json', {'files':files, 'feature_lock_sha256':sha(DATA/'feature_lock.json'),
+         'upstream_labels':{str(p.relative_to(ROOT)):sha(p) for p in [OLD/'heldout_truth.json.gz',
+             OLD/'label_preparation_lock.json', public_data/'truth.json', public_data/'preparation_lock.json']},
          'author_sources':{str(p.relative_to(ROOT)):sha(p) for p in [Path(__file__), ROOT/'scripts/product_sum_oracle_dev17.py']}})
     print('DEV18 LABELS LOCKED', len(cases), len(folds), flush=True)
 
