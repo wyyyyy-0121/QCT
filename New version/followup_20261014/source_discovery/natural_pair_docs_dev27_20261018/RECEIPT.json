@@ -1,0 +1,26 @@
+{
+  "role": "License/provenance documents only; no workbook bodies",
+  "records": [
+    {
+      "name": "ldas_license",
+      "repo": "Gh0st0ne/LDAS",
+      "url": "https://api.github.com/repos/Gh0st0ne/LDAS/git/blobs/0660bea9e0f10b067382dc1b88c83011abd1f6c6",
+      "expected_git_blob": "0660bea9e0f10b067382dc1b88c83011abd1f6c6",
+      "ok": true,
+      "status": 200,
+      "path": "source_discovery/natural_pair_docs_dev27_20261018/ldas_license.txt",
+      "sha256": "23ce6fa772c356924fcb89771f4e5d800fb1f24a9b4dc865461ad4b5393f3076"
+    },
+    {
+      "name": "cv500_data_readme",
+      "repo": "mirontoli/cv-500",
+      "url": "https://api.github.com/repos/mirontoli/cv-500/git/blobs/4fee0efbf131c9e59a599296ccdeefa9d92b4427",
+      "expected_git_blob": "4fee0efbf131c9e59a599296ccdeefa9d92b4427",
+      "ok": true,
+      "status": 200,
+      "path": "source_discovery/natural_pair_docs_dev27_20261018/cv500_data_readme.txt",
+      "sha256": "37181de91868bc70b3989b6c5ae69ebd21820b271963efbf1604772f79f04954"
+    }
+  ],
+  "workbook_bodies_acquired": false
+}
