@@ -1,0 +1,54 @@
+building dev24 source__18f absolute 813390
+fitting dev24 source__18f absolute (813390, 356) 2316534720
+trained dev24 source__18f absolute {'arm': 'absolute', 'rows': 813390, 'positive': 25561, 'negative': 787829, 'source_weight_sums': {'authored_development': 203347.4999999994, 'iowa_state_agdm': 203347.49999999974, 'packt': 203347.49999999977, 'uk_government': 203347.49999999974}, 'class_weight_sums': [576158.8525194512, 237231.1474805475], 'selection_sha256': '92dd4c67857d7ee96f23c7d3d44abdf422247df68b1b625c5a57b7a8ebbafa8b', 'features': 356, 'training_matrix_sha256': 'cff3eb4d12edb783342312c442e06d216f8e7c63fc018c443c27c1e0c8ab1f10', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building dev24 source__18f relative 1578022
+fitting dev24 source__18f relative (1578022, 712) 8988413312
+trained dev24 source__18f relative {'arm': 'relative', 'rows': 1578022, 'positive': 789011, 'negative': 789011, 'source_weight_sums': {'authored_development': 394505.49999999936, 'iowa_state_agdm': 394505.4999999994, 'packt': 394505.4999999995, 'uk_government': 394505.4999999994}, 'class_weight_sums': [789011.0000000014, 789011.0000000014], 'selection_sha256': '3607296a70d5a3d2b23acf8a6a8c79b66c17c8a12ecaac77c7a5d07472262b0e', 'features': 712, 'training_matrix_sha256': '1045bc364cab6afa56f5a8b2181a74349d935dfafe4bd80513f3f5fab0a1335c', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building dev24 source__authored_development absolute 22295
+fitting dev24 source__authored_development absolute (22295, 356) 63496160
+trained dev24 source__authored_development absolute {'arm': 'absolute', 'rows': 22295, 'positive': 1905, 'negative': 20390, 'source_weight_sums': {'18f': 5573.75, 'iowa_state_agdm': 5573.75, 'packt': 5573.750000000001, 'uk_government': 5573.750000000001}, 'class_weight_sums': [14569.556118432603, 7725.4438815673975], 'selection_sha256': '59cb2dc3a4d0abc6050f425084eb975ffbeff4dde9c0564230f0396f95c8b833', 'features': 356, 'training_matrix_sha256': 'dde5d8045cb5db146883cbed57a34c1add313a9e0ffd5dcaa0691de4a8e01187', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 14213, 'learned_only': 0, 'keep_base_plus_learned': 14213, 'learned_unfiltered': 0}
+building dev24 source__authored_development relative 41780
+fitting dev24 source__authored_development relative (41780, 712) 237978880
+trained dev24 source__authored_development relative {'arm': 'relative', 'rows': 41780, 'positive': 20890, 'negative': 20890, 'source_weight_sums': {'18f': 10445.0, 'iowa_state_agdm': 10445.0, 'packt': 10445.0, 'uk_government': 10445.000000000002}, 'class_weight_sums': [20890.0, 20890.0], 'selection_sha256': '57f2f40ebdbd80861cb8f64b3ec233b0fa39bf809fe9f93688370f37fd2c54d1', 'features': 712, 'training_matrix_sha256': '1d23a6df33a060ab567f6c0e82645abe3960bced37cd42065781172da4e29fc4', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 14213, 'learned_only': 0, 'keep_base_plus_learned': 14213, 'learned_unfiltered': 0}
+building dev24 source__iowa_state_agdm absolute 810726
+fitting dev24 source__iowa_state_agdm absolute (810726, 356) 2308947648
+trained dev24 source__iowa_state_agdm absolute {'arm': 'absolute', 'rows': 810726, 'positive': 24842, 'negative': 785884, 'source_weight_sums': {'18f': 202681.49999999983, 'authored_development': 202681.49999999965, 'packt': 202681.49999999985, 'uk_government': 202681.49999999983}, 'class_weight_sums': [565620.2467665882, 245105.7532334105], 'selection_sha256': '047ba8c787881c01b758aea0f7aef6ca01fd2c5c2a647ff6803751d9ac39226d', 'features': 356, 'training_matrix_sha256': '979cd03f297f2891c5fb8ad4ee0208ae32aa1c814f8c38e7303487ca30e48989', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 358, 'keep_base_plus_learned': 358, 'learned_unfiltered': 358}
+building dev24 source__iowa_state_agdm relative 1573112
+fitting dev24 source__iowa_state_agdm relative (1573112, 712) 8960445952
+trained dev24 source__iowa_state_agdm relative {'arm': 'relative', 'rows': 1573112, 'positive': 786556, 'negative': 786556, 'source_weight_sums': {'18f': 393277.99999999953, 'authored_development': 393278.0000000009, 'packt': 393277.9999999995, 'uk_government': 393277.9999999995}, 'class_weight_sums': [786555.9999999986, 786555.9999999986], 'selection_sha256': '41a46e90a321d5497c14de982d55d3fd7cd0752ac9400782944d940ca4a0c1df', 'features': 712, 'training_matrix_sha256': '912f8118ad919d14a81ecb409b37aaaf8a7da1283237ea3dd23a31bdb8a90a2a', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 25, 'keep_base_plus_learned': 25, 'learned_unfiltered': 25}
+building dev24 source__packt absolute 813849
+fitting dev24 source__packt absolute (813849, 356) 2317841952
+trained dev24 source__packt absolute {'arm': 'absolute', 'rows': 813849, 'positive': 25668, 'negative': 788181, 'source_weight_sums': {'18f': 203462.24999999985, 'authored_development': 203462.24999999988, 'iowa_state_agdm': 203462.2499999998, 'uk_government': 203462.24999999983}, 'class_weight_sums': [679959.5211864718, 133889.4788135275], 'selection_sha256': '7abbb2186214a68267d4cf7922a826f21d35980b2b0ccc42fee31c840e679541', 'features': 356, 'training_matrix_sha256': '56d9083d67a44cc02b50799c941c3e9b5f0ddafe661878eb723892f5e1ae6f42', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building dev24 source__packt relative 1579188
+fitting dev24 source__packt relative (1579188, 712) 8995054848
+trained dev24 source__packt relative {'arm': 'relative', 'rows': 1579188, 'positive': 789594, 'negative': 789594, 'source_weight_sums': {'18f': 394796.9999999994, 'authored_development': 394796.9999999992, 'iowa_state_agdm': 394796.99999999936, 'uk_government': 394796.9999999993}, 'class_weight_sums': [789593.9999999974, 789593.9999999974], 'selection_sha256': '92b21a54f581074bb1bece4dbbadbd630f8618678234cca195b95a7fab0916a2', 'features': 712, 'training_matrix_sha256': '72b10b57b70a8c075c2c6f43ee35cf625942a97df3bff46a137a389edcefede5', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building dev24 source__uk_government absolute 795336
+fitting dev24 source__uk_government absolute (795336, 356) 2265116928
+trained dev24 source__uk_government absolute {'arm': 'absolute', 'rows': 795336, 'positive': 24856, 'negative': 770480, 'source_weight_sums': {'18f': 198833.99999999977, 'authored_development': 198833.99999999974, 'iowa_state_agdm': 198833.99999999974, 'packt': 198833.9999999997}, 'class_weight_sums': [514546.1816938258, 280789.8183061725], 'selection_sha256': '3e67cde3aec65066aa0a9b4acaf9bcd824a3954419c2fe4ac410ec4603896b85', 'features': 356, 'training_matrix_sha256': '77e23927633cc9701485d870d5bc152241f4bae56589ca5dbc2212f2b9b9c498', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building dev24 source__uk_government relative 1544970
+fitting dev24 source__uk_government relative (1544970, 712) 8800149120
+trained dev24 source__uk_government relative {'arm': 'relative', 'rows': 1544970, 'positive': 772485, 'negative': 772485, 'source_weight_sums': {'18f': 386242.49999999936, 'authored_development': 386242.4999999992, 'iowa_state_agdm': 386242.4999999994, 'packt': 386242.4999999994}, 'class_weight_sums': [772485.0000000002, 772485.0000000002], 'selection_sha256': 'ae10fab9509b3c2de400ef5e42a451d0c363bdf3f0a10b480989faee0478b220', 'features': 712, 'training_matrix_sha256': 'afd0185b429656450b9198093b7ff56f3ff21263a2832ad01944eeae1ba465d0', 'storage': 'float64 mmap from frozen float32 features'} {'dev11': 0, 'learned_only': 53, 'keep_base_plus_learned': 53, 'learned_unfiltered': 85}
+DEV24 ALL PREDICTIONS LOCKED
+	Command being timed: "/home/ayaka/hybridguard/.venv/bin/python scripts/run_absolute_selection_dev24.py predict"
+	User time (seconds): 2464.75
+	System time (seconds): 79.30
+	Percent of CPU this job got: 263%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:03.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11687092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 345608
+	Minor (reclaiming a frame) page faults: 32498929
+	Voluntary context switches: 78664
+	Involuntary context switches: 3020
+	Swaps: 0
+	File system inputs: 2184
+	File system outputs: 88399056
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
