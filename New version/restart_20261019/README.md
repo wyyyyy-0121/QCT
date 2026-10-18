@@ -2,6 +2,8 @@
 
 本目录承接用户2026-10-19确认的新研究顺序。先读[论文输入审计](PAPER_INPUT_AUDIT.md)、[历史失败复盘](FAILURE_REVIEW.md)与[研究协议](RESEARCH_PROTOCOL.md)，当前完成程度见[STATUS.md](STATUS.md)。原模型及旧实验保持只读，`/home/ayaka/code`未修改。
 
+最近完成 Enron 原作者包和 Info1 的177本全量库存审计，结果见[Enron/Info1审计](ENRON_INFO1_AUDIT_RESULTS.md)。本轮没有产生可认证的修复真值，也没有运行模型或调参；下一步继续寻找能独立核实业务真值的新来源。
+
 目前完成：原论文输入边界复核、dev32独立指标审计与拒绝采纳、dev33资格审查、真实xlsx只读推理和默认8工作进程批处理。自然开发证据来自cv-500、EPA、Tuxprogrammer/msu_ece4723三个独立来源，至少4个模板家族和3类错误机制；满足有限开发实验准入，但不等于最终验证充分或准确率达标。原模型和dev11仍冻结。首轮E1-E3结果见`E1_E3_RESULTS.md`。
 
 ## 运行单个工作簿

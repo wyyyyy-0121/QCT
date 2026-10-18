@@ -1,0 +1,44 @@
+{
+  "schema": "enron-info1-native-inventory-summary-v1",
+  "scope_workbooks": 177,
+  "inventories_complete": 177,
+  "formula_cells_by_source": {
+    "enron_author": 52377,
+    "info1": 174493
+  },
+  "roundtrip_cell_content_differences_by_source": {
+    "enron_author": 1679,
+    "info1": 232
+  },
+  "workbooks_with_roundtrip_differences_by_source": {
+    "enron_author": 15,
+    "info1": 2
+  },
+  "roundtrip_content_equal_workbooks_by_source": {
+    "enron_author": 43,
+    "info1": 117
+  },
+  "integrity_checks": {
+    "source_hash_mismatch_count": 0,
+    "source_hash_mismatches": [],
+    "missing_inventories": [],
+    "missing_converted_copies": []
+  },
+  "info1_labels": {
+    "properties_files": 119,
+    "labeled_cells": 5609,
+    "label_formula": 5157,
+    "label_value": 449,
+    "label_blank_or_missing": 3,
+    "label_ambiguous_or_unmapped_sheet": 0
+  },
+  "info1_grouping": {
+    "course_student_groups": 84,
+    "students_with_multiple_versions": 25,
+    "max_versions_per_student": 5,
+    "exact_cell_type_layout_groups": 89,
+    "exact_full_content_groups": 117,
+    "note": "Fingerprints and student ids give minimum grouping constraints, not independent template-family counts"
+  },
+  "source_pair_status": "not scored here; corrected-cell pairs must be mapped separately"
+}
