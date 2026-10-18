@@ -1,0 +1,55 @@
+regression/sparse_seed101 candidates 716
+regression/clean_101 candidates 90
+regression/sparse_seed202 candidates 1660
+regression/clean_202 candidates 90
+regression/sparse_seed303 candidates 3182
+regression/clean_303 candidates 90
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/build_candidates_dev18.py", line 136, in <module>
+    if __name__ == '__main__': build()
+                               ^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/build_candidates_dev18.py", line 111, in build
+    payload, schema = case_features(item, old_names)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/build_candidates_dev18.py", line 74, in case_features
+    expanded, meta = extend(observed[cell], pool); metadata[cell] = meta
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/candidate_expansion_dev18.py", line 27, in extend
+    result = expansion(observed)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/candidate_expansion_dev18.py", line 14, in expansion
+    return generate(formula)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 102, in generate
+    add(token.start, token.end, prefix + new.a1, 'reference_offset',
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 52, in add
+    key = structural_key(candidate)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 34, in structural_key
+    return json.dumps(encode(parse_formula(formula)), sort_keys=True, separators=(',', ':'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 31, in encode
+    if isinstance(node, Binary): return ['binary', node.op, encode(node.left), encode(node.right)]
+                                                            ^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 31, in encode
+    if isinstance(node, Binary): return ['binary', node.op, encode(node.left), encode(node.right)]
+                                                                               ^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 31, in encode
+    if isinstance(node, Binary): return ['binary', node.op, encode(node.left), encode(node.right)]
+                                                                               ^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/formula_candidates_dev1.py", line 28, in encode
+    if isinstance(node, Ref): return ['ref', node.sheet, asdict(node.address)]
+                                                         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/dataclasses.py", line 1286, in asdict
+    return _asdict_inner(obj, dict_factory)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/dataclasses.py", line 1293, in _asdict_inner
+    value = _asdict_inner(getattr(obj, f.name), dict_factory)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/dataclasses.py", line 1327, in _asdict_inner
+    return copy.deepcopy(obj)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/copy.py", line 138, in deepcopy
+    y = memo.get(d, _nil)
+        ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
