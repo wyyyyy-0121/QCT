@@ -43,6 +43,7 @@ cd '/home/ayaka/hybridguard/New version/restart_20261019'
 - `EPA_ERRATA_FOLLOWUP.md`：较早的EPA文件追索记录；后续取得的历史版本对和更新后的逐格资格以`EPA_PAIR_AUDIT.md`为准。
 - `source_evidence/NATURAL_REVISION_SEARCH.json`：3个成功查询、18个提交细查、5个含工作簿变化的提交；新增路径、删表、计算兼容错误和AI生成来源不能自动视为自然静默公式错误。
 - `source_evidence/NATURAL_REVISION_SEARCH_20261019_2.json`：4个成功查询、19个提交细查、0个含工作簿变化的提交；该轮没有新增可审计来源。
+- `source_evidence/NATURAL_REVISION_SEARCH_20261019_3.json`：Google/DDG端点超时；Crossref/OpenAlex各20个题录命中均未识别出可审核原/修订工作簿对，新增合格来源为0。原始JSON响应保存在忽略的`source_evidence/raw/source_search_20261019_3/`。
 - `SOURCE_SEARCH_REGISTER_20261019.md`：汇总GitHub、学术索引和官方目录检索回执，并逐项记录R&R、Excel Easy、NSW Treasury、StampZ、Enron和Info1候选的来源/模板/真值/许可缺口。该文档只做来源登记，不把候选当作标签或准确率数据。
 - `source_evidence/rr_followup/ACQUISITION_AUDIT.md`：PERI公开HAP包现已取得；其`RR.xls`被转换检查，R&R案例因此降为已揭示开发证据。代码证实五国排除被称为“Spreadsheet error”，但没有修订工作簿或逐格公式真值。原始文件仅留在忽略的本地`private/`目录。
 - `STAMPZ_SEMANTIC_AUDIT.md`：StampZ原/修订版98个Hue公式存在一致的+5行偏移且修订改为同行；因原表输入和结果均为空，只记公式级候选，不能计准确率、覆盖率或自然来源准入数。原件未提交且全来源排除最终验证。

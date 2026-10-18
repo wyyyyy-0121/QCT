@@ -1,0 +1,54 @@
+{
+  "search_date": "2026-10-19",
+  "queries": [
+    {
+      "provider": "Google HTML search",
+      "query": "\"spreadsheet error\" corrected workbook formula audit xlsx",
+      "status": "timeout",
+      "timeout_seconds": 20,
+      "usable_results": 0
+    },
+    {
+      "provider": "DuckDuckGo HTML search",
+      "query": "\"spreadsheet error\" corrected workbook formula audit xlsx",
+      "status": "timeout",
+      "timeout_seconds": 20,
+      "usable_results": 0
+    },
+    {
+      "provider": "Crossref works API",
+      "query": "title contains spreadsheet error formula correction",
+      "status": 200,
+      "results_saved": 20,
+      "sha256": "af037e5594aa9ac0c865556fe7880bec0e37ff601dbb7f30bdcd52b5ce5f8949"
+    },
+    {
+      "provider": "OpenAlex works API",
+      "query": "spreadsheet formula error correction",
+      "status": 200,
+      "results_saved": 20,
+      "sha256": "62c05077128703e3baa737ca0648e6601f2b3aecf2da3bba8ea1e8b380bf8feb"
+    }
+  ],
+  "leads_reviewed": [
+    {
+      "title": "Finding errors in the Enron spreadsheet corpus",
+      "doi": "10.1109/vlhcc.2016.7739679",
+      "decision": "Research about detecting errors in the corpus; the search result did not identify original/corrected workbook pairs or certified corrected formulas. Existing Enron author-archive audit remains controlling."
+    },
+    {
+      "title": "ExceLint: automatically finding spreadsheet formula errors",
+      "doi": "10.1145/3276518",
+      "decision": "Detection-method paper; no corrected public workbook pair or cell-level repair truth identified by this metadata query."
+    },
+    {
+      "title": "Electronic Spreadsheets: Inconsistencies, Errors and Discrepancies",
+      "doi": "10.57184/msj.v12i1.24",
+      "decision": "Review/article metadata only; no natural revision artifact identified."
+    }
+  ],
+  "accepted_natural_pairs": 0,
+  "accepted_final_sources": 0,
+  "raw_responses": "source_evidence/raw/source_search_20261019_3/",
+  "rule": "Publication discoverability is not evidence of a natural formula-error workbook pair. Require artifact lineage, independently supported cell truth, licensing, and template-family deduplication."
+}

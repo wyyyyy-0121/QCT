@@ -20,6 +20,7 @@
 - 追加一轮GitHub提交元数据检索：4个查询成功，检查19个提交，0个提交实际改动工作簿；没有新增可审核来源，检索回执为`source_evidence/NATURAL_REVISION_SEARCH_20261019_2.json`。此前的来源和模板家族计数不变。
 - 2026-10-19 新增`SOURCE_SEARCH_REGISTER_20261019.md`，合并记录四轮GitHub查询及OpenAlex/Crossref/GitLab、官方目录线索；对Reinhart–Rogoff、Excel Easy、NSW Treasury、StampZ、Enron、Info1给出当前证据和准入缺口。登记确认R&R仍缺可核原始/修订工作簿配对及逐格真值；Excel Easy与NSW仅是模板/控制候选，当前均未新增自然错误或最终验证来源。没有运行模型或调参。
 - R&R后续取证：PERI的HAP复现ZIP已取得并在忽略的本地目录核对。包含`RR.xls`、HAP的R代码和派生`RR-keycolumns.xlsx`；代码明确把五国排除标为“Spreadsheet error”，但没有对应的修订工作簿或具体错误公式单元格映射。`RR.xls`转换副本含20表、3,637个公式（仅作库存描述，未认证转换保真）；转换副本公式已查看，因此整个R&R案例标为已揭示开发证据，永久排除最终验证。R脚本声明代码和相关数据使用BSD-2-Clause，但原始工作簿逐文件许可范围未独立确认。归档的作者原表和Dropbox仍超时。详见`source_evidence/rr_followup/ACQUISITION_AUDIT.md`和`ACQUISITION.json`。
+- 补充学术索引检索：Google与DuckDuckGo搜索端点超时；Crossref与OpenAlex共审阅40个题录，命中ExceLint、Enron错误检测等研究，但没有新原/修订工作簿对或逐格修复真值。新增合格自然来源为0，详见`source_evidence/NATURAL_REVISION_SEARCH_20261019_3.json`；未运行模型或调参。
 
 ## 待完成
 
