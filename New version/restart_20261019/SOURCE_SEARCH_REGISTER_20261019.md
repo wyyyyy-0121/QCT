@@ -191,3 +191,7 @@ These two screens add no qualified natural source or template family. They do no
 通过`hf-mirror.com`镜像revision `5a2215ed4121945ab09d8723df2995602090b042`取得`spreadsheetbench-v2-09-10.zip`。再次读取镜像递归文件树，确认LFS SHA-256及本地归档SHA-256同为`52699c974c30aced7125f3d12cdaabbbcbba8db804373d7397a5d3bdf68e5b3e`，大小134,232,213字节。归档ZIP完整性检查通过，清单含`Debugging`目录下100个`*_input.xlsx`和10个`*_golden.xlsx`，覆盖10个任务目录。仅据文件名和目录确认清单，未解析`dataset.json`、工作簿公式或golden内容。
 
 数据卡front matter标注MIT，而论文A.4声明数据集CC BY-SA 4.0；本地未取得独立LICENSE文件。保留两项证据及冲突，按更严格的CC BY-SA 4.0边界仅作本地研究，不推送归档、工作簿、逐格标签或衍生数据。该数据仍只归类为公开专家注入错误基准，绝不计入自然错误来源或自然模板家族数。冻结接口预登记试跑9/10完成、1项900秒超时，未完成1/4/8 worker一致性比较、未运行100项主预测，故没有准确率结果。执行证据及解释见`SPREADSHEETBENCH2_RESULTS.md`；输入/黄金哈希锁、未完成试跑结果和诊断日志留于被忽略的本地`source_evidence/raw/spreadsheetbench2/`目录，未读任务JSON或golden工作簿，也未生成完整预测锁。
+# 2026-10-19补充核验
+
+SpreadsheetBench 2续跑前向官方Hugging Face API请求锁定revision `5a2215ed4121945ab09d8723df2995602090b042` 的仓库树元数据，15秒超时（回执位于忽略的本地`source_evidence/raw/spreadsheetbench2/official_metadata_recheck.json`）。因此本轮未能从官方端点交叉核验镜像LFS OID；此状态记为访问超时，不解释为仓库/数据不存在。归档仍只依据此前镜像revision及本地SHA-256校验。
+
