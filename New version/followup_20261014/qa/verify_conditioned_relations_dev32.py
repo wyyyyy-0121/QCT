@@ -6,7 +6,10 @@ stored labels.  The controls remain development evidence and are never marked
 as final validation data.
 """
 from pathlib import Path
+import math
+import json
 import os
+import re
 import sys
 
 import openpyxl
@@ -19,6 +22,63 @@ from run_conditioned_relations_dev32 import RUN, MODES, prediction, verify, PRIO
 from run_visible_relations_dev30 import totals
 from relation_algebra_dev30 import equivalent as fraction_equivalent
 from formulaguard.workbook import WorkbookModel
+from run_public_execution_audit import run_worker
+from hard_reference_string_execution_dev28 import reference_value
+
+
+def execution_witnesses(index, predictions, controls):
+    """Independent numeric output evidence, never a business-intent oracle."""
+    book = openpyxl.Workbook(); book.remove(book.active)
+    queries, pairs = [], []
+    for ordinal, item in enumerate(i for i in index if i['stratum'] == 'conditioned_control'):
+        source = openpyxl.load_workbook(ROOT / item['input'])
+        names = {s.title: f'c{ordinal}_{s.title}' for s in source}
+        def rename(formula):
+            for old, new in names.items():
+                formula = formula.replace("'" + old.replace("'", "''") + "'!", "'" + new + "'!")
+                formula = formula.replace(old + '!', "'" + new + "'!")
+            return formula
+        for original in source:
+            target = book.create_sheet(names[original.title])
+            for row in original:
+                for cell in row:
+                    if cell.value is not None:
+                        target[cell.coordinate] = rename(cell.value) if cell.data_type == 'f' else cell.value
+        for number, row in enumerate(predictions[item['case']]['conditioned_only'], 2):
+            sheet, address = row['cell'].rsplit('!', 1)
+            target = book[names[sheet]]
+            candidate_address = 'AZ' + str(number)
+            assert target[candidate_address].value is None
+            target[candidate_address] = rename(row['suggested_formula'])
+            original_label = names[sheet] + '!' + address
+            candidate_label = names[sheet] + '!' + candidate_address
+            queries += [original_label, candidate_label]
+            pairs.append(dict(case=item['case'], cell=row['cell'], original=original_label,
+                              candidate=candidate_label, labelled_error=row['cell'] in controls[item['case']]['errors'],
+                              original_expected=row['evidence']['original_execution']['value']['value'],
+                              candidate_expected=row['evidence']['candidate_execution']['value']['value']))
+        source.close()
+    path = RUN / 'control_execution_witness.xlsx'; assert not path.exists()
+    book.save(path); before = sha(path)
+    reference = run_worker(path, queries, timeout=60)
+    save(RUN / 'control_execution_reference.json.gz', reference)
+    assert reference['status'] == 'complete', reference
+    assert reference['forced_calculate_all'] and reference['read_only'] and not reference['workbook_saved']
+    assert sha(path) == before
+    rows = []
+    for pair in pairs:
+        a, b = [reference_value(reference['cells'][pair[k]]) for k in ['original', 'candidate']]
+        assert type(a) in (int, float) and type(b) in (int, float)
+        assert math.isclose(a, pair['original_expected'], rel_tol=1e-9, abs_tol=1e-8), pair
+        assert math.isclose(b, pair['candidate_expected'], rel_tol=1e-9, abs_tol=1e-8), pair
+        rows.append(dict(**pair, original_reference=a, candidate_reference=b,
+                         output_changed=not math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-10)))
+    save(RUN / 'control_execution_impact.json', dict(rows=rows, original_inputs_unchanged=True,
+         witness_sha256=before, reference_sha256=sha(RUN / 'control_execution_reference.json.gz'),
+         business_intent_not_supplied_by_reference=True))
+    return dict(checked_suggestions=len(rows), checked_results=2 * len(rows),
+                changed_outputs=sum(r['output_changed'] for r in rows),
+                legal_outputs_changed=sum(r['output_changed'] and not r['labelled_error'] for r in rows))
 
 
 def ratio(num, den):
@@ -39,6 +99,7 @@ def main():
         assert sha(RUN / rel) == digest, rel
     assert score['prediction_lock_sha256'] == sha(RUN / 'prediction_lock.json')
     assert score['control_truth_sha256'] == sha(RUN / 'control_truth.json')
+    assert prep['control_truth_sha256'] == sha(RUN / 'control_truth.json')
     assert score['old_truth_sha256'] == sha(OLD / 'heldout_truth.json.gz')
     index = read(RUN / 'public_index.json')
     assert len(index) == 277
@@ -61,9 +122,12 @@ def main():
     for item in index:
         path = RUN / 'predictions' / (item['case'].replace('/', '__') + '.json.gz')
         prior = read(path)
-        current = prediction(item)
+        # JSON locks store coordinate tuples as arrays. Compare the same
+        # serialization representation rather than rejecting tuple/list types.
+        current = json.loads(json.dumps(prediction(item)))
         assert prior == current, item['case']
         predictions[item['case']] = prior
+        print('DEV32 REPLAY', item['case'], len(prior['conditioned_only']), flush=True)
     active[0] = False
     assert accesses == set(lock['input_accesses'])
 
@@ -90,8 +154,10 @@ def main():
         elif stratum == 'string_control':
             t = string[item['id']]
             truth = dict(expected_formulas=t['all_expected'], errors=t['errors'])
-        elif stratum == 'natural_original':
+        elif stratum == 'natural_original' and item['id'] == 'cv500':
             truth = dict(expected_formulas=natural, errors=list(natural))
+        elif stratum in ('natural_original', 'public_original'):
+            truth = {}
         else:
             raise AssertionError(stratum)
         expected = truth.get('expected_formulas', {})
@@ -135,14 +201,19 @@ def main():
     assert by_stratum['old213']['dev11']['errors'] == 18073
     assert by_stratum['natural_original']['combined']['correct_errors'] == 0
     assert score['accepted_final_sources'] == 0 and score['accepted_final_families'] == 0
-    full = (ROOT / 'qa/CONDITIONED_RELATIONS_DEV32_FOCUSED_TESTS_20261018.log').read_text()
-    assert 'Ran 317 tests' in full and full.rstrip().endswith('OK')
+    witness = execution_witnesses(index, predictions, controls)
+    verify()
+    full_path = ROOT / 'qa/CONDITIONED_RELATIONS_DEV32_FULL_TESTS_V3_20261018.log'
+    full = full_path.read_text()
+    count = int(re.search(r'Ran (\d+) tests', full).group(1))
+    assert count >= 321 and full.rstrip().endswith('OK')
     save(target, dict(all_checks_passed=True, cases_replayed=len(index), independent_metric_checks=checked,
-                      full_test_count=317, baseline_dev11_correct=14184,
+                      full_test_count=count, full_test_log_sha256=sha(full_path), baseline_dev11_correct=14184,
                       baseline_dev11_precision=by_stratum['old213']['dev11']['precision_confirmed_lower_bound'],
                       baseline_dev11_coverage=by_stratum['old213']['dev11']['coverage'],
                       dev32_candidate=by_stratum['old213']['combined'],
                       conditioned_controls=score['new_control_by_family'],
+                      independent_execution=witness,
                       natural_development=by_stratum['natural_original']['combined'],
                       accepted_final_sources=0, accepted_final_families=0,
                       final_validation_complete=False, main_candidate_adopted=False,

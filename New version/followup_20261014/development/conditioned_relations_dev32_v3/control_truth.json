@@ -1,0 +1,1327 @@
+{
+  "cases": [
+    {
+      "case": "conditioned_control/profit__clean",
+      "errors": [],
+      "expected_formulas": {
+        "Records!I10": "=C10*D10*(1-G10)*(1-H10)-C10*E10-F10",
+        "Records!I11": "=C11*D11*(1-G11)*(1-H11)-C11*E11-F11",
+        "Records!I12": "=C12*D12*(1-G12)*(1-H12)-C12*E12-F12",
+        "Records!I7": "=C7*D7*(1-G7)*(1-H7)-C7*E7-F7",
+        "Records!I8": "=C8*D8*(1-G8)*(1-H8)-C8*E8-F8",
+        "Records!I9": "=C9*D9*(1-G9)*(1-H9)-C9*E9-F9"
+      },
+      "family": "profit",
+      "injection_records": [],
+      "observed_formulas": {
+        "Records!I10": "=C10*D10*(1-G10)*(1-H10)-C10*E10-F10",
+        "Records!I11": "=C11*D11*(1-G11)*(1-H11)-C11*E11-F11",
+        "Records!I12": "=C12*D12*(1-G12)*(1-H12)-C12*E12-F12",
+        "Records!I7": "=C7*D7*(1-G7)*(1-H7)-C7*E7-F7",
+        "Records!I8": "=C8*D8*(1-G8)*(1-H8)-C8*E8-F8",
+        "Records!I9": "=C9*D9*(1-G9)*(1-H9)-C9*E9-F9"
+      },
+      "scenario": "clean",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__operator_error",
+      "errors": [
+        "Records!C7",
+        "Records!C8",
+        "Records!C9",
+        "Records!C10",
+        "Records!C11",
+        "Records!C12"
+      ],
+      "expected_formulas": {
+        "Records!C10": "=D10*E10*(1-H10)*(1-I10)-D10*F10-G10",
+        "Records!C11": "=D11*E11*(1-H11)*(1-I11)-D11*F11-G11",
+        "Records!C12": "=D12*E12*(1-H12)*(1-I12)-D12*F12-G12",
+        "Records!C7": "=D7*E7*(1-H7)*(1-I7)-D7*F7-G7",
+        "Records!C8": "=D8*E8*(1-H8)*(1-I8)-D8*F8-G8",
+        "Records!C9": "=D9*E9*(1-H9)*(1-I9)-D9*F9-G9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!C7",
+          "injected_formula": "=D7*E7*(1-H7)*(1-I7)+D7*F7-G7",
+          "original_formula": "=D7*E7*(1-H7)*(1-I7)-D7*F7-G7"
+        },
+        {
+          "cell": "Records!C8",
+          "injected_formula": "=D8*E8*(1-H8)*(1-I8)+D8*F8-G8",
+          "original_formula": "=D8*E8*(1-H8)*(1-I8)-D8*F8-G8"
+        },
+        {
+          "cell": "Records!C9",
+          "injected_formula": "=D9*E9*(1-H9)*(1-I9)+D9*F9-G9",
+          "original_formula": "=D9*E9*(1-H9)*(1-I9)-D9*F9-G9"
+        },
+        {
+          "cell": "Records!C10",
+          "injected_formula": "=D10*E10*(1-H10)*(1-I10)+D10*F10-G10",
+          "original_formula": "=D10*E10*(1-H10)*(1-I10)-D10*F10-G10"
+        },
+        {
+          "cell": "Records!C11",
+          "injected_formula": "=D11*E11*(1-H11)*(1-I11)+D11*F11-G11",
+          "original_formula": "=D11*E11*(1-H11)*(1-I11)-D11*F11-G11"
+        },
+        {
+          "cell": "Records!C12",
+          "injected_formula": "=D12*E12*(1-H12)*(1-I12)+D12*F12-G12",
+          "original_formula": "=D12*E12*(1-H12)*(1-I12)-D12*F12-G12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!C10": "=D10*E10*(1-H10)*(1-I10)+D10*F10-G10",
+        "Records!C11": "=D11*E11*(1-H11)*(1-I11)+D11*F11-G11",
+        "Records!C12": "=D12*E12*(1-H12)*(1-I12)+D12*F12-G12",
+        "Records!C7": "=D7*E7*(1-H7)*(1-I7)+D7*F7-G7",
+        "Records!C8": "=D8*E8*(1-H8)*(1-I8)+D8*F8-G8",
+        "Records!C9": "=D9*E9*(1-H9)*(1-I9)+D9*F9-G9"
+      },
+      "scenario": "operator_error",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__reference_error",
+      "errors": [
+        "Records!D7",
+        "Records!D8",
+        "Records!D9",
+        "Records!D10",
+        "Records!D11",
+        "Records!D12"
+      ],
+      "expected_formulas": {
+        "Records!D10": "=E10*F10*(1-I10)*(1-C10)-E10*G10-H10",
+        "Records!D11": "=E11*F11*(1-I11)*(1-C11)-E11*G11-H11",
+        "Records!D12": "=E12*F12*(1-I12)*(1-C12)-E12*G12-H12",
+        "Records!D7": "=E7*F7*(1-I7)*(1-C7)-E7*G7-H7",
+        "Records!D8": "=E8*F8*(1-I8)*(1-C8)-E8*G8-H8",
+        "Records!D9": "=E9*F9*(1-I9)*(1-C9)-E9*G9-H9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!D7",
+          "injected_formula": "=E7*G7*(1-I7)*(1-C7)-E7*G7-H7",
+          "original_formula": "=E7*F7*(1-I7)*(1-C7)-E7*G7-H7"
+        },
+        {
+          "cell": "Records!D8",
+          "injected_formula": "=E8*G8*(1-I8)*(1-C8)-E8*G8-H8",
+          "original_formula": "=E8*F8*(1-I8)*(1-C8)-E8*G8-H8"
+        },
+        {
+          "cell": "Records!D9",
+          "injected_formula": "=E9*G9*(1-I9)*(1-C9)-E9*G9-H9",
+          "original_formula": "=E9*F9*(1-I9)*(1-C9)-E9*G9-H9"
+        },
+        {
+          "cell": "Records!D10",
+          "injected_formula": "=E10*G10*(1-I10)*(1-C10)-E10*G10-H10",
+          "original_formula": "=E10*F10*(1-I10)*(1-C10)-E10*G10-H10"
+        },
+        {
+          "cell": "Records!D11",
+          "injected_formula": "=E11*G11*(1-I11)*(1-C11)-E11*G11-H11",
+          "original_formula": "=E11*F11*(1-I11)*(1-C11)-E11*G11-H11"
+        },
+        {
+          "cell": "Records!D12",
+          "injected_formula": "=E12*G12*(1-I12)*(1-C12)-E12*G12-H12",
+          "original_formula": "=E12*F12*(1-I12)*(1-C12)-E12*G12-H12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!D10": "=E10*G10*(1-I10)*(1-C10)-E10*G10-H10",
+        "Records!D11": "=E11*G11*(1-I11)*(1-C11)-E11*G11-H11",
+        "Records!D12": "=E12*G12*(1-I12)*(1-C12)-E12*G12-H12",
+        "Records!D7": "=E7*G7*(1-I7)*(1-C7)-E7*G7-H7",
+        "Records!D8": "=E8*G8*(1-I8)*(1-C8)-E8*G8-H8",
+        "Records!D9": "=E9*G9*(1-I9)*(1-C9)-E9*G9-H9"
+      },
+      "scenario": "reference_error",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__coefficient_error",
+      "errors": [
+        "Records!E7",
+        "Records!E8",
+        "Records!E9",
+        "Records!E10",
+        "Records!E11",
+        "Records!E12"
+      ],
+      "expected_formulas": {
+        "Records!E10": "=F10*G10*(1-C10)*(1-D10)-F10*H10-I10",
+        "Records!E11": "=F11*G11*(1-C11)*(1-D11)-F11*H11-I11",
+        "Records!E12": "=F12*G12*(1-C12)*(1-D12)-F12*H12-I12",
+        "Records!E7": "=F7*G7*(1-C7)*(1-D7)-F7*H7-I7",
+        "Records!E8": "=F8*G8*(1-C8)*(1-D8)-F8*H8-I8",
+        "Records!E9": "=F9*G9*(1-C9)*(1-D9)-F9*H9-I9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!E7",
+          "injected_formula": "=(F7*G7*(1-C7)*(1-D7)-F7*H7-I7)*1.19",
+          "original_formula": "=F7*G7*(1-C7)*(1-D7)-F7*H7-I7"
+        },
+        {
+          "cell": "Records!E8",
+          "injected_formula": "=(F8*G8*(1-C8)*(1-D8)-F8*H8-I8)*1.19",
+          "original_formula": "=F8*G8*(1-C8)*(1-D8)-F8*H8-I8"
+        },
+        {
+          "cell": "Records!E9",
+          "injected_formula": "=(F9*G9*(1-C9)*(1-D9)-F9*H9-I9)*1.19",
+          "original_formula": "=F9*G9*(1-C9)*(1-D9)-F9*H9-I9"
+        },
+        {
+          "cell": "Records!E10",
+          "injected_formula": "=(F10*G10*(1-C10)*(1-D10)-F10*H10-I10)*1.19",
+          "original_formula": "=F10*G10*(1-C10)*(1-D10)-F10*H10-I10"
+        },
+        {
+          "cell": "Records!E11",
+          "injected_formula": "=(F11*G11*(1-C11)*(1-D11)-F11*H11-I11)*1.19",
+          "original_formula": "=F11*G11*(1-C11)*(1-D11)-F11*H11-I11"
+        },
+        {
+          "cell": "Records!E12",
+          "injected_formula": "=(F12*G12*(1-C12)*(1-D12)-F12*H12-I12)*1.19",
+          "original_formula": "=F12*G12*(1-C12)*(1-D12)-F12*H12-I12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!E10": "=(F10*G10*(1-C10)*(1-D10)-F10*H10-I10)*1.19",
+        "Records!E11": "=(F11*G11*(1-C11)*(1-D11)-F11*H11-I11)*1.19",
+        "Records!E12": "=(F12*G12*(1-C12)*(1-D12)-F12*H12-I12)*1.19",
+        "Records!E7": "=(F7*G7*(1-C7)*(1-D7)-F7*H7-I7)*1.19",
+        "Records!E8": "=(F8*G8*(1-C8)*(1-D8)-F8*H8-I8)*1.19",
+        "Records!E9": "=(F9*G9*(1-C9)*(1-D9)-F9*H9-I9)*1.19"
+      },
+      "scenario": "coefficient_error",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__marked_share",
+      "errors": [],
+      "expected_formulas": {
+        "Records!F10": "=G10*H10*(1-D10)*(1-E10)*0.73-G10*I10-C10",
+        "Records!F11": "=G11*H11*(1-D11)*(1-E11)*0.73-G11*I11-C11",
+        "Records!F12": "=G12*H12*(1-D12)*(1-E12)*0.73-G12*I12-C12",
+        "Records!F7": "=G7*H7*(1-D7)*(1-E7)*0.73-G7*I7-C7",
+        "Records!F8": "=G8*H8*(1-D8)*(1-E8)*0.73-G8*I8-C8",
+        "Records!F9": "=G9*H9*(1-D9)*(1-E9)*0.73-G9*I9-C9"
+      },
+      "family": "profit",
+      "injection_records": [],
+      "observed_formulas": {
+        "Records!F10": "=G10*H10*(1-D10)*(1-E10)*0.73-G10*I10-C10",
+        "Records!F11": "=G11*H11*(1-D11)*(1-E11)*0.73-G11*I11-C11",
+        "Records!F12": "=G12*H12*(1-D12)*(1-E12)*0.73-G12*I12-C12",
+        "Records!F7": "=G7*H7*(1-D7)*(1-E7)*0.73-G7*I7-C7",
+        "Records!F8": "=G8*H8*(1-D8)*(1-E8)*0.73-G8*I8-C8",
+        "Records!F9": "=G9*H9*(1-D9)*(1-E9)*0.73-G9*I9-C9"
+      },
+      "scenario": "marked_share",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__unmarked_share",
+      "errors": [],
+      "expected_formulas": {
+        "Records!G10": "=H10*I10*(1-E10)*(1-F10)*0.73-H10*C10-D10",
+        "Records!G11": "=H11*I11*(1-E11)*(1-F11)*0.73-H11*C11-D11",
+        "Records!G12": "=H12*I12*(1-E12)*(1-F12)*0.73-H12*C12-D12",
+        "Records!G7": "=H7*I7*(1-E7)*(1-F7)*0.73-H7*C7-D7",
+        "Records!G8": "=H8*I8*(1-E8)*(1-F8)*0.73-H8*C8-D8",
+        "Records!G9": "=H9*I9*(1-E9)*(1-F9)*0.73-H9*C9-D9"
+      },
+      "family": "profit",
+      "injection_records": [],
+      "observed_formulas": {
+        "Records!G10": "=H10*I10*(1-E10)*(1-F10)*0.73-H10*C10-D10",
+        "Records!G11": "=H11*I11*(1-E11)*(1-F11)*0.73-H11*C11-D11",
+        "Records!G12": "=H12*I12*(1-E12)*(1-F12)*0.73-H12*C12-D12",
+        "Records!G7": "=H7*I7*(1-E7)*(1-F7)*0.73-H7*C7-D7",
+        "Records!G8": "=H8*I8*(1-E8)*(1-F8)*0.73-H8*C8-D8",
+        "Records!G9": "=H9*I9*(1-E9)*(1-F9)*0.73-H9*C9-D9"
+      },
+      "scenario": "unmarked_share",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__marked_adjustment",
+      "errors": [],
+      "expected_formulas": {
+        "Records!H10": "=(I10*C10*(1-F10)*(1-G10)-I10*D10-E10)+17",
+        "Records!H11": "=(I11*C11*(1-F11)*(1-G11)-I11*D11-E11)+17",
+        "Records!H12": "=(I12*C12*(1-F12)*(1-G12)-I12*D12-E12)+17",
+        "Records!H7": "=(I7*C7*(1-F7)*(1-G7)-I7*D7-E7)+17",
+        "Records!H8": "=(I8*C8*(1-F8)*(1-G8)-I8*D8-E8)+17",
+        "Records!H9": "=(I9*C9*(1-F9)*(1-G9)-I9*D9-E9)+17"
+      },
+      "family": "profit",
+      "injection_records": [],
+      "observed_formulas": {
+        "Records!H10": "=(I10*C10*(1-F10)*(1-G10)-I10*D10-E10)+17",
+        "Records!H11": "=(I11*C11*(1-F11)*(1-G11)-I11*D11-E11)+17",
+        "Records!H12": "=(I12*C12*(1-F12)*(1-G12)-I12*D12-E12)+17",
+        "Records!H7": "=(I7*C7*(1-F7)*(1-G7)-I7*D7-E7)+17",
+        "Records!H8": "=(I8*C8*(1-F8)*(1-G8)-I8*D8-E8)+17",
+        "Records!H9": "=(I9*C9*(1-F9)*(1-G9)-I9*D9-E9)+17"
+      },
+      "scenario": "marked_adjustment",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__unmarked_adjustment",
+      "errors": [],
+      "expected_formulas": {
+        "Records!I10": "=(C10*D10*(1-G10)*(1-H10)-C10*E10-F10)+17",
+        "Records!I11": "=(C11*D11*(1-G11)*(1-H11)-C11*E11-F11)+17",
+        "Records!I12": "=(C12*D12*(1-G12)*(1-H12)-C12*E12-F12)+17",
+        "Records!I7": "=(C7*D7*(1-G7)*(1-H7)-C7*E7-F7)+17",
+        "Records!I8": "=(C8*D8*(1-G8)*(1-H8)-C8*E8-F8)+17",
+        "Records!I9": "=(C9*D9*(1-G9)*(1-H9)-C9*E9-F9)+17"
+      },
+      "family": "profit",
+      "injection_records": [],
+      "observed_formulas": {
+        "Records!I10": "=(C10*D10*(1-G10)*(1-H10)-C10*E10-F10)+17",
+        "Records!I11": "=(C11*D11*(1-G11)*(1-H11)-C11*E11-F11)+17",
+        "Records!I12": "=(C12*D12*(1-G12)*(1-H12)-C12*E12-F12)+17",
+        "Records!I7": "=(C7*D7*(1-G7)*(1-H7)-C7*E7-F7)+17",
+        "Records!I8": "=(C8*D8*(1-G8)*(1-H8)-C8*E8-F8)+17",
+        "Records!I9": "=(C9*D9*(1-G9)*(1-H9)-C9*E9-F9)+17"
+      },
+      "scenario": "unmarked_adjustment",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__conflicting_instruction",
+      "errors": [
+        "Records!C7",
+        "Records!C8",
+        "Records!C9",
+        "Records!C10",
+        "Records!C11",
+        "Records!C12"
+      ],
+      "expected_formulas": {
+        "Records!C10": "=D10*E10*(1-H10)*(1-I10)-D10*F10-G10",
+        "Records!C11": "=D11*E11*(1-H11)*(1-I11)-D11*F11-G11",
+        "Records!C12": "=D12*E12*(1-H12)*(1-I12)-D12*F12-G12",
+        "Records!C7": "=D7*E7*(1-H7)*(1-I7)-D7*F7-G7",
+        "Records!C8": "=D8*E8*(1-H8)*(1-I8)-D8*F8-G8",
+        "Records!C9": "=D9*E9*(1-H9)*(1-I9)-D9*F9-G9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!C7",
+          "injected_formula": "=D7*E7*(1-H7)*(1-I7)+D7*F7-G7",
+          "original_formula": "=D7*E7*(1-H7)*(1-I7)-D7*F7-G7"
+        },
+        {
+          "cell": "Records!C8",
+          "injected_formula": "=D8*E8*(1-H8)*(1-I8)+D8*F8-G8",
+          "original_formula": "=D8*E8*(1-H8)*(1-I8)-D8*F8-G8"
+        },
+        {
+          "cell": "Records!C9",
+          "injected_formula": "=D9*E9*(1-H9)*(1-I9)+D9*F9-G9",
+          "original_formula": "=D9*E9*(1-H9)*(1-I9)-D9*F9-G9"
+        },
+        {
+          "cell": "Records!C10",
+          "injected_formula": "=D10*E10*(1-H10)*(1-I10)+D10*F10-G10",
+          "original_formula": "=D10*E10*(1-H10)*(1-I10)-D10*F10-G10"
+        },
+        {
+          "cell": "Records!C11",
+          "injected_formula": "=D11*E11*(1-H11)*(1-I11)+D11*F11-G11",
+          "original_formula": "=D11*E11*(1-H11)*(1-I11)-D11*F11-G11"
+        },
+        {
+          "cell": "Records!C12",
+          "injected_formula": "=D12*E12*(1-H12)*(1-I12)+D12*F12-G12",
+          "original_formula": "=D12*E12*(1-H12)*(1-I12)-D12*F12-G12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!C10": "=D10*E10*(1-H10)*(1-I10)+D10*F10-G10",
+        "Records!C11": "=D11*E11*(1-H11)*(1-I11)+D11*F11-G11",
+        "Records!C12": "=D12*E12*(1-H12)*(1-I12)+D12*F12-G12",
+        "Records!C7": "=D7*E7*(1-H7)*(1-I7)+D7*F7-G7",
+        "Records!C8": "=D8*E8*(1-H8)*(1-I8)+D8*F8-G8",
+        "Records!C9": "=D9*E9*(1-H9)*(1-I9)+D9*F9-G9"
+      },
+      "scenario": "conflicting_instruction",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__duplicate_role",
+      "errors": [
+        "Records!D7",
+        "Records!D8",
+        "Records!D9",
+        "Records!D10",
+        "Records!D11",
+        "Records!D12"
+      ],
+      "expected_formulas": {
+        "Records!D10": "=E10*F10*(1-I10)*(1-C10)-E10*G10-H10",
+        "Records!D11": "=E11*F11*(1-I11)*(1-C11)-E11*G11-H11",
+        "Records!D12": "=E12*F12*(1-I12)*(1-C12)-E12*G12-H12",
+        "Records!D7": "=E7*F7*(1-I7)*(1-C7)-E7*G7-H7",
+        "Records!D8": "=E8*F8*(1-I8)*(1-C8)-E8*G8-H8",
+        "Records!D9": "=E9*F9*(1-I9)*(1-C9)-E9*G9-H9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!D7",
+          "injected_formula": "=E7*F7*(1-I7)*(1-C7)+E7*G7-H7",
+          "original_formula": "=E7*F7*(1-I7)*(1-C7)-E7*G7-H7"
+        },
+        {
+          "cell": "Records!D8",
+          "injected_formula": "=E8*F8*(1-I8)*(1-C8)+E8*G8-H8",
+          "original_formula": "=E8*F8*(1-I8)*(1-C8)-E8*G8-H8"
+        },
+        {
+          "cell": "Records!D9",
+          "injected_formula": "=E9*F9*(1-I9)*(1-C9)+E9*G9-H9",
+          "original_formula": "=E9*F9*(1-I9)*(1-C9)-E9*G9-H9"
+        },
+        {
+          "cell": "Records!D10",
+          "injected_formula": "=E10*F10*(1-I10)*(1-C10)+E10*G10-H10",
+          "original_formula": "=E10*F10*(1-I10)*(1-C10)-E10*G10-H10"
+        },
+        {
+          "cell": "Records!D11",
+          "injected_formula": "=E11*F11*(1-I11)*(1-C11)+E11*G11-H11",
+          "original_formula": "=E11*F11*(1-I11)*(1-C11)-E11*G11-H11"
+        },
+        {
+          "cell": "Records!D12",
+          "injected_formula": "=E12*F12*(1-I12)*(1-C12)+E12*G12-H12",
+          "original_formula": "=E12*F12*(1-I12)*(1-C12)-E12*G12-H12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!D10": "=E10*F10*(1-I10)*(1-C10)+E10*G10-H10",
+        "Records!D11": "=E11*F11*(1-I11)*(1-C11)+E11*G11-H11",
+        "Records!D12": "=E12*F12*(1-I12)*(1-C12)+E12*G12-H12",
+        "Records!D7": "=E7*F7*(1-I7)*(1-C7)+E7*G7-H7",
+        "Records!D8": "=E8*F8*(1-I8)*(1-C8)+E8*G8-H8",
+        "Records!D9": "=E9*F9*(1-I9)*(1-C9)+E9*G9-H9"
+      },
+      "scenario": "duplicate_role",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__hidden_input",
+      "errors": [
+        "Records!E7",
+        "Records!E8",
+        "Records!E9",
+        "Records!E10",
+        "Records!E11",
+        "Records!E12"
+      ],
+      "expected_formulas": {
+        "Records!E10": "=F10*G10*(1-C10)*(1-D10)-F10*H10-I10",
+        "Records!E11": "=F11*G11*(1-C11)*(1-D11)-F11*H11-I11",
+        "Records!E12": "=F12*G12*(1-C12)*(1-D12)-F12*H12-I12",
+        "Records!E7": "=F7*G7*(1-C7)*(1-D7)-F7*H7-I7",
+        "Records!E8": "=F8*G8*(1-C8)*(1-D8)-F8*H8-I8",
+        "Records!E9": "=F9*G9*(1-C9)*(1-D9)-F9*H9-I9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!E7",
+          "injected_formula": "=F7*G7*(1-C7)*(1-D7)+F7*H7-I7",
+          "original_formula": "=F7*G7*(1-C7)*(1-D7)-F7*H7-I7"
+        },
+        {
+          "cell": "Records!E8",
+          "injected_formula": "=F8*G8*(1-C8)*(1-D8)+F8*H8-I8",
+          "original_formula": "=F8*G8*(1-C8)*(1-D8)-F8*H8-I8"
+        },
+        {
+          "cell": "Records!E9",
+          "injected_formula": "=F9*G9*(1-C9)*(1-D9)+F9*H9-I9",
+          "original_formula": "=F9*G9*(1-C9)*(1-D9)-F9*H9-I9"
+        },
+        {
+          "cell": "Records!E10",
+          "injected_formula": "=F10*G10*(1-C10)*(1-D10)+F10*H10-I10",
+          "original_formula": "=F10*G10*(1-C10)*(1-D10)-F10*H10-I10"
+        },
+        {
+          "cell": "Records!E11",
+          "injected_formula": "=F11*G11*(1-C11)*(1-D11)+F11*H11-I11",
+          "original_formula": "=F11*G11*(1-C11)*(1-D11)-F11*H11-I11"
+        },
+        {
+          "cell": "Records!E12",
+          "injected_formula": "=F12*G12*(1-C12)*(1-D12)+F12*H12-I12",
+          "original_formula": "=F12*G12*(1-C12)*(1-D12)-F12*H12-I12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!E10": "=F10*G10*(1-C10)*(1-D10)+F10*H10-I10",
+        "Records!E11": "=F11*G11*(1-C11)*(1-D11)+F11*H11-I11",
+        "Records!E12": "=F12*G12*(1-C12)*(1-D12)+F12*H12-I12",
+        "Records!E7": "=F7*G7*(1-C7)*(1-D7)+F7*H7-I7",
+        "Records!E8": "=F8*G8*(1-C8)*(1-D8)+F8*H8-I8",
+        "Records!E9": "=F9*G9*(1-C9)*(1-D9)+F9*H9-I9"
+      },
+      "scenario": "hidden_input",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__unsupported_input",
+      "errors": [
+        "Records!F7",
+        "Records!F8",
+        "Records!F9",
+        "Records!F10",
+        "Records!F11",
+        "Records!F12"
+      ],
+      "expected_formulas": {
+        "Records!F10": "=G10*H10*(1-D10)*(1-E10)-G10*I10-C10",
+        "Records!F11": "=G11*H11*(1-D11)*(1-E11)-G11*I11-C11",
+        "Records!F12": "=G12*H12*(1-D12)*(1-E12)-G12*I12-C12",
+        "Records!F7": "=G7*H7*(1-D7)*(1-E7)-G7*I7-C7",
+        "Records!F8": "=G8*H8*(1-D8)*(1-E8)-G8*I8-C8",
+        "Records!F9": "=G9*H9*(1-D9)*(1-E9)-G9*I9-C9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!F7",
+          "injected_formula": "=G7*H7*(1-D7)*(1-E7)+G7*I7-C7",
+          "original_formula": "=G7*H7*(1-D7)*(1-E7)-G7*I7-C7"
+        },
+        {
+          "cell": "Records!F8",
+          "injected_formula": "=G8*H8*(1-D8)*(1-E8)+G8*I8-C8",
+          "original_formula": "=G8*H8*(1-D8)*(1-E8)-G8*I8-C8"
+        },
+        {
+          "cell": "Records!F9",
+          "injected_formula": "=G9*H9*(1-D9)*(1-E9)+G9*I9-C9",
+          "original_formula": "=G9*H9*(1-D9)*(1-E9)-G9*I9-C9"
+        },
+        {
+          "cell": "Records!F10",
+          "injected_formula": "=G10*H10*(1-D10)*(1-E10)+G10*I10-C10",
+          "original_formula": "=G10*H10*(1-D10)*(1-E10)-G10*I10-C10"
+        },
+        {
+          "cell": "Records!F11",
+          "injected_formula": "=G11*H11*(1-D11)*(1-E11)+G11*I11-C11",
+          "original_formula": "=G11*H11*(1-D11)*(1-E11)-G11*I11-C11"
+        },
+        {
+          "cell": "Records!F12",
+          "injected_formula": "=G12*H12*(1-D12)*(1-E12)+G12*I12-C12",
+          "original_formula": "=G12*H12*(1-D12)*(1-E12)-G12*I12-C12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!F10": "=G10*H10*(1-D10)*(1-E10)+G10*I10-C10",
+        "Records!F11": "=G11*H11*(1-D11)*(1-E11)+G11*I11-C11",
+        "Records!F12": "=G12*H12*(1-D12)*(1-E12)+G12*I12-C12",
+        "Records!F7": "=G7*H7*(1-D7)*(1-E7)+G7*I7-C7",
+        "Records!F8": "=G8*H8*(1-D8)*(1-E8)+G8*I8-C8",
+        "Records!F9": "=G9*H9*(1-D9)*(1-E9)+G9*I9-C9",
+        "Records!G10": "=SQRT(121)",
+        "Records!G11": "=SQRT(121)",
+        "Records!G12": "=SQRT(121)",
+        "Records!G7": "=SQRT(121)",
+        "Records!G8": "=SQRT(121)",
+        "Records!G9": "=SQRT(121)"
+      },
+      "scenario": "unsupported_input",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__rate_outside",
+      "errors": [
+        "Records!G7",
+        "Records!G8",
+        "Records!G9",
+        "Records!G10",
+        "Records!G11",
+        "Records!G12"
+      ],
+      "expected_formulas": {
+        "Records!G10": "=H10*I10*(1-E10)*(1-F10)-H10*C10-D10",
+        "Records!G11": "=H11*I11*(1-E11)*(1-F11)-H11*C11-D11",
+        "Records!G12": "=H12*I12*(1-E12)*(1-F12)-H12*C12-D12",
+        "Records!G7": "=H7*I7*(1-E7)*(1-F7)-H7*C7-D7",
+        "Records!G8": "=H8*I8*(1-E8)*(1-F8)-H8*C8-D8",
+        "Records!G9": "=H9*I9*(1-E9)*(1-F9)-H9*C9-D9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!G7",
+          "injected_formula": "=H7*I7*(1-E7)*(1-F7)+H7*C7-D7",
+          "original_formula": "=H7*I7*(1-E7)*(1-F7)-H7*C7-D7"
+        },
+        {
+          "cell": "Records!G8",
+          "injected_formula": "=H8*I8*(1-E8)*(1-F8)+H8*C8-D8",
+          "original_formula": "=H8*I8*(1-E8)*(1-F8)-H8*C8-D8"
+        },
+        {
+          "cell": "Records!G9",
+          "injected_formula": "=H9*I9*(1-E9)*(1-F9)+H9*C9-D9",
+          "original_formula": "=H9*I9*(1-E9)*(1-F9)-H9*C9-D9"
+        },
+        {
+          "cell": "Records!G10",
+          "injected_formula": "=H10*I10*(1-E10)*(1-F10)+H10*C10-D10",
+          "original_formula": "=H10*I10*(1-E10)*(1-F10)-H10*C10-D10"
+        },
+        {
+          "cell": "Records!G11",
+          "injected_formula": "=H11*I11*(1-E11)*(1-F11)+H11*C11-D11",
+          "original_formula": "=H11*I11*(1-E11)*(1-F11)-H11*C11-D11"
+        },
+        {
+          "cell": "Records!G12",
+          "injected_formula": "=H12*I12*(1-E12)*(1-F12)+H12*C12-D12",
+          "original_formula": "=H12*I12*(1-E12)*(1-F12)-H12*C12-D12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!G10": "=H10*I10*(1-E10)*(1-F10)+H10*C10-D10",
+        "Records!G11": "=H11*I11*(1-E11)*(1-F11)+H11*C11-D11",
+        "Records!G12": "=H12*I12*(1-E12)*(1-F12)+H12*C12-D12",
+        "Records!G7": "=H7*I7*(1-E7)*(1-F7)+H7*C7-D7",
+        "Records!G8": "=H8*I8*(1-E8)*(1-F8)+H8*C8-D8",
+        "Records!G9": "=H9*I9*(1-E9)*(1-F9)+H9*C9-D9"
+      },
+      "scenario": "rate_outside",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/profit__unknown_output",
+      "errors": [
+        "Records!H7",
+        "Records!H8",
+        "Records!H9",
+        "Records!H10",
+        "Records!H11",
+        "Records!H12"
+      ],
+      "expected_formulas": {
+        "Records!H10": "=I10*C10*(1-F10)*(1-G10)-I10*D10-E10",
+        "Records!H11": "=I11*C11*(1-F11)*(1-G11)-I11*D11-E11",
+        "Records!H12": "=I12*C12*(1-F12)*(1-G12)-I12*D12-E12",
+        "Records!H7": "=I7*C7*(1-F7)*(1-G7)-I7*D7-E7",
+        "Records!H8": "=I8*C8*(1-F8)*(1-G8)-I8*D8-E8",
+        "Records!H9": "=I9*C9*(1-F9)*(1-G9)-I9*D9-E9"
+      },
+      "family": "profit",
+      "injection_records": [
+        {
+          "cell": "Records!H7",
+          "injected_formula": "=I7*C7*(1-F7)*(1-G7)+I7*D7-E7",
+          "original_formula": "=I7*C7*(1-F7)*(1-G7)-I7*D7-E7"
+        },
+        {
+          "cell": "Records!H8",
+          "injected_formula": "=I8*C8*(1-F8)*(1-G8)+I8*D8-E8",
+          "original_formula": "=I8*C8*(1-F8)*(1-G8)-I8*D8-E8"
+        },
+        {
+          "cell": "Records!H9",
+          "injected_formula": "=I9*C9*(1-F9)*(1-G9)+I9*D9-E9",
+          "original_formula": "=I9*C9*(1-F9)*(1-G9)-I9*D9-E9"
+        },
+        {
+          "cell": "Records!H10",
+          "injected_formula": "=I10*C10*(1-F10)*(1-G10)+I10*D10-E10",
+          "original_formula": "=I10*C10*(1-F10)*(1-G10)-I10*D10-E10"
+        },
+        {
+          "cell": "Records!H11",
+          "injected_formula": "=I11*C11*(1-F11)*(1-G11)+I11*D11-E11",
+          "original_formula": "=I11*C11*(1-F11)*(1-G11)-I11*D11-E11"
+        },
+        {
+          "cell": "Records!H12",
+          "injected_formula": "=I12*C12*(1-F12)*(1-G12)+I12*D12-E12",
+          "original_formula": "=I12*C12*(1-F12)*(1-G12)-I12*D12-E12"
+        }
+      ],
+      "observed_formulas": {
+        "Records!H10": "=I10*C10*(1-F10)*(1-G10)+I10*D10-E10",
+        "Records!H11": "=I11*C11*(1-F11)*(1-G11)+I11*D11-E11",
+        "Records!H12": "=I12*C12*(1-F12)*(1-G12)+I12*D12-E12",
+        "Records!H7": "=I7*C7*(1-F7)*(1-G7)+I7*D7-E7",
+        "Records!H8": "=I8*C8*(1-F8)*(1-G8)+I8*D8-E8",
+        "Records!H9": "=I9*C9*(1-F9)*(1-G9)+I9*D9-E9"
+      },
+      "scenario": "unknown_output",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__clean",
+      "errors": [],
+      "expected_formulas": {
+        "Schedule!F18": "=SUM(F9,F12,F15)",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)"
+      },
+      "family": "debt",
+      "injection_records": [],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!F15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!F18": "=SUM(F9,F12,F15)",
+        "Schedule!G15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!K18": "=SUM(K9,K12,K15)"
+      },
+      "scenario": "clean",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "errors": [
+        "Schedule!G18",
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18",
+        "Schedule!L18"
+      ],
+      "expected_formulas": {
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L18": "=SUM(L9,L12,L15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!G18",
+          "injected_formula": "=G9+G12-G15",
+          "original_formula": "=SUM(G9,G12,G15)"
+        },
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=H9+H12-H15",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=I9+I12-I15",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=J9+J12-J15",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=K9+K12-K15",
+          "original_formula": "=SUM(K9,K12,K15)"
+        },
+        {
+          "cell": "Schedule!L18",
+          "injected_formula": "=L9+L12-L15",
+          "original_formula": "=SUM(L9,L12,L15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!G15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!G18": "=G9+G12-G15",
+        "Schedule!H15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!H18": "=H9+H12-H15",
+        "Schedule!I15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!I18": "=I9+I12-I15",
+        "Schedule!J15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!J18": "=J9+J12-J15",
+        "Schedule!K15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!K18": "=K9+K12-K15",
+        "Schedule!L15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!L18": "=L9+L12-L15"
+      },
+      "scenario": "operator_error",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "errors": [
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18",
+        "Schedule!L18",
+        "Schedule!M18"
+      ],
+      "expected_formulas": {
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L18": "=SUM(L9,L12,L15)",
+        "Schedule!M18": "=SUM(M9,M12,M15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=H9+H12+H16",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=I9+I12+I16",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=J9+J12+J16",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=K9+K12+K16",
+          "original_formula": "=SUM(K9,K12,K15)"
+        },
+        {
+          "cell": "Schedule!L18",
+          "injected_formula": "=L9+L12+L16",
+          "original_formula": "=SUM(L9,L12,L15)"
+        },
+        {
+          "cell": "Schedule!M18",
+          "injected_formula": "=M9+M12+M16",
+          "original_formula": "=SUM(M9,M12,M15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!H15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!H18": "=H9+H12+H16",
+        "Schedule!I15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!I18": "=I9+I12+I16",
+        "Schedule!J15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!J18": "=J9+J12+J16",
+        "Schedule!K15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!K18": "=K9+K12+K16",
+        "Schedule!L15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!L18": "=L9+L12+L16",
+        "Schedule!M15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!M18": "=M9+M12+M16"
+      },
+      "scenario": "reference_error",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "errors": [
+        "Schedule!F18",
+        "Schedule!G18",
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18"
+      ],
+      "expected_formulas": {
+        "Schedule!F18": "=SUM(F9,F12,F15)",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!F18",
+          "injected_formula": "=(SUM(F9,F12,F15))*1.19",
+          "original_formula": "=SUM(F9,F12,F15)"
+        },
+        {
+          "cell": "Schedule!G18",
+          "injected_formula": "=(SUM(G9,G12,G15))*1.19",
+          "original_formula": "=SUM(G9,G12,G15)"
+        },
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=(SUM(H9,H12,H15))*1.19",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=(SUM(I9,I12,I15))*1.19",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=(SUM(J9,J12,J15))*1.19",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=(SUM(K9,K12,K15))*1.19",
+          "original_formula": "=SUM(K9,K12,K15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!F15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!F18": "=(SUM(F9,F12,F15))*1.19",
+        "Schedule!G15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!G18": "=(SUM(G9,G12,G15))*1.19",
+        "Schedule!H15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!H18": "=(SUM(H9,H12,H15))*1.19",
+        "Schedule!I15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!I18": "=(SUM(I9,I12,I15))*1.19",
+        "Schedule!J15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!J18": "=(SUM(J9,J12,J15))*1.19",
+        "Schedule!K15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!K18": "=(SUM(K9,K12,K15))*1.19"
+      },
+      "scenario": "coefficient_error",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__marked_adjustment",
+      "errors": [],
+      "expected_formulas": {
+        "Schedule!G18": "=(SUM(G9,G12,G15))+17",
+        "Schedule!H18": "=(SUM(H9,H12,H15))+17",
+        "Schedule!I18": "=(SUM(I9,I12,I15))+17",
+        "Schedule!J18": "=(SUM(J9,J12,J15))+17",
+        "Schedule!K18": "=(SUM(K9,K12,K15))+17",
+        "Schedule!L18": "=(SUM(L9,L12,L15))+17"
+      },
+      "family": "debt",
+      "injection_records": [],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!G15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!G18": "=(SUM(G9,G12,G15))+17",
+        "Schedule!H15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!H18": "=(SUM(H9,H12,H15))+17",
+        "Schedule!I15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!I18": "=(SUM(I9,I12,I15))+17",
+        "Schedule!J15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!J18": "=(SUM(J9,J12,J15))+17",
+        "Schedule!K15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!K18": "=(SUM(K9,K12,K15))+17",
+        "Schedule!L15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!L18": "=(SUM(L9,L12,L15))+17"
+      },
+      "scenario": "marked_adjustment",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__unmarked_adjustment",
+      "errors": [],
+      "expected_formulas": {
+        "Schedule!H18": "=(SUM(H9,H12,H15))+17",
+        "Schedule!I18": "=(SUM(I9,I12,I15))+17",
+        "Schedule!J18": "=(SUM(J9,J12,J15))+17",
+        "Schedule!K18": "=(SUM(K9,K12,K15))+17",
+        "Schedule!L18": "=(SUM(L9,L12,L15))+17",
+        "Schedule!M18": "=(SUM(M9,M12,M15))+17"
+      },
+      "family": "debt",
+      "injection_records": [],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!H15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!H18": "=(SUM(H9,H12,H15))+17",
+        "Schedule!I15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!I18": "=(SUM(I9,I12,I15))+17",
+        "Schedule!J15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!J18": "=(SUM(J9,J12,J15))+17",
+        "Schedule!K15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!K18": "=(SUM(K9,K12,K15))+17",
+        "Schedule!L15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!L18": "=(SUM(L9,L12,L15))+17",
+        "Schedule!M15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!M18": "=(SUM(M9,M12,M15))+17"
+      },
+      "scenario": "unmarked_adjustment",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__positive_principal",
+      "errors": [],
+      "expected_formulas": {
+        "Schedule!F18": "=SUM(F9,F12,F15)",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)"
+      },
+      "family": "debt",
+      "injection_records": [],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!F15": "=-PPMT(Parameters!G2,1,6,900)",
+        "Schedule!F18": "=SUM(F9,F12,F15)",
+        "Schedule!G15": "=-PPMT(Parameters!G2,2,6,900)",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H15": "=-PPMT(Parameters!G2,3,6,900)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I15": "=-PPMT(Parameters!G2,4,6,900)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J15": "=-PPMT(Parameters!G2,5,6,900)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K15": "=-PPMT(Parameters!G2,6,6,900)",
+        "Schedule!K18": "=SUM(K9,K12,K15)"
+      },
+      "scenario": "positive_principal",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "errors": [
+        "Schedule!G18",
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18",
+        "Schedule!L18"
+      ],
+      "expected_formulas": {
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L18": "=SUM(L9,L12,L15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!G18",
+          "injected_formula": "=G9+G12-G15",
+          "original_formula": "=SUM(G9,G12,G15)"
+        },
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=H9+H12-H15",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=I9+I12-I15",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=J9+J12-J15",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=K9+K12-K15",
+          "original_formula": "=SUM(K9,K12,K15)"
+        },
+        {
+          "cell": "Schedule!L18",
+          "injected_formula": "=L9+L12-L15",
+          "original_formula": "=SUM(L9,L12,L15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!G15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!G18": "=G9+G12-G15",
+        "Schedule!H15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!H18": "=H9+H12-H15",
+        "Schedule!I15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!I18": "=I9+I12-I15",
+        "Schedule!J15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!J18": "=J9+J12-J15",
+        "Schedule!K15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!K18": "=K9+K12-K15",
+        "Schedule!L15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!L18": "=L9+L12-L15"
+      },
+      "scenario": "duplicate_role",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "errors": [
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18",
+        "Schedule!L18",
+        "Schedule!M18"
+      ],
+      "expected_formulas": {
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L18": "=SUM(L9,L12,L15)",
+        "Schedule!M18": "=SUM(M9,M12,M15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=H9+H12-H15",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=I9+I12-I15",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=J9+J12-J15",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=K9+K12-K15",
+          "original_formula": "=SUM(K9,K12,K15)"
+        },
+        {
+          "cell": "Schedule!L18",
+          "injected_formula": "=L9+L12-L15",
+          "original_formula": "=SUM(L9,L12,L15)"
+        },
+        {
+          "cell": "Schedule!M18",
+          "injected_formula": "=M9+M12-M15",
+          "original_formula": "=SUM(M9,M12,M15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!H15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!H18": "=H9+H12-H15",
+        "Schedule!I15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!I18": "=I9+I12-I15",
+        "Schedule!J15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!J18": "=J9+J12-J15",
+        "Schedule!K15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!K18": "=K9+K12-K15",
+        "Schedule!L15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!L18": "=L9+L12-L15",
+        "Schedule!M15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!M18": "=M9+M12-M15"
+      },
+      "scenario": "hidden_upstream",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "errors": [
+        "Schedule!F18",
+        "Schedule!G18",
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18"
+      ],
+      "expected_formulas": {
+        "Schedule!F18": "=SUM(F9,F12,F15)",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!F18",
+          "injected_formula": "=F9+F12-F15",
+          "original_formula": "=SUM(F9,F12,F15)"
+        },
+        {
+          "cell": "Schedule!G18",
+          "injected_formula": "=G9+G12-G15",
+          "original_formula": "=SUM(G9,G12,G15)"
+        },
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=H9+H12-H15",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=I9+I12-I15",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=J9+J12-J15",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=K9+K12-K15",
+          "original_formula": "=SUM(K9,K12,K15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!F15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!F18": "=F9+F12-F15",
+        "Schedule!G15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!G18": "=G9+G12-G15",
+        "Schedule!H15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!H18": "=H9+H12-H15",
+        "Schedule!I15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!I18": "=I9+I12-I15",
+        "Schedule!J15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!J18": "=J9+J12-J15",
+        "Schedule!K15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!K18": "=K9+K12-K15"
+      },
+      "scenario": "conflicting_instruction",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__non_ppmt",
+      "errors": [],
+      "expected_formulas": {
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L18": "=SUM(L9,L12,L15)"
+      },
+      "family": "debt",
+      "injection_records": [],
+      "observed_formulas": {
+        "Parameters!G2": "=INDEX(B2:C2,E2)",
+        "Schedule!G15": "=-160",
+        "Schedule!G18": "=SUM(G9,G12,G15)",
+        "Schedule!H15": "=-160",
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I15": "=-160",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J15": "=-160",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K15": "=-160",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L15": "=-160",
+        "Schedule!L18": "=SUM(L9,L12,L15)"
+      },
+      "scenario": "non_ppmt",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "errors": [
+        "Schedule!H18",
+        "Schedule!I18",
+        "Schedule!J18",
+        "Schedule!K18",
+        "Schedule!L18",
+        "Schedule!M18"
+      ],
+      "expected_formulas": {
+        "Schedule!H18": "=SUM(H9,H12,H15)",
+        "Schedule!I18": "=SUM(I9,I12,I15)",
+        "Schedule!J18": "=SUM(J9,J12,J15)",
+        "Schedule!K18": "=SUM(K9,K12,K15)",
+        "Schedule!L18": "=SUM(L9,L12,L15)",
+        "Schedule!M18": "=SUM(M9,M12,M15)"
+      },
+      "family": "debt",
+      "injection_records": [
+        {
+          "cell": "Schedule!H18",
+          "injected_formula": "=H9+H12-H15",
+          "original_formula": "=SUM(H9,H12,H15)"
+        },
+        {
+          "cell": "Schedule!I18",
+          "injected_formula": "=I9+I12-I15",
+          "original_formula": "=SUM(I9,I12,I15)"
+        },
+        {
+          "cell": "Schedule!J18",
+          "injected_formula": "=J9+J12-J15",
+          "original_formula": "=SUM(J9,J12,J15)"
+        },
+        {
+          "cell": "Schedule!K18",
+          "injected_formula": "=K9+K12-K15",
+          "original_formula": "=SUM(K9,K12,K15)"
+        },
+        {
+          "cell": "Schedule!L18",
+          "injected_formula": "=L9+L12-L15",
+          "original_formula": "=SUM(L9,L12,L15)"
+        },
+        {
+          "cell": "Schedule!M18",
+          "injected_formula": "=M9+M12-M15",
+          "original_formula": "=SUM(M9,M12,M15)"
+        }
+      ],
+      "observed_formulas": {
+        "Parameters!G2": "=SQRT(0.0016)",
+        "Schedule!H15": "=PPMT(Parameters!G2,1,6,900)",
+        "Schedule!H18": "=H9+H12-H15",
+        "Schedule!I15": "=PPMT(Parameters!G2,2,6,900)",
+        "Schedule!I18": "=I9+I12-I15",
+        "Schedule!J15": "=PPMT(Parameters!G2,3,6,900)",
+        "Schedule!J18": "=J9+J12-J15",
+        "Schedule!K15": "=PPMT(Parameters!G2,4,6,900)",
+        "Schedule!K18": "=K9+K12-K15",
+        "Schedule!L15": "=PPMT(Parameters!G2,5,6,900)",
+        "Schedule!L18": "=L9+L12-L15",
+        "Schedule!M15": "=PPMT(Parameters!G2,6,6,900)",
+        "Schedule!M18": "=M9+M12-M15"
+      },
+      "scenario": "unsupported_upstream",
+      "scope": "authored development local intent; upstream formulas not business-certified"
+    }
+  ],
+  "final_validation_eligible": false
+}

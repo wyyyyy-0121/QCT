@@ -9,7 +9,7 @@ import math
 
 from formulaguard.a1 import parse_address, num_to_col
 from dependency_execution_dev31_v2 import Executor
-from relation_algebra_dev30 import equivalent
+from relation_algebra_dev32 import Comparator
 from selector_dev11 import syntax_evidence
 from visible_relations_dev30 import Context, norm, EXCEPTION, INSTRUCTION
 
@@ -26,19 +26,32 @@ class Hypotheses:
         self.model = model
         self.context = Context(model)
         self.engine = Executor(model, inputs)
+        self.algebra = Comparator(model)
+        self.blocker_cache = {}
         self.by_column = defaultdict(list)
         for sheet, texts in self.context.texts.items():
             for item in texts:
                 self.by_column[sheet, item['col']].append(item)
 
     def blockers(self, sheet, names):
+        key = sheet, tuple(sorted(names))
+        if key in self.blocker_cache:
+            reason = self.blocker_cache[key]
+            if reason:
+                raise ValueError(reason)
+            return
         for item in self.context.texts[sheet]:
             if not item['visible']: continue
             text = norm(item['text'])
             if EXCEPTION.search(text):
-                raise ValueError('visible_exception_or_policy_note:' + item['address'])
+                reason = 'visible_exception_or_policy_note:' + item['address']
+                self.blocker_cache[key] = reason
+                raise ValueError(reason)
             if INSTRUCTION.search(text) and any(name in text for name in names):
-                raise ValueError('unverified_visible_instruction:' + item['address'])
+                reason = 'unverified_visible_instruction:' + item['address']
+                self.blocker_cache[key] = reason
+                raise ValueError(reason)
+        self.blocker_cache[key] = None
 
     def value(self, key, low=None, high=None):
         if not self.model.is_visible(key):
@@ -122,7 +135,7 @@ class Hypotheses:
         observed = self.model.formulas[sheet, address]
         if not syntax_evidence(observed)['supported'] or not syntax_evidence(candidate)['supported']:
             raise ValueError('complete_ast_pair_required')
-        if equivalent(observed, candidate, sheet, self.model):
+        if self.algebra.equivalent(observed, candidate, sheet):
             return dict(status='abstain', suggested_formula=None, reason='observed_matches_hypothesis', evidence=evidence)
         original = self.engine.execute((sheet, address))
         if original['status'] != 'executed' or original['value']['kind'] != 'number':

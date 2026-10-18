@@ -40,6 +40,8 @@ def prepare():
     sources=sorted((ROOT/'scripts').glob('*.py'))+sorted((ROOT/'baseline/source').rglob('*.py'))
     sources += [Path(__file__),ROOT/'qa/prepare_conditioned_controls_dev32.py',
                 ROOT/'qa/verify_conditioned_relations_dev32.py',ROOT/'tests/test_conditioned_relations_dev32.py',
+                ROOT/'tests/test_relation_algebra_dev32.py',
+                ROOT/'qa/hard_reference_string_execution_dev28.py',ROOT/'qa/run_string_execution_dev28.py',
                 ROOT/'qa/run_visible_relations_dev30.py',ROOT/'baseline/scripts/predict.py',
                 ROOT/'CONDITIONED_RELATIONS_DEV32_PREREGISTRATION_20261018.md']
     old_locks=[ROOT/'development'/p for p in [

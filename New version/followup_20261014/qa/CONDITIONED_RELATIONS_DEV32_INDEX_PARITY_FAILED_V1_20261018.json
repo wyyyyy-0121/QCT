@@ -1,0 +1,59 @@
+{
+  "case": "regression/sparse_seed101",
+  "differences": [
+    [
+      "/combined/7/evidence/original_execution/accessed/0",
+      "['Central', 'B662']",
+      "('Central', 'B662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/accessed/1",
+      "['Central', 'C662']",
+      "('Central', 'C662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/accessed/2",
+      "['Central', 'D662']",
+      "('Central', 'D662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/accessed/3",
+      "['Central', 'E662']",
+      "('Central', 'E662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/accessed/4",
+      "['Central', 'F662']",
+      "('Central', 'F662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/accessed/5",
+      "['Central', 'G662']",
+      "('Central', 'G662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/accessed/6",
+      "['Central', 'I662']",
+      "('Central', 'I662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/audit/formula_cells/0",
+      "['Central', 'I662']",
+      "('Central', 'I662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/audit/cells/0",
+      "['Central', 'B662']",
+      "('Central', 'B662')"
+    ],
+    [
+      "/combined/7/evidence/original_execution/audit/cells/1",
+      "['Central', 'C662']",
+      "('Central', 'C662')"
+    ]
+  ],
+  "elapsed_seconds": 6.089890597000704,
+  "full_prediction_equal": false,
+  "old_sha256": "c366848a4b97e14d547da361f5f5918cbe9298046e9e5d79edbd65e72af4b0ef",
+  "truth_read": false
+}

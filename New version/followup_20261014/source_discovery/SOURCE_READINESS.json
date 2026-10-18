@@ -994,5 +994,65 @@
     "accepted_families": 0
   },
   "verified_natural_development_truth_pairs": 1,
-  "natural_pairs_dev27_report": "DEV27_NATURAL_PAIRS_REPORT_20261018.md"
+  "natural_pairs_dev27_report": "DEV27_NATURAL_PAIRS_REPORT_20261018.md",
+  "natural_fix_metadata_dev32": {
+    "receipt": "source_discovery/natural_fix_metadata_dev32_20261018/LINEAGE_RECEIPT.json",
+    "two_distinct_version_chains": [
+      {
+        "origin": "micro-solution/BPA",
+        "file": "BPA/Business planning.xlsm",
+        "before_commit": "5d462b8ffa4e03a2eefe441b879bd23d52558e09",
+        "after_commit": "bc9918fa2947b5c3823fc782809dc67f68e5b16b",
+        "body_acquired": false,
+        "accepted": false,
+        "fork": false,
+        "parent": null,
+        "license": null,
+        "before_blob": "7350d2839bc23ecf1c64663c58e60948c8ea3300",
+        "before_bytes": 335519,
+        "after_blob": "202d76248a45444670ea0b970a2689bc38dd3832",
+        "after_bytes": 338077,
+        "distinct_binary_versions": true,
+        "remaining_gates": [
+          "whole-origin historical overlap and related-template audit",
+          "freeze model and evaluation protocol before workbook/answer bodies",
+          "predict original and lock before correction version",
+          "literal OOXML formula/input diff and semantic certification",
+          "all proposals adjudicable and family deduplication"
+        ]
+      },
+      {
+        "origin": "drjlevi6/Data-Scientist",
+        "file": "Linear Regression/Weights.xlsx",
+        "before_commit": "6f52de87c8f30a46bc4be36b9cdc9206036d88a3",
+        "after_commit": "c071cf71a81a7ba43a1cf4712c67a6925bfa52bf",
+        "body_acquired": false,
+        "accepted": false,
+        "fork": false,
+        "parent": null,
+        "license": null,
+        "before_blob": "86ed27f5c118084e9909a40fbb6edbd6b3ca9beb",
+        "before_bytes": 196166,
+        "after_blob": "1f17d094a4520fd8446d6853b3748890e4ad5a06",
+        "after_bytes": 39580,
+        "distinct_binary_versions": true,
+        "remaining_gates": [
+          "whole-origin historical overlap and related-template audit",
+          "freeze model and evaluation protocol before workbook/answer bodies",
+          "predict original and lock before correction version",
+          "literal OOXML formula/input diff and semantic certification",
+          "all proposals adjudicable and family deduplication"
+        ]
+      }
+    ],
+    "status": "two original repository parent/correction binary chains pinned; formula truth unverified",
+    "workbook_bodies_acquired": 0,
+    "accepted_sources": 0,
+    "accepted_template_families": 0,
+    "search_failure_retained": "one commit search failed with IncompleteRead; no success assumed",
+    "other_candidates_rejected_as_pair_evidence": [
+      "ajohns30/ECS101PROJ2 removed original without a paired correction",
+      "alexandredesousa/everis_python_exercise added a recalculation workbook; no verified original formula pair"
+    ]
+  }
 }
