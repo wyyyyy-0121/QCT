@@ -1,0 +1,48 @@
+test_clean_zero_repair_label_is_not_a_wrong_formula_certificate (test_certified_labels_dev22.CertifiedLabelTests.test_clean_zero_repair_label_is_not_a_wrong_formula_certificate) ... ERROR
+test_error_keeps_inherited_accepted_repair_labels_and_explicit_bad_keep (test_certified_labels_dev22.CertifiedLabelTests.test_error_keeps_inherited_accepted_repair_labels_and_explicit_bad_keep) ... ERROR
+test_unknown_scope_does_not_infer_keep_correctness_from_candidate_absence (test_certified_labels_dev22.CertifiedLabelTests.test_unknown_scope_does_not_infer_keep_correctness_from_candidate_absence) ... ERROR
+test_both_wrong_and_unknown_never_acquire_invented_preferences (test_certified_preferences_dev22.CertifiedPreferencesTests.test_both_wrong_and_unknown_never_acquire_invented_preferences) ... ok
+test_cap_is_per_target_keep_is_preserved_and_order_is_deterministic (test_certified_preferences_dev22.CertifiedPreferencesTests.test_cap_is_per_target_keep_is_preserved_and_order_is_deterministic) ... ok
+test_clean_observed_formula_has_certified_direction_and_exact_mirror (test_certified_preferences_dev22.CertifiedPreferencesTests.test_clean_observed_formula_has_certified_direction_and_exact_mirror) ... ok
+test_missing_keep_duplicate_ids_and_invalid_states_fail_closed (test_certified_preferences_dev22.CertifiedPreferencesTests.test_missing_keep_duplicate_ids_and_invalid_states_fail_closed) ... ok
+
+======================================================================
+ERROR: test_clean_zero_repair_label_is_not_a_wrong_formula_certificate (test_certified_labels_dev22.CertifiedLabelTests.test_clean_zero_repair_label_is_not_a_wrong_formula_certificate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/tests/test_certified_labels_dev22.py", line 13, in test_clean_zero_repair_label_is_not_a_wrong_formula_certificate
+    a=case_alternatives(p,t,{'equivalent':0})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/prepare_certified_labels_dev22.py", line 25, in case_alternatives
+    alternatives.append(dict(id=KEEP,cell=cell,case=item['case'],kind='keep',label=y))
+                                                    ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_error_keeps_inherited_accepted_repair_labels_and_explicit_bad_keep (test_certified_labels_dev22.CertifiedLabelTests.test_error_keeps_inherited_accepted_repair_labels_and_explicit_bad_keep)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/tests/test_certified_labels_dev22.py", line 21, in test_error_keeps_inherited_accepted_repair_labels_and_explicit_bad_keep
+    a=case_alternatives(p,t,{'0':0,'1':1,'2':None})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/prepare_certified_labels_dev22.py", line 25, in case_alternatives
+    alternatives.append(dict(id=KEEP,cell=cell,case=item['case'],kind='keep',label=y))
+                                                    ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_unknown_scope_does_not_infer_keep_correctness_from_candidate_absence (test_certified_labels_dev22.CertifiedLabelTests.test_unknown_scope_does_not_infer_keep_correctness_from_candidate_absence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/tests/test_certified_labels_dev22.py", line 27, in test_unknown_scope_does_not_infer_keep_correctness_from_candidate_absence
+    a=case_alternatives(p,t,{'x':None})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/prepare_certified_labels_dev22.py", line 25, in case_alternatives
+    alternatives.append(dict(id=KEEP,cell=cell,case=item['case'],kind='keep',label=y))
+                                                    ^^^^
+NameError: name 'item' is not defined
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (errors=3)
