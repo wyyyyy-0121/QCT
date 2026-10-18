@@ -1,0 +1,158 @@
+{
+  "old213": {
+    "dev11": {
+      "suggestions": 14213,
+      "correct": 14184,
+      "errors": 18073,
+      "unknown": 0,
+      "precision": 0.9979596144374868,
+      "coverage": 0.7848171305261993
+    },
+    "conditioned_only": {
+      "suggestions": 21242,
+      "correct": 16650,
+      "errors": 18073,
+      "unknown": 0,
+      "precision": 0.7838244986347801,
+      "coverage": 0.9212637636252974
+    },
+    "combined": {
+      "suggestions": 22225,
+      "correct": 17629,
+      "errors": 18073,
+      "unknown": 0,
+      "precision": 0.7932058492688414,
+      "coverage": 0.9754329663033254
+    }
+  },
+  "public_original": {
+    "dev11": {
+      "suggestions": 1,
+      "correct": 0,
+      "errors": 0,
+      "unknown": 1,
+      "precision": 0.0,
+      "coverage": null
+    },
+    "conditioned_only": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 0,
+      "unknown": 0,
+      "precision": null,
+      "coverage": null
+    },
+    "combined": {
+      "suggestions": 1,
+      "correct": 0,
+      "errors": 0,
+      "unknown": 1,
+      "precision": 0.0,
+      "coverage": null
+    }
+  },
+  "natural_original": {
+    "dev11": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 505,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "conditioned_only": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 505,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "combined": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 505,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    }
+  },
+  "string_control": {
+    "dev11": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 96,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "conditioned_only": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 96,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "combined": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 96,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    }
+  },
+  "new_control": {
+    "dev11": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 40,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "conditioned_only": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 40,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "combined": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 40,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    }
+  },
+  "conditioned_control": {
+    "dev11": {
+      "suggestions": 0,
+      "correct": 0,
+      "errors": 96,
+      "unknown": 0,
+      "precision": null,
+      "coverage": 0.0
+    },
+    "conditioned_only": {
+      "suggestions": 54,
+      "correct": 36,
+      "errors": 96,
+      "unknown": 0,
+      "precision": 0.6666666666666666,
+      "coverage": 0.375
+    },
+    "combined": {
+      "suggestions": 54,
+      "correct": 36,
+      "errors": 96,
+      "unknown": 0,
+      "precision": 0.6666666666666666,
+      "coverage": 0.375
+    }
+  }
+}

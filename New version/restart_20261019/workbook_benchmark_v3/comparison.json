@@ -1,0 +1,42 @@
+{
+  "output_hashes_identical_1_4_8": true,
+  "source_sha256": {
+    "tools/audit_weights_alignment.py": "f487c983ad272d48f5abc8241ed74e64bdd1667d2acb34ade5833f4f275410f8",
+    "tools/audit_weights_pair.py": "263f47a49afdfc8d01bd645a058e3526ad52e58d03c68b2b81417a368f09dd28",
+    "tools/batch_runner.py": "7406c5746fd96dca2dba5cbefa0e7b93a061772c5e3ab9359b1278e21ec59382",
+    "tools/benchmark_worker.py": "1fafc726718189800f97a51558d8c98255bf6f5ad06c6bbf7de429810e44f216",
+    "tools/predict_workbook.py": "3158296c2db3a6d453eb33666ef47e5f2522c80550d3a9fb1c1ad886693b76e3",
+    "tools/run_batch_benchmark.py": "a11c2effda591ba2886fb5aa13eed31ceee7a5613f42fbd1fbeebcc8570b8da5",
+    "tools/run_workbook_benchmark.py": "f54a75d8ac65d911251e160e6eb3d28111f6aca432f205f2d7622226670cefa2",
+    "tools/test_batch_runner.py": "9c90066f2898721045503206617dc4cb25f667cb9fdbecda6a38800b95e57f0e",
+    "tools/verify_dev32_metrics.py": "50f618efc34b0a32ee06cb53cc881cc13736c73ebb6e4805c5f2f507b609d11b"
+  },
+  "scope": "full paper SG/FG and dev11, eight revealed crossdomain workbooks; not accuracy validation",
+  "source_inputs_unchanged": true,
+  "workers": {
+    "1": {
+      "wall_seconds": 2.1263947369952803,
+      "child_cpu_seconds": 1.73,
+      "aggregate_peak_rss_bytes_sampled": 52699136,
+      "throughput_tasks_per_second": 3.7622365503521076,
+      "all_tasks_complete": true,
+      "speedup_vs_one_worker": 1.0
+    },
+    "4": {
+      "wall_seconds": 0.6364553009989322,
+      "child_cpu_seconds": 1.98,
+      "aggregate_peak_rss_bytes_sampled": 207994880,
+      "throughput_tasks_per_second": 12.569617988009218,
+      "all_tasks_complete": true,
+      "speedup_vs_one_worker": 3.3409961919680007
+    },
+    "8": {
+      "wall_seconds": 0.37821056600660086,
+      "child_cpu_seconds": 2.3500000000000005,
+      "aggregate_peak_rss_bytes_sampled": 416354304,
+      "throughput_tasks_per_second": 21.15223824778173,
+      "all_tasks_complete": true,
+      "speedup_vs_one_worker": 5.622251010719168
+    }
+  }
+}

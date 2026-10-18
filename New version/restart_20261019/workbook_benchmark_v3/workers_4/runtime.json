@@ -1,0 +1,230 @@
+{
+  "schema": "hybridguard-batch-runtime-v1",
+  "created_utc": "2026-10-18T19:29:41.661550+00:00",
+  "manifest_sha256": "481c2e3d4a67e859fa68eabf01a8032a019c9c3c072617dc21823998be023fac",
+  "task_count": 8,
+  "worker_count": 4,
+  "numeric_library_thread_limit": 1,
+  "requested_worker_count": 4,
+  "available_memory_bytes_at_start": 15071711232,
+  "memory_budget_bytes_at_start": 10550197862,
+  "estimated_worker_memory_mib": 1024,
+  "memory_limit_note": "admission estimate, not a hard OS memory limit",
+  "wall_seconds": 0.6364553009989322,
+  "child_cpu_seconds": 1.98,
+  "cpu_accounting_complete": true,
+  "aggregate_peak_rss_bytes_sampled": 207994880,
+  "throughput_tasks_per_second": 12.569617988009218,
+  "speedup_vs_one_worker": null,
+  "all_tasks_complete": true,
+  "tasks": [
+    {
+      "id": "x11",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x11.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x11",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.266413391000242,
+      "child_cpu_seconds": 0.25,
+      "child_peak_rss_bytes": 49278976,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x11/combined.log",
+      "output_sha256": {
+        "prediction.json": "f1cae52896f6197126394f2af3da2d65ddce2697d2aea4cd73e9e2bce4461a2d"
+      }
+    },
+    {
+      "id": "x12",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x12.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x12",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.3153124190066592,
+      "child_cpu_seconds": 0.26,
+      "child_peak_rss_bytes": 49713152,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x12/combined.log",
+      "output_sha256": {
+        "prediction.json": "a5a238b698c47622e952e1b9a0bb7deb3a48dca9ea0d9879d002df1a5045d856"
+      }
+    },
+    {
+      "id": "x13",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x13.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x13",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.3156908789969748,
+      "child_cpu_seconds": 0.26,
+      "child_peak_rss_bytes": 49512448,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x13/combined.log",
+      "output_sha256": {
+        "prediction.json": "6892add83c49ecb5cf2bfd8137be616224794c9a3246d222f410d2ce37ec98ab"
+      }
+    },
+    {
+      "id": "x14",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x14.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x14",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.3149360559982597,
+      "child_cpu_seconds": 0.25,
+      "child_peak_rss_bytes": 49799168,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x14/combined.log",
+      "output_sha256": {
+        "prediction.json": "f1ae1cd00a680701de6d4fe3cb2cfdc0676ad3ce14f9e40f2de8fe12cb037578"
+      }
+    },
+    {
+      "id": "x15",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x15.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x15",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.26450493399897823,
+      "child_cpu_seconds": 0.22,
+      "child_peak_rss_bytes": 49545216,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x15/combined.log",
+      "output_sha256": {
+        "prediction.json": "922cf306e003a8c5f1eafd9a0b2034bb192e9e4529bcb00b68cfe45c54a8b6cb"
+      }
+    },
+    {
+      "id": "x16",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x16.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x16",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.2644690500019351,
+      "child_cpu_seconds": 0.22999999999999998,
+      "child_peak_rss_bytes": 49807360,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x16/combined.log",
+      "output_sha256": {
+        "prediction.json": "edb852e1cbdf22d20961e6f009f49826973b3318bf310732f45b6da9b4450704"
+      }
+    },
+    {
+      "id": "x17",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x17.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x17",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.31495473600080004,
+      "child_cpu_seconds": 0.26,
+      "child_peak_rss_bytes": 50290688,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x17/combined.log",
+      "output_sha256": {
+        "prediction.json": "eb9384f9ea43e9f7c42bb04175270e7f277e68a3ae0226122a6b8ce088f83e6d"
+      }
+    },
+    {
+      "id": "x18",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/followup_20261014/development/crossdomain_dev1/inputs/x18.xlsx",
+        "--output",
+        "prediction.json",
+        "--parallel-sheets",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x18",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.2648842170019634,
+      "child_cpu_seconds": 0.25,
+      "child_peak_rss_bytes": 50331648,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/workbook_benchmark_v3/workers_4/tasks/x18/combined.log",
+      "output_sha256": {
+        "prediction.json": "cade5ef6f12adebc3d69ad5e2304112bf4f0e4402e39ce79e4cbf569e0636b85"
+      }
+    }
+  ]
+}

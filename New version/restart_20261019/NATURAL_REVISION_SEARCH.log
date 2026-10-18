@@ -1,0 +1,455 @@
+{
+  "queries": [
+    {
+      "url": "https://api.github.com/search/commits?q=%22corrected+formula%22+xlsx&per_page=10",
+      "name": "query_0",
+      "acquired_utc": "2026-10-18T19:31:12.642090+00:00",
+      "status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=%22corrected+formula%22+xlsx&per_page=10",
+      "ok": true,
+      "sha256": "e446dbdb668c28a0b05c29a3ad875c36971d7b876ebbd101e43cabde44fd7dec",
+      "query": "\"corrected formula\" xlsx",
+      "total_count": 393
+    },
+    {
+      "url": "https://api.github.com/search/commits?q=%22formula+error%22+spreadsheet&per_page=10",
+      "name": "query_1",
+      "acquired_utc": "2026-10-18T19:31:13.981731+00:00",
+      "status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=%22formula+error%22+spreadsheet&per_page=10",
+      "ok": true,
+      "sha256": "2bbe593f1be2c3d4ceb0dda810c8bad12c9992b6f8cfd25359ae86fcede01817",
+      "query": "\"formula error\" spreadsheet",
+      "total_count": 249
+    },
+    {
+      "url": "https://api.github.com/search/commits?q=%22fix+formula%22+xlsm&per_page=10",
+      "name": "query_2",
+      "acquired_utc": "2026-10-18T19:31:15.324231+00:00",
+      "status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=%22fix+formula%22+xlsm&per_page=10",
+      "ok": true,
+      "sha256": "76c67822d5a8ceb4c77955c332a6435ef7ffe660335fa3ab603f1cb94523413a",
+      "query": "\"fix formula\" xlsm",
+      "total_count": 22
+    }
+  ],
+  "commit_candidates": [
+    {
+      "origin": "jekumura/jennifer-kumura",
+      "sha": "c9dc425f6ebc9080d7dde705cc0907fb151a0e77",
+      "message": "Removed section in spec\n\nUpdated the cost model in the spec to reflect accurate wage assumptions and corrected formulas. Regenerated the model.xlsx based on the revised spec, ensuring all checks pass and addressing previous discrepancies.",
+      "url": "https://api.github.com/repos/jekumura/jennifer-kumura/commits/c9dc425f6ebc9080d7dde705cc0907fb151a0e77",
+      "request": {
+        "url": "https://api.github.com/repos/jekumura/jennifer-kumura/commits/c9dc425f6ebc9080d7dde705cc0907fb151a0e77",
+        "name": "commit_0",
+        "acquired_utc": "2026-10-18T19:31:16.143585+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/jekumura/jennifer-kumura/commits/c9dc425f6ebc9080d7dde705cc0907fb151a0e77",
+        "ok": true,
+        "sha256": "75b20d5efd5def07598a4dd2ba0493bc1d7c74f302fbc9cd859d1ac547339dbb"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "743797f203a55157f7feb2fac35a7c87bde5d342"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "yes5528876/exo_itri",
+      "sha": "d0872da2d3efa07380433156140fd5fdb0623ef8",
+      "message": "Add patient load to lumbar model and clean up spec docs\n\nWire the moved patient's weight into the lumbar compression model so\nW_upper = body_weight \u00d7 0.6 + patient_weight, matching the real\ncaregiving load during \u64fa\u4f4d/\u79fb\u5e8a tasks.\n\n- app.py: add \"\u8001\u4eba\u91cd\u91cf\" sidebar input, pass as load_kg to compute_all,\n  record it in subject_info\n- database.py: add patient_kg column with \u8001\u4eba\u91cd\u91cf(kg) label\n- Add regenerated biomechanics spec (IMU_exo_revised.docx) with corrected\n  formulas and embedded diagrams, plus generation scripts\n  (gen_rewrite.py, gen_figures.py) and figures (doc_imgs/)\n- Remove tracked LibreOffice lock files and runtime-generated\n  exo_records.xlsx; gitignore *.xlsx, lock files, and temp dumps\n\nCo-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>",
+      "url": "https://api.github.com/repos/yes5528876/exo_itri/commits/d0872da2d3efa07380433156140fd5fdb0623ef8",
+      "request": {
+        "url": "https://api.github.com/repos/yes5528876/exo_itri/commits/d0872da2d3efa07380433156140fd5fdb0623ef8",
+        "name": "commit_1",
+        "acquired_utc": "2026-10-18T19:31:16.143873+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/yes5528876/exo_itri/commits/d0872da2d3efa07380433156140fd5fdb0623ef8",
+        "ok": true,
+        "sha256": "8f4621c5ea96e0c8f63375507a5174ddafec6c97276432ee3df4371e9facaef9"
+      },
+      "changed_workbook_paths": [
+        {
+          "filename": "exo_records.xlsx",
+          "status": "removed",
+          "sha": "69e79198b06fa11787a84c537cec428fa177c0fa",
+          "previous_filename": null
+        }
+      ],
+      "parents": [
+        "4e777299448a3faaaf1fdac8978f314fc0e9d1e4"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "pitchingwrx/pitchingwrx-reports",
+      "sha": "ba329c9590d2176dbde2ade6f29323f1987b9e78",
+      "message": "Fix count-column corruption and enable CSV uploads\n\n- _fix_count() (pwrx_db.py) and fix_count() (generate_report.py) used the\n  wrong reversal formula for count values Excel auto-converted to dates,\n  silently misattributing real counts to the wrong bucket instead of\n  recovering them (e.g. a real \"1-2\" was being written back as \"0-1\").\n  Root-caused and fixed via a real paired CSV/XLSX export of the same 80\n  pitches: Excel parses \"B-S\" as Month-Year when S==0 (bare \"0\" reads as a\n  2-digit year) and as Month-Day of the current year otherwise. Corrected\n  formula (balls=month, strikes=0 if year==2000 else day) verified with\n  zero mismatches across all 80 real pitches.\n- CSV uploads have never actually worked: pd.read_excel() cannot parse CSV\n  bytes at all, but every endpoint hardcoded the temp file as .xlsx\n  regardless of the real uploaded format. This is very likely why the count\n  corruption happens in the first place -- a failed CSV upload gets worked\n  around by resaving as .xlsx in Excel, which is exactly the action that\n  corrupts the count column. Fixed main.py to preserve the real uploaded\n  extension, and made pwrx_db.py/generate_report.py's file readers\n  extension-aware (.csv -> pd.read_csv, else -> pd.read_excel).",
+      "url": "https://api.github.com/repos/pitchingwrx/pitchingwrx-reports/commits/ba329c9590d2176dbde2ade6f29323f1987b9e78",
+      "request": {
+        "url": "https://api.github.com/repos/pitchingwrx/pitchingwrx-reports/commits/ba329c9590d2176dbde2ade6f29323f1987b9e78",
+        "name": "commit_2",
+        "acquired_utc": "2026-10-18T19:31:16.144185+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/pitchingwrx/pitchingwrx-reports/commits/ba329c9590d2176dbde2ade6f29323f1987b9e78",
+        "ok": true,
+        "sha256": "323ee113f5063a21c811a25620bf633ce89bf6eabb2e54a4b5b2fcbaf4d66a9e"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "c5b71434ac20847487e73c46ea59e2e9bf894946"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "atdevala/stock-terminal",
+      "sha": "c8b041374d77377581965068046b0fcffa6e3fed",
+      "message": "Update financial tracker with accurate historical price calculations\n\nCorrected formulas in `scripts/export_to_google_sheets.py` for 1-week, 1-month, 3-month, and YTD percentage changes, and updated `Financial_Stock_Tracker.xlsx`.\n\nReplit-Commit-Author: Agent\nReplit-Commit-Session-Id: 446703a2-d267-4c78-8ea2-52fa9ec39ac1\nReplit-Commit-Checkpoint-Type: full_checkpoint\nReplit-Commit-Event-Id: e1cc2471-51a8-4d57-a71c-007fc355409b\nReplit-Helium-Checkpoint-Created: true",
+      "url": "https://api.github.com/repos/atdevala/stock-terminal/commits/c8b041374d77377581965068046b0fcffa6e3fed",
+      "request": {
+        "url": "https://api.github.com/repos/atdevala/stock-terminal/commits/c8b041374d77377581965068046b0fcffa6e3fed",
+        "name": "commit_3",
+        "acquired_utc": "2026-10-18T19:31:16.144473+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/atdevala/stock-terminal/commits/c8b041374d77377581965068046b0fcffa6e3fed",
+        "ok": true,
+        "sha256": "93e69bf77e8b52e393a3a192da694d70b21a4998f96b707133c5c1e6789acc30"
+      },
+      "changed_workbook_paths": [
+        {
+          "filename": "Financial_Stock_Tracker.xlsx",
+          "status": "modified",
+          "sha": "e1eafd986d8228aa30a7e563d8d599fc46dd8947",
+          "previous_filename": null
+        }
+      ],
+      "parents": [
+        "ccb182c9772b910eaad7ad4d5002316dd94e9df5"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "williandcm/meu-gerador-rat",
+      "sha": "caeb11c0ceeafd0552089bf3842035da4eef7015",
+      "message": "refactor: remove broken template approach, use reliable standalone XLSX\n\nSheetJS Community cannot reliably round-trip complex Excel templates.\nRemoved template upload UI and _exportarComTemplate function.\nexportarReembolsoXLSX now always generates a clean standalone XLSX\nwith all 24 columns (A-X), correct formulas, and CPF/CARGO/NOME from config.\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+      "url": "https://api.github.com/repos/williandcm/meu-gerador-rat/commits/caeb11c0ceeafd0552089bf3842035da4eef7015",
+      "request": {
+        "url": "https://api.github.com/repos/williandcm/meu-gerador-rat/commits/caeb11c0ceeafd0552089bf3842035da4eef7015",
+        "name": "commit_4",
+        "acquired_utc": "2026-10-18T19:31:16.844734+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/williandcm/meu-gerador-rat/commits/caeb11c0ceeafd0552089bf3842035da4eef7015",
+        "ok": true,
+        "sha256": "1a1f45de14b55f38c2ee8addb0521c8212d31da3c0b5664896058784f48c175a"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "67a21408881911471c881bc3778d4f7bc1baac22"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "andela-hpopoola/writeragent",
+      "sha": "6096b3036d6a1cdbf0394a82ae6e1c6039990669",
+      "message": "Enhance serialization test generation and XLSX support\n\n- Added `openpyxl` and `numpy` as dependencies for improved XLSX handling.\n- Updated `generate_serialization_test_csv.py` to generate XLSX files with correct `=PYTHON()` formulas and numeric cell values.\n- Refactored `CsvLayout` to `SheetLayout` for better clarity and functionality.\n- Improved test cases to validate XLSX output and ensure correct formula generation.\n- Added README for serialization tests and updated existing tests for compatibility with new layout.",
+      "url": "https://api.github.com/repos/andela-hpopoola/writeragent/commits/6096b3036d6a1cdbf0394a82ae6e1c6039990669",
+      "request": {
+        "url": "https://api.github.com/repos/andela-hpopoola/writeragent/commits/6096b3036d6a1cdbf0394a82ae6e1c6039990669",
+        "name": "commit_5",
+        "acquired_utc": "2026-10-18T19:31:16.928151+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/andela-hpopoola/writeragent/commits/6096b3036d6a1cdbf0394a82ae6e1c6039990669",
+        "ok": true,
+        "sha256": "e3b86b2d3da644c5808a03bdd4ab4dc4b9e3d2dfc534c532a763ac708bd0cc7b"
+      },
+      "changed_workbook_paths": [
+        {
+          "filename": "tests/fixtures/serialization_tests.xlsx",
+          "status": "added",
+          "sha": "2d7f064c20dd4f8550c1d3d3111ebd355a88aab7",
+          "previous_filename": null
+        }
+      ],
+      "parents": [
+        "5e25cc575dac6716992222e9a726920abecb9feb"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "Fogaca-Luiz/VBA",
+      "sha": "a925f2165dced520ccb11fdfd4a9fee5726e0b64",
+      "message": "Implement data consolidation from Acresc to Teste\n\nConsolidate data from Acresc.xlsx into Teste sheet, ensuring chronological order and correcting formulas.",
+      "url": "https://api.github.com/repos/Fogaca-Luiz/VBA/commits/a925f2165dced520ccb11fdfd4a9fee5726e0b64",
+      "request": {
+        "url": "https://api.github.com/repos/Fogaca-Luiz/VBA/commits/a925f2165dced520ccb11fdfd4a9fee5726e0b64",
+        "name": "commit_6",
+        "acquired_utc": "2026-10-18T19:31:17.022279+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/Fogaca-Luiz/VBA/commits/a925f2165dced520ccb11fdfd4a9fee5726e0b64",
+        "ok": true,
+        "sha256": "b5549b55ef55c3a77f0b5110a2aff208f58553dee5585eb6780bbdee3fea01ef"
+      },
+      "changed_workbook_paths": [],
+      "parents": [],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "jekumura/jennifer-kumura",
+      "sha": "765af34ab1c6a2ab9b78e0e748fbde5e6e5350dd",
+      "message": "Re-verify all five validation checks pass, clean up spec.md \u00a711\n\nRe-ran all five required checks against the current spec (v1.3) and\nthe committed model.xlsx (recalculated fresh: 1,078 formulas, 0\nerrors) -- all five pass, matching the acceptance criteria exactly\n(Tomatoes 10/Carrots 20/Mesclun 30, $42,775 profit vs $42,762 target,\nstandalone crossovers 10/10/6).\n\nSection 11 previously carried an orphaned \"Round 1\" table showing the\nchecks failing under the pre-fix wage formula, with its \"Round 2\"\nresolution accidentally deleted in a direct edit -- leaving the spec\nlooking like it still failed even though sections 3-10 already had\nthe corrected formulas. Replaced with a single, current pass/fail\ntable plus a condensed history of how the wage-tier bug was found and\nfixed via the Farm Profit Lab, so the document reads consistently\ntop to bottom.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01JZmuQb8pWEf7KnjUL2U6fH",
+      "url": "https://api.github.com/repos/jekumura/jennifer-kumura/commits/765af34ab1c6a2ab9b78e0e748fbde5e6e5350dd",
+      "request": {
+        "url": "https://api.github.com/repos/jekumura/jennifer-kumura/commits/765af34ab1c6a2ab9b78e0e748fbde5e6e5350dd",
+        "name": "commit_7",
+        "acquired_utc": "2026-10-18T19:31:17.137375+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/jekumura/jennifer-kumura/commits/765af34ab1c6a2ab9b78e0e748fbde5e6e5350dd",
+        "ok": true,
+        "sha256": "686e304992c15ff59c9b4ad634c3f826c45f7ca4718e13a2fec482a2119a728b"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "c9dc425f6ebc9080d7dde705cc0907fb151a0e77"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "anjapope/digitalcollection",
+      "sha": "f4667a22e34047c0bb6450b75da233eb902cfd96",
+      "message": "fix(editorial-workbook): replace IFNA with IFERROR in Placement lookup formulas\n\nIFNA(VLOOKUP(...)) was producing #NAME? errors for all automatic\nPlacement columns (Room ID, Room name, Location, Supported type,\nCapacity) in the target Excel environment. Replace it with IFERROR,\nwhich is universally supported and behaves identically here since the\nwrapped VLOOKUP only ever fails with #N/A.\n\n- utilities/editorial-workbook/build.mjs: swap IFNA -> IFERROR in all\n  5 automatic lookup formulas, preserving lookup ranges and fallback\n  text ('Unknown slot' / 'Unknown room').\n- Regenerate ArchIvory Editorial Workbook.xlsx with the corrected\n  formulas; automatic columns now populate correctly (verified via\n  build.mjs inspect output and workbook.py check).\n- Add a regression test asserting build.mjs never reintroduces IFNA\n  in the generated formulas.\n\nValidation: all 30 editorial-workbook tests pass, workbook.py check\nreports unchanged counts (27 Placements / 45 Slots / etc.), all 12\nroom-placement tests pass, and the Jekyll build succeeds. No slot IDs,\nanchors, room geometry, or _data files were touched.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>",
+      "url": "https://api.github.com/repos/anjapope/digitalcollection/commits/f4667a22e34047c0bb6450b75da233eb902cfd96",
+      "request": {
+        "url": "https://api.github.com/repos/anjapope/digitalcollection/commits/f4667a22e34047c0bb6450b75da233eb902cfd96",
+        "name": "commit_8",
+        "acquired_utc": "2026-10-18T19:31:17.631445+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/anjapope/digitalcollection/commits/f4667a22e34047c0bb6450b75da233eb902cfd96",
+        "ok": true,
+        "sha256": "601f99b3dcf89ec477039d3252e0c0eecc8e03b23ae1f99ee8a303725063f176"
+      },
+      "changed_workbook_paths": [
+        {
+          "filename": "outputs/archivory-editorial/ArchIvory Editorial Workbook.xlsx",
+          "status": "modified",
+          "sha": "0ea0d438a832055bb7e622e6e2901bfa8fd4e47d",
+          "previous_filename": null
+        }
+      ],
+      "parents": [
+        "e82d41cdf6e8118236026404bebb0c0863b5cd25"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "escaladorevan/Estimating-Suite",
+      "sha": "0ad656b20b2147af2cad6a27475c77f1ac86cf8f",
+      "message": "Update REQUIREMENTS.md: add EST-06\u201311, fix EST-03 formula\n\n- EST-03: corrected formula from OH%/profit%/bond% to V2 chain\n  (Material \u2192 OH% \u2192 matOh \u2192 Delivery% + Install% \u2192 Base Bid)\n- EST-06: area/section 3-level hierarchy with area qty multiplier\n- EST-07: project metadata form (GC, architect, bid docs, dates, etc.)\n- EST-08: alternates CRUD, displayed separately from base bid\n- EST-09: ZZTakeoff .xlsx import with preview modal\n- EST-10: exclusions/clarifications with F&S pre-populated defaults\n- EST-11: proposal terms panels (General, Warranty, Finish, Hardware, Fab)\n- Coverage: 49 \u2192 55 v1 requirements\n\nhttps://claude.ai/code/session_018KAB43RzjNwAK4Qnn9DXhZ",
+      "url": "https://api.github.com/repos/escaladorevan/Estimating-Suite/commits/0ad656b20b2147af2cad6a27475c77f1ac86cf8f",
+      "request": {
+        "url": "https://api.github.com/repos/escaladorevan/Estimating-Suite/commits/0ad656b20b2147af2cad6a27475c77f1ac86cf8f",
+        "name": "commit_9",
+        "acquired_utc": "2026-10-18T19:31:17.705748+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/escaladorevan/Estimating-Suite/commits/0ad656b20b2147af2cad6a27475c77f1ac86cf8f",
+        "ok": true,
+        "sha256": "b2c1ea379d51a4f1782c1b4782a7af6a1320ca4bedc848ad02e64ba2a4a02aa8"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "a56667f4d0183a21b119947b10e620e472b7215b"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "ZerNico/neema",
+      "sha": "b932a058c0dc4850019bd6a489175c1ca55d4068",
+      "message": "Keep spreadsheet formula errors when a summary is read back\n\nThe engine reports formula errors as `{ count }`, and the summary stores\nthe number. Reading a stored summary back through the same function looked\nfor `.count` on a number and dropped it, so a reloaded spreadsheet edit lost\nits formula error count while the live row showed it.\n\nAccept either shape, so the summary is the same whether it reads the\nengine's result, a stored row or a stream envelope.",
+      "url": "https://api.github.com/repos/ZerNico/neema/commits/b932a058c0dc4850019bd6a489175c1ca55d4068",
+      "request": {
+        "url": "https://api.github.com/repos/ZerNico/neema/commits/b932a058c0dc4850019bd6a489175c1ca55d4068",
+        "name": "commit_10",
+        "acquired_utc": "2026-10-18T19:31:17.786929+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/ZerNico/neema/commits/b932a058c0dc4850019bd6a489175c1ca55d4068",
+        "ok": true,
+        "sha256": "1eee2e9719e18d0d573e2a27bd6d6c9c9a9b437eae0f5d74c0eca4ab6c635b1f"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "7ecc717db1cc9ec16e460a0e93a31c6f164d6d87"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "porfiriobea-del/eu-gerencio",
+      "sha": "8ba81435795c45da72ac40c4264e2094b6a16587",
+      "message": "Compute spreadsheet summary in Apps Script to eliminate locale formula errors",
+      "url": "https://api.github.com/repos/porfiriobea-del/eu-gerencio/commits/8ba81435795c45da72ac40c4264e2094b6a16587",
+      "request": {
+        "url": "https://api.github.com/repos/porfiriobea-del/eu-gerencio/commits/8ba81435795c45da72ac40c4264e2094b6a16587",
+        "name": "commit_11",
+        "acquired_utc": "2026-10-18T19:31:17.884896+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/porfiriobea-del/eu-gerencio/commits/8ba81435795c45da72ac40c4264e2094b6a16587",
+        "ok": true,
+        "sha256": "e0ccac511dcdce31bbf183d823bfd91c122762a052cadc12b148dba591013272"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "e0f8a8ab819833fe80b1b3b8fcc7b59ed90338e1"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "roccocarlotto-source/PlataformaCRM",
+      "sha": "c7b77f7d3ac9a5ced4fde466b5bd0fed9b2c45a7",
+      "message": "Merge pull request #104 from roccocarlotto-source/fix/spreadsheet-formula-error-b29\n\nfix(spreadsheet): una f\u00f3rmula con error guarda su c\u00f3digo (#N/A), no [object Object] (B-29)",
+      "url": "https://api.github.com/repos/roccocarlotto-source/PlataformaCRM/commits/c7b77f7d3ac9a5ced4fde466b5bd0fed9b2c45a7",
+      "request": {
+        "url": "https://api.github.com/repos/roccocarlotto-source/PlataformaCRM/commits/c7b77f7d3ac9a5ced4fde466b5bd0fed9b2c45a7",
+        "name": "commit_12",
+        "acquired_utc": "2026-10-18T19:31:18.300818+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/roccocarlotto-source/PlataformaCRM/commits/c7b77f7d3ac9a5ced4fde466b5bd0fed9b2c45a7",
+        "ok": true,
+        "sha256": "42d5b88ee670ae405eb1dfc8e835949ee0ada724d8f9142caa1bd4787feab432"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "29ae29e9e89de98930861b7d9234716a370bd246",
+        "39154f03e400fe6e20c161993743ab0effb90fce"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "ksabhinav/projectfiner",
+      "sha": "b897608f802ece9718fe190b738ff9ea42258050",
+      "message": "Remove spreadsheet formula errors from public data (#73)",
+      "url": "https://api.github.com/repos/ksabhinav/projectfiner/commits/b897608f802ece9718fe190b738ff9ea42258050",
+      "request": {
+        "url": "https://api.github.com/repos/ksabhinav/projectfiner/commits/b897608f802ece9718fe190b738ff9ea42258050",
+        "name": "commit_13",
+        "acquired_utc": "2026-10-18T19:31:18.362558+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/ksabhinav/projectfiner/commits/b897608f802ece9718fe190b738ff9ea42258050",
+        "ok": true,
+        "sha256": "12bfcf695b0bdaab451646a424e51c432ba34ab166f8e63a15985a709341787a"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "91b34d9ff7894d7404f4670358cae2e938a01110"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "AstermarkLabs/End-Shift",
+      "sha": "11092a9409323b49237572e4b03b063dc70154a3",
+      "message": "Task #30: Prevent importing a completely empty spreadsheet after all bad rows are skipped\n\nWhen every task row in a spreadsheet contains a formula error (e.g. #REF!,\n#VALUE!), the parser skipped all rows and returned an empty \"General Tasks\"\nsection with skippedRows > 0. The client's generic \"No tasks were found\"\nmessage didn't explain why.\n\nChanges in artifacts/api-server/src/routes/spreadsheet-import.ts:\n\n1. parseSpreadsheet now tracks formulaErrorRows separately from the existing\n   skippedRows counter. Formula-error rows (task/section cell matches\n   EXCEL_ERRORS) increment both; blank-task rows increment only skippedRows.\n   The return type now includes formulaErrorRows.\n\n2. The route handler checks taskCount === 0 && result.formulaErrorRows > 0\n   and returns HTTP 422 with the message:\n   \"All rows contained formula errors \u2014 check the spreadsheet for #REF!,\n   #VALUE!, or other error cells. No tasks were imported.\"\n\n3. The targeted 422 fires only when formula errors caused the empty result,\n   not when the file is simply all-blank rows (which the client handles with\n   its existing \"No tasks were found\" message).\n\n4. The log call includes formulaErrorRows alongside skippedRows for\n   observability on successful imports.\n\nDeviation from original spec: split skippedRows into two counters to avoid\nsurfacing a misleading formula-error message on all-blank-row files (code\nreview comment addressed).\n\nNo client-side changes required; the existing catch block in\nimport-checklist.tsx already surfaces server error messages verbatim.\nTypecheck passes cleanly.\n\nReplit-Task-Id: 3932df30-7039-442f-af18-806337199980",
+      "url": "https://api.github.com/repos/AstermarkLabs/End-Shift/commits/11092a9409323b49237572e4b03b063dc70154a3",
+      "request": {
+        "url": "https://api.github.com/repos/AstermarkLabs/End-Shift/commits/11092a9409323b49237572e4b03b063dc70154a3",
+        "name": "commit_14",
+        "acquired_utc": "2026-10-18T19:31:18.405943+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/AstermarkLabs/End-Shift/commits/11092a9409323b49237572e4b03b063dc70154a3",
+        "ok": true,
+        "sha256": "e2a3ef9d07479dc7f6093a56e6b2df137a731ae970e5139d4d2142ffcd95d29e"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "34711ccc6b24d40cef6d4a1a1398d4ea4d44760c"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "syedhamzaali2k25-alt/Google-Sheets",
+      "sha": "90fe33aab76c21164eb1c6bed13edcd0aed60b7d",
+      "message": "Add spreadsheet health scoring engine and endpoint\n\n- backend/analysis/health_score.py: compute_health_report() scores a\n  spreadsheet 0-100 across five categories (data quality, formula\n  quality, structure, maintainability, security), each scored 0-100 by\n  deducting per-severity penalties from findings, then combined into an\n  overall score via configurable CategoryWeights (20% each by default,\n  normalized if they don't sum to 1)\n- checks per category: duplicate rows, blank required-looking fields,\n  invalid email/phone formats, inconsistent column types (data\n  quality); formula errors (#REF!/#DIV/0!/etc.), inconsistent formulas\n  across a column, broken references (formula quality); empty columns,\n  merged cells, hidden sheets, irregular table shapes (structure);\n  complex/nested formulas, unclear or missing headers, hard-coded\n  values mixed into formula columns (maintainability); emails, phone\n  numbers, SSNs, AWS keys, and generic secret patterns (security)\n- each finding carries category, severity, a human-readable\n  description, the affected cell range, and a recommendation; the\n  report's findings list is sorted highest-severity first\n- new endpoint POST /sheets/{spreadsheet_id}/health, accepting an\n  optional `weights` override and reusing the existing 401/403/404\n  error handling (plus 400 for weights that sum to zero)\n- takes both the SpreadsheetStructure (Step 2) and the raw Sheets API\n  response (Step 1) as input, since several checks \u2014 duplicates,\n  blanks, formula error values, PII-looking cell content \u2014 need actual\n  cell values that the normalized structure intentionally omits\n- renamed structure.py's column_letters/cell_ref/cell_is_non_empty\n  helpers from private to shared so health_score.py can reuse them\n- extended the Step 2 fixture with a formula error, a column with no\n  header, and a fake email address (it already had a duplicate row and\n  an empty column from Step 2), and updated Step 2's tests for the\n  fixture's new dimensions\n- backend/tests/test_health_score.py covers at least one failing case\n  per category plus scoring math, severity sorting, custom/zero\n  weights, and a clean-spreadsheet baseline (22 tests total, all\n  passing)\n\nCaught and fixed a real bug while writing tests: duplicate-row\ndetection hashed each row's raw cell values directly, which crashed\nwith TypeError on any row containing a formula-error cell (value is an\nunhashable dict) \u2014 exactly the kind of row this tool needs to handle.",
+      "url": "https://api.github.com/repos/syedhamzaali2k25-alt/Google-Sheets/commits/90fe33aab76c21164eb1c6bed13edcd0aed60b7d",
+      "request": {
+        "url": "https://api.github.com/repos/syedhamzaali2k25-alt/Google-Sheets/commits/90fe33aab76c21164eb1c6bed13edcd0aed60b7d",
+        "name": "commit_15",
+        "acquired_utc": "2026-10-18T19:31:18.649863+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/syedhamzaali2k25-alt/Google-Sheets/commits/90fe33aab76c21164eb1c6bed13edcd0aed60b7d",
+        "ok": true,
+        "sha256": "f06b8f0df1d4535f69f690b73e0ce614fd622657f719eb5841f57d4ce697f51a"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "3ef47436adcfcad5f375ff7cd1364d4b385572d2"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "bds134/office-hours",
+      "sha": "2307f47a25f74519143965ade9edd2a38936ed47",
+      "message": "Filter out spreadsheet formula errors from appointment dates in slot rendering",
+      "url": "https://api.github.com/repos/bds134/office-hours/commits/2307f47a25f74519143965ade9edd2a38936ed47",
+      "request": {
+        "url": "https://api.github.com/repos/bds134/office-hours/commits/2307f47a25f74519143965ade9edd2a38936ed47",
+        "name": "commit_16",
+        "acquired_utc": "2026-10-18T19:31:19.034375+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/bds134/office-hours/commits/2307f47a25f74519143965ade9edd2a38936ed47",
+        "ok": true,
+        "sha256": "b2c912773cadfe4060bd875933da319e8b4ff6437f7a7cab6dbe83ce16090ba1"
+      },
+      "changed_workbook_paths": [],
+      "parents": [
+        "27849d1009e38626c3b362febb283cb2ebbd6535"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    },
+    {
+      "origin": "Stainlessbrown/StampZ-III-Binary",
+      "sha": "c929f4427fb14c480b1239780225838a6d626329",
+      "message": "Correct spreadsheet rempate formula error",
+      "url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary/commits/c929f4427fb14c480b1239780225838a6d626329",
+      "request": {
+        "url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary/commits/c929f4427fb14c480b1239780225838a6d626329",
+        "name": "commit_17",
+        "acquired_utc": "2026-10-18T19:31:19.057319+00:00",
+        "status": 200,
+        "resolved_url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary/commits/c929f4427fb14c480b1239780225838a6d626329",
+        "ok": true,
+        "sha256": "f264573ad3983d28cade5311309dbd8f22681d63b70a0d9d75333a163ad76ed4"
+      },
+      "changed_workbook_paths": [
+        {
+          "filename": "data/templates/plot3d/Plot3D_Template.ods",
+          "status": "modified",
+          "sha": "85bbe870e31390d4c57ea0ed6236fe8caadb6cca",
+          "previous_filename": null
+        }
+      ],
+      "parents": [
+        "5e2d7a350066832ec49c784317b7655fd1b05b68"
+      ],
+      "natural_error_truth_certified": false,
+      "workbook_bodies_acquired": false
+    }
+  ],
+  "candidate_commits_with_changed_workbooks": 5,
+  "accepted_natural_pairs": 0,
+  "accepted_final_sources": 0,
+  "notes": "Commit prose is a lead, not truth. All viewed author messages are recorded as prior exposure; inspect lineage, license and original/corrected formulas before any use."
+}

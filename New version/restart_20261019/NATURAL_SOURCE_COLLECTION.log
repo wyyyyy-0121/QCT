@@ -1,0 +1,56 @@
+{
+  "records": [
+    {
+      "id": "carbon_adsorbers",
+      "url": "https://www.epa.gov/sites/production/files/2020-11/documents/erratasheet_carbonadsorbers_costcalcspreadsheet.pdf",
+      "origin": "US EPA",
+      "role": "development natural-error provenance",
+      "final_validation_eligible": false,
+      "acquired_utc": "2026-10-18T19:30:04.369930+00:00",
+      "http_status": 200,
+      "resolved_url": "https://www.epa.gov/sites/default/files/2020-11/documents/erratasheet_carbonadsorbers_costcalcspreadsheet.pdf",
+      "ok": true,
+      "bytes": 88884,
+      "sha256": "2203434819fe1375e4496d61f50dd3772cd582ddb8db3a092ae10f2648b762be",
+      "text_sha256": "a5e8dfa8398dde1d605956eff9ce8c298d15a541784d1148dd300a266831dd54",
+      "original_workbook_acquired": false,
+      "paired_correct_formula_truth_certified": false
+    },
+    {
+      "id": "flares",
+      "url": "https://www.epa.gov/system/files/documents/2022-09/ErrataSheet_flares_cost%20calculationspreadsheetcorrections_September%202022.pdf",
+      "origin": "US EPA",
+      "role": "development natural-error provenance",
+      "final_validation_eligible": false,
+      "acquired_utc": "2026-10-18T19:30:04.370492+00:00",
+      "http_status": 200,
+      "resolved_url": "https://www.epa.gov/system/files/documents/2022-09/ErrataSheet_flares_cost%20calculationspreadsheetcorrections_September%202022.pdf",
+      "ok": true,
+      "bytes": 59556,
+      "sha256": "78735bd82f5411a6ed45962f2af9861310cd05ec63cd35533dce25a389677baa",
+      "text_sha256": "4428dd0cceaf25db2677ac7a154507d0f583ade52b37a71c6d5cf7326878edae",
+      "original_workbook_acquired": false,
+      "paired_correct_formula_truth_certified": false
+    },
+    {
+      "id": "oxidizers",
+      "url": "https://www.epa.gov/system/files/documents/2024-12/errata_sheet_incineratorsoxidizers_costcalculationspreadsheet_december2024.pdf",
+      "origin": "US EPA",
+      "role": "development natural-error provenance",
+      "final_validation_eligible": false,
+      "acquired_utc": "2026-10-18T19:30:04.370722+00:00",
+      "http_status": 200,
+      "resolved_url": "https://www.epa.gov/system/files/documents/2024-12/errata_sheet_incineratorsoxidizers_costcalculationspreadsheet_december2024.pdf",
+      "ok": true,
+      "bytes": 119210,
+      "sha256": "f98590e53aaa290e297f2af510558e9309c1fd7daff2534df7bdc13dfa8f2c40",
+      "text_sha256": "2b3cd66b7a7e89c9c3b099cf4563c32c4a142f724d50e62b5bc60ced4780a5c5",
+      "original_workbook_acquired": false,
+      "paired_correct_formula_truth_certified": false
+    }
+  ],
+  "accepted_natural_pairs": 0,
+  "accepted_final_sources": 0,
+  "accepted_final_families": 0,
+  "reason": "official errata provenance only; obtain historical defective original and certify formula mapping before scoring"
+}

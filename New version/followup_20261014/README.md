@@ -1,5 +1,9 @@
 # 原论文 HybridGuard 后续研究
 
+## 当前入口：2026-10-19 反思后重启
+
+后续新协议、复盘与运行入口移至[restart_20261019](../restart_20261019/README.md)。dev32独立审计确认精确率退步且误改合法公式，拒绝采纳；dev33未形成可靠自然真值对。已实现真实xlsx只读推理和默认8工作进程批处理，真实小型开发表1/4/8输出哈希一致；最终三类双90%目标尚未达成。下文为历史记录。
+
 ## 最新进展：dev21（2026-10-18）
 
 dev21相对原式偏好学习已完成五来源留出预测和评分。学习器补充6条建议且全部正确，但少于dev20的7条，故不采用；保留dev11主候选，dev20/dev21均为对照实验。报告见[DEV21_RELATIVE_LEARNING_REPORT_20261018.md](DEV21_RELATIVE_LEARNING_REPORT_20261018.md)，完整核验见`qa/RELATIVE_LEARNING_DEV21_VERIFICATION_20261018.json`。

@@ -1,0 +1,31 @@
+{
+  "output_hashes_identical_1_4_8": true,
+  "scope": "full paper SG/FG and dev11, eight revealed crossdomain workbooks; not accuracy validation",
+  "source_inputs_unchanged": true,
+  "workers": {
+    "1": {
+      "wall_seconds": 2.126973792001081,
+      "child_cpu_seconds": 1.7999999999999998,
+      "aggregate_peak_rss_bytes_sampled": 52707328,
+      "throughput_tasks_per_second": 3.7612123055232893,
+      "all_tasks_complete": true,
+      "speedup_vs_one_worker": 1.0
+    },
+    "4": {
+      "wall_seconds": 0.636618003998592,
+      "child_cpu_seconds": 2.06,
+      "aggregate_peak_rss_bytes_sampled": 208580608,
+      "throughput_tasks_per_second": 12.566405520660853,
+      "all_tasks_complete": true,
+      "speedup_vs_one_worker": 3.341051900262917
+    },
+    "8": {
+      "wall_seconds": 0.3762821299969801,
+      "child_cpu_seconds": 2.39,
+      "aggregate_peak_rss_bytes_sampled": 414572544,
+      "throughput_tasks_per_second": 21.26064291191348,
+      "all_tasks_complete": true,
+      "speedup_vs_one_worker": 5.652603784341689
+    }
+  }
+}

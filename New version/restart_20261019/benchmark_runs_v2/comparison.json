@@ -1,0 +1,31 @@
+{
+  "schema": "hybridguard-batch-benchmark-v1",
+  "manifest_sha256": "fb2e64224094481634152937fb37e5103f0b5740c5dec908f19c446cb7339c1c",
+  "output_hashes_identical_1_4_8": true,
+  "workers": {
+    "1": {
+      "wall_seconds": 6.546495233000314,
+      "child_cpu_seconds": 6.29,
+      "sampled_peak_aggregate_rss_bytes": 17879040,
+      "throughput_tasks_per_second": 1.2220279271987695,
+      "speedup_vs_one_worker": 1.0,
+      "all_tasks_complete": true
+    },
+    "4": {
+      "wall_seconds": 1.9302694610014441,
+      "child_cpu_seconds": 6.89,
+      "sampled_peak_aggregate_rss_bytes": 71110656,
+      "throughput_tasks_per_second": 4.144499077268474,
+      "speedup_vs_one_worker": 3.3914929315640334,
+      "all_tasks_complete": true
+    },
+    "8": {
+      "wall_seconds": 1.499171950003074,
+      "child_cpu_seconds": 8.4,
+      "sampled_peak_aggregate_rss_bytes": 53227520,
+      "throughput_tasks_per_second": 5.3362791372821485,
+      "speedup_vs_one_worker": 4.366740741772077,
+      "all_tasks_complete": true
+    }
+  }
+}

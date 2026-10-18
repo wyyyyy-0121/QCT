@@ -1,0 +1,31 @@
+{
+  "original_prediction_lock_sha256": "7359a667b7b059a2727e260ba06aaf3bbd5eb7401f00739d4e5bc441584fb7d3",
+  "correction_acquisition_sha256": "567e9ae7b9acf9f47a49c241fb58d16c300abe0d2c7e5fc169a36e2944fd7c51",
+  "local_diff_sha256": "c74e628cfb7dd51859e0af8215b3535a4ca1914c921dfc42ccbb2aa525ee81c3",
+  "auditor_sha256": "263f47a49afdfc8d01bd645a058e3526ad52e58d03c68b2b81417a368f09dd28",
+  "dual_parser_formula_inventories_agree": true,
+  "before_formula_cells": 934,
+  "after_formula_cells": 1225,
+  "before_sheets": [
+    "weights"
+  ],
+  "after_sheets": [
+    "Weights"
+  ],
+  "change_counts": {
+    "nonformula_changed": 10256,
+    "formula_added": 1225,
+    "formula_removed": 934
+  },
+  "before_comment_count": 0,
+  "after_comment_count": 0,
+  "proposals": {
+    "paper": 0,
+    "dev11": 0
+  },
+  "certified_natural_error_count": 0,
+  "truth_status": "uncertified; author version differences alone do not establish correct formulas",
+  "precision": null,
+  "coverage": null,
+  "final_validation_eligible": false
+}

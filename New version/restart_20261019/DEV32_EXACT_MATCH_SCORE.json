@@ -1,0 +1,163 @@
+{
+  "by_stratum": {
+    "conditioned_control": {
+      "combined": {
+        "correct": 36,
+        "coverage": 0.375,
+        "errors": 96,
+        "precision": 0.6666666666666666,
+        "suggestions": 54,
+        "unknown": 0
+      },
+      "conditioned_only": {
+        "correct": 36,
+        "coverage": 0.375,
+        "errors": 96,
+        "precision": 0.6666666666666666,
+        "suggestions": 54,
+        "unknown": 0
+      },
+      "dev11": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 96,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      }
+    },
+    "natural_original": {
+      "combined": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 505,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "conditioned_only": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 505,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "dev11": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 505,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      }
+    },
+    "new_control": {
+      "combined": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 40,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "conditioned_only": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 40,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "dev11": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 40,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      }
+    },
+    "old213": {
+      "combined": {
+        "correct": 17629,
+        "coverage": 0.9754329663033254,
+        "errors": 18073,
+        "precision": 0.7932058492688414,
+        "suggestions": 22225,
+        "unknown": 0
+      },
+      "conditioned_only": {
+        "correct": 16650,
+        "coverage": 0.9212637636252974,
+        "errors": 18073,
+        "precision": 0.7838244986347801,
+        "suggestions": 21242,
+        "unknown": 0
+      },
+      "dev11": {
+        "correct": 14184,
+        "coverage": 0.7848171305261993,
+        "errors": 18073,
+        "precision": 0.9979596144374868,
+        "suggestions": 14213,
+        "unknown": 0
+      }
+    },
+    "public_original": {
+      "combined": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "precision": 0.0,
+        "suggestions": 1,
+        "unknown": 1
+      },
+      "conditioned_only": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "dev11": {
+        "correct": 0,
+        "coverage": null,
+        "errors": 0,
+        "precision": 0.0,
+        "suggestions": 1,
+        "unknown": 1
+      }
+    },
+    "string_control": {
+      "combined": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 96,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "conditioned_only": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 96,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      },
+      "dev11": {
+        "correct": 0,
+        "coverage": 0.0,
+        "errors": 96,
+        "precision": null,
+        "suggestions": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "final_validation_eligible": false,
+  "metric": "full formula text including equals; no execution-value or algebraic equivalence credit",
+  "prediction_lock_sha256": "060406f52491d9260633ddbe97bba82acf1eb02dac153c902c6a032597ac05e6"
+}

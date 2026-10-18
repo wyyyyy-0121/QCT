@@ -1,0 +1,395 @@
+{
+  "accepted_final_families": 0,
+  "accepted_final_sources": 0,
+  "all_checks_passed": true,
+  "baseline_dev11_correct": 14184,
+  "baseline_dev11_coverage": 0.7848171305261993,
+  "baseline_dev11_precision": 0.9979596144374868,
+  "cases_replayed": 277,
+  "conditioned_controls": {
+    "debt": {
+      "combined": {
+        "correct": 18,
+        "correct_errors": 18,
+        "coverage": 0.42857142857142855,
+        "errors": 42,
+        "precision_confirmed_lower_bound": 0.75,
+        "suggestions": 24,
+        "unknown": 0,
+        "unnecessary": 6,
+        "wrong": 6
+      },
+      "conditioned_only": {
+        "correct": 18,
+        "correct_errors": 18,
+        "coverage": 0.42857142857142855,
+        "errors": 42,
+        "precision_confirmed_lower_bound": 0.75,
+        "suggestions": 24,
+        "unknown": 0,
+        "unnecessary": 6,
+        "wrong": 6
+      },
+      "dev11": {
+        "correct": 0,
+        "correct_errors": 0,
+        "coverage": 0.0,
+        "errors": 42,
+        "precision_confirmed_lower_bound": null,
+        "suggestions": 0,
+        "unknown": 0,
+        "unnecessary": 0,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 0,
+        "correct_errors": 0,
+        "coverage": 0.0,
+        "errors": 42,
+        "precision_confirmed_lower_bound": 0.0,
+        "suggestions": 144,
+        "unknown": 72,
+        "unnecessary": 30,
+        "wrong": 72
+      }
+    },
+    "profit": {
+      "combined": {
+        "correct": 18,
+        "correct_errors": 18,
+        "coverage": 0.3333333333333333,
+        "errors": 54,
+        "precision_confirmed_lower_bound": 0.6,
+        "suggestions": 30,
+        "unknown": 0,
+        "unnecessary": 12,
+        "wrong": 12
+      },
+      "conditioned_only": {
+        "correct": 18,
+        "correct_errors": 18,
+        "coverage": 0.3333333333333333,
+        "errors": 54,
+        "precision_confirmed_lower_bound": 0.6,
+        "suggestions": 30,
+        "unknown": 0,
+        "unnecessary": 12,
+        "wrong": 12
+      },
+      "dev11": {
+        "correct": 0,
+        "correct_errors": 0,
+        "coverage": 0.0,
+        "errors": 54,
+        "precision_confirmed_lower_bound": null,
+        "suggestions": 0,
+        "unknown": 0,
+        "unnecessary": 0,
+        "wrong": 0
+      },
+      "paper": {
+        "correct": 0,
+        "correct_errors": 0,
+        "coverage": 0.0,
+        "errors": 54,
+        "precision_confirmed_lower_bound": null,
+        "suggestions": 0,
+        "unknown": 0,
+        "unnecessary": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "dev32_candidate": {
+    "correct": 17672,
+    "correct_errors": 17672,
+    "coverage": 0.9778122060532286,
+    "errors": 18073,
+    "precision_confirmed_lower_bound": 0.795140607424072,
+    "suggestions": 22225,
+    "unknown": 0,
+    "unnecessary": 4553,
+    "wrong": 4553
+  },
+  "final_validation_complete": false,
+  "full_test_count": 321,
+  "full_test_log_sha256": "3f3efa8f756940acbafb86e33665ff04cbfbe3aa8e82132a0a8a7e36a3490cf1",
+  "goal_status": "active",
+  "independent_execution": {
+    "changed_outputs": 54,
+    "checked_results": 108,
+    "checked_suggestions": 54,
+    "legal_outputs_changed": 18
+  },
+  "independent_metric_checks": 7713,
+  "main_candidate_adopted": false,
+  "natural_development": {
+    "correct": 0,
+    "correct_errors": 0,
+    "coverage": 0.0,
+    "errors": 505,
+    "precision_confirmed_lower_bound": null,
+    "suggestions": 0,
+    "unknown": 0,
+    "unnecessary": 0,
+    "wrong": 0
+  },
+  "prediction_lock_sha256": "060406f52491d9260633ddbe97bba82acf1eb02dac153c902c6a032597ac05e6",
+  "prior_replay_log_sha256": "1ba3133ee2d472302c72596d6f980f7207fd7292ebe3e63f620d13e0ac51bdfc",
+  "relation_comparisons_not_proved": [
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "cell": "Schedule!G18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "cell": "Schedule!L18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__operator_error",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "cell": "Schedule!M18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "cell": "Schedule!L18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__reference_error",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "cell": "Schedule!F18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "cell": "Schedule!G18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__coefficient_error",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "cell": "Schedule!G18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "cell": "Schedule!L18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__duplicate_role",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "cell": "Schedule!M18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "cell": "Schedule!L18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__hidden_upstream",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "cell": "Schedule!F18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "cell": "Schedule!G18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__conflicting_instruction",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "cell": "Schedule!H18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "cell": "Schedule!M18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "cell": "Schedule!I18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "cell": "Schedule!L18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "cell": "Schedule!J18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    },
+    {
+      "case": "conditioned_control/debt__unsupported_upstream",
+      "cell": "Schedule!K18",
+      "mode": "paper",
+      "reason": "complete_ast_required"
+    }
+  ],
+  "score_sha256": "a65665256f0acdf182ebb181c11d96a4d223935a7e25f4f5e4ad947f95acf76f",
+  "verifier_sha256": "50f618efc34b0a32ee06cb53cc881cc13736c73ebb6e4805c5f2f507b609d11b"
+}

@@ -24,10 +24,10 @@
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "Pre-register actual repair selection using verified dependency/input conditions, units and scoped business evidence; keep legal exception and cross-row controls.",
-    "Test on distinct excluded development origins; freeze predictions before labels and do not infer author intent from a payment sign alone.",
-    "Continue reliable natural-original/correction acquisition; exclude all development origins from final validation.",
-    "Freeze adopted model before final AI-synthetic, natural-error and public-injected evaluation; final target at least 6 new origins and 15 deduplicated families, each stratum precision/coverage >=90%."
+    "Audit natural origins and acquire reliable historical originals before further tuning; require at least 3 independent development origins and 2 mechanisms for E1-E3.",
+    "Keep original paper and dev11 frozen; reject dev32 due to clean-cell damage and precision regression.",
+    "Use per-workbook 8-process runner with resource accounting and memory admission estimates; preserve all failures.",
+    "Freeze candidate before final source/family-qualified AI-synthetic, natural-error and public-injected precision/coverage >=90% evaluation."
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -56,7 +56,7 @@
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV31_DEPENDENCY_EXECUTION_REPORT_20261018.md",
+  "latest_report": "../restart_20261019/STATUS.md",
   "dev21_relative_learning": {
     "run": "development/relative_learning_dev21_v1",
     "report": "DEV21_RELATIVE_LEARNING_REPORT_20261018.md",
@@ -1412,7 +1412,7 @@
   },
   "dev31_upload_receipt": "qa/DEV31_UPLOAD_RECEIPT_20261018.json",
   "dev32_conditioned_relations": {
-    "phase": "development implementation checkpoint; prediction and scoring incomplete",
+    "phase": "277-case replay complete; first metric verifier failed on unsupported relation; separate corrected metric audit passed",
     "preregistration": "CONDITIONED_RELATIONS_DEV32_PREREGISTRATION_20261018.md",
     "progress_report": "DEV32_PROGRESS_CHECKPOINT_20261018.md",
     "failed_preparation": "development/conditioned_relations_dev32_preparation_failed_v1",
@@ -1420,15 +1420,33 @@
     "planned_next_run": "development/conditioned_relations_dev32_v3",
     "planned_cases": 277,
     "authored_controls": 26,
-    "completed_prediction_lock": false,
-    "score_verified": false,
+    "completed_prediction_lock": true,
+    "score_verified": true,
     "full_tests_passed_before_verifier_edits": 317,
     "verifier_import_preflight_passed": true,
-    "independent_replay_complete": false,
-    "independent_libreoffice_verification_complete": false,
+    "independent_replay_complete": true,
+    "independent_libreoffice_verification_complete": true,
     "main_candidate_adopted": false,
     "final_validation_complete": false,
     "accepted_final_sources": 0,
-    "accepted_final_families": 0
+    "accepted_final_families": 0,
+    "verification": "../restart_20261019/DEV32_METRIC_VERIFICATION.json",
+    "precision": 0.795140607424072,
+    "coverage": 0.9778122060532286,
+    "new_control_wrong_clean_cells": 18
+  },
+  "research_restart_protocol": "../restart_20261019/RESEARCH_PROTOCOL.md",
+  "dev33_weights_natural": {
+    "phase": "original prediction/replay locked; corrected acquired; dual-parser and alignment audit complete; no certified formula truth",
+    "certified_errors": 0,
+    "final_validation_eligible": false,
+    "run": "development/natural_weights_dev33_v1"
+  },
+  "restart_parallel_runtime": {
+    "workers": 8,
+    "comparison": "../restart_20261019/workbook_benchmark_v3/comparison.json",
+    "output_hashes_identical_1_4_8": true,
+    "speedup_vs_one_worker": 5.622251010719168,
+    "scope": "eight small revealed development workbooks; throughput only"
   }
 }

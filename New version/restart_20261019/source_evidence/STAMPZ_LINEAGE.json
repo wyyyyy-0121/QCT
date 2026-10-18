@@ -1,0 +1,63 @@
+{
+  "origin": "Stainlessbrown/StampZ-III-Binary",
+  "commit": "c929f4427fb14c480b1239780225838a6d626329",
+  "parent": "5e2d7a350066832ec49c784317b7655fd1b05b68",
+  "requests": [
+    {
+      "name": "repository",
+      "url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary",
+      "status": 200,
+      "ok": true,
+      "sha256": "d2ca58e2230faec951f99c359b3f012b7e748049fb189c06b43f245e735ece1a"
+    },
+    {
+      "name": "before_tree",
+      "url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary/git/trees/5e2d7a350066832ec49c784317b7655fd1b05b68?recursive=1",
+      "status": 200,
+      "ok": true,
+      "sha256": "5d498957cfc9baad92de77b99ee683a0c5edaf4545cb623f26751850b7164244"
+    },
+    {
+      "name": "after_tree",
+      "url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary/git/trees/c929f4427fb14c480b1239780225838a6d626329?recursive=1",
+      "status": 200,
+      "ok": true,
+      "sha256": "3ac9f856836b9adf725c2dd709e4e576c0933d1586e7d6959f222f351c1330a2"
+    },
+    {
+      "name": "license",
+      "url": "https://api.github.com/repos/Stainlessbrown/StampZ-III-Binary/license?ref=c929f4427fb14c480b1239780225838a6d626329",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+  ],
+  "workbook_path": "data/templates/plot3d/Plot3D_Template.ods",
+  "role": "development candidate; entire origin excluded after author mechanism exposure",
+  "workbook_bodies_acquired": false,
+  "repository_metadata": {
+    "fork": false,
+    "parent": null,
+    "license": null,
+    "description": "StampZ-III Binary Coordinate System Version - XYZ color analysis with K-means clustering and numpy ufunc fixes"
+  },
+  "versions": {
+    "before_tree": [
+      {
+        "path": "data/templates/plot3d/Plot3D_Template.ods",
+        "sha": "a0061f2d21ba782736ed3d7c5c5939ac619cfdf3",
+        "size": 19340,
+        "type": "blob"
+      }
+    ],
+    "after_tree": [
+      {
+        "path": "data/templates/plot3d/Plot3D_Template.ods",
+        "sha": "85bbe870e31390d4c57ea0ed6236fe8caadb6cca",
+        "size": 19128,
+        "type": "blob"
+      }
+    ]
+  },
+  "natural_errors_certified": 0,
+  "final_validation_eligible": false
+}

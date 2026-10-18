@@ -1,0 +1,168 @@
+{
+  "schema": "hybridguard-batch-runtime-v1",
+  "created_utc": "2026-10-18T19:23:08.173265+00:00",
+  "manifest_sha256": "fb2e64224094481634152937fb37e5103f0b5740c5dec908f19c446cb7339c1c",
+  "task_count": 8,
+  "worker_count": 8,
+  "numeric_library_thread_limit": 1,
+  "wall_seconds": 1.499171950003074,
+  "child_cpu_seconds": 8.4,
+  "aggregate_peak_rss_bytes_sampled": 53227520,
+  "throughput_tasks_per_second": 5.3362791372821485,
+  "speedup_vs_one_worker": null,
+  "all_tasks_complete": true,
+  "tasks": [
+    {
+      "id": "case01",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case01.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case01",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.2240810899966164,
+      "child_cpu_seconds": 1.02,
+      "child_peak_rss_bytes": 15728640,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case01/combined.log",
+      "output_sha256": {
+        "case01.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case02",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case02.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case02",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.110269300006621,
+      "child_cpu_seconds": 1.08,
+      "child_peak_rss_bytes": 15728640,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case02/combined.log",
+      "output_sha256": {
+        "case02.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case03",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case03.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case03",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.1469316059956327,
+      "child_cpu_seconds": 1.1,
+      "child_peak_rss_bytes": 15990784,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case03/combined.log",
+      "output_sha256": {
+        "case03.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case04",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case04.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case04",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.0104883300009533,
+      "child_cpu_seconds": 0.99,
+      "child_peak_rss_bytes": 15728640,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case04/combined.log",
+      "output_sha256": {
+        "case04.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case05",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case05.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case05",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.3427188599962392,
+      "child_cpu_seconds": 1.08,
+      "child_peak_rss_bytes": 15728640,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case05/combined.log",
+      "output_sha256": {
+        "case05.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case06",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case06.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case06",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.4769452859982266,
+      "child_cpu_seconds": 0.99,
+      "child_peak_rss_bytes": 15990784,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case06/combined.log",
+      "output_sha256": {
+        "case06.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case07",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case07.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case07",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.4447942019978655,
+      "child_cpu_seconds": 1.08,
+      "child_peak_rss_bytes": 15990784,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case07/combined.log",
+      "output_sha256": {
+        "case07.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    },
+    {
+      "id": "case08",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/benchmark_worker.py",
+        "case08.json",
+        "14000000"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case08",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 1.4868618449982023,
+      "child_cpu_seconds": 1.06,
+      "child_peak_rss_bytes": 15990784,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/benchmark_runs_v2/workers_8/tasks/case08/combined.log",
+      "output_sha256": {
+        "case08.json": "05cffed1bcfe547a27c91f03550b8b09bfca9b59c688a19f32cc65ed2c2d3f42"
+      }
+    }
+  ]
+}
