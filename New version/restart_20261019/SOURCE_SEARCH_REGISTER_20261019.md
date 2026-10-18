@@ -18,8 +18,8 @@
 | 候选 | 已有证据 | 未满足的准入项 | 当前处理 |
 |---|---|---|---|
 | Reinhart–Rogoff / Herndon–Ash–Pollin | 已取得PERI的2013-05-17复现包；含作者标注的`RR.xls`、HAP R代码及派生`RR-keycolumns.xlsx`。R代码明确将五国排除标作“Spreadsheet error”，PERI更正说明记载Belgium遗漏。 | 缺原始错误版/修订版工作簿配对；`RR-keycolumns.xlsx`是派生输出，不是修订件；公开证据未给出具体错误公式格坐标。R脚本声明BSD-2-Clause，但原始工作簿的单独许可范围未确认。归档原表和Dropbox仍超时。 | 因已检查转换副本中的公式，整个R&R案例永久降为已揭示开发证据；不计来源/家族/错误格，不运行准确率评分。取证细节见`source_evidence/rr_followup/ACQUISITION_AUDIT.md`，原件留在忽略的`private/`目录。 |
-| Excel Easy：摊还、预算、资本投资 | 3个教学工作簿链接返回xlsx响应。 | 教程模板不等于曾发生过的自然错误；无可信原/修订对、公式错误标签、独立业务核验和明确的再分发许可；三份也尚未证明模板家族独立。 | 仅作干净模板/控制的候选，不算自然错误来源或最终数据。 |
-| NSW Treasury：Rapid CBA、Employment Calculator、Outcome Values Database | 官方工具目录及3个工作簿链接已识别；可用于建立真实业务工作簿候选。 | 当前发布文件没有已核实的错误修订史；无历史原/修订对、逐格真值和确认可公开再分发的许可；工具之间的模板独立性未验证。 | 可在许可核验后用作干净控制或工作簿复杂度样本；不能给错误标签，不能计来源/模板准入。 |
+| Excel Easy：摊还、预算、资本投资 | 3个教学工作簿链接返回xlsx响应；本轮查看预算、贷款页面及网站入口，没有发现明确再分发许可或历史版本入口。 | 教程模板不等于曾发生过的自然错误；无可信原/修订对、公式错误标签、独立业务核验、明确许可或历史版本；三份也尚未证明模板家族独立。 | 暂不下载或纳入控制集；不算自然错误来源或最终数据。若未来取得明确授权，再评估其教学控制用途。 |
+| NSW Treasury：Rapid CBA、Employment Calculator、Outcome Values Database | 官方工具目录及3个工作簿链接已识别。NSW一般版权页声明网站材料采用CC BY 4.0，但排除未明确纳入的第三方材料；三个文件HTTP响应的Last-Modified分别为2026-03-02、2026-10-12和2026-08-11。 | 未找到文件级许可说明、历史版本下载页或原/修订对；Last-Modified只描述当前文件服务元数据，不构成历史版本链；工具之间的模板独立性未验证。 | 保留为干净控制/复杂度候选，但在核实具体工作簿确属许可范围、公式库存及模板家族前不下载、不评分；不能计自然错误来源或模板准入。 |
 | StampZ-III | 公开提交包含修订ODS；原/修订公式在Q8:Q105呈一致引用偏移，表头和同表列支持同行关系。 | 原表输入区与公式缓存均为空；未确认许可；只能确认公式级模式，不能证明已产生错误结果或自然业务损害。 | 只保留为开发期公式候选；98格不计可评分错误或新准入来源。详见`STAMPZ_SEMANTIC_AUDIT.md`。 |
 | Enron / Info1 | 177本工作簿完成来源级库存；Info1标签与公式格不完全重合；Enron作者事件有部分公式差异。 | 标签不能直接确认正确替代公式；版本中混有非公式改动与转换保真问题，独立公式真值为0。 | 不作为修复准确率数据。详见`ENRON_INFO1_AUDIT_RESULTS.md`。 |
 
@@ -120,3 +120,19 @@ These two screens add no qualified natural source or template family. They do no
 | `sabodaha/windpark-rechner`，`73e15a649c` | 提交涉及风电计算器方法说明页面，未修改工作簿；仓库许可字段为空。 | 方法文档不是错误修订对；排除。 |
 
 本轮无可准入自然错误来源或新模板家族。GitHub提交搜索只用于发现候选，工作簿文件被提及或更新不等于公式错误被更正；最终验证仍为`0/0`，模型和规则保持冻结。
+
+## 2026-10-19 DataCite 与 ONS 来源/控制筛查
+
+本轮继续查找带明确许可、可追溯版本和公式级真值的公开来源。没有读取潜在盲测候选的公式或标签，也没有运行模型。
+
+| 候选/检索 | 核查证据 | 处置 |
+|---|---|---|
+| DataCite 目录检索 | API全文查询`spreadsheet formula error`返回98条，`spreadsheet error correction`返回152条；这些是全文索引命中数，不是已逐项审阅的来源数。补做题名字段检索后，题名同时含`spreadsheet`与`formula`的16条主要是公式研究、代码或理解度数据集；题名同时含`spreadsheet`与`correction`的3条中，Zenodo 1014025/1014026标题为`Correction occurrence analysis spreadsheet`。 | 宽泛命中不作为来源进展指标；逐一检查显著候选的描述、版本关系和许可后再决定是否获取文件。 |
+| Zenodo 1014025/1014026 | DataCite记录把两条DOI列为同一数据集的版本关系，许可为CC BY-NC 4.0。摘要明确说明该Excel记录京剧演唱训练中的教师反馈、信号分析方法及分类维度；1014026文件清单列出`Correction_occurrence_spreadsheet.xlsx`（94,217字节）。 | `correction occurrence`指教学反馈事件，不是工作簿公式纠错；不下载、不计自然错误来源或模板家族。 |
+| ONS GERD年度修订表 | 官方页说明内容是“首次发布值与五年后的值”，提供当前`.xls`及previous versions入口，页面标注Open Government Licence v3.0。只读获取当前版及一个历史版，转换副本各有32个公式单元格；两版`annual`表的公式地址和值完全一致。 | 适合作为候选干净控制，检查模型是否对合法统计公式作出建议；修订表不是公式勘误，不能计自然错误来源。当前和历史版属同一业务表模板，不另计多个模板家族。原文件为`.xls`，用于模型前必须单独验证转换保真和入口支持。 |
+| ONS BERD年度修订表 | 官方页同样描述首次发布值与五年后值，提供当前`.xls`，页面标注Open Government Licence v3.0。转换副本含两张工作表、34个公式单元格；`annual`表布局和公式地址与GERD高度相似。 | 可与GERD共同作为统计类干净控制候选，但目前只支持一个近似模板家族，不计公式错误来源或新的独立家族。原文件为`.xls`，转换保真尚未认证。 |
+| ONS产品分类更正数据 | 官方更正页提供`.xlsx`、标注Open Government Licence v3.0；说明问题源自少数产品历史人工分类不一致，属于统计数据分类修正。 | 明确排除公式错误评分；只作为“非公式错误更正”边界案例记录，不作为公式真值。 |
+
+官方页面：GERD https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdatagerd ；BERD https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/revisionsspreadsheetforannualdataberd ；产品分类更正 https://www.ons.gov.uk/economy/inflationandpriceindices/adhocs/3621datasetaccompanyingtheproductclassificationerrorcorrectionfebruarytojuly2026 。DataCite查询使用`https://api.datacite.org/dois`的全文及题名字段查询；Zenodo候选DOI为`10.5281/zenodo.1014025`和`10.5281/zenodo.1014026`。
+
+本轮新增合格自然错误来源和最终模板家族均为0，最终验证仍为`0/0`。ONS表只提升为控制候选，须先针对`.xls`转`.xlsx`固定输入做公式/结果保真审计并预登记控制实验；不基于该控制结果调整原模型或规则。宽泛DataCite命中数不得表述成穷尽搜索。
