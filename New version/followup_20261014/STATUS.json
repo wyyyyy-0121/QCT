@@ -17,17 +17,17 @@
     "accepted_template_families": 0
   },
   "baseline_reproduced": true,
-  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev17 experimental only",
+  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev18 experimental only",
   "development_precision": 1.0,
   "development_coverage": 0.7936297279362973,
   "development_gate_passed": false,
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "expand safe bounded single-edit and role-aligned candidate pools; dev17 lacks correct candidates for 65 of 78 errors",
-    "train and calibrate using multiple excluded real development origins with entire-origin holdouts; do not randomly split workbook rows",
-    "keep neutral changes, legitimate exceptions, hidden errors, wrong text and all unknown outputs in development scoring",
-    "freeze model scorer and inclusion rules before acquiring reserved final workbook and correction-answer bodies"
+    "Develop observable signed-flow and target/reference role features: dev18 high-confidence false positives turn valid subtraction into addition",
+    "Use source-blocked training and calibration; do not lower thresholds against revealed heldout outcomes",
+    "Preserve full regression, exceptions, hidden errors, neutral changes, and unknown-output denominators",
+    "Freeze model, scorer and inclusion rules before reserved final workbook or correction-answer acquisition"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -49,14 +49,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 173,
-  "new_work_pushed": true,
+  "unit_test_count": 192,
+  "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV17_MULTISOURCE_REPORT_20261018.md",
+  "latest_report": "DEV18_CANDIDATE_EXPANSION_REPORT_20261018.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -561,5 +561,285 @@
     "main_candidate_adopted": false,
     "final_validation_eligible": false,
     "upload_receipt": "qa/MULTISOURCE_DEV17_UPLOAD_RECEIPT_20261018.json"
+  },
+  "candidate_learning_dev18": {
+    "report": "DEV18_CANDIDATE_EXPANSION_REPORT_20261018.md",
+    "cases": 213,
+    "conservative_origin_groups": 5,
+    "candidate_records": 1861162,
+    "features": 162,
+    "three_new_origin_candidate_ceiling_before": 13,
+    "three_new_origin_candidate_ceiling_after": 75,
+    "three_new_origin_errors": 78,
+    "new_public_correct_repairs": 4,
+    "new_public_wrong_repairs": 0,
+    "source_holdout": {
+      "18f": {
+        "candidate_pool_correct_error_ceiling": 10,
+        "metrics": {
+          "dev11": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 11,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "keep_base_plus_learned": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 11,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "learned_only": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 11,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          }
+        }
+      },
+      "authored_development": {
+        "candidate_pool_correct_error_ceiling": 17851,
+        "metrics": {
+          "dev11": {
+            "correct": 14184,
+            "correct_errors": 14184,
+            "coverage": 0.7934660997986127,
+            "errors": 17876,
+            "precision_confirmed_lower_bound": 0.9979596144374868,
+            "suggestions": 14213,
+            "unknown": 0,
+            "wrong": 29,
+            "wrong_clean_cells": 29
+          },
+          "keep_base_plus_learned": {
+            "correct": 14201,
+            "correct_errors": 14201,
+            "coverage": 0.7944170955471023,
+            "errors": 17876,
+            "precision_confirmed_lower_bound": 0.9971211908439825,
+            "suggestions": 14242,
+            "unknown": 0,
+            "wrong": 41,
+            "wrong_clean_cells": 41
+          },
+          "learned_only": {
+            "correct": 17,
+            "correct_errors": 17,
+            "coverage": 0.000950995748489595,
+            "errors": 17876,
+            "precision_confirmed_lower_bound": 0.5862068965517241,
+            "suggestions": 29,
+            "unknown": 0,
+            "wrong": 12,
+            "wrong_clean_cells": 12
+          }
+        }
+      },
+      "iowa_state_agdm": {
+        "candidate_pool_correct_error_ceiling": 20,
+        "metrics": {
+          "dev11": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 21,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "keep_base_plus_learned": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 21,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "learned_only": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 21,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          }
+        }
+      },
+      "packt": {
+        "candidate_pool_correct_error_ceiling": 45,
+        "metrics": {
+          "dev11": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 46,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "keep_base_plus_learned": {
+            "correct": 4,
+            "correct_errors": 4,
+            "coverage": 0.08695652173913043,
+            "errors": 46,
+            "precision_confirmed_lower_bound": 1.0,
+            "suggestions": 4,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "learned_only": {
+            "correct": 4,
+            "correct_errors": 4,
+            "coverage": 0.08695652173913043,
+            "errors": 46,
+            "precision_confirmed_lower_bound": 1.0,
+            "suggestions": 4,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          }
+        }
+      },
+      "uk_government": {
+        "candidate_pool_correct_error_ceiling": 90,
+        "metrics": {
+          "dev11": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 119,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "keep_base_plus_learned": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 119,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          },
+          "learned_only": {
+            "correct": 0,
+            "correct_errors": 0,
+            "coverage": 0.0,
+            "errors": 119,
+            "precision_confirmed_lower_bound": null,
+            "suggestions": 0,
+            "unknown": 0,
+            "wrong": 0,
+            "wrong_clean_cells": 0
+          }
+        }
+      }
+    },
+    "pooled_diagnostic": {
+      "dev11": {
+        "correct": 14184,
+        "correct_errors": 14184,
+        "coverage": 0.7848171305261993,
+        "errors": 18073,
+        "precision_confirmed_lower_bound": 0.9979596144374868,
+        "suggestions": 14213,
+        "unknown": 0,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "keep_base_plus_learned": {
+        "correct": 14205,
+        "correct_errors": 14205,
+        "coverage": 0.7859790848226637,
+        "errors": 18073,
+        "precision_confirmed_lower_bound": 0.9971219991576583,
+        "suggestions": 14246,
+        "unknown": 0,
+        "wrong": 41,
+        "wrong_clean_cells": 41
+      },
+      "learned_only": {
+        "correct": 21,
+        "correct_errors": 21,
+        "coverage": 0.0011619542964643392,
+        "errors": 18073,
+        "precision_confirmed_lower_bound": 0.6363636363636364,
+        "suggestions": 33,
+        "unknown": 0,
+        "wrong": 12,
+        "wrong_clean_cells": 12
+      }
+    },
+    "main_candidate_adopted": false,
+    "final_validation_eligible": false,
+    "runtime": "development/candidate_learning_dev18_v1/runtime.json",
+    "prediction_lock": "development/candidate_learning_dev18_v1/prediction_lock.json",
+    "remaining_qa": null,
+    "upload_state": "48d4cbd implementation verified remotely; 4951a6e data push running",
+    "five_refits_reproduced": true,
+    "complete_feature_replay_reproduced": true,
+    "independently_checked_labels": 1861162,
+    "independent_integer_count_checks": 4473,
+    "qa": {
+      "INDEPENDENT_AUDIT": {
+        "file": "qa/CANDIDATE_LEARNING_DEV18_INDEPENDENT_AUDIT_20261018.json",
+        "sha256": "2883b1f7918fbc189a526248b8e0a62c7c454b585fc228ce9c1b7ec9eff60c66"
+      },
+      "REPLAY": {
+        "file": "qa/CANDIDATE_LEARNING_DEV18_REPLAY_20261018.json",
+        "sha256": "7ceebb1c0b8c5884fdc97d44e4928c3943091cfd31cf3a3760dad03aa6fd3c39"
+      },
+      "REFIT": {
+        "file": "qa/CANDIDATE_LEARNING_DEV18_REFIT_20261018.json",
+        "sha256": "2af61be88cde70a62587278174c7e8f2e0dba7f16b500dc3abeb0ccd54cb09c3"
+      },
+      "FEATURE_REPLAY": {
+        "file": "qa/CANDIDATE_LEARNING_DEV18_FEATURE_REPLAY_20261018.json",
+        "sha256": "69278fdf8821f5ba2ad818983228265b4410e2eed6ec2bcfa5952107b19801c5"
+      }
+    }
+  },
+  "signed_roles_dev19": {
+    "plan": "SIGNED_ROLES_DEV19_PLAN_20261018.md",
+    "feature_prototype": "scripts/signed_roles_dev19.py",
+    "prototype_tests": 9,
+    "model_trained": false,
+    "repair_metrics": null,
+    "adopted": false,
+    "scope": "observable English target/reference roles and signed AST context only",
+    "all_research_tests": 192,
+    "initial_prototype_tests": 8,
+    "availability_audit": "qa/SIGNED_ROLES_DEV19_AVAILABILITY_V2_20261018.json",
+    "initial_availability": "qa/SIGNED_ROLES_DEV19_AVAILABILITY_V1_20261018.json"
   }
 }

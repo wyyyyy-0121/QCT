@@ -1,0 +1,158 @@
+{
+  "cpu_seconds": 518.015093015,
+  "feature_storage": "float32 at fitting and inference",
+  "folds": [
+    {
+      "cpu_seconds": 111.697580372,
+      "features": 162,
+      "fold": "source__18f",
+      "negative": 1283517,
+      "positive": 18011,
+      "rows": 1301528,
+      "source_row_counts": {
+        "authored_development": 1262283,
+        "iowa_state_agdm": 5550,
+        "packt": 5902,
+        "uk_government": 27793
+      },
+      "source_weight_sums": {
+        "authored_development": 325381.9999997882,
+        "iowa_state_agdm": 325382.00000003714,
+        "packt": 325381.99999999395,
+        "uk_government": 325382.0000000483
+      },
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0
+      },
+      "wall_seconds": 52.50164783400032
+    },
+    {
+      "cpu_seconds": 59.680108723000004,
+      "features": 162,
+      "fold": "source__authored_development",
+      "negative": 39723,
+      "positive": 171,
+      "rows": 39894,
+      "source_row_counts": {
+        "18f": 649,
+        "iowa_state_agdm": 5550,
+        "packt": 5902,
+        "uk_government": 27793
+      },
+      "source_weight_sums": {
+        "18f": 9973.500000000051,
+        "iowa_state_agdm": 9973.49999999945,
+        "packt": 9973.500000000487,
+        "uk_government": 9973.500000001375
+      },
+      "suggestions": {
+        "dev11": 14213,
+        "keep_base_plus_learned": 14242,
+        "learned_only": 29
+      },
+      "wall_seconds": 50.35313826899801
+    },
+    {
+      "cpu_seconds": 110.03757945500001,
+      "features": 162,
+      "fold": "source__iowa_state_agdm",
+      "negative": 1278626,
+      "positive": 18001,
+      "rows": 1296627,
+      "source_row_counts": {
+        "18f": 649,
+        "authored_development": 1262283,
+        "packt": 5902,
+        "uk_government": 27793
+      },
+      "source_weight_sums": {
+        "18f": 324156.7499999967,
+        "authored_development": 324156.74999973254,
+        "packt": 324156.75000002777,
+        "uk_government": 324156.75000000733
+      },
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0
+      },
+      "wall_seconds": 52.18541753300087
+    },
+    {
+      "cpu_seconds": 117.49713693000001,
+      "features": 162,
+      "fold": "source__packt",
+      "negative": 1278301,
+      "positive": 17974,
+      "rows": 1296275,
+      "source_row_counts": {
+        "18f": 649,
+        "authored_development": 1262283,
+        "iowa_state_agdm": 5550,
+        "uk_government": 27793
+      },
+      "source_weight_sums": {
+        "18f": 324068.7499999984,
+        "authored_development": 324068.7499998055,
+        "iowa_state_agdm": 324068.75000001583,
+        "uk_government": 324068.7500001465
+      },
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 4,
+        "learned_only": 4
+      },
+      "wall_seconds": 57.74171377300081
+    },
+    {
+      "cpu_seconds": 118.84407559699997,
+      "features": 162,
+      "fold": "source__uk_government",
+      "negative": 1256453,
+      "positive": 17931,
+      "rows": 1274384,
+      "source_row_counts": {
+        "18f": 649,
+        "authored_development": 1262283,
+        "iowa_state_agdm": 5550,
+        "packt": 5902
+      },
+      "source_weight_sums": {
+        "18f": 318596.0000000016,
+        "authored_development": 318595.9999998795,
+        "iowa_state_agdm": 318596.00000002235,
+        "packt": 318595.99999998295
+      },
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0
+      },
+      "wall_seconds": 57.70229569500225
+    }
+  ],
+  "gpu_used": false,
+  "margin": 0.05,
+  "parameters": {
+    "early_stopping": false,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "max_depth": 6,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "random_state": 1618
+  },
+  "peak_rss_kib": 4316072,
+  "python": "3.11.16",
+  "scope": "feature loading, source weighting, five fits and heldout inference; upstream/feature generation excluded",
+  "sklearn": "1.9.0",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "threshold": 0.9,
+  "wall_seconds": 270.6768961730013
+}
