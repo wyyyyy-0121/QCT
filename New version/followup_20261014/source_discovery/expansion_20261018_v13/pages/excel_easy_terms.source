@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+
+<title>Page Not Found</title>
+<style type="text/css">
+<!--
+body {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+.oneColElsCtr #container {
+	background: #FFFFFF;
+}
+.oneColElsCtr #mainContent {
+	margin-top: 150px;
+}
+.message { font-size:30px; }
+</style>
+<link rel="icon" href="/favicon-48x48.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+  <div id="mainContent" style="width:100vw; text-align: center;">
+    <h1 style="font-size:50px;">Oops!</h1>
+    <p class="message">This page does not exist. Visit our <a href="https://www.excel-easy.com">homepage</a>.</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

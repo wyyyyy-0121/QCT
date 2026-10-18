@@ -752,7 +752,7 @@
       "use": [
         "natural_error_candidate"
       ],
-      "status": "natural-original-and-label-pair-unverified",
+      "status": "author-critique-data-and-correction-links-found-original-error-pair-still-unverified",
       "accepted": false,
       "accepted_template_families": 0,
       "workbook_acquired": false,
@@ -791,9 +791,30 @@
           "path": "source_discovery/expansion_20261018_v8/pages/rr_paper_metadata.source",
           "sha256": "f80d70f6248e54a6bd4ba4282aabb7a17e1f2d47f1aab65f44ee72269471db4e",
           "metadata_receipt": "source_discovery/expansion_20261018_v8/RECEIPT.json"
+        },
+        {
+          "name": "peri_publication_search",
+          "url": "https://peri.umass.edu/publication/does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff/",
+          "path": "source_discovery/expansion_20261018_v11/pages/peri_publication_search.source",
+          "sha256": "554e6b9aa362939ecdf02d72fa670ed580555c5bc8408fb7eab2fdba3f9cc2cc",
+          "metadata_receipt": "source_discovery/expansion_20261018_v11/RECEIPT.json"
+        },
+        {
+          "name": "rr_author_debt_growth",
+          "url": "https://carmenreinhart.com/debt-and-growth/",
+          "path": "source_discovery/expansion_20261018_v11/pages/rr_author_debt_growth.source",
+          "sha256": "0b4ba9e3447329c71eb185758564958f7c0ae2286fce24144e23e8aef90ffc92",
+          "metadata_receipt": "source_discovery/expansion_20261018_v11/RECEIPT.json"
+        },
+        {
+          "name": "rr_author_topics",
+          "url": "https://carmenreinhart.com/browse-by-topic/",
+          "path": "source_discovery/expansion_20261018_v11/pages/rr_author_topics.source",
+          "sha256": "2e43b49565f3742679ef2180bf6a7ac2882aa91d741a321e4f475325f2eb8d93",
+          "metadata_receipt": "source_discovery/expansion_20261018_v11/RECEIPT.json"
         }
       ],
-      "download_header_success": false,
+      "download_header_success": true,
       "header_success_means_formula_content_verified": false,
       "remaining_gates": [
         "source-history and author/template lineage audit",
@@ -802,7 +823,103 @@
         "all emitted suggestions adjudicable",
         "reliable original/correction labels"
       ],
-      "special_note": ""
+      "special_note": "PERI data/code and concordance/key-columns headers succeed; no workbook/archive bodies acquired. Author archive Excel is explicitly a correction, not original. Dropbox reset, archive timeout, pinned raw workbook timeout. Mirrors remain one case. No reliable per-cell label pair yet.",
+      "source_metadata_header_receipts": [
+        "source_discovery/NEW_DOMAIN_NATURAL_HEADER_RECEIPT_20261018.json",
+        "source_discovery/NSW_RR_PINNED_HEADER_RECEIPT_20261018.json"
+      ]
+    },
+    {
+      "id": "excel_easy",
+      "origin_group": "Excel Easy",
+      "use": [
+        "public_injection_candidate"
+      ],
+      "status": "metadata-and-download-headers-prescreened-not-accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "loan amortization",
+        "budget arithmetic",
+        "capital investment"
+      ],
+      "license_status": "public access only; redistribution and licensing not established",
+      "evidence": [
+        {
+          "name": "excel_easy_budget",
+          "url": "https://www.excel-easy.com/examples/budget.html",
+          "path": "source_discovery/expansion_20261018_v12/pages/excel_easy_budget.source",
+          "sha256": "007b68df21a323e5449e8eafa68607c31dff29719a1cdbe01e44d33956e5e01f",
+          "metadata_receipt": "source_discovery/expansion_20261018_v12/RECEIPT.json"
+        },
+        {
+          "name": "excel_easy_capital",
+          "url": "https://www.excel-easy.com/examples/capital-investment.html",
+          "path": "source_discovery/expansion_20261018_v12/pages/excel_easy_capital.source",
+          "sha256": "edd3663d3ba24924db369e6f3c24013e312c2af660c48475934ab015cec59d63",
+          "metadata_receipt": "source_discovery/expansion_20261018_v12/RECEIPT.json"
+        },
+        {
+          "name": "excel_easy_loan",
+          "url": "https://www.excel-easy.com/examples/loan-amortization-schedule.html",
+          "path": "source_discovery/expansion_20261018_v12/pages/excel_easy_loan.source",
+          "sha256": "ce6256be97e06b959320c6750a7338528129fb1318520d3979c918743128f666",
+          "metadata_receipt": "source_discovery/expansion_20261018_v12/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "full source-history and template lineage audit",
+        "freeze before workbook acquisition",
+        "formula presence and independent family deduplication",
+        "original correctness and emitted suggestion adjudication",
+        "public availability and permitted artifact handling"
+      ],
+      "special_note": "Declared headings describe candidate uses, not independently verified template families."
+    },
+    {
+      "id": "nsw_treasury",
+      "origin_group": "NSW Treasury",
+      "use": [
+        "public_injection_candidate"
+      ],
+      "status": "metadata-and-download-headers-prescreened-not-accepted",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "rapid cost-benefit analysis",
+        "employment calculator",
+        "outcome value database; formula presence unknown"
+      ],
+      "license_status": "public access only; redistribution and licensing not established",
+      "evidence": [
+        {
+          "name": "nsw_cba_tools",
+          "url": "https://www.nsw.gov.au/nsw-government/public-sector/financial-information-for-public-entities/centre-for-economic-evidence/tools-resources",
+          "path": "source_discovery/expansion_20261018_v13/pages/nsw_cba_tools.source",
+          "sha256": "51fa359deb8c9fd3f5b5c6a5ead9a879f73b474a33b1574e48c2d463d2f2b4d6",
+          "metadata_receipt": "source_discovery/expansion_20261018_v13/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "full source-history and template lineage audit",
+        "freeze before workbook acquisition",
+        "formula presence and independent family deduplication",
+        "original correctness and emitted suggestion adjudication",
+        "public availability and permitted artifact handling"
+      ],
+      "special_note": "Declared headings describe candidate uses, not independently verified template families."
     }
   ],
   "candidate_family_names_not_verified": 15,
@@ -818,7 +935,7 @@
   ],
   "development_acquisition_evidence": "development/public_candidate_pipeline_dev10/public_index.json",
   "development_acquisition_sha256": "27f82b6668dacf2bcfec0aa366a03a7a5cae12615af9f83b0db2557ba95f8e8c",
-  "latest_source_expansion_report": "source_discovery/SOURCE_EXPANSION_REPORT_20261018.md",
+  "latest_source_expansion_report": "source_discovery/NATURAL_NEW_DOMAIN_REPORT_20261018.md",
   "source_discovery_checkpoint": {
     "reserved_file_links": 45,
     "reserved_preliminary_origin_labels": 9,
@@ -830,5 +947,21 @@
     "reserved_for_final_not_development": true,
     "domain_limit": "Six successful calculation directory origins currently concentrate on agricultural economics",
     "new_final_acceptance_evidence": false
+  },
+  "latest_additional_checkpoint": {
+    "metadata_requests": 25,
+    "saved_metadata_responses": 21,
+    "head_requests": 14,
+    "successful_heads": 10,
+    "new_nonagricultural_origins_with_successful_headers": [
+      "Excel Easy",
+      "NSW Treasury"
+    ],
+    "natural_historical_case": "Reinhart Rogoff; mirrors and PERI not separately counted",
+    "reserved_workbook_bodies_acquired": 0,
+    "correct_formula_answers_acquired": false,
+    "accepted_final_sources": 0,
+    "accepted_final_template_families": 0,
+    "additional_links_include_archives_correction_and_data_only_candidates": true
   }
 }

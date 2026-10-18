@@ -1,0 +1,1638 @@
+{
+  "prediction_lock_sha256": "4f9ea64ab5f841672eabf90a68ab997fe49dbab7b1035a9de6200c4c8071feed",
+  "audit_script_sha256": "6a19bd73f6754e4fbf1f87114a68590343523438d6e616268ca5b934716a2b3e",
+  "independent_case_variant_count_checks": 668,
+  "all_scoring_counts_agree": true,
+  "public_single_axis_candidates": 52,
+  "candidates_with_two_or_more_orthogonal_supporters_for_observed": 50,
+  "orthogonal_diagnostics": [
+    {
+      "id": "public04",
+      "cell": "Summary Table!A29",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A28",
+          "translated_formula": "=A2",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A30",
+          "translated_formula": "=A2",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A31",
+          "translated_formula": "=A2",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 3,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A30",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A28",
+          "translated_formula": "=A3",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A29",
+          "translated_formula": "=A3",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A31",
+          "translated_formula": "=A3",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A32",
+          "translated_formula": "=A3",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A31",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A29",
+          "translated_formula": "=A4",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A30",
+          "translated_formula": "=A4",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A32",
+          "translated_formula": "=A4",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A33",
+          "translated_formula": "=A4",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A32",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A30",
+          "translated_formula": "=A5",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A31",
+          "translated_formula": "=A5",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A33",
+          "translated_formula": "=A5",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A34",
+          "translated_formula": "=A5",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A33",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A31",
+          "translated_formula": "=A6",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A32",
+          "translated_formula": "=A6",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A34",
+          "translated_formula": "=A6",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A35",
+          "translated_formula": "=A6",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A34",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A32",
+          "translated_formula": "=A7",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A33",
+          "translated_formula": "=A7",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A35",
+          "translated_formula": "=A7",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A36",
+          "translated_formula": "=A7",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A35",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A33",
+          "translated_formula": "=A8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A34",
+          "translated_formula": "=A8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A36",
+          "translated_formula": "=A8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A37",
+          "translated_formula": "=A8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A36",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A34",
+          "translated_formula": "=A9",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A35",
+          "translated_formula": "=A9",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A37",
+          "translated_formula": "=A9",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A38",
+          "translated_formula": "=A9",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A37",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A35",
+          "translated_formula": "=A10",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A36",
+          "translated_formula": "=A10",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A38",
+          "translated_formula": "=A10",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 3,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public04",
+      "cell": "Summary Table!A38",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Summary Table!A36",
+          "translated_formula": "=A11",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Summary Table!A37",
+          "translated_formula": "=A11",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 2,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AA12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!Y12",
+          "translated_formula": "=AA8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Z12",
+          "translated_formula": "=AA8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AB12",
+          "translated_formula": "=AA8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AC12",
+          "translated_formula": "=AA8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AB12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!Z12",
+          "translated_formula": "=AB8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AA12",
+          "translated_formula": "=AB8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AC12",
+          "translated_formula": "=AB8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AD12",
+          "translated_formula": "=AB8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AC12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AA12",
+          "translated_formula": "=AC8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AB12",
+          "translated_formula": "=AC8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AD12",
+          "translated_formula": "=AC8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AE12",
+          "translated_formula": "=AC8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AD12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AB12",
+          "translated_formula": "=AD8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AC12",
+          "translated_formula": "=AD8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AE12",
+          "translated_formula": "=AD8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AF12",
+          "translated_formula": "=AD8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AE12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AC12",
+          "translated_formula": "=AE8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AD12",
+          "translated_formula": "=AE8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AF12",
+          "translated_formula": "=AE8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AG12",
+          "translated_formula": "=AE8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AF12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AD12",
+          "translated_formula": "=AF8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AE12",
+          "translated_formula": "=AF8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AG12",
+          "translated_formula": "=AF8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AH12",
+          "translated_formula": "=AF8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AG12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AE12",
+          "translated_formula": "=AG8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AF12",
+          "translated_formula": "=AG8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AH12",
+          "translated_formula": "=AG8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AI12",
+          "translated_formula": "=AG8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AH12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AF12",
+          "translated_formula": "=AH8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AG12",
+          "translated_formula": "=AH8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AI12",
+          "translated_formula": "=AH8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AJ12",
+          "translated_formula": "=AH8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AI12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AG12",
+          "translated_formula": "=AI8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AH12",
+          "translated_formula": "=AI8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AJ12",
+          "translated_formula": "=AI8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AK12",
+          "translated_formula": "=AI8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AJ12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AH12",
+          "translated_formula": "=AJ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AI12",
+          "translated_formula": "=AJ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AK12",
+          "translated_formula": "=AJ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AL12",
+          "translated_formula": "=AJ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AK12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AI12",
+          "translated_formula": "=AK8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AJ12",
+          "translated_formula": "=AK8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AL12",
+          "translated_formula": "=AK8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AM12",
+          "translated_formula": "=AK8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AL12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AJ12",
+          "translated_formula": "=AL8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AK12",
+          "translated_formula": "=AL8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AM12",
+          "translated_formula": "=AL8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AN12",
+          "translated_formula": "=AL8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AM12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AK12",
+          "translated_formula": "=AM8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AL12",
+          "translated_formula": "=AM8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AN12",
+          "translated_formula": "=AM8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AO12",
+          "translated_formula": "=AM8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AN12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AL12",
+          "translated_formula": "=AN8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AM12",
+          "translated_formula": "=AN8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AO12",
+          "translated_formula": "=AN8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AP12",
+          "translated_formula": "=AN8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AO12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AM12",
+          "translated_formula": "=AO8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AN12",
+          "translated_formula": "=AO8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AP12",
+          "translated_formula": "=AO8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AQ12",
+          "translated_formula": "=AO8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AP12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AN12",
+          "translated_formula": "=AP8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AO12",
+          "translated_formula": "=AP8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AQ12",
+          "translated_formula": "=AP8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AR12",
+          "translated_formula": "=AP8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AQ12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AO12",
+          "translated_formula": "=AQ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AP12",
+          "translated_formula": "=AQ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AR12",
+          "translated_formula": "=AQ8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 3,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!AR12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!AP12",
+          "translated_formula": "=AR8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AQ12",
+          "translated_formula": "=AR8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 2,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!E12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!C12",
+          "translated_formula": "=SUM(G12:AT12)",
+          "supports_observed_exactly": false,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!F12",
+          "translated_formula": "=E8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!G12",
+          "translated_formula": "=E8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 2,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!F12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!E12",
+          "translated_formula": "=F8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!G12",
+          "translated_formula": "=F8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!H12",
+          "translated_formula": "=F8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 3,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!G12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!E12",
+          "translated_formula": "=G8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!F12",
+          "translated_formula": "=G8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!H12",
+          "translated_formula": "=G8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!I12",
+          "translated_formula": "=G8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!H12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!F12",
+          "translated_formula": "=H8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!G12",
+          "translated_formula": "=H8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!I12",
+          "translated_formula": "=H8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!J12",
+          "translated_formula": "=H8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!I12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!G12",
+          "translated_formula": "=I8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!H12",
+          "translated_formula": "=I8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!J12",
+          "translated_formula": "=I8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!K12",
+          "translated_formula": "=I8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!J12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!H12",
+          "translated_formula": "=J8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!I12",
+          "translated_formula": "=J8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!K12",
+          "translated_formula": "=J8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!L12",
+          "translated_formula": "=J8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!K12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!I12",
+          "translated_formula": "=K8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!J12",
+          "translated_formula": "=K8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!L12",
+          "translated_formula": "=K8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!M12",
+          "translated_formula": "=K8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!L12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!J12",
+          "translated_formula": "=L8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!K12",
+          "translated_formula": "=L8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!M12",
+          "translated_formula": "=L8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!N12",
+          "translated_formula": "=L8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!M12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!K12",
+          "translated_formula": "=M8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!L12",
+          "translated_formula": "=M8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!N12",
+          "translated_formula": "=M8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!O12",
+          "translated_formula": "=M8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!N12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!L12",
+          "translated_formula": "=N8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!M12",
+          "translated_formula": "=N8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!O12",
+          "translated_formula": "=N8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!P12",
+          "translated_formula": "=N8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!O12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!M12",
+          "translated_formula": "=O8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!N12",
+          "translated_formula": "=O8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!P12",
+          "translated_formula": "=O8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Q12",
+          "translated_formula": "=O8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!P12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!N12",
+          "translated_formula": "=P8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!O12",
+          "translated_formula": "=P8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Q12",
+          "translated_formula": "=P8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!R12",
+          "translated_formula": "=P8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!Q12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!O12",
+          "translated_formula": "=Q8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!P12",
+          "translated_formula": "=Q8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!R12",
+          "translated_formula": "=Q8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!S12",
+          "translated_formula": "=Q8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!R12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!P12",
+          "translated_formula": "=R8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Q12",
+          "translated_formula": "=R8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!S12",
+          "translated_formula": "=R8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!T12",
+          "translated_formula": "=R8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!S12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!Q12",
+          "translated_formula": "=S8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!R12",
+          "translated_formula": "=S8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!T12",
+          "translated_formula": "=S8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!U12",
+          "translated_formula": "=S8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!T12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!R12",
+          "translated_formula": "=T8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!S12",
+          "translated_formula": "=T8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!U12",
+          "translated_formula": "=T8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!V12",
+          "translated_formula": "=T8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!U12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!S12",
+          "translated_formula": "=U8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!T12",
+          "translated_formula": "=U8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!V12",
+          "translated_formula": "=U8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!W12",
+          "translated_formula": "=U8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!V12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!T12",
+          "translated_formula": "=V8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!U12",
+          "translated_formula": "=V8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!W12",
+          "translated_formula": "=V8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!X12",
+          "translated_formula": "=V8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!W12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!U12",
+          "translated_formula": "=W8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!V12",
+          "translated_formula": "=W8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!X12",
+          "translated_formula": "=W8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Y12",
+          "translated_formula": "=W8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!X12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!V12",
+          "translated_formula": "=X8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!W12",
+          "translated_formula": "=X8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Y12",
+          "translated_formula": "=X8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Z12",
+          "translated_formula": "=X8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!Y12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!W12",
+          "translated_formula": "=Y8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!X12",
+          "translated_formula": "=Y8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Z12",
+          "translated_formula": "=Y8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AA12",
+          "translated_formula": "=Y8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public10",
+      "cell": "Construction!Z12",
+      "variant": "column_only",
+      "orthogonal_votes": [
+        {
+          "peer": "Construction!X12",
+          "translated_formula": "=Z8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!Y12",
+          "translated_formula": "=Z8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AA12",
+          "translated_formula": "=Z8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        },
+        {
+          "peer": "Construction!AB12",
+          "translated_formula": "=Z8",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 4,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public11",
+      "cell": "PF Model!I553",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "PF Model!I554",
+          "translated_formula": "=L156",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 1,
+      "business_truth_proven": false
+    },
+    {
+      "id": "public11",
+      "cell": "PF Model!I554",
+      "variant": "row_only",
+      "orthogonal_votes": [
+        {
+          "peer": "PF Model!I553",
+          "translated_formula": "=L157",
+          "supports_observed_exactly": true,
+          "supports_candidate_exactly": false
+        }
+      ],
+      "orthogonal_support_for_observed": 1,
+      "business_truth_proven": false
+    }
+  ],
+  "scope": "competing spatial evidence, not natural business-error labels",
+  "final_validation_eligible": false
+}

@@ -1,0 +1,841 @@
+{
+  "role": "Metadata discovery only; no candidate workbook bodies or answer files fetched",
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "index_sha256": "420b2bbffbc90d7a66b883373efaa6ec71327745688277a56e9bc79a6e61842e",
+  "script_sha256": "f0f94ff6e94de7449fac7cc28e0dc3e16f06c099e220068cc8fe8a0e1f7de0f6",
+  "results": [
+    {
+      "id": "cdc_covidtracer",
+      "origin": "US CDC",
+      "url": "https://www.cdc.gov/respiratory-viruses/php/covid-19/covidtracer.html",
+      "utc": "2026-10-18T06:27:31.829566+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 403,
+      "resolved_url": "https://www.cdc.gov/respiratory-viruses/php/covid-19/covidtracer.html",
+      "content_type": "text/html",
+      "body_read": true,
+      "bytes": 436,
+      "sha256": "a7b1854194427c1bb8c7614031ef7e4749e3786cedec3f16c8eabc81be38e1ca",
+      "path": "source_discovery/expansion_20261018_v12/pages/cdc_covidtracer.source",
+      "title": "Access Denied",
+      "text_characters": 252,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": true
+    },
+    {
+      "id": "cdc_flu_aid",
+      "origin": "US CDC",
+      "url": "https://www.cdc.gov/flu/php/fluaid/index.html",
+      "utc": "2026-10-18T06:27:31.830818+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 403,
+      "resolved_url": "https://www.cdc.gov/flu/php/fluaid/index.html",
+      "content_type": "text/html",
+      "body_read": true,
+      "bytes": 404,
+      "sha256": "619219ce770bf829cbab5488a7e4a5d117b46492d0b22892ab624f04448344de",
+      "path": "source_discovery/expansion_20261018_v12/pages/cdc_flu_aid.source",
+      "title": "Access Denied",
+      "text_characters": 228,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": true
+    },
+    {
+      "id": "contextures_functions",
+      "origin": "Contextures",
+      "url": "https://www.contextures.com/excelfunctions.html",
+      "utc": "2026-10-18T06:27:31.833315+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 418,
+      "resolved_url": "https://www.contextures.com/excelfunctions.html",
+      "content_type": "text/plain; charset=utf-8",
+      "body_read": true,
+      "bytes": 53,
+      "sha256": "8c9561bf5b8f967c5ab8249db88dff8dddacccd1448962745a97797f49c7dcfb",
+      "path": "source_discovery/expansion_20261018_v12/pages/contextures_functions.source",
+      "title": null,
+      "text_characters": 51,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "excel_easy_budget",
+      "origin": "Excel Easy",
+      "url": "https://www.excel-easy.com/examples/budget.html",
+      "utc": "2026-10-18T06:27:31.827992+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.excel-easy.com/examples/budget.html",
+      "content_type": "text/html",
+      "body_read": true,
+      "bytes": 14353,
+      "sha256": "007b68df21a323e5449e8eafa68607c31dff29719a1cdbe01e44d33956e5e01f",
+      "path": "source_discovery/expansion_20261018_v12/pages/excel_easy_budget.source",
+      "title": "Create a Budget in Excel - Made Simple",
+      "text_characters": 2187,
+      "relevant_links": [
+        {
+          "text": "Excel Easy",
+          "url": "https://www.excel-easy.com",
+          "workbook_link": false
+        },
+        {
+          "text": "Introduction",
+          "url": "https://www.excel-easy.com/introduction.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Basics",
+          "url": "https://www.excel-easy.com/basics.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Functions",
+          "url": "https://www.excel-easy.com/functions.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Data Analysis",
+          "url": "https://www.excel-easy.com/data-analysis.html",
+          "workbook_link": false
+        },
+        {
+          "text": "VBA",
+          "url": "https://www.excel-easy.com/vba.html",
+          "workbook_link": false
+        },
+        {
+          "text": "300 Examples",
+          "url": "https://www.excel-easy.com/examples.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Ask us",
+          "url": "https://www.excel-easy.com/ask-us.html",
+          "workbook_link": false
+        },
+        {
+          "text": "conditional formatting",
+          "url": "https://www.excel-easy.com/data-analysis/conditional-formatting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "2/10 Completed! Learn much more about templates ➝",
+          "url": "https://www.excel-easy.com/examples/calendar.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Data Validation",
+          "url": "https://www.excel-easy.com/basics/data-validation.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates",
+          "url": "https://www.excel-easy.com/basics/templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget",
+          "url": "https://www.excel-easy.com/examples/budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Holidays",
+          "url": "https://www.excel-easy.com/examples/holidays.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Meal Planner",
+          "url": "https://www.excel-easy.com/examples/meal-planner.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice",
+          "url": "https://www.excel-easy.com/examples/invoice.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Automated Invoice",
+          "url": "https://www.excel-easy.com/examples/automated-invoice.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Default Templates",
+          "url": "https://www.excel-easy.com/examples/default-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Time Sheet",
+          "url": "https://www.excel-easy.com/examples/time-sheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "BMI calculator",
+          "url": "https://www.excel-easy.com/examples/bmi-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "budget.xlsx",
+          "url": "https://www.excel-easy.com/examples/excel-files/budget.xlsx",
+          "workbook_link": true
+        },
+        {
+          "text": "",
+          "url": "https://www.facebook.com/ExcelEasy",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://twitter.com/ExcelEasy",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://www.pinterest.com/ExcelEasy/",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://www.linkedin.com/company/excel-easy",
+          "workbook_link": false
+        },
+        {
+          "text": "XML",
+          "url": "https://www.excel-easy.com/examples/xml.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Userform",
+          "url": "https://www.excel-easy.com/vba/userform.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Frequency Distribution",
+          "url": "https://www.excel-easy.com/examples/frequency-distribution.html",
+          "workbook_link": false
+        },
+        {
+          "text": "XLOOKUP",
+          "url": "https://www.excel-easy.com/examples/xlookup.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Create a Budget in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Create a Budget in Excel This example shows you how to create a budget in Excel . Follow this step-by-step guide and take control of your finances. 1. First, enter the different types of inco",
+        "Create a Budget in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Create a Budget in Excel This example shows you how to create a budget in Excel . Follow this step-by-step guide and take control of your finances. 1. First, enter the different types of income and expenses in c",
+        "Create a Budget in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Create a Budget in Excel This example shows you how to create a budget in Excel . Follow this step-by-step guide and take control of your finances. 1. First, enter the different types of income and expenses in column A. Note:",
+        "Create a Budget in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Create a Budget in Excel This example shows you how to create a budget in Excel . Follow this step-by-step guide and take control of your finances. 1. First, enter the different types of income and expenses in column A. Note: on the Home tab, in the F",
+        "Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Create a Budget in Excel This example shows you how to create a budget in Excel . Follow this step-by-step guide and take control of your finances. 1. First, enter the different types of income and expenses in column A. Note: on the Home tab, in the Font group, you can use the different commands to change the font size and font style of text.",
+        "troduction Basics Functions Data Analysis VBA 300 Examples Ask us Create a Budget in Excel This example shows you how to create a budget in Excel . Follow this step-by-step guide and take control of your finances. 1. First, enter the different types of income and expenses in column A. Note: on the Home tab, in the Font group, you can use the different commands to change the font size and font style of text. Click on the right border of the column A header to in",
+        "mn width. 2. Enter the word Jan into cell B2. Next, select cell B2, click the lower right corner of the cell and drag it across to cell M2. Excel automatically adds the other months. 3. Enter some data to get started with budgeting . 4. Enter the SUM function into cell B6. To achieve this, select cell B6, type an equal sign (=), enter SUM(, select the range B4:B5, close with a \")\" and press Enter. Note: on the Home tab, in the Font group, you can add a top bord",
+        "ab, in the Font group, you can add a top border. 5. Select cell B6, click the lower right corner of the cell and drag it across to cell M6. Excel copies the function and border to the other cells. 6. Enter the SUM function into cell O4. Remember, select cell O4, type =SUM(, select the range B4:M4, close with a \")\" and press Enter. 7. Drag cell O4 down to cell O6. 8. Repeat steps 4 to 7 for the expenses. 9. Add a Short/Extra row. Explanation: we created two cond",
+        "learn more about this topic. Maybe this is one step too far for you at this stage, but it shows you one of the many other powerful features Excel has to offer. 2/10 Completed! Learn much more about templates ➝ Next Chapter: Data Validation Chapter Templates Learn more, it's easy Budget Calendar Holidays Meal Planner Invoice Automated Invoice Default Templates Time Sheet BMI calculator Download Excel File budget.xlsx Next Chapter Data Validation Follow Excel Eas",
+        " Learn more, it's easy Budget Calendar Holidays Meal Planner Invoice Automated Invoice Default Templates Time Sheet BMI calculator Download Excel File budget.xlsx Next Chapter Data Validation Follow Excel Easy Become an Excel Pro 300 Examples Budget • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "r Invoice Automated Invoice Default Templates Time Sheet BMI calculator Download Excel File budget.xlsx Next Chapter Data Validation Follow Excel Easy Become an Excel Pro 300 Examples Budget • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "nvoice Default Templates Time Sheet BMI calculator Download Excel File budget.xlsx Next Chapter Data Validation Follow Excel Easy Become an Excel Pro 300 Examples Budget • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "Download Excel File budget.xlsx Next Chapter Data Validation Follow Excel Easy Become an Excel Pro 300 Examples Budget • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "excel_easy_capital",
+      "origin": "Excel Easy",
+      "url": "https://www.excel-easy.com/examples/capital-investment.html",
+      "utc": "2026-10-18T06:27:31.828693+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.excel-easy.com/examples/capital-investment.html",
+      "content_type": "text/html",
+      "body_read": true,
+      "bytes": 18145,
+      "sha256": "edd3663d3ba24924db369e6f3c24013e312c2af660c48475934ab015cec59d63",
+      "path": "source_discovery/expansion_20261018_v12/pages/excel_easy_capital.source",
+      "title": "Capital Investment in Excel - Made Simple",
+      "text_characters": 3562,
+      "relevant_links": [
+        {
+          "text": "Excel Easy",
+          "url": "https://www.excel-easy.com",
+          "workbook_link": false
+        },
+        {
+          "text": "Introduction",
+          "url": "https://www.excel-easy.com/introduction.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Basics",
+          "url": "https://www.excel-easy.com/basics.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Functions",
+          "url": "https://www.excel-easy.com/functions.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Data Analysis",
+          "url": "https://www.excel-easy.com/data-analysis.html",
+          "workbook_link": false
+        },
+        {
+          "text": "VBA",
+          "url": "https://www.excel-easy.com/vba.html",
+          "workbook_link": false
+        },
+        {
+          "text": "300 Examples",
+          "url": "https://www.excel-easy.com/examples.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Ask us",
+          "url": "https://www.excel-easy.com/ask-us.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Formulate the Model",
+          "url": "https://www.excel-easy.com/examples/capital-investment.html#formulate-model",
+          "workbook_link": false
+        },
+        {
+          "text": "Trial and Error",
+          "url": "https://www.excel-easy.com/examples/capital-investment.html#trial-error",
+          "workbook_link": false
+        },
+        {
+          "text": "Solve the Model",
+          "url": "https://www.excel-easy.com/examples/capital-investment.html#solve-model",
+          "workbook_link": false
+        },
+        {
+          "text": "named ranges",
+          "url": "https://www.excel-easy.com/examples/named-range.html",
+          "workbook_link": false
+        },
+        {
+          "text": "sumproduct",
+          "url": "https://www.excel-easy.com/examples/sumproduct.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Solver add-in",
+          "url": "https://www.excel-easy.com/data-analysis/solver.html#load-solver-add-in",
+          "workbook_link": false
+        },
+        {
+          "text": "6/8 Completed! Learn much more about the solver ➝",
+          "url": "https://www.excel-easy.com/examples/sensitivity-analysis.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Analysis ToolPak",
+          "url": "https://www.excel-easy.com/data-analysis/analysis-toolpak.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Solver",
+          "url": "https://www.excel-easy.com/data-analysis/solver.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Transportation Problem",
+          "url": "https://www.excel-easy.com/examples/transportation-problem.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Assignment Problem",
+          "url": "https://www.excel-easy.com/examples/assignment-problem.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Shortest Path Problem",
+          "url": "https://www.excel-easy.com/examples/shortest-path-problem.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Maximum Flow Problem",
+          "url": "https://www.excel-easy.com/examples/maximum-flow-problem.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Capital Investment",
+          "url": "https://www.excel-easy.com/examples/capital-investment.html",
+          "workbook_link": false
+        },
+        {
+          "text": "System of Linear Equations",
+          "url": "https://www.excel-easy.com/examples/system-of-linear-equations.html",
+          "workbook_link": false
+        },
+        {
+          "text": "capital-investment.xlsx",
+          "url": "https://www.excel-easy.com/examples/excel-files/capital-investment.xlsx",
+          "workbook_link": true
+        },
+        {
+          "text": "",
+          "url": "https://www.facebook.com/ExcelEasy",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://twitter.com/ExcelEasy",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://www.pinterest.com/ExcelEasy/",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://www.linkedin.com/company/excel-easy",
+          "workbook_link": false
+        },
+        {
+          "text": "BMI calculator",
+          "url": "https://www.excel-easy.com/examples/bmi-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "XML",
+          "url": "https://www.excel-easy.com/examples/xml.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Userform",
+          "url": "https://www.excel-easy.com/vba/userform.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Frequency Distribution",
+          "url": "https://www.excel-easy.com/examples/frequency-distribution.html",
+          "workbook_link": false
+        },
+        {
+          "text": "XLOOKUP",
+          "url": "https://www.excel-easy.com/examples/xlookup.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Capital Investment in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Capital Investment in Excel Formulate the Model | Trial and Error | Solve the Model Use the solver in Excel to find the combination of capital investments that maximizes the total profit. For",
+        "Capital Investment in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Capital Investment in Excel Formulate the Model | Trial and Error | Solve the Model Use the solver in Excel to find the combination of capital investments that maximizes the total profit. Formulate the Model The",
+        "Capital Investment in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Capital Investment in Excel Formulate the Model | Trial and Error | Solve the Model Use the solver in Excel to find the combination of capital investments that maximizes the total profit. Formulate the Model The model we are ",
+        "Capital Investment in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Capital Investment in Excel Formulate the Model | Trial and Error | Solve the Model Use the solver in Excel to find the combination of capital investments that maximizes the total profit. Formulate the Model The model we are going to solve looks as fo",
+        "ple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Capital Investment in Excel Formulate the Model | Trial and Error | Solve the Model Use the solver in Excel to find the combination of capital investments that maximizes the total profit. Formulate the Model The model we are going to solve looks as follows in Excel. 1. To formulate this binary integer programming (BIP) model, answer the followin",
+        "Data Analysis VBA 300 Examples Ask us Capital Investment in Excel Formulate the Model | Trial and Error | Solve the Model Use the solver in Excel to find the combination of capital investments that maximizes the total profit. Formulate the Model The model we are going to solve looks as follows in Excel. 1. To formulate this binary integer programming (BIP) model, answer the following three questions. a. What are the decisions to be made? For this problem, we ne",
+        "combination of capital investments that maximizes the total profit. Formulate the Model The model we are going to solve looks as follows in Excel. 1. To formulate this binary integer programming (BIP) model, answer the following three questions. a. What are the decisions to be made? For this problem, we need Excel to find out which capital investments to make (Yes=1, No=0). b. What are the constraints on these decisions? First, the amount of capital used by the",
+        "nary integer programming (BIP) model, answer the following three questions. a. What are the decisions to be made? For this problem, we need Excel to find out which capital investments to make (Yes=1, No=0). b. What are the constraints on these decisions? First, the amount of capital used by the investments cannot exceed the limited amount of capital available (50). For example, investment One  uses 12 units of capital. Second, only investment One or investment ",
+        "ake investment One, Five and Six. All constraints are satisfied. It is not necessary to use trial and error. We shall describe next how the Excel Solver can be used to quickly find the optimal solution. Solve the Model To find the optimal solution, execute the following steps. 1. On the Data tab, in the Analyze group, click Solver. Note: can't find the Solver button? Click here to load the Solver add-in . Enter the solver parameters (read on). The result should",
+        "m Assignment Problem Shortest Path Problem Maximum Flow Problem Capital Investment Sensitivity Analysis System of Linear Equations Download Excel File capital-investment.xlsx Next Chapter Analysis ToolPak Follow Excel Easy Become an Excel Pro 300 Examples Capital Investment • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "Investment Sensitivity Analysis System of Linear Equations Download Excel File capital-investment.xlsx Next Chapter Analysis ToolPak Follow Excel Easy Become an Excel Pro 300 Examples Capital Investment • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "y Analysis System of Linear Equations Download Excel File capital-investment.xlsx Next Chapter Analysis ToolPak Follow Excel Easy Become an Excel Pro 300 Examples Capital Investment • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "al-investment.xlsx Next Chapter Analysis ToolPak Follow Excel Easy Become an Excel Pro 300 Examples Capital Investment • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "excel_easy_loan",
+      "origin": "Excel Easy",
+      "url": "https://www.excel-easy.com/examples/loan-amortization-schedule.html",
+      "utc": "2026-10-18T06:27:31.827280+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.excel-easy.com/examples/loan-amortization-schedule.html",
+      "content_type": "text/html",
+      "body_read": true,
+      "bytes": 13698,
+      "sha256": "ce6256be97e06b959320c6750a7338528129fb1318520d3979c918743128f666",
+      "path": "source_discovery/expansion_20261018_v12/pages/excel_easy_loan.source",
+      "title": "Loan Amortization Schedule in Excel - Made Simple",
+      "text_characters": 1617,
+      "relevant_links": [
+        {
+          "text": "Excel Easy",
+          "url": "https://www.excel-easy.com",
+          "workbook_link": false
+        },
+        {
+          "text": "Introduction",
+          "url": "https://www.excel-easy.com/introduction.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Basics",
+          "url": "https://www.excel-easy.com/basics.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Functions",
+          "url": "https://www.excel-easy.com/functions.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Data Analysis",
+          "url": "https://www.excel-easy.com/data-analysis.html",
+          "workbook_link": false
+        },
+        {
+          "text": "VBA",
+          "url": "https://www.excel-easy.com/vba.html",
+          "workbook_link": false
+        },
+        {
+          "text": "300 Examples",
+          "url": "https://www.excel-easy.com/examples.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Ask us",
+          "url": "https://www.excel-easy.com/ask-us.html",
+          "workbook_link": false
+        },
+        {
+          "text": "PMT function",
+          "url": "https://www.excel-easy.com/examples/pmt.html",
+          "workbook_link": false
+        },
+        {
+          "text": "named ranges",
+          "url": "https://www.excel-easy.com/examples/named-range.html",
+          "workbook_link": false
+        },
+        {
+          "text": "7/11 Completed! Learn more about financial functions ➝",
+          "url": "https://www.excel-easy.com/examples/npv.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Statistical Functions",
+          "url": "https://www.excel-easy.com/functions/statistical-functions.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Functions",
+          "url": "https://www.excel-easy.com/functions/financial-functions.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Loans with Different Durations",
+          "url": "https://www.excel-easy.com/examples/loans-with-different-durations.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Investment or Annuity",
+          "url": "https://www.excel-easy.com/examples/investment-annuity.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Compound Interest",
+          "url": "https://www.excel-easy.com/examples/compound-interest.html",
+          "workbook_link": false
+        },
+        {
+          "text": "CAGR",
+          "url": "https://www.excel-easy.com/examples/cagr.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Loan Amortization Schedule",
+          "url": "https://www.excel-easy.com/examples/loan-amortization-schedule.html",
+          "workbook_link": false
+        },
+        {
+          "text": "IRR",
+          "url": "https://www.excel-easy.com/examples/irr.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Depreciation",
+          "url": "https://www.excel-easy.com/examples/depreciation.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Profit Margin",
+          "url": "https://www.excel-easy.com/examples/profit-margin.html",
+          "workbook_link": false
+        },
+        {
+          "text": "loan-amortization-schedule.xlsx",
+          "url": "https://www.excel-easy.com/examples/excel-files/loan-amortization-schedule.xlsx",
+          "workbook_link": true
+        },
+        {
+          "text": "",
+          "url": "https://www.facebook.com/ExcelEasy",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://twitter.com/ExcelEasy",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://www.pinterest.com/ExcelEasy/",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://www.linkedin.com/company/excel-easy",
+          "workbook_link": false
+        },
+        {
+          "text": "BMI calculator",
+          "url": "https://www.excel-easy.com/examples/bmi-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "XML",
+          "url": "https://www.excel-easy.com/examples/xml.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Userform",
+          "url": "https://www.excel-easy.com/vba/userform.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Frequency Distribution",
+          "url": "https://www.excel-easy.com/examples/frequency-distribution.html",
+          "workbook_link": false
+        },
+        {
+          "text": "XLOOKUP",
+          "url": "https://www.excel-easy.com/examples/xlookup.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Loan Amortization Schedule in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Loan Amortization Schedule in Excel This example teaches you how to create a loan amortization schedule in Excel . 1. We use the PMT function to calculate the monthly payment on a loan with a",
+        "Loan Amortization Schedule in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Loan Amortization Schedule in Excel This example teaches you how to create a loan amortization schedule in Excel . 1. We use the PMT function to calculate the monthly payment on a loan with an annual interest ra",
+        "Loan Amortization Schedule in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Loan Amortization Schedule in Excel This example teaches you how to create a loan amortization schedule in Excel . 1. We use the PMT function to calculate the monthly payment on a loan with an annual interest rate of 5%, a 2-",
+        "Loan Amortization Schedule in Excel - Made Simple Excel Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Loan Amortization Schedule in Excel This example teaches you how to create a loan amortization schedule in Excel . 1. We use the PMT function to calculate the monthly payment on a loan with an annual interest rate of 5%, a 2-year duration and a presen",
+        "l Easy #1 Excel tutorial on the net Excel Introduction Basics Functions Data Analysis VBA 300 Examples Ask us Loan Amortization Schedule in Excel This example teaches you how to create a loan amortization schedule in Excel . 1. We use the PMT function to calculate the monthly payment on a loan with an annual interest rate of 5%, a 2-year duration and a present value (amount borrowed) of $20,000. We use named ranges for the input cells. 2. Use the PPMT function ",
+        "Analysis VBA 300 Examples Ask us Loan Amortization Schedule in Excel This example teaches you how to create a loan amortization schedule in Excel . 1. We use the PMT function to calculate the monthly payment on a loan with an annual interest rate of 5%, a 2-year duration and a present value (amount borrowed) of $20,000. We use named ranges for the input cells. 2. Use the PPMT function to calculate the principal part of the payment. The second argument specifies",
+        "specifies the payment number. 4. Update the balance. 5. Select the range A7:E7 (first payment) and drag it down one row. Change the balance formula. 6. Select the range A8:E8 (second payment) and drag it down to row 30. It takes 24 months to pay off this loan. See how the principal part increases and the interest part decreases with each payment. 7/11 Completed! Learn more about financial functions ➝ Next Chapter: Statistical Functions Chapter Financial Functions",
+        "ith Different Durations Investment or Annuity Compound Interest CAGR Loan Amortization Schedule NPV IRR Depreciation Profit Margin Download Excel File loan-amortization-schedule.xlsx Next Chapter Statistical Functions Follow Excel Easy Become an Excel Pro 300 Examples Loan Amortization Schedule • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "n Schedule NPV IRR Depreciation Profit Margin Download Excel File loan-amortization-schedule.xlsx Next Chapter Statistical Functions Follow Excel Easy Become an Excel Pro 300 Examples Loan Amortization Schedule • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        "preciation Profit Margin Download Excel File loan-amortization-schedule.xlsx Next Chapter Statistical Functions Follow Excel Easy Become an Excel Pro 300 Examples Loan Amortization Schedule • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP",
+        ".xlsx Next Chapter Statistical Functions Follow Excel Easy Become an Excel Pro 300 Examples Loan Amortization Schedule • © 2010-2026 Unlock Excel Power in October: BMI calculator • XML • Userform • Frequency Distribution • XLOOKUP"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "nrcs_engineering_search",
+      "origin": "Public search index metadata for NRCS",
+      "url": "https://www.google.com/search?q=site%3Anrcs.usda.gov+engineering+spreadsheets+xlsx",
+      "utc": "2026-10-18T06:27:32.687104+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=site%3Anrcs.usda.gov+engineering+spreadsheets+xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.google.com', port=443) at 0x7d1536abbb90>, 'Connection to www.google.com timed out. (connect timeout=12)'))"
+    },
+    {
+      "id": "nsw_cba",
+      "origin": "NSW Treasury",
+      "url": "https://www.treasury.nsw.gov.au/finance-resource/guidelines-cost-benefit-analysis",
+      "utc": "2026-10-18T06:27:31.833859+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.nsw.gov.au/nsw-government/public-sector/financial-information-for-public-entities/centre-for-economic-evidence/nsw-government-investment-framework/government-guide-to-cost-benefit-analysis",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 166923,
+      "sha256": "f80661aa7441c423ed37fcdfcd5139321be8a3a47352c90ffee4c2c0f23c46ae",
+      "path": "source_discovery/expansion_20261018_v12/pages/nsw_cba.source",
+      "title": "Government Guide to Cost-Benefit Analysis | NSW Government",
+      "text_characters": 11219,
+      "relevant_links": [
+        {
+          "text": "TPG23-08 NSW Government Guide to Cost-Benefit Analysis (PDF 2.66MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/tpg23-08-nsw-government-guide-to-cost-benefit-analysis.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "The Business Case Guidelines TPG24-29 (PDF 2.74MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/tpg24-29-nsw-government-business-case-guidelines.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Carbon emissions in the Investment Framework TPG24-34 (PDF 883.11KB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/tpg24-34-carbon-emissions-in-the-investment-framework.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "First Nations Investment Framework TPG24-28 (PDF 8.77MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2024-11/tpg24-28_first-nations-investment-framework.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Disaster Cost-Benefit Framework TPG23-17 (PDF 1.78MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/tpg23-17-disaster-cost-benefit-framework.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Evaluation Guidelines TPG22-22 (PDF 1.66MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-07/tpg22-22-evaluation-guidelines.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Valuing Health and Safety Technical Note (PDF 535.92KB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2026-08/valuing-health-and-safety-technical-note.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Technical Report (PDF 2.33MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2026-08/cappre-valuing-health-and-safety-technical-report.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Choice Modelling Technical Note (PDF 1.29MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-07/technical-note-on-stated-preference-choice-model.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Ex-post CBA Technical Note (PDF 603.57KB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/technical-note-ex-post-cba.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Market Failure Guide (PDF 1.65MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/market-failure-guide.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Rapid Cost-Benefit Analysis Tool",
+          "url": "https://www.nsw.gov.au/nsw-government/public-sector/financial-information-for-public-entities/centre-for-economic-evidence/tools-resources#toc-our-tools-and-resources",
+          "workbook_link": false
+        },
+        {
+          "text": "guidelines (PDF 1.03MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/cost-benefit-analysis-to-assess-coastal-management-options-guidelines.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "addendum (PDF 802.48KB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/addendum-to-cba-template.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "guidelines (PDF 293.69KB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/guidelines-for-the-economic-assessment-of-mining-and-coal-seam-gas-proposals.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "technical notes (PDF 1.2MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/technical-notes-supporting-guidelines-economic-assessment-mining-coal-seam-gas-proposals.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "guide (PDF 1.04MB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/framework-valuing-green-infrastructure-public-spaces.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "guide",
+          "url": "https://www1.health.nsw.gov.au/pds/ActivePDSDocuments/GL2026_006.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Economic Parameter Values",
+          "url": "https://www.transport.nsw.gov.au/system/files/media/documents/2024/Freight-benefit-guidelines-September-2024.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "parameters (PDF 372.21KB)",
+          "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-04/nsw-treasury-investment-attraction-cba-framework.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "parameters",
+          "url": "https://dcj.nsw.gov.au/documents/about-us/facsiar/facsiar-publications-and-resources/dcj-benefits-database-standard-values-human-services-cost-benefit-analysis.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Copyright",
+          "url": "https://www.nsw.gov.au/nsw-government/about-website/copyright",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "ives. The Disaster Cost-Benefit Framework TPG23-17 (PDF 1.78MB) provides guidance on CBA of disaster resilience initiatives. It includes an excel tool that can be used to do a CBA of flood resilience initiatives. The Evaluation Guidelines TPG22-22 (PDF 1.66MB) set out mandatory requirements and recommendations for planning and conducting evaluations. Technical notes The ​​​ Valuing Health and Safety Technical Note (PDF 535.92KB) provides estimates for the value",
+        "opular NSW public holidays Service NSW locations State services State flag About this website Access to information Accessibility statement Copyright Disclaimer Privacy statement NSW Government directory Departments Cabinet Office Climate Change, Energy, the Environment and Water Communities and Justice Creative Industries, Tourism, Hospitality and Sport Customer Service Education Health Planning, Housing and Infrastructure Premier's Department Primary Industries a",
+        "ay respect to the Traditional Custodians and First Peoples of NSW, and acknowledge their continued connection to their country and culture. Copyright © 2026"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "nz_cbax_assets_search",
+      "origin": "Public search index metadata for NZ Treasury",
+      "url": "https://www.google.com/search?q=site%3Atreasury.govt.nz+CBAX+xlsx",
+      "utc": "2026-10-18T06:27:32.524179+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=site%3Atreasury.govt.nz+CBAX+xlsx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.google.com', port=443) at 0x7d15341b5210>, 'Connection to www.google.com timed out. (connect timeout=12)'))"
+    },
+    {
+      "id": "who_hearts_costing",
+      "origin": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240012328",
+      "utc": "2026-10-18T06:27:31.831271+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 404,
+      "resolved_url": "https://www.who.int/publications/i/item/9789240012328",
+      "content_type": "text/html; charset=utf-8",
+      "body_read": true,
+      "bytes": 72505,
+      "sha256": "af6292b33e907f72dbe089709433aec59036d0706067fcd35827f61b33e3cbf4",
+      "path": "source_discovery/expansion_20261018_v12/pages/who_hearts_costing.source",
+      "title": "404",
+      "text_characters": 3035,
+      "relevant_links": [
+        {
+          "text": "Tools and toolkits",
+          "url": "https://www.who.int/mega-menu/health-topics/resources/tools-and-toolkits",
+          "workbook_link": false
+        },
+        {
+          "text": "Programme Budget",
+          "url": "https://www.who.int/mega-menu/about-us/accountability/budget",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of use",
+          "url": "https://www.who.int/redirect-pages/footer/who-policies/terms-of-use",
+          "workbook_link": false
+        },
+        {
+          "text": "WHO",
+          "url": "https://www.who.int/about/policies/terms-of-use",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [],
+      "challenge_suspected": false
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "role": "Metadata-only candidate and correction links; no input or answer acquired",
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "items": [
+    {
+      "id": "peri_publication_search_file4",
+      "origin": "PERI historical publication metadata",
+      "url": "https://peri.umass.edu/images/WP322concordance-RR-HAP.xlsx",
+      "directory_url": "https://peri.umass.edu/publication/does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff/",
+      "directory_sha256": "554e6b9aa362939ecdf02d72fa670ed580555c5bc8408fb7eab2fdba3f9cc2cc",
+      "link_label": "Concordance between variable names in the RR working spreadsheet and the HAP data and code",
+      "metadata_receipt": "source_discovery/expansion_20261018_v11/RECEIPT.json",
+      "role": "candidate_only_not_truth_verified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "peri_publication_search_file5",
+      "origin": "PERI historical publication metadata",
+      "url": "https://peri.umass.edu/images/RR-keycolumns.xlsx",
+      "directory_url": "https://peri.umass.edu/publication/does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff/",
+      "directory_sha256": "554e6b9aa362939ecdf02d72fa670ed580555c5bc8408fb7eab2fdba3f9cc2cc",
+      "link_label": "Additional spreadsheet with the following columns",
+      "metadata_receipt": "source_discovery/expansion_20261018_v11/RECEIPT.json",
+      "role": "candidate_only_not_truth_verified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "peri_publication_search_file6",
+      "origin": "PERI historical publication metadata",
+      "url": "http://www.peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/RR-keycolumns.xlsx",
+      "directory_url": "https://peri.umass.edu/publication/does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff/",
+      "directory_sha256": "554e6b9aa362939ecdf02d72fa670ed580555c5bc8408fb7eab2fdba3f9cc2cc",
+      "link_label": ":",
+      "metadata_receipt": "source_discovery/expansion_20261018_v11/RECEIPT.json",
+      "role": "candidate_only_not_truth_verified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "excel_easy_budget_file20",
+      "origin": "Excel Easy",
+      "url": "https://www.excel-easy.com/examples/excel-files/budget.xlsx",
+      "directory_url": "https://www.excel-easy.com/examples/budget.html",
+      "directory_sha256": "007b68df21a323e5449e8eafa68607c31dff29719a1cdbe01e44d33956e5e01f",
+      "link_label": "budget.xlsx",
+      "metadata_receipt": "source_discovery/expansion_20261018_v12/RECEIPT.json",
+      "role": "candidate_only_not_truth_verified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "excel_easy_capital_file23",
+      "origin": "Excel Easy",
+      "url": "https://www.excel-easy.com/examples/excel-files/capital-investment.xlsx",
+      "directory_url": "https://www.excel-easy.com/examples/capital-investment.html",
+      "directory_sha256": "edd3663d3ba24924db369e6f3c24013e312c2af660c48475934ab015cec59d63",
+      "link_label": "capital-investment.xlsx",
+      "metadata_receipt": "source_discovery/expansion_20261018_v12/RECEIPT.json",
+      "role": "candidate_only_not_truth_verified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "excel_easy_loan_file21",
+      "origin": "Excel Easy",
+      "url": "https://www.excel-easy.com/examples/excel-files/loan-amortization-schedule.xlsx",
+      "directory_url": "https://www.excel-easy.com/examples/loan-amortization-schedule.html",
+      "directory_sha256": "ce6256be97e06b959320c6750a7338528129fb1318520d3979c918743128f666",
+      "link_label": "loan-amortization-schedule.xlsx",
+      "metadata_receipt": "source_discovery/expansion_20261018_v12/RECEIPT.json",
+      "role": "candidate_only_not_truth_verified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "rr_dropbox_original_claim",
+      "origin": "Reinhart Rogoff original historical case; mirrors grouped",
+      "url": "https://www.dropbox.com/s/aw3yb8u2mvr599p/Reinhart%20and%20Rogoff.xlsx?dl=0",
+      "role": "replication README claims Original data; workbook content not verified",
+      "accepted": false,
+      "workbook_acquired": false,
+      "metadata_evidence": "source_discovery/expansion_20261018_v10/pages/rr_science_readme_api.source"
+    },
+    {
+      "id": "rr_author_correction_archive",
+      "origin": "Reinhart Rogoff original historical case; mirrors grouped",
+      "url": "http://web.archive.org/web/20191012210935/https://carmenreinhart.com/user_uploads/data/41_data.xlsx",
+      "role": "author site labels this as correction to 2010 paper; not the original workbook",
+      "link_context": "Carmen Reinhart and Kenneth Rogoff, Harvard University May 6, 2013 Our correction to our 2010 paper is available here and here .",
+      "metadata_evidence": "source_discovery/expansion_20261018_v11/pages/rr_author_debt_growth.source",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "rr_peri_code_archive",
+      "origin": "Reinhart Rogoff original historical case; mirrors grouped",
+      "url": "https://peri.umass.edu/images/WP322HAP-RR-GITD-code.zip",
+      "role": "original critique replication data/code archive; not a verified error workbook",
+      "accepted": false,
+      "workbook_acquired": false,
+      "metadata_evidence": "source_discovery/expansion_20261018_v11/pages/peri_publication_search.source"
+    },
+    {
+      "id": "rr_peri_code_archive_revision",
+      "origin": "Reinhart Rogoff original historical case; mirrors grouped",
+      "url": "https://peri.umass.edu/images/WP322HAP-RR-GITD-code-2013-05-17.zip",
+      "role": "revised replication package; contents and correction truth not inspected",
+      "accepted": false,
+      "workbook_acquired": false,
+      "metadata_evidence": "source_discovery/expansion_20261018_v11/pages/peri_publication_search.source"
+    }
+  ]
+}

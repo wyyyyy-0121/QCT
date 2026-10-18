@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<title>Create a Budget in Excel - Made Simple</title>
+<meta name="keywords" content="budget, excel, create, control finances, template, income, expenses, budgeting">
+<meta name="description" content="This example shows you how to create a budget in Excel. Follow this step-by-step guide and take control of your finances. First, enter the different types of income and expenses in column A.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Create a Budget in Excel">
+<meta property="og:url" content="https://www.excel-easy.com/examples/budget.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="This example shows you how to create a budget in Excel. Follow this step-by-step guide and take control of your finances. First, enter the different types of income and expenses in column A.">
+<meta property="og:image" content="https://www.excel-easy.com/smi/examples/budget.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="https://www.excel-easy.com/smi/examples/budget.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/budget/income-and-expenses.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1987061359047735" data-overlays="collapsed-bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:971px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="/favicon-48x48.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="https://www.excel-easy.com"><img src="../layout/excel-tutorial.svg" onerror="this.src='../layout/excel-tutorial.png'" border="0" alt="Excel Tutorial" title="Excel Tutorial" width="44" height="41" /><span class="easy">Excel Easy</span></a>
+                <a href="https://www.excel-easy.com" class="heading-link"><span class="heading-prefix">#1 </span><h2 class="heading-main">Excel tutorial</h2><span class="heading-suffix"> on the net</span></a>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="https://www.excel-easy.com">Excel</a></li>
+                  <li><a href="https://www.excel-easy.com/introduction.html">Introduction</a></li>
+				  <li><a href="https://www.excel-easy.com/basics.html">Basics</a></li>
+				  <li><a href="https://www.excel-easy.com/functions.html">Functions</a></li>
+				  <li><a href="https://www.excel-easy.com/data-analysis.html">Data Analysis</a></li>
+                  <li><a href="https://www.excel-easy.com/vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="https://www.excel-easy.com/examples.html">300 Examples</a></li>
+                  <li><a href="https://www.excel-easy.com/ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Create a Budget in Excel</h1>
+				    <div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>This example shows you how to <strong>create a budget in Excel</strong>. Follow this step-by-step guide and take control of your finances.</p>
+<p>1. First, enter the different types of income and expenses in column A.</p>
+<p><img src="images/budget/income-and-expenses.png" alt="Income and Expenses" width="604" height="395" title="Income and Expenses" /></p>
+<div class="ad"><!-- Excel Easy Pages Begin -->
+<ins class="adsbygoogle adslot"
+     style="display:block"
+     data-ad-client="ca-pub-1987061359047735"
+     data-ad-slot="2884421292"></ins>
+</div>
+<p>Note: on the Home tab, in the Font group, you can use the different commands to change the font size and font style of text. Click on the right border of the column A header to increase the column width.</p>
+<p>2. Enter the word Jan into cell B2. Next, select cell B2, click the lower right corner of the cell and drag it across to cell M2. Excel automatically adds the other months.</p>
+<p><img src="images/budget/months.png" alt="Months" width="604" height="395" title="Months" /></p>
+<p>3. Enter some data to get started with <strong>budgeting</strong>.</p>
+<p>4. Enter the SUM function into cell B6. To achieve this, select cell B6, type an equal sign (=), enter SUM(, select the range B4:B5, close with a &quot;)&quot; and press Enter.</p>
+<p><img src="images/budget/enter-some-data.png" loading="lazy" alt="Enter Some Data" width="604" height="395" title="Enter Some Data" /></p>
+<p>Note: on the Home tab, in the Font group, you can add a top border.</p>
+<div class="ad"><!-- Excel Easy Pages Middle -->
+<ins class="adsbygoogle adslot"
+     style="display:block"
+     data-ad-client="ca-pub-1987061359047735"
+     data-ad-slot="2529116896"></ins>
+</div>
+<p>5. Select cell B6, click the lower right corner of the cell and drag it across to cell M6. Excel copies the function and border to the other cells.</p>
+<p><img src="images/budget/copy-function.png" loading="lazy" alt="Copy Function" width="604" height="395" title="Copy Function" /></p>
+<p>6. Enter the SUM function into cell O4. Remember, select cell O4, type =SUM(, select the range B4:M4, close with a &quot;)&quot; and press Enter.</p>
+<p>7. Drag cell O4 down to cell O6.</p>
+<p><img src="images/budget/year-column.png" loading="lazy" alt="Year Column" width="604" height="395" title="Year Column" /></p>
+<p>8. Repeat steps 4 to 7 for the expenses.</p>
+<p>9. Add a Short/Extra row.</p>
+<p><img src="images/budget/budget-result.png" loading="lazy" alt="Budget in Excel" width="604" height="435" title="Budget in Excel" /></p>
+<p>Explanation: we created two <a href="../data-analysis/conditional-formatting.html">conditional formatting</a> rules to highlight cells less than 0 (red) and greater than 0 (green). You can follow the link to learn more about this topic. Maybe this is one step too far for you at this stage, but it shows you one of the many other powerful features Excel has to offer.</p>
+              <div class="ad"><!-- Excel Easy Pages End -->
+<ins class="adsbygoogle adslot"
+     style="display:block"
+     data-ad-client="ca-pub-1987061359047735"
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="calendar.html">2/10 Completed! Learn much more about templates <span class="arrow">&#10141;</span><br />
+                  </a></span>Next Chapter: <a href="../basics/data-validation.html">Data Validation</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.excel-easy.com/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Search Entire Site" class="field" />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <span class="sidebar-title">Chapter</span>
+						  <ul>
+							<li><a href="../basics/templates.html">Templates</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li class="current_page_item"><a href="budget.html">Budget</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li><a href="holidays.html">Holidays</a></li>
+                        <li><a href="meal-planner.html">Meal Planner</a></li>
+                        <li><a href="invoice.html">Invoice</a></li>
+                        <li><a href="automated-invoice.html">Automated Invoice</a></li>
+                        <li><a href="default-templates.html">Default Templates</a></li>
+                        <li><a href="time-sheet.html">Time Sheet</a></li>
+                        <li><a href="bmi-calculator.html">BMI calculator</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><font color="#8FAD22"><span class="notranslate">Download Excel File</span></font></h3>
+						  <ul>
+							<li><a href="excel-files/budget.xlsx">budget.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <span class="vistab"><div id="sidebar">
+					<ul>
+				  	  <li>
+                        <span class="sidebar-title">Next Chapter</span>
+						  <ul>
+							<li><a href="../basics/data-validation.html">Data Validation</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div></span>
+              <div id="sidebar">
+		      <h3><span class="notranslate">Follow Excel Easy</span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://www.facebook.com/ExcelEasy" target="_blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Excel Easy on Facebook" title="Excel Easy on Facebook" /></a> <a href="https://twitter.com/ExcelEasy" target="_blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Excel Easy on X" title="Excel Easy on X" /></a> <a href="https://www.pinterest.com/ExcelEasy/" target="_blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Excel Easy on Pinterest" title="Excel Easy on Pinterest"></a> <a href="https://www.linkedin.com/company/excel-easy" target="_blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Excel Easy on LinkedIn" title="Excel Easy on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="https://www.excel-easy.com/examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="budget.html">Budget</a> &bull; &copy; 2010-2026<br />
+	Unlock Excel Power in October: <a href="https://www.excel-easy.com/examples/bmi-calculator.html">BMI calculator</a> &bull; <a href="https://www.excel-easy.com/examples/xml.html">XML</a> &bull; <a href="https://www.excel-easy.com/vba/userform.html">Userform</a> &bull; <a href="https://www.excel-easy.com/examples/frequency-distribution.html">Frequency Distribution</a> &bull; <a href="https://www.excel-easy.com/examples/xlookup.html">XLOOKUP</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+</body>
+</html>

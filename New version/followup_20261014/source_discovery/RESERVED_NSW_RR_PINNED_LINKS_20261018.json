@@ -1,0 +1,50 @@
+{
+  "role": "Metadata-only links; no original input or correction truth acquired",
+  "items": [
+    {
+      "id": "nsw_tool_5",
+      "origin": "NSW Treasury",
+      "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/rapid-cba-tool.xlsx",
+      "directory_url": "https://www.nsw.gov.au/nsw-government/public-sector/financial-information-for-public-entities/centre-for-economic-evidence/tools-resources",
+      "directory_sha256": "51fa359deb8c9fd3f5b5c6a5ead9a879f73b474a33b1574e48c2d463d2f2b4d6",
+      "link_label": "Rapid Cost-Benefit Analysis Tool (XLSX 1.51MB)",
+      "metadata_receipt": "source_discovery/expansion_20261018_v13/RECEIPT.json",
+      "role": "candidate formula tool or value database; formula presence unverified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "nsw_tool_8",
+      "origin": "NSW Treasury",
+      "url": "https://www.nsw.gov.au/sites/default/files/noindex/2025-03/nsw-treasury-outcomes-values-database.xlsx",
+      "directory_url": "https://www.nsw.gov.au/nsw-government/public-sector/financial-information-for-public-entities/centre-for-economic-evidence/tools-resources",
+      "directory_sha256": "51fa359deb8c9fd3f5b5c6a5ead9a879f73b474a33b1574e48c2d463d2f2b4d6",
+      "link_label": "Outcome Values Database (XLSX 1.65MB)",
+      "metadata_receipt": "source_discovery/expansion_20261018_v13/RECEIPT.json",
+      "role": "candidate formula tool or value database; formula presence unverified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "nsw_tool_9",
+      "origin": "NSW Treasury",
+      "url": "https://www.nsw.gov.au/sites/default/files/noindex/2026-08/nsw-treasury-employment-calculator.xlsx",
+      "directory_url": "https://www.nsw.gov.au/nsw-government/public-sector/financial-information-for-public-entities/centre-for-economic-evidence/tools-resources",
+      "directory_sha256": "51fa359deb8c9fd3f5b5c6a5ead9a879f73b474a33b1574e48c2d463d2f2b4d6",
+      "link_label": "NSW Treasury Employment Calculator (XLSX 279.41KB)",
+      "metadata_receipt": "source_discovery/expansion_20261018_v13/RECEIPT.json",
+      "role": "candidate formula tool or value database; formula presence unverified",
+      "accepted": false,
+      "workbook_acquired": false
+    },
+    {
+      "id": "rr_pinned_replication_workbook",
+      "origin": "Reinhart Rogoff original historical case; mirrors grouped",
+      "url": "https://raw.githubusercontent.com/scienceetonnante/Reinhart-Rogoff/658bfafcfe19878cf13ffa748d3e5ab8c1969f6b/RR.xlsx",
+      "role": "pinned replication workbook path; original error content and truth not verified",
+      "metadata_evidence": "source_discovery/expansion_20261018_v7/pages/rr_science_tree.source",
+      "accepted": false,
+      "workbook_acquired": false
+    }
+  ]
+}

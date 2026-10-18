@@ -1,0 +1,319 @@
+{
+  "role": "Metadata discovery only; no candidate workbook bodies or answer files fetched",
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "index_sha256": "46391f03b74d2b55838f3917de0b5060550f118746a9f033589947ee1377a3a0",
+  "script_sha256": "f0f94ff6e94de7449fac7cc28e0dc3e16f06c099e220068cc8fe8a0e1f7de0f6",
+  "results": [
+    {
+      "id": "australia_cba",
+      "origin": "Australian Office of Impact Analysis",
+      "url": "https://oia.pmc.gov.au/resources/guidance-assessing-impacts/cost-benefit-analysis",
+      "utc": "2026-10-18T06:25:59.310290+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://oia.pmc.gov.au/resources/cost-benefit-analysis",
+      "content_type": "text/html; charset=utf-8",
+      "body_read": true,
+      "bytes": 87802,
+      "sha256": "53d21d139bfbf7bf42eed4c85d726d874903210fdab4397488285308e3fa040b",
+      "path": "source_discovery/expansion_20261018_v11/pages/australia_cba.source",
+      "title": "Cost Benefit Analysis | The Office of Impact Analysis",
+      "text_characters": 49409,
+      "relevant_links": [
+        {
+          "text": "Dealing with costs and benefits that cannot be valued in dollar terms",
+          "url": "https://oia.pmc.gov.au/resources/cost-benefit-analysis#dealing-with-costs-and-benefits-that-cannot-be-valued-in-dollar-terms",
+          "workbook_link": false
+        },
+        {
+          "text": "Cost Benefit Analysis guidance note",
+          "url": "https://oia.pmc.gov.au/sites/default/files/2023-08/cost-benefit-analysis.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Copyright & disclaimer",
+          "url": "https://oia.pmc.gov.au/copyright-and-disclaimer",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "tachment File type Size Cost Benefit Analysis guidance note pdf 286 KB Cost Benefit Analysis guidance note docx 284.02 KB Image Footer menu Copyright & disclaimer Privacy Accessibility Contact Freedom of information"
+      ],
+      "challenge_suspected": true
+    },
+    {
+      "id": "ghg_protocol_crosssector",
+      "origin": "GHG Protocol",
+      "url": "https://ghgprotocol.org/calculation-tools",
+      "utc": "2026-10-18T06:25:58.553295+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 403,
+      "resolved_url": "https://ghgptechassistance.zendesk.com/hc/en-us/categories/27448673565716-Calculation-Tools-and-Guidance",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 5775,
+      "sha256": "1ab0c6706263e9fc2467f90d33b6cb81c238447fa55478b9a91eeb260896d1f8",
+      "path": "source_discovery/expansion_20261018_v11/pages/ghg_protocol_crosssector.source",
+      "title": "Just a moment...",
+      "text_characters": 16,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": true
+    },
+    {
+      "id": "ghg_protocol_tools",
+      "origin": "GHG Protocol",
+      "url": "https://ghgprotocol.org/calculation-tools-and-guidance",
+      "utc": "2026-10-18T06:25:58.552740+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 403,
+      "resolved_url": "https://ghgptechassistance.zendesk.com/hc/en-us/categories/27448673565716-Calculation-Tools-and-Guidance",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 5775,
+      "sha256": "c10bde50015bf1664b5c603e956abff16ac9c6da16bc5f6b8aa25faa45f21dbe",
+      "path": "source_discovery/expansion_20261018_v11/pages/ghg_protocol_tools.source",
+      "title": "Just a moment...",
+      "text_characters": 16,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": true
+    },
+    {
+      "id": "noaa_slc",
+      "origin": "NOAA Office for Coastal Management",
+      "url": "https://coast.noaa.gov/digitalcoast/tools/slc.html",
+      "utc": "2026-10-18T06:25:58.555508+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://coast.noaa.gov/digitalcoast/404.html",
+      "content_type": "text/html; charset=utf-8",
+      "body_read": true,
+      "bytes": 88576,
+      "sha256": "e36ef04b112a3b92e023bca7c491f750a55ebf7fed396ea20c2753aa179de56a",
+      "path": "source_discovery/expansion_20261018_v11/pages/noaa_slc.source",
+      "title": "Digital Coast",
+      "text_characters": 1155,
+      "relevant_links": [
+        {
+          "text": "Tools",
+          "url": "https://coast.noaa.gov/digitalcoast/tools/home.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Tools",
+          "url": "https://coast.noaa.gov/digitalcoast/tools/",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "nrcs_engineering_tools",
+      "origin": "USDA NRCS engineering",
+      "url": "https://www.nrcs.usda.gov/resources/tech-tools/engineering-tools",
+      "utc": "2026-10-18T06:25:58.554312+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "error": "ReadTimeout: HTTPSConnectionPool(host='www.nrcs.usda.gov', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "id": "nz_treasury_cbax",
+      "origin": "New Zealand Treasury",
+      "url": "https://www.treasury.govt.nz/information-and-services/state-sector-leadership/investment-management/plan-investment-choices/cost-benefit-analysis-including-public-sector-discount-rates/treasurys-cbax-tool",
+      "utc": "2026-10-18T06:25:58.554040+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 403,
+      "resolved_url": "https://www.treasury.govt.nz/information-and-services/state-sector-leadership/investment-management/plan-investment-choices/cost-benefit-analysis-including-public-sector-discount-rates/treasurys-cbax-tool",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 6245,
+      "sha256": "f3d03745992e83a3f4aa6bc892deb17588ac9aa55e4c45694daa4e4dee52e728",
+      "path": "source_discovery/expansion_20261018_v11/pages/nz_treasury_cbax.source",
+      "title": "Just a moment...",
+      "text_characters": 16,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": true
+    },
+    {
+      "id": "peri_publication_search",
+      "origin": "PERI historical publication metadata",
+      "url": "https://peri.umass.edu/publication/does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff/",
+      "utc": "2026-10-18T06:25:58.552250+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://peri.umass.edu/publication/does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff/",
+      "content_type": "text/html; charset=utf-8",
+      "body_read": true,
+      "bytes": 67154,
+      "sha256": "554e6b9aa362939ecdf02d72fa670ed580555c5bc8408fb7eab2fdba3f9cc2cc",
+      "path": "source_discovery/expansion_20261018_v11/pages/peri_publication_search.source",
+      "title": "Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff – PERI UMASS",
+      "text_characters": 5297,
+      "relevant_links": [
+        {
+          "text": "Download the paper here",
+          "url": "https://peri.umass.edu/images/WP322.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Supplemental Technical Critique of Reinhart and Rogoff’s “Growth in a Time of Debt”",
+          "url": "https://peri.umass.edu/images/WP322PERI_TechnicalAppendix_April2013.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Robert Pollin and Michael Ash’s op ed in the Financial Times",
+          "url": "https://peri.umass.edu/images/wp322FT_Pollin_Ash.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Data and code files upon which the results are based",
+          "url": "https://peri.umass.edu/images/WP322HAP-RR-GITD-code.zip",
+          "workbook_link": false
+        },
+        {
+          "text": "Concordance between variable names in the RR working spreadsheet and the HAP data and code",
+          "url": "https://peri.umass.edu/images/WP322concordance-RR-HAP.xlsx",
+          "workbook_link": true
+        },
+        {
+          "text": "Additional spreadsheet with the following columns",
+          "url": "https://peri.umass.edu/images/RR-keycolumns.xlsx",
+          "workbook_link": true
+        },
+        {
+          "text": ":",
+          "url": "http://www.peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/RR-keycolumns.xlsx",
+          "workbook_link": true
+        },
+        {
+          "text": "data and code package",
+          "url": "https://peri.umass.edu/images/WP322HAP-RR-GITD-code-2013-05-17.zip",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms and Conditions",
+          "url": "https://peri.umass.edu/terms-conditions/",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "ch the results are based >> Image describing the files in the code and data archive >> Concordance between variable names in the RR working spreadsheet and the HAP data and code >> Additional spreadsheet with the following columns : country; year; public debt/GDP ratio; public debt/GDP category; real GDP growth. Columns are calculated from data and formulas in the Reinhart and Rogoff working spreadsheet and can be used, e.g., with pivot tables, to replicate the resul",
+        "es in the code and data archive >> Concordance between variable names in the RR working spreadsheet and the HAP data and code >> Additional spreadsheet with the following columns : country; year; public debt/GDP ratio; public debt/GDP category; real GDP growth. Columns are calculated from data and formulas in the Reinhart and Rogoff working spreadsheet and can be used, e.g., with pivot tables, to replicate the results in RR 2010 and HAP. >> Updated and more complete ",
+        "debt/GDP ratio; public debt/GDP category; real GDP growth. Columns are calculated from data and formulas in the Reinhart and Rogoff working spreadsheet and can be used, e.g., with pivot tables, to replicate the results in RR 2010 and HAP. >> Updated and more complete data and code package (as of May 17, 2013), as referenced in “Debt and Growth: A Response to Reinhart and Rogoff” in The New York Times, April 29, 2013. Code and data are open-source under the BSD 2-clau",
+        " and Growth: A Response to Reinhart and Rogoff” in The New York Times, April 29, 2013. Code and data are open-source under the BSD 2-clause license ( http://www.tldrlegal.com/l/BSD2 ). Documentation is here. >> A sample of the media coverage of the study 1 The paper was updated at 1:35 pm on April 17, with the following corrections: (1) The notes to Table 3: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Canada, and Denmark from th",
+        " the media coverage of the study 1 The paper was updated at 1:35 pm on April 17, with the following corrections: (1) The notes to Table 3: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Canada, and Denmark from the analysis.” is corrected to read: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Belgium, Canada, and Denmark from the analysis.” (2) Page 13: “Thus, in the highest, above-90-percent public deb",
+        " study 1 The paper was updated at 1:35 pm on April 17, with the following corrections: (1) The notes to Table 3: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Canada, and Denmark from the analysis.” is corrected to read: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Belgium, Canada, and Denmark from the analysis.” (2) Page 13: “Thus, in the highest, above-90-percent public debt/GDP, GDP growth of 4.1 p",
+        "notes to Table 3: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Canada, and Denmark from the analysis.” is corrected to read: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Belgium, Canada, and Denmark from the analysis.” (2) Page 13: “Thus, in the highest, above-90-percent public debt/GDP, GDP growth of 4.1 percent per year in the 1950-2009 sample declines to only 2.5 percent per year in the 1980-200",
+        "preadsheet refers to the spreadsheet error that excluded Australia, Austria, Canada, and Denmark from the analysis.” is corrected to read: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Belgium, Canada, and Denmark from the analysis.” (2) Page 13: “Thus, in the highest, above-90-percent public debt/GDP, GDP growth of 4.1 percent per year in the 1950-2009 sample declines to only 2.5 percent per year in the 1980-2009 sample” is corrected",
+        "preadsheet error that excluded Australia, Austria, Canada, and Denmark from the analysis.” is corrected to read: “Spreadsheet refers to the spreadsheet error that excluded Australia, Austria, Belgium, Canada, and Denmark from the analysis.” (2) Page 13: “Thus, in the highest, above-90-percent public debt/GDP, GDP growth of 4.1 percent per year in the 1950-2009 sample declines to only 2.5 percent per year in the 1980-2009 sample” is corrected to read “Thus, in the low",
+        "blic debt/GDP, GDP growth of 4.1 percent per year in the 1950-2009 sample declines to only 2.5 percent per year in the 1980-2009 sample” is corrected to read “Thus, in the lowest, 0–30-percent public debt/GDP, GDP growth of 4.1 percent per year in the 1950–2009 sample declines to only 2.5 percent per year in the 1980–2009 sample.” 2 The paper was updated at 9:36 am on April 22, with the following changes: (1) Table 3 has been expanded to show the effect of each of ",
+        "s updated at 9:36 am on April 22, with the following changes: (1) Table 3 has been expanded to show the effect of each of the errors in RR (spreadsheet error, selective year exclusion, and country weighting) separately and the effect of all interactions of the errors. Text in the section “Summary: years, spreadsheet, weighting, and transcription” (p.10) has been updated to describe the expanded table.  No results have changed. (2) On p. 5, the text: “Outside the US, ",
+        "ve year exclusion, and country weighting) separately and the effect of all interactions of the errors. Text in the section “Summary: years, spreadsheet, weighting, and transcription” (p.10) has been updated to describe the expanded table.  No results have changed. (2) On p. 5, the text: “Outside the US, the series for some countries do not begin until 1957 and that for Italy is unavailable before 1980. Eight countries are available from 1946, sixteen from 1950, and a"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_author_debt_growth",
+      "origin": "Reinhart Rogoff original author metadata",
+      "url": "https://carmenreinhart.com/debt-and-growth/",
+      "utc": "2026-10-18T06:25:58.551914+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://carmenreinhart.com/debt-and-growth/",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 83348,
+      "sha256": "0b4ba9e3447329c71eb185758564958f7c0ae2286fce24144e23e8aef90ffc92",
+      "path": "source_discovery/expansion_20261018_v11/pages/rr_author_debt_growth.source",
+      "title": "Debt and Growth | Sovereign Debt and Growth Rate by CR",
+      "text_characters": 11866,
+      "relevant_links": [
+        {
+          "text": "here",
+          "url": "https://carmenreinhart.com/wp-content/uploads/2020/04/43_data.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Reinhart Testimony before Senate Budget Committee",
+          "url": "https://carmenreinhart.com/wp-content/uploads/2020/04/SBC_Reinhart__February_9.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Times August 8, 2011 “The Bullets Yet to Be Fired”",
+          "url": "http://scholar.harvard.edu/files/rogoff/files/bullets_yet.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "here",
+          "url": "https://carmenreinhart.com/wp-content/uploads/2020/04/36_data.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "here",
+          "url": "http://web.archive.org/web/20191012210935/https://carmenreinhart.com/user_uploads/data/41_data.xlsx",
+          "workbook_link": true
+        }
+      ],
+      "snippets": [
+        " 2013, three economists at the University of Massachusetts, Amherst, released a paper criticizing our findings. They correctly identified a spreadsheet coding error that led us to miscalculate the growth rates of highly indebted countries since World War II. They also accused us of “serious errors” stemming from “selective exclusion” of relevant data and “unconventional weighting” of statistics . We promptly admitted the errors and responded in the print edition of t",
+        "r problems is to be found at the center of the spectrum. Others disagree. Our democracy empowers this freedom of views but it does not give license to distort facts. As to the facts, scholars understand that our 2010 paper on debt and growth in the Papers and Proceedings of the American Economic Review was a snapshot of our research program. Another take on the topic was published in 2012 in the Journal of Economic Perspectives (with Vincent Reinhart) . The newer",
+        "r central banks to acknowledge that a sudden burst of moderate inflation would be extremely helpful in unwinding today’s epic debt morass.” Errata on \"Growth in a Time of Debt\" Carmen Reinhart and Kenneth Rogoff, Harvard University May 6, 2013 Our correction to our 2010 paper is available here and here . A note on New Zealand data April 27, 2013 Poring over the time series we used in late 2009 for RR (2010) \"Growth in A Time of Debt\", it became apparent that the",
+        "ding today’s epic debt morass.” Errata on \"Growth in a Time of Debt\" Carmen Reinhart and Kenneth Rogoff, Harvard University May 6, 2013 Our correction to our 2010 paper is available here and here . A note on New Zealand data April 27, 2013 Poring over the time series we used in late 2009 for RR (2010) \"Growth in A Time of Debt\", it became apparent that the New Zealand GDP data used has an error. It is off by a year. The source of the problem on New Zealand is the or",
+        "e data comes from the International Monetary Fund. © 2026, Carmen Reinhart. All Rights Reserved. Accessibility Digital Accessibility Report Copyright Infringement Scroll To Top"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_author_topics",
+      "origin": "Reinhart Rogoff original author metadata",
+      "url": "https://carmenreinhart.com/browse-by-topic/",
+      "utc": "2026-10-18T06:25:58.551579+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://carmenreinhart.com/browse-by-topic/",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 68913,
+      "sha256": "2e43b49565f3742679ef2180bf6a7ac2882aa91d741a321e4f475325f2eb8d93",
+      "path": "source_discovery/expansion_20261018_v11/pages/rr_author_topics.source",
+      "title": "Browse by Topic | Global Financial Crisis Data from CR",
+      "text_characters": 1507,
+      "relevant_links": [],
+      "snippets": [
+        ", It Pours: Procyclical Capital Flows and Policies © 2026, Carmen Reinhart. All Rights Reserved. Accessibility Digital Accessibility Report Copyright Infringement Scroll To Top"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "usace_sea_level",
+      "origin": "US Army Corps of Engineers",
+      "url": "https://www.iwr.usace.army.mil/Missions/Flood-Risk-Management/Flood-Risk-Management-Program/Sea-Level-Change/",
+      "utc": "2026-10-18T06:25:59.251431+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.iwr.usace.army.mil', port=443): Max retries exceeded with url: /Missions/Flood-Risk-Management/Flood-Risk-Management-Program/Sea-Level-Change/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.iwr.usace.army.mil', port=443): Failed to resolve 'www.iwr.usace.army.mil' ([Errno -3] Temporary failure in name resolution)\"))"
+    }
+  ]
+}

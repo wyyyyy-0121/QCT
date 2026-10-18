@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<title>Capital Investment in Excel - Made Simple</title>
+<meta name="keywords" content="capital investment, excel, solver, constraints, model, total profit, maximize, investments, solve">
+<meta name="description" content="Use the solver in Excel to find the combination of capital investments that maximizes the total profit.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Capital Investment in Excel">
+<meta property="og:url" content="https://www.excel-easy.com/examples/capital-investment.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use the solver in Excel to find the combination of capital investments that maximizes the total profit.">
+<meta property="og:image" content="https://www.excel-easy.com/smi/examples/capital-investment.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="https://www.excel-easy.com/smi/examples/capital-investment.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/capital-investment/capital-investment-example.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1987061359047735" data-overlays="collapsed-bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:971px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="/favicon-48x48.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="https://www.excel-easy.com"><img src="../layout/excel-tutorial.svg" onerror="this.src='../layout/excel-tutorial.png'" border="0" alt="Excel Tutorial" title="Excel Tutorial" width="44" height="41" /><span class="easy">Excel Easy</span></a>
+                <a href="https://www.excel-easy.com" class="heading-link"><span class="heading-prefix">#1 </span><h2 class="heading-main">Excel tutorial</h2><span class="heading-suffix"> on the net</span></a>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="https://www.excel-easy.com">Excel</a></li>
+                  <li><a href="https://www.excel-easy.com/introduction.html">Introduction</a></li>
+				  <li><a href="https://www.excel-easy.com/basics.html">Basics</a></li>
+				  <li><a href="https://www.excel-easy.com/functions.html">Functions</a></li>
+				  <li><a href="https://www.excel-easy.com/data-analysis.html">Data Analysis</a></li>
+                  <li><a href="https://www.excel-easy.com/vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="https://www.excel-easy.com/examples.html">300 Examples</a></li>
+                  <li><a href="https://www.excel-easy.com/ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Capital Investment in Excel</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#formulate-model">Formulate the Model</a> | <a href="#trial-error">Trial and Error</a> | <a href="#solve-model">Solve the Model</a></p>
+<p>Use the solver in <strong>Excel</strong> to find the combination of <strong>capital investments</strong> that maximizes the total profit.</p>
+<h3><a name="formulate-model" id="formulate-model"></a>Formulate the Model</h3>
+<p>The model we are going to solve looks as follows in Excel.</p>
+<p><img src="images/capital-investment/capital-investment-example.png" alt="Capital Investment in Excel" width="604" height="288" title="Capital Investment in Excel" /></p>
+<div class="ad"><!-- Excel Easy Pages Begin -->
+<ins class="adsbygoogle adslot"
+     style="display:block"
+     data-ad-client="ca-pub-1987061359047735"
+     data-ad-slot="2884421292"></ins>
+</div>
+<p>1. To formulate this binary integer programming (BIP) model, answer the following three questions.</p>
+<p><FONT style="BACKGROUND-COLOR: rgb(255, 255, 0); border-style:solid; border-width:1px;">a.</FONT> What are the decisions to be made? For this problem, we need Excel to find out which capital investments to make (Yes=1, No=0).</p>
+<p><FONT style="BACKGROUND-COLOR: rgb(204, 255, 255); border-style:solid; border-width:1px;">b.</FONT> What are the constraints on these decisions? First, the amount of capital used by the investments cannot exceed the limited amount of capital available (50). For example, investment One  uses 12 units of capital. Second, only investment One or investment Two can be made. Third, only investment Three or investment Four can be made. Fourth, investment Six and investment Seven can only be made if investment Five is made.</p>
+<p><FONT style="BACKGROUND-COLOR: rgb(51, 102, 153); border-style:solid; border-width:1px;"><font color="#FFFFFF">c.</font></FONT> What is the overall measure of performance for these decisions? The overall measure of performance is the total profit of the capital investments made, so the objective is to maximize this quantity.</p>              
+<p>2. To make the model easier to understand, create the following <a href="named-range.html">named ranges</a>.</p>
+<table class="gridtable" width="292">
+                <tr>
+                  <th width="178">Range Name</td>
+                  <th width="114">Cells</td>
+                </tr>
+                <tr>
+                  <td>Profit</td>
+                  <td>C5:I5</td>
+                </tr>
+                <tr>
+                  <td>YesNo</td>
+                  <td>C13:I13</td>
+                </tr>
+                <tr>
+                  <td>TotalProfit</td>
+                  <td>M13</td>
+                </tr>
+              </table>
+<br />
+<p>3. Insert the following five SUMPRODUCT functions.</p>
+<p><img src="images/capital-investment/sumproduct-functions.png" alt="SUMPRODUCT functions" width="604" height="288" title="SUMPRODUCT functions" /></p>
+<p>Explanation: cell K7 (the amount of capital used) equals the <a href="../examples/sumproduct.html">sumproduct</a> of the range C7:I7 and YesNo, cell K8 equals the sumproduct of the range C8:I8 and YesNo, etc. Total Profit equals the sumproduct of Profit and YesNo.</p>
+<h3><a name="trial-error" id="trial-error"></a>Trial and Error</h3>
+<p>With this formulation, it becomes easy to analyze any trial solution.</p>
+			  <p>1. For example, if we make investment One and Two, the second constraint is violated.</p>
+			  <p><img src="images/capital-investment/second-constraint-violated.png" loading="lazy" alt="Second Constraint Violated" width="604" height="288" title="Second Constraint Violated" /></p>
+			  <p>2. For example, if we make investment Six and Seven, without making investment Five, the fourth constraint is violated.</p>
+			  <p><img src="images/capital-investment/fourth-constraint-violated.png" loading="lazy" alt="Fourth Constraint Violated" width="604" height="288" title="Fourth Constraint Violated" /></p>
+			  <p>3. However, it's OK to make investment One, Five and Six. All constraints are satisfied.</p>
+			  <p><img src="images/capital-investment/all-constraints-satisfied.png" loading="lazy" alt="All Constraints Satisfied" width="604" height="288" title="All Constraints Satisfied" /></p>
+			  <p>It is not necessary to use trial and error. We shall describe next how the <strong>Excel Solver</strong> can be used to quickly find the optimal solution.</p>
+              <div class="ad"><!-- Excel Easy Pages Middle -->
+<ins class="adsbygoogle adslot"
+     style="display:block"
+     data-ad-client="ca-pub-1987061359047735"
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="solve-model" id="solve-model"></a>Solve the Model</h3>
+			  <p>To find the optimal solution, execute the following steps.</p>
+			  <p>1. On the Data tab, in the Analyze group, click Solver.</p>
+			  <p><img src="images/capital-investment/click-solver.png" loading="lazy" alt="Click Solver" width="449" height="100" title="Click Solver" /></p>
+			  <p>Note: can't find the Solver button? Click here to load the <a href="../data-analysis/solver.html#load-solver-add-in">Solver add-in</a>.</p>
+			  <p>Enter the solver parameters (read on). The result should be consistent with the picture below.</p>
+			  <p><img src="images/capital-investment/solver-parameters.png" loading="lazy" alt="Solver Parameters" width="570" height="599" title="Solver Parameters" /></p>
+			  <p>2. Enter TotalProfit for the Objective.</p>
+			  <p>3. Click Max.</p>
+              <p>4. Enter YesNo for the Changing Variable Cells.</p>
+			  <p>5. Click Add to enter the following constraint.</p>
+			  <p><img src="images/capital-investment/constraint.png" loading="lazy" alt="Constraint" width="416" height="151" title="Constraint" /></p>
+			  <p>6. Click Add to enter the following constraint.</p>
+			  <p><img src="images/capital-investment/binary-constraint.png" loading="lazy" alt="Binary Constraint" width="416" height="151" title="Binary Constraint" /></p>
+			  <p>Note: binary variables are either 0 or 1.</p>
+			  <p>7. Check 'Make Unconstrained Variables Non-Negative' and select 'Simplex LP'.</p>
+			  <p>8. Finally, click Solve.</p>
+			  <p>Result:</p>
+			  <p><img src="images/capital-investment/solver-found-solution.png" loading="lazy" alt="Solver Found a Solution" width="579" height="385" title="Solver Found a Solution" /></p>
+			  <p>The optimal solution:</p>
+			  <p><img src="images/capital-investment/capital-investment-result.png" loading="lazy" alt="Capital Investment Result" width="604" height="288" title="Capital Investment Result" /></p>
+			  <p>Conclusion: it is optimal to make investments Two, Four, Five and Seven. This solution gives the maximum profit of 146. All constraints are satisfied.</p>
+			  <div class="ad"><!-- Excel Easy Pages End -->
+<ins class="adsbygoogle adslot"
+     style="display:block"
+     data-ad-client="ca-pub-1987061359047735"
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="sensitivity-analysis.html">6/8 Completed! Learn much more about the solver <span class="arrow">&#10141;</span><br />
+                    </a></span>Next Chapter: <a href="../data-analysis/analysis-toolpak.html">Analysis ToolPak</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.excel-easy.com/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Search Entire Site" class="field" />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <span class="sidebar-title">Chapter</span>
+						  <ul>
+							<li><a href="../data-analysis/solver.html">Solver</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="transportation-problem.html">Transportation Problem</a></li>
+                        <li><a href="assignment-problem.html">Assignment Problem</a></li>
+                        <li><a href="shortest-path-problem.html">Shortest Path Problem</a></li>
+                        <li><a href="maximum-flow-problem.html">Maximum Flow Problem</a></li>
+                        <li class="current_page_item"><a href="capital-investment.html">Capital Investment</a></li>
+                        <li><a href="sensitivity-analysis.html">Sensitivity Analysis</a></li>
+						<li><a href="system-of-linear-equations.html">System of Linear Equations</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><font color="#8FAD22"><span class="notranslate">Download Excel File</span></font></h3>
+						  <ul>
+							<li><a href="excel-files/capital-investment.xlsx">capital-investment.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <span class="vistab"><div id="sidebar">
+					<ul>
+				  	  <li>
+                        <span class="sidebar-title">Next Chapter</span>
+						  <ul>
+							<li><a href="../data-analysis/analysis-toolpak.html">Analysis ToolPak</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div></span>
+              <div id="sidebar">
+		      <h3><span class="notranslate">Follow Excel Easy</span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://www.facebook.com/ExcelEasy" target="_blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Excel Easy on Facebook" title="Excel Easy on Facebook" /></a> <a href="https://twitter.com/ExcelEasy" target="_blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Excel Easy on X" title="Excel Easy on X" /></a> <a href="https://www.pinterest.com/ExcelEasy/" target="_blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Excel Easy on Pinterest" title="Excel Easy on Pinterest"></a> <a href="https://www.linkedin.com/company/excel-easy" target="_blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Excel Easy on LinkedIn" title="Excel Easy on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="https://www.excel-easy.com/examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="capital-investment.html">Capital Investment</a> &bull; &copy; 2010-2026<br />
+	Unlock Excel Power in October: <a href="https://www.excel-easy.com/examples/bmi-calculator.html">BMI calculator</a> &bull; <a href="https://www.excel-easy.com/examples/xml.html">XML</a> &bull; <a href="https://www.excel-easy.com/vba/userform.html">Userform</a> &bull; <a href="https://www.excel-easy.com/examples/frequency-distribution.html">Frequency Distribution</a> &bull; <a href="https://www.excel-easy.com/examples/xlookup.html">XLOOKUP</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+</body>
+</html>
