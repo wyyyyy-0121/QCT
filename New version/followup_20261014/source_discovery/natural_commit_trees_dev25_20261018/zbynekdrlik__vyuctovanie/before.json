@@ -1,0 +1,256 @@
+{
+  "sha": "dbbf9cdaea2497b4ed164f1604d1d270516d7b46",
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d834d5d91913100d4ac19607f5ad3aea1cbda05c",
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/d834d5d91913100d4ac19607f5ad3aea1cbda05c"
+    },
+    {
+      "path": ".claude/rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b17c1564be9b33365a87e96de041922aa16d6bd4",
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/b17c1564be9b33365a87e96de041922aa16d6bd4"
+    },
+    {
+      "path": ".claude/rules/odoo-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd7d1abde52e99110642cd8a48cd94963bea5665",
+      "size": 1198,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/fd7d1abde52e99110642cd8a48cd94963bea5665"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "392657a1be6d2560806f9cba8dec221771388d63",
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/392657a1be6d2560806f9cba8dec221771388d63"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c31b0d6ecb54d2e51fb08c784211cef52a42860b",
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/c31b0d6ecb54d2e51fb08c784211cef52a42860b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dae065edfb918ed986b6120e3cf57e3b9134595",
+      "size": 1073,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/0dae065edfb918ed986b6120e3cf57e3b9134595"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1419c5af2e001c21f7c425c3d93955be740eec0a",
+      "size": 44,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/1419c5af2e001c21f7c425c3d93955be740eec0a"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d1b3be04489ced83663335810cd75e895394dec",
+      "size": 4700,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/0d1b3be04489ced83663335810cd75e895394dec"
+    },
+    {
+      "path": "conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77b06cedbbc0a56eda207f54f524252cf8938e9c",
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/77b06cedbbc0a56eda207f54f524252cf8938e9c"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2125880b54e502040e3fcab9b2e1774d50c79da9",
+      "size": 407,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/2125880b54e502040e3fcab9b2e1774d50c79da9"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "500e1a42375c5d1fc0d3f2043cbbd19c7373775c",
+      "size": 3106,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/500e1a42375c5d1fc0d3f2043cbbd19c7373775c"
+    },
+    {
+      "path": "tests/test_config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f368a8808aff6c228e938b9c3494b15ceada7797",
+      "size": 920,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/f368a8808aff6c228e938b9c3494b15ceada7797"
+    },
+    {
+      "path": "tests/test_logic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce47b70ed2ab84fbfcdcb0880456fd256a645007",
+      "size": 6795,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/ce47b70ed2ab84fbfcdcb0880456fd256a645007"
+    },
+    {
+      "path": "tests/test_odoo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb5b5ede82f37aaff713f54503202eec36006b9d",
+      "size": 2396,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/cb5b5ede82f37aaff713f54503202eec36006b9d"
+    },
+    {
+      "path": "tests/test_parsing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed997e9a1928fbf9110f674469811de673660515",
+      "size": 2774,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/ed997e9a1928fbf9110f674469811de673660515"
+    },
+    {
+      "path": "tests/test_person_prefix.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cd46861f0caa8d62571d91f037ede7ddef4b3b4",
+      "size": 7495,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/2cd46861f0caa8d62571d91f037ede7ddef4b3b4"
+    },
+    {
+      "path": "tests/test_render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cce10ec6ef24d56aacd88e6184cbd41828f14e79",
+      "size": 4893,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/cce10ec6ef24d56aacd88e6184cbd41828f14e79"
+    },
+    {
+      "path": "tests/test_xlsx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cb716345b37435ec5fc29d0ded9bb33a44ce350",
+      "size": 5530,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/4cb716345b37435ec5fc29d0ded9bb33a44ce350"
+    },
+    {
+      "path": "vyuct",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed3d2827fdf6902a5849d3bfe215b423112396d4",
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/ed3d2827fdf6902a5849d3bfe215b423112396d4"
+    },
+    {
+      "path": "vyuct/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5cc631cd4819dd4419cf84c9f7d8c989d35e4a0",
+      "size": 75,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/e5cc631cd4819dd4419cf84c9f7d8c989d35e4a0"
+    },
+    {
+      "path": "vyuct/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65db9c5aa8bf989ee910935ad31980aa729781a0",
+      "size": 3517,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/65db9c5aa8bf989ee910935ad31980aa729781a0"
+    },
+    {
+      "path": "vyuct/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0cec6a2f9a9c9eb338b7ce83636cdad52e379da",
+      "size": 2177,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/f0cec6a2f9a9c9eb338b7ce83636cdad52e379da"
+    },
+    {
+      "path": "vyuct/logic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7d049d02c7683682d7872454981d93320d745ff",
+      "size": 2602,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/e7d049d02c7683682d7872454981d93320d745ff"
+    },
+    {
+      "path": "vyuct/odoo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cca50ad3acb2b7578722d434e63b20651865c086",
+      "size": 3880,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/cca50ad3acb2b7578722d434e63b20651865c086"
+    },
+    {
+      "path": "vyuct/parsing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e6292c67bc6ec8e5df30b2d5eeee81d430058b8",
+      "size": 4660,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/9e6292c67bc6ec8e5df30b2d5eeee81d430058b8"
+    },
+    {
+      "path": "vyuct/render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d80a9b715a15e218762b78da57e993ec19afa44e",
+      "size": 2260,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/d80a9b715a15e218762b78da57e993ec19afa44e"
+    },
+    {
+      "path": "vyuct/xlsx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf0b35e0dec972bc275cee4dcf203288310f7ee",
+      "size": 4454,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/ddf0b35e0dec972bc275cee4dcf203288310f7ee"
+    },
+    {
+      "path": "vyuctovanie-fail@.service",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdf234bdf321a32524c717e2ddb83ef21066d23e",
+      "size": 229,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/bdf234bdf321a32524c717e2ddb83ef21066d23e"
+    },
+    {
+      "path": "vyuctovanie.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6cdd361dace7491c5b7d42e6ccdccdaece09672",
+      "size": 1491,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/f6cdd361dace7491c5b7d42e6ccdccdaece09672"
+    },
+    {
+      "path": "vyuctovanie@.service",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51635403ed5ed11fd7098b6241361d7816b4532d",
+      "size": 251,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/51635403ed5ed11fd7098b6241361d7816b4532d"
+    },
+    {
+      "path": "vyuctovanie@.timer",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adae6ec9bc5a0ff2e660f904d70b8b815d24e440",
+      "size": 159,
+      "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/blobs/adae6ec9bc5a0ff2e660f904d70b8b815d24e440"
+    }
+  ],
+  "truncated": false
+}

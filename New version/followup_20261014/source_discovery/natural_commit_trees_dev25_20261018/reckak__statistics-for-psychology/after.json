@@ -1,0 +1,754 @@
+{
+  "sha": "3571497bbbbf1189365a3e899f389c5585ff34f8",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "218d9a1aac45ae236529ec09550c5c448fb2cb3f",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/218d9a1aac45ae236529ec09550c5c448fb2cb3f"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "445938d208e3379ebdbb7269e6f4883f959e6544",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/445938d208e3379ebdbb7269e6f4883f959e6544"
+    },
+    {
+      "path": ".github/workflows/book.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "014da53e31781b19d6eae4c8908237c95f24eb42",
+      "size": 1604,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/014da53e31781b19d6eae4c8908237c95f24eb42"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55aa0ae8425ee552fc302db2cc13a40a200902d8",
+      "size": 334,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/55aa0ae8425ee552fc302db2cc13a40a200902d8"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f34cc85c852999f128a8d4132513c5ed32ae743b",
+      "size": 34078,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/f34cc85c852999f128a8d4132513c5ed32ae743b"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ea0b948ee08a737d42bfd2f4e6a2e928804028e",
+      "size": 1069,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/6ea0b948ee08a737d42bfd2f4e6a2e928804028e"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e33f4740e6b52089ffaa32e0023fc83ca73fd3d",
+      "size": 18323,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/5e33f4740e6b52089ffaa32e0023fc83ca73fd3d"
+    },
+    {
+      "path": "_quarto.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "125326c04bf5cd6ddc0046c18baf94da7ffd96bc",
+      "size": 1530,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/125326c04bf5cd6ddc0046c18baf94da7ffd96bc"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44fd862370b3edd4ff19b47af854605a37cb2cc9",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/44fd862370b3edd4ff19b47af854605a37cb2cc9"
+    },
+    {
+      "path": "assets/after-body.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5633055f4715f75e8512771ffe61c2074b42f9c3",
+      "size": 152,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/5633055f4715f75e8512771ffe61c2074b42f9c3"
+    },
+    {
+      "path": "assets/chapter-02",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33fa6e9f34af14ef5357b03ea0f5c0ee00108312",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/33fa6e9f34af14ef5357b03ea0f5c0ee00108312"
+    },
+    {
+      "path": "assets/chapter-02/excel-absolutni.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2df75938954449776457e5a2d98ccef4f37f7810",
+      "size": 5912,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/2df75938954449776457e5a2d98ccef4f37f7810"
+    },
+    {
+      "path": "assets/chapter-02/excel-intervaly.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0283b63a4d04ebff9367b30f4a303e6338b11f0d",
+      "size": 11263,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/0283b63a4d04ebff9367b30f4a303e6338b11f0d"
+    },
+    {
+      "path": "assets/chapter-02/excel-kumulativni.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9fca0c45d427c9ab1c0b44f619962128b04da36",
+      "size": 10830,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/b9fca0c45d427c9ab1c0b44f619962128b04da36"
+    },
+    {
+      "path": "assets/chapter-03",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe2445b00104ccb4459109571e9e9b121f955606",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/fe2445b00104ccb4459109571e9e9b121f955606"
+    },
+    {
+      "path": "assets/chapter-03/plots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e37279d15fc39a11e3e32b6f248587743e62fa5",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/8e37279d15fc39a11e3e32b6f248587743e62fa5"
+    },
+    {
+      "path": "assets/chapter-03/plots/mode-median-mean.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8ccf91d39dd9f5ab92c06df6974f015dda7d080",
+      "size": 7872,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/c8ccf91d39dd9f5ab92c06df6974f015dda7d080"
+    },
+    {
+      "path": "assets/reference-tables.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afcae2b0f2ca51fee6b4a45845b13fb221d6c425",
+      "size": 5710,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/afcae2b0f2ca51fee6b4a45845b13fb221d6c425"
+    },
+    {
+      "path": "assets/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a710fe089c2fa7f4362d5b9c193c76eaba474427",
+      "size": 3221,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/a710fe089c2fa7f4362d5b9c193c76eaba474427"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f09300625b7d95d6236f67e785e8136fa38c478b",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/f09300625b7d95d6236f67e785e8136fa38c478b"
+    },
+    {
+      "path": "data/kapitola_01.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb806fa3aaf92dc0c5e052aa96eb53aaf316d5ae",
+      "size": 39950,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/eb806fa3aaf92dc0c5e052aa96eb53aaf316d5ae"
+    },
+    {
+      "path": "data/kapitola_02.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e062109b301b9e90a75b7adce9f6770eb3ee443",
+      "size": 809,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/7e062109b301b9e90a75b7adce9f6770eb3ee443"
+    },
+    {
+      "path": "data/kapitola_02.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "434d2d66a6a697a9e5f484085084815bf9092972",
+      "size": 40350,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/434d2d66a6a697a9e5f484085084815bf9092972"
+    },
+    {
+      "path": "data/kapitola_03.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "288eb9782ddef0185c3225310c4b89517b58462e",
+      "size": 52307,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/288eb9782ddef0185c3225310c4b89517b58462e"
+    },
+    {
+      "path": "data/kapitola_04.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eee6fdbaefb5a9809ec4036d15d1118ea689332",
+      "size": 80,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/1eee6fdbaefb5a9809ec4036d15d1118ea689332"
+    },
+    {
+      "path": "data/kapitola_04.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c68a76217077ba725c2f0f9b06109acdab18aa7",
+      "size": 52729,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/0c68a76217077ba725c2f0f9b06109acdab18aa7"
+    },
+    {
+      "path": "data/kapitola_05.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61ede7e2f341749a69e4818bae8d1ccdb9c6e303",
+      "size": 38159,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/61ede7e2f341749a69e4818bae8d1ccdb9c6e303"
+    },
+    {
+      "path": "data/kapitola_06.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6acffb626e5a010b0898d270e968b46057f1168",
+      "size": 542187,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/c6acffb626e5a010b0898d270e968b46057f1168"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9edddbea52cbadcf72091f4739e2b0b46cd7710c",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/9edddbea52cbadcf72091f4739e2b0b46cd7710c"
+    },
+    {
+      "path": "docs/DATA.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc15600b7d879b92c83c07c79a0549a54e34ae8",
+      "size": 8018,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/1dc15600b7d879b92c83c07c79a0549a54e34ae8"
+    },
+    {
+      "path": "docs/OSNOVA.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92aef2d750a571c4d50263783a2a98f6918f20bd",
+      "size": 100184,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/92aef2d750a571c4d50263783a2a98f6918f20bd"
+    },
+    {
+      "path": "docs/PREZENTACE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f11aeb4970d364db8e2cbc9fc12821135900f6cb",
+      "size": 7208,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/f11aeb4970d364db8e2cbc9fc12821135900f6cb"
+    },
+    {
+      "path": "docs/ROZHODNUTI.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "695fb270756ea01e8cad354cb1704f188a1a0e14",
+      "size": 61825,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/695fb270756ea01e8cad354cb1704f188a1a0e14"
+    },
+    {
+      "path": "docs/SLOVNIK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc38996d3c6d7cc253ab27438997fe03120bed63",
+      "size": 90032,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/bc38996d3c6d7cc253ab27438997fe03120bed63"
+    },
+    {
+      "path": "docs/ZDROJE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b51519c593170ae8b251fb15a42bf078e8d0dca0",
+      "size": 163175,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/b51519c593170ae8b251fb15a42bf078e8d0dca0"
+    },
+    {
+      "path": "index.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1b9910d8fa98582dcb3f3ad3176cde71b6c4ee",
+      "size": 1030,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/5e1b9910d8fa98582dcb3f3ad3176cde71b6c4ee"
+    },
+    {
+      "path": "quarto",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b479e7f78b1cdd0449fa96327252381bfd1bac0",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/0b479e7f78b1cdd0449fa96327252381bfd1bac0"
+    },
+    {
+      "path": "quarto/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9523ec0963a278cb5a1400d226a8947139c0240d",
+      "size": 205383,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/9523ec0963a278cb5a1400d226a8947139c0240d"
+    },
+    {
+      "path": "quarto/_verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df34f0b347519a24b887887b2b1bccb9cec0911c",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/df34f0b347519a24b887887b2b1bccb9cec0911c"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-01.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0c77e28afc4f76081f831e56eb502d806da3f63",
+      "size": 3555,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/c0c77e28afc4f76081f831e56eb502d806da3f63"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-02-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42aafc06c2ce65d5a4cb3414470d3a4d901f1e8d",
+      "size": 5472,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/42aafc06c2ce65d5a4cb3414470d3a4d901f1e8d"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-02.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc59e0f6857e9cbc996044aebedc0be9b7bdd7e0",
+      "size": 4837,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/dc59e0f6857e9cbc996044aebedc0be9b7bdd7e0"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-03-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4770c2e408e5af38e6c3a9979cdf1a3b18789bef",
+      "size": 6911,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/4770c2e408e5af38e6c3a9979cdf1a3b18789bef"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-03.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e06cf26de32aef75643d34322c0fce47f6917cb9",
+      "size": 8644,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/e06cf26de32aef75643d34322c0fce47f6917cb9"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-04-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c74859b0d11eb86570afd8fb9d3c22d3c9e26c",
+      "size": 7216,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/e2c74859b0d11eb86570afd8fb9d3c22d3c9e26c"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-04.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72a470bdcc1ab48e530a3d29754594ae8afddf23",
+      "size": 3425,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/72a470bdcc1ab48e530a3d29754594ae8afddf23"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-05-excel-expected.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc9065982bebd7632242f5bcb0de8930465df8ed",
+      "size": 5613,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/dc9065982bebd7632242f5bcb0de8930465df8ed"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-05-excel.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea381e977615e0e14b45b97c651186d523755585",
+      "size": 10790,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/ea381e977615e0e14b45b97c651186d523755585"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-05-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d91e4eee4689e0f793c50ee6903e06b0f623ff5",
+      "size": 4458,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/1d91e4eee4689e0f793c50ee6903e06b0f623ff5"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-05.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b95d0b34ce8191cdfd53e5d921278d8d97aa18e4",
+      "size": 7753,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/b95d0b34ce8191cdfd53e5d921278d8d97aa18e4"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-06-excel-expected.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd459c589c223076c24134d123a024b42ec4843e",
+      "size": 7137,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/cd459c589c223076c24134d123a024b42ec4843e"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-06-excel.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4b772255e2b721ae1e5fb4095ac8e01d1c7742d",
+      "size": 10348,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/e4b772255e2b721ae1e5fb4095ac8e01d1c7742d"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-06-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e241741e78628f96c4b461d61dfe0eab601708",
+      "size": 4702,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/15e241741e78628f96c4b461d61dfe0eab601708"
+    },
+    {
+      "path": "quarto/_verification/check-chapter-06.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a94d3d20a72c6047fbcc0bc245134a85a76973",
+      "size": 9082,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/d6a94d3d20a72c6047fbcc0bc245134a85a76973"
+    },
+    {
+      "path": "quarto/_verification/check-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0a3621b961b8c03dc91fd74d700ecc5bccadb56",
+      "size": 1402,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/c0a3621b961b8c03dc91fd74d700ecc5bccadb56"
+    },
+    {
+      "path": "quarto/_verification/check-html.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eed231cd881c1f6f88704de8831d2cdeca50a07",
+      "size": 51191,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/8eed231cd881c1f6f88704de8831d2cdeca50a07"
+    },
+    {
+      "path": "quarto/_verification/check-workbooks-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "921de2e2b44accf4a3785d6e6cc88f1522431e54",
+      "size": 1674,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/921de2e2b44accf4a3785d6e6cc88f1522431e54"
+    },
+    {
+      "path": "quarto/_verification/check-workbooks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7615f052f902f15e37806782f003adbbc92e9b7e",
+      "size": 3186,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/7615f052f902f15e37806782f003adbbc92e9b7e"
+    },
+    {
+      "path": "quarto/_verification/compare-workbooks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef8b3fa3eaae7ac36c25adecff36424dc5e67aea",
+      "size": 3989,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/ef8b3fa3eaae7ac36c25adecff36424dc5e67aea"
+    },
+    {
+      "path": "quarto/_verification/preview-workbooks-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54f5311ced18e5875373eae49f0341673807f773",
+      "size": 3269,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/54f5311ced18e5875373eae49f0341673807f773"
+    },
+    {
+      "path": "quarto/excel.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3a7b6a292876b51a87e6da15336089f47eac8db",
+      "size": 12381,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/c3a7b6a292876b51a87e6da15336089f47eac8db"
+    },
+    {
+      "path": "quarto/kapitola_01.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "807856b9176df9c9d437dfda27022f178743b16c",
+      "size": 105362,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/807856b9176df9c9d437dfda27022f178743b16c"
+    },
+    {
+      "path": "quarto/kapitola_02.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9295ca9aefdfe7c82f7a3455baa21de3ee0b3de0",
+      "size": 71945,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/9295ca9aefdfe7c82f7a3455baa21de3ee0b3de0"
+    },
+    {
+      "path": "quarto/kapitola_03.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63f40e7a7e8000f5f13dbf285baa44912bdbcc59",
+      "size": 123315,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/63f40e7a7e8000f5f13dbf285baa44912bdbcc59"
+    },
+    {
+      "path": "quarto/kapitola_04.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b447748575dc4af1fec6f4f8248711ac6fbcf7b7",
+      "size": 65686,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/b447748575dc4af1fec6f4f8248711ac6fbcf7b7"
+    },
+    {
+      "path": "quarto/kapitola_05.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2bc89db628f3b33eaeeebc6fa7e701a5d621c58",
+      "size": 117285,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/a2bc89db628f3b33eaeeebc6fa7e701a5d621c58"
+    },
+    {
+      "path": "quarto/kapitola_06.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41c4c18487695dabc27d3601a16c54cbb65318ca",
+      "size": 155810,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/41c4c18487695dabc27d3601a16c54cbb65318ca"
+    },
+    {
+      "path": "quarto/literatura.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91b30e022ea51ca185704e8ef8dc00e623af76f1",
+      "size": 213,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/91b30e022ea51ca185704e8ef8dc00e623af76f1"
+    },
+    {
+      "path": "quarto/slovnicek.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5146eb0854fc44f8b68fcee40af32d099adc63b5",
+      "size": 86057,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/5146eb0854fc44f8b68fcee40af32d099adc63b5"
+    },
+    {
+      "path": "quarto/znaceni.qmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f40de03076cf25730aa7326d00346ba2863f7fc",
+      "size": 34490,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/9f40de03076cf25730aa7326d00346ba2863f7fc"
+    },
+    {
+      "path": "references.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87cbda7eff1d4243cdb6e04e8111691dd56266eb",
+      "size": 19259,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/87cbda7eff1d4243cdb6e04e8111691dd56266eb"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf4056efcf276c797e5014b62f012bdf549da6be",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/bf4056efcf276c797e5014b62f012bdf549da6be"
+    },
+    {
+      "path": "scripts/build-workbook-excel.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "949394c361365704c35ef7dbf64c0523e83947a6",
+      "size": 9027,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/949394c361365704c35ef7dbf64c0523e83947a6"
+    },
+    {
+      "path": "scripts/build-workbooks.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "292a37e61a8a92779e9f433831339e2549c6709b",
+      "size": 1316,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/292a37e61a8a92779e9f433831339e2549c6709b"
+    },
+    {
+      "path": "scripts/excel-workbook.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cc37d4cac3c75fa28e6f13b95ce5938beecf65f",
+      "size": 2404,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/6cc37d4cac3c75fa28e6f13b95ce5938beecf65f"
+    },
+    {
+      "path": "scripts/kapitola_01-sešit.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e550231a0b28220eb132ac8282c44218f73ea3e9",
+      "size": 684,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/e550231a0b28220eb132ac8282c44218f73ea3e9"
+    },
+    {
+      "path": "scripts/kapitola_01-simulace.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a074aa67c794276bbce5c9754f8c5c449687602",
+      "size": 1223,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/5a074aa67c794276bbce5c9754f8c5c449687602"
+    },
+    {
+      "path": "scripts/kapitola_01.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85fbcdb61e19c57cee47f339b9f70b5964aa86e4",
+      "size": 10953,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/85fbcdb61e19c57cee47f339b9f70b5964aa86e4"
+    },
+    {
+      "path": "scripts/kapitola_02-sešit.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a946a022201714ae7bed64b00e9c10769041eed2",
+      "size": 5834,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/a946a022201714ae7bed64b00e9c10769041eed2"
+    },
+    {
+      "path": "scripts/kapitola_02-ukazky.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0ff81364faa170b377d17de27f6f2a5a08edaf6",
+      "size": 4963,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/a0ff81364faa170b377d17de27f6f2a5a08edaf6"
+    },
+    {
+      "path": "scripts/kapitola_02.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a941a3a5a401f0b04d5c2f96a391c0e58593e09",
+      "size": 8634,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/8a941a3a5a401f0b04d5c2f96a391c0e58593e09"
+    },
+    {
+      "path": "scripts/kapitola_03-sešit.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd96112397059213ab192604bf6c5e312f6ec6d4",
+      "size": 9624,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/dd96112397059213ab192604bf6c5e312f6ec6d4"
+    },
+    {
+      "path": "scripts/kapitola_03.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5753637faa0ceb88a6efe29dde4884fa030e0ad",
+      "size": 17456,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/f5753637faa0ceb88a6efe29dde4884fa030e0ad"
+    },
+    {
+      "path": "scripts/kapitola_04-sešit.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f68e5994f930072c22794992ec288e4aeae8b0e",
+      "size": 4968,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/4f68e5994f930072c22794992ec288e4aeae8b0e"
+    },
+    {
+      "path": "scripts/kapitola_04.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23eedbb4be71091c4f07d4b53b549abf190e0741",
+      "size": 10721,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/23eedbb4be71091c4f07d4b53b549abf190e0741"
+    },
+    {
+      "path": "scripts/kapitola_05-sešit.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9183d61a495e9ad1b33730ce06dc8e99aee0f0ef",
+      "size": 8606,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/9183d61a495e9ad1b33730ce06dc8e99aee0f0ef"
+    },
+    {
+      "path": "scripts/kapitola_05.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ccacc2b0b9f5c03c60269ee395431ea18371704",
+      "size": 11510,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/6ccacc2b0b9f5c03c60269ee395431ea18371704"
+    },
+    {
+      "path": "scripts/kapitola_06-sešit.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f282a21e0cbf13ddff1c5896f772c55a2e6715ac",
+      "size": 10822,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/f282a21e0cbf13ddff1c5896f772c55a2e6715ac"
+    },
+    {
+      "path": "scripts/kapitola_06.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77092e2419e76afbda48a3639a4c1b6c63733c87",
+      "size": 19060,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/77092e2419e76afbda48a3639a4c1b6c63733c87"
+    },
+    {
+      "path": "scripts/render-figures.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6b6308b00c540f6f1535c9775f4463fa66ac7b4",
+      "size": 550,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/d6b6308b00c540f6f1535c9775f4463fa66ac7b4"
+    },
+    {
+      "path": "scripts/sesity-data.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e04d5936a5fc2f8d22c5680c39cdb031b8aa0381",
+      "size": 28241,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/e04d5936a5fc2f8d22c5680c39cdb031b8aa0381"
+    },
+    {
+      "path": "scripts/sesity-simulace.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9485f83e1e2627a6434227b1d530266b1f5f4d64",
+      "size": 1603,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/9485f83e1e2627a6434227b1d530266b1f5f4d64"
+    },
+    {
+      "path": "statistics-for-psychology.Rproj",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed5ab7ed7ece9e45bf4d012d51fb0aca75e1ba60",
+      "size": 232,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/ed5ab7ed7ece9e45bf4d012d51fb0aca75e1ba60"
+    },
+    {
+      "path": "styles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba5dfaec2d10a77aca65cd5273a9820304109f2c",
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/ba5dfaec2d10a77aca65cd5273a9820304109f2c"
+    },
+    {
+      "path": "styles/apa.csl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "490cd16b942be4ce4cda29614a38a498124babc9",
+      "size": 85860,
+      "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/blobs/490cd16b942be4ce4cda29614a38a498124babc9"
+    }
+  ],
+  "truncated": false
+}

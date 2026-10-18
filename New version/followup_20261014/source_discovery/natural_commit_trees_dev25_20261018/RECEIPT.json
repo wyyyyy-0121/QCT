@@ -1,0 +1,303 @@
+{
+  "role": "Pinned lineage metadata from earlier search; no workbook, patch or cell-answer acquisition",
+  "utc": "2026-10-18T11:48:40.219080+00:00",
+  "prior_search_sha256": "f405fb93b64c1137cdefd7114062261dc6c6510d037d99a310261e1a957126c6",
+  "records": [
+    {
+      "repo": "mightyoung/software-cost-calculator",
+      "commit_sha": "ce9fd3f00fa2819630e0bd9d7129889211aea525",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/mightyoung/software-cost-calculator/git/commits/ce9fd3f00fa2819630e0bd9d7129889211aea525",
+          "status": 200,
+          "response_bytes": 1801,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/mightyoung__software-cost-calculator/commit.json",
+          "saved_bytes": 603,
+          "saved_sha256": "120e130e3921f2296de6958ec93aef1787815ca72e1ad50db62eddbf1f4859c8"
+        },
+        {
+          "url": "https://api.github.com/repos/mightyoung/software-cost-calculator/git/commits/867279ae8955b0358ed0c0258899c67328894613",
+          "status": 200,
+          "response_bytes": 1883,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/mightyoung__software-cost-calculator/parent.json",
+          "saved_bytes": 603,
+          "saved_sha256": "866137e8aeeea7cd5c1b3298d70f220eefbf9d3e4c5d6166a0a16a42c9f0070a"
+        },
+        {
+          "url": "https://api.github.com/repos/mightyoung/software-cost-calculator/git/trees/f606a37651eea7afca2ba8e7d55e27c24587dd39?recursive=1",
+          "status": 200,
+          "response_bytes": 10546,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/mightyoung__software-cost-calculator/before.json",
+          "saved_bytes": 12663,
+          "saved_sha256": "14b5554fee0268163fcf06ae72329bd40cbf5dccc20a3687bedebd1ce3281062"
+        },
+        {
+          "url": "https://api.github.com/repos/mightyoung/software-cost-calculator/git/trees/44e6f0093b836722ac21b65834262758fc60fdfb?recursive=1",
+          "status": 200,
+          "response_bytes": 11636,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/mightyoung__software-cost-calculator/after.json",
+          "saved_bytes": 13985,
+          "saved_sha256": "e4a3479af165e880dde7f7febdb8e25b05979f238012a21609caa4b306042e01"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "867279ae8955b0358ed0c0258899c67328894613",
+      "before_workbooks": 0,
+      "after_workbooks": 0,
+      "changed_workbook_paths": [],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "zbynekdrlik/vyuctovanie",
+      "commit_sha": "a1c874b3bba1d2703adb9523617f572b1c848ea4",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/commits/a1c874b3bba1d2703adb9523617f572b1c848ea4",
+          "status": 200,
+          "response_bytes": 1689,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/zbynekdrlik__vyuctovanie/commit.json",
+          "saved_bytes": 567,
+          "saved_sha256": "681f8e59be7f8c229a9ccb788d3a69c7d1efbae30bd252286dd3635d301d735c"
+        },
+        {
+          "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/commits/7562df68b5dde38b075767d67345f403f508608a",
+          "status": 200,
+          "response_bytes": 1414,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/zbynekdrlik__vyuctovanie/parent.json",
+          "saved_bytes": 870,
+          "saved_sha256": "eb5219495356007e15a509d56f50fc487361818e4275ac38f02e9ec787355f6b"
+        },
+        {
+          "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/dbbf9cdaea2497b4ed164f1604d1d270516d7b46?recursive=1",
+          "status": 200,
+          "response_bytes": 7487,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/zbynekdrlik__vyuctovanie/before.json",
+          "saved_bytes": 9200,
+          "saved_sha256": "32d6dc264e794c875c241a7546552d98cf38fe2e08cb0b0570091a9aa25a39dd"
+        },
+        {
+          "url": "https://api.github.com/repos/zbynekdrlik/vyuctovanie/git/trees/b1b25eb7b5492e3d3e35a5a8d947382ff21b72df?recursive=1",
+          "status": 200,
+          "response_bytes": 7487,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/zbynekdrlik__vyuctovanie/after.json",
+          "saved_bytes": 9200,
+          "saved_sha256": "2932f4666795d6f9dfdf814cad3a52932985f63960c6c73957b46b9e211f5948"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "7562df68b5dde38b075767d67345f403f508608a",
+      "before_workbooks": 0,
+      "after_workbooks": 0,
+      "changed_workbook_paths": [],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "reckak/statistics-for-psychology",
+      "commit_sha": "00e3b5d2e27600fd33b6fbc5034be38e79564368",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/commits/00e3b5d2e27600fd33b6fbc5034be38e79564368",
+          "status": 200,
+          "response_bytes": 1740,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/reckak__statistics-for-psychology/commit.json",
+          "saved_bytes": 594,
+          "saved_sha256": "e2e2d29f21705413fcb06dc9ac30c1e3119b909e54f4589b55304ae9ff82424a"
+        },
+        {
+          "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/commits/7f7f6e08f95d0dea8fcbc6105a326b9f2a112513",
+          "status": 200,
+          "response_bytes": 1927,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/reckak__statistics-for-psychology/parent.json",
+          "saved_bytes": 594,
+          "saved_sha256": "69689983489b9ec81d77ac279b4827545b048216a8cf64bfa2b29c4b12b4ccec"
+        },
+        {
+          "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/18d1d2e0a467f0023baf8391ab7fd9424443028c?recursive=1",
+          "status": 200,
+          "response_bytes": 22461,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/reckak__statistics-for-psychology/before.json",
+          "saved_bytes": 27481,
+          "saved_sha256": "96e3aa170aded015365cc9ddb0b53ce79ca152eb0c48e285c2aa090da7c2d595"
+        },
+        {
+          "url": "https://api.github.com/repos/reckak/statistics-for-psychology/git/trees/3571497bbbbf1189365a3e899f389c5585ff34f8?recursive=1",
+          "status": 200,
+          "response_bytes": 23787,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/reckak__statistics-for-psychology/after.json",
+          "saved_bytes": 29097,
+          "saved_sha256": "13e9e8c355d35e2a98b6af9a9af901bad20b3b6172f14fbd9a0ca4323636dad3"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "7f7f6e08f95d0dea8fcbc6105a326b9f2a112513",
+      "before_workbooks": 5,
+      "after_workbooks": 6,
+      "changed_workbook_paths": [],
+      "added_workbook_paths": [
+        "data/kapitola_06.xlsx"
+      ],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "Pradeepgdeepu/Data_Cleaning_with_excel",
+      "commit_sha": "f784663dad6c0ced6a403bad5c33f73789e504af",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/Pradeepgdeepu/Data_Cleaning_with_excel/git/commits/f784663dad6c0ced6a403bad5c33f73789e504af",
+          "status": 200,
+          "response_bytes": 6855,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/Pradeepgdeepu__Data_Cleaning_with_excel/commit.json",
+          "saved_bytes": 612,
+          "saved_sha256": "10c2461d9c6e7c5dbbc70444133edefee06f0c6cd6259a41cdf5ba985cb0f4b8"
+        },
+        {
+          "url": "https://api.github.com/repos/Pradeepgdeepu/Data_Cleaning_with_excel/git/commits/2509b978c6007b852bc2f880ea0ddaaa0890c33e",
+          "status": 200,
+          "response_bytes": 1598,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/Pradeepgdeepu__Data_Cleaning_with_excel/parent.json",
+          "saved_bytes": 277,
+          "saved_sha256": "acdd0d48dd35d8e1bb5337d56588f51a12bf7f68e5b0003333dfc85634441ee7"
+        },
+        {
+          "url": "https://api.github.com/repos/Pradeepgdeepu/Data_Cleaning_with_excel/git/trees/bf3f59f47f185149a7133ba08b9b38b9a67c5426?recursive=1",
+          "status": 200,
+          "response_bytes": 442,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/Pradeepgdeepu__Data_Cleaning_with_excel/before.json",
+          "saved_bytes": 390,
+          "saved_sha256": "cb8b1f1d4106d3506451ef3b92bca2d8cb1f570b4824214271ae27ef537040a3"
+        },
+        {
+          "url": "https://api.github.com/repos/Pradeepgdeepu/Data_Cleaning_with_excel/git/trees/b518a86d7bd3644262641a3c486d1f9b6fb9bda9?recursive=1",
+          "status": 200,
+          "response_bytes": 705,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/Pradeepgdeepu__Data_Cleaning_with_excel/after.json",
+          "saved_bytes": 711,
+          "saved_sha256": "5cc01e887b4605361dd5992fb9b0fed3b72fd02f19fd684e4d3e1d21ec180c65"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "2509b978c6007b852bc2f880ea0ddaaa0890c33e",
+      "before_workbooks": 0,
+      "after_workbooks": 1,
+      "changed_workbook_paths": [],
+      "added_workbook_paths": [
+        "Data_Cleaning_with_excel -2.xlsm"
+      ],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine",
+      "commit_sha": "07d43c117259ce611d0fad1062a2785f6896ca96",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/git/commits/07d43c117259ce611d0fad1062a2785f6896ca96",
+          "status": 200,
+          "response_bytes": 3203,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/alvenyuka__Stock-Portfolio-Tracker-Analytics-Engine/commit.json",
+          "saved_bytes": 648,
+          "saved_sha256": "92e07316c0beb762424e50e62a9f3e99275ce010ecaf1604fd8b6edd7cbf7d71"
+        },
+        {
+          "url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/git/commits/afb462f6f95a32cfff66fc5cd62b3fd372d3e037",
+          "status": 200,
+          "response_bytes": 1686,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/alvenyuka__Stock-Portfolio-Tracker-Analytics-Engine/parent.json",
+          "saved_bytes": 648,
+          "saved_sha256": "3e103a6fe9a576302d1471b8e20ce119056395ee760b9fcb882abfbee39788a8"
+        },
+        {
+          "url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/git/trees/f4fa073aae44f3c287fd098427c0b195f00c29e6?recursive=1",
+          "status": 200,
+          "response_bytes": 2272,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/alvenyuka__Stock-Portfolio-Tracker-Analytics-Engine/before.json",
+          "saved_bytes": 2614,
+          "saved_sha256": "dc54b124014a451f659c60ecb1b09f3cd36b82d27609c9c1803b463f72845ce5"
+        },
+        {
+          "url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/git/trees/5e1cb6fa8e7b762cad53bd5f1b5e13868fd08448?recursive=1",
+          "status": 200,
+          "response_bytes": 4819,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/alvenyuka__Stock-Portfolio-Tracker-Analytics-Engine/after.json",
+          "saved_bytes": 5717,
+          "saved_sha256": "4ac823070e7f0e161e972460186e4baa87a31dd15e28ed99aa91dcdfdf0251ed"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "afb462f6f95a32cfff66fc5cd62b3fd372d3e037",
+      "before_workbooks": 1,
+      "after_workbooks": 1,
+      "changed_workbook_paths": [],
+      "added_workbook_paths": [],
+      "removed_workbook_paths": [],
+      "metadata_complete": true
+    },
+    {
+      "repo": "OpenSourceRisk/QuantLibAddIn",
+      "commit_sha": "ce2e7a11793e98010d8d2603e71c584500ebdfaa",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/OpenSourceRisk/QuantLibAddIn/git/commits/ce2e7a11793e98010d8d2603e71c584500ebdfaa",
+          "status": 200,
+          "response_bytes": 1528,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/OpenSourceRisk__QuantLibAddIn/commit.json",
+          "saved_bytes": 582,
+          "saved_sha256": "bdcb0801e265accb87564bd57d79f5b6a6223b098eb9e4054a829417fb53eb9e"
+        },
+        {
+          "url": "https://api.github.com/repos/OpenSourceRisk/QuantLibAddIn/git/commits/4e51e05e67d630fa20eda7be4b0aecf630a6ffe2",
+          "status": 200,
+          "response_bytes": 1601,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/OpenSourceRisk__QuantLibAddIn/parent.json",
+          "saved_bytes": 582,
+          "saved_sha256": "f1f8c6feb8a962da05f37ee9e0c08822ef0ce2736aba7b6f9be27bb14f7f9793"
+        },
+        {
+          "url": "https://api.github.com/repos/OpenSourceRisk/QuantLibAddIn/git/trees/b3c934ab053008f969420ec0a6736016ffb89297?recursive=1",
+          "status": 200,
+          "response_bytes": 530840,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/OpenSourceRisk__QuantLibAddIn/before.json",
+          "saved_bytes": 644962,
+          "saved_sha256": "8f3a1d65a3132b88376ab21b39fe1d2021aace279e76ec49cb5b6caf3e82e6bd"
+        },
+        {
+          "url": "https://api.github.com/repos/OpenSourceRisk/QuantLibAddIn/git/trees/c0ed091ac91711e34212fd464187b11af53e1962?recursive=1",
+          "status": 200,
+          "response_bytes": 531916,
+          "saved_path": "source_discovery/natural_commit_trees_dev25_20261018/OpenSourceRisk__QuantLibAddIn/after.json",
+          "saved_bytes": 646262,
+          "saved_sha256": "7218a61575c7cc2c307f96bfcb973a89451ae81f1eb59e419900d83107f4b1cf"
+        }
+      ],
+      "workbook_blobs_acquired": false,
+      "truth_pair_verified": false,
+      "parent_sha": "4e51e05e67d630fa20eda7be4b0aecf630a6ffe2",
+      "before_workbooks": 578,
+      "after_workbooks": 581,
+      "changed_workbook_paths": [],
+      "added_workbook_paths": [
+        "QuantLibXL/StandaloneExamples/QuantExt/CurrencySwap.xlsx",
+        "QuantLibXL/StandaloneExamples/QuantExt/FXLinkedCashflows.xlsx",
+        "QuantLibXL/StandaloneExamples/QuantExt/FxIndex.xlsx",
+        "QuantLibXL/StandaloneExamples/QuantExt/QuantExtRateHelpers.xlsx"
+      ],
+      "removed_workbook_paths": [
+        "QuantLibXL/StandaloneExamples/Analytics/QuantExtRateHelpers.xlsx"
+      ],
+      "metadata_complete": true
+    }
+  ],
+  "accepted_sources": 0,
+  "accepted_families": 0,
+  "natural_truth_pairs_verified": 0
+}
