@@ -1,0 +1,59 @@
+{
+  "research_tests_passed": 206,
+  "source_holdout_folds": 5,
+  "suggestion_replay_cases": 213,
+  "feature_replay_cases": 213,
+  "independent_integer_checks": 5964,
+  "unchanged_candidates": 1861162,
+  "added_unit_features": 9,
+  "total_features": 356,
+  "new_correct_repairs_relative_to_dev19": 0,
+  "retained_correct_supplements": 7,
+  "rejected_posthoc_confirmed_wrong_supplements": 80,
+  "rejected_unique_original_cells": 5,
+  "frozen_original_labels_unchanged": true,
+  "unfiltered_choices_identical_to_dev19": true,
+  "prediction_lock_sha256": "711e5dd396e246b99897525c26aee6ceb5b05ecb3ff79daebd54f74405583638",
+  "precision_and_coverage": {
+    "correct": 14191,
+    "correct_errors": 14191,
+    "coverage": 0.7852044486250207,
+    "errors": 18073,
+    "precision_confirmed_lower_bound": 0.9979606188466948,
+    "suggestions": 14220,
+    "unknown": 0,
+    "wrong": 29,
+    "wrong_clean_cells": 29
+  },
+  "main_candidate_adopted": false,
+  "accepted_final_sources": 0,
+  "accepted_final_families": 0,
+  "goal_complete": false,
+  "final_validation_eligible": false,
+  "qa": {
+    "REPLAY": {
+      "file": "qa/UNIT_LEARNING_DEV20_REPLAY_20261018.json",
+      "sha256": "d6af5929a18ba4259d51e84a95a4917fae1f029055082346e657963f812557aa"
+    },
+    "FEATURE_REPLAY": {
+      "file": "qa/UNIT_LEARNING_DEV20_FEATURE_REPLAY_20261018.json",
+      "sha256": "085fcb46540c620bd3756343f7efc1488398ad908a8048aa01536a7b832abda1"
+    },
+    "INDEPENDENT_COUNTS": {
+      "file": "qa/UNIT_LEARNING_DEV20_INDEPENDENT_COUNTS_20261018.json",
+      "sha256": "62b5580d17a84e7bd5e2d9305b0c57cf4c1ed9a4b47b02f3e0a5aee1b571114b"
+    },
+    "SELECTION_COMPARISON": {
+      "file": "qa/UNIT_LEARNING_DEV20_SELECTION_COMPARISON_20261018.json",
+      "sha256": "49f4084573f9c97b7e390186e23ee7d1c4202f45bc3db31c880b1a405fd4cfcd"
+    },
+    "UNIT_GATE_DEV20_INDEPENDENT_DIMENSIONS_20261018": {
+      "file": "qa/UNIT_GATE_DEV20_INDEPENDENT_DIMENSIONS_20261018.json",
+      "sha256": "dd25ed2c1f03ce1e7b3b02d5270be370897952755b820ab432d8e42ac84f636a"
+    },
+    "UNIT_FEATURE_AVAILABILITY_DEV20_20261018": {
+      "file": "qa/UNIT_FEATURE_AVAILABILITY_DEV20_20261018.json",
+      "sha256": "7c7db8ff933b06fe189189189fbc2384e76ace276fe4a1819b9c3da40dbc840a"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/audit_unit_learning_dev20.py", line 52, in <module>
+    {'recount':recount,'feature_replay':feature_replay}[a.mode]()
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/audit_unit_learning_dev20.py", line 38, in feature_replay
+    verify();active,accesses=protection();count=0
+    ^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/run_unit_learning_dev20.py", line 113, in verify
+    verify_features();lock=read(RUN/'prediction_lock.json')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/run_selector_dev5.py", line 33, in read
+    return json.loads(gzip.decompress(path.read_bytes()) if path.suffix == '.gz' else path.read_bytes())
+                                                                                      ^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ayaka/hybridguard/New version/followup_20261014/development/unit_learning_dev20_v1/prediction_lock.json'
