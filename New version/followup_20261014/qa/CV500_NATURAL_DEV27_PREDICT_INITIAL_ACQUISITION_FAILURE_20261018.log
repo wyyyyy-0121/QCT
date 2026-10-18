@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/run_cv500_natural_dev27.py", line 41, in <module>
+    getattr(engine,p.parse_args().mode)()
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/run_hobyah_natural_dev26.py", line 88, in predict
+    assert all(r['ok'] for r in acquisition['records'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

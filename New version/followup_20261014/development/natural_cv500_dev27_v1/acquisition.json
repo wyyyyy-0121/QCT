@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "version": "before",
+      "url": "https://api.github.com/repos/mirontoli/cv-500/git/blobs/d8f73fa99176ec227cf91c14adf70db4c2d5c9b7",
+      "expected_git_blob": "d8f73fa99176ec227cf91c14adf70db4c2d5c9b7",
+      "ok": true,
+      "status": 200,
+      "path": "development/natural_cv500_dev27_v1/raw/before.xlsx",
+      "bytes": 285065,
+      "sha256": "b6cdb872bc8aca288c1606ea10eacad9c4095e9983b374164f3b2478b2b71d4f"
+    },
+    {
+      "version": "after",
+      "url": "https://api.github.com/repos/mirontoli/cv-500/git/blobs/b3eb6b881b1f6506e1c009ff5b26299a370fbf66",
+      "expected_git_blob": "b3eb6b881b1f6506e1c009ff5b26299a370fbf66",
+      "ok": true,
+      "initial_error": "IncompleteRead: IncompleteRead(294912 bytes read)",
+      "status": 200,
+      "path": "development/natural_cv500_dev27_v1/raw/after.xlsx",
+      "bytes": 284679,
+      "sha256": "fbf67dab7e9eb2c78d03ebdcd95c3a41bc597443ddffc70f240580e653c5de42"
+    }
+  ],
+  "final_validation_eligible": false,
+  "role": "Excluded natural-formula development evidence",
+  "redistribution_license_not_established": true,
+  "original_workbooks_kept_local": true,
+  "prior_readme_formula_mechanism_exposed": true,
+  "preregistration_sha256": "42db6967c2cb464d273bc1bd7697661db919dcc921219cea993fef68438dacae",
+  "script_sha256": "91d3a3b3bd8a3771857cd34b78e197fc97a7d23888c1326d7d4545a332cece71",
+  "initial_receipt_sha256": "29ac7baa6bcea8eeb9781382066b5dc7ae54459840468dcd5e551bf10550c1ec",
+  "recovery_script_sha256": "3fc93aefd86a6bbf49d8650cd85ba8a45a4165e1fb6830c16f45dcc88381c9be"
+}

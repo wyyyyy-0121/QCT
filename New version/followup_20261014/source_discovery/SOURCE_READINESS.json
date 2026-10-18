@@ -21,7 +21,9 @@
     "Aswath Damodaran NYU",
     "US EPA control cost manual",
     "UK government conservative grouped origin; DfT and DESNZ not yet counted separately",
-    "ECB2020/Hobyah (historical correction commit metadata disclosed error locations and mechanism during dev25 discovery; excluded from unseen final validation)"
+    "ECB2020/Hobyah (historical correction commit metadata disclosed error locations and mechanism during dev25 discovery; excluded from unseen final validation)",
+    "Gh0st0ne/LDAS (dev27 natural-original experiment and correction semantics audited; whole origin excluded)",
+    "mirontoli/cv-500 (dev27 source README exposed correction; 505 natural formula errors used in development; whole origin excluded)"
   ],
   "priority_origin_groups": [
     {
@@ -990,5 +992,7 @@
     "report": "DEV26_HOBYAH_NATURAL_AUDIT_REPORT_20261018.md",
     "accepted_sources": 0,
     "accepted_families": 0
-  }
+  },
+  "verified_natural_development_truth_pairs": 1,
+  "natural_pairs_dev27_report": "DEV27_NATURAL_PAIRS_REPORT_20261018.md"
 }

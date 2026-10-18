@@ -1,0 +1,8 @@
+{
+  "role": "Local-only full dictionary-content diff; rebuild from pinned raw versions after prediction lock",
+  "files": {
+    "author_diff.json.gz": "b0037694456c7e97582b5de6f1e037ebfc07ee8b79e6eff941e9fcc26c9d679d"
+  },
+  "rebuild": "python qa/diff_cv500_natural_dev27.py",
+  "redistribution_license_not_established": true
+}
