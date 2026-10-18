@@ -17,17 +17,16 @@
     "accepted_template_families": 0
   },
   "baseline_reproduced": true,
-  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev22 experimental only",
+  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev23 experimental only",
   "development_precision": 1.0,
   "development_coverage": 0.7936297279362973,
   "development_gate_passed": false,
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "Build tri-state relation certificates for clean and erroneous development targets; unsupported grammar and missing witnesses remain unknown",
-    "Independently audit clean-target contrasts and formula-correctness versus repair-success labels before another training run",
-    "Compare absolute candidate validity and relative choice; calibrate only inside outer-fold training origins",
-    "Preserve reserved final source bodies until model/scorer/inclusion freeze; natural-error truth pairing and final 6-source/15-family acceptance remain incomplete"
+    "Freeze a precise dev24 absolute-validity versus relative-selection comparison on audited dev23 states before training",
+    "Use the same source folds and full candidate pool; retain unknown at inference and preserve the old repair scorer",
+    "Keep final source bodies reserved; reliable natural-error truth pairing and final 6-source/15-family acceptance remain incomplete"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -49,14 +48,14 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 225,
-  "new_work_pushed": true,
+  "unit_test_count": 237,
+  "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV22_CERTIFIED_LEARNING_REPORT_20261018.md",
+  "latest_report": "DEV23_TRISTATE_RELATIONS_REPORT_20261018.md",
   "dev21_relative_learning": {
     "run": "development/relative_learning_dev21_v1",
     "report": "DEV21_RELATIVE_LEARNING_REPORT_20261018.md",
@@ -243,7 +242,7 @@
     "version": "dev9-bounded-peer-scalar-hypothesis-v1",
     "wall_seconds": 65.60181854200027
   },
-  "new_work_pushed_scope": "dev17 three public development source labels, complete transfer run, replay and audits independently verified on GitHub",
+  "new_work_pushed_scope": "dev23 audit/report pending upload; a07ff6c certificate push still in progress at this update",
   "latest_verified_experiment_remote_commit": "496e034904af020e85e39991e858caa6dee2d8ff",
   "dev9_upload_receipt": "qa/DEV9_UPLOAD_RECEIPT_20261018.json",
   "dev10_public_pipeline_audit": "development/public_candidate_pipeline_dev10",
@@ -1140,5 +1139,21 @@
     },
     "upload_state": "complete; independently verified e1f57c3c43e5730228390b96d6323e6afe151888",
     "upload_receipt": "qa/SIGNED_LEARNING_DEV19_UPLOAD_RECEIPT_20261018.json"
+  },
+  "dev23_tristate_relations": {
+    "cases": 213,
+    "candidates": 1861162,
+    "keep_targets": 70006,
+    "negative_witnesses_recomputed": 1005599,
+    "positive_identities_recomputed": 9466,
+    "clean_targets_with_certified_negative": 7753,
+    "targets_with_certified_contrast": 25033,
+    "model_trained": false,
+    "repair_performance_not_estimated": true,
+    "accepted_final_sources": 0,
+    "accepted_final_families": 0,
+    "report": "DEV23_TRISTATE_RELATIONS_REPORT_20261018.md",
+    "verification": "qa/TRISTATE_RELATIONS_DEV23_VERIFICATION_20261018.json",
+    "independent_audit_passed": true
   }
 }

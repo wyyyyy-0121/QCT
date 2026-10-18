@@ -1,0 +1,2179 @@
+{
+  "all_negative_witnesses_recomputed": true,
+  "all_unknown_states_preserved": true,
+  "auditor_sha256": "3beb4d19b84a034bcef7fef7f4881a831627050821fa4982f5d407a7f9534c73",
+  "by_origin": {
+    "18f": {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 1919,
+      "keep": 120,
+      "negative_witnesses_recomputed": 362,
+      "positive_identities_recomputed": 147,
+      "state_0": 362,
+      "state_1": 147,
+      "state_None": 1530
+    },
+    "authored_development": {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 1262283,
+      "keep": 24890,
+      "negative_witnesses_recomputed": 985209,
+      "positive_identities_recomputed": 7856,
+      "state_0": 985209,
+      "state_1": 23803,
+      "state_None": 278161
+    },
+    "iowa_state_agdm": {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 6750,
+      "keep": 770,
+      "negative_witnesses_recomputed": 2307,
+      "positive_identities_recomputed": 571,
+      "state_0": 2307,
+      "state_1": 866,
+      "state_None": 4347
+    },
+    "packt": {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 338913,
+      "keep": 25330,
+      "negative_witnesses_recomputed": 10,
+      "positive_identities_recomputed": 40,
+      "state_0": 10,
+      "state_1": 40,
+      "state_None": 364193
+    },
+    "uk_government": {
+      "cancelled_input_assignments_completed": 117,
+      "candidates": 251297,
+      "keep": 18896,
+      "negative_witnesses_recomputed": 17711,
+      "positive_identities_recomputed": 852,
+      "state_0": 17711,
+      "state_1": 852,
+      "state_None": 251630
+    }
+  },
+  "cases": [
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 716,
+      "case": "regression/sparse_seed101",
+      "keep": 22,
+      "negative_witnesses_recomputed": 497,
+      "positive_identities_recomputed": 12,
+      "state_0": 497,
+      "state_1": 12,
+      "state_None": 229
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_101",
+      "keep": 10,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 1660,
+      "case": "regression/sparse_seed202",
+      "keep": 40,
+      "negative_witnesses_recomputed": 1241,
+      "positive_identities_recomputed": 30,
+      "state_0": 1241,
+      "state_1": 30,
+      "state_None": 429
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_202",
+      "keep": 10,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 3182,
+      "case": "regression/sparse_seed303",
+      "keep": 70,
+      "negative_witnesses_recomputed": 2446,
+      "positive_identities_recomputed": 32,
+      "state_0": 2446,
+      "state_1": 60,
+      "state_None": 746
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_303",
+      "keep": 10,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 117938,
+      "case": "regression/systemic_seed404",
+      "keep": 2161,
+      "negative_witnesses_recomputed": 94180,
+      "positive_identities_recomputed": 34,
+      "state_0": 94180,
+      "state_1": 2151,
+      "state_None": 23768
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_404",
+      "keep": 10,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 72447,
+      "case": "regression/systemic_seed505",
+      "keep": 1413,
+      "negative_witnesses_recomputed": 57024,
+      "positive_identities_recomputed": 35,
+      "state_0": 57024,
+      "state_1": 1403,
+      "state_None": 15433
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_505",
+      "keep": 10,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 113239,
+      "case": "regression/systemic_seed606",
+      "keep": 2111,
+      "negative_witnesses_recomputed": 90381,
+      "positive_identities_recomputed": 34,
+      "state_0": 90381,
+      "state_1": 2101,
+      "state_None": 22868
+    },
+    {
+      "candidates": 90,
+      "case": "regression/clean_606",
+      "keep": 10,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 142,
+      "case": "regression/length_1_101",
+      "keep": 11,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 1,
+      "state_0": 34,
+      "state_1": 1,
+      "state_None": 118
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 662,
+      "case": "regression/length_10_101",
+      "keep": 21,
+      "negative_witnesses_recomputed": 444,
+      "positive_identities_recomputed": 11,
+      "state_0": 444,
+      "state_1": 11,
+      "state_None": 228
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 5342,
+      "case": "regression/length_100_101",
+      "keep": 111,
+      "negative_witnesses_recomputed": 4134,
+      "positive_identities_recomputed": 33,
+      "state_0": 4134,
+      "state_1": 101,
+      "state_None": 1218
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 26142,
+      "case": "regression/length_500_101",
+      "keep": 511,
+      "negative_witnesses_recomputed": 20534,
+      "positive_identities_recomputed": 33,
+      "state_0": 20534,
+      "state_1": 501,
+      "state_None": 5618
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 78038,
+      "case": "regression/length_1499_101",
+      "keep": 1509,
+      "negative_witnesses_recomputed": 61452,
+      "positive_identities_recomputed": 32,
+      "state_0": 61452,
+      "state_1": 1499,
+      "state_None": 16596
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 78246,
+      "case": "regression/shared_101",
+      "keep": 1513,
+      "negative_witnesses_recomputed": 61623,
+      "positive_identities_recomputed": 635,
+      "state_0": 61623,
+      "state_1": 1503,
+      "state_None": 16633
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15670,
+      "case": "regression/single_101",
+      "keep": 303,
+      "negative_witnesses_recomputed": 12341,
+      "positive_identities_recomputed": 33,
+      "state_0": 12341,
+      "state_1": 301,
+      "state_None": 3331
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 84034,
+      "case": "regression/heterogeneous_101",
+      "keep": 1509,
+      "negative_witnesses_recomputed": 67448,
+      "positive_identities_recomputed": 1499,
+      "state_0": 67448,
+      "state_1": 1499,
+      "state_None": 16596
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15746,
+      "case": "regression/exception_101",
+      "keep": 311,
+      "negative_witnesses_recomputed": 12345,
+      "positive_identities_recomputed": 34,
+      "state_0": 12345,
+      "state_1": 301,
+      "state_None": 3411
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 142,
+      "case": "regression/length_1_202",
+      "keep": 11,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 1,
+      "state_0": 34,
+      "state_1": 1,
+      "state_None": 118
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 662,
+      "case": "regression/length_10_202",
+      "keep": 21,
+      "negative_witnesses_recomputed": 444,
+      "positive_identities_recomputed": 11,
+      "state_0": 444,
+      "state_1": 11,
+      "state_None": 228
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 5342,
+      "case": "regression/length_100_202",
+      "keep": 111,
+      "negative_witnesses_recomputed": 4134,
+      "positive_identities_recomputed": 33,
+      "state_0": 4134,
+      "state_1": 101,
+      "state_None": 1218
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 26142,
+      "case": "regression/length_500_202",
+      "keep": 511,
+      "negative_witnesses_recomputed": 20534,
+      "positive_identities_recomputed": 33,
+      "state_0": 20534,
+      "state_1": 501,
+      "state_None": 5618
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 78038,
+      "case": "regression/length_1499_202",
+      "keep": 1509,
+      "negative_witnesses_recomputed": 61452,
+      "positive_identities_recomputed": 32,
+      "state_0": 61452,
+      "state_1": 1499,
+      "state_None": 16596
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 78246,
+      "case": "regression/shared_202",
+      "keep": 1513,
+      "negative_witnesses_recomputed": 61623,
+      "positive_identities_recomputed": 635,
+      "state_0": 61623,
+      "state_1": 1503,
+      "state_None": 16633
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15670,
+      "case": "regression/single_202",
+      "keep": 303,
+      "negative_witnesses_recomputed": 12341,
+      "positive_identities_recomputed": 33,
+      "state_0": 12341,
+      "state_1": 301,
+      "state_None": 3331
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 84034,
+      "case": "regression/heterogeneous_202",
+      "keep": 1509,
+      "negative_witnesses_recomputed": 67448,
+      "positive_identities_recomputed": 1499,
+      "state_0": 67448,
+      "state_1": 1499,
+      "state_None": 16596
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15746,
+      "case": "regression/exception_202",
+      "keep": 311,
+      "negative_witnesses_recomputed": 12345,
+      "positive_identities_recomputed": 34,
+      "state_0": 12345,
+      "state_1": 301,
+      "state_None": 3411
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 142,
+      "case": "regression/length_1_303",
+      "keep": 11,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 1,
+      "state_0": 34,
+      "state_1": 1,
+      "state_None": 118
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 662,
+      "case": "regression/length_10_303",
+      "keep": 21,
+      "negative_witnesses_recomputed": 444,
+      "positive_identities_recomputed": 11,
+      "state_0": 444,
+      "state_1": 11,
+      "state_None": 228
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 5342,
+      "case": "regression/length_100_303",
+      "keep": 111,
+      "negative_witnesses_recomputed": 4134,
+      "positive_identities_recomputed": 33,
+      "state_0": 4134,
+      "state_1": 101,
+      "state_None": 1218
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 26142,
+      "case": "regression/length_500_303",
+      "keep": 511,
+      "negative_witnesses_recomputed": 20534,
+      "positive_identities_recomputed": 33,
+      "state_0": 20534,
+      "state_1": 501,
+      "state_None": 5618
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 78038,
+      "case": "regression/length_1499_303",
+      "keep": 1509,
+      "negative_witnesses_recomputed": 61452,
+      "positive_identities_recomputed": 32,
+      "state_0": 61452,
+      "state_1": 1499,
+      "state_None": 16596
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 78246,
+      "case": "regression/shared_303",
+      "keep": 1513,
+      "negative_witnesses_recomputed": 61623,
+      "positive_identities_recomputed": 635,
+      "state_0": 61623,
+      "state_1": 1503,
+      "state_None": 16633
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15670,
+      "case": "regression/single_303",
+      "keep": 303,
+      "negative_witnesses_recomputed": 12341,
+      "positive_identities_recomputed": 33,
+      "state_0": 12341,
+      "state_1": 301,
+      "state_None": 3331
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 84034,
+      "case": "regression/heterogeneous_303",
+      "keep": 1509,
+      "negative_witnesses_recomputed": 67448,
+      "positive_identities_recomputed": 1499,
+      "state_0": 67448,
+      "state_1": 1499,
+      "state_None": 16596
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15746,
+      "case": "regression/exception_303",
+      "keep": 311,
+      "negative_witnesses_recomputed": 12345,
+      "positive_identities_recomputed": 34,
+      "state_0": 12345,
+      "state_1": 301,
+      "state_None": 3411
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 960,
+      "case": "stress/c01",
+      "keep": 24,
+      "negative_witnesses_recomputed": 786,
+      "positive_identities_recomputed": 24,
+      "state_0": 786,
+      "state_1": 24,
+      "state_None": 174
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 34,
+      "case": "stress/c02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 28,
+      "positive_identities_recomputed": 1,
+      "state_0": 28,
+      "state_1": 1,
+      "state_None": 6
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 34,
+      "case": "stress/c03",
+      "keep": 1,
+      "negative_witnesses_recomputed": 28,
+      "positive_identities_recomputed": 1,
+      "state_0": 28,
+      "state_1": 1,
+      "state_None": 6
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 744,
+      "case": "stress/c04",
+      "keep": 24,
+      "negative_witnesses_recomputed": 643,
+      "positive_identities_recomputed": 24,
+      "state_0": 643,
+      "state_1": 24,
+      "state_None": 101
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 1056,
+      "case": "stress/c05",
+      "keep": 24,
+      "negative_witnesses_recomputed": 858,
+      "positive_identities_recomputed": 24,
+      "state_0": 858,
+      "state_1": 24,
+      "state_None": 198
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 1056,
+      "case": "stress/c06",
+      "keep": 24,
+      "negative_witnesses_recomputed": 858,
+      "positive_identities_recomputed": 24,
+      "state_0": 858,
+      "state_1": 24,
+      "state_None": 198
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 960,
+      "case": "stress/c07",
+      "keep": 24,
+      "negative_witnesses_recomputed": 786,
+      "positive_identities_recomputed": 24,
+      "state_0": 786,
+      "state_1": 24,
+      "state_None": 174
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 960,
+      "case": "stress/c08",
+      "keep": 24,
+      "negative_witnesses_recomputed": 786,
+      "positive_identities_recomputed": 24,
+      "state_0": 786,
+      "state_1": 24,
+      "state_None": 174
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 960,
+      "case": "tradeoff/p01",
+      "keep": 24,
+      "negative_witnesses_recomputed": 786,
+      "positive_identities_recomputed": 24,
+      "state_0": 786,
+      "state_1": 24,
+      "state_None": 174
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 34,
+      "case": "tradeoff/p02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 28,
+      "positive_identities_recomputed": 1,
+      "state_0": 28,
+      "state_1": 1,
+      "state_None": 6
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 960,
+      "case": "tradeoff/p03",
+      "keep": 24,
+      "negative_witnesses_recomputed": 786,
+      "positive_identities_recomputed": 24,
+      "state_0": 786,
+      "state_1": 24,
+      "state_None": 174
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 960,
+      "case": "tradeoff/p04",
+      "keep": 24,
+      "negative_witnesses_recomputed": 786,
+      "positive_identities_recomputed": 24,
+      "state_0": 786,
+      "state_1": 24,
+      "state_None": 174
+    },
+    {
+      "case": "crossdomain/x11"
+    },
+    {
+      "candidates": 25,
+      "case": "crossdomain/x12",
+      "keep": 1,
+      "state_None": 26
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "crossdomain/x13",
+      "keep": 24,
+      "negative_witnesses_recomputed": 156,
+      "positive_identities_recomputed": 8,
+      "state_0": 156,
+      "state_1": 8,
+      "state_None": 460
+    },
+    {
+      "candidates": 19,
+      "case": "crossdomain/x14",
+      "keep": 1,
+      "state_None": 20
+    },
+    {
+      "candidates": 19,
+      "case": "crossdomain/x15",
+      "keep": 1,
+      "state_None": 20
+    },
+    {
+      "candidates": 44,
+      "case": "crossdomain/x16",
+      "keep": 2,
+      "state_None": 46
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 3000,
+      "case": "crossdomain/x17",
+      "keep": 120,
+      "negative_witnesses_recomputed": 780,
+      "positive_identities_recomputed": 40,
+      "state_0": 780,
+      "state_1": 40,
+      "state_None": 2300
+    },
+    {
+      "candidates": 70,
+      "case": "crossdomain/x18",
+      "keep": 6,
+      "state_None": 76
+    },
+    {
+      "case": "crossdomain/x21"
+    },
+    {
+      "candidates": 18,
+      "case": "crossdomain/x22",
+      "keep": 1,
+      "state_None": 19
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 432,
+      "case": "crossdomain/x23",
+      "keep": 24,
+      "negative_witnesses_recomputed": 60,
+      "positive_identities_recomputed": 5,
+      "state_0": 60,
+      "state_1": 5,
+      "state_None": 391
+    },
+    {
+      "candidates": 12,
+      "case": "crossdomain/x24",
+      "keep": 1,
+      "state_None": 13
+    },
+    {
+      "candidates": 12,
+      "case": "crossdomain/x25",
+      "keep": 1,
+      "state_None": 13
+    },
+    {
+      "candidates": 30,
+      "case": "crossdomain/x26",
+      "keep": 2,
+      "state_None": 32
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 2160,
+      "case": "crossdomain/x27",
+      "keep": 120,
+      "negative_witnesses_recomputed": 300,
+      "positive_identities_recomputed": 25,
+      "state_0": 300,
+      "state_1": 25,
+      "state_None": 1955
+    },
+    {
+      "candidates": 63,
+      "case": "crossdomain/x28",
+      "keep": 6,
+      "state_None": 69
+    },
+    {
+      "case": "crossdomain/x31"
+    },
+    {
+      "candidates": 25,
+      "case": "crossdomain/x32",
+      "keep": 1,
+      "state_None": 26
+    },
+    {
+      "candidates": 600,
+      "case": "crossdomain/x33",
+      "keep": 24,
+      "state_None": 624
+    },
+    {
+      "candidates": 29,
+      "case": "crossdomain/x34",
+      "keep": 1,
+      "state_None": 30
+    },
+    {
+      "candidates": 29,
+      "case": "crossdomain/x35",
+      "keep": 1,
+      "state_None": 30
+    },
+    {
+      "candidates": 54,
+      "case": "crossdomain/x36",
+      "keep": 2,
+      "state_None": 56
+    },
+    {
+      "candidates": 3000,
+      "case": "crossdomain/x37",
+      "keep": 120,
+      "state_None": 3120
+    },
+    {
+      "candidates": 70,
+      "case": "crossdomain/x38",
+      "keep": 6,
+      "state_None": 76
+    },
+    {
+      "case": "crossdomain/x41"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "crossdomain/x42",
+      "keep": 1,
+      "negative_witnesses_recomputed": 21,
+      "positive_identities_recomputed": 1,
+      "state_0": 21,
+      "state_1": 1,
+      "state_None": 4
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "crossdomain/x43",
+      "keep": 24,
+      "negative_witnesses_recomputed": 500,
+      "positive_identities_recomputed": 24,
+      "state_0": 500,
+      "state_1": 24,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 19,
+      "case": "crossdomain/x44",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 2
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 19,
+      "case": "crossdomain/x45",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 2
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 44,
+      "case": "crossdomain/x46",
+      "keep": 2,
+      "negative_witnesses_recomputed": 38,
+      "positive_identities_recomputed": 2,
+      "state_0": 38,
+      "state_1": 2,
+      "state_None": 6
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 3000,
+      "case": "crossdomain/x47",
+      "keep": 120,
+      "negative_witnesses_recomputed": 2500,
+      "positive_identities_recomputed": 56,
+      "state_0": 2500,
+      "state_1": 120,
+      "state_None": 500
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 70,
+      "case": "crossdomain/x48",
+      "keep": 6,
+      "negative_witnesses_recomputed": 36,
+      "positive_identities_recomputed": 21,
+      "state_0": 36,
+      "state_1": 21,
+      "state_None": 19
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a11",
+      "keep": 1,
+      "state_None": 26
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 3000,
+      "case": "adversarial/a12",
+      "keep": 120,
+      "negative_witnesses_recomputed": 780,
+      "positive_identities_recomputed": 32,
+      "state_0": 780,
+      "state_1": 40,
+      "state_None": 2300
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a13",
+      "keep": 1,
+      "state_None": 26
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "adversarial/a14",
+      "keep": 24,
+      "negative_witnesses_recomputed": 156,
+      "positive_identities_recomputed": 8,
+      "state_0": 156,
+      "state_1": 8,
+      "state_None": 460
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "adversarial/a15",
+      "keep": 24,
+      "negative_witnesses_recomputed": 156,
+      "positive_identities_recomputed": 8,
+      "state_0": 156,
+      "state_1": 8,
+      "state_None": 460
+    },
+    {
+      "candidates": 50,
+      "case": "adversarial/a16",
+      "keep": 2,
+      "state_None": 52
+    },
+    {
+      "candidates": 18,
+      "case": "adversarial/a21",
+      "keep": 1,
+      "state_None": 19
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 2160,
+      "case": "adversarial/a22",
+      "keep": 120,
+      "negative_witnesses_recomputed": 300,
+      "positive_identities_recomputed": 25,
+      "state_0": 300,
+      "state_1": 25,
+      "state_None": 1955
+    },
+    {
+      "candidates": 18,
+      "case": "adversarial/a23",
+      "keep": 1,
+      "state_None": 19
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 432,
+      "case": "adversarial/a24",
+      "keep": 24,
+      "negative_witnesses_recomputed": 60,
+      "positive_identities_recomputed": 5,
+      "state_0": 60,
+      "state_1": 5,
+      "state_None": 391
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 432,
+      "case": "adversarial/a25",
+      "keep": 24,
+      "negative_witnesses_recomputed": 60,
+      "positive_identities_recomputed": 5,
+      "state_0": 60,
+      "state_1": 5,
+      "state_None": 391
+    },
+    {
+      "candidates": 36,
+      "case": "adversarial/a26",
+      "keep": 2,
+      "state_None": 38
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "adversarial/a31",
+      "keep": 1,
+      "negative_witnesses_recomputed": 18,
+      "positive_identities_recomputed": 3,
+      "state_0": 18,
+      "state_1": 3,
+      "state_None": 5
+    },
+    {
+      "candidates": 3000,
+      "case": "adversarial/a32",
+      "keep": 120,
+      "state_None": 3120
+    },
+    {
+      "candidates": 25,
+      "case": "adversarial/a33",
+      "keep": 1,
+      "state_None": 26
+    },
+    {
+      "candidates": 600,
+      "case": "adversarial/a34",
+      "keep": 24,
+      "state_None": 624
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "adversarial/a35",
+      "keep": 24,
+      "negative_witnesses_recomputed": 430,
+      "positive_identities_recomputed": 56,
+      "state_0": 430,
+      "state_1": 70,
+      "state_None": 124
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 50,
+      "case": "adversarial/a36",
+      "keep": 2,
+      "negative_witnesses_recomputed": 18,
+      "positive_identities_recomputed": 3,
+      "state_0": 18,
+      "state_1": 3,
+      "state_None": 31
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "adversarial/a41",
+      "keep": 1,
+      "negative_witnesses_recomputed": 21,
+      "positive_identities_recomputed": 1,
+      "state_0": 21,
+      "state_1": 1,
+      "state_None": 4
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 2375,
+      "case": "adversarial/a42",
+      "keep": 95,
+      "negative_witnesses_recomputed": 1995,
+      "positive_identities_recomputed": 32,
+      "state_0": 1995,
+      "state_1": 95,
+      "state_None": 380
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "adversarial/a43",
+      "keep": 1,
+      "negative_witnesses_recomputed": 21,
+      "positive_identities_recomputed": 1,
+      "state_0": 21,
+      "state_1": 1,
+      "state_None": 4
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "adversarial/a44",
+      "keep": 24,
+      "negative_witnesses_recomputed": 500,
+      "positive_identities_recomputed": 24,
+      "state_0": 500,
+      "state_1": 24,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 600,
+      "case": "adversarial/a45",
+      "keep": 24,
+      "negative_witnesses_recomputed": 500,
+      "positive_identities_recomputed": 24,
+      "state_0": 500,
+      "state_1": 24,
+      "state_None": 100
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 50,
+      "case": "adversarial/a46",
+      "keep": 2,
+      "negative_witnesses_recomputed": 42,
+      "positive_identities_recomputed": 2,
+      "state_0": 42,
+      "state_1": 2,
+      "state_None": 8
+    },
+    {
+      "case": "controlled_reconciliation/rc01_01"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc01_03",
+      "keep": 5,
+      "negative_witnesses_recomputed": 65,
+      "positive_identities_recomputed": 5,
+      "state_0": 65,
+      "state_1": 5,
+      "state_None": 25
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_04",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_05",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_06",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_07",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_08",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 144,
+      "case": "controlled_reconciliation/rc01_09",
+      "keep": 8,
+      "negative_witnesses_recomputed": 122,
+      "positive_identities_recomputed": 8,
+      "state_0": 122,
+      "state_1": 8,
+      "state_None": 22
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc01_10",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "case": "controlled_reconciliation/rc02_01"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc02_03",
+      "keep": 5,
+      "negative_witnesses_recomputed": 65,
+      "positive_identities_recomputed": 5,
+      "state_0": 65,
+      "state_1": 5,
+      "state_None": 25
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_04",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_05",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_06",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_07",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_08",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 144,
+      "case": "controlled_reconciliation/rc02_09",
+      "keep": 8,
+      "negative_witnesses_recomputed": 122,
+      "positive_identities_recomputed": 8,
+      "state_0": 122,
+      "state_1": 8,
+      "state_None": 22
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc02_10",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "case": "controlled_reconciliation/rc03_01"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc03_03",
+      "keep": 5,
+      "negative_witnesses_recomputed": 65,
+      "positive_identities_recomputed": 5,
+      "state_0": 65,
+      "state_1": 5,
+      "state_None": 25
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_04",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_05",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_06",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_07",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_08",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 108,
+      "case": "controlled_reconciliation/rc03_09",
+      "keep": 6,
+      "negative_witnesses_recomputed": 90,
+      "positive_identities_recomputed": 6,
+      "state_0": 90,
+      "state_1": 6,
+      "state_None": 18
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc03_10",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "case": "controlled_reconciliation/rc04_01"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 90,
+      "case": "controlled_reconciliation/rc04_03",
+      "keep": 5,
+      "negative_witnesses_recomputed": 65,
+      "positive_identities_recomputed": 5,
+      "state_0": 65,
+      "state_1": 5,
+      "state_None": 25
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_04",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_05",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_06",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_07",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_08",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 108,
+      "case": "controlled_reconciliation/rc04_09",
+      "keep": 6,
+      "negative_witnesses_recomputed": 90,
+      "positive_identities_recomputed": 6,
+      "state_0": 90,
+      "state_1": 6,
+      "state_None": 18
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 18,
+      "case": "controlled_reconciliation/rc04_10",
+      "keep": 1,
+      "negative_witnesses_recomputed": 13,
+      "positive_identities_recomputed": 1,
+      "state_0": 13,
+      "state_1": 1,
+      "state_None": 5
+    },
+    {
+      "case": "controlled_reconciliation/rc05_01"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 125,
+      "case": "controlled_reconciliation/rc05_03",
+      "keep": 5,
+      "negative_witnesses_recomputed": 85,
+      "positive_identities_recomputed": 5,
+      "state_0": 85,
+      "state_1": 5,
+      "state_None": 40
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_04",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_05",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_06",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_07",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_08",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 200,
+      "case": "controlled_reconciliation/rc05_09",
+      "keep": 8,
+      "negative_witnesses_recomputed": 160,
+      "positive_identities_recomputed": 8,
+      "state_0": 160,
+      "state_1": 8,
+      "state_None": 40
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc05_10",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "case": "controlled_reconciliation/rc06_01"
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_02",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 125,
+      "case": "controlled_reconciliation/rc06_03",
+      "keep": 5,
+      "negative_witnesses_recomputed": 85,
+      "positive_identities_recomputed": 5,
+      "state_0": 85,
+      "state_1": 5,
+      "state_None": 40
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_04",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_05",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_06",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_07",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_08",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 150,
+      "case": "controlled_reconciliation/rc06_09",
+      "keep": 6,
+      "negative_witnesses_recomputed": 118,
+      "positive_identities_recomputed": 6,
+      "state_0": 118,
+      "state_1": 6,
+      "state_None": 32
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 25,
+      "case": "controlled_reconciliation/rc06_10",
+      "keep": 1,
+      "negative_witnesses_recomputed": 17,
+      "positive_identities_recomputed": 1,
+      "state_0": 17,
+      "state_1": 1,
+      "state_None": 8
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation01",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation02",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation03",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation04",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1098,
+      "positive_identities_recomputed": 56,
+      "state_0": 1098,
+      "state_1": 56,
+      "state_None": 15726
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15703,
+      "case": "lcoe/annotation05",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1104,
+      "positive_identities_recomputed": 55,
+      "state_0": 1104,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation06",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15799,
+      "case": "lcoe/annotation07",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1200,
+      "positive_identities_recomputed": 55,
+      "state_0": 1200,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation08",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15703,
+      "case": "lcoe/annotation09",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1104,
+      "positive_identities_recomputed": 55,
+      "state_0": 1104,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation10",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation11",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation12",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15703,
+      "case": "lcoe/annotation13",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1104,
+      "positive_identities_recomputed": 55,
+      "state_0": 1104,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation14",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 117,
+      "candidates": 15700,
+      "case": "lcoe/annotation15",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1101,
+      "positive_identities_recomputed": 26,
+      "state_0": 1101,
+      "state_1": 26,
+      "state_None": 15754
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 15699,
+      "case": "lcoe/annotation16",
+      "keep": 1181,
+      "negative_witnesses_recomputed": 1100,
+      "positive_identities_recomputed": 55,
+      "state_0": 1100,
+      "state_1": 55,
+      "state_None": 15725
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_01",
+      "keep": 77,
+      "negative_witnesses_recomputed": 44,
+      "positive_identities_recomputed": 85,
+      "state_0": 44,
+      "state_1": 380,
+      "state_None": 326
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_02",
+      "keep": 77,
+      "negative_witnesses_recomputed": 250,
+      "positive_identities_recomputed": 54,
+      "state_0": 250,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_03",
+      "keep": 77,
+      "negative_witnesses_recomputed": 250,
+      "positive_identities_recomputed": 54,
+      "state_0": 250,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_04",
+      "keep": 77,
+      "negative_witnesses_recomputed": 251,
+      "positive_identities_recomputed": 54,
+      "state_0": 251,
+      "state_1": 54,
+      "state_None": 445
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 677,
+      "case": "multisource/ms01_05",
+      "keep": 77,
+      "negative_witnesses_recomputed": 254,
+      "positive_identities_recomputed": 54,
+      "state_0": 254,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_06",
+      "keep": 77,
+      "negative_witnesses_recomputed": 250,
+      "positive_identities_recomputed": 54,
+      "state_0": 250,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 685,
+      "case": "multisource/ms01_07",
+      "keep": 77,
+      "negative_witnesses_recomputed": 254,
+      "positive_identities_recomputed": 54,
+      "state_0": 254,
+      "state_1": 54,
+      "state_None": 454
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 677,
+      "case": "multisource/ms01_08",
+      "keep": 77,
+      "negative_witnesses_recomputed": 254,
+      "positive_identities_recomputed": 54,
+      "state_0": 254,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_09",
+      "keep": 77,
+      "negative_witnesses_recomputed": 250,
+      "positive_identities_recomputed": 54,
+      "state_0": 250,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 673,
+      "case": "multisource/ms01_10",
+      "keep": 77,
+      "negative_witnesses_recomputed": 250,
+      "positive_identities_recomputed": 54,
+      "state_0": 250,
+      "state_1": 54,
+      "state_None": 446
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_01",
+      "keep": 12,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 15,
+      "state_0": 34,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_02",
+      "keep": 12,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 15,
+      "state_0": 34,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_03",
+      "keep": 12,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 15,
+      "state_0": 34,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_04",
+      "keep": 12,
+      "negative_witnesses_recomputed": 33,
+      "positive_identities_recomputed": 15,
+      "state_0": 33,
+      "state_1": 15,
+      "state_None": 154
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 194,
+      "case": "multisource/ms02_05",
+      "keep": 12,
+      "negative_witnesses_recomputed": 38,
+      "positive_identities_recomputed": 15,
+      "state_0": 38,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_06",
+      "keep": 12,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 15,
+      "state_0": 34,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 202,
+      "case": "multisource/ms02_07",
+      "keep": 12,
+      "negative_witnesses_recomputed": 50,
+      "positive_identities_recomputed": 12,
+      "state_0": 50,
+      "state_1": 12,
+      "state_None": 152
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 193,
+      "case": "multisource/ms02_08",
+      "keep": 12,
+      "negative_witnesses_recomputed": 37,
+      "positive_identities_recomputed": 15,
+      "state_0": 37,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_09",
+      "keep": 12,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 15,
+      "state_0": 34,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 190,
+      "case": "multisource/ms02_10",
+      "keep": 12,
+      "negative_witnesses_recomputed": 34,
+      "positive_identities_recomputed": 15,
+      "state_0": 34,
+      "state_1": 15,
+      "state_None": 153
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33847,
+      "case": "multisource/ms03_01",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36375
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33847,
+      "case": "multisource/ms03_02",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36375
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33858,
+      "case": "multisource/ms03_03",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36386
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33847,
+      "case": "multisource/ms03_04",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36375
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33851,
+      "case": "multisource/ms03_05",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36379
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 34238,
+      "case": "multisource/ms03_06",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36766
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33859,
+      "case": "multisource/ms03_07",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36387
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33851,
+      "case": "multisource/ms03_08",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36379
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33857,
+      "case": "multisource/ms03_09",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36385
+    },
+    {
+      "cancelled_input_assignments_completed": 0,
+      "candidates": 33858,
+      "case": "multisource/ms03_10",
+      "keep": 2533,
+      "negative_witnesses_recomputed": 1,
+      "positive_identities_recomputed": 4,
+      "state_0": 1,
+      "state_1": 4,
+      "state_None": 36386
+    }
+  ],
+  "final_validation_eligible": false,
+  "independent_interpreter_sha256": "38e4ea296a65c6eca1a21467b109781613a2e3a144186b83a53f484bc391512d",
+  "omitted_cancelled_input_completion": "all numerical leaves omitted after polynomial cancellation assigned exactly 1",
+  "positive_scope": "all positive keep states and first 32 positive candidates by ID per case",
+  "preparation_lock_sha256": "9d2ad1223c9ba599aa33f7377dd79993275499f1b980101b2b5946a7eb8c5790",
+  "repair_performance_not_estimated": true,
+  "totals": {
+    "cancelled_input_assignments_completed": 117,
+    "candidates": 1861162,
+    "keep": 70006,
+    "negative_witnesses_recomputed": 1005599,
+    "positive_identities_recomputed": 9466,
+    "state_0": 1005599,
+    "state_1": 25708,
+    "state_None": 899861
+  },
+  "wall_seconds": 268.4207295870001
+}
