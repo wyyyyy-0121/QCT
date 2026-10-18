@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/diff_hobyah_natural_dev26.py", line 80, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/diff_hobyah_natural_dev26.py", line 59, in main
+    before = snapshot(RUN / 'raw/before.xlsx'); after = snapshot(RUN / 'raw/after.xlsx')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/diff_hobyah_natural_dev26.py", line 51, in snapshot
+    assert formulas == xml_formulas(path)
+                       ^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/qa/diff_hobyah_natural_dev26.py", line 32, in xml_formulas
+    assert f.attrib.get('t') != 'shared', (sheet.attrib['name'], cell.attrib['r'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('quadratics', 'Y18')

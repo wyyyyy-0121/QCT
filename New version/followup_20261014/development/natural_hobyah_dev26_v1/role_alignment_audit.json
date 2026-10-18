@@ -1,0 +1,82 @@
+{
+  "auditor_sha256": "bdac2801b8325c4fb008acfc1434748268cb83d841617a3f8e4028580d1a0eb1",
+  "author_diff_sha256": "1fc573eecd5289d8ebb9b27546b5feb32cb826aea54a59754e31e0d1f8b0b0c9",
+  "checked_roles": [
+    {
+      "claimed_car_area_misuse_absent_in_both_pinned_versions": true,
+      "corrected_cell": "quadratics!J13",
+      "corrected_formula": "=$F$20 * $F$21 * $J$10 * $B$14/(1000 * $B$15 * IF($F$24 = \"N\", 1, (1 - $F$20/$B$15)^2) )",
+      "equivalent_after_verified_role_alignment": true,
+      "original_cell": "quadratics!L13",
+      "original_formula": "=$H$20 * $H$21 * $L$10 * $C$14/(1000 * $C$15 * IF($H$24 = \"N\", 1, (1 - $H$20/$C$15)^2) )",
+      "role": "LCV_term",
+      "role_formula": "=LCV_area*LCV_drag*LCV_density*tunnel_length/(1000*tunnel_area*IF(use_blockage=\"N\",1,(1-LCV_area/tunnel_area)^2))"
+    },
+    {
+      "claimed_car_area_misuse_absent_in_both_pinned_versions": true,
+      "corrected_cell": "quadratics!J14",
+      "corrected_formula": "=$F$22 * $F$23 * $J$11 * $B$14/(1000 * $B$15 * IF($F$24 = \"N\", 1, (1 - $F$22/$B$15)^2) )",
+      "equivalent_after_verified_role_alignment": true,
+      "original_cell": "quadratics!L14",
+      "original_formula": "=$H$22 * $H$23 * $L$11 * $C$14/(1000 * $C$15 * IF($H$24 = \"N\", 1, (1 - $H$22/$C$15)^2) )",
+      "role": "HGV_term",
+      "role_formula": "=HGV_area*HGV_drag*HGV_density*tunnel_length/(1000*tunnel_area*IF(use_blockage=\"N\",1,(1-HGV_area/tunnel_area)^2))"
+    }
+  ],
+  "coverage": null,
+  "current_claimed_correction_locations_found_in_original_notices": false,
+  "current_correction_formula_truth_supported": false,
+  "final_validation_eligible": false,
+  "formula_inventory_independently_checked_with_ooxml": true,
+  "metadata_claim_does_not_override_original_formulas": true,
+  "odf_acquisition_sha256": "345740f6b040d809bb926c6bd2efa53f06899085b9f5d148db24c79c814e6078",
+  "ods_after": {
+    "HGV_area_label": {
+      "formula": null,
+      "text": "HGV area"
+    },
+    "HGV_term": {
+      "formula": "of:=[.$F$22] * [.$F$23] * [.$J$11] * [.$B$14]/(1000 * [.$B$15] * IF([.$F$24] = \"N\"; 1; (1 - [.$F$22]/[.$B$15])^2) )",
+      "text": "0.9936"
+    },
+    "LCV_area_label": {
+      "formula": null,
+      "text": "LCV area"
+    },
+    "LCV_term": {
+      "formula": "of:=[.$F$20] * [.$F$21] * [.$J$10] * [.$B$14]/(1000 * [.$B$15] * IF([.$F$24] = \"N\"; 1; (1 - [.$F$20]/[.$B$15])^2) )",
+      "text": "0.2304"
+    },
+    "car_area_label": {
+      "formula": null,
+      "text": "Car area"
+    }
+  },
+  "ods_before": {
+    "HGV_area_label": {
+      "formula": null,
+      "text": "HGV area"
+    },
+    "HGV_term": {
+      "formula": "of:=[.$H$22] * [.$H$23] * [.$L$11] * [.$C$14]/(1000 * [.$C$15] * IF([.$H$24] = \"N\"; 1; (1 - [.$H$22]/[.$C$15])^2) )",
+      "text": "0.991735537190083"
+    },
+    "LCV_area_label": {
+      "formula": null,
+      "text": "LCV area"
+    },
+    "LCV_term": {
+      "formula": "of:=[.$H$20] * [.$H$21] * [.$L$10] * [.$C$14]/(1000 * [.$C$15] * IF([.$H$24] = \"N\"; 1; (1 - [.$H$20]/[.$C$15])^2) )",
+      "text": "0.510396975425331"
+    },
+    "car_area_label": {
+      "formula": null,
+      "text": "Car area"
+    }
+  },
+  "original_contains_historical_version_notes": true,
+  "original_prediction_lock_sha256": "aee6ee7a855eabbc95569c07807533ad6f784169aee3c96e2b7037893b174a3f",
+  "precision": null,
+  "reason": "Pinned parent and correction both already use the appropriate vehicle area for these two terms; no reliable natural-error truth pair established",
+  "verified_error_labels": 0
+}

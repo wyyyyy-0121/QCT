@@ -1,0 +1,401 @@
+DEV26 literal OOXML diff 199 202 formula changes 398
+{'cell': 'quadratics!A17', 'before': None, 'after': '=IF(B17="Darcy", "Friction type", IF(B17="Fanning", "Friction type", "Dud friction type >"))'}
+{'cell': 'quadratics!A18', 'before': None, 'after': '=IF(B17="Darcy", "Darcy fricfac λ", IF(B17="Fanning", "Fanning fricfac c_f", "Dud friction type ^"))'}
+{'cell': 'quadratics!B17', 'before': '=IF(C17="Darcy", "Friction type", IF(C17="Fanning", "Friction type", "Dud friction type >"))', 'after': None}
+{'cell': 'quadratics!B18', 'before': '=IF(C17="Darcy", "Darcy fricfac λ", IF(C17="Fanning", "Fanning fricfac c_f", "Dud friction type ^"))', 'after': None}
+{'cell': 'quadratics!B21', 'before': None, 'after': '=IFERROR(4 * B15/B16, "—")'}
+{'cell': 'quadratics!C21', 'before': '=IFERROR(4 * C15/C16, "—")', 'after': None}
+{'cell': 'quadratics!E15', 'before': None, 'after': '=IF($F$14=0, "Car density", "Car flowrate")'}
+{'cell': 'quadratics!E16', 'before': None, 'after': '=IF($F$14=0, "LCV density", "LCV flowrate")'}
+{'cell': 'quadratics!E17', 'before': None, 'after': '=IF($F$14=0, "HGV density", "HGV flowrate")'}
+{'cell': 'quadratics!E28', 'before': None, 'after': '=IF(NOT($U$33),"Can\'t calculate: " & $U$34,IF($J$35<0,$J$30,IF($J$28<$J$15,$J$23,$J$16)))'}
+{'cell': 'quadratics!F28', 'before': '=IF(NOT($W$33),"Can\'t calculate: " & $W$34,IF($L$35<0,$L$30,IF($L$28<$L$15,$L$23,$L$16)))', 'after': None}
+{'cell': 'quadratics!F29', 'before': None, 'after': '=IF(NOT($U$33),"—",IF($N$22, $J$21, IF($N$29, $J$28, $J$35)))'}
+{'cell': 'quadratics!F30', 'before': None, 'after': '=IFERROR(F29 * B15, F29)'}
+{'cell': 'quadratics!F33', 'before': None, 'after': '=IF(NOT($U$33),"—",$B$25-$B$24)'}
+{'cell': 'quadratics!F34', 'before': None, 'after': '=IF(NOT($U$33),"—", 0.5 * 1.2 * ($B$19 + $B$20 + IF($B$17="Darcy",$B$18/4,IF($B$17="Fanning",$B$18,NA())) * $B$14 * $B$16 / $B$15) * $F$29 * ABS($F$29))'}
+{'cell': 'quadratics!F35', 'before': None, 'after': '=IF(NOT($U$33),"—", -0.5 * 1.2 * (IF($F$14=0, $F$15, $F$15/$F$14) * $F$18 * $F$19 / IF($F$24 = "N", 1, (1 - $F$18/$B$15)^2) + IF($F$14=0, $F$16, $F$16/$F$14) * $F$20 * $F$21 / IF($F$24 = "N", 1, (1 - $F$20/$B$15)^2) + IF($F$14=0, $F$17, $F$17/$F$14) * $F$22 * $F$23 / IF($F$24 = "N", 1, (1 - $F$22/$B$15)^2)) * $B$14 / (1000 *$B$15) * ($F$14/3.6 - $F$29) * ABS($F$14/3.6 - $F$29))'}
+{'cell': 'quadratics!F36', 'before': None, 'after': '=IF(NOT($U$33),"—", -$B$28 * $B$29 * $B$31 / (ABS($B$30) * $B$15) * ($B$30 - $F$29))'}
+{'cell': 'quadratics!F37', 'before': None, 'after': '=IF(NOT($U$33),"—", ABS(SUM($F$33:$F$36)) < 0.00000001)'}
+{'cell': 'quadratics!F38', 'before': None, 'after': '=IF(NOT($U$33),"—", SUM($F$33:$F$36))'}
+{'cell': 'quadratics!G15', 'before': '=IFERROR(IF($H$14=0, "Car density", "Car flowrate"),"Dud traffic speed")', 'after': '=IF($F$14=0, "cars/km", "cars/hr")'}
+{'cell': 'quadratics!G16', 'before': '=IFERROR(IF($H$14=0, "LCV density", "LCV flowrate"),"Dud traffic speed")', 'after': '=IF($F$14=0, "LCVs/km", "LCVs/hr")'}
+{'cell': 'quadratics!G17', 'before': '=IFERROR(IF($H$14=0, "HGV density", "HGV flowrate"),"Dud traffic speed")', 'after': '=IF($F$14=0, "HGVs/km", "HGVs/hr")'}
+{'cell': 'quadratics!G6', 'before': None, 'after': '=L180'}
+{'cell': 'quadratics!H29', 'before': '=IF(NOT($W$33),"—",IF($P$22, $L$21, IF($P$29, $L$28, $L$35)))', 'after': None}
+{'cell': 'quadratics!H30', 'before': '=IFERROR(H29 * C15, H29)', 'after': None}
+{'cell': 'quadratics!H33', 'before': '=IF(NOT($W$33),"—",IF($P$22, P17, IF($P$29, P24, P31)))', 'after': None}
+{'cell': 'quadratics!H34', 'before': '=IF(NOT($W$33),"—",IF($P$22, P18, IF($P$29, P25, P32)))', 'after': None}
+{'cell': 'quadratics!H35', 'before': '=IF(NOT($W$33),"—",IF($P$22, P19, IF($P$29, P26, P33)))', 'after': None}
+{'cell': 'quadratics!H36', 'before': '=IF(NOT($W$33),"—",IF($P$22, P20, IF($P$29, P27, P34)))', 'after': None}
+{'cell': 'quadratics!H37', 'before': '=IF(NOT($W$33),"—",IF($P$22, P21, IF($P$29, P28, P35)))', 'after': None}
+{'cell': 'quadratics!I15', 'before': '=IFERROR(IF($H$14=0, "cars/km", "cars/hr"),"—")', 'after': None}
+{'cell': 'quadratics!I16', 'before': '=IFERROR(IF($H$14=0, "LCVs/km", "LCVs/hr"),"—")', 'after': None}
+{'cell': 'quadratics!I17', 'before': '=IFERROR(IF($H$14=0, "HGVs/km", "HGVs/hr"),"—")', 'after': None}
+{'cell': 'quadratics!I6', 'before': '=N179', 'after': None}
+{'cell': 'quadratics!J10', 'before': None, 'after': '=IF($F$14=0, F16, F16 / $F$14)'}
+{'cell': 'quadratics!J11', 'before': None, 'after': '=IF($F$14=0, F17, F17 / $F$14)'}
+{'cell': 'quadratics!J12', 'before': None, 'after': '=$F$18 * $F$19 * $J$9 * $B$14/(1000 * $B$15 * IF($F$24 = "N", 1, (1 - $F$18/$B$15)^2) )'}
+{'cell': 'quadratics!J13', 'before': None, 'after': '=$F$20 * $F$21 * $J$10 * $B$14/(1000 * $B$15 * IF($F$24 = "N", 1, (1 - $F$20/$B$15)^2) )'}
+{'cell': 'quadratics!J14', 'before': None, 'after': '=$F$22 * $F$23 * $J$11 * $B$14/(1000 * $B$15 * IF($F$24 = "N", 1, (1 - $F$22/$B$15)^2) )'}
+{'cell': 'quadratics!J15', 'before': None, 'after': '=F14 / 3.6'}
+{'cell': 'quadratics!J17', 'before': None, 'after': '=-$N$12 - $N$14'}
+{'cell': 'quadratics!J18', 'before': None, 'after': '=2 * $N$14 * $J$15 - $N$15'}
+{'cell': 'quadratics!J19', 'before': None, 'after': '=-$N$14 * $J$15^2 + $N$15 * $B$30 - $N$13'}
+{'cell': 'quadratics!J20', 'before': None, 'after': '=J18^2 - 4*J17*J19'}
+{'cell': 'quadratics!J21', 'before': None, 'after': '=IFERROR((-J18 - SQRT(J20)) / (2 * J17), 0)'}
+{'cell': 'quadratics!J24', 'before': None, 'after': '=-$N$12 + $N$14'}
+{'cell': 'quadratics!J25', 'before': None, 'after': '=-2 * $N$14 * $J$15 - $N$15'}
+{'cell': 'quadratics!J26', 'before': None, 'after': '=$N$14 * $J$15^2 + $N$15 * $B$30 - $N$13'}
+{'cell': 'quadratics!J27', 'before': None, 'after': '=J25^2 - 4*J24*J26'}
+{'cell': 'quadratics!J28', 'before': None, 'after': '=IFERROR((-J25 - SQRT(J27)) / (2 * J24), J15+1)'}
+{'cell': 'quadratics!J31', 'before': None, 'after': '=$N$12 + $N$14'}
+{'cell': 'quadratics!J32', 'before': None, 'after': '=-2 * $N$14 * $J$15 - $N$15'}
+{'cell': 'quadratics!J33', 'before': None, 'after': '=$N$14 * $J$15^2 + $N$15 * $B$30 - $N$13'}
+{'cell': 'quadratics!J34', 'before': None, 'after': '=J32^2 - 4*J31*J33'}
+{'cell': 'quadratics!J35', 'before': None, 'after': '=IFERROR((-J32 - SQRT(J34)) / (2 * J31), 10)'}
+{'cell': 'quadratics!J8', 'before': None, 'after': '=$B$18*$B$14*$B$16/$B$15 / IF($B$17="Darcy", 4, IF($B$17="Fanning", 1, NA()))'}
+{'cell': 'quadratics!J9', 'before': None, 'after': '=IF($F$14=0, F15, F15 / $F$14)'}
+{'cell': 'quadratics!L10', 'before': '=IF($H$14=0, H16, H16 / $H$14)', 'after': None}
+{'cell': 'quadratics!L100', 'before': None, 'after': '=IFERROR(RIGHT(L99,LEN(L99)-FIND($L$74,L99)), L99)'}
+{'cell': 'quadratics!L101', 'before': None, 'after': '=IFERROR(RIGHT(L100,LEN(L100)-FIND($L$74,L100)), L100)'}
+{'cell': 'quadratics!L102', 'before': None, 'after': '=IFERROR(RIGHT(L101,LEN(L101)-FIND($L$74,L101)), L101)'}
+{'cell': 'quadratics!L103', 'before': None, 'after': '=IFERROR(RIGHT(L102,LEN(L102)-FIND($L$74,L102)), L102)'}
+{'cell': 'quadratics!L104', 'before': None, 'after': '=IFERROR(RIGHT(L103,LEN(L103)-FIND($L$74,L103)), L103)'}
+{'cell': 'quadratics!L105', 'before': None, 'after': '=IFERROR(RIGHT(L104,LEN(L104)-FIND($L$74,L104)), L104)'}
+{'cell': 'quadratics!L106', 'before': None, 'after': '=IFERROR(RIGHT(L105,LEN(L105)-FIND($L$74,L105)), L105)'}
+{'cell': 'quadratics!L107', 'before': None, 'after': '=IFERROR(RIGHT(L106,LEN(L106)-FIND($L$74,L106)), L106)'}
+{'cell': 'quadratics!L108', 'before': None, 'after': '=IFERROR(RIGHT(L107,LEN(L107)-FIND($L$74,L107)), L107)'}
+{'cell': 'quadratics!L109', 'before': None, 'after': '=IFERROR(RIGHT(L108,LEN(L108)-FIND($L$74,L108)), L108)'}
+{'cell': 'quadratics!L11', 'before': '=IF($H$14=0, H17, H17 / $H$14)', 'after': None}
+{'cell': 'quadratics!L110', 'before': None, 'after': '=IFERROR(RIGHT(L109,LEN(L109)-FIND($L$74,L109)), L109)'}
+{'cell': 'quadratics!L111', 'before': None, 'after': '=IFERROR(RIGHT(L110,LEN(L110)-FIND($L$74,L110)), L110)'}
+{'cell': 'quadratics!L112', 'before': None, 'after': '=IFERROR(RIGHT(L111,LEN(L111)-FIND($L$74,L111)), L111)'}
+{'cell': 'quadratics!L113', 'before': None, 'after': '=IFERROR(RIGHT(L112,LEN(L112)-FIND($L$74,L112)), L112)'}
+{'cell': 'quadratics!L114', 'before': None, 'after': '=IFERROR(RIGHT(L113,LEN(L113)-FIND($L$74,L113)), L113)'}
+{'cell': 'quadratics!L115', 'before': None, 'after': '=IFERROR(RIGHT(L114,LEN(L114)-FIND($L$74,L114)), L114)'}
+{'cell': 'quadratics!L116', 'before': None, 'after': '=IFERROR(RIGHT(L115,LEN(L115)-FIND($L$74,L115)), L115)'}
+{'cell': 'quadratics!L117', 'before': None, 'after': '=IFERROR(RIGHT(L116,LEN(L116)-FIND($L$74,L116)), L116)'}
+{'cell': 'quadratics!L118', 'before': None, 'after': '=IFERROR(RIGHT(L117,LEN(L117)-FIND($L$74,L117)), L117)'}
+{'cell': 'quadratics!L119', 'before': None, 'after': '=IFERROR(RIGHT(L118,LEN(L118)-FIND($L$74,L118)), L118)'}
+{'cell': 'quadratics!L12', 'before': '=$H$18 * $H$19 * $L$9 * $C$14/(1000 * $C$15 * IF($H$24 = "N", 1, (1 - $H$18/$C$15)^2) )', 'after': None}
+{'cell': 'quadratics!L120', 'before': None, 'after': '=IFERROR(RIGHT(L119,LEN(L119)-FIND($L$74,L119)), L119)'}
+{'cell': 'quadratics!L121', 'before': None, 'after': '=IFERROR(RIGHT(L120,LEN(L120)-FIND($L$74,L120)), L120)'}
+{'cell': 'quadratics!L122', 'before': None, 'after': '=IFERROR(RIGHT(L121,LEN(L121)-FIND($L$74,L121)), L121)'}
+{'cell': 'quadratics!L123', 'before': None, 'after': '=IFERROR(RIGHT(L122,LEN(L122)-FIND($L$74,L122)), L122)'}
+{'cell': 'quadratics!L124', 'before': None, 'after': '=IFERROR(RIGHT(L123,LEN(L123)-FIND($L$74,L123)), L123)'}
+{'cell': 'quadratics!L125', 'before': None, 'after': '=IFERROR(RIGHT(L124,LEN(L124)-FIND($L$74,L124)), L124)'}
+{'cell': 'quadratics!L126', 'before': None, 'after': '=IFERROR(RIGHT(L125,LEN(L125)-FIND($L$74,L125)), L125)'}
+{'cell': 'quadratics!L127', 'before': None, 'after': '=IFERROR(RIGHT(L126,LEN(L126)-FIND($L$74,L126)), L126)'}
+{'cell': 'quadratics!L128', 'before': None, 'after': '=IFERROR(RIGHT(L127,LEN(L127)-FIND($L$74,L127)), L127)'}
+{'cell': 'quadratics!L129', 'before': None, 'after': '=IFERROR(RIGHT(L128,LEN(L128)-FIND($L$74,L128)), L128)'}
+{'cell': 'quadratics!L13', 'before': '=$H$20 * $H$21 * $L$10 * $C$14/(1000 * $C$15 * IF($H$24 = "N", 1, (1 - $H$20/$C$15)^2) )', 'after': None}
+{'cell': 'quadratics!L130', 'before': None, 'after': '=IFERROR(RIGHT(L129,LEN(L129)-FIND($L$74,L129)), L129)'}
+{'cell': 'quadratics!L131', 'before': None, 'after': '=IFERROR(RIGHT(L130,LEN(L130)-FIND($L$74,L130)), L130)'}
+{'cell': 'quadratics!L132', 'before': None, 'after': '=IFERROR(RIGHT(L131,LEN(L131)-FIND($L$74,L131)), L131)'}
+{'cell': 'quadratics!L133', 'before': None, 'after': '=IFERROR(RIGHT(L132,LEN(L132)-FIND($L$74,L132)), L132)'}
+{'cell': 'quadratics!L134', 'before': None, 'after': '=IFERROR(RIGHT(L133,LEN(L133)-FIND($L$74,L133)), L133)'}
+{'cell': 'quadratics!L135', 'before': None, 'after': '=IFERROR(RIGHT(L134,LEN(L134)-FIND($L$74,L134)), L134)'}
+{'cell': 'quadratics!L136', 'before': None, 'after': '=IFERROR(RIGHT(L135,LEN(L135)-FIND($L$74,L135)), L135)'}
+{'cell': 'quadratics!L137', 'before': None, 'after': '=IFERROR(RIGHT(L136,LEN(L136)-FIND($L$74,L136)), L136)'}
+{'cell': 'quadratics!L138', 'before': None, 'after': '=IFERROR(RIGHT(L137,LEN(L137)-FIND($L$74,L137)), L137)'}
+{'cell': 'quadratics!L139', 'before': None, 'after': '=IFERROR(RIGHT(L138,LEN(L138)-FIND($L$74,L138)), L138)'}
+{'cell': 'quadratics!L14', 'before': '=$H$22 * $H$23 * $L$11 * $C$14/(1000 * $C$15 * IF($H$24 = "N", 1, (1 - $H$22/$C$15)^2) )', 'after': None}
+{'cell': 'quadratics!L140', 'before': None, 'after': '=IFERROR(RIGHT(L139,LEN(L139)-FIND($L$74,L139)), L139)'}
+{'cell': 'quadratics!L141', 'before': None, 'after': '=IFERROR(RIGHT(L140,LEN(L140)-FIND($L$74,L140)), L140)'}
+{'cell': 'quadratics!L142', 'before': None, 'after': '=IFERROR(RIGHT(L141,LEN(L141)-FIND($L$74,L141)), L141)'}
+{'cell': 'quadratics!L143', 'before': None, 'after': '=IFERROR(RIGHT(L142,LEN(L142)-FIND($L$74,L142)), L142)'}
+{'cell': 'quadratics!L144', 'before': None, 'after': '=IFERROR(RIGHT(L143,LEN(L143)-FIND($L$74,L143)), L143)'}
+{'cell': 'quadratics!L145', 'before': None, 'after': '=IFERROR(RIGHT(L144,LEN(L144)-FIND($L$74,L144)), L144)'}
+{'cell': 'quadratics!L146', 'before': None, 'after': '=IFERROR(RIGHT(L145,LEN(L145)-FIND($L$74,L145)), L145)'}
+{'cell': 'quadratics!L147', 'before': None, 'after': '=IFERROR(RIGHT(L146,LEN(L146)-FIND($L$74,L146)), L146)'}
+{'cell': 'quadratics!L148', 'before': None, 'after': '=IFERROR(RIGHT(L147,LEN(L147)-FIND($L$74,L147)), L147)'}
+{'cell': 'quadratics!L149', 'before': None, 'after': '=IFERROR(RIGHT(L148,LEN(L148)-FIND($L$74,L148)), L148)'}
+{'cell': 'quadratics!L15', 'before': '=H14 / 3.6', 'after': None}
+{'cell': 'quadratics!L150', 'before': None, 'after': '=IFERROR(RIGHT(L149,LEN(L149)-FIND($L$74,L149)), L149)'}
+{'cell': 'quadratics!L151', 'before': None, 'after': '=IFERROR(RIGHT(L150,LEN(L150)-FIND($L$74,L150)), L150)'}
+{'cell': 'quadratics!L152', 'before': None, 'after': '=IFERROR(RIGHT(L151,LEN(L151)-FIND($L$74,L151)), L151)'}
+{'cell': 'quadratics!L153', 'before': None, 'after': '=IFERROR(RIGHT(L152,LEN(L152)-FIND($L$74,L152)), L152)'}
+{'cell': 'quadratics!L154', 'before': None, 'after': '=IFERROR(RIGHT(L153,LEN(L153)-FIND($L$74,L153)), L153)'}
+{'cell': 'quadratics!L155', 'before': None, 'after': '=IFERROR(RIGHT(L154,LEN(L154)-FIND($L$74,L154)), L154)'}
+{'cell': 'quadratics!L156', 'before': None, 'after': '=IFERROR(RIGHT(L155,LEN(L155)-FIND($L$74,L155)), L155)'}
+{'cell': 'quadratics!L157', 'before': None, 'after': '=IFERROR(RIGHT(L156,LEN(L156)-FIND($L$74,L156)), L156)'}
+{'cell': 'quadratics!L158', 'before': None, 'after': '=IFERROR(RIGHT(L157,LEN(L157)-FIND($L$74,L157)), L157)'}
+{'cell': 'quadratics!L159', 'before': None, 'after': '=IFERROR(RIGHT(L158,LEN(L158)-FIND($L$74,L158)), L158)'}
+{'cell': 'quadratics!L160', 'before': None, 'after': '=IFERROR(RIGHT(L159,LEN(L159)-FIND($L$74,L159)), L159)'}
+{'cell': 'quadratics!L161', 'before': None, 'after': '=IFERROR(RIGHT(L160,LEN(L160)-FIND($L$74,L160)), L160)'}
+{'cell': 'quadratics!L162', 'before': None, 'after': '=IFERROR(RIGHT(L161,LEN(L161)-FIND($L$74,L161)), L161)'}
+{'cell': 'quadratics!L163', 'before': None, 'after': '=IFERROR(RIGHT(L162,LEN(L162)-FIND($L$74,L162)), L162)'}
+{'cell': 'quadratics!L164', 'before': None, 'after': '=IFERROR(RIGHT(L163,LEN(L163)-FIND($L$74,L163)), L163)'}
+{'cell': 'quadratics!L165', 'before': None, 'after': '=IFERROR(RIGHT(L164,LEN(L164)-FIND($L$74,L164)), L164)'}
+{'cell': 'quadratics!L166', 'before': None, 'after': '=IFERROR(RIGHT(L165,LEN(L165)-FIND($L$74,L165)), L165)'}
+{'cell': 'quadratics!L167', 'before': None, 'after': '=IFERROR(RIGHT(L166,LEN(L166)-FIND($L$74,L166)), L166)'}
+{'cell': 'quadratics!L168', 'before': None, 'after': '=IFERROR(RIGHT(L167,LEN(L167)-FIND($L$74,L167)), L167)'}
+{'cell': 'quadratics!L169', 'before': None, 'after': '=IFERROR(RIGHT(L168,LEN(L168)-FIND($L$74,L168)), L168)'}
+{'cell': 'quadratics!L17', 'before': '=-$P$12 - $P$14', 'after': None}
+{'cell': 'quadratics!L170', 'before': None, 'after': '=IFERROR(RIGHT(L169,LEN(L169)-FIND($L$74,L169)), L169)'}
+{'cell': 'quadratics!L171', 'before': None, 'after': '=IFERROR(RIGHT(L170,LEN(L170)-FIND($L$74,L170)), L170)'}
+{'cell': 'quadratics!L172', 'before': None, 'after': '=IFERROR(RIGHT(L171,LEN(L171)-FIND($L$74,L171)), L171)'}
+{'cell': 'quadratics!L173', 'before': None, 'after': '=IFERROR(RIGHT(L172,LEN(L172)-FIND($L$74,L172)), L172)'}
+{'cell': 'quadratics!L174', 'before': None, 'after': '=IFERROR(RIGHT(L173,LEN(L173)-FIND($L$74,L173)), L173)'}
+{'cell': 'quadratics!L175', 'before': None, 'after': '=IFERROR(RIGHT(L174,LEN(L174)-FIND($L$74,L174)), L174)'}
+{'cell': 'quadratics!L176', 'before': None, 'after': '=IFERROR(RIGHT(L175,LEN(L175)-FIND($L$74,L175)), L175)'}
+{'cell': 'quadratics!L177', 'before': None, 'after': '="\'" & L176'}
+{'cell': 'quadratics!L178', 'before': None, 'after': '=MID(CELL("filename",J24),FIND("[",CELL("filename",J24)),999)'}
+{'cell': 'quadratics!L179', 'before': None, 'after': '=IF(IFERROR(FIND("\'#$", L72), 0) = 0, "Excel", "LibreOffice")'}
+{'cell': 'quadratics!L18', 'before': '=2 * $P$14 * $L$15 - $P$15', 'after': None}
+{'cell': 'quadratics!L180', 'before': None, 'after': '=IF(L179="LibreOffice", L177, L178)'}
+{'cell': 'quadratics!L19', 'before': '=-$P$14 * $L$15^2 + $P$15 * $C$30 - $P$13', 'after': None}
+{'cell': 'quadratics!L20', 'before': '=L18^2 - 4*L17*L19', 'after': None}
+{'cell': 'quadratics!L21', 'before': '=IFERROR((-L18 - SQRT(L20)) / (2 * L17), 0)', 'after': None}
+{'cell': 'quadratics!L24', 'before': '=-$P$12 + $P$14', 'after': None}
+{'cell': 'quadratics!L25', 'before': '=-2 * $P$14 * $L$15 - $P$15', 'after': None}
+{'cell': 'quadratics!L26', 'before': '=$P$14 * $L$15^2 + $P$15 * $C$30 - $P$13', 'after': None}
+{'cell': 'quadratics!L27', 'before': '=L25^2 - 4*L24*L26', 'after': None}
+{'cell': 'quadratics!L28', 'before': '=IFERROR((-L25 - SQRT(L27)) / (2 * L24), L15+1)', 'after': None}
+{'cell': 'quadratics!L31', 'before': '=$P$12 + $P$14', 'after': None}
+{'cell': 'quadratics!L32', 'before': '=-2 * $P$14 * $L$15 - $P$15', 'after': None}
+{'cell': 'quadratics!L33', 'before': '=$P$14 * $L$15^2 + $P$15 * $C$30 - $P$13', 'after': None}
+{'cell': 'quadratics!L34', 'before': '=L32^2 - 4*L31*L33', 'after': None}
+{'cell': 'quadratics!L35', 'before': '=IFERROR((-L32 - SQRT(L34)) / (2 * L31), 10)', 'after': None}
+{'cell': 'quadratics!L72', 'before': None, 'after': '=CELL("filename", L72)'}
+{'cell': 'quadratics!L73', 'before': None, 'after': '=INFO("system")'}
+{'cell': 'quadratics!L74', 'before': None, 'after': '=IF(OR(L73="LINUX", L73="MACOSX"), "/", "\\")'}
+{'cell': 'quadratics!L76', 'before': None, 'after': '=RIGHT(L72, LEN(L72) - FIND($L$74,L72))'}
+{'cell': 'quadratics!L77', 'before': None, 'after': '=IFERROR(RIGHT(L76,LEN(L76)-FIND($L$74,L76)), L76)'}
+{'cell': 'quadratics!L78', 'before': None, 'after': '=IFERROR(RIGHT(L77,LEN(L77)-FIND($L$74,L77)), L77)'}
+{'cell': 'quadratics!L79', 'before': None, 'after': '=IFERROR(RIGHT(L78,LEN(L78)-FIND($L$74,L78)), L78)'}
+{'cell': 'quadratics!L8', 'before': '=$C$18*$C$14*$C$16/$C$15 / IF($C$17="Darcy", 4, IF($C$17="Fanning", 1, NA()))', 'after': None}
+{'cell': 'quadratics!L80', 'before': None, 'after': '=IFERROR(RIGHT(L79,LEN(L79)-FIND($L$74,L79)), L79)'}
+{'cell': 'quadratics!L81', 'before': None, 'after': '=IFERROR(RIGHT(L80,LEN(L80)-FIND($L$74,L80)), L80)'}
+{'cell': 'quadratics!L82', 'before': None, 'after': '=IFERROR(RIGHT(L81,LEN(L81)-FIND($L$74,L81)), L81)'}
+{'cell': 'quadratics!L83', 'before': None, 'after': '=IFERROR(RIGHT(L82,LEN(L82)-FIND($L$74,L82)), L82)'}
+{'cell': 'quadratics!L84', 'before': None, 'after': '=IFERROR(RIGHT(L83,LEN(L83)-FIND($L$74,L83)), L83)'}
+{'cell': 'quadratics!L85', 'before': None, 'after': '=IFERROR(RIGHT(L84,LEN(L84)-FIND($L$74,L84)), L84)'}
+{'cell': 'quadratics!L86', 'before': None, 'after': '=IFERROR(RIGHT(L85,LEN(L85)-FIND($L$74,L85)), L85)'}
+{'cell': 'quadratics!L87', 'before': None, 'after': '=IFERROR(RIGHT(L86,LEN(L86)-FIND($L$74,L86)), L86)'}
+{'cell': 'quadratics!L88', 'before': None, 'after': '=IFERROR(RIGHT(L87,LEN(L87)-FIND($L$74,L87)), L87)'}
+{'cell': 'quadratics!L89', 'before': None, 'after': '=IFERROR(RIGHT(L88,LEN(L88)-FIND($L$74,L88)), L88)'}
+{'cell': 'quadratics!L9', 'before': '=IF($H$14=0, H15, H15 / $H$14)', 'after': None}
+{'cell': 'quadratics!L90', 'before': None, 'after': '=IFERROR(RIGHT(L89,LEN(L89)-FIND($L$74,L89)), L89)'}
+{'cell': 'quadratics!L91', 'before': None, 'after': '=IFERROR(RIGHT(L90,LEN(L90)-FIND($L$74,L90)), L90)'}
+{'cell': 'quadratics!L92', 'before': None, 'after': '=IFERROR(RIGHT(L91,LEN(L91)-FIND($L$74,L91)), L91)'}
+{'cell': 'quadratics!L93', 'before': None, 'after': '=IFERROR(RIGHT(L92,LEN(L92)-FIND($L$74,L92)), L92)'}
+{'cell': 'quadratics!L94', 'before': None, 'after': '=IFERROR(RIGHT(L93,LEN(L93)-FIND($L$74,L93)), L93)'}
+{'cell': 'quadratics!L95', 'before': None, 'after': '=IFERROR(RIGHT(L94,LEN(L94)-FIND($L$74,L94)), L94)'}
+{'cell': 'quadratics!L96', 'before': None, 'after': '=IFERROR(RIGHT(L95,LEN(L95)-FIND($L$74,L95)), L95)'}
+{'cell': 'quadratics!L97', 'before': None, 'after': '=IFERROR(RIGHT(L96,LEN(L96)-FIND($L$74,L96)), L96)'}
+{'cell': 'quadratics!L98', 'before': None, 'after': '=IFERROR(RIGHT(L97,LEN(L97)-FIND($L$74,L97)), L97)'}
+{'cell': 'quadratics!L99', 'before': None, 'after': '=IFERROR(RIGHT(L98,LEN(L98)-FIND($L$74,L98)), L98)'}
+{'cell': 'quadratics!N100', 'before': '=IFERROR(RIGHT(N99,LEN(N99)-FIND($N$73,N99)), N99)', 'after': None}
+{'cell': 'quadratics!N101', 'before': '=IFERROR(RIGHT(N100,LEN(N100)-FIND($N$73,N100)), N100)', 'after': None}
+{'cell': 'quadratics!N102', 'before': '=IFERROR(RIGHT(N101,LEN(N101)-FIND($N$73,N101)), N101)', 'after': None}
+{'cell': 'quadratics!N103', 'before': '=IFERROR(RIGHT(N102,LEN(N102)-FIND($N$73,N102)), N102)', 'after': None}
+{'cell': 'quadratics!N104', 'before': '=IFERROR(RIGHT(N103,LEN(N103)-FIND($N$73,N103)), N103)', 'after': None}
+{'cell': 'quadratics!N105', 'before': '=IFERROR(RIGHT(N104,LEN(N104)-FIND($N$73,N104)), N104)', 'after': None}
+{'cell': 'quadratics!N106', 'before': '=IFERROR(RIGHT(N105,LEN(N105)-FIND($N$73,N105)), N105)', 'after': None}
+{'cell': 'quadratics!N107', 'before': '=IFERROR(RIGHT(N106,LEN(N106)-FIND($N$73,N106)), N106)', 'after': None}
+{'cell': 'quadratics!N108', 'before': '=IFERROR(RIGHT(N107,LEN(N107)-FIND($N$73,N107)), N107)', 'after': None}
+{'cell': 'quadratics!N109', 'before': '=IFERROR(RIGHT(N108,LEN(N108)-FIND($N$73,N108)), N108)', 'after': None}
+{'cell': 'quadratics!N110', 'before': '=IFERROR(RIGHT(N109,LEN(N109)-FIND($N$73,N109)), N109)', 'after': None}
+{'cell': 'quadratics!N111', 'before': '=IFERROR(RIGHT(N110,LEN(N110)-FIND($N$73,N110)), N110)', 'after': None}
+{'cell': 'quadratics!N112', 'before': '=IFERROR(RIGHT(N111,LEN(N111)-FIND($N$73,N111)), N111)', 'after': None}
+{'cell': 'quadratics!N113', 'before': '=IFERROR(RIGHT(N112,LEN(N112)-FIND($N$73,N112)), N112)', 'after': None}
+{'cell': 'quadratics!N114', 'before': '=IFERROR(RIGHT(N113,LEN(N113)-FIND($N$73,N113)), N113)', 'after': None}
+{'cell': 'quadratics!N115', 'before': '=IFERROR(RIGHT(N114,LEN(N114)-FIND($N$73,N114)), N114)', 'after': None}
+{'cell': 'quadratics!N116', 'before': '=IFERROR(RIGHT(N115,LEN(N115)-FIND($N$73,N115)), N115)', 'after': None}
+{'cell': 'quadratics!N117', 'before': '=IFERROR(RIGHT(N116,LEN(N116)-FIND($N$73,N116)), N116)', 'after': None}
+{'cell': 'quadratics!N118', 'before': '=IFERROR(RIGHT(N117,LEN(N117)-FIND($N$73,N117)), N117)', 'after': None}
+{'cell': 'quadratics!N119', 'before': '=IFERROR(RIGHT(N118,LEN(N118)-FIND($N$73,N118)), N118)', 'after': None}
+{'cell': 'quadratics!N12', 'before': None, 'after': '=IF($S$22, $B$19 + $B$20 + $J$8, "Dud geom")'}
+{'cell': 'quadratics!N120', 'before': '=IFERROR(RIGHT(N119,LEN(N119)-FIND($N$73,N119)), N119)', 'after': None}
+{'cell': 'quadratics!N121', 'before': '=IFERROR(RIGHT(N120,LEN(N120)-FIND($N$73,N120)), N120)', 'after': None}
+{'cell': 'quadratics!N122', 'before': '=IFERROR(RIGHT(N121,LEN(N121)-FIND($N$73,N121)), N121)', 'after': None}
+{'cell': 'quadratics!N123', 'before': '=IFERROR(RIGHT(N122,LEN(N122)-FIND($N$73,N122)), N122)', 'after': None}
+{'cell': 'quadratics!N124', 'before': '=IFERROR(RIGHT(N123,LEN(N123)-FIND($N$73,N123)), N123)', 'after': None}
+{'cell': 'quadratics!N125', 'before': '=IFERROR(RIGHT(N124,LEN(N124)-FIND($N$73,N124)), N124)', 'after': None}
+{'cell': 'quadratics!N126', 'before': '=IFERROR(RIGHT(N125,LEN(N125)-FIND($N$73,N125)), N125)', 'after': None}
+{'cell': 'quadratics!N127', 'before': '=IFERROR(RIGHT(N126,LEN(N126)-FIND($N$73,N126)), N126)', 'after': None}
+{'cell': 'quadratics!N128', 'before': '=IFERROR(RIGHT(N127,LEN(N127)-FIND($N$73,N127)), N127)', 'after': None}
+{'cell': 'quadratics!N129', 'before': '=IFERROR(RIGHT(N128,LEN(N128)-FIND($N$73,N128)), N128)', 'after': None}
+{'cell': 'quadratics!N13', 'before': None, 'after': '=IF($S$26, ($B$25 - $B$24)/0.6, "Dud wind")'}
+{'cell': 'quadratics!N130', 'before': '=IFERROR(RIGHT(N129,LEN(N129)-FIND($N$73,N129)), N129)', 'after': None}
+{'cell': 'quadratics!N131', 'before': '=IFERROR(RIGHT(N130,LEN(N130)-FIND($N$73,N130)), N130)', 'after': None}
+{'cell': 'quadratics!N132', 'before': '=IFERROR(RIGHT(N131,LEN(N131)-FIND($N$73,N131)), N131)', 'after': None}
+{'cell': 'quadratics!N133', 'before': '=IFERROR(RIGHT(N132,LEN(N132)-FIND($N$73,N132)), N132)', 'after': None}
+{'cell': 'quadratics!N134', 'before': '=IFERROR(RIGHT(N133,LEN(N133)-FIND($N$73,N133)), N133)', 'after': None}
+{'cell': 'quadratics!N135', 'before': '=IFERROR(RIGHT(N134,LEN(N134)-FIND($N$73,N134)), N134)', 'after': None}
+{'cell': 'quadratics!N136', 'before': '=IFERROR(RIGHT(N135,LEN(N135)-FIND($N$73,N135)), N135)', 'after': None}
+{'cell': 'quadratics!N137', 'before': '=IFERROR(RIGHT(N136,LEN(N136)-FIND($N$73,N136)), N136)', 'after': None}
+{'cell': 'quadratics!N138', 'before': '=IFERROR(RIGHT(N137,LEN(N137)-FIND($N$73,N137)), N137)', 'after': None}
+{'cell': 'quadratics!N139', 'before': '=IFERROR(RIGHT(N138,LEN(N138)-FIND($N$73,N138)), N138)', 'after': None}
+{'cell': 'quadratics!N14', 'before': None, 'after': '=IF($W$25,SUM($J$12:$J$14), "Dud traffic")'}
+{'cell': 'quadratics!N140', 'before': '=IFERROR(RIGHT(N139,LEN(N139)-FIND($N$73,N139)), N139)', 'after': None}
+{'cell': 'quadratics!N141', 'before': '=IFERROR(RIGHT(N140,LEN(N140)-FIND($N$73,N140)), N140)', 'after': None}
+{'cell': 'quadratics!N142', 'before': '=IFERROR(RIGHT(N141,LEN(N141)-FIND($N$73,N141)), N141)', 'after': None}
+{'cell': 'quadratics!N143', 'before': '=IFERROR(RIGHT(N142,LEN(N142)-FIND($N$73,N142)), N142)', 'after': None}
+{'cell': 'quadratics!N144', 'before': '=IFERROR(RIGHT(N143,LEN(N143)-FIND($N$73,N143)), N143)', 'after': None}
+{'cell': 'quadratics!N145', 'before': '=IFERROR(RIGHT(N144,LEN(N144)-FIND($N$73,N144)), N144)', 'after': None}
+{'cell': 'quadratics!N146', 'before': '=IFERROR(RIGHT(N145,LEN(N145)-FIND($N$73,N145)), N145)', 'after': None}
+{'cell': 'quadratics!N147', 'before': '=IFERROR(RIGHT(N146,LEN(N146)-FIND($N$73,N146)), N146)', 'after': None}
+{'cell': 'quadratics!N148', 'before': '=IFERROR(RIGHT(N147,LEN(N147)-FIND($N$73,N147)), N147)', 'after': None}
+{'cell': 'quadratics!N149', 'before': '=IFERROR(RIGHT(N148,LEN(N148)-FIND($N$73,N148)), N148)', 'after': None}
+{'cell': 'quadratics!N15', 'before': None, 'after': '=IF($S$32, $B$28 * $B$29 * $B$31 / (0.6 * ABS($B$30) * $B$15), "Dud jet fans")'}
+{'cell': 'quadratics!N150', 'before': '=IFERROR(RIGHT(N149,LEN(N149)-FIND($N$73,N149)), N149)', 'after': None}
+{'cell': 'quadratics!N151', 'before': '=IFERROR(RIGHT(N150,LEN(N150)-FIND($N$73,N150)), N150)', 'after': None}
+{'cell': 'quadratics!N152', 'before': '=IFERROR(RIGHT(N151,LEN(N151)-FIND($N$73,N151)), N151)', 'after': None}
+{'cell': 'quadratics!N153', 'before': '=IFERROR(RIGHT(N152,LEN(N152)-FIND($N$73,N152)), N152)', 'after': None}
+{'cell': 'quadratics!N154', 'before': '=IFERROR(RIGHT(N153,LEN(N153)-FIND($N$73,N153)), N153)', 'after': None}
+{'cell': 'quadratics!N155', 'before': '=IFERROR(RIGHT(N154,LEN(N154)-FIND($N$73,N154)), N154)', 'after': None}
+{'cell': 'quadratics!N156', 'before': '=IFERROR(RIGHT(N155,LEN(N155)-FIND($N$73,N155)), N155)', 'after': None}
+{'cell': 'quadratics!N157', 'before': '=IFERROR(RIGHT(N156,LEN(N156)-FIND($N$73,N156)), N156)', 'after': None}
+{'cell': 'quadratics!N158', 'before': '=IFERROR(RIGHT(N157,LEN(N157)-FIND($N$73,N157)), N157)', 'after': None}
+{'cell': 'quadratics!N159', 'before': '=IFERROR(RIGHT(N158,LEN(N158)-FIND($N$73,N158)), N158)', 'after': None}
+{'cell': 'quadratics!N160', 'before': '=IFERROR(RIGHT(N159,LEN(N159)-FIND($N$73,N159)), N159)', 'after': None}
+{'cell': 'quadratics!N161', 'before': '=IFERROR(RIGHT(N160,LEN(N160)-FIND($N$73,N160)), N160)', 'after': None}
+{'cell': 'quadratics!N162', 'before': '=IFERROR(RIGHT(N161,LEN(N161)-FIND($N$73,N161)), N161)', 'after': None}
+{'cell': 'quadratics!N163', 'before': '=IFERROR(RIGHT(N162,LEN(N162)-FIND($N$73,N162)), N162)', 'after': None}
+{'cell': 'quadratics!N164', 'before': '=IFERROR(RIGHT(N163,LEN(N163)-FIND($N$73,N163)), N163)', 'after': None}
+{'cell': 'quadratics!N165', 'before': '=IFERROR(RIGHT(N164,LEN(N164)-FIND($N$73,N164)), N164)', 'after': None}
+{'cell': 'quadratics!N166', 'before': '=IFERROR(RIGHT(N165,LEN(N165)-FIND($N$73,N165)), N165)', 'after': None}
+{'cell': 'quadratics!N167', 'before': '=IFERROR(RIGHT(N166,LEN(N166)-FIND($N$73,N166)), N166)', 'after': None}
+{'cell': 'quadratics!N168', 'before': '=IFERROR(RIGHT(N167,LEN(N167)-FIND($N$73,N167)), N167)', 'after': None}
+{'cell': 'quadratics!N169', 'before': '=IFERROR(RIGHT(N168,LEN(N168)-FIND($N$73,N168)), N168)', 'after': None}
+{'cell': 'quadratics!N17', 'before': None, 'after': '=IF($S$22, $N$12 * 0.6 * J21^2,$U$34)'}
+{'cell': 'quadratics!N170', 'before': '=IFERROR(RIGHT(N169,LEN(N169)-FIND($N$73,N169)), N169)', 'after': None}
+{'cell': 'quadratics!N171', 'before': '=IFERROR(RIGHT(N170,LEN(N170)-FIND($N$73,N170)), N170)', 'after': None}
+{'cell': 'quadratics!N172', 'before': '=IFERROR(RIGHT(N171,LEN(N171)-FIND($N$73,N171)), N171)', 'after': None}
+{'cell': 'quadratics!N173', 'before': '=IFERROR(RIGHT(N172,LEN(N172)-FIND($N$73,N172)), N172)', 'after': None}
+{'cell': 'quadratics!N174', 'before': '=IFERROR(RIGHT(N173,LEN(N173)-FIND($N$73,N173)), N173)', 'after': None}
+{'cell': 'quadratics!N175', 'before': '=IFERROR(RIGHT(N174,LEN(N174)-FIND($N$73,N174)), N174)', 'after': None}
+{'cell': 'quadratics!N176', 'before': '="\'" & N175', 'after': None}
+{'cell': 'quadratics!N177', 'before': '=MID(CELL("filename",L24),FIND("[",CELL("filename",L24)),999)', 'after': None}
+{'cell': 'quadratics!N178', 'before': '=IF(IFERROR(FIND("\'#$", N72), 0) = 0, "Excel", "LibreOffice")', 'after': None}
+{'cell': 'quadratics!N179', 'before': '=IF(N178="LibreOffice", N176, N177)', 'after': None}
+{'cell': 'quadratics!N18', 'before': None, 'after': '=IF($S$26, $B$25 - $B$24, $U$34)'}
+{'cell': 'quadratics!N19', 'before': None, 'after': '=IF($W$25, 0.6 * $N$14 * ($J$15 - J21)^2, $U$34)'}
+{'cell': 'quadratics!N20', 'before': None, 'after': '=IF($S$32, -SIGN($B$30) * $B$28*$B$29*$B$31*(1 - J21/$B$30)/$B$15, $U$34)'}
+{'cell': 'quadratics!N21', 'before': None, 'after': '=IFERROR(SUM(N17:N20), 42)'}
+{'cell': 'quadratics!N22', 'before': None, 'after': '=IF(AND(ABS(N21) < 0.00000001, J21>=J15),TRUE())'}
+{'cell': 'quadratics!N24', 'before': None, 'after': '=IF($S$22, $N$12 * 0.6 * J28^2,$U$34)'}
+{'cell': 'quadratics!N25', 'before': None, 'after': '=IF($S$26, $B$25 - $B$24, $U$34)'}
+{'cell': 'quadratics!N26', 'before': None, 'after': '=IF($W$25, -0.6 * $N$14 * ($J$15 - J28)^2, $U$34)'}
+{'cell': 'quadratics!N27', 'before': None, 'after': '=IF($S$32, -SIGN($B$30) * $B$28*$B$29*$B$31*(1 - J28/$B$30)/$B$15, $U$34)'}
+{'cell': 'quadratics!N28', 'before': None, 'after': '=IFERROR(SUM(N24:N27), 42)'}
+{'cell': 'quadratics!N29', 'before': None, 'after': '=IF(AND(ABS(N28) < 0.00000001, J28<J15, J28 >=0),TRUE())'}
+{'cell': 'quadratics!N31', 'before': None, 'after': '=IF($S$22, -$N$12 * 0.6 * J35^2,$U$34)'}
+{'cell': 'quadratics!N32', 'before': None, 'after': '=IF($S$26, $B$25 - $B$24, $U$34)'}
+{'cell': 'quadratics!N33', 'before': None, 'after': '=IF($W$25, -0.6 * $N$14 * ($J$15 - J35)^2, $U$34)'}
+{'cell': 'quadratics!N34', 'before': None, 'after': '=IF($S$32, -SIGN($B$30) * $B$28*$B$29*$B$31*(1 - J35/$B$30)/$B$15, $U$34)'}
+{'cell': 'quadratics!N35', 'before': None, 'after': '=IFERROR(SUM(N31:N34), 42)'}
+{'cell': 'quadratics!N36', 'before': None, 'after': '=IF(AND(ABS(N35) < 0.00000001, J35 < 0),TRUE())'}
+{'cell': 'quadratics!N72', 'before': '=CELL("filename", N72)', 'after': None}
+{'cell': 'quadratics!N75', 'before': '=RIGHT(N72, LEN(N72) - FIND($N$73,N72))', 'after': None}
+{'cell': 'quadratics!N76', 'before': '=IFERROR(RIGHT(N75,LEN(N75)-FIND($N$73,N75)), N75)', 'after': None}
+{'cell': 'quadratics!N77', 'before': '=IFERROR(RIGHT(N76,LEN(N76)-FIND($N$73,N76)), N76)', 'after': None}
+{'cell': 'quadratics!N78', 'before': '=IFERROR(RIGHT(N77,LEN(N77)-FIND($N$73,N77)), N77)', 'after': None}
+{'cell': 'quadratics!N79', 'before': '=IFERROR(RIGHT(N78,LEN(N78)-FIND($N$73,N78)), N78)', 'after': None}
+{'cell': 'quadratics!N80', 'before': '=IFERROR(RIGHT(N79,LEN(N79)-FIND($N$73,N79)), N79)', 'after': None}
+{'cell': 'quadratics!N81', 'before': '=IFERROR(RIGHT(N80,LEN(N80)-FIND($N$73,N80)), N80)', 'after': None}
+{'cell': 'quadratics!N82', 'before': '=IFERROR(RIGHT(N81,LEN(N81)-FIND($N$73,N81)), N81)', 'after': None}
+{'cell': 'quadratics!N83', 'before': '=IFERROR(RIGHT(N82,LEN(N82)-FIND($N$73,N82)), N82)', 'after': None}
+{'cell': 'quadratics!N84', 'before': '=IFERROR(RIGHT(N83,LEN(N83)-FIND($N$73,N83)), N83)', 'after': None}
+{'cell': 'quadratics!N85', 'before': '=IFERROR(RIGHT(N84,LEN(N84)-FIND($N$73,N84)), N84)', 'after': None}
+{'cell': 'quadratics!N86', 'before': '=IFERROR(RIGHT(N85,LEN(N85)-FIND($N$73,N85)), N85)', 'after': None}
+{'cell': 'quadratics!N87', 'before': '=IFERROR(RIGHT(N86,LEN(N86)-FIND($N$73,N86)), N86)', 'after': None}
+{'cell': 'quadratics!N88', 'before': '=IFERROR(RIGHT(N87,LEN(N87)-FIND($N$73,N87)), N87)', 'after': None}
+{'cell': 'quadratics!N89', 'before': '=IFERROR(RIGHT(N88,LEN(N88)-FIND($N$73,N88)), N88)', 'after': None}
+{'cell': 'quadratics!N90', 'before': '=IFERROR(RIGHT(N89,LEN(N89)-FIND($N$73,N89)), N89)', 'after': None}
+{'cell': 'quadratics!N91', 'before': '=IFERROR(RIGHT(N90,LEN(N90)-FIND($N$73,N90)), N90)', 'after': None}
+{'cell': 'quadratics!N92', 'before': '=IFERROR(RIGHT(N91,LEN(N91)-FIND($N$73,N91)), N91)', 'after': None}
+{'cell': 'quadratics!N93', 'before': '=IFERROR(RIGHT(N92,LEN(N92)-FIND($N$73,N92)), N92)', 'after': None}
+{'cell': 'quadratics!N94', 'before': '=IFERROR(RIGHT(N93,LEN(N93)-FIND($N$73,N93)), N93)', 'after': None}
+{'cell': 'quadratics!N95', 'before': '=IFERROR(RIGHT(N94,LEN(N94)-FIND($N$73,N94)), N94)', 'after': None}
+{'cell': 'quadratics!N96', 'before': '=IFERROR(RIGHT(N95,LEN(N95)-FIND($N$73,N95)), N95)', 'after': None}
+{'cell': 'quadratics!N97', 'before': '=IFERROR(RIGHT(N96,LEN(N96)-FIND($N$73,N96)), N96)', 'after': None}
+{'cell': 'quadratics!N98', 'before': '=IFERROR(RIGHT(N97,LEN(N97)-FIND($N$73,N97)), N97)', 'after': None}
+{'cell': 'quadratics!N99', 'before': '=IFERROR(RIGHT(N98,LEN(N98)-FIND($N$73,N98)), N98)', 'after': None}
+{'cell': 'quadratics!P12', 'before': '=IF($U$22, $C$19 + $C$20 + $L$8, "Dud geom")', 'after': None}
+{'cell': 'quadratics!P13', 'before': '=IF($U$26, ($C$25 - $C$24)/0.6, "Dud wind")', 'after': None}
+{'cell': 'quadratics!P14', 'before': '=IF($Y$25,SUM($L$12:$L$14), "Dud traffic")', 'after': None}
+{'cell': 'quadratics!P15', 'before': '=IF($U$32, $C$28 * $C$29 * $C$31 / (0.6 * ABS($C$30) * $C$15), "Dud jet fans")', 'after': None}
+{'cell': 'quadratics!P17', 'before': '=IF($U$22, -($C$19+$C$20+$L$8) * 0.6 * L21*ABS(L21),$W$34)', 'after': None}
+{'cell': 'quadratics!P18', 'before': '=IF($U$22, $C$24 - $C$25, $W$34)', 'after': None}
+{'cell': 'quadratics!P19', 'before': '=IF($U$22, 0.6 * $C$14/1000*($L$9*$H$18*$H$19*IF($H$24="N",1,1/(1-$H$18/$C$15)^2) + $L$10*$H$20*$H$21*IF($H$24="N",1,1/(1-$H$20/$C$15)^2) + $L$11*$H$22*$H$23*IF($H$24="N",1,1/(1-$H$22/$C$15)^2))/$C$15 * ($L$15 - L21) * ABS($L$15 - L21), $W$34)', 'after': None}
+{'cell': 'quadratics!P20', 'before': '=IF($U$22, SIGN($C$30)*$C$28*$C$29*$C$31*(1 - L21/$C$30)/$C$15, $W$34)', 'after': None}
+{'cell': 'quadratics!P21', 'before': '=IFERROR(SUM(P17:P20), 42)', 'after': None}
+{'cell': 'quadratics!P22', 'before': '=ABS(P21) < 0.00000001', 'after': None}
+{'cell': 'quadratics!P24', 'before': '=IF($U$22, -($C$19+$C$20+$L$8) * 0.6 * L28*ABS(L28),$W$34)', 'after': None}
+{'cell': 'quadratics!P25', 'before': '=IF($U$22, $C$24 - $C$25, $W$34)', 'after': None}
+{'cell': 'quadratics!P26', 'before': '=IF($U$22, 0.6 * $C$14/1000*($L$9*$H$18*$H$19*IF($H$24="N",1,1/(1-$H$18/$C$15)^2) + $L$10*$H$20*$H$21*IF($H$24="N",1,1/(1-$H$20/$C$15)^2) + $L$11*$H$22*$H$23*IF($H$24="N",1,1/(1-$H$22/$C$15)^2))/$C$15 * ($L$15 - L28) * ABS($L$15 - L28), $W$34)', 'after': None}
+{'cell': 'quadratics!P27', 'before': '=IF($U$22, SIGN($C$30)*$C$28*$C$29*$C$31*(1 - L28/$C$30)/$C$15, $W$34)', 'after': None}
+{'cell': 'quadratics!P28', 'before': '=IFERROR(SUM(P24:P27), 42)', 'after': None}
+{'cell': 'quadratics!P29', 'before': '=ABS(P28) < 0.00000001', 'after': None}
+{'cell': 'quadratics!P31', 'before': '=IF($U$22, ($C$19+$C$20+$L$8) * 0.6 * L35*ABS(L35),$W$34)', 'after': None}
+{'cell': 'quadratics!P32', 'before': '=IF($U$22, $C$25 - $C$24, $W$34)', 'after': None}
+{'cell': 'quadratics!P33', 'before': '=-IF($U$22, 0.6 * $C$14/1000*($L$9*$H$18*$H$19*IF($H$24="N",1,1/(1-$H$18/$C$15)^2) + $L$10*$H$20*$H$21*IF($H$24="N",1,1/(1-$H$20/$C$15)^2) + $L$11*$H$22*$H$23*IF($H$24="N",1,1/(1-$H$22/$C$15)^2))/$C$15 * ($L$15 - L35) * ABS($L$15 - L35), $W$34)', 'after': None}
+{'cell': 'quadratics!P34', 'before': '=IF($U$22, -SIGN($C$30)*$C$28*$C$29*$C$31*(1 - L35/$C$30)/$C$15, $W$34)', 'after': None}
+{'cell': 'quadratics!P35', 'before': '=IFERROR(SUM(P31:P34), 42)', 'after': None}
+{'cell': 'quadratics!P36', 'before': '=ABS(P35) < 0.00000001', 'after': None}
+{'cell': 'quadratics!S14', 'before': None, 'after': '=AND(ISNUMBER(B14), B14 >= 0)'}
+{'cell': 'quadratics!S15', 'before': None, 'after': '=AND(ISNUMBER(B15), B15 > 0)'}
+{'cell': 'quadratics!S16', 'before': None, 'after': '=AND(ISNUMBER(B16), B16 > 0)'}
+{'cell': 'quadratics!S18', 'before': None, 'after': '=OR(B17 = "Fanning", B17 = "Darcy")'}
+{'cell': 'quadratics!S19', 'before': None, 'after': '=AND(ISNUMBER(B18), B18 >= 0)'}
+{'cell': 'quadratics!S20', 'before': None, 'after': '=AND(ISNUMBER(B19), B19 >= 0)'}
+{'cell': 'quadratics!S21', 'before': None, 'after': '=AND(ISNUMBER(B20), B20 >= 0)'}
+{'cell': 'quadratics!S22', 'before': None, 'after': '=AND(S14:S21)'}
+{'cell': 'quadratics!S24', 'before': None, 'after': '=ISNUMBER(B24)'}
+{'cell': 'quadratics!S25', 'before': None, 'after': '=ISNUMBER(B25)'}
+{'cell': 'quadratics!S26', 'before': None, 'after': '=AND(S24, S25)'}
+{'cell': 'quadratics!S28', 'before': None, 'after': '=AND(ISNUMBER(B28), B28 >= 0)'}
+{'cell': 'quadratics!S29', 'before': None, 'after': '=AND(ISNUMBER(B29), B29 >= 0)'}
+{'cell': 'quadratics!S30', 'before': None, 'after': '=ISNUMBER(B30)'}
+{'cell': 'quadratics!S31', 'before': None, 'after': '=AND(ISNUMBER(B31), B31 >= 0)'}
+{'cell': 'quadratics!S32', 'before': None, 'after': '=AND(S28:S31)'}
+{'cell': 'quadratics!U14', 'before': '=AND(ISNUMBER(C14), C14 >= 0)', 'after': None}
+{'cell': 'quadratics!U15', 'before': '=AND(ISNUMBER(C15), C15 > 0)', 'after': None}
+{'cell': 'quadratics!U16', 'before': '=AND(ISNUMBER(C16), C16 > 0)', 'after': None}
+{'cell': 'quadratics!U18', 'before': '=OR(C17 = "Fanning", C17 = "Darcy")', 'after': None}
+{'cell': 'quadratics!U19', 'before': '=AND(ISNUMBER(C18), C18 >= 0)', 'after': None}
+{'cell': 'quadratics!U20', 'before': '=AND(ISNUMBER(C19), C19 >= 0)', 'after': None}
+{'cell': 'quadratics!U21', 'before': '=AND(ISNUMBER(C20), C20 >= 0)', 'after': None}
+{'cell': 'quadratics!U22', 'before': '=IFERROR(AND(U14:U21),0)', 'after': None}
+{'cell': 'quadratics!U24', 'before': '=ISNUMBER(C24)', 'after': None}
+{'cell': 'quadratics!U25', 'before': '=ISNUMBER(C25)', 'after': None}
+{'cell': 'quadratics!U26', 'before': '=IFERROR(AND(U24, U25),0)', 'after': None}
+{'cell': 'quadratics!U28', 'before': '=AND(ISNUMBER(C28), C28 >= 0)', 'after': None}
+{'cell': 'quadratics!U29', 'before': '=AND(ISNUMBER(C29), C29 >= 0)', 'after': None}
+{'cell': 'quadratics!U30', 'before': '=ISNUMBER(C30)', 'after': None}
+{'cell': 'quadratics!U31', 'before': '=AND(ISNUMBER(C31), C31 >= 0)', 'after': None}
+{'cell': 'quadratics!U32', 'before': '=IFERROR(AND(U28:U31),0)', 'after': None}
+{'cell': 'quadratics!U33', 'before': None, 'after': '=AND(S22,S26,S32,W25)'}
+{'cell': 'quadratics!U34', 'before': None, 'after': '=IF(NOT(S22), "dud tunnel geometry", IF(NOT(S26), "dud wind", IF(NOT(S32), "dud jet fans", IF(NOT(W25), "dud traffic", "dud equations"))))'}
+{'cell': 'quadratics!W14', 'before': None, 'after': '=AND(ISNUMBER(F14), F14 >= 0)'}
+{'cell': 'quadratics!W15', 'before': None, 'after': '=AND(ISNUMBER(F15), F15 >= 0)'}
+{'cell': 'quadratics!W16', 'before': None, 'after': '=AND(ISNUMBER(F16), F16 >= 0)'}
+{'cell': 'quadratics!W17', 'before': None, 'after': '=AND(ISNUMBER(F17), F17 >= 0)'}
+{'cell': 'quadratics!W18', 'before': None, 'after': '=AND(ISNUMBER(F18), F18 > 0)'}
+{'cell': 'quadratics!W19', 'before': None, 'after': '=AND(ISNUMBER(F19), F19 > 0)'}
+{'cell': 'quadratics!W20', 'before': None, 'after': '=AND(ISNUMBER(F20), F20 > 0)'}
+{'cell': 'quadratics!W21', 'before': None, 'after': '=AND(ISNUMBER(F21), F21 > 0)'}
+{'cell': 'quadratics!W22', 'before': None, 'after': '=AND(ISNUMBER(F22), F22 > 0)'}
+{'cell': 'quadratics!W23', 'before': None, 'after': '=AND(ISNUMBER(F23), F23 > 0)'}
+{'cell': 'quadratics!W24', 'before': None, 'after': '=OR(F24 = "Y", F24 = "N")'}
+{'cell': 'quadratics!W25', 'before': None, 'after': '=AND(W14:W24)'}
+{'cell': 'quadratics!W33', 'before': '=AND(U22,U26,U32,Y25)', 'after': None}
+{'cell': 'quadratics!W34', 'before': '=IF(NOT(U22), "dud tunnel geometry", IF(NOT(U26), "dud wind", IF(NOT(U32), "dud jet fans", IF(NOT(Y25), "dud traffic", "dud equations"))))', 'after': None}
+{'cell': 'quadratics!Y14', 'before': '=AND(ISNUMBER(H14), H14 >= 0)', 'after': None}
+{'cell': 'quadratics!Y15', 'before': '=AND(ISNUMBER(H15), H15 >= 0)', 'after': None}
+{'cell': 'quadratics!Y16', 'before': '=AND(ISNUMBER(H16), H16 >= 0)', 'after': None}
+{'cell': 'quadratics!Y17', 'before': '=AND(ISNUMBER(H17), H17 >= 0)', 'after': None}
+{'cell': 'quadratics!Y18', 'before': '=AND(ISNUMBER(H18), H18 > 0)', 'after': None}
+{'cell': 'quadratics!Y19', 'before': '=AND(ISNUMBER(H19), H19 > 0)', 'after': None}
+{'cell': 'quadratics!Y20', 'before': '=AND(ISNUMBER(H20), H20 > 0)', 'after': None}
+{'cell': 'quadratics!Y21', 'before': '=AND(ISNUMBER(H21), H21 > 0)', 'after': None}
+{'cell': 'quadratics!Y22', 'before': '=AND(ISNUMBER(H22), H22 > 0)', 'after': None}
+{'cell': 'quadratics!Y23', 'before': '=AND(ISNUMBER(H23), H23 > 0)', 'after': None}
+{'cell': 'quadratics!Y24', 'before': '=OR(H24 = "Y", H24 = "N")', 'after': None}
+{'cell': 'quadratics!Y25', 'before': '=IFERROR(AND(Y14:Y24),0)', 'after': None}
+Original notices [{'cell': 'Notes and Versions!B4', 'text': 'Dec 2020.  Corrected the selection of which quadratic to use at slow vehicle speeds, added a note about density 1.2 kg/m3.'}, {'cell': 'Notes and Versions!B5', 'text': 'Apr 2021.  Corrected errors in the sanity check calculation when the traffic blockage correction was active.  Altered the text descriptions of the range and sanity checks to the correct rows.  Modified a logic test that works in LibreOffice but fails in Excel to a test that works in both programs.  Modified the error checks to catch more types of erroneous input.'}, {'cell': 'licence!A2', 'text': 'Copyright (c) 2020-2021, Ewan Bennett (ewanbennett@fastmail.com)'}, {'cell': 'licence!B11', 'text': 'Redistributions of source code must retain the above copyright notice, this list'}, {'cell': 'licence!B14', 'text': 'Redistributions in binary form must reproduce the above copyright notice, this'}, {'cell': 'licence!A18', 'text': 'THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS'}, {'cell': 'licence!A21', 'text': 'PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR'}]
+Original comments [{'cell': 'quadratics!G24', 'text': 'If you set “Y” here, the drag figures will be divided by the standard wind tunnel blockage correction factor  of (1 – A_veh/A_tunnel)^2,\ncausing an increase in traffic drag.'}]

@@ -974,5 +974,21 @@
     "accepted_families": 0,
     "workbook_bodies_acquired": false,
     "exposed_development_origin": "ECB2020/Hobyah"
+  },
+  "hobyah_development_audit_dev26": {
+    "origin": "ECB2020/Hobyah",
+    "whole_origin_excluded_from_final": true,
+    "acquired_versions": [
+      "parent.xlsx",
+      "correction.xlsx",
+      "parent.ods",
+      "correction.ods"
+    ],
+    "workbooks_kept_local": true,
+    "natural_truth_pair_verified": false,
+    "claimed_two_formula_errors_absent_in_pinned_parent": true,
+    "report": "DEV26_HOBYAH_NATURAL_AUDIT_REPORT_20261018.md",
+    "accepted_sources": 0,
+    "accepted_families": 0
   }
 }

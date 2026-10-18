@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT / 'scripts'), str(ROOT / 'qa')]
 from run_selector_dev5 import read, save, sha
 from run_hobyah_natural_dev26 import RUN, verify
+from structuralguard.formula import translate_formula
 
 
 def xml_formulas(path):
@@ -24,13 +25,23 @@ def xml_formulas(path):
             target = rels[sheet.attrib['{' + ns['r'] + '}id']]
             name = posixpath.normpath('xl/' + target) if not target.startswith('/') else target.lstrip('/')
             root = ET.fromstring(archive.read(name))
-            for cell in root.findall('.//s:sheetData/s:row/s:c', ns):
+            masters = {}
+            cells = root.findall('.//s:sheetData/s:row/s:c', ns)
+            for cell in cells:
+                f = cell.find('s:f', ns)
+                if f is not None and f.attrib.get('t') == 'shared' and f.text:
+                    assert f.attrib['si'] not in masters
+                    masters[f.attrib['si']] = (cell.attrib['r'], '=' + f.text)
+            for cell in cells:
                 f = cell.find('s:f', ns)
                 if f is not None:
-                    # This independent literal audit deliberately rejects shared
-                    # formulas rather than pretending a missing text is empty.
-                    assert f.attrib.get('t') != 'shared', (sheet.attrib['name'], cell.attrib['r'])
-                    result[sheet.attrib['name'] + '!' + cell.attrib['r']] = '=' + (f.text or '')
+                    if f.attrib.get('t') == 'shared':
+                        anchor, formula = masters[f.attrib['si']]
+                        formula = translate_formula(formula, anchor, cell.attrib['r'])
+                    else:
+                        assert f.text is not None, (sheet.attrib['name'], cell.attrib['r'])
+                        formula = '=' + f.text
+                    result[sheet.attrib['name'] + '!' + cell.attrib['r']] = formula
     return result
 
 
