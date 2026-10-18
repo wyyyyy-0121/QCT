@@ -167,3 +167,11 @@ These two screens add no qualified natural source or template family. They do no
 2018年附件HTTP 200，958,874字节，SHA-256为`22a05449aee79b4143ece5c7b7911dc1ae3ebc82ac523c18326f65f253cb16ff`，服务器Last-Modified为2018-05-25（该时间不单独证明未经修订）。9张表共82个公式元素，全部位于隐藏的`Graphs16dnu`；`Table 2`及其余公开统计表均无公式。工作簿另有三个external-link XML文件，未解析其内容、未访问链接。公开Table 2不提供底层错误公式，不能用变动后的比例代替原公式真值；停止本候选模型实验，不再为评分获取修订表。该真实错误事件保留为底层源文件未公开的线索，不计自然错误来源/最终家族。
 
 取得回执、表级库存、工作表映射见`source_evidence/MOD_CADETS_ACQUISITION_20261019.json`、`source_evidence/MOD_CADETS_INVENTORY_20261019.json`和`source_evidence/MOD_CADETS_SHEET_MAP_20261019.json`；原文件留在忽略目录。最终验证仍为`0/0`。ONS控制审计也因未解决保真差异停止。下一步继续寻找能取得底层原始/修订公式的官方公开源文件，不能以报道、输出统计表或搜索命中替代。
+
+## 2026-10-19 SpreadsheetBench-v2 数据集可达性与任务类型复核
+
+通过GitHub官方API读取`RUCKBReasoning/SpreadsheetBench-2`仓库元数据、README和递归文件树。仓库为公开、非fork，默认分支`main`，仓库根`license`字段为`null`；数据README把数据集链接至Hugging Face `KAKA22/SpreadsheetBench-v2`，并说明数据文件不在该Git仓库树内。README将`Debugging`描述为“Formula debugging and error correction”，每个任务有`spreadsheet_path`和`golden_response_path`；它没有说明这些公式错误是否自然发生、golden文件是否为原作者/组织的修订件、标签如何独立核验，也没有给出逐格自然错误真值规范。README要求实验前重算输入及golden工作簿，故未来准入还需审计重算对原始公式/缓存/标签的影响。
+
+本轮用IPv4重试Hugging Face官方数据集API、数据集文件树和原始GitHub README端点：Hugging Face连接阶段超时（HTTP 000），raw.githubusercontent.com在25秒内无响应；GitHub官方API成功提供仓库README与文件树。未下载工作簿、未读取公式/标签、未运行模型。证据入口：仓库元数据 https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench-2 ，README https://github.com/RUCKBReasoning/SpreadsheetBench-2/blob/main/README.md ，仓库树 https://api.github.com/repos/RUCKBReasoning/SpreadsheetBench-2/git/trees/main?recursive=1 ，数据集 https://huggingface.co/datasets/KAKA22/SpreadsheetBench-v2 。
+
+处置：此项目是工作流/代理评测基准，`Debugging`类仍可能包含有用纠错任务，但现有公开说明和许可不足以把它认定为自然发生的静默公式错误语料；根仓库没有许可证，数据文件当前不可达。维持“待审/访问受阻”，不算来源或模板家族，不下载、不评分、不把超时解释成零个合格样本。下一次可达时依序核对数据卡与数据文件许可、版本/提交时间、任务构造来源、输入与golden的公式级差异、修订真值依据以及样本是否来自公开注入/合成；先完成来源与标签审计，再决定它只作为工作流控制、注入错误基准还是自然错误来源。
