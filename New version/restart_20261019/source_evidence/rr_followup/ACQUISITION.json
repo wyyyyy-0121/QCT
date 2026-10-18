@@ -1,0 +1,30 @@
+{
+  "retrieved_utc": "2026-10-18T20:36:01Z",
+  "source_url": "https://peri.umass.edu/images/WP322HAP-RR-GITD-code-2013-05-17.zip",
+  "http_status": 200,
+  "content_type": "application/zip",
+  "content_length": 632057,
+  "archive_sha256": "93900259e271c96f654bb61a2808f7eeb12320103a3fb092ee239859ee23d95c",
+  "contents": [
+    "RR.xls",
+    "RR-country-csv.zip",
+    "concordance-RR-HAP.csv",
+    "RR.R",
+    "RR-basic.dta",
+    "RR-processed.dta",
+    "RR-200-processed.dta",
+    "RR-keycolumns.xlsx",
+    "RR.Rout",
+    "RR200/RR200.R",
+    "RR200/RR200.Rout"
+  ],
+  "extracted_hashes": {
+    "RR.xls": "412159493d34d8c72aaec0a40dcfa99a5f38aab57dcd2f409184f9c3a162a547",
+    "RR-keycolumns.xlsx": "77356c09466d0a56dfee56bf27555b9b1106e0fd1cc327dd032f4ed2932165ec"
+  },
+  "license_evidence": "RR.R states that code and related data are open-source under BSD 2-clause; no standalone license file was in the archive and individual workbook redistribution scope is unverified.",
+  "pair_status": "No original/corrected workbook pair identified. RR-keycolumns.xlsx is generated output, not a corrected RR.xls.",
+  "label_status": "The HAP code identifies the five-country exclusion as Spreadsheet error, but does not establish erroneous formula cell coordinates or corrected formula cells.",
+  "model_status": "Workbook formulas were inspected after conversion to XLSX. Treat the entire source/case as revealed development evidence; exclude from final validation.",
+  "final_validation_eligible": false
+}
