@@ -44,11 +44,12 @@ def main():
             if cell not in expected:
                 assert state['label'] is None and state['reason'] == 'outside_reviewed_scope'
             if state['label'] == 0:
-                witness = state['witness']; inputs = {name: Fraction(value) for name, value in witness['inputs'].items()}
+                witness = state['witness']; inputs = defaultdict(lambda: Fraction(1), {name: Fraction(value) for name, value in witness['inputs'].items()})
                 left = interpreter.formula(formula, sheet, inputs=inputs, stack=(cell,))
                 right = interpreter.formula(expected[cell], sheet, inputs=inputs, stack=(cell,))
                 assert left == Fraction(witness['candidate']) and right == Fraction(witness['expected'])
                 assert left != right
+                counts['cancelled_input_assignments_completed'] += len(inputs)-len(witness['inputs'])
                 counts['negative_witnesses_recomputed'] += 1
             elif state['label'] == 1 and (state['kind'] == 'keep' or state['id'] in sample):
                 left = interpreter.formula(formula, sheet, symbolic=True, stack=(cell,))
@@ -65,6 +66,7 @@ def main():
     p = ROOT/'qa/TRISTATE_RELATIONS_DEV23_INDEPENDENT_AUDIT_20261018.json'; assert not p.exists()
     save(p, dict(cases=cases, totals=dict(totals), by_origin={key: dict(value) for key, value in origins.items()},
         all_negative_witnesses_recomputed=True, positive_scope='all positive keep states and first 32 positive candidates by ID per case',
+        omitted_cancelled_input_completion='all numerical leaves omitted after polynomial cancellation assigned exactly 1',
         all_unknown_states_preserved=True, preparation_lock_sha256=sha(DATA/'preparation_lock.json'),
         auditor_sha256=sha(Path(__file__)), independent_interpreter_sha256=sha(ROOT/'qa/independent_numeric_relations_dev23.py'),
         wall_seconds=time.perf_counter()-wall, final_validation_eligible=False, repair_performance_not_estimated=True))
