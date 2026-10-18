@@ -2,7 +2,7 @@
   "goal_status": "active",
   "resumed_on": "2026-10-18",
   "resume_reason": "User requested continuation after verified GitHub upload",
-  "previous_upload_commit": "0d3c1f0f6eac177e55310b6c8da69dea955caa92",
+  "previous_upload_commit": "7be04903b27999c8d738de2072db91ddc6c45bd6",
   "git_branch": "research/hybridguard-followup",
   "final_validation_complete": false,
   "public_candidate_audit_dev7": {
@@ -49,7 +49,7 @@
   "development_stress_dev2_wrong_correct_cells": 49,
   "development_stress_dev3_wrong_correct_cells": 0,
   "development_stress_pooled_acceptance_metric": false,
-  "unit_test_count": 192,
+  "unit_test_count": 196,
   "new_work_pushed": false,
   "source_readiness": "source_discovery/SOURCE_READINESS.json",
   "development_candidate_ready": false,
@@ -805,7 +805,7 @@
     "runtime": "development/candidate_learning_dev18_v1/runtime.json",
     "prediction_lock": "development/candidate_learning_dev18_v1/prediction_lock.json",
     "remaining_qa": null,
-    "upload_state": "48d4cbd implementation verified remotely; 4951a6e data push running",
+    "upload_state": "complete and independently verified 7be0490",
     "five_refits_reproduced": true,
     "complete_feature_replay_reproduced": true,
     "independently_checked_labels": 1861162,
@@ -827,7 +827,8 @@
         "file": "qa/CANDIDATE_LEARNING_DEV18_FEATURE_REPLAY_20261018.json",
         "sha256": "69278fdf8821f5ba2ad818983228265b4410e2eed6ec2bcfa5952107b19801c5"
       }
-    }
+    },
+    "upload_receipt": "qa/CANDIDATE_LEARNING_DEV18_UPLOAD_RECEIPT_20261018.json"
   },
   "signed_roles_dev19": {
     "plan": "SIGNED_ROLES_DEV19_PLAN_20261018.md",
@@ -841,5 +842,15 @@
     "initial_prototype_tests": 8,
     "availability_audit": "qa/SIGNED_ROLES_DEV19_AVAILABILITY_V2_20261018.json",
     "initial_availability": "qa/SIGNED_ROLES_DEV19_AVAILABILITY_V1_20261018.json"
+  },
+  "signed_learning_dev19": {
+    "plan": "SIGNED_LEARNING_DEV19_PLAN_20261018.md",
+    "feature_cases": 213,
+    "additional_features": 185,
+    "candidate_pool_changed": false,
+    "control": "frozen dev18 source-heldout experiment",
+    "state": "feature locked; five-origin training running",
+    "repair_metrics": null,
+    "final_validation_eligible": false
   }
 }

@@ -1,0 +1,860 @@
+{
+  "cases": [
+    {
+      "case": "regression/sparse_seed101",
+      "rows": 716
+    },
+    {
+      "case": "regression/clean_101",
+      "rows": 90
+    },
+    {
+      "case": "regression/sparse_seed202",
+      "rows": 1660
+    },
+    {
+      "case": "regression/clean_202",
+      "rows": 90
+    },
+    {
+      "case": "regression/sparse_seed303",
+      "rows": 3182
+    },
+    {
+      "case": "regression/clean_303",
+      "rows": 90
+    },
+    {
+      "case": "regression/systemic_seed404",
+      "rows": 117938
+    },
+    {
+      "case": "regression/clean_404",
+      "rows": 90
+    },
+    {
+      "case": "regression/systemic_seed505",
+      "rows": 72447
+    },
+    {
+      "case": "regression/clean_505",
+      "rows": 90
+    },
+    {
+      "case": "regression/systemic_seed606",
+      "rows": 113239
+    },
+    {
+      "case": "regression/clean_606",
+      "rows": 90
+    },
+    {
+      "case": "regression/length_1_101",
+      "rows": 142
+    },
+    {
+      "case": "regression/length_10_101",
+      "rows": 662
+    },
+    {
+      "case": "regression/length_100_101",
+      "rows": 5342
+    },
+    {
+      "case": "regression/length_500_101",
+      "rows": 26142
+    },
+    {
+      "case": "regression/length_1499_101",
+      "rows": 78038
+    },
+    {
+      "case": "regression/shared_101",
+      "rows": 78246
+    },
+    {
+      "case": "regression/single_101",
+      "rows": 15670
+    },
+    {
+      "case": "regression/heterogeneous_101",
+      "rows": 84034
+    },
+    {
+      "case": "regression/exception_101",
+      "rows": 15746
+    },
+    {
+      "case": "regression/length_1_202",
+      "rows": 142
+    },
+    {
+      "case": "regression/length_10_202",
+      "rows": 662
+    },
+    {
+      "case": "regression/length_100_202",
+      "rows": 5342
+    },
+    {
+      "case": "regression/length_500_202",
+      "rows": 26142
+    },
+    {
+      "case": "regression/length_1499_202",
+      "rows": 78038
+    },
+    {
+      "case": "regression/shared_202",
+      "rows": 78246
+    },
+    {
+      "case": "regression/single_202",
+      "rows": 15670
+    },
+    {
+      "case": "regression/heterogeneous_202",
+      "rows": 84034
+    },
+    {
+      "case": "regression/exception_202",
+      "rows": 15746
+    },
+    {
+      "case": "regression/length_1_303",
+      "rows": 142
+    },
+    {
+      "case": "regression/length_10_303",
+      "rows": 662
+    },
+    {
+      "case": "regression/length_100_303",
+      "rows": 5342
+    },
+    {
+      "case": "regression/length_500_303",
+      "rows": 26142
+    },
+    {
+      "case": "regression/length_1499_303",
+      "rows": 78038
+    },
+    {
+      "case": "regression/shared_303",
+      "rows": 78246
+    },
+    {
+      "case": "regression/single_303",
+      "rows": 15670
+    },
+    {
+      "case": "regression/heterogeneous_303",
+      "rows": 84034
+    },
+    {
+      "case": "regression/exception_303",
+      "rows": 15746
+    },
+    {
+      "case": "stress/c01",
+      "rows": 960
+    },
+    {
+      "case": "stress/c02",
+      "rows": 34
+    },
+    {
+      "case": "stress/c03",
+      "rows": 34
+    },
+    {
+      "case": "stress/c04",
+      "rows": 744
+    },
+    {
+      "case": "stress/c05",
+      "rows": 1056
+    },
+    {
+      "case": "stress/c06",
+      "rows": 1056
+    },
+    {
+      "case": "stress/c07",
+      "rows": 960
+    },
+    {
+      "case": "stress/c08",
+      "rows": 960
+    },
+    {
+      "case": "tradeoff/p01",
+      "rows": 960
+    },
+    {
+      "case": "tradeoff/p02",
+      "rows": 34
+    },
+    {
+      "case": "tradeoff/p03",
+      "rows": 960
+    },
+    {
+      "case": "tradeoff/p04",
+      "rows": 960
+    },
+    {
+      "case": "crossdomain/x11",
+      "rows": 0
+    },
+    {
+      "case": "crossdomain/x12",
+      "rows": 25
+    },
+    {
+      "case": "crossdomain/x13",
+      "rows": 600
+    },
+    {
+      "case": "crossdomain/x14",
+      "rows": 19
+    },
+    {
+      "case": "crossdomain/x15",
+      "rows": 19
+    },
+    {
+      "case": "crossdomain/x16",
+      "rows": 44
+    },
+    {
+      "case": "crossdomain/x17",
+      "rows": 3000
+    },
+    {
+      "case": "crossdomain/x18",
+      "rows": 70
+    },
+    {
+      "case": "crossdomain/x21",
+      "rows": 0
+    },
+    {
+      "case": "crossdomain/x22",
+      "rows": 18
+    },
+    {
+      "case": "crossdomain/x23",
+      "rows": 432
+    },
+    {
+      "case": "crossdomain/x24",
+      "rows": 12
+    },
+    {
+      "case": "crossdomain/x25",
+      "rows": 12
+    },
+    {
+      "case": "crossdomain/x26",
+      "rows": 30
+    },
+    {
+      "case": "crossdomain/x27",
+      "rows": 2160
+    },
+    {
+      "case": "crossdomain/x28",
+      "rows": 63
+    },
+    {
+      "case": "crossdomain/x31",
+      "rows": 0
+    },
+    {
+      "case": "crossdomain/x32",
+      "rows": 25
+    },
+    {
+      "case": "crossdomain/x33",
+      "rows": 600
+    },
+    {
+      "case": "crossdomain/x34",
+      "rows": 29
+    },
+    {
+      "case": "crossdomain/x35",
+      "rows": 29
+    },
+    {
+      "case": "crossdomain/x36",
+      "rows": 54
+    },
+    {
+      "case": "crossdomain/x37",
+      "rows": 3000
+    },
+    {
+      "case": "crossdomain/x38",
+      "rows": 70
+    },
+    {
+      "case": "crossdomain/x41",
+      "rows": 0
+    },
+    {
+      "case": "crossdomain/x42",
+      "rows": 25
+    },
+    {
+      "case": "crossdomain/x43",
+      "rows": 600
+    },
+    {
+      "case": "crossdomain/x44",
+      "rows": 19
+    },
+    {
+      "case": "crossdomain/x45",
+      "rows": 19
+    },
+    {
+      "case": "crossdomain/x46",
+      "rows": 44
+    },
+    {
+      "case": "crossdomain/x47",
+      "rows": 3000
+    },
+    {
+      "case": "crossdomain/x48",
+      "rows": 70
+    },
+    {
+      "case": "adversarial/a11",
+      "rows": 25
+    },
+    {
+      "case": "adversarial/a12",
+      "rows": 3000
+    },
+    {
+      "case": "adversarial/a13",
+      "rows": 25
+    },
+    {
+      "case": "adversarial/a14",
+      "rows": 600
+    },
+    {
+      "case": "adversarial/a15",
+      "rows": 600
+    },
+    {
+      "case": "adversarial/a16",
+      "rows": 50
+    },
+    {
+      "case": "adversarial/a21",
+      "rows": 18
+    },
+    {
+      "case": "adversarial/a22",
+      "rows": 2160
+    },
+    {
+      "case": "adversarial/a23",
+      "rows": 18
+    },
+    {
+      "case": "adversarial/a24",
+      "rows": 432
+    },
+    {
+      "case": "adversarial/a25",
+      "rows": 432
+    },
+    {
+      "case": "adversarial/a26",
+      "rows": 36
+    },
+    {
+      "case": "adversarial/a31",
+      "rows": 25
+    },
+    {
+      "case": "adversarial/a32",
+      "rows": 3000
+    },
+    {
+      "case": "adversarial/a33",
+      "rows": 25
+    },
+    {
+      "case": "adversarial/a34",
+      "rows": 600
+    },
+    {
+      "case": "adversarial/a35",
+      "rows": 600
+    },
+    {
+      "case": "adversarial/a36",
+      "rows": 50
+    },
+    {
+      "case": "adversarial/a41",
+      "rows": 25
+    },
+    {
+      "case": "adversarial/a42",
+      "rows": 2375
+    },
+    {
+      "case": "adversarial/a43",
+      "rows": 25
+    },
+    {
+      "case": "adversarial/a44",
+      "rows": 600
+    },
+    {
+      "case": "adversarial/a45",
+      "rows": 600
+    },
+    {
+      "case": "adversarial/a46",
+      "rows": 50
+    },
+    {
+      "case": "controlled_reconciliation/rc01_01",
+      "rows": 0
+    },
+    {
+      "case": "controlled_reconciliation/rc01_02",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc01_03",
+      "rows": 90
+    },
+    {
+      "case": "controlled_reconciliation/rc01_04",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc01_05",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc01_06",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc01_07",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc01_08",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc01_09",
+      "rows": 144
+    },
+    {
+      "case": "controlled_reconciliation/rc01_10",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_01",
+      "rows": 0
+    },
+    {
+      "case": "controlled_reconciliation/rc02_02",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_03",
+      "rows": 90
+    },
+    {
+      "case": "controlled_reconciliation/rc02_04",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_05",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_06",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_07",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_08",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc02_09",
+      "rows": 144
+    },
+    {
+      "case": "controlled_reconciliation/rc02_10",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_01",
+      "rows": 0
+    },
+    {
+      "case": "controlled_reconciliation/rc03_02",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_03",
+      "rows": 90
+    },
+    {
+      "case": "controlled_reconciliation/rc03_04",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_05",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_06",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_07",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_08",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc03_09",
+      "rows": 108
+    },
+    {
+      "case": "controlled_reconciliation/rc03_10",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_01",
+      "rows": 0
+    },
+    {
+      "case": "controlled_reconciliation/rc04_02",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_03",
+      "rows": 90
+    },
+    {
+      "case": "controlled_reconciliation/rc04_04",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_05",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_06",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_07",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_08",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc04_09",
+      "rows": 108
+    },
+    {
+      "case": "controlled_reconciliation/rc04_10",
+      "rows": 18
+    },
+    {
+      "case": "controlled_reconciliation/rc05_01",
+      "rows": 0
+    },
+    {
+      "case": "controlled_reconciliation/rc05_02",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc05_03",
+      "rows": 125
+    },
+    {
+      "case": "controlled_reconciliation/rc05_04",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc05_05",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc05_06",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc05_07",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc05_08",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc05_09",
+      "rows": 200
+    },
+    {
+      "case": "controlled_reconciliation/rc05_10",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_01",
+      "rows": 0
+    },
+    {
+      "case": "controlled_reconciliation/rc06_02",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_03",
+      "rows": 125
+    },
+    {
+      "case": "controlled_reconciliation/rc06_04",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_05",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_06",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_07",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_08",
+      "rows": 25
+    },
+    {
+      "case": "controlled_reconciliation/rc06_09",
+      "rows": 150
+    },
+    {
+      "case": "controlled_reconciliation/rc06_10",
+      "rows": 25
+    },
+    {
+      "case": "lcoe/annotation01",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation02",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation03",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation04",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation05",
+      "rows": 15703
+    },
+    {
+      "case": "lcoe/annotation06",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation07",
+      "rows": 15799
+    },
+    {
+      "case": "lcoe/annotation08",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation09",
+      "rows": 15703
+    },
+    {
+      "case": "lcoe/annotation10",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation11",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation12",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation13",
+      "rows": 15703
+    },
+    {
+      "case": "lcoe/annotation14",
+      "rows": 15699
+    },
+    {
+      "case": "lcoe/annotation15",
+      "rows": 15700
+    },
+    {
+      "case": "lcoe/annotation16",
+      "rows": 15699
+    },
+    {
+      "case": "multisource/ms01_01",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms01_02",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms01_03",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms01_04",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms01_05",
+      "rows": 677
+    },
+    {
+      "case": "multisource/ms01_06",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms01_07",
+      "rows": 685
+    },
+    {
+      "case": "multisource/ms01_08",
+      "rows": 677
+    },
+    {
+      "case": "multisource/ms01_09",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms01_10",
+      "rows": 673
+    },
+    {
+      "case": "multisource/ms02_01",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms02_02",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms02_03",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms02_04",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms02_05",
+      "rows": 194
+    },
+    {
+      "case": "multisource/ms02_06",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms02_07",
+      "rows": 202
+    },
+    {
+      "case": "multisource/ms02_08",
+      "rows": 193
+    },
+    {
+      "case": "multisource/ms02_09",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms02_10",
+      "rows": 190
+    },
+    {
+      "case": "multisource/ms03_01",
+      "rows": 33847
+    },
+    {
+      "case": "multisource/ms03_02",
+      "rows": 33847
+    },
+    {
+      "case": "multisource/ms03_03",
+      "rows": 33858
+    },
+    {
+      "case": "multisource/ms03_04",
+      "rows": 33847
+    },
+    {
+      "case": "multisource/ms03_05",
+      "rows": 33851
+    },
+    {
+      "case": "multisource/ms03_06",
+      "rows": 34238
+    },
+    {
+      "case": "multisource/ms03_07",
+      "rows": 33859
+    },
+    {
+      "case": "multisource/ms03_08",
+      "rows": 33851
+    },
+    {
+      "case": "multisource/ms03_09",
+      "rows": 33857
+    },
+    {
+      "case": "multisource/ms03_10",
+      "rows": 33858
+    }
+  ],
+  "cpu_seconds": 196.757693695,
+  "gpu_used": false,
+  "scope": "role features only; base candidates/upstream costs excluded",
+  "wall_seconds": 196.80733401399993
+}
