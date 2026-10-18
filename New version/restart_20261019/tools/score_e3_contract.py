@@ -7,9 +7,9 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-RUNS = ROOT / 'e3_contract_v1/outputs'
-EXPECTED = ROOT / 'e3_contract_v1/scoring/expected.json'
-LOCK = ROOT / 'e3_contract_v1/input_lock.json'
+RUNS = ROOT / 'e3_contract_v2/outputs'
+EXPECTED = ROOT / 'e3_contract_v2/scoring/expected.json'
+LOCK = ROOT / 'e3_contract_v2/input_lock.json'
 
 
 def sha(path):
@@ -23,6 +23,8 @@ def main():
         raise SystemExit('Locked score key changed')
     if sha(ROOT / 'tools/e3_contract.py') != lock['implementation_sha256']:
         raise SystemExit('Frozen implementation changed after input lock')
+    if sha(ROOT / 'tools/batch_runner.py') != lock['runner_sha256']:
+        raise SystemExit('Frozen batch runner changed after input lock')
     observed_hashes = {}
     summaries = {}
     for workers in (1, 8):
