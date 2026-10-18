@@ -1,0 +1,62 @@
+{
+  "schema": "hybridguard-batch-runtime-v1",
+  "created_utc": "2026-10-18T19:49:29.372853+00:00",
+  "manifest_sha256": "47f105fb3dcd78ab17aa7ee106453b2fc98aa6e360652055350523a1ca8eeab4",
+  "task_count": 2,
+  "worker_count": 8,
+  "numeric_library_thread_limit": 1,
+  "requested_worker_count": 8,
+  "available_memory_bytes_at_start": 15069294592,
+  "memory_budget_bytes_at_start": 10548506214,
+  "estimated_worker_memory_mib": 1024,
+  "memory_limit_note": "admission estimate, not a hard OS memory limit",
+  "wall_seconds": 0.5182700650038896,
+  "child_cpu_seconds": 0.74,
+  "cpu_accounting_complete": true,
+  "aggregate_peak_rss_bytes_sampled": 104914944,
+  "throughput_tasks_per_second": 3.858991933066769,
+  "speedup_vs_one_worker": null,
+  "all_tasks_complete": true,
+  "tasks": [
+    {
+      "id": "flares",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_export/flares_before.xlsx",
+        "--output",
+        "prediction.json"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_run/tasks/flares",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.5153601019992493,
+      "child_cpu_seconds": 0.45,
+      "child_peak_rss_bytes": 50753536,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_run/tasks/flares/combined.log",
+      "output_sha256": {
+        "prediction.json": "d7b910ca77c8c3eef7b5d6a63ede59916772d5dc9e817dafd1a5509a089a848f"
+      }
+    },
+    {
+      "id": "oxidizers",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_export/oxidizers_before.xlsx",
+        "--output",
+        "prediction.json"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_run/tasks/oxidizers",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.31485932000214234,
+      "child_cpu_seconds": 0.29000000000000004,
+      "child_peak_rss_bytes": 50712576,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/xlsx_run/tasks/oxidizers/combined.log",
+      "output_sha256": {
+        "prediction.json": "b076e04aed4a4c9898c66d71ad8438f22a1e6355f8f78f4c60c2a0b44d4f0b27"
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 本目录承接用户2026-10-19确认的新研究顺序。先读[论文输入审计](PAPER_INPUT_AUDIT.md)、[历史失败复盘](FAILURE_REVIEW.md)与[研究协议](RESEARCH_PROTOCOL.md)，当前完成程度见[STATUS.md](STATUS.md)。原模型及旧实验保持只读，`/home/ayaka/code`未修改。
 
-目前完成：原论文输入边界复核、dev32独立指标审计与拒绝采纳、dev33原表预测/重放及修订对资格审查、真实xlsx只读推理接口、默认8工作进程批处理、1/4/8输出一致性与资源测量。自然开发三来源/两机制、自然正例修复和最终三类双90%尚未完成；数据不足时不继续调旧合成开发集。
+目前完成：原论文输入边界复核、dev32独立指标审计与拒绝采纳、dev33资格审查、真实xlsx只读推理和默认8工作进程批处理。自然开发证据来自cv-500、EPA、Tuxprogrammer/msu_ece4723三个独立来源，至少4个模板家族和3类错误机制；满足有限开发实验准入，但不等于最终验证充分或准确率达标。原模型和dev11仍冻结。首轮E1-E3结果见`E1_E3_RESULTS.md`。
 
 ## 运行单个工作簿
 
@@ -38,8 +38,12 @@ cd '/home/ayaka/hybridguard/New version/restart_20261019'
 - `DEV32_EXACT_MATCH_SCORE.json`：保留原论文含等号全文本精确匹配口径；不能把关系等价分数混称原论文分数。
 - `../followup_20261014/development/natural_weights_dev33_v1/`：原表锁、重放、修订取得回执、双解析器和布局审计；未认证任何自然错误。原文件和含第三方正文的差异留本地，git忽略。
 - `source_evidence/EPA_ERRATA_RECEIPT.json`：3份官方勘误的URL与哈希；文档不是可评分原始/修订工作簿对。
-- `EPA_ERRATA_FOLLOWUP.md`：勘误中披露的具体工作簿名和公式地址、当前文件追索结果及证据边界。EPA自然样本当前仍是0。
+- `EPA_ERRATA_FOLLOWUP.md`：较早的EPA文件追索记录；后续取得的历史版本对和更新后的逐格资格以`EPA_PAIR_AUDIT.md`为准。
 - `source_evidence/NATURAL_REVISION_SEARCH.json`：3个成功查询、18个提交细查、5个含工作簿变化的提交；新增路径、删表、计算兼容错误和AI生成来源不能自动视为自然静默公式错误。
 - `STAMPZ_SEMANTIC_AUDIT.md`：StampZ原/修订版98个Hue公式存在一致的+5行偏移且修订改为同行；因原表输入和结果均为空，只记公式级候选，不能计准确率、覆盖率或自然来源准入数。原件未提交且全来源排除最终验证。
+- `EPA_PAIR_AUDIT.md`：官方EPA历史版本的格式失败、揭示顺序和逐格证据边界；认证Flares!B39:B43及Oxidizers!D36。
+- `METRICS_PAIR_AUDIT.md`：Software Metrics 28个非空数据行求和遗漏候选、冻结模型预测及替代公式未知状态；原始工作簿不公开。
+- `E1_E3_RESULTS.md`：首轮E1冻结基线评分和独立Calc执行复核、E2停止决定、E3业务说明路线准入条件。E1复算工具为`tools/score_e1_metrics.py`，Calc核验为`tools/verify_e1_calc.py`；结果是已揭示开发审计，不是盲测。
+- `E1_E3_PREREGISTRATION.md`：首轮有限实验的问题、控制、指标与停止条件。实现和阈值冻结，实验开始前须补齐标签。
 
 新运行器测试：`python -m unittest discover -s tools -p 'test_*.py' -v`。这4项覆盖输出隔离、线程限制、失败/超时保留、路径与重名校验和已有证据保护。历史研究321项测试的记录在dev32审计中核对，本轮没有将其冒称为重新运行。

@@ -1,0 +1,14 @@
+{
+  "status": "failed",
+  "exception": "zipfile.BadZipFile: Bad magic number for file header",
+  "cause": "writestr mutated shared ZipInfo header offsets during export verification",
+  "original_source_sha256": {
+    "oxidizers_before.xlsm": "c26eacc3c37652840f0172df3131b93d44a0f87863c306688506cdf564df9ad2",
+    "flares_before.xlsm": "535f6da7b450586f4b22f6e7c8a500666ec50bd6361d0be335ddcb2bbeefa6e9"
+  },
+  "script_sha256": "0b26f3868c0a8b7ee96fc35630a34eaed9c129d7c17d4a3638dce72de4cb21ab",
+  "failed_export_sha256": {
+    "flares_before.xlsx": "e4fa032f39dd78aa1c8dc5b35912319c106f6d8672ae3b0ba3a00b14fd0dc7cd"
+  },
+  "final_validation_eligible": false
+}

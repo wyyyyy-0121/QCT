@@ -1,0 +1,3748 @@
+{
+  "experiment": "E1 frozen baseline; fixed original inputs and dependencies",
+  "final_validation_eligible": false,
+  "labels_read_by_predictor": [],
+  "limits": "Local arithmetic/dependency audit only. Formula defects with zero current effect are separate; all unknown/unscored model suggestions remain unscored. No new model or rule evaluated.",
+  "pair_change_counts": {
+    "formula_changed": 188,
+    "nonformula_changed": 26
+  },
+  "precision_all_suggestions": null,
+  "prediction_lock_verified": true,
+  "prediction_sha256": "4decc6618163198565d220e626219ee1b64a6b8db1dcf081605c9d72fbb1ec4f",
+  "records": [
+    {
+      "cell": "Indiv!B16",
+      "corrected_value_on_original_inputs": "213",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "181",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": false,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": false,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "204"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!C16",
+      "corrected_value_on_original_inputs": "9386",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "8712",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": false,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": false,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "9172"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!E16",
+      "corrected_value_on_original_inputs": "9",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "8",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": false,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "9"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!F16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "1"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!I16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "1"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!K16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": false,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "1"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!L16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "1"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!M16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "1"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!P16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "1"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!S16",
+      "corrected_value_on_original_inputs": "2",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "2",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "2"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "0"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Indiv!W16",
+      "corrected_value_on_original_inputs": "2",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "review"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "2",
+      "paper": {
+        "changed_suggestion": true,
+        "correct_on_current_original_inputs": true,
+        "equals_corrected_dependency_closure": false,
+        "equals_original_dependency_closure": true,
+        "exact_revision_match": false,
+        "execution": "supported",
+        "status": "local_anomaly",
+        "value": "2"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab2!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!F16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!I16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!P16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!S16",
+      "corrected_value_on_original_inputs": "2",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "2",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab2!W16",
+      "corrected_value_on_original_inputs": "2",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "2",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab3!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!B16",
+      "corrected_value_on_original_inputs": "49",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "41",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab4!C16",
+      "corrected_value_on_original_inputs": "2705",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "2523",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab4!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!E16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab4!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab4!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!B16",
+      "corrected_value_on_original_inputs": "35",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "34",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab5!C16",
+      "corrected_value_on_original_inputs": "818",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "786",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": true,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab5!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!E16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "formula_defect_candidate",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": true
+    },
+    {
+      "cell": "Lab5!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab5!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!L16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!M16",
+      "corrected_value_on_original_inputs": "1",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "1",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab6!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!B16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!C16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!E16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab7!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!B16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!C16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!E16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab8!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!B16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!C16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!D16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!E16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!F16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!G16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!H16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!I16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!J16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!K16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!L16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!M16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!N16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!O16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!P16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!Q16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!R16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!S16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!T16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!U16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!V16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    },
+    {
+      "cell": "Lab9!W16",
+      "corrected_value_on_original_inputs": "0",
+      "dev11": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "abstain"
+      },
+      "execution": "supported",
+      "label": "blank_boundary_control",
+      "original_value": "0",
+      "paper": {
+        "changed_suggestion": false,
+        "exact_revision_match": false,
+        "status": "low_risk"
+      },
+      "realized_output_error": false,
+      "row15_present": false
+    }
+  ],
+  "scorer_sha256": "d1798db6f7f9c1e4bbe55d1e736ee3f1202f5db7f9766c8c92a944ed80be2433",
+  "source_hashes": {
+    "after": "136ecef00c3f1d3ef96060f4c417a80f91a83f94b6334d912d10658a0942d3f2",
+    "before": "5cab96858662902fc2487d8b67c4915d12642043c9923bfdbb61f98fafe4b402"
+  },
+  "summary": {
+    "dev11": {
+      "blank_boundary_control": {
+        "cells": 160,
+        "changed_suggestions": 0,
+        "correct_suggestions_on_realized_errors": 0,
+        "equivalent_corrected_formula_suggestions": 0,
+        "exact_revision_matches": 0,
+        "execution_unknown": 0,
+        "realized_output_errors": 0,
+        "suggestions_equal_original_closure": 0
+      },
+      "formula_defect_candidate": {
+        "cells": 28,
+        "changed_suggestions": 0,
+        "correct_suggestions_on_realized_errors": 0,
+        "equivalent_corrected_formula_suggestions": 0,
+        "exact_revision_matches": 0,
+        "execution_unknown": 0,
+        "realized_output_errors": 8,
+        "suggestions_equal_original_closure": 0
+      }
+    },
+    "paper": {
+      "blank_boundary_control": {
+        "cells": 160,
+        "changed_suggestions": 0,
+        "correct_suggestions_on_realized_errors": 0,
+        "equivalent_corrected_formula_suggestions": 0,
+        "exact_revision_matches": 0,
+        "execution_unknown": 0,
+        "realized_output_errors": 0,
+        "suggestions_equal_original_closure": 0
+      },
+      "formula_defect_candidate": {
+        "cells": 28,
+        "changed_suggestions": 22,
+        "correct_suggestions_on_realized_errors": 2,
+        "equivalent_corrected_formula_suggestions": 0,
+        "exact_revision_matches": 0,
+        "execution_unknown": 0,
+        "realized_output_errors": 8,
+        "suggestions_equal_original_closure": 18
+      }
+    }
+  }
+}

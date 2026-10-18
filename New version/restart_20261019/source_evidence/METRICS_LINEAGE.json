@@ -1,0 +1,49 @@
+{
+  "origin": "Tuxprogrammer/msu_ece4723",
+  "commit": "fd7989d612307a970c638d7d5a926058d916667b",
+  "parent": "57dd06e17074babe14c3201de9730f1355c1981a",
+  "workbook_path": "lab_6/docs/team_sw_metric.xlsx",
+  "requests": [
+    {
+      "name": "repository",
+      "url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723",
+      "acquired_utc": "2026-10-18T19:47:25.320823+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "name": "before_tree",
+      "url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723/git/trees/57dd06e17074babe14c3201de9730f1355c1981a?recursive=1",
+      "acquired_utc": "2026-10-18T19:47:25.322392+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "name": "after_tree",
+      "url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723/git/trees/fd7989d612307a970c638d7d5a926058d916667b?recursive=1",
+      "acquired_utc": "2026-10-18T19:47:25.323095+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "name": "license",
+      "url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723/license?ref=fd7989d612307a970c638d7d5a926058d916667b",
+      "acquired_utc": "2026-10-18T19:47:25.323449+00:00",
+      "ok": false,
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "versions": {
+    "before_tree": [],
+    "after_tree": []
+  },
+  "repository_metadata": {
+    "fork": null,
+    "license": null,
+    "description": null,
+    "parent": null
+  },
+  "workbook_bodies_acquired": false,
+  "final_validation_eligible": false,
+  "natural_errors_certified": 0
+}

@@ -1,0 +1,105 @@
+{
+  "all_agree": true,
+  "final_validation_eligible": false,
+  "input_lock_sha256": "4ecdb9c36f323e305616b39ce9abe26d774f1b6882fde917af56ed15417b047c",
+  "note": "Independent Calc on copies; original scalar inputs fixed; macros/links disabled; no saved Calc workbook, no model changed, 3 tasks do not establish 8-worker speedup.",
+  "runtime": {
+    "aggregate_peak_rss_bytes_sampled": 774275072,
+    "all_tasks_complete": true,
+    "available_memory_bytes_at_start": 15053180928,
+    "child_cpu_seconds": 8.78,
+    "cpu_accounting_complete": true,
+    "created_utc": "2026-10-18T20:09:05.417515+00:00",
+    "estimated_worker_memory_mib": 1024,
+    "manifest_sha256": "1f5ff5b65351465216e57404b8f1109360c0936340b034b72c98d46fe2c51072",
+    "memory_budget_bytes_at_start": 10537226649,
+    "memory_limit_note": "admission estimate, not a hard OS memory limit",
+    "numeric_library_thread_limit": 1,
+    "requested_worker_count": 8,
+    "schema": "hybridguard-batch-runtime-v1",
+    "speedup_vs_one_worker": null,
+    "task_count": 3,
+    "tasks": [
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "/home/ayaka/hybridguard/New version/followup_20261014/scripts/libreoffice_reference_worker.py",
+          "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/corrected_request.json",
+          "result.json"
+        ],
+        "child_cpu_seconds": 2.93,
+        "child_peak_rss_bytes": 210448384,
+        "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/run/tasks/corrected",
+        "id": "corrected",
+        "log": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/run/tasks/corrected/combined.log",
+        "output_sha256": {
+          "result.json": "7c10b7eca2aa53602b800f7eca87e2ff382fade4d159816f62d894ac3e6a9de2"
+        },
+        "returncode": 0,
+        "status": "complete",
+        "wall_seconds": 3.824287325995101
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "/home/ayaka/hybridguard/New version/followup_20261014/scripts/libreoffice_reference_worker.py",
+          "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/original_request.json",
+          "result.json"
+        ],
+        "child_cpu_seconds": 2.9299999999999997,
+        "child_peak_rss_bytes": 209502208,
+        "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/run/tasks/original",
+        "id": "original",
+        "log": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/run/tasks/original/combined.log",
+        "output_sha256": {
+          "result.json": "18874a5586a990de7530c17189380955beb1a0734b359a1f0f1aa2c6d3fc4453"
+        },
+        "returncode": 0,
+        "status": "complete",
+        "wall_seconds": 3.824029356997926
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "/home/ayaka/hybridguard/New version/followup_20261014/scripts/libreoffice_reference_worker.py",
+          "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/paper_suggestions_request.json",
+          "result.json"
+        ],
+        "child_cpu_seconds": 2.92,
+        "child_peak_rss_bytes": 208302080,
+        "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/run/tasks/paper_suggestions",
+        "id": "paper_suggestions",
+        "log": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/calc_audit/run/tasks/paper_suggestions/combined.log",
+        "output_sha256": {
+          "result.json": "496de3f7ab4443a8ed297c1f745f785ad343ecaa72719176828d4ce052d75082"
+        },
+        "returncode": 0,
+        "status": "complete",
+        "wall_seconds": 3.8227135429988266
+      }
+    ],
+    "throughput_tasks_per_second": 0.783184505908762,
+    "wall_seconds": 3.8305150029991637,
+    "worker_count": 8
+  },
+  "variants": {
+    "corrected": {
+      "agreements": 188,
+      "compared": 188,
+      "failures": [],
+      "result_sha256": "7c10b7eca2aa53602b800f7eca87e2ff382fade4d159816f62d894ac3e6a9de2"
+    },
+    "original": {
+      "agreements": 188,
+      "compared": 188,
+      "failures": [],
+      "result_sha256": "18874a5586a990de7530c17189380955beb1a0734b359a1f0f1aa2c6d3fc4453"
+    },
+    "paper_suggestions": {
+      "agreements": 188,
+      "compared": 188,
+      "failures": [],
+      "result_sha256": "496de3f7ab4443a8ed297c1f745f785ad343ecaa72719176828d4ce052d75082"
+    }
+  }
+}

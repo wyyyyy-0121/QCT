@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/ayaka/hybridguard/.venv/bin/python",
+    "/home/ayaka/hybridguard/New version/restart_20261019/tools/batch_runner.py",
+    "--manifest",
+    "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/epa_pairs/manifest.jsonl",
+    "--output-dir",
+    "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/epa_pairs/original_run",
+    "--workers",
+    "8",
+    "--worker-memory-mib",
+    "1024",
+    "--timeout",
+    "300"
+  ],
+  "returncode": 1,
+  "stdout": "flares failed wall=0.21s\noxidizers failed wall=0.21s\n{\n  \"task_count\": 2,\n  \"worker_count\": 8,\n  \"wall_seconds\": 0.21763674000249011,\n  \"child_cpu_seconds\": 0.32,\n  \"aggregate_peak_rss_bytes_sampled\": 103510016,\n  \"throughput_tasks_per_second\": 0.0,\n  \"all_tasks_complete\": false\n}\n",
+  "stderr": ""
+}

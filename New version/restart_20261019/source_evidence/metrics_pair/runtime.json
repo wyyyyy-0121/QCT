@@ -1,0 +1,42 @@
+{
+  "schema": "hybridguard-batch-runtime-v1",
+  "created_utc": "2026-10-18T19:54:30.333226+00:00",
+  "manifest_sha256": "0ecd09c4aac1fe2e273cebfa8cdd90736c6eabd87aec5ea106f22386d4096c96",
+  "task_count": 1,
+  "worker_count": 8,
+  "numeric_library_thread_limit": 1,
+  "requested_worker_count": 8,
+  "available_memory_bytes_at_start": 15057219584,
+  "memory_budget_bytes_at_start": 10540053708,
+  "estimated_worker_memory_mib": 1024,
+  "memory_limit_note": "admission estimate, not a hard OS memory limit",
+  "wall_seconds": 0.9692678689971217,
+  "child_cpu_seconds": 0.9500000000000001,
+  "cpu_accounting_complete": true,
+  "aggregate_peak_rss_bytes_sampled": 73203712,
+  "throughput_tasks_per_second": 1.0317065405610486,
+  "speedup_vs_one_worker": null,
+  "all_tasks_complete": true,
+  "tasks": [
+    {
+      "id": "metrics",
+      "argv": [
+        "/home/ayaka/hybridguard/.venv/bin/python",
+        "/home/ayaka/hybridguard/New version/restart_20261019/tools/predict_workbook.py",
+        "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/before.xlsx",
+        "--output",
+        "prediction.json"
+      ],
+      "cwd": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/original_run/tasks/metrics",
+      "status": "complete",
+      "returncode": 0,
+      "wall_seconds": 0.9665643059997819,
+      "child_cpu_seconds": 0.9500000000000001,
+      "child_peak_rss_bytes": 79560704,
+      "log": "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/metrics_pair/original_run/tasks/metrics/combined.log",
+      "output_sha256": {
+        "prediction.json": "4decc6618163198565d220e626219ee1b64a6b8db1dcf081605c9d72fbb1ec4f"
+      }
+    }
+  ]
+}

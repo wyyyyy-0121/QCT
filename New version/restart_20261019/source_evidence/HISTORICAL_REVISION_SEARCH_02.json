@@ -1,0 +1,532 @@
+{
+  "queries": [
+    {
+      "url": "https://api.github.com/search/commits?q=repo%3ATuxprogrammer%2Fmsu_ece4723+%22formula%22&per_page=20",
+      "acquired_utc": "2026-10-18T19:45:11.965849+00:00",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=repo%3ATuxprogrammer%2Fmsu_ece4723+%22formula%22&per_page=20",
+      "ok": true,
+      "bytes": 7954,
+      "sha256": "85f6b6bf91bfaa228ed9d56a45c1907cd618e73ed74769ae974bbaf9d3855b18",
+      "query": "repo:Tuxprogrammer/msu_ece4723 \"formula\"",
+      "total_count": 1
+    },
+    {
+      "url": "https://api.github.com/search/commits?q=%22fix+formula%22+xlsx+committer-date%3A%3C2023-01-01&per_page=20",
+      "acquired_utc": "2026-10-18T19:45:12.618552+00:00",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=%22fix+formula%22+xlsx+committer-date%3A%3C2023-01-01&per_page=20",
+      "ok": true,
+      "bytes": 133746,
+      "sha256": "7749372ef33d62f88dde97a97138bf575a08ab95cc65de2777e37e3e6ebe5c31",
+      "query": "\"fix formula\" xlsx committer-date:<2023-01-01",
+      "total_count": 45
+    }
+  ],
+  "unique_search_hits": 21,
+  "inspected": [
+    {
+      "origin": "Tuxprogrammer/msu_ece4723",
+      "sha": "fd7989d612307a970c638d7d5a926058d916667b",
+      "url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723/commits/fd7989d612307a970c638d7d5a926058d916667b",
+      "message": "Fix software metrics spreadsheet formula bug",
+      "request": {
+        "url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723/commits/fd7989d612307a970c638d7d5a926058d916667b",
+        "acquired_utc": "2026-10-18T19:45:14.287305+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/Tuxprogrammer/msu_ece4723/commits/fd7989d612307a970c638d7d5a926058d916667b",
+        "ok": true,
+        "bytes": 5226,
+        "sha256": "23d8665fdaa19a6dc6cf4d867449e9e68c4751b57cd4a0639ccbe949af141bee"
+      },
+      "parents": [
+        "57dd06e17074babe14c3201de9730f1355c1981a"
+      ],
+      "workbook_paths": [
+        {
+          "path": "lab_6/docs/team_sw_metric.xlsx",
+          "status": "modified",
+          "sha": "f90b46de946b7a0e08e67a56ce683cc2b4bb13f5",
+          "previous_path": null
+        },
+        {
+          "path": "lab_6/docs/~$team_sw_metric.xlsx",
+          "status": "removed",
+          "sha": "5511bdfa271489f14d46a199bcfef595aeb5a6c8",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "skalogryz/chelper",
+      "sha": "5b51e855961e7b34c4276ec5358f9860db38cf5a",
+      "url": "https://api.github.com/repos/skalogryz/chelper/commits/5b51e855961e7b34c4276ec5358f9860db38cf5a",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.",
+      "request": {
+        "url": "https://api.github.com/repos/skalogryz/chelper/commits/5b51e855961e7b34c4276ec5358f9860db38cf5a",
+        "acquired_utc": "2026-10-18T19:45:14.287746+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/skalogryz/chelper/commits/5b51e855961e7b34c4276ec5358f9860db38cf5a",
+        "ok": true,
+        "bytes": 1652,
+        "sha256": "240c663cbd88ef04c3487672a3038e931ada4d68b689f1b8f88ddeb2da9d31bf"
+      },
+      "parents": [
+        "313cc879aa20f576fb5fe28ee35d4e17196a6a6d"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "cutec-chris/richmemo",
+      "sha": "185982bbdbf59b724eae1bacccc3fdc5acf54941",
+      "url": "https://api.github.com/repos/cutec-chris/richmemo/commits/185982bbdbf59b724eae1bacccc3fdc5acf54941",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.",
+      "request": {
+        "url": "https://api.github.com/repos/cutec-chris/richmemo/commits/185982bbdbf59b724eae1bacccc3fdc5acf54941",
+        "acquired_utc": "2026-10-18T19:45:14.288115+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/cutec-chris/richmemo/commits/185982bbdbf59b724eae1bacccc3fdc5acf54941",
+        "ok": true,
+        "bytes": 1673,
+        "sha256": "f028ad1503559dd284914755a0b84400777567eeeb172b9517c116ef0303814d"
+      },
+      "parents": [
+        "ced0e96636bd3158ef36963df45ffec45fb9a6a0"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "MarkPflug/Sylvan.Data.Excel",
+      "sha": "9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+      "url": "https://api.github.com/repos/MarkPflug/Sylvan.Data.Excel/commits/9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+      "message": "Beta 2 (#1)\n\n* Fix formula reading code.\r\n* Clean up and fix unit tests.\r\n* Fix worksheet names for xlsx\r\n* Fix formatting for xlsx.\r\n* Add github action to build and test.\r\n* Disable tests requiring external data.\r\n* fix file casing for linux.",
+      "request": {
+        "url": "https://api.github.com/repos/MarkPflug/Sylvan.Data.Excel/commits/9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+        "acquired_utc": "2026-10-18T19:45:14.288365+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/MarkPflug/Sylvan.Data.Excel/commits/9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+        "ok": true,
+        "bytes": 48121,
+        "sha256": "0430111b427d745c0af3698f815c2645004b1d9a2163d0f42e5cfc32175f9667"
+      },
+      "parents": [
+        "79b41cf9c9827091c936f0403d4658f44075b329"
+      ],
+      "workbook_paths": [
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xls/DateTime.xls",
+          "status": "renamed",
+          "sha": "1918a8554e7cc3ea46361daf3901b14c219765e5",
+          "previous_path": "source/Sylvan.Data.Excel.Tests/Data/Xls/datetime.xls"
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xls/Func.xls",
+          "status": "renamed",
+          "sha": "3df06d4986e22323c0b978c4af033f24da8472d0",
+          "previous_path": "source/Sylvan.Data.Excel.Tests/Data/Xls/func.xls"
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xls/Gap.xls",
+          "status": "renamed",
+          "sha": "92f8389dc434a3bf510eaf42dda2268016327979",
+          "previous_path": "source/Sylvan.Data.Excel.Tests/Data/Xls/gap.xls"
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xls/MultiSheet.xls",
+          "status": "renamed",
+          "sha": "9b84294bcea41ea469cff6354e85e93c73427c41",
+          "previous_path": "source/Sylvan.Data.Excel.Tests/Data/Xls/multiSheet.xls"
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xls/Test.xls",
+          "status": "renamed",
+          "sha": "65ea9c9cdea814e63150ff2e2d8a45d03e055005",
+          "previous_path": "source/Sylvan.Data.Excel.Tests/Data/Xls/test.xls"
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/Big.xlsx",
+          "status": "added",
+          "sha": "06eaaa8be0c29fb7dc135ac1c0eaa18144b421ea",
+          "previous_path": null
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/DateTime.xlsx",
+          "status": "added",
+          "sha": "09529e336ce88a83f3e6c745cbef84ec1f75c2f8",
+          "previous_path": null
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/Func.xlsx",
+          "status": "added",
+          "sha": "a7c6d2be9e7e65221bbd650a24a0e4fa398dc57c",
+          "previous_path": null
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/Gap.xlsx",
+          "status": "added",
+          "sha": "b2aed4d0daca3dd55f03b6b7ab3c4226d8b9f883",
+          "previous_path": null
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/MultiSheet.xlsx",
+          "status": "added",
+          "sha": "22a9c20b87c31987214e9689425ec7d0da536b80",
+          "previous_path": null
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/Numbers.xlsx",
+          "status": "added",
+          "sha": "ab3b7d8150d36646e8967e40aed30d406d35df34",
+          "previous_path": null
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/Test.xlsx",
+          "status": "renamed",
+          "sha": "fd5113eaddfec681af44f39d17049e96aa8acfc6",
+          "previous_path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/test.xlsx"
+        },
+        {
+          "path": "source/Sylvan.Data.Excel.Tests/Data/Xlsx/func.xlsx",
+          "status": "removed",
+          "sha": "1570cc07cdd5beb3207f8ff7cfd242437a0db391",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "tcs-ulli/fpspreadsheet",
+      "sha": "623688ec2de566dff5833fc8ab4e5462ca8c1637",
+      "url": "https://api.github.com/repos/tcs-ulli/fpspreadsheet/commits/623688ec2de566dff5833fc8ab4e5462ca8c1637",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.",
+      "request": {
+        "url": "https://api.github.com/repos/tcs-ulli/fpspreadsheet/commits/623688ec2de566dff5833fc8ab4e5462ca8c1637",
+        "acquired_utc": "2026-10-18T19:45:14.288663+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/tcs-ulli/fpspreadsheet/commits/623688ec2de566dff5833fc8ab4e5462ca8c1637",
+        "ok": true,
+        "bytes": 13378,
+        "sha256": "c46ae1dbe54b1fcc7e00b660807c32e04d9e3436ce4c4a4455387112aae2ac61"
+      },
+      "parents": [
+        "df1eae69109be66ff356bb0ce43473487908ad51"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "pedroc191/xlsx-style-formula",
+      "sha": "9eccd226495c9bb6b556e0e15eb0bf022051867f",
+      "url": "https://api.github.com/repos/pedroc191/xlsx-style-formula/commits/9eccd226495c9bb6b556e0e15eb0bf022051867f",
+      "message": "Fix Formula XLSX",
+      "request": {
+        "url": "https://api.github.com/repos/pedroc191/xlsx-style-formula/commits/9eccd226495c9bb6b556e0e15eb0bf022051867f",
+        "acquired_utc": "2026-10-18T19:45:14.289449+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/pedroc191/xlsx-style-formula/commits/9eccd226495c9bb6b556e0e15eb0bf022051867f",
+        "ok": true,
+        "bytes": 4816,
+        "sha256": "ed24b3be62021237110fc4a0602da9d04b39e35c85cdca8e1a3cc8e63e08b8c4"
+      },
+      "parents": [
+        "0aa4fd9d14351f5f316d0c32d9c8e1ab0b64b797"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "veb86/fpspreadsheet",
+      "sha": "13580434348288379f477acadc70175d22de119f",
+      "url": "https://api.github.com/repos/veb86/fpspreadsheet/commits/13580434348288379f477acadc70175d22de119f",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn/components/fpspreadsheet@4058 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "request": {
+        "url": "https://api.github.com/repos/veb86/fpspreadsheet/commits/13580434348288379f477acadc70175d22de119f",
+        "acquired_utc": "2026-10-18T19:45:14.290828+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/veb86/fpspreadsheet/commits/13580434348288379f477acadc70175d22de119f",
+        "ok": true,
+        "bytes": 13445,
+        "sha256": "d289db1ceb9e037bf5e982414d7617804cd3fb1d155d6c4acbe57946915207f6"
+      },
+      "parents": [
+        "84e47035c3a38398b2638d99147a017ced1a448c"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "cuba-platform/yarg",
+      "sha": "e5e562bc1c7a764a5b9990ec0bb5a3e5f089f8c0",
+      "url": "https://api.github.com/repos/cuba-platform/yarg/commits/e5e562bc1c7a764a5b9990ec0bb5a3e5f089f8c0",
+      "message": "Fix formula  issue with empty cells in xlsx",
+      "request": {
+        "url": "https://api.github.com/repos/cuba-platform/yarg/commits/e5e562bc1c7a764a5b9990ec0bb5a3e5f089f8c0",
+        "acquired_utc": "2026-10-18T19:45:14.291443+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/cuba-platform/yarg/commits/e5e562bc1c7a764a5b9990ec0bb5a3e5f089f8c0",
+        "ok": true,
+        "bytes": 4644,
+        "sha256": "06b2a1a813aa1c708de526bcf8ae1f34200b6f3eb761c7cae71654d157af6d29"
+      },
+      "parents": [
+        "0c1f9cd4be3c552eff308db1f7f220967934a485"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "cuba-platform/yarg",
+      "sha": "0c1f9cd4be3c552eff308db1f7f220967934a485",
+      "url": "https://api.github.com/repos/cuba-platform/yarg/commits/0c1f9cd4be3c552eff308db1f7f220967934a485",
+      "message": "Fix formula  issue with empty cells in xlsx",
+      "request": {
+        "url": "https://api.github.com/repos/cuba-platform/yarg/commits/0c1f9cd4be3c552eff308db1f7f220967934a485",
+        "acquired_utc": "2026-10-18T19:45:14.909048+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "svn2github/lazarus-ccr",
+      "sha": "beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "url": "https://api.github.com/repos/svn2github/lazarus-ccr/commits/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn@4058 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "request": {
+        "url": "https://api.github.com/repos/svn2github/lazarus-ccr/commits/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+        "acquired_utc": "2026-10-18T19:45:14.911561+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/svn2github/lazarus-ccr/commits/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+        "ok": true,
+        "bytes": 13925,
+        "sha256": "96c2fa730aa0f50e2e1891d5db144ee45dd00ab70cf62961f1fb1a0f1c1bb75c"
+      },
+      "parents": [
+        "34ec8774147a573768a6f58b9b11aad84603d703"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "krisfremen/lazarus-ccr",
+      "sha": "beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "url": "https://api.github.com/repos/krisfremen/lazarus-ccr/commits/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+      "message": "fpspreadsheet: Fix shared formulas incorrectly read from xlsx files. Fix formulas being lost when reading xlsx and ods files where formulas had not been calculated at saving.\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn@4058 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "request": {
+        "url": "https://api.github.com/repos/krisfremen/lazarus-ccr/commits/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+        "acquired_utc": "2026-10-18T19:45:14.967799+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/krisfremen/lazarus-ccr/commits/beca637d7c7129c9a5749a27f2bd957e4fb2a4a2",
+        "ok": true,
+        "bytes": 13925,
+        "sha256": "acac6def8da818b927509ad6ac65e17b8e543f81b033e729029de2aacb8d5bb6"
+      },
+      "parents": [
+        "34ec8774147a573768a6f58b9b11aad84603d703"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "jiagangzhang/myownsync",
+      "sha": "dff76f6d912a1a2603460d5afe607e795d68b841",
+      "url": "https://api.github.com/repos/jiagangzhang/myownsync/commits/dff76f6d912a1a2603460d5afe607e795d68b841",
+      "message": "split_xlsx.py fix bug,  add sheet title, and use data_only mode to fix formula value issue. pip installed scrapy on venv py27",
+      "request": {
+        "url": "https://api.github.com/repos/jiagangzhang/myownsync/commits/dff76f6d912a1a2603460d5afe607e795d68b841",
+        "acquired_utc": "2026-10-18T19:45:14.991832+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "skalogryz/chelper",
+      "sha": "6ba74bd3fe137eba79399579663a4e7c25083e8d",
+      "url": "https://api.github.com/repos/skalogryz/chelper/commits/6ba74bd3fe137eba79399579663a4e7c25083e8d",
+      "message": "fpspreadsheet: Fix formulas from prev sheet overrunning other formulas in sheet, xlsx issue (SharedFormulaBase list must be reset for each sheet) - see http://forum.lazarus.freepascal.org/index.php/topic,35903.0.html)",
+      "request": {
+        "url": "https://api.github.com/repos/skalogryz/chelper/commits/6ba74bd3fe137eba79399579663a4e7c25083e8d",
+        "acquired_utc": "2026-10-18T19:45:14.994393+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "Gh0st0ne/LDAS",
+      "sha": "f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+      "url": "https://api.github.com/repos/Gh0st0ne/LDAS/commits/f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+      "message": "Update template_taini_worksheet_laser.xlsx\n\nFix formulas to keep accurate trial-counts when any box might be empty. Add extra guidance-comments. Specify how STIM= setting should be used to define \"atypical\" blocks of trials, such as audio-stimulus delivery.",
+      "request": {
+        "url": "https://api.github.com/repos/Gh0st0ne/LDAS/commits/f15063f13cbbaab00cd77414a11a1e8f8a6756ed",
+        "acquired_utc": "2026-10-18T19:45:15.024635+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "LibreOffice/core",
+      "sha": "fcd96df8f648439ea191d8c2070e8b21ff0b1001",
+      "url": "https://api.github.com/repos/LibreOffice/core/commits/fcd96df8f648439ea191d8c2070e8b21ff0b1001",
+      "message": "tdf#113013 XLSX import: fix \"Formula is\" type conditional formatting\n\nrule when the formula contains a reference to another worksheet.\n\nChange-Id: I873fad97a88df64e885fef20d4259ef6bfeaa06b\nReviewed-on: https://gerrit.libreoffice.org/c/core/+/108850\nTested-by: Jenkins\nTested-by: L\u00e1szl\u00f3 N\u00e9meth <nemeth@numbertext.org>\nReviewed-by: L\u00e1szl\u00f3 N\u00e9meth <nemeth@numbertext.org>",
+      "request": {
+        "url": "https://api.github.com/repos/LibreOffice/core/commits/fcd96df8f648439ea191d8c2070e8b21ff0b1001",
+        "acquired_utc": "2026-10-18T19:45:15.121716+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "veb86/fpspreadsheet",
+      "sha": "ea838b759f895483ad451bb5fe1f1f0131a9ea8e",
+      "url": "https://api.github.com/repos/veb86/fpspreadsheet/commits/ea838b759f895483ad451bb5fe1f1f0131a9ea8e",
+      "message": "fpspreadsheet: Fix formulas from prev sheet overrunning other formulas in sheet, xlsx issue (SharedFormulaBase list must be reset for each sheet) - see http://forum.lazarus.freepascal.org/index.php/topic,35903.0.html)\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn/components/fpspreadsheet@5753 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "request": {
+        "url": "https://api.github.com/repos/veb86/fpspreadsheet/commits/ea838b759f895483ad451bb5fe1f1f0131a9ea8e",
+        "acquired_utc": "2026-10-18T19:45:15.145382+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "LemmingAvalanche/libreoffice-repaired",
+      "sha": "fadbea2ed3f936b28fcf1833a202322bd8c4e61f",
+      "url": "https://api.github.com/repos/LemmingAvalanche/libreoffice-repaired/commits/fadbea2ed3f936b28fcf1833a202322bd8c4e61f",
+      "message": "tdf#113013 XLSX import: fix \"Formula is\" type conditional formatting\n\nrule when the formula contains a reference to another worksheet.\n\nChange-Id: I873fad97a88df64e885fef20d4259ef6bfeaa06b\nReviewed-on: https://gerrit.libreoffice.org/c/core/+/108850\nTested-by: Jenkins\nTested-by: L\u00e1szl\u00f3 N\u00e9meth <nemeth@numbertext.org>\nReviewed-by: L\u00e1szl\u00f3 N\u00e9meth <nemeth@numbertext.org>",
+      "request": {
+        "url": "https://api.github.com/repos/LemmingAvalanche/libreoffice-repaired/commits/fadbea2ed3f936b28fcf1833a202322bd8c4e61f",
+        "acquired_utc": "2026-10-18T19:45:15.250163+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "macrist/Sylvan.Data.Excel",
+      "sha": "9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+      "url": "https://api.github.com/repos/macrist/Sylvan.Data.Excel/commits/9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+      "message": "Beta 2 (#1)\n\n* Fix formula reading code.\r\n* Clean up and fix unit tests.\r\n* Fix worksheet names for xlsx\r\n* Fix formatting for xlsx.\r\n* Add github action to build and test.\r\n* Disable tests requiring external data.\r\n* fix file casing for linux.",
+      "request": {
+        "url": "https://api.github.com/repos/macrist/Sylvan.Data.Excel/commits/9f10fb11b7f6954c4a259438f768b2eae2f0014f",
+        "acquired_utc": "2026-10-18T19:45:15.272707+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "krisfremen/lazarus-ccr",
+      "sha": "280dc39ddc75accc986f6efc333308d69b73207f",
+      "url": "https://api.github.com/repos/krisfremen/lazarus-ccr/commits/280dc39ddc75accc986f6efc333308d69b73207f",
+      "message": "fpspreadsheet: Fix formulas from prev sheet overrunning other formulas in sheet, xlsx issue (SharedFormulaBase list must be reset for each sheet) - see http://forum.lazarus.freepascal.org/index.php/topic,35903.0.html)\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn@5753 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "request": {
+        "url": "https://api.github.com/repos/krisfremen/lazarus-ccr/commits/280dc39ddc75accc986f6efc333308d69b73207f",
+        "acquired_utc": "2026-10-18T19:45:15.345660+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "svn2github/lazarus-ccr",
+      "sha": "280dc39ddc75accc986f6efc333308d69b73207f",
+      "url": "https://api.github.com/repos/svn2github/lazarus-ccr/commits/280dc39ddc75accc986f6efc333308d69b73207f",
+      "message": "fpspreadsheet: Fix formulas from prev sheet overrunning other formulas in sheet, xlsx issue (SharedFormulaBase list must be reset for each sheet) - see http://forum.lazarus.freepascal.org/index.php/topic,35903.0.html)\n\ngit-svn-id: https://svn.code.sf.net/p/lazarus-ccr/svn@5753 8e941d3f-bd1b-0410-a28a-d453659cc2b4",
+      "request": {
+        "url": "https://api.github.com/repos/svn2github/lazarus-ccr/commits/280dc39ddc75accc986f6efc333308d69b73207f",
+        "acquired_utc": "2026-10-18T19:45:15.359597+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "arshius/enterprise",
+      "sha": "43d445ebca4836ae22f5fb62310fde18473673df",
+      "url": "https://api.github.com/repos/arshius/enterprise/commits/43d445ebca4836ae22f5fb62310fde18473673df",
+      "message": "[IMP] spreadsheet: update o_spreadsheet to latest version\n\n### Contains the following commits:\n\nhttps://github.com/odoo/o-spreadsheet/commit/aeb309a3 [IMP] xlsx: export data from both Core and UI plugins\nhttps://github.com/odoo/o-spreadsheet/commit/8526d1f2 [IMP] model: does not allow to use ui getters in a core plugin\nhttps://github.com/odoo/o-spreadsheet/commit/59485cdd [IMP] components: select custom color with color picker\nhttps://github.com/odoo/o-spreadsheet/commit/9275bb55 [FIX] formulas: `FORMAT.LARGE.NUMBER` format purges decimals\n\ncloses odoo/enterprise#30776\n\nSigned-off-by: R\u00e9mi Rahir (rar) <rar@odoo.com>",
+      "request": {
+        "url": "https://api.github.com/repos/arshius/enterprise/commits/43d445ebca4836ae22f5fb62310fde18473673df",
+        "acquired_utc": "2026-10-18T19:45:15.423492+00:00",
+        "ok": false,
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded"
+      },
+      "parents": [],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    }
+  ],
+  "commits_with_workbook_changes": 2,
+  "accepted_natural_sources": 0,
+  "accepted_final_sources": 0,
+  "rule": "Commit messages are leads only; all exposed origins are development-only. Pre-2023 filtering does not prove human authorship or correctness."
+}

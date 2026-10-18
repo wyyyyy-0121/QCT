@@ -1,5 +1,7 @@
 # EPA公开勘误追索记录
 
+> 历史记录：本文件撰写时尚未取得原/修订工作簿对。后续获取与逐格审计见`EPA_PAIR_AUDIT.md`，资格判断以该文件为准。
+
 ## 从官方勘误确认的线索
 
 以下信息来自`source_evidence/EPA_ERRATA_RECEIPT.json`中已记录URL和SHA-256的EPA PDF；本轮通过`pdftotext -layout`再次读取原始PDF内容。
