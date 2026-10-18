@@ -1,0 +1,220 @@
+{
+  "role": "Post-score diagnosis of revealed dev12 inputs; no parameter change, no new performance result",
+  "cases": 60,
+  "formula_rows": 2640,
+  "status_reason_counts": [
+    {
+      "status": "abstain",
+      "reason": "no_qualified_candidate",
+      "count": 2526
+    },
+    {
+      "status": "review",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "count": 114
+    }
+  ],
+  "reviewed_rows": 114,
+  "reviewed_rows_without_direction_evidence": 114,
+  "reviewed_rows_with_paper_suggestion": 114,
+  "diagnosis": [
+    "Column candidate qualification requires support >=20; output columns in these author-written workbooks have only 8 formulas.",
+    "The dev2 first-row output role and dev5 nearest-header exact dictionaries do not cover the new six computation labels.",
+    "Unknown roles prevent sign-based cross-sheet candidate authorization; 114 rows retain candidates only for review.",
+    "This does not establish that reducing the support threshold is safe; original paper proposed on 12 correct cells in this set.",
+    "Do not expand the role dictionary to match these 60 revealed workbooks and call it unseen-domain improvement."
+  ],
+  "causal_ablation_performed": false,
+  "model_modified": false,
+  "source_sha256": {
+    "scripts/selector_dev2.py": "d647972d65db06b51f452782a2fd7c75b7aeb81ac7f98eb33f40e904d5c4cea1",
+    "scripts/selector_dev5.py": "79b132725b842c521ab6cd701d525d43e790eefee59ffa1d29871a0fde1f6d0c",
+    "scripts/selector_dev6.py": "515e0ccbb63c037abefb5b21ad7ccc4d35be80a5aba2f537cf2d2ad06e397551",
+    "scripts/selector_dev11.py": "139c712e4cf5d4e5f414fa4d624d9f244d6b12e5c0f1f8d4a6fb1f4cd0ef4171"
+  },
+  "prediction_sha256": {
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_01.json.gz": "a5bff4ee746bccc614f8a141f4ed71e6398d9d4d2f15337794d4a0cb4ed8573f",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_02.json.gz": "3875d6d2aa543a4dc3793ef4c375d99c40d02baee8aed35d8fae8523b8464ef5",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_03.json.gz": "45380df721083f8cf6006b11d9d8a0d8652b90328807ff7dd9ffc3a2127b5c27",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_04.json.gz": "342c8051d25b9be81c752ead6d7464b518f7d45a6bf026723653d36cc430de3a",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_05.json.gz": "b0c157fe1a023bd646d483688384a4d5cda1e507663398c26a78393d8bf3db88",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_06.json.gz": "38bb9743a1b431346b5b98f030b4ae8b1d0c43622f607252ab91d8c66f65e4f8",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_07.json.gz": "54fbc18445b91fc722163790205feca81553fb191ab046a9262d1e680e5dfb9b",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_08.json.gz": "d2c4c466220512d0b4c0205ce63afb802aa72178185f01cd0f9ca9a661fb8ef9",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_09.json.gz": "3c24d30dbf10c0866c4173c27469019780b254447579a67ef67899cb76e82da7",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc01_10.json.gz": "9baf1f0b7c0b628e692d3b415cc894a727061830d961a6adb19256c6d3431d7f",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_01.json.gz": "b92c18a25787268f7467335f4da1601c8c4ca484793e1b3c69782ce445c01293",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_02.json.gz": "35bee05dadee12d771d525359e101290cb569b6f533c31d986e8daeef69fac56",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_03.json.gz": "1b331cff83f6a619fb77af0b6014becb3a234812841c60e49a4814948eda4a21",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_04.json.gz": "29f3fc77acdf690558c5e0de857944a87ececfa776a6d0898e9881989be24f7e",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_05.json.gz": "10e958506f927818684dbcc8b93c533d6df280a3d81f1dc9fc525760adc3a606",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_06.json.gz": "6da68f4c5977d1519ab2781826fa3ebc5ab4bcd64b278a2d8abc96df6b8d88b7",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_07.json.gz": "18401eeb2214c98a732b09aeae1ccd85e65a9086d45112877550f934035b15d6",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_08.json.gz": "bf24f2f42e56caf811551d592c9464e9cbb6465d4b03bfa38eb34786dcd409a7",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_09.json.gz": "09ec970caab932f804b5f62bf6f4ff0cab2f9d019576e99cc92b176321f93e54",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc02_10.json.gz": "6d1f0bca30ce6280c32b0482e540c47870fde4c6b70abfba47a21033beccd25b",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_01.json.gz": "15afe65806eba71d52617de468a67ae29c7ab8ce5e90205cc2d7177af2994b16",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_02.json.gz": "c4a9c0180ea7a70cc142f03bc092ae504ccd9e731f046da7d48d9646a66b8f3e",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_03.json.gz": "6a0225b12c0cfa711f2203b28a68156de561d01fea8e071ad37c516773d65def",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_04.json.gz": "109fb0419d0a585a62f40266a13174cbdf7eeab68375f7d6d3fd8ad1e3c4c721",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_05.json.gz": "f1ad4fce79198bf03e24831267d745fbc504995f0096dd33e4d67682622c42f5",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_06.json.gz": "d4753ff57aa060081c531fd0962dd5ded130101ce91b73ee4c501c7057e2f343",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_07.json.gz": "b741949b69eecffc462c2396759a67ba0a014fe7a3b6c68ca4d0b80bab531f93",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_08.json.gz": "e07509cf9eb81fc03d23b20c1777033af0247f425f4acb54c1f9400f9e0c69f2",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_09.json.gz": "6692a82a7760a61b06637bfc1f0815421ecb88f31304c9367a4f2f49138aeb88",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc03_10.json.gz": "317b558412bb7d8c13474fd0f577e5c0bdf372ee40ac378562347d39e5ef40e5",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_01.json.gz": "d0bc507adf7d09094472ef482998d8a8280f8dd457f2419b32f3bc87a8e50431",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_02.json.gz": "76d0939d8f0216e93e38b6335c9c7b5b9281267711461f702018eee4dc11476a",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_03.json.gz": "ed3e8ec5f07b8eadd14157f074c87c11d9fd69a3ca4df2acfbffc3d63a532623",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_04.json.gz": "a9c1acc5dc1071e2b1aaf3f77963847e2a680322ecc437a7c157661f4a2770e1",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_05.json.gz": "2f0e0e572d4f0f6f725c8e8f968ab24c59572d85a6ca6021e360990daf381a4a",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_06.json.gz": "1d83df41196c13fb48eee17a69434caa89a9360c957d523e0bd3ae1ef6671325",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_07.json.gz": "9bba86f32dda1e59c2ecd8aa72709400d18ffc068cf187d4683a78c3831c4a2c",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_08.json.gz": "6fd69694edec73d86ed75634fc0d1d8762c6b965ad9c7b10a229c09adddeeb7c",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_09.json.gz": "badabfafe197fa3b393ea7d6dd645717bc1599c20ef8a3b5b13d2b34c30bb758",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc04_10.json.gz": "3840e654f29bf98c4de40acf2c817d4f96b4d488095bda31f864888f00f6654c",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_01.json.gz": "361548664ab473f5b426068bbb9cfd330725533513237c2a041c3cd0a947ad5c",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_02.json.gz": "c504bf23c65371755e6bc9cc9fcbb91afaf7dc7e916d0cc53a9a518be3dd87d9",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_03.json.gz": "a5ccfffbda572aad16045339d26d55abb2f6231451effc2bf0e97f0bc59e33bc",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_04.json.gz": "551fc1ae6fc24d95fa43a56cedb559b9a04bb3c7dbb0d589ba0d772d330546e5",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_05.json.gz": "f4d9cb6a60f2ef1e107603d32a64bb0db2d208604dc1e07d418c53b00fd1ad7f",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_06.json.gz": "ddb4c72aa6010c7c410d61a61dd41ba999b732bc9c77b8871373ea3a19e4b1fd",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_07.json.gz": "c1500d0d7deacca1612780b532d3dc571c6e7c769afd4684ce23f6e2d1f4b5d7",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_08.json.gz": "537012ee880eb36d12d7a743f13786fe8d28935787eecaf0c5dc58f83feab66e",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_09.json.gz": "2531f0f7d66a6f98bf9e8f378a950ebe46a3389f6b695113158e5d46b80e3b4b",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc05_10.json.gz": "481293cc94224e7e7d1dee926c6de444565aed860538359943415968029d12de",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_01.json.gz": "2fa9e7888be3ac3072abd245acda88df9377d245e408aba0424205a6b51d6a9a",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_02.json.gz": "8aa514761f60bd69d715d23214a3c53d8cb0c739cbcb44c0939ca69723447b67",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_03.json.gz": "e7f5ae23dd41df5d91628d63cafe84ebd774bded870ce40fce3e462fa6c1f980",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_04.json.gz": "9f516ebf9ed817cdbcf2167fee369d99827ef25acf54c8e59b72b9bd738c75a6",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_05.json.gz": "75b9408fd50722571c7b2da519a51d1e6bcbceb526716a58932bb7d9b5dc097f",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_06.json.gz": "fd5776687f48781288fff5a27b1d13a288c7e2d87eb9f22bb2dc3d5fa1553e3d",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_07.json.gz": "6b8b17b2a70ed50f3842f751a0fd847193a8bb99031007c03f4a74ac147cff5f",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_08.json.gz": "558ca02474c926907cccbea087e62653325a2006b1ae57ed8b96683d15b1c1e8",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_09.json.gz": "a911fa595c16469b47a5132740ef16a93b883594f7806d9ab7cedc85c9d8f2c9",
+    "development/selector_dev12_reconciliation_v1/predictions/controlled_reconciliation/rc06_10.json.gz": "511573073a1d059383428f0ace4bee5233e70a4fec955ef5b0b0bebe630f7b1e"
+  },
+  "examples": [
+    {
+      "case": "rc01_02",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_03",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_03",
+      "cell": "B!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_03",
+      "cell": "C!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_03",
+      "cell": "D!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_03",
+      "cell": "E!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_04",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_05",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_06",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_07",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_08",
+      "cell": "A!F2",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B2+C2+D2",
+      "paper_suggestion": "=B2+C2-D2",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_09",
+      "cell": "A!F8",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B8+C8+D8",
+      "paper_suggestion": "=B8+C8-D8",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_09",
+      "cell": "B!F8",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B8+C8+D8",
+      "paper_suggestion": "=B8+C8-D8",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_09",
+      "cell": "A!F5",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B5+C5+D5",
+      "paper_suggestion": "=B5+C5-D5",
+      "directional_available": false
+    },
+    {
+      "case": "rc01_09",
+      "cell": "B!F5",
+      "reason": "insufficient_semantic_or_role_evidence",
+      "original_formula": "=B5+C5+D5",
+      "paper_suggestion": "=B5+C5-D5",
+      "directional_available": false
+    }
+  ],
+  "final_validation_eligible": false
+}

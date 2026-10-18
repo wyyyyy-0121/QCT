@@ -1,0 +1,973 @@
+{
+  "role": "Metadata discovery only; no candidate workbook bodies or answer files fetched",
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "index_sha256": "b0f70b9e38db17617d3a97e20fb09df2fca21066635094d6fbdd688b3dd250b7",
+  "script_sha256": "f0f94ff6e94de7449fac7cc28e0dc3e16f06c099e220068cc8fe8a0e1f7de0f6",
+  "results": [
+    {
+      "id": "custodes_search",
+      "origin": "GitHub repository search metadata",
+      "url": "https://api.github.com/search/repositories?q=CUSTODES+spreadsheet&per_page=5",
+      "utc": "2026-10-18T05:51:57.923482+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/search/repositories?q=CUSTODES+spreadsheet&per_page=5",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+      "path": "source_discovery/expansion_20261018_v6/pages/custodes_search.source",
+      "title": null,
+      "text_characters": 55,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "datadebug_readme",
+      "origin": "DataDebug corpus provenance metadata",
+      "url": "https://api.github.com/repos/plasma-umass/DataDebug/readme",
+      "utc": "2026-10-18T05:51:57.923098+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/plasma-umass/DataDebug/readme",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 5404,
+      "sha256": "f64c91eb3d924e5a9b382c6fbd0be38605e774dd92855c0f2fbfcaf68c079f31",
+      "path": "source_discovery/expansion_20261018_v6/pages/datadebug_readme.source",
+      "title": null,
+      "text_characters": 5404,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "dice_climate_search",
+      "origin": "GitHub repository search metadata",
+      "url": "https://api.github.com/search/repositories?q=nordhaus+DICE+in:name,description&per_page=10",
+      "utc": "2026-10-18T05:51:57.923943+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/search/repositories?q=nordhaus+DICE+in:name,description&per_page=10",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 33413,
+      "sha256": "a0c6c7b9f0cde648fad5995a1c1429df14cfd980b74241e9f688993a1c2899c1",
+      "path": "source_discovery/expansion_20261018_v6/pages/dice_climate_search.source",
+      "title": null,
+      "text_characters": 33405,
+      "relevant_links": [],
+      "snippets": [
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":7,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":7,\"open_issues\":0,\"watchers\":13,\"default_branch\":\"master\",\"score\":1.0},{\"id\":929562133,\"node_id\":\"R_kgDON2f-FQ\",\"name\":\"DICEModel.jl",
+        "i\":true,\"has_pages\":true,\"has_discussions\":false,\"forks_count\":3,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":{\"key\":\"mit\",\"name\":\"MIT License\",\"spdx_id\":\"MIT\",\"url\":\"https://api.github.com/licenses/mit\",\"node_id\":\"MDc6TGljZW5zZTEz\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[\"climate-change\",\"climate-models\",\"dice\",\"int",
+        "ussions\":false,\"forks_count\":3,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":{\"key\":\"mit\",\"name\":\"MIT License\",\"spdx_id\":\"MIT\",\"url\":\"https://api.github.com/licenses/mit\",\"node_id\":\"MDc6TGljZW5zZTEz\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[\"climate-change\",\"climate-models\",\"dice\",\"integrated-assessment-model\",\"julia\"]",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[\"environmental-modelling\",\"pyomo\"],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":4,\"default_branch\":\"master\",\"score\":1.0},{\"id\":259979662,\"node_id\":\"MD",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":1,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":1,\"open_issues\":0,\"watchers\":2,\"default_branch\":\"master\",\"score\":1.0},{\"id\":1076056548,\"node_id\":\"R_kgDOQCNR5A\",\"name\":\"C-Dice\",\"ful",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":1,\"license\":{\"key\":\"mit\",\"name\":\"MIT License\",\"spdx_id\":\"MIT\",\"url\":\"https://api.github.com/licenses/mit\",\"node_id\":\"MDc6TGljZW5zZTEz\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issue",
+        "ussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":1,\"license\":{\"key\":\"mit\",\"name\":\"MIT License\",\"spdx_id\":\"MIT\",\"url\":\"https://api.github.com/licenses/mit\",\"node_id\":\"MDc6TGljZW5zZTEz\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\"",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":0,\"default_branch\":\"main\",\"score\":1.0}]}"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "excelint_readme",
+      "origin": "ExceLint corpus provenance metadata",
+      "url": "https://api.github.com/repos/ExceLint/ExceLint/readme",
+      "utc": "2026-10-18T05:51:57.922652+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/ExceLint/ExceLint/readme",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 16810,
+      "sha256": "ee9171d4ff4da514c84e8452bb14727998b5c912ce23e7e886cc345487748736",
+      "path": "source_discovery/expansion_20261018_v6/pages/excelint_readme.source",
+      "title": null,
+      "text_characters": 16810,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "purdue_tools_page2",
+      "origin": "Purdue University",
+      "url": "https://ag.purdue.edu/commercialag/home/resource-type/tool/page/2/",
+      "utc": "2026-10-18T05:51:57.925479+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://ag.purdue.edu/commercialag/home/resource-type/tool/page/2/",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 110951,
+      "sha256": "048a7c5a777d66bbfc49788a8442a5f682831e7aa9bec5cf1e7214bd35918761",
+      "path": "source_discovery/expansion_20261018_v6/pages/purdue_tools_page2.source",
+      "title": "Tool Archives - Page 2 of 3 - Center for Commercial Agriculture",
+      "text_characters": 6576,
+      "relevant_links": [
+        {
+          "text": "Skip to content",
+          "url": "https://ag.purdue.edu/commercialag/home/resource-type/tool/page/2/#content",
+          "workbook_link": false
+        },
+        {
+          "text": "Tools & Data",
+          "url": "https://ag.purdue.edu/commercialag/home/publications-series",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Cost and Return Guide 2027",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2026/09/2027-crop-budget/",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Basis Tool",
+          "url": "https://ag.purdue.edu/commercialag/home/crop-basis-tool/",
+          "workbook_link": false
+        },
+        {
+          "text": "Indiana Cost of Production Calculator",
+          "url": "https://cop.farmfinlab.com/",
+          "workbook_link": false
+        },
+        {
+          "text": "Price Distribution Tool",
+          "url": "https://fd-tools.ncsa.illinois.edu/pricedistribution#new_tab",
+          "workbook_link": false
+        },
+        {
+          "text": "Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool)",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2021/10/comparison-of-conventional-crop-rotation-with-an-organic-forage-based-crop-rotation-tool/",
+          "workbook_link": false
+        },
+        {
+          "text": "Cover Crop Decision Making Tool",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2020/12/cover-crop-decision-making-tool/",
+          "workbook_link": false
+        },
+        {
+          "text": "Fungicide Decision Making Tool",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2020/12/fungicide-decision-making-tool/",
+          "workbook_link": false
+        },
+        {
+          "text": "2018 Farm Bill What If Tool",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2020/02/2018-farm-bill-what-if-tool/",
+          "workbook_link": false
+        },
+        {
+          "text": "Corn Silage Production Budget",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2018/05/corn-silage-production-budget/",
+          "workbook_link": false
+        },
+        {
+          "text": "« Previous",
+          "url": "https://ag.purdue.edu/commercialag/home/resource-type/tool/",
+          "workbook_link": false
+        },
+        {
+          "text": "3",
+          "url": "https://ag.purdue.edu/commercialag/home/resource-type/tool/page/3/",
+          "workbook_link": false
+        },
+        {
+          "text": "Other Tools",
+          "url": "https://ag.purdue.edu/commercialag/home/resource-type/tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Copyright",
+          "url": "https://www.purdue.edu/securepurdue/security-programs/copyright-policies/reporting-alleged-copyright-infringement.php",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "res contracts. Read More about Price Distribution Tool Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool) This spreadsheet compares conventional crop rotation with an organic forage-based crop rotation over a ten-year horizon. Read More about Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool) Cover Crop Decision Making Tool This spreadsheet can be used to examine w",
+        "e about Price Distribution Tool Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool) This spreadsheet compares conventional crop rotation with an organic forage-based crop rotation over a ten-year horizon. Read More about Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool) Cover Crop Decision Making Tool This spreadsheet can be used to examine whether it is beneficial",
+        "crop rotation over a ten-year horizon. Read More about Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool) Cover Crop Decision Making Tool This spreadsheet can be used to examine whether it is beneficial to use a cover crop. When evaluating cover crop use, we typically compare the potential improvement in crop yields, and fertilizer and other cost savings to the cover crop seed cost, the planting costs and potential ",
+        "Comparison of Conventional Crop Rotation with an Organic Forage-Based Crop Rotation (Spreadsheet Tool) Cover Crop Decision Making Tool This spreadsheet can be used to examine whether it is beneficial to use a cover crop. When evaluating cover crop use, we typically compare the potential improvement in crop yields, and fertilizer and other cost savings to the cover crop seed cost, the planting costs and potential termination costs for the cover crop. Read More about C",
+        "sts and potential termination costs for the cover crop. Read More about Cover Crop Decision Making Tool Fungicide Decision Making Tool This spreadsheet can be used to examine whether it is beneficial to apply fungicide to corn. Sensitivity analysis pertaining to the change in yield improvement, the change in corn price, change in the crop price discount, and the change in treatment and application cost can be conducted. Read More about Fungicide Decision Making Tool ",
+        "ng balance sheets. Read More about Measuring & Analyzing Farm Financial Performance 2018 Farm Bill What If Tool This University of Illinois spreadsheet calculates Agricultural Risk Coverage for County Coverage (ARC-CO), Agricultural Risk Coverage for Individual Coverage (ARC-IC), and Price Loss Coverage (PLC) payments. County yields and market year average (MYA) prices are brought in for a user-specified state-county-crop combination. Users then can change 2018 throu",
+        "RC-CO, ARC-IC, and PLC payments under those yields and prices. Read More about 2018 Farm Bill What If Tool Pro forma Financial Statements A spreadsheet to create pro-forma income and sources and uses of funds statements, and to compute repayment capacity and liquidity measures. Read More about Pro forma Financial Statements Corn Silage Production Budget This Ohio State University spreadsheet calculates a corn silage production budget. Without some form of budgeting a",
+        "nt capacity and liquidity measures. Read More about Pro forma Financial Statements Corn Silage Production Budget This Ohio State University spreadsheet calculates a corn silage production budget. Without some form of budgeting and some method to track your enterprises’ progress you’ll have difficulty determining profitability and if you’ve met your goals for the farm. Read More about Corn Silage Production Budget Prevented Planting and Replant Decisions With corn and",
+        "rometer Other Tools Communication plus_icon Latest Email Upcoming Programs Faculty & Staff Contact Us Subscribe Last modified: May 16, 2023 Copyright © 2026 Purdue University. All Rights Reserved. Trademark Statement . Accessibility | EA/EO University | Integrity Statement | Free Expression | College Scorecard (ed.gov) | Privacy Policy | Contact Us"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_tree_main",
+      "origin": "Reinhart Rogoff replication metadata",
+      "url": "https://api.github.com/repos/michaelaoash/HAP-RR-git/git/trees/main?recursive=1",
+      "utc": "2026-10-18T05:51:57.922221+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/michaelaoash/HAP-RR-git/git/trees/main?recursive=1",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 7329,
+      "sha256": "ffee51dbb89ad2864f3e5148110fb99628220383941add0169be85cfd7891bde",
+      "path": "source_discovery/expansion_20261018_v6/pages/rr_tree_main.source",
+      "title": null,
+      "text_characters": 7329,
+      "relevant_links": [],
+      "snippets": [
+        "bf891\",\"size\":570,\"url\":\"https://api.github.com/repos/michaelaoash/HAP-RR-git/git/blobs/fae8299aeacc95d89cb63617ccaa5351800bf891\"},{\"path\":\"LICENSE\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"0e259d42c996742e9e3cba14c677129b2c1b6311\",\"size\":7048,\"url\":\"https://api.github.com/repos/michaelaoash/HAP-RR-git/git/blobs/0e259d42c996742e9e3cba14c677129b2c1b6311\"},{\"path\":\"README.md\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"b308b23a7763e780551dcb3645dc831e0a819051\",\"size\":75,\"url\""
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_calculators",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/Calculators/",
+      "utc": "2026-10-18T05:51:57.924330+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 81811,
+      "sha256": "8ace26fa2b3835ba87a7a1199f41875592a803040deb22f3837125c56cec847f",
+      "path": "source_discovery/expansion_20261018_v6/pages/vertex42_calculators.source",
+      "title": "Free Financial Calculators for Excel",
+      "text_characters": 6967,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/templates/images/financial-calculators-by-vertex42.png",
+          "workbook_link": false
+        },
+        {
+          "text": "MORTGAGE Calculators",
+          "url": "https://www.vertex42.com/Calculators/mortgage-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "DEBT PAYOFF Calculators",
+          "url": "https://www.vertex42.com/Calculators/debt-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "SAVINGS & RETIREMENT",
+          "url": "https://www.vertex42.com/Calculators/retirement-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "AMORTIZATION Calculators",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-amortization-spreadsheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "LOAN Calculators",
+          "url": "https://www.vertex42.com/Calculators/loan-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "FINANCIAL STATEMENTS",
+          "url": "https://www.vertex42.com/ExcelTemplates/financial-statements.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Planner's Template Pack",
+          "url": "https://www.vertex42.com/ExcelTemplates/financial-planning.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Mortgage Calculator",
+          "url": "https://www.vertex42.com/Calculators/home-mortgage-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Debt Reduction Calculator",
+          "url": "https://www.vertex42.com/Calculators/debt-reduction-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Loan Amortization Schedule",
+          "url": "https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html",
+          "workbook_link": false
+        },
+        {
+          "text": "ARM Calculator for Excel",
+          "url": "https://www.vertex42.com/ExcelTemplates/arm-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Affordability Calculator",
+          "url": "https://www.vertex42.com/Calculators/home-affordability-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Expense Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/home-expense-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Canadian Mortgage Calculator",
+          "url": "https://www.vertex42.com/Calculators/Canadian-mortgage.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Mortgage Payment Calculator",
+          "url": "https://www.vertex42.com/Calculators/mortgage-payment-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Equity Loan Calculator",
+          "url": "https://www.vertex42.com/Calculators/home-equity-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Equity Line of Credit Calculator",
+          "url": "https://www.vertex42.com/Calculators/line-of-credit.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Mortgage Payoff Calculator with HELOC",
+          "url": "https://www.vertex42.com/Calculators/mortgage-payoff-with-line-of-credit.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Retirement Calculator",
+          "url": "https://www.vertex42.com/Calculators/retirement-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "College Savings Calculator for Excel",
+          "url": "https://www.vertex42.com/Calculators/college-savings.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Annuity Calculator",
+          "url": "https://www.vertex42.com/Calculators/annuity-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings Calculator",
+          "url": "https://www.vertex42.com/Calculators/savings-interest-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Interest Calculator",
+          "url": "https://www.vertex42.com/Calculators/simple-interest.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings Snowball Calculator",
+          "url": "https://www.vertex42.com/Calculators/savings-snowball.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Retirement Savings Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/retirement-planning-spreadsheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings Withdrawal Calculator",
+          "url": "https://www.vertex42.com/Calculators/retirement-withdrawal-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Traditional vs. Roth Calculator",
+          "url": "https://www.vertex42.com/Calculators/traditional-vs-roth-ira.html",
+          "workbook_link": false
+        },
+        {
+          "text": "401k Calculator",
+          "url": "https://www.vertex42.com/Calculators/401k-savings-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Investment Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/investment-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Yearly Budget Calculator",
+          "url": "https://www.vertex42.com/Calculators/budget-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Budget Worksheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/home-budget-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Money Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/money-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Money Management Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/money-management-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Family Budget Planner",
+          "url": "https://www.vertex42.com/ExcelTemplates/family-budget-planner.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Monthly Household Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/monthly-household-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Travel Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/travel-budget-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Event Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/event-budget-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Auto Loan Calculator",
+          "url": "https://www.vertex42.com/Calculators/auto-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Balloon Loan Calculator for Excel",
+          "url": "https://www.vertex42.com/ExcelTemplates/balloon-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Interest Loan Calculator",
+          "url": "https://www.vertex42.com/Calculators/simple-interest-loan.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Loan Calculator",
+          "url": "https://www.vertex42.com/Calculators/simple-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Daily Compounding Loan Calculator",
+          "url": "https://www.vertex42.com/Calculators/daily-compounding-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Interest-Only Loan Calculator",
+          "url": "https://www.vertex42.com/Calculators/interest-only-loan.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Line of Credit Tracker",
+          "url": "https://www.vertex42.com/Calculators/line-of-credit-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Credit Account Register Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/credit-account-register.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Credit Card Payoff Calculator",
+          "url": "https://www.vertex42.com/Calculators/credit-card-payoff-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Credit Card Payment Calculator",
+          "url": "https://www.vertex42.com/Calculators/credit-card-payment-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Credit Repair Spreadsheet",
+          "url": "https://www.vertex42.com/Calculators/credit-repair.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Balance Transfer Calculator",
+          "url": "https://www.vertex42.com/Calculators/balance-transfer.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Break Even Analysis Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/breakeven-analysis.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Net Worth Calculator for Excel",
+          "url": "https://www.vertex42.com/Calculators/net-worth.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Rental Property Cash Flow Analysis",
+          "url": "https://www.vertex42.com/ExcelTemplates/rental-cash-flow-analysis.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Inflation Calculator",
+          "url": "https://www.vertex42.com/Calculators/inflation-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "CAGR Calculator",
+          "url": "https://www.vertex42.com/Calculators/cagr-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Depreciation Calculator",
+          "url": "https://www.vertex42.com/Calculators/depreciation-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "NPV and IRR Calculator",
+          "url": "https://www.vertex42.com/Calculators/npv-irr-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Compound Interest",
+          "url": "https://www.vertex42.com/Calculators/compound-interest-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Paycheck Calculator",
+          "url": "https://www.vertex42.com/Calculators/paycheck-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Time Card Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/time-card-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Vacation Tracking Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/vacation-tracking.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Attendance",
+          "url": "https://www.vertex42.com/ExcelTemplates/attendance-sheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Data Analysis",
+          "url": "https://www.vertex42.com/ExcelTemplates/statistics.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Health Charts & Logs",
+          "url": "https://www.vertex42.com/ExcelTemplates/exercise-charts-and-logs.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home and Family",
+          "url": "https://www.vertex42.com/ExcelTemplates/home-and-family.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Inventory",
+          "url": "https://www.vertex42.com/ExcelTemplates/inventory.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Lists / Checklists",
+          "url": "https://www.vertex42.com/ExcelTemplates/checklist.html",
+          "workbook_link": false
+        },
+        {
+          "text": "To Do Lists",
+          "url": "https://www.vertex42.com/ExcelTemplates/to-do-lists.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Schedules / Planners",
+          "url": "https://www.vertex42.com/ExcelTemplates/schedules.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Strategic Planning",
+          "url": "https://www.vertex42.com/ExcelTemplates/strategic-planning.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timeline Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/timeline.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Make a Budget",
+          "url": "https://www.vertex42.com/ExcelArticles/how-to-make-a-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Modeling",
+          "url": "https://www.vertex42.com/ExcelArticles/financial-modeling.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Financial Functions",
+          "url": "https://www.vertex42.com/ExcelArticles/financial-functions.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Amortization Calculation",
+          "url": "https://www.vertex42.com/ExcelArticles/amortization-calculation.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Amortization Formulas",
+          "url": "https://www.vertex42.com/ExcelArticles/amortization-formulas.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Negative Amortization",
+          "url": "https://www.vertex42.com/ExcelArticles/negative-amortization.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Debt Consolidation",
+          "url": "https://www.vertex42.com/ExcelArticles/debt-consolidation.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Growth Rate",
+          "url": "https://www.vertex42.com/ExcelArticles/exponential-growth.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Discount Factors",
+          "url": "https://www.vertex42.com/ExcelArticles/discount-factors.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Free Financial Calculators for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms R",
+        "Free Financial Calculators for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Financial Calculators Financial Calculators Free Mortgage, Loan, Amortization, Retirement & Savings Calculators for Microsoft Excel® Do you need more flexibility than online financial calculators can provide? Are ",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Financial Calculators Financial Calculators Free Mortgage, Loan, Amortization, Retirement & Savings Calculators for Microsoft Excel® Do you need more flexibility than online financial calculators can provide? Are you worried about ent",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Financial Calculators Financial Calculators Free Mortgage, Loan, Amortization, Retirement & Savings Calculators for Microsoft Excel® Do you need more flexibility than online financial calculators can provide? Are you worried about entering your financial information on the internet? Download our free finan",
+        "l Templates > Financial Calculators Financial Calculators Free Mortgage, Loan, Amortization, Retirement & Savings Calculators for Microsoft Excel® Do you need more flexibility than online financial calculators can provide? Are you worried about entering your financial information on the internet? Download our free financial spreadsheets, designed for Microsoft Excel®,and work with them on your own computer. Our financial templates are designed primarily for per",
+        "Are you worried about entering your financial information on the internet? Download our free financial spreadsheets, designed for Microsoft Excel®,and work with them on your own computer. Our financial templates are designed primarily for personal use, with the end user being anyone who has a basic understanding of spreadsheets. Although intuitive to use, each calculator also contains helpful information within the cell comments, and additional resources and re",
+        "vailable Advertisement Mortgage and Home Affordability Calculators Home Mortgage Calculator The ultimate all-in-one mortgage calculator for Excel. Fixed or variable rate. Optional extra payments. ARM Calculator for Excel Create an amortization table and graphs for adjustable rate mortgage (ARM) loans. Home Affordability Calculator Estimate the mortgage that you can afford based on income, debt-to-income ratio, down payment, and housing expenses. More Home Expen",
+        "tgage Calculator The ultimate all-in-one mortgage calculator for Excel. Fixed or variable rate. Optional extra payments. ARM Calculator for Excel Create an amortization table and graphs for adjustable rate mortgage (ARM) loans. Home Affordability Calculator Estimate the mortgage that you can afford based on income, debt-to-income ratio, down payment, and housing expenses. More Home Expense Calculator Canadian Mortgage Calculator Mortgage Payment Calculator Home",
+        "nt Calculators Retirement Calculator Estimate how much of your salary to save to reach your retirement goal. College Savings Calculator for Excel Create a college savings plan for your children, including costs for K-12 and high-school. Annuity Calculator Figure out how much you will need to have saved for retirement, and how long your nest egg may last. More Savings Calculator Simple Interest Calculator Savings Snowball Calculator Retirement Savings Calculator",
+        "udget, with expenses divided into deductible and non-deductible categories. Money Tracker Track your cash, checking, credit, and savings in Excel on your mobile phone. More Money Management Template Family Budget Planner Monthly Household Budget Travel Budget Event Budget Advertisement Loan Calculators Auto Loan Calculator Understand what you are getting into before you buy! Figure out how much you'll need to finance and what type of loan will work best for you",
+        "g into before you buy! Figure out how much you'll need to finance and what type of loan will work best for you. Balloon Loan Calculator for Excel Calculate the payment required to pay off an auto or mortgage loan in one big chunk after a number of regular payments have been made. Simple Interest Loan Calculator This is a special type of mortgage based on simple interest calculations and daily interest accrual. More Simple Loan Calculator Daily Compounding Loan ",
+        "fees and payments with this free account register template. More Credit Card Payoff Calculator Credit Card Payment Calculator Credit Repair Spreadsheet Balance Transfer Calculator Advertisement Business & General Finance Calculators Break Even Analysis Calculator Calculate the Break-Even Point or Payback Period for a new venture or product. Net Worth Calculator for Excel Calculate your net worth based on the total of all your assets minus your liabilities. Rental Pro",
+        "tors Break Even Analysis Calculator Calculate the Break-Even Point or Payback Period for a new venture or product. Net Worth Calculator for Excel Calculate your net worth based on the total of all your assets minus your liabilities. Rental Property Cash Flow Analysis Perform a basic cash flow analysis for a rental property, including capitalization rate and cash on cash return. More Inflation Calculator CAGR Calculator Depreciation Calculator NPV and IRR Calcul",
+        "edules / Planners Strategic Planning Timeline Templates Timesheets & HR Numbers Templates Finance Articles Make a Budget Financial Modeling Excel Financial Functions Simple Interest Compound Interest Amortization Calculation Amortization Formulas Negative Amortization Debt Consolidation Growth Rate CAGR Calculator & Formula Discount Factors Depreciation NPV Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templ",
+        "est Compound Interest Amortization Calculation Amortization Formulas Negative Amortization Debt Consolidation Growth Rate CAGR Calculator & Formula Discount Factors Depreciation NPV Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Micro",
+        "Amortization Debt Consolidation Growth Rate CAGR Calculator & Formula Discount Factors Depreciation NPV Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "h Rate CAGR Calculator & Formula Discount Factors Depreciation NPV Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        "iation NPV Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Financial Calculat",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Financial Calculators for Excel Sitemap | P",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Financial Calculators for Excel Sitemap | Privacy Policy | Terms of Use © 2003-20",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Financial Calculators for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        "oft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Financial Calculators for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_license",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/licensing/EULA_personaluse.html",
+      "utc": "2026-10-18T05:51:57.924738+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/licensing/EULA_personaluse.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 27734,
+      "sha256": "7b0309decb425ba85f6128f249685936ec80252eda9b6f0e3ae7e37f17a1f8ff",
+      "path": "source_discovery/expansion_20261018_v6/pages/vertex42_license.source",
+      "title": "Vertex42 Templates - End User License Agreement (Personal Use Only)",
+      "text_characters": 4647,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Attendance",
+          "url": "https://www.vertex42.com/ExcelTemplates/attendance-sheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Data Analysis",
+          "url": "https://www.vertex42.com/ExcelTemplates/statistics.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Debt Payoff",
+          "url": "https://www.vertex42.com/Calculators/debt-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Statements",
+          "url": "https://www.vertex42.com/ExcelTemplates/financial-statements.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Health Charts & Logs",
+          "url": "https://www.vertex42.com/ExcelTemplates/exercise-charts-and-logs.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home and Family",
+          "url": "https://www.vertex42.com/ExcelTemplates/home-and-family.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Inventory",
+          "url": "https://www.vertex42.com/ExcelTemplates/inventory.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Lists / Checklists",
+          "url": "https://www.vertex42.com/ExcelTemplates/checklist.html",
+          "workbook_link": false
+        },
+        {
+          "text": "To Do Lists",
+          "url": "https://www.vertex42.com/ExcelTemplates/to-do-lists.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Loan Calculators",
+          "url": "https://www.vertex42.com/Calculators/loan-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Mortgage Calculators",
+          "url": "https://www.vertex42.com/Calculators/mortgage-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings & Retirement",
+          "url": "https://www.vertex42.com/Calculators/retirement-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Schedules / Planners",
+          "url": "https://www.vertex42.com/ExcelTemplates/schedules.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Strategic Planning",
+          "url": "https://www.vertex42.com/ExcelTemplates/strategic-planning.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timeline Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/timeline.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Vertex42 Templates - End User License Agreement (Personal Use Only) ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Char",
+        "Vertex42 Templates - End User License Agreement (Personal Use Only) ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > EULA (Personal Use Only) License Agreement (Personal Use Only) The templates created by Vertex42.com are considered copyrighted works under the Unites States and other copyright laws and are the property of Vertex",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > EULA (Personal Use Only) License Agreement (Personal Use Only) The templates created by Vertex42.com are considered copyrighted works under the Unites States and other copyright laws and are the property of Vertex42 LLC. The items lis",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > EULA (Personal Use Only) License Agreement (Personal Use Only) The templates created by Vertex42.com are considered copyrighted works under the Unites States and other copyright laws and are the property of Vertex42 LLC. The items listed below are additional points to help clarify how you may use this temp",
+        "on Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > EULA (Personal Use Only) License Agreement (Personal Use Only) The templates created by Vertex42.com are considered copyrighted works under the Unites States and other copyright laws and are the property of Vertex42 LLC. The items listed below are additional points to help clarify how you may use this template. Note: Our general Terms of Use apply to",
+        "ense Agreement (Personal Use Only) The templates created by Vertex42.com are considered copyrighted works under the Unites States and other copyright laws and are the property of Vertex42 LLC. The items listed below are additional points to help clarify how you may use this template. Note: Our general Terms of Use apply to information and files downloaded from Vertex42.com which do not include or identify specific end-user license agreements. This license agreement",
+        "te: Our general Terms of Use apply to information and files downloaded from Vertex42.com which do not include or identify specific end-user license agreements. This license agreement applies to those templates which specifically refer to this agreement. By downloading and/or using the template, you agree to abide by the following terms: End User License Agreement Limited Use Policy You may download the template (the \"Software\"), make archival copies, and customiz",
+        "Use apply to information and files downloaded from Vertex42.com which do not include or identify specific end-user license agreements. This license agreement applies to those templates which specifically refer to this agreement. By downloading and/or using the template, you agree to abide by the following terms: End User License Agreement Limited Use Policy You may download the template (the \"Software\"), make archival copies, and customize the Software for person",
+        "s which specifically refer to this agreement. By downloading and/or using the template, you agree to abide by the following terms: End User License Agreement Limited Use Policy You may download the template (the \"Software\"), make archival copies, and customize the Software for personal and noncommercial use only . This Software or any document including or derived from this Software may NOT be sold, distributed, published to an online gallery, or placed on a publ",
+        "public server such as the internet without the express written permission of Vertex42 LLC. You may not remove or alter any logo, trademark, copyright, disclaimer, brand, hyperlink, terms of use, attribution, or other proprietary notices or marks within this template. We define \"Personal use\" as Non-Commercial use by you, your family, or by your close personal friends, on your own computer . For example, you can't put the files on your blog. We define \"Commercial us",
+        "Retirement Schedules / Planners Strategic Planning Timeline Templates Timesheets & HR Numbers Templates Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "egic Planning Timeline Templates Timesheets & HR Numbers Templates Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        " Templates Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Polic",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    }
+  ]
+}

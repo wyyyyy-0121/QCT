@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Inventory Software - IPCC-TFI</title>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WRB6NTNG');</script>
+<!-- End Google Tag Manager -->
+
+<script language="JavaScript"> 
+function ChangeUrl(formulaire) 
+   { 
+   if (formulaire.ListeUrl.selectedIndex != 0) 
+      { 
+      location.href = formulaire.ListeUrl.options[formulaire.ListeUrl.selectedIndex].value; 
+       } 
+   } 
+</script>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1";>
+<meta name="viewport" content="width=782">
+<meta name="description" content=" ">
+<meta name="keywords" content=" ">
+<link rel="stylesheet" href="../style.css?2021052002" type="text/css">
+<link rel="stylesheet" href="../styles/04_3.css" type="text/css">
+<script src="../includes/SpryEffects.js" type="text/javascript"></script>
+<script src="../includes/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<link href="../includes/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {font-size: 9px}
+
+.important{
+	color:#CC0000;
+}
+.important_b{
+	color:#CC0000;
+	font-size:1.3em;
+	text-align:justify;
+}
+h4{
+	font-size: 1em;
+	color : #000000;
+	font-weight : bold;
+	padding-left:3px;
+	margin:0px;
+}
+
+.radius1 {
+	color:#CC0000;
+	font-size:1.3em;
+	text-align:justify;
+	border: 1px solid red;
+	border-radius: 10px;
+	margin-right: 10px;
+	
+	padding: 10px;
+	display: inline-block;
+}
+
+.iconNew.arrange02{
+ -webkit-animation-duration: 4s;
+ -webkit-animation-timing-function: ease-in-out;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-transform-origin: middle center;
+ -webkit-animation-name: outer02;
+ animation-duration: 4s;
+ animation-timing-function: ease-in-out;
+ animation-iteration-count: infinite;
+ transform-origin: middle center;
+ animation-name: outer01;
+ background: #54bb00;
+ margin:0 0 0 10px;
+ padding:1px 4px 1px 1px;
+ font-size:12px;
+}
+@-webkit-keyframes outer02 {
+ 0%{
+ background: #6F9FCD;
+ }
+ 30%{
+ background: #6F9FCD;
+ }
+ 50% {
+ background: #6F9FCD;
+ -webkit-box-shadow: 0 0 7px #98f139; 
+ }
+ 70%{
+ background: #6F9FCD;
+ }
+ 100% {
+ background: #6F9FCD;
+ }
+}
+@keyframes outer01 {
+ 0%{
+ background: #54bb00;
+ }
+ 30%{
+ background: #54bb00;
+ }
+ 50% {
+ background: #ffffff;
+ -box-shadow: 0 0 7px #98f139; 
+ }
+ 70%{
+ background: #54bb00;
+ }
+ 100% {
+ background: #54bb00;
+ }
+}
+
+.lbox {
+
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.lbox__line {
+  position: absolute;
+}
+
+.lbox__line:nth-child(1),
+.lbox__line:nth-child(3) {
+  width: 100%;
+  height: 2px;
+}
+
+.lbox__line:nth-child(2),
+.lbox__line:nth-child(4) {
+  width: 2px;
+  height: 100%;
+}
+
+.lbox__line:nth-child(1) {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, transparent, #B5CBE0);
+  animation: animate1 12s linear infinite;
+
+}
+
+
+
+.lbox__line:nth-child(2) {
+  top: 0;
+  right: 0;
+  animation: animate2 12s linear infinite;
+  animation-delay: 4s;
+  background: linear-gradient(to bottom, transparent, #B5CBE0);
+}
+
+
+.lbox__line:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, transparent, #B5CBE0);
+  animation: animate3 12s linear infinite;
+  animation-delay: 6s;
+}
+
+
+.lbox__line:nth-child(4) {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, transparent, #B5CBE0);
+  animation: animate4 12s linear infinite;
+  animation-delay: 10s;
+}
+
+
+@keyframes animate1 {
+
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes animate2 {
+
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(500%);
+  }
+
+}
+
+@keyframes animate3 {
+
+
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+
+}
+
+@keyframes animate4 {
+
+
+  0% {
+    transform: translateY(100%);
+  }
+
+
+  100% {
+    transform: translateY(-500%);
+  }
+
+}
+
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRB6NTNG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class='fade-layer'></div>
+    <div class='header-panel'>
+      <div class='header-container'>
+      	
+        <img class="hamburger" src="../img/hamburger.svg" alt="*" />
+              
+
+      <form style="margin:0px">
+                <select class="field" name="ListeUrl" size=1 onChange="ChangeUrl(this.form)">
+                  <option selected value="#">IPCC web sites</option>
+                  <option value="https://www.ipcc.ch/">IPCC Home</option>
+                  <option value="https://www.ipcc.ch/working-group/wg1/">Working Group I</option>
+                  <option value="https://www.ipcc.ch/working-group/wg2/">Working Group II</option>
+                  <option value="https://www.ipcc.ch/working-group/wg3/">Working Group III</option>
+                  <option value="https://www.ipcc-nggip.iges.or.jp/">TFI / NGGIP</option>
+                  <option value="https://www.ipcc-data.org/">Data Distribution Centre</option>
+                </select>
+              </form>
+        </div>
+    </div>
+
+  
+<div class='bodyarea'>
+      
+
+
+  <nav class='menu-panel'>
+  
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+    <tr> 
+      <td width="220" bgcolor="#5492CD" valign="top">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+          <tr> 
+            <td valign="top">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td colspan="2" bgcolor="#5492CD" valign="top" height="32" width="220" class="nav"><img src="../img/pixel.gif" width="1" height="32"></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_00.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="http://www.ipcc.ch"><font color="#FFFFFF">Home IPCC</font></a></td>
+                </tr>
+				<tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_01.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../index.html"><font color="#FFFFFF">IPCC-TFI Home</font></a></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_02.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../org/overview.html">Organization</a></td>
+                </tr>
+
+			    <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_04.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../public/index.html">Publications</a></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_04_1.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../home/2027slcf.html"><em>2027 MR on SLCFs</em></a></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_04_1.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../home/2027cdrccus.html"><em>2027 MR on CDR and CCUS</em></a></td>
+                </tr>
+				<tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_04_2.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../EFDB/">Emission Factor Database (EFDB) </a></td>
+                </tr>
+				<tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_04_3.gif" width="9" height="21"></td>
+                  <td width="204" class="nav_on"><a href="index.html">Inventory Software</a></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_05.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../meeting/meeting.html">Meetings</a></td>
+                </tr>
+                <!--<tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_05_5.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../home/2019refinement.html"><em>2019 Refinement</em></a></td>
+                </tr>
+                <!--<tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_05_5.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../home/wetlands.html"><em>Wetlands Supplement</em></a></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_06.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../home/2013KPSupplementaryGuidance_inv.html"><em>KP Supplement</em></a></td>
+                </tr>-->
+				<tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_06_5.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../faq/faq.html">FAQs</a></td>
+                </tr>
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_07.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../links/links.html">Links</a></td>
+                </tr>
+
+                <tr> 
+                  <td valign="top" width="9" class="menunav"><img src="../img/mk/menu_08.gif" width="9" height="21"></td>
+                  <td width="204" class="nav"><a href="../edg/edg.html">Electronic DIscussion Group (EDG) </a></td>
+                </tr>
+				<tr>
+				  <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td vAlign="top" class="menunav" colSpan="2"> 
+                    <DIV align="center"> 
+                      <A href="#"><IMG onClick="window.open('http://www.ipcc-nggip.iges.or.jp/7g0_nobel_popup.html','Nobel','width=900,height=600')" height=100 src="../img/IPCCNobelCDbig2.gif" width="100" border="0"/></A>                          				
+                      <BR><BR>
+                      <SPAN class="SH-nobel">&copy; &reg; The Nobel Foundation</SPAN>
+                      <BR><BR>
+                      
+                      <SPAN class="SH-nobel2">IPCC honoured with the <BR>2007 Nobel Peace Prize</SPAN>
+                      <BR><BR>
+                    </DIV>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <ul class="extramenu">
+                      <li><a href="https://www.ipcc.ch/copyright/" target="_blank">Copyright</a></li>
+                      <li><a href="https://www.ipcc.ch/disclaimer/" target="_blank">Disclaimer</a></li>
+                      <li><a href="https://www.ipcc.ch/privacy-policy-2/" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>            </td>
+          </tr>
+          <tr> 
+            <td valign="bottom" align="center" class="address">
+			  <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <a href="http://www.iges.or.jp/"><img src="../img/iges.gif" width="100" height="52" vspace="5"></a>
+
+              <p>&nbsp;</p>
+             <p>&nbsp;</p></td>
+          </tr>
+        </table>      </td></tr></table>
+    </nav>
+    
+      <div class='swipe'></div>
+
+      <div class='main'>
+      	<div class="titlepage">
+          <span class="titlepagechar">Inventory Software</span>
+        </div>
+        <div class="pagecontents">
+<h1>New Version 2.98 – IPCC Inventory Software <!-- <sup><span class="iconNew arrange02">
+		New! </span></sup> --></h1>
+			  <p>&nbsp;</p>
+              <p>This is the new version 2.98 of the IPCC Inventory Software released on 25 June 2025.</p>
+              <p>&nbsp;</p>
+             
+
+              <ul>
+                <li><a href="files/IPCC2006Setup_v2980_x64.exe">Ver. 2.98 IPCC Inventory Software - <strong>64bit</strong></a><br>
+                  <br>
+                </li>
+                <li><a href="files/IPCC2006Setup_v2980_x86.exe">Ver. 2.98 IPCC Inventory Software - <strong>32bit</strong></a></li>
+              </ul>
+              <p>&nbsp;</p>
+              <p class="important"><strong><u>Note</u></strong></p>
+        <p class="important">Please note that version 2.98 comes in 2 different files for installation. Thus, before downloading the file you shall check which one you actually need by using 
+          <a href="files/InventorySoftware_setup_selection_chart.pdf" target="_blank">this decision tree</a>.</p>
+               <p>&nbsp;</p>
+               <p><strong><u>Improvements in v2.98</u></strong></p>
+        <p>The main improvements of this version are as follows. For the details, please see the <a href="files/Changelog_ver2.98.pdf" target="_blank">Changelog</a></p>
+        <p class="sublist">- Implementation of Notation Keys in IPCC Reporting Tables        
+        <p class="sublist"> - Implementation of export of worksheets to Excel        
+        <p class="sublist"> - Emission calculation performance improvements
+        <p class="sublist">- Automated check for update at startup
+        <p class="sublist">- bug fixes (see Changelog)        
+        <p>If you find any issues in the use of the IPCC Inventory Software, come back to us at 
+          <script type="text/javascript" language="javascript">
+
+<!--
+{
+ 	coded = "u3oo-91radm7q@usq9.17.v3"
+		cipher = "aZbYcXdWeVfUgThSiRjQkPlOmNnMoLpKqJrIsHtGuFvEwDxCyBzA1234567890"
+		shift=coded.length
+		link=""
+		for (i=0; i<coded.length; i++){
+			if (cipher.indexOf(coded.charAt(i))==-1){
+				ltr=coded.charAt(i)
+				link+=(ltr)
+			}
+			else {     
+				ltr = (cipher.indexOf(coded.charAt(i))-shift+cipher.length) % cipher.length
+				link+=(cipher.charAt(ltr))
+			}				
+    }
+			document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+    }
+
+//-->
+</script> 
+        .</p>
+			  <p>&nbsp;</p>
+
+              <p>Thank you very much for your support.</p>
+              <p>&nbsp;</p>
+
+  <p>&nbsp;</p>
+<!--  
+              <h1>IPCC Inventory Software – version 2.691</h1>
+			  <p>&nbsp;</p>
+<p>The IPCC Inventory Software implements the simplest Tier 1 methods for  all sectors and Tier 2 methods for most categories under Energy, IPPU and Waste  Sectors as well as Agriculture categories under AFOLU Sector in the 2006 IPCC  Guidelines for National Greenhouse Gas Inventories (please see <a href="files/Tier2_coverage.xlsx" target="_blank">Tier2_coverage.xlsx</a>). The TFI is currently working on making it compatible with the Tier 2  methods for the Land component of the AFOLU Sector.</p>
+              <p>&nbsp;</p>
+              <p>This software has a number of improvements over the <a href="../public/gl/software.html">earlier software for the Revised 1996 IPCC Guidelines for National Greenhouse Gas Inventories</a>, which is not supported anymore.</p>
+              <p>&nbsp;</p>
+             
+              <p>&nbsp;</p>
+
+<h2>Download</h2>
+              <p>&nbsp;</p>
+              <ul>
+                <li><a href="files/IPCC2006Setup_v2691.exe" align="center">Inventory Software Ver 2.691 (released on 23 January 2020)</a> <span class="softnote"><br>
+                  &gt;&gt; It can run on MS Windows only.<br>
+                &gt;&gt; Please read the <a href="files/Note_on_IPCC_Inventory_Software.pdf">note</a> carefully before using the software.</span></li>
+              </ul>
+              <p>&nbsp;</p>
+              <ul>
+                <li><a href="files/IPCCInventorySoftwareUserManualV2_691.pdf">User Manual (Ver 2.691)<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a><br> 
+                  <span class="manualnote">&gt;&gt; French version is available <a href="manual_f.html">here</a></span>, thanks to the cooperation of
+                Government of Belgium.<br>
+                <span class="manualnote">&gt;&gt; Arabic version is also available <a href="manual_a.html">here</a></span>, thanks to the cooperation of
+                Sidati Ould Dah Ould
+EIDA (CCPNCC).
+                </li>
+              </ul>
+              <p>&nbsp;</p>
+              <ul>
+                <li><a href="files/Release_Note_Ver.2.691.pdf">Release Note (Ver 2.691)<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a></li>
+                <p>&nbsp;</p>
+                <li><a href="files/Tier2_coverage.xlsx">Detailed information on Tier 2 coverage</a>　(Tier2_coverage.xlsx)</li>
+              </ul>
+              
+              <p>&nbsp;</p>
+
+<p>&nbsp;</p>
+-->
+             <h2 class="important" >Important!</h2>
+              <p>&nbsp;</p>
+              <p class="radius1">When setting YOUR Password always set YOUR Password Hint too. <br>
+          It is highly recommended that you take note of your password and store it in a safe place. In case you lose or forget your password, the IPCC Inventory Software does not have a mechanism to restore your password, this means that you can no longer access your database. </p>
+              <p>&nbsp;</p>
+              <p class="important">Please note that the IPCC Inventory Software cannot be used with iOS (Apple Computers).</p>
+              <p>&nbsp;</p>
+              
+              <h2 class="important" >Getting started with the IPCC Inventory Software</h2>
+              <p>&nbsp;</p>
+              <p class="important">After installing the IPCC Inventory Software, launch it for the first time
+                and you will be asked to initialize the associated database by providing
+          YOUR Login (User Name) and YOUR Password.</p>
+              <p>&nbsp;</p>
+              <p align="center"><img src="files/initial_login.png" alt="img" width="481" height="422"></p>
+              <p>&nbsp;</p>
+              <p class="important">Please note the Login and Password (Credentials) are associated with the Database, not with the software. Thus, you can open and use many databases with different credentials with the software installed on your computer.</p>
+              <p>&nbsp;</p>
+              
+
+              <h2>Support</h2>
+        <p>&nbsp;</p>
+              
+              <ul>
+        <li><a href="files/IPCCInventorySoftwareUserManualV2_98.pdf" target="_blank">User Manual (Ver 2.98)<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a><br />
+          <br /></li>
+        <li><a href="files/IPCC_InventorySoftwareUserManual_ver_2.98.pptx">Manual for inventory compilers</a> (PPT file)<br />
+          <br /></li>
+        <li>Guidebooks
+          <ul>
+            <li><a href="files/IPCC_Software_Energy_sector_Guidebook_ver1.2.pdf" target="_blank">Energy Guidebook v1.2 draft of January 2025<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a></li>
+            <li><a href="files/IPCC_Software_Guidebook_IPPU_v.2.98.pdf" target="_blank">IPPU Guidebook  draft of June 2025<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a></li>
+            <li><a href="files/Land_Representation_Guide_ver.1.2.pdf" target="_blank">Land Representation Guide v1.2 draft of April 2024<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a></li>
+            <li><a href="files/Guidebook_Livestock_3A.pdf" target="_blank">Livestock Categories 3.A Users' Guidebook v1.0 dfraf of February 2024<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a></li>
+            <li><a href="files/IPCC_Software_Waste_sector_Guidebook_ver1.1.pdf" target="_blank">Waste Guidebook v1.0 draft of January 2025<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"></a></li>
+            <li><a href="files/UNFCCC_CRT_Export_Guide_Mar2025.pdf" target="_blank">UNFCCC CRT Export Guide draft of March 2025<img src="../img/mk/pdf.gif" alt="pdf" width="32" height="16"><br>
+                    <br>
+                  </a>These Guidebooks are still drafts for further improvement. They have been
+                    compiled by IPCC TFI TSU, and have not been subject to formal IPCC
+                    review processes. Feedback from users on areas of improvements and/or
+                    errors identified are most welcome and are to be sent to 
+        <script type="text/javascript" language="javascript">
+
+<!--
+{
+ 	coded = "u3oo-91radm7q@usq9.17.v3"
+		cipher = "aZbYcXdWeVfUgThSiRjQkPlOmNnMoLpKqJrIsHtGuFvEwDxCyBzA1234567890"
+		shift=coded.length
+		link=""
+		for (i=0; i<coded.length; i++){
+			if (cipher.indexOf(coded.charAt(i))==-1){
+				ltr=coded.charAt(i)
+				link+=(ltr)
+			}
+			else {     
+				ltr = (cipher.indexOf(coded.charAt(i))-shift+cipher.length) % cipher.length
+				link+=(cipher.charAt(ltr))
+			}				
+    }
+			document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+    }
+
+//-->
+</script>
+                    <br /><br />
+            </li>
+          </ul>
+<li>Tools
+  <ul>
+    <li><a href="files/ipcc2006_blank_v298.accdb">Blank Database File (Ver 2.98)</a> (accdb file)<br>
+      <br>
+    </li>
+    <li><a href="files/HWP_upload_InventorySoftwareIPCC.xlsm">IPCC Harvested Wood Products (HWP) Upload (MS-Excel File)</a><br>
+      <br>
+    </li>
+  </ul>
+</li>
+<li><a href="translation_db.html">Unofficial translations in ARABIC and in FRENCH</a> kindly provided by Prof. Sidaty Ould Dah</li>
+<p>&nbsp;</p>
+<li>Help  Desk: email <script type="text/javascript" language="javascript">
+
+<!--
+{
+ 	coded = "u3oo-91radm7q@usq9.17.v3"
+		cipher = "aZbYcXdWeVfUgThSiRjQkPlOmNnMoLpKqJrIsHtGuFvEwDxCyBzA1234567890"
+		shift=coded.length
+		link=""
+		for (i=0; i<coded.length; i++){
+			if (cipher.indexOf(coded.charAt(i))==-1){
+				ltr=coded.charAt(i)
+				link+=(ltr)
+			}
+			else {     
+				ltr = (cipher.indexOf(coded.charAt(i))-shift+cipher.length) % cipher.length
+				link+=(cipher.charAt(ltr))
+			}				
+    }
+			document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+    }
+
+//-->
+</script>
+  <br>
+  <br>
+
+</li></ul>
+
+<p>&nbsp;</p>
+			 <h3>Frequently Asked Questions</h3>
+             <p>&nbsp;</p> 
+             <div id="CollapsiblePanelGroup1" class="CollapsiblePanelGroup">
+               
+               <div class="CollapsiblePanel">
+                 <div class="CollapsiblePanelTab" tabindex="0">Q1:	Do I need to uninstall the older version of the IPCC Inventory Software before I install the upgraded one? How can I ensure a proper data transition to the new version?</div>
+                 <div class="CollapsiblePanelContent">
+                   <p>A: You can run the upgraded version without having to uninstall the older one.<br>
+                     <br>
+                     In order not to lose your data, any unforeseeable should occur, please implement the following steps:</p><p>&nbsp;</p>
+                   <ul>
+                     <li>Before upgrading, make sure to backup your database as mdb/accdb file (go to Database>Save as), and also archive a copy of it;<br>
+                       <br>
+                     </li>
+                     <li>Upgrade the software;<br>
+                       <br>
+                     </li>
+                     <li>Open your backed-up version of the database in the upgraded software (go to Database>Open database);<br>
+                       <br>
+                     </li>
+                     <li>After opening database, the following message will appear: "Your database will be upgraded. It is strongly recommended to make a backup of the original database. Would you like to backup now?". Then please select "Yes" (backup of original database may be useful for archiving purpose, e.g. in case its copy does not exist).
+                     </li>
+                     </ul>
+                   <p>&nbsp;</p>
+                   <p>Please note if you have installed version 2.82 or any earlier versions, installing the new version does not automatically remove the previous version and therefore you shall do it manually. While if you have installed version 2.83 or any newer, installing the new version automatically removes the previous version.</p>
+                   <p>&nbsp;</p>
+                 </div>
+               </div>
+               <div class="CollapsiblePanel">
+                 <div class="CollapsiblePanelTab" tabindex="0">Q2: What is the purpose of data import/export in XML format? Could XML data be imported from different versions of the IPCC Inventory Software and for the time series?</div>
+                 <div class="CollapsiblePanelContent">
+                   A: XML import/export of data is a fundamental functionality of the software needed for GHG Inventory compilation (e.g. inventory coordinator compiles data by importing relevant XML files received from sectoral experts). The import/export of XML data can be performed only within the same software version (e.g. export from v.2.54 to v.2.691, and vice versa, is not allowed). Current functionality allows import/export of data only for the single inventory year (future plans are to have time series XML export/import function).
+                 </div>
+               </div>
+               
+</div>
+              
+        <script language="JavaScript" type="text/javascript">
+var cpg1 = new Spry.Widget.CollapsiblePanelGroup("CollapsiblePanelGroup1", { contentIsOpen: false });
+              </script>
+              
+              
+
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+            </div>
+            <p class="cp">&copy; 2026 Intergovernmental Panel on Climate Change (IPCC)</p>
+      </div>
+    </div>
+<script type="text/javascript" src="../includes/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "scope": "Tracked text in New version at pre-expansion commit 496e034; metadata URL keywords only",
+  "command": [
+    "git",
+    "grep",
+    "-I",
+    "-l",
+    "-i",
+    "-E",
+    "farmoffice\\.osu\\.edu|agmanager\\.info|ses\\.wsu\\.edu|wpcdn\\.web\\.wsu\\.edu|arec\\.tennessee\\.edu|uaex\\.uada\\.edu|ag\\.purdue\\.edu",
+    "496e034",
+    "--",
+    "New version"
+  ],
+  "exit_code": 1,
+  "matched_paths": [],
+  "not_a_complete_historical_overlap_audit": true,
+  "limits": [
+    "No inspection of historical binary workbook contents",
+    "No proof of lack of common templates in EUSES/Enron or mirrors",
+    "Untracked protected research directories not traversed"
+  ],
+  "utc": "2026-10-18T06:01:49.979176+00:00"
+}

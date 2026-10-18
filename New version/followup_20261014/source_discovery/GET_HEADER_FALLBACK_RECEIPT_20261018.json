@@ -1,0 +1,62 @@
+{
+  "role": "Single ordinary GET header check after HEAD denial; no response body read or saved",
+  "workbook_bodies_acquired": 0,
+  "results": [
+    {
+      "id": "candidate_06",
+      "origin": "Washington State University",
+      "url": "https://wpcdn.web.wsu.edu/cahnrs/uploads/sites/5/2015/02/FS133EWorkbook.xlsx",
+      "method": "GET stream headers only, close before reading response body",
+      "workbook_body_bytes_processed": 0,
+      "utc": "2026-10-18T05:57:44.929232+00:00",
+      "status": 200,
+      "resolved_url": "https://wpcdn.web.wsu.edu/cahnrs/uploads/sites/5/2015/02/FS133EWorkbook.xlsx",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "content_length": "431428",
+      "content_disposition": null,
+      "redirects": 0
+    },
+    {
+      "id": "candidate_13",
+      "origin": "US National Laboratory of the Rockies",
+      "url": "https://www.nlr.gov/docs/libraries/analysis/01d-jedi-biopower-model-rel-b12-23-16.xlsm",
+      "method": "GET stream headers only, close before reading response body",
+      "workbook_body_bytes_processed": 0,
+      "utc": "2026-10-18T05:57:44.929940+00:00",
+      "status": 403,
+      "resolved_url": "https://www.nlr.gov/docs/libraries/analysis/01d-jedi-biopower-model-rel-b12-23-16.xlsm",
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "content_disposition": null,
+      "redirects": 0
+    },
+    {
+      "id": "candidate_15",
+      "origin": "US National Laboratory of the Rockies",
+      "url": "https://www.nlr.gov/docs/libraries/analysis/01d-jedi-geothermal-model-rel-gt12-23-16.xlsm",
+      "method": "GET stream headers only, close before reading response body",
+      "workbook_body_bytes_processed": 0,
+      "utc": "2026-10-18T05:57:44.930252+00:00",
+      "status": 403,
+      "resolved_url": "https://www.nlr.gov/docs/libraries/analysis/01d-jedi-geothermal-model-rel-gt12-23-16.xlsm",
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "content_disposition": null,
+      "redirects": 0
+    },
+    {
+      "id": "vertex42_loan",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/Links/go2.php?urlid=file-loanschedule",
+      "method": "GET stream headers only, close before reading response body",
+      "workbook_body_bytes_processed": 0,
+      "utc": "2026-10-18T05:57:44.930539+00:00",
+      "status": 403,
+      "resolved_url": "https://www.vertex42.com/Links/go2.php?urlid=file-loanschedule",
+      "content_type": "text/html",
+      "content_length": "146",
+      "content_disposition": null,
+      "redirects": 0
+    }
+  ]
+}

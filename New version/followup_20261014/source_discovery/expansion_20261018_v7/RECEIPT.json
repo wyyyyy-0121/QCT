@@ -1,0 +1,1948 @@
+{
+  "role": "Metadata discovery only; no candidate workbook bodies or answer files fetched",
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "index_sha256": "19285fd9ceb4b3e7784e1f5cf8958f38bf8e61b1e457ddc0941cb8ea0446bdd9",
+  "script_sha256": "f0f94ff6e94de7449fac7cc28e0dc3e16f06c099e220068cc8fe8a0e1f7de0f6",
+  "results": [
+    {
+      "id": "excelint_metadata",
+      "origin": "ExceLint corpus provenance metadata",
+      "url": "https://api.github.com/repos/ExceLint/ExceLint/git/trees/master?recursive=1",
+      "utc": "2026-10-18T05:53:40.775445+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/ExceLint/ExceLint/git/trees/master?recursive=1",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 55091,
+      "sha256": "5a77414b3c32291022bebeb8ddaf63ec5f60795bb9c48e646e254d7f37ffd50a",
+      "path": "source_discovery/expansion_20261018_v7/pages/excelint_metadata.source",
+      "title": null,
+      "text_characters": 55091,
+      "relevant_links": [],
+      "snippets": [
+        "\",\"size\":13424,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/d249577338a9131fdaf96321b48df9ebf3e34b2b\"},{\"path\":\"ExceLint/Formula.fs\",\"mode\":\"100755\",\"type\":\"blob\",\"sha\":\"75f709450230e674323c599c4f7d87dfa5e9e36c\",\"size\":739,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/75f709450230e674323c599c4f7d87dfa5e9e36c\"},{\"path\":\"ExceLint/HashSetUtils.fs\",\"mode\":\"100755\",\"type\":\"blob\",\"sha\":\"ee9fa73403f62b5bb904b81bb8dacefee0426471\",\"siz",
+        "481f45113a\",\"size\":4215,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/db59568b6fd26e7ec51423ea11a1ad481f45113a\"},{\"path\":\"LICENSE\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"4a0b6192af3067ec1b9cd6a380325b138d05d8d3\",\"size\":1365,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/4a0b6192af3067ec1b9cd6a380325b138d05d8d3\"},{\"path\":\"LICENSE.rtf\",\"mode\":\"100755\",\"type\":\"blob\",\"sha\":\"8530cfeff38f795e63da5e8d34a947e2d546c496\",\"size\":41270,\"url\":",
+        "138d05d8d3\",\"size\":1365,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/4a0b6192af3067ec1b9cd6a380325b138d05d8d3\"},{\"path\":\"LICENSE.rtf\",\"mode\":\"100755\",\"type\":\"blob\",\"sha\":\"8530cfeff38f795e63da5e8d34a947e2d546c496\",\"size\":41270,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/8530cfeff38f795e63da5e8d34a947e2d546c496\"},{\"path\":\"LICENSE.txt\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"1071772b66aa1687b87157befd297ae26babaf77\",\"size\":1339,\"u",
+        "2d546c496\",\"size\":41270,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/8530cfeff38f795e63da5e8d34a947e2d546c496\"},{\"path\":\"LICENSE.txt\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"1071772b66aa1687b87157befd297ae26babaf77\",\"size\":1339,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint/git/blobs/1071772b66aa1687b87157befd297ae26babaf77\"},{\"path\":\"PRQ\",\"mode\":\"040000\",\"type\":\"tree\",\"sha\":\"e01231ce1017bdee947156038022e6c28a32fa80\",\"url\":\"https://api.gith"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_github_search",
+      "origin": "GitHub replication repository metadata",
+      "url": "https://api.github.com/search/repositories?q=%22Reinhart%22+%22Rogoff%22&per_page=10",
+      "utc": "2026-10-18T05:53:41.411523+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/search/repositories?q=%22Reinhart%22+%22Rogoff%22&per_page=10",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 57141,
+      "sha256": "e8f3190845ad1499230fc73de7e3d2b80a815994d21d102bea28e16b48f069dc",
+      "path": "source_discovery/expansion_20261018_v7/pages/rr_github_search.source",
+      "title": null,
+      "text_characters": 57137,
+      "relevant_links": [],
+      "snippets": [
+        ":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":18,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":2,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":18,\"open_issues\":2,\"watchers\":62,\"default_branch\":\"master\",\"score\":1.0},{\"id\":9534770,\"node_id\":\"MDEwOlJlcG9zaXRvcnk5NTM0Nzcw\",\"name",
+        ":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":19,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":19,\"open_issues\":0,\"watchers\":28,\"default_branch\":\"master\",\"score\":1.0},{\"id\":455193955,\"node_id\":\"R_kgDOGyG1Yw\",\"name\":\"HAP-RR-git\"",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":8,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":{\"key\":\"cc0-1.0\",\"name\":\"Creative Commons Zero v1.0 Universal\",\"spdx_id\":\"CC0-1.0\",\"url\":\"https://api.github.com/licenses/cc0-1.0\",\"node_id\":\"MDc6TGljZW5zZTY=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visib",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":4,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":4,\"open_issues\":0,\"watchers\":4,\"default_branch\":\"master\",\"score\":1.0},{\"id\":26778691,\"node_id\":\"MDEwOlJlcG9zaXRvcnkyNjc3ODY5MQ==\",\"n",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":1,\"default_branch\":\"master\",\"score\":1.0},{\"id\":19677801,\"node_id\":\"MDEwOlJlcG9zaXRvcnkxOTY3NzgwMQ==\",\"n",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":1,\"default_branch\":\"master\",\"score\":1.0},{\"id\":9685069,\"node_id\":\"MDEwOlJlcG9zaXRvcnk5Njg1MDY5\",\"name\":",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":0,\"default_branch\":\"master\",\"score\":1.0},{\"id\":1400635151,\"node_id\":\"R_kgDOU3v_Dw\",\"name\":\"debt-thresho",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":{\"key\":\"mit\",\"name\":\"MIT License\",\"spdx_id\":\"MIT\",\"url\":\"https://api.github.com/licenses/mit\",\"node_id\":\"MDc6TGljZW5zZTEz\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issue",
+        "ussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":{\"key\":\"mit\",\"name\":\"MIT License\",\"spdx_id\":\"MIT\",\"url\":\"https://api.github.com/licenses/mit\",\"node_id\":\"MDc6TGljZW5zZTEz\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":0,\"default_branch\"",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":1,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":1,\"open_issues\":0,\"watchers\":1,\"default_branch\":\"main\",\"score\":1.0},{\"id\":1195091029,\"node_id\":\"R_kgDORzukVQ\",\"name\":\"crisis-monitor",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":0,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":0,\"open_issues\":0,\"watchers\":0,\"default_branch\":\"master\",\"score\":1.0}]}"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_science_tree",
+      "origin": "Reinhart Rogoff historical replication metadata",
+      "url": "https://api.github.com/repos/scienceetonnante/Reinhart-Rogoff/git/trees/master?recursive=1",
+      "utc": "2026-10-18T05:53:40.776264+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/repos/scienceetonnante/Reinhart-Rogoff/git/trees/master?recursive=1",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 897,
+      "sha256": "730d92159bf6d1debe062186fbdaf2b0eb1f01fdcc9d2577008de975cdbb4ef5",
+      "path": "source_discovery/expansion_20261018_v7/pages/rr_science_tree.source",
+      "title": null,
+      "text_characters": 897,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "umass_peri_rr",
+      "origin": "Herndon Ash Pollin original replication metadata",
+      "url": "https://peri.umass.edu/?view=article&id=566:does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff&catid=133",
+      "utc": "2026-10-18T05:53:41.385063+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://peri.umass.edu/publications/?select-authors%5B%5D=2167",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 376247,
+      "sha256": "d6b270b9fa934069cb181e20e2ace41c113fc9ebe914e93f43b9aaf1778d8ac3",
+      "path": "source_discovery/expansion_20261018_v7/pages/umass_peri_rr.source",
+      "title": "Publications – PERI UMASS",
+      "text_characters": 13614,
+      "relevant_links": [
+        {
+          "text": "Terms and Conditions",
+          "url": "https://peri.umass.edu/terms-conditions/",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_budget",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html",
+      "utc": "2026-10-18T05:53:40.773889+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/ExcelTemplates/project-budget.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 62936,
+      "sha256": "bd1eca2cd4583ae0dde047f4433c6b7d8d73f72d5b9459ab28dfc62690cf4e8a",
+      "path": "source_discovery/expansion_20261018_v7/pages/vertex42_budget.source",
+      "title": "Free Project Budget Templates",
+      "text_characters": 7155,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "earned value management",
+          "url": "https://www.vertex42.com/ExcelTemplates/earned-value-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Detailed Project Budget (New)",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html#detailed",
+          "workbook_link": false
+        },
+        {
+          "text": "Detailed Project Budget with WBS",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html#detailed-with-wbs",
+          "workbook_link": false
+        },
+        {
+          "text": "Basic Project Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html#basic",
+          "workbook_link": false
+        },
+        {
+          "text": "Monthly Project Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html#monthly",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Budgeting Tips",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html#tips",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/detailed-project-budget-template.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-ProjectBudgetDetailed",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Google Sheets",
+          "url": "https://www.vertex42.com/Files/download2/gdrive.php?file=project-budget-detailed",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/project-budget-template.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-ProjectBudgetWBS",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Google Sheets",
+          "url": "https://www.vertex42.com/Files/download2/gdrive.php?file=project-budget-wbs",
+          "workbook_link": false
+        },
+        {
+          "text": "WBS",
+          "url": "https://www.vertex42.com/ExcelTemplates/work-breakdown-structure.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/project-budget-basic.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-ProjectBudgetB",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Google Sheets",
+          "url": "https://www.vertex42.com/Files/download2/gdrive.php?file=project-budget",
+          "workbook_link": false
+        },
+        {
+          "text": "business budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/project-budgeting-monthly.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-ProjectBudgetM",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Google Sheets",
+          "url": "https://www.vertex42.com/Files/download2/gdrive.php?file=project-budget-monthly",
+          "workbook_link": false
+        },
+        {
+          "text": "Personal Budget Spreadsheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/personal-budget-spreadsheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Creating your project budget: Where to begin?",
+          "url": "https://www.techrepublic.com/article/creating-your-project-budget-where-to-begin/",
+          "workbook_link": false
+        },
+        {
+          "text": "Account Register",
+          "url": "https://www.vertex42.com/ExcelTemplates/account-register.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Bill Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/bill-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Calculator",
+          "url": "https://www.vertex42.com/Calculators/budget-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Cash Envelope Trackers",
+          "url": "https://www.vertex42.com/ExcelTemplates/cash-envelopes.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Checkbook Register",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-checkbook.html",
+          "workbook_link": false
+        },
+        {
+          "text": "College Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/college-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Debt Snowball Calculator",
+          "url": "https://www.vertex42.com/Calculators/debt-reduction-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Event Budget Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/event-budget-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Expense & Budget Tracking",
+          "url": "https://www.vertex42.com/ExcelTemplates/expense-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Budget Worksheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/home-budget-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Household Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/monthly-household-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Income and Expense Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/income-and-expense-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Family Budget Planner",
+          "url": "https://www.vertex42.com/ExcelTemplates/family-budget-planner.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Money Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/money-management-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Money Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/money-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Monthly Cash Flow",
+          "url": "https://www.vertex42.com/ExcelTemplates/monthly-cash-flow.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Personal Monthly Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/personal-monthly-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings Goal Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/savings-goal-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/simple-budget-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Travel Budget Worksheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/travel-budget-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Wedding Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/wedding-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Weekly Budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/weekly-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Zero-Based Budget Worksheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/zero-based-budget-worksheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Make a Budget",
+          "url": "https://www.vertex42.com/ExcelArticles/how-to-make-a-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Action Items Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/action-items-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Agile Kanban Board",
+          "url": "https://www.vertex42.com/ExcelTemplates/agile-kanban-board.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Construction Schedule",
+          "url": "https://www.vertex42.com/ExcelTemplates/construction-schedule.html",
+          "workbook_link": false
+        },
+        {
+          "text": "CPM Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/critical-path-method.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Eisenhower Matrix",
+          "url": "https://www.vertex42.com/ExcelTemplates/eisenhower-matrix.html",
+          "workbook_link": false
+        },
+        {
+          "text": "FMEA Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/fmea.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Planner",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-planner-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Schedule",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-schedule-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Timeline Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-timeline.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Tracking for Contractors",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-tracking-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "RACI Matrix",
+          "url": "https://www.vertex42.com/ExcelTemplates/raci-matrix.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Risk Assessment Matrix",
+          "url": "https://www.vertex42.com/ExcelTemplates/risk-assessment-matrix.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/simple-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Task List Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/task-list-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timeline Template",
+          "url": "https://www.vertex42.com/ExcelArticles/create-a-timeline.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheet Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "To Do List",
+          "url": "https://www.vertex42.com/ExcelTemplates/to-do-list-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Weekly Time Card",
+          "url": "https://www.vertex42.com/ExcelTemplates/weekly-timecard.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Free Project Budget Templates ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Budget Templates > Project Management > Project Budgets Project Budget Template Download a free project budgeting template for Excel® - by Jon Wittwer , Updated 8/18/2021 A vital part of project management is crea",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Budget Templates > Project Management > Project Budgets Project Budget Template Download a free project budgeting template for Excel® - by Jon Wittwer , Updated 8/18/2021 A vital part of project management is creating and managing an ",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Budget Templates > Project Management > Project Budgets Project Budget Template Download a free project budgeting template for Excel® - by Jon Wittwer , Updated 8/18/2021 A vital part of project management is creating and managing an accurate budget. Use Vertex42's project budget template along with a well",
+        " Templates > Budget Templates > Project Management > Project Budgets Project Budget Template Download a free project budgeting template for Excel® - by Jon Wittwer , Updated 8/18/2021 A vital part of project management is creating and managing an accurate budget. Use Vertex42's project budget template along with a well-defined project plan to help put together a solid budget - one that will allow you to accurately predict your costs and to manage those costs du",
+        "(New) Detailed Project Budget with WBS Basic Project Budget Monthly Project Budget Project Budgeting Tips Detailed Project Budget (New) for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2010 or later | project-budget-detailed.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version of the project budget template was designed with a new look and it provides multiple columns for fixed costs. Also, instead ",
+        "WBS Basic Project Budget Monthly Project Budget Project Budgeting Tips Detailed Project Budget (New) for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2010 or later | project-budget-detailed.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version of the project budget template was designed with a new look and it provides multiple columns for fixed costs. Also, instead of using the Labor, Materials, and ",
+        "udget Monthly Project Budget Project Budgeting Tips Detailed Project Budget (New) for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2010 or later | project-budget-detailed.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version of the project budget template was designed with a new look and it provides multiple columns for fixed costs. Also, instead of using the Labor, Materials, and Fixed Costs columns",
+        "t Budget (New) for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2010 or later | project-budget-detailed.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version of the project budget template was designed with a new look and it provides multiple columns for fixed costs. Also, instead of using the Labor, Materials, and Fixed Costs columns to calculate the Budgeted amount, these columns are used to calculat",
+        "Costs columns to calculate the Budgeted amount, these columns are used to calculate the Actual amount. Detailed Project Budget with WBS for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-WBS.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This spreadsheet is designed to make it easy to define and categorize all the costs associated with a detailed project. The categories are laid out in the traditi",
+        "calculate the Budgeted amount, these columns are used to calculate the Actual amount. Detailed Project Budget with WBS for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-WBS.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This spreadsheet is designed to make it easy to define and categorize all the costs associated with a detailed project. The categories are laid out in the traditional WBS (work br",
+        "ted amount, these columns are used to calculate the Actual amount. Detailed Project Budget with WBS for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-WBS.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This spreadsheet is designed to make it easy to define and categorize all the costs associated with a detailed project. The categories are laid out in the traditional WBS (work breakdown structure) ",
+        "mount. Detailed Project Budget with WBS for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-WBS.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This spreadsheet is designed to make it easy to define and categorize all the costs associated with a detailed project. The categories are laid out in the traditional WBS (work breakdown structure) format, making this template a useful addition to our popular ",
+        "x) For: Excel 2007 or later project-budget-WBS.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This spreadsheet is designed to make it easy to define and categorize all the costs associated with a detailed project. The categories are laid out in the traditional WBS (work breakdown structure) format, making this template a useful addition to our popular Gantt chart template , which can be used to define a detailed project schedu",
+        "al and labor rates and quantities for each task - automatically calculating the dollar amount. Basic Project Budget with Income Section for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-basic.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version is based on our general business budget template, and includes a section for recording income sources. This spreadsheet can be useful for smaller p",
+        "s and quantities for each task - automatically calculating the dollar amount. Basic Project Budget with Income Section for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-basic.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version is based on our general business budget template, and includes a section for recording income sources. This spreadsheet can be useful for smaller projects such as h",
+        "r each task - automatically calculating the dollar amount. Basic Project Budget with Income Section for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-basic.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version is based on our general business budget template, and includes a section for recording income sources. This spreadsheet can be useful for smaller projects such as home remodeling or o",
+        "ic Project Budget with Income Section for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later project-budget-basic.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This version is based on our general business budget template, and includes a section for recording income sources. This spreadsheet can be useful for smaller projects such as home remodeling or other small construction projects, where it may not be as critica",
+        "esale) Description This version is based on our general business budget template, and includes a section for recording income sources. This spreadsheet can be useful for smaller projects such as home remodeling or other small construction projects, where it may not be as critical to use a detailed work breakdown structure (WBS). When adding new budget categories, make sure to verify the formulas for the Subtotals and Totals. As your project progresses, enter the actu",
+        " actual expenditures will be calculated for each task along with the total variance for the project. Monthly Project Budgeting Template for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later | project-budget-monthly.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This template is for defining a budget by listing expenses (and income) on a monthly basis, and you can easily delete or insert more columns for projects of",
+        "res will be calculated for each task along with the total variance for the project. Monthly Project Budgeting Template for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later | project-budget-monthly.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This template is for defining a budget by listing expenses (and income) on a monthly basis, and you can easily delete or insert more columns for projects of different length",
+        "ted for each task along with the total variance for the project. Monthly Project Budgeting Template for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later | project-budget-monthly.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This template is for defining a budget by listing expenses (and income) on a monthly basis, and you can easily delete or insert more columns for projects of different lengths. This spreadsheet",
+        "onthly Project Budgeting Template for Excel Download ⤓ Excel (.xlsx) For: Excel 2007 or later | project-budget-monthly.xlsx ⤓ Google Sheets License : Private Use (not for distribution or resale) Description This template is for defining a budget by listing expenses (and income) on a monthly basis, and you can easily delete or insert more columns for projects of different lengths. This spreadsheet is a cross between our EVM Template and the Personal Budget Spreads",
+        " listing expenses (and income) on a monthly basis, and you can easily delete or insert more columns for projects of different lengths. This spreadsheet is a cross between our EVM Template and the Personal Budget Spreadsheet . If you want to plan, track and graph spending over time, you might want to use the EVM template. Project Budgeting Tips Make sure you document your assumptions when putting together your budget.  These can be important when tracking your project",
+        "lete or insert more columns for projects of different lengths. This spreadsheet is a cross between our EVM Template and the Personal Budget Spreadsheet . If you want to plan, track and graph spending over time, you might want to use the EVM template. Project Budgeting Tips Make sure you document your assumptions when putting together your budget.  These can be important when tracking your project and reviewing the outcome. Build some contingencies into your budget fo",
+        "ist Templates Timeline Template Timesheet Template To Do List Weekly Time Card Work Breakdown Structure Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "heet Template To Do List Weekly Time Card Work Breakdown Structure Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        " Structure Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Project Budgeting ",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Project Budgeting Templates for Excel Sitem",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Project Budgeting Templates for Excel Sitemap | Privacy Policy | Terms of Use © 2",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Project Budgeting Templates for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        "rd® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Project Budgeting Templates for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_gantt",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+      "utc": "2026-10-18T05:53:40.772900+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 67650,
+      "sha256": "63e5b6ba63cb63ec180f31055d1dd03417e50b710c4e4ca5a70ea076131e55c6",
+      "path": "source_discovery/expansion_20261018_v7/pages/vertex42_gantt.source",
+      "title": "Free Gantt Chart Template for Excel",
+      "text_characters": 9311,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/excel-gantt-chart-template-free.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-GanttChart365",
+          "workbook_link": false
+        },
+        {
+          "text": "OpenOffice (.ods)",
+          "url": "https://www.vertex42.com/Files/download2/odf.php?file=gantt-chart-template.ods",
+          "workbook_link": true
+        },
+        {
+          "text": "Excel 2003 (.xls)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-GanttChart",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/excel-gantt-chart-MF_large.gif",
+          "workbook_link": false
+        },
+        {
+          "text": "work breakdown structure",
+          "url": "https://www.vertex42.com/ExcelTemplates/work-breakdown-structure.html",
+          "workbook_link": false
+        },
+        {
+          "text": "yearly calendar",
+          "url": "https://www.vertex42.com/ExcelTemplates/yearly-calendar.html",
+          "workbook_link": false
+        },
+        {
+          "text": "project budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/ganttchart/free-gantt-chart-design-2.png",
+          "workbook_link": false
+        },
+        {
+          "text": "View Larger Image",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/ganttchart/gantt-chart-for-critical-path-analysis.png",
+          "workbook_link": false
+        },
+        {
+          "text": "CPM Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/critical-path-method.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Construction Schedule Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/construction-schedule.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Schedule Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-schedule-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Task List with Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/task-list-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "PeltierTech.com",
+          "url": "https://peltiertech.com/excel-gantt-charts/",
+          "workbook_link": false
+        },
+        {
+          "text": "Action Items Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/action-items-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Agile Kanban Board",
+          "url": "https://www.vertex42.com/ExcelTemplates/agile-kanban-board.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Eisenhower Matrix",
+          "url": "https://www.vertex42.com/ExcelTemplates/eisenhower-matrix.html",
+          "workbook_link": false
+        },
+        {
+          "text": "EVM Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/earned-value-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "FMEA Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/fmea.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Planner",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-planner-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Timeline Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-timeline.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Tracking for Contractors",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-tracking-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "RACI Matrix",
+          "url": "https://www.vertex42.com/ExcelTemplates/raci-matrix.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Risk Assessment Matrix",
+          "url": "https://www.vertex42.com/ExcelTemplates/risk-assessment-matrix.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/simple-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timeline Template",
+          "url": "https://www.vertex42.com/ExcelArticles/create-a-timeline.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheet Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "To Do List",
+          "url": "https://www.vertex42.com/ExcelTemplates/to-do-list-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Weekly Time Card",
+          "url": "https://www.vertex42.com/ExcelTemplates/weekly-timecard.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Free Gantt Chart Template for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms R",
+        "Free Gantt Chart Template for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Project Management Templates > Gantt Chart Gantt Chart Template for Excel Download a simple project scheduling tool for Microsoft Excel® - by Jon Wittwer, PhD | Updated 8/18/21 A Gantt chart i",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Project Management Templates > Gantt Chart Gantt Chart Template for Excel Download a simple project scheduling tool for Microsoft Excel® - by Jon Wittwer, PhD | Updated 8/18/21 A Gantt chart is a tool for project ",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Project Management Templates > Gantt Chart Gantt Chart Template for Excel Download a simple project scheduling tool for Microsoft Excel® - by Jon Wittwer, PhD | Updated 8/18/21 A Gantt chart is a tool for project management developed originally by Henry Gantt in the early 1900s. It is ",
+        "School Blog ► Search Icon Home > Excel Templates > Business Templates > Project Management Templates > Gantt Chart Gantt Chart Template for Excel Download a simple project scheduling tool for Microsoft Excel® - by Jon Wittwer, PhD | Updated 8/18/21 A Gantt chart is a tool for project management developed originally by Henry Gantt in the early 1900s. It is a type of bar chart that shows the start and end times for each task in a project schedule. The tasks are u",
+        "mplates > Project Management Templates > Gantt Chart Gantt Chart Template for Excel Download a simple project scheduling tool for Microsoft Excel® - by Jon Wittwer, PhD | Updated 8/18/21 A Gantt chart is a tool for project management developed originally by Henry Gantt in the early 1900s. It is a type of bar chart that shows the start and end times for each task in a project schedule. The tasks are usually categorized using a work breakdown structure with summa",
+        "tasks for the main project deliverables and sub-tasks that break the project down into a detailed and manageable task hierarchy. If you use Excel or Google Sheets, you can create this type of project schedule with almost no learning curve by downloading Vertex42's free Gantt Chart Template. Advertisement For complicated project management activities, you may need a tool such as Microsoft Project or other specialized software. But, if you want to create a simple",
+        "crosoft Project or other specialized software. But, if you want to create a simple Gantt chart quickly and easily, you only need some basic Excel skills to use this template (such as knowing how to copy and insert rows). Excel Gantt Chart Template \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer License : Private Use (not for distribution or resale) This template is the original Excel Gantt Chart created by Vertex42 over a decade ago. O",
+        "e Gantt chart quickly and easily, you only need some basic Excel skills to use this template (such as knowing how to copy and insert rows). Excel Gantt Chart Template \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer License : Private Use (not for distribution or resale) This template is the original Excel Gantt Chart created by Vertex42 over a decade ago. Over 3 million downloads so far. That is a LOT of projects. Download Over 2.5 mill",
+        " to use this template (such as knowing how to copy and insert rows). Excel Gantt Chart Template \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer License : Private Use (not for distribution or resale) This template is the original Excel Gantt Chart created by Vertex42 over a decade ago. Over 3 million downloads so far. That is a LOT of projects. Download Over 2.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later (.xlsx) ⤓ Google Shee",
+        " knowing how to copy and insert rows). Excel Gantt Chart Template \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer License : Private Use (not for distribution or resale) This template is the original Excel Gantt Chart created by Vertex42 over a decade ago. Over 3 million downloads so far. That is a LOT of projects. Download Over 2.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later (.xlsx) ⤓ Google Sheets Go Pro! Older Versions ",
+        "o macros - just a simple spreadsheet\" - by Jon Wittwer License : Private Use (not for distribution or resale) This template is the original Excel Gantt Chart created by Vertex42 over a decade ago. Over 3 million downloads so far. That is a LOT of projects. Download Over 2.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later (.xlsx) ⤓ Google Sheets Go Pro! Older Versions OpenOffice (.ods) Excel 2003 (.xls) Description This template contains the core fun",
+        "t created by Vertex42 over a decade ago. Over 3 million downloads so far. That is a LOT of projects. Download Over 2.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later (.xlsx) ⤓ Google Sheets Go Pro! Older Versions OpenOffice (.ods) Excel 2003 (.xls) Description This template contains the core functionality needed to create a simple Gantt chart easily. Each row of the worksheet represents a separate task. All you need to do is define the start date a",
+        "42 over a decade ago. Over 3 million downloads so far. That is a LOT of projects. Download Over 2.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later (.xlsx) ⤓ Google Sheets Go Pro! Older Versions OpenOffice (.ods) Excel 2003 (.xls) Description This template contains the core functionality needed to create a simple Gantt chart easily. Each row of the worksheet represents a separate task. All you need to do is define the start date and duration of each",
+        "nload Over 2.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later (.xlsx) ⤓ Google Sheets Go Pro! Older Versions OpenOffice (.ods) Excel 2003 (.xls) Description This template contains the core functionality needed to create a simple Gantt chart easily. Each row of the worksheet represents a separate task. All you need to do is define the start date and duration of each task. To add more tasks, you just copy and paste rows (or insert a row then press Ct",
+        "e % complete for each task. The vertical red line shows the current date. To use the automatic work breakdown structure numbering, copy the formula for the appropriate level from the bottom of the worksheet. While planning a project, you may also want to use a yearly calendar or project budget worksheet. Get the Professional Version! Learn More Enter Work Days, Calendar Days, or End Date Choose Different Colors for the Bars Select a Daily, Weekly, or Monthly View",
+        "elect a Daily, Weekly, or Monthly View Create Task Dependencies Easily Exclude Holidays from Work Days Free Gantt Chart Template New Design License : Private Use (not for distribution or resale) ⤓ Download For: Excel 2010 or later (.xlsx) This download provides the same functionality as the original free gantt chart template above. The main difference is the formatting. The WBS, End, and Work Days columns are highlighted gray to indicate that they contain formula",
+        "Exclude Holidays from Work Days Free Gantt Chart Template New Design License : Private Use (not for distribution or resale) ⤓ Download For: Excel 2010 or later (.xlsx) This download provides the same functionality as the original free gantt chart template above. The main difference is the formatting. The WBS, End, and Work Days columns are highlighted gray to indicate that they contain formulas. Note : Gantt Chart Pro version 5.0 uses a design very similar to t",
+        ": Gantt Chart Pro version 5.0 uses a design very similar to this free version. Advertisement Creating Dependent Tasks in a Gantt Chart with Excel One of the reasons why Excel is a useful tool for creating Gantt Charts is that task dependencies can be defined by using Excel formulas. Gantt Chart Template Pro is designed to make this easier than entering your own formulas, but here are a few simple examples you can try: 1. Start a Task the Day After a Predecessor",
+        " uses a design very similar to this free version. Advertisement Creating Dependent Tasks in a Gantt Chart with Excel One of the reasons why Excel is a useful tool for creating Gantt Charts is that task dependencies can be defined by using Excel formulas. Gantt Chart Template Pro is designed to make this easier than entering your own formulas, but here are a few simple examples you can try: 1. Start a Task the Day After a Predecessor Task = end_date + 1 where en",
+        " Chart with Excel One of the reasons why Excel is a useful tool for creating Gantt Charts is that task dependencies can be defined by using Excel formulas. Gantt Chart Template Pro is designed to make this easier than entering your own formulas, but here are a few simple examples you can try: 1. Start a Task the Day After a Predecessor Task = end_date + 1 where end_date is a reference to cell (e.g. D10 ) containing the END date of the predecessor task. 2. Start",
+        ". 3. Start a Task the next WORK day after a Predecessor task (excludes Sat & Sun) =WORKDAY( end_date ,1) Use the WORKDAY.INTL() function in Excel 2010+ to define a custom work week (days other than only Sat & Sun) The problem with only using formulas is that you can't see the dependencies between tasks when you view or print the chart. Other Gantt chart software may show dependencies as lines connecting the bars in the gantt chart, but I've never found a simple",
+        "rt. Other Gantt chart software may show dependencies as lines connecting the bars in the gantt chart, but I've never found a simple way for Excel to do that (and the lines can get really messy). The approach I use is to list the WBS number of the Predecessor in another column, like in the critical path example below. In the CPM template and in Gantt Chart Template Pro, formulas calculate the start dates based on what you enter. If you want to try doing this on ",
+        " Gantt Chart Template Pro, formulas calculate the start dates based on what you enter. If you want to try doing this on your own, here is a formula to get you started: 4. Start a Task the next calendar day after a Predecessor task listed in another column =INDEX( range_of_end_dates ,MATCH( predecessor_wbs , wbs_range ,0))+1 5. Start a Task the next work day after a Predecessor task listed in another column =WORKDAY(INDEX( range_of_end_dates ,MATCH( predecessor_wb",
+        "ecessor task listed in another column =WORKDAY(INDEX( range_of_end_dates ,MATCH( predecessor_wbs , wbs_range ,0)),1) Gantt Chart Pro uses a formula like this, but it allows up to three predecessors and it accounts for custom weekends and holidays using WORKDAY.INTL. Advertisement Showing Critical Tasks in a Gantt Chart Some Gantt charts are designed to show the critical path and available slack or float time for each task. If every task must be done in sequence, ",
+        " between tasks fully defined, which is why you will see many project schedules with tasks defined only with a start and end date. More Free Excel Gantt Chart Templates Construction Schedule Template Project Schedule Template Critical Path Analysis Task List with Gantt Chart Commercial Gantt Chart Software There are hundreds of software applications for creating gantt charts and project schedules. Some of the most popular are those that allow easy online collabo",
+        "d formulas and just want a way to create a stylish project timeline. PeltierTech.com - John Peltier explains how to create a gantt chart in Excel using stacked bar graphs. http://hyperthot.com/pm_excel_gantt.htm by James Chapman - This page includes a few free gantt chart downloads for Excel that also calculate spend plan. This is done by including labor costs broken down by employee and the number of hours spent on each task. CPM / PERT Spreadsheet - vertex42.",
+        "sing stacked bar graphs. http://hyperthot.com/pm_excel_gantt.htm by James Chapman - This page includes a few free gantt chart downloads for Excel that also calculate spend plan. This is done by including labor costs broken down by employee and the number of hours spent on each task. CPM / PERT Spreadsheet - vertex42.com - This template includes a gantt chart for critical path analysis. References Gantt Chart Definition and History - wikipedia.com Project Manage",
+        " calculate spend plan. This is done by including labor costs broken down by employee and the number of hours spent on each task. CPM / PERT Spreadsheet - vertex42.com - This template includes a gantt chart for critical path analysis. References Gantt Chart Definition and History - wikipedia.com Project Management Graphics (Gantt Charts) - edwardtufte.com - A detailed academic discussion about the use of gantt charts as project management tools. Follow Us On ... FB PI",
+        "ist Templates Timeline Template Timesheet Template To Do List Weekly Time Card Work Breakdown Structure Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "heet Template To Do List Weekly Time Card Work Breakdown Structure Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        " Structure Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Gantt Charts for E",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Gantt Charts for Excel Sitemap | Privacy Po",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Gantt Charts for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Gantt Charts for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        "nd Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Free Gantt Charts for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_inventory",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/ExcelTemplates/inventory-control-template.html",
+      "utc": "2026-10-18T05:53:40.770615+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/ExcelTemplates/inventory-control-template.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 57439,
+      "sha256": "e5ec439c153885920611664b1ccea97a7356db6e6ec8bd290ee433ea1234f26a",
+      "path": "source_discovery/expansion_20261018_v7/pages/vertex42_inventory.source",
+      "title": "Inventory Control Template - Stock Inventory Control Spreadsheet",
+      "text_characters": 4984,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Inventory Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/inventory.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/inventory-control-template.png",
+          "workbook_link": false
+        },
+        {
+          "text": "2",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/stock-inventory-count-sheet.png",
+          "workbook_link": false
+        },
+        {
+          "text": "3",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/inventory-label.png",
+          "workbook_link": false
+        },
+        {
+          "text": "4",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/inventory-supplier-list.png",
+          "workbook_link": false
+        },
+        {
+          "text": "Asset Tracking Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/asset-tracking-software.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Software Inventory Tracking",
+          "url": "https://www.vertex42.com/ExcelTemplates/software-inventory-tracking.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Inventory Count Procedure",
+          "url": "https://www.accountingtools.com/articles/2017/5/16/inventory-count-procedure",
+          "workbook_link": false
+        },
+        {
+          "text": "Best Practices for Accurate Physical Counts of Inventory",
+          "url": "https://www.gao.gov/new.items/d02447g.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculating The Best Reorder Point",
+          "url": "https://scm.ncsu.edu/scm-articles/article/reorder-point-formula-inventory-management-models-a-tutorial",
+          "workbook_link": false
+        },
+        {
+          "text": "Inventory Control Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/inventory-control-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Inventory List",
+          "url": "https://www.vertex42.com/ExcelTemplates/inventory-spreadsheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Bill of Materials (BoM)",
+          "url": "https://www.vertex42.com/ExcelTemplates/bill-of-materials.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Equipment Calibration",
+          "url": "https://www.vertex42.com/ExcelTemplates/equipment-calibration-log.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Sign Out Sheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/equipment-sign-out-sheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Inventory Control Template - Stock Inventory Control Spreadsheet ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms R",
+        "Inventory Control Template - Stock Inventory Control Spreadsheet ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Inventory Templates > Inventory Control Stock Inventory Control Template Stock Inventory Management System and Physical Count Sheet for Microsoft Excel® Any inventory clerk or accountant will ",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Inventory Templates > Inventory Control Stock Inventory Control Template Stock Inventory Management System and Physical Count Sheet for Microsoft Excel® Any inventory clerk or accountant will agree that stock inve",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Inventory Templates > Inventory Control Stock Inventory Control Template Stock Inventory Management System and Physical Count Sheet for Microsoft Excel® Any inventory clerk or accountant will agree that stock inventory management is crucial to any business that must maintain an invento",
+        "ory Templates > Inventory Control Stock Inventory Control Template Stock Inventory Management System and Physical Count Sheet for Microsoft Excel® Any inventory clerk or accountant will agree that stock inventory management is crucial to any business that must maintain an inventory of merchandise, equipment, tools, or materials. But as all inventory clerks know, keeping track of inventory is hard enough without worrying about inventory optimization. Advertiseme",
+        "size company, or just need something to get you started, check out our simple inventory control solution that includes an Inventory Control Spreadsheet template, a Physical Count Sheet and an Inventory Label template. Continue reading below the download block for additional tips and information. Inventory Control Template with Count Sheet for Excel \"No installation, no macros, no hidden formulas, no hidden worksheets, no VBA - just a simple spreadsheet\" - by Jon Witt",
+        "el template. Continue reading below the download block for additional tips and information. Inventory Control Template with Count Sheet for Excel \"No installation, no macros, no hidden formulas, no hidden worksheets, no VBA - just a simple spreadsheet\" - by Jon Wittwer and Brent Weight Screenshots: 1 2 3 4 Buy Now via ClickBank.net $9.95 For: Excel 2007 or later & Excel for iPad 60-DAY MONEY-BACK Guarantee Try it out! If you don't think it was worth the cost, I",
+        "y Control Template with Count Sheet for Excel \"No installation, no macros, no hidden formulas, no hidden worksheets, no VBA - just a simple spreadsheet\" - by Jon Wittwer and Brent Weight Screenshots: 1 2 3 4 Buy Now via ClickBank.net $9.95 For: Excel 2007 or later & Excel for iPad 60-DAY MONEY-BACK Guarantee Try it out! If you don't think it was worth the cost, I will refund your purchase. License : Private Use (not for distribution or resale) Advertisement Descripti",
+        "worksheets, no VBA - just a simple spreadsheet\" - by Jon Wittwer and Brent Weight Screenshots: 1 2 3 4 Buy Now via ClickBank.net $9.95 For: Excel 2007 or later & Excel for iPad 60-DAY MONEY-BACK Guarantee Try it out! If you don't think it was worth the cost, I will refund your purchase. License : Private Use (not for distribution or resale) Advertisement Description Vertex42's Inventory Control Template will help you get your inventory program started - includi",
+        "ust a simple spreadsheet\" - by Jon Wittwer and Brent Weight Screenshots: 1 2 3 4 Buy Now via ClickBank.net $9.95 For: Excel 2007 or later & Excel for iPad 60-DAY MONEY-BACK Guarantee Try it out! If you don't think it was worth the cost, I will refund your purchase. License : Private Use (not for distribution or resale) Advertisement Description Vertex42's Inventory Control Template will help you get your inventory program started - including reducing surplus in",
+        "07 or later & Excel for iPad 60-DAY MONEY-BACK Guarantee Try it out! If you don't think it was worth the cost, I will refund your purchase. License : Private Use (not for distribution or resale) Advertisement Description Vertex42's Inventory Control Template will help you get your inventory program started - including reducing surplus inventory and processing inventory updates. How to use this Inventory Template: Use the main Inventory Control worksheet (see scre",
+        "ounting Office's best practices for counting inventory. Calculating The Best Reorder Point at scm.ncsu.edu – Brief article that describes a formula to determine the best reorder point if you want to get fancy.  There are other good articles on other inventory issues. Follow Us On ... FB PIN TWEET LI IG YT Inventory Templates Inventory Control Template (stock, merchandise, ...) Software Inventory (licenses, hardware, ...) Home Inventory List (for insurance purpose",
+        "gn Out Sheet (track equipment, tools, supplies) Game Collection Tracker (list games, rate, track plays) Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        " supplies) Game Collection Tracker (list games, rate, track plays) Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        "ack plays) Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Stock Inventory Control",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Stock Inventory Control Spreadsheet Template Sit",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Stock Inventory Control Spreadsheet Template Sitemap | Privacy Policy | Terms of Use ©",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Stock Inventory Control Spreadsheet Template Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        " Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Stock Inventory Control Spreadsheet Template Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_loan",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html",
+      "utc": "2026-10-18T05:53:40.769730+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 70687,
+      "sha256": "d86e86fc18a2089dcf24fa3158c36518e7d15ce7cd854d162e2393fbd82339ce",
+      "path": "source_discovery/expansion_20261018_v7/pages/vertex42_loan.source",
+      "title": "Loan Amortization Schedule and Calculator",
+      "text_characters": 12663,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/loan-amortization-schedule.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-loanschedule",
+          "workbook_link": false
+        },
+        {
+          "text": "extra payment",
+          "url": "https://www.vertex42.com/ExcelTemplates/extra-payments.html",
+          "workbook_link": false
+        },
+        {
+          "text": "balloon payment",
+          "url": "https://www.vertex42.com/ExcelTemplates/balloon-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "View larger image",
+          "url": "https://www.vertex42.com/ExcelTemplates/Images/loan-payment-schedule-with-accrued-interest-balance.png",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Interest Loan",
+          "url": "https://www.vertex42.com/Calculators/simple-interest-loan.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Planner's Template Pack",
+          "url": "https://www.vertex42.com/ExcelTemplates/financial-planning.html",
+          "workbook_link": false
+        },
+        {
+          "text": "View Screenshot",
+          "url": "https://www.vertex42.com/ExcelTemplates/Images/amortization-schedule_commercial.gif",
+          "workbook_link": false
+        },
+        {
+          "text": "Screenshot",
+          "url": "https://cdn.vertex42.com/Calculators/Images/home-mortgage-calculator-commercial.png",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Mortgage Calculator",
+          "url": "https://www.vertex42.com/Calculators/home-mortgage-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/Calculators/Images/simple-interest-loan-calculator.png",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/Calculators/Images/simple-interest-loan-payment-tracker.png",
+          "workbook_link": false
+        },
+        {
+          "text": "Screenshot",
+          "url": "https://cdn.vertex42.com/Calculators/Images/interest-only-loan_commercial.gif",
+          "workbook_link": false
+        },
+        {
+          "text": "Interest-Only Loan",
+          "url": "https://www.vertex42.com/Calculators/interest-only-loan.html",
+          "workbook_link": false
+        },
+        {
+          "text": "View Screenshot",
+          "url": "https://www.vertex42.com/Images/screenshots/loan-servicing-spreadsheet.png",
+          "workbook_link": false
+        },
+        {
+          "text": "amortization calculation",
+          "url": "https://www.vertex42.com/ExcelArticles/amortization-calculation.html",
+          "workbook_link": false
+        },
+        {
+          "text": "negative amortization",
+          "url": "https://www.vertex42.com/ExcelArticles/negative-amortization.html",
+          "workbook_link": false
+        },
+        {
+          "text": "loan amortization calculator",
+          "url": "https://www.vertex42.com/Calculators/loan-amortization-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Simple Interest Amortization",
+          "url": "https://www.vertex42.com/ExcelTemplates/simple-amortization.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Auto Loan Amortization Calculator",
+          "url": "https://www.vertex42.com/Calculators/auto-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Equity Loan Amortization Schedule",
+          "url": "https://www.vertex42.com/Calculators/home-equity-loan-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "ARM Loan Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/arm-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Amortization Formulas in Excel",
+          "url": "https://www.vertex42.com/ExcelArticles/amortization-formulas.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Home Ownership Expense Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/home-expense-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Loan Amortization Schedule and Calculator ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Spreadsheet Templates > Financial Calculators > Loan Amortization Loan Amortization Schedule Create an Amortization Schedule in Excel or Google Sheets | Updated 9/11/2020 An amortization schedule is a list of payments for a mortgag",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Spreadsheet Templates > Financial Calculators > Loan Amortization Loan Amortization Schedule Create an Amortization Schedule in Excel or Google Sheets | Updated 9/11/2020 An amortization schedule is a list of payments for a mortgage or loan, which show",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Spreadsheet Templates > Financial Calculators > Loan Amortization Loan Amortization Schedule Create an Amortization Schedule in Excel or Google Sheets | Updated 9/11/2020 An amortization schedule is a list of payments for a mortgage or loan, which shows how each payment is applied to both the principal amount and the interest. Th",
+        "Icon Home > Spreadsheet Templates > Financial Calculators > Loan Amortization Loan Amortization Schedule Create an Amortization Schedule in Excel or Google Sheets | Updated 9/11/2020 An amortization schedule is a list of payments for a mortgage or loan, which shows how each payment is applied to both the principal amount and the interest. The schedule shows the remaining balance still owed after each payment is made, so you know how much you have left to pay. T",
+        "emaining balance still owed after each payment is made, so you know how much you have left to pay. To create an amortization schedule using Excel, you can use our free amortization calculator which is able to handle the type of rounding required of an official payment schedule. You can use the free loan amortization schedule for mortgages, auto loans, consumer loans, and business loans. If you are a small private lender, you can download the commercial version ",
+        "load the commercial version and use it to create a repayment schedule to give to the borrower. Advertisement Loan Amortization Schedule for Excel and Google Sheets Download Over 1.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets License: Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Description This spreadsheet-based calculator creates an amortiz",
+        "hedule to give to the borrower. Advertisement Loan Amortization Schedule for Excel and Google Sheets Download Over 1.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets License: Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Description This spreadsheet-based calculator creates an amortization schedule for a fixed-rate loan, with optional extra payme",
+        "he borrower. Advertisement Loan Amortization Schedule for Excel and Google Sheets Download Over 1.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets License: Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Description This spreadsheet-based calculator creates an amortization schedule for a fixed-rate loan, with optional extra payments . Start by ente",
+        "tization Schedule for Excel and Google Sheets Download Over 1.5 million downloads! ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets License: Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Description This spreadsheet-based calculator creates an amortization schedule for a fixed-rate loan, with optional extra payments . Start by entering the total loan amount, the annual",
+        "For: Excel 2010 or later ⤓ Google Sheets License: Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Description This spreadsheet-based calculator creates an amortization schedule for a fixed-rate loan, with optional extra payments . Start by entering the total loan amount, the annual interest rate, the number of years required to repay the loan, and how frequently the payments must be",
+        "e (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Description This spreadsheet-based calculator creates an amortization schedule for a fixed-rate loan, with optional extra payments . Start by entering the total loan amount, the annual interest rate, the number of years required to repay the loan, and how frequently the payments must be made. Then you can experiment with other payment scenarios s",
+        "nshot), unpaid interest is accrued in a separate interest balance. Note: In both cases, the Payment Date column is for reference only. This spreadsheet handles loans where calculations are not based on payment date. See the Simple Interest Loan spreadsheet if you have a loan that accrues interest daily and the payment date matters. related blog articles 10 Strategies for Paying Off Your Mortgage Early Loan Amortization Schedule - Commercial Version This product is al",
+        "column is for reference only. This spreadsheet handles loans where calculations are not based on payment date. See the Simple Interest Loan spreadsheet if you have a loan that accrues interest daily and the payment date matters. related blog articles 10 Strategies for Paying Off Your Mortgage Early Loan Amortization Schedule - Commercial Version This product is also available via the Financial Planner's Template Pack The Commercial Version allows you to use the sprea",
+        " - Commercial Version This product is also available via the Financial Planner's Template Pack The Commercial Version allows you to use the spreadsheet in your loan or financial advisory business. The spreadsheet is not password protected, which means you can see the calculations and customize the spreadsheet. The header includes a place for the borrower's name and lender's info : View Screenshot . You could customize the header to create a \"prepared by\" section and ",
+        "Financial Planner's Template Pack The Commercial Version allows you to use the spreadsheet in your loan or financial advisory business. The spreadsheet is not password protected, which means you can see the calculations and customize the spreadsheet. The header includes a place for the borrower's name and lender's info : View Screenshot . You could customize the header to create a \"prepared by\" section and include your logo if you wanted: Click Here to see an example",
+        " loan or financial advisory business. The spreadsheet is not password protected, which means you can see the calculations and customize the spreadsheet. The header includes a place for the borrower's name and lender's info : View Screenshot . You could customize the header to create a \"prepared by\" section and include your logo if you wanted: Click Here to see an example . The Vertex42 logo and copyright are outside the print area so that they don't show up when you ",
+        "mize the header to create a \"prepared by\" section and include your logo if you wanted: Click Here to see an example . The Vertex42 logo and copyright are outside the print area so that they don't show up when you print the schedule. 60-DAY MONEY-BACK Guarantee Try it out! If you don't think it was worth the cost, I will refund your purchase. $39.95 Buy Now via ClickBank.net Bonus content included! Required: Excel 2010 or Later License: Commercial Use (not for distr",
+        "! If you don't think it was worth the cost, I will refund your purchase. $39.95 Buy Now via ClickBank.net Bonus content included! Required: Excel 2010 or Later License: Commercial Use (not for distribution or resale) Support: Visit Support Page BONUS CONTENT (included with unlocked version) Screenshot Bonus #1 : Home Mortgage Calculator (Commercial Version) This is a commercial use license of our Home Mortgage Calculator spreadsheet. It allows you to run an ana",
+        " it was worth the cost, I will refund your purchase. $39.95 Buy Now via ClickBank.net Bonus content included! Required: Excel 2010 or Later License: Commercial Use (not for distribution or resale) Support: Visit Support Page BONUS CONTENT (included with unlocked version) Screenshot Bonus #1 : Home Mortgage Calculator (Commercial Version) This is a commercial use license of our Home Mortgage Calculator spreadsheet. It allows you to run an analysis on either a fixe",
+        "BONUS CONTENT (included with unlocked version) Screenshot Bonus #1 : Home Mortgage Calculator (Commercial Version) This is a commercial use license of our Home Mortgage Calculator spreadsheet. It allows you to run an analysis on either a fixed rate or variable rate mortgage. Screenshots Bonus #2 : Simple Interest Loan Calculator (Commercial Version) This is a commercial use license of our Simple Interest Loan spreadsheet. It can be used to create a payment schedu",
+        "rsion) Screenshot Bonus #1 : Home Mortgage Calculator (Commercial Version) This is a commercial use license of our Home Mortgage Calculator spreadsheet. It allows you to run an analysis on either a fixed rate or variable rate mortgage. Screenshots Bonus #2 : Simple Interest Loan Calculator (Commercial Version) This is a commercial use license of our Simple Interest Loan spreadsheet. It can be used to create a payment schedule for a Simple Interest Loan where the inte",
+        " fixed rate or variable rate mortgage. Screenshots Bonus #2 : Simple Interest Loan Calculator (Commercial Version) This is a commercial use license of our Simple Interest Loan spreadsheet. It can be used to create a payment schedule for a Simple Interest Loan where the interest accrues daily in a separate interest accrual account. It also includes a worksheet for tracking actual payments. This type of loan is especially useful for non-professional lenders looking",
+        "e. Screenshots Bonus #2 : Simple Interest Loan Calculator (Commercial Version) This is a commercial use license of our Simple Interest Loan spreadsheet. It can be used to create a payment schedule for a Simple Interest Loan where the interest accrues daily in a separate interest accrual account. It also includes a worksheet for tracking actual payments. This type of loan is especially useful for non-professional lenders looking for an easy and flexible way to track p",
+        " Learn more about Simple Interest Loans , Screenshot Bonus #3 : Interest-Only Loan Calculator (Commercial Version) This is a commercial use license of our Interest-Only Loan spreadsheet. It allows you to create a payment schedule for a fixed-rate loan, with optional extra payments and an optional interest-only period . View Screenshot Bonus #4 : BETA - Advanced Loan Payment Schedule This spreadsheet provides a more advanced way to track actual payments than the P",
+        "Loans , Screenshot Bonus #3 : Interest-Only Loan Calculator (Commercial Version) This is a commercial use license of our Interest-Only Loan spreadsheet. It allows you to create a payment schedule for a fixed-rate loan, with optional extra payments and an optional interest-only period . View Screenshot Bonus #4 : BETA - Advanced Loan Payment Schedule This spreadsheet provides a more advanced way to track actual payments than the Payment Schedule included in the standa",
+        ", with optional extra payments and an optional interest-only period . View Screenshot Bonus #4 : BETA - Advanced Loan Payment Schedule This spreadsheet provides a more advanced way to track actual payments than the Payment Schedule included in the standard Loan Amortization Schedule. It can be used to track missed payments, late payments, early payments, fees, and escrow. It does not handle daily interest accrual like Bonus #2. It is designed to avoid negative amorti",
+        "reating an amortization schedule, it is the interest rate per period that you use in the calculations, labeled rate per period in the above spreadsheet. Basic amortization calculators usually assume that the payment frequency matches the compounding period . In that case, the rate per period is simply the nominal annual interest rate divided by the number of periods per year. When the compound period and payment period are different (as in Canadian mortgages), a more",
+        "ded by the number of periods per year. When the compound period and payment period are different (as in Canadian mortgages), a more general formula is needed (see my amortization calculation article). Some loans in the UK use an annual interest accrual period (annual compounding) where a monthly payment is calculated by dividing the annual payment by 12. The interest portion of the payment is recalculated only at the start of each year. The way to simulate this u",
+        "the payment frequency to annual. Negative Amortization There are two scenarios in which you could end up with negative amortization in this spreadsheet (interest being added to the balance). The first is if your payment isn't enough to cover the interest. The second is if you choose a compound period that is shorter than the payment period (for example, choosing a weekly compound period but making payments monthly). Rounding A loan payment schedule usually shows all ",
+        "'t round. Many loan and amortization calculators, especially those used for academic or illustrative purposes, do not do any rounding. This spreadsheet rounds the monthly payment and the interest payment to the nearest cent, but it also includes an option to turn off the rounding (so that you can quickly compare the calculations to other calculators). When an amortization schedule includes rounding, the last payment usually has to be changed to make up the difference",
+        "oach I use in my spreadsheets. So, depending on how your lender decides to handle the rounding, you may see slight differences between this spreadsheet, your specific payment schedule, or an online loan amortization calculator . Extra Payments With this template, it is really quite simple to handle arbitrary extra payments (prepayments or additional payments on the principal). You simply add the extra payment to the amount of principal that is paid that period. For f",
+        "loan early . But, the normal payment remains the same (except for the last payment required to bring the balance to zero - see below). This spreadsheet assumes that the extra payment goes into effect on the payment due date. There is no guarantee that this is how your lender handles the extra payment! However, this approach makes the calculations simpler than prorating the interest. Zero Balance One of the challenges of creating a schedule that accounts \nfor rounding",
+        "of creating a schedule that accounts \nfor rounding and extra payments is adjusting the final payment to bring the \nbalance to zero. In this spreadsheet, the formula in the Payment Due column checks \nthe last balance to see if a payment adjustment is needed. In words, this is how the payment is calculated: If you are on your last payment or the normal payment is greater than (1+ rate )* balance , then pay (1+ rate )* balance , otherwise make the normal payment. Paymen",
+        "edule that accounts \nfor rounding and extra payments is adjusting the final payment to bring the \nbalance to zero. In this spreadsheet, the formula in the Payment Due column checks \nthe last balance to see if a payment adjustment is needed. In words, this is how the payment is calculated: If you are on your last payment or the normal payment is greater than (1+ rate )* balance , then pay (1+ rate )* balance , otherwise make the normal payment. Payment Type The \"p",
+        " in the first payment, and the Payment amount will be slightly different. You may need to change this option if you are trying to match the spreadsheet up with a schedule that you received from your lender. This spreadsheet doesn't handle prorated or \"per diem\" periods that are sometimes used in the first and last payments. Loan Payment Schedule One way to account for extra payments is to record the additional payment. This \nspreadsheet includes a second worksheet (t",
+        ". You may need to change this option if you are trying to match the spreadsheet up with a schedule that you received from your lender. This spreadsheet doesn't handle prorated or \"per diem\" periods that are sometimes used in the first and last payments. Loan Payment Schedule One way to account for extra payments is to record the additional payment. This \nspreadsheet includes a second worksheet (the Loan Payment Schedule) that allows you to record the actual payment i",
+        "used in the first and last payments. Loan Payment Schedule One way to account for extra payments is to record the additional payment. This \nspreadsheet includes a second worksheet (the Loan Payment Schedule) that allows you to record the actual payment instead. (Just in case you find that more convenient.) For example, if the monthly payment is $300, but you pay $425, you can either record this as an additional $125, or use the Loan Payment Schedule worksheet to reco",
+        "an Payment Schedule in Beta - Based on frequent requests for a more advanced loan payment tracker, we're experimenting with providing a new spreadsheet - see Bonus #4 above. 7/2/2013 : Avoid Payday Loans - People in need of fast cash are often tempted by Payday loans but they should be avoided at all costs!  Payday loan fees and interest rates are higher than all other sources of lending, and they can trap you in a vicious cycle of repeat borrowing to pay off previou",
+        "e what different payment frequencies mean for paying off your debt. More Amortization Info Amortization Calculator (web-based) Amortization Formula Simple Interest Amortization Auto Loan Amortization Calculator Balloon Payment Loan Calculator Extra Payment Mortgage Calculator Home Equity Loan Amortization Schedule ARM Loan Calculator Amortization Formulas in Excel Home Ownership Expense Calculator References Amortization Schedule at wikipedia.com Extra Payments a",
+        "yment Loan Calculator Extra Payment Mortgage Calculator Home Equity Loan Amortization Schedule ARM Loan Calculator Amortization Formulas in Excel Home Ownership Expense Calculator References Amortization Schedule at wikipedia.com Extra Payments at mtgprofessor.com Compound Interest at wikipedia.com Follow Us On ... FB PIN TWEET LI IG YT Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templat",
+        " Payments at mtgprofessor.com Compound Interest at wikipedia.com Follow Us On ... FB PIN TWEET LI IG YT Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "d Interest at wikipedia.com Follow Us On ... FB PIN TWEET LI IG YT Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        "T LI IG YT Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Polic",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_retirement",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/Calculators/retirement-calculator.html",
+      "utc": "2026-10-18T05:53:40.770020+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/Calculators/retirement-calculator.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 60360,
+      "sha256": "f414353cd58d303e49ec0ef6766a4872223a97ec6fc626724f19e5b77d5a23cd",
+      "path": "source_discovery/expansion_20261018_v7/pages/vertex42_retirement.source",
+      "title": "Retirement Calculator for Excel",
+      "text_characters": 8343,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Retirement",
+          "url": "https://www.vertex42.com/Calculators/retirement-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/Calculators/Images/retirement-calculator.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-RetirementCalc",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Google Sheets",
+          "url": "https://www.vertex42.com/Files/download2/gdrive.php?file=retirement-calculator",
+          "workbook_link": false
+        },
+        {
+          "text": "Financial Planner's Template Pack",
+          "url": "https://www.vertex42.com/ExcelTemplates/financial-planning.html",
+          "workbook_link": false
+        },
+        {
+          "text": "401(k) savings",
+          "url": "https://www.vertex42.com/Calculators/401k-savings-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "retirement withdrawal",
+          "url": "https://www.vertex42.com/Calculators/retirement-withdrawal-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Annuity Calculator",
+          "url": "https://www.vertex42.com/Calculators/annuity-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Mortgage Calculators",
+          "url": "https://www.vertex42.com/Calculators/mortgage-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Loan Calculators",
+          "url": "https://www.vertex42.com/Calculators/loan-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Amortization Calculators",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-amortization-spreadsheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "NEW Retirement Calculator",
+          "url": "https://www.vertex42.com/Calculators/retirement-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "College Savings",
+          "url": "https://www.vertex42.com/Calculators/college-savings.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings  Calculator",
+          "url": "https://www.vertex42.com/Calculators/savings-interest-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Retirement Savings",
+          "url": "https://www.vertex42.com/ExcelTemplates/retirement-planning-spreadsheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Inflation Calculator",
+          "url": "https://www.vertex42.com/Calculators/inflation-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Net Worth Calculator",
+          "url": "https://www.vertex42.com/Calculators/net-worth.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Traditional vs. Roth Calculator",
+          "url": "https://www.vertex42.com/Calculators/traditional-vs-roth-ira.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Paycheck Calculator",
+          "url": "https://www.vertex42.com/Calculators/paycheck-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Debt Calculators",
+          "url": "https://www.vertex42.com/Calculators/debt-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Retirement Calculator for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms R",
+        "Retirement Calculator for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Financial Calculators > Retirement > Retirement Calculator Retirement Calculator Download a free retirement spreadsheet for Microsoft Excel® | Updated 1/9/2020 How much of your salary do you need to save to reach your retirement go",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Financial Calculators > Retirement > Retirement Calculator Retirement Calculator Download a free retirement spreadsheet for Microsoft Excel® | Updated 1/9/2020 How much of your salary do you need to save to reach your retirement goal? That is not a sim",
+        "chool Blog ► Search Icon Home > Financial Calculators > Retirement > Retirement Calculator Retirement Calculator Download a free retirement spreadsheet for Microsoft Excel® | Updated 1/9/2020 How much of your salary do you need to save to reach your retirement goal? That is not a simple question to answer, but that is what this spreadsheet attempts to help solve. It makes quite a few assumptions, and doesn't include nearly as much detail as you would find in professi",
+        "ome > Financial Calculators > Retirement > Retirement Calculator Retirement Calculator Download a free retirement spreadsheet for Microsoft Excel® | Updated 1/9/2020 How much of your salary do you need to save to reach your retirement goal? That is not a simple question to answer, but that is what this spreadsheet attempts to help solve. It makes quite a few assumptions, and doesn't include nearly as much detail as you would find in professional financial plann",
+        "0 How much of your salary do you need to save to reach your retirement goal? That is not a simple question to answer, but that is what this spreadsheet attempts to help solve. It makes quite a few assumptions, and doesn't include nearly as much detail as you would find in professional financial planning software. But, for a quick estimation it may be useful. Advertisement Retirement Calculator for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2007 or la",
+        "uld find in professional financial planning software. But, for a quick estimation it may be useful. Advertisement Retirement Calculator for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2007 or later & Excel for iPad/iPhone ⤓ Google Sheets License : Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Commercial Version for Financial Advisors $19.95 Buy Now (Not for Resale or Distr",
+        "planning software. But, for a quick estimation it may be useful. Advertisement Retirement Calculator for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2007 or later & Excel for iPad/iPhone ⤓ Google Sheets License : Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Commercial Version for Financial Advisors $19.95 Buy Now (Not for Resale or Distribution) - or - Purchase the Financ",
+        "But, for a quick estimation it may be useful. Advertisement Retirement Calculator for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2007 or later & Excel for iPad/iPhone ⤓ Google Sheets License : Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Commercial Version for Financial Advisors $19.95 Buy Now (Not for Resale or Distribution) - or - Purchase the Financial Planner's Templ",
+        "ation it may be useful. Advertisement Retirement Calculator for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2007 or later & Excel for iPad/iPhone ⤓ Google Sheets License : Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Commercial Version for Financial Advisors $19.95 Buy Now (Not for Resale or Distribution) - or - Purchase the Financial Planner's Template Pack If you would ",
+        "Retirement Calculator for Excel and Google Sheets Download ⤓ Excel (.xlsx) For: Excel 2007 or later & Excel for iPad/iPhone ⤓ Google Sheets License : Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Commercial Version for Financial Advisors $19.95 Buy Now (Not for Resale or Distribution) - or - Purchase the Financial Planner's Template Pack If you would like to use this Retirement Calculator i",
+        "& Excel for iPad/iPhone ⤓ Google Sheets License : Personal Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Commercial Version for Financial Advisors $19.95 Buy Now (Not for Resale or Distribution) - or - Purchase the Financial Planner's Template Pack If you would like to use this Retirement Calculator in your business to assist your clients, you may purchase the commercial-use version. The header includes",
+        "The Vertex42 branding is outside the print area so it doesn't show up when you make a printout or PDF for a client. Return Policy : 60 Days License : Commercial Use Advertisement Note (3/13/15) : I put this spreadsheet together after receiving numerous requests for a spreadsheet that combined my 401(k) savings calculator with my retirement withdrawal calculator. I still consider this spreadsheet a work in progress, but I think it's finally at a point where people",
+        "up when you make a printout or PDF for a client. Return Policy : 60 Days License : Commercial Use Advertisement Note (3/13/15) : I put this spreadsheet together after receiving numerous requests for a spreadsheet that combined my 401(k) savings calculator with my retirement withdrawal calculator. I still consider this spreadsheet a work in progress, but I think it's finally at a point where people can try it out. Update (5/5/16) : Fixed a bug where the Retirement Inc",
+        "y : 60 Days License : Commercial Use Advertisement Note (3/13/15) : I put this spreadsheet together after receiving numerous requests for a spreadsheet that combined my 401(k) savings calculator with my retirement withdrawal calculator. I still consider this spreadsheet a work in progress, but I think it's finally at a point where people can try it out. Update (5/5/16) : Fixed a bug where the Retirement Income in the table (and chart) referenced inflation rather than",
+        "erous requests for a spreadsheet that combined my 401(k) savings calculator with my retirement withdrawal calculator. I still consider this spreadsheet a work in progress, but I think it's finally at a point where people can try it out. Update (5/5/16) : Fixed a bug where the Retirement Income in the table (and chart) referenced inflation rather than the Annual Increase. Update (7/20/16) : Added the ability to limit Other Retirement Income to a specific number of yea",
+        " the ability to limit Other Retirement Income to a specific number of years (thanks to Ben Martinek). Update (7/23/18) : Fixed a bug in the formula for Current Annual Contributions. The old formula assumed the employer match was always maxed out. However, the corrected formula calculates the employer match as the Match % multiplied by the Employee contribution or the Max contribution (whichever is less). Update (11/15/2018) : Improved labels and instructions for ",
+        " specific number of years (thanks to Ben Martinek). Update (7/23/18) : Fixed a bug in the formula for Current Annual Contributions. The old formula assumed the employer match was always maxed out. However, the corrected formula calculates the employer match as the Match % multiplied by the Employee contribution or the Max contribution (whichever is less). Update (11/15/2018) : Improved labels and instructions for the Current Savings Contributions section and adde",
+        " Fixed a bug in the formula for Current Annual Contributions. The old formula assumed the employer match was always maxed out. However, the corrected formula calculates the employer match as the Match % multiplied by the Employee contribution or the Max contribution (whichever is less). Update (11/15/2018) : Improved labels and instructions for the Current Savings Contributions section and added a note above the Shortfall section to warn when the shortfall is negat",
+        "ug in the formula for Current Annual Contributions. The old formula assumed the employer match was always maxed out. However, the corrected formula calculates the employer match as the Match % multiplied by the Employee contribution or the Max contribution (whichever is less). Update (11/15/2018) : Improved labels and instructions for the Current Savings Contributions section and added a note above the Shortfall section to warn when the shortfall is negative. Upd",
+        "eaning no accumulation phase), but a few changes were made in version 1.1.0 to handle a scenario where Current Age = Age at Retirement. The spreadsheet is still not ideal for that scenario (but it's better than it was). Using the Retirement Calculator Spreadsheet The most important thing about this spreadsheet to understand is that future rates of return, inflation, salary, disasters, how long you'll live, and other life events can't be known for sure. So, if you are",
+        "ge = Age at Retirement. The spreadsheet is still not ideal for that scenario (but it's better than it was). Using the Retirement Calculator Spreadsheet The most important thing about this spreadsheet to understand is that future rates of return, inflation, salary, disasters, how long you'll live, and other life events can't be known for sure. So, if you are going to use this, realize that it is a mathematical exercise and the inputs that you choose and how you interp",
+        " not ideal for that scenario (but it's better than it was). Using the Retirement Calculator Spreadsheet The most important thing about this spreadsheet to understand is that future rates of return, inflation, salary, disasters, how long you'll live, and other life events can't be known for sure. So, if you are going to use this, realize that it is a mathematical exercise and the inputs that you choose and how you interpret the results are your own responsibility. Bel",
+        "n These are values that just have to be estimated. You can't know future rates with certainty. However, one of the unique things about this spreadsheet is that you can enter different rates of return for the accumulation period and the retirement period. This may be useful because during retirement period, your portfolio will likely be weighted towards lower risk, lower return investments. Defining Your Retirement Goal 1: Your Salary . Enter a salary you want to live",
+        "our salary. That way, as your salary increases, the amount that you will save will also increase. Your annual savings contributions in this spreadsheet are not limited to just 401k contributions. However, if you specify an Employer Match, the spreadsheet assumes you are first contributing to a 401k, and then any savings beyond the 401k limits are placed in other accounts. Updated 11/15/2018 : The labels and comments associated with the Employer Match should be more c",
+        "annual savings contributions in this spreadsheet are not limited to just 401k contributions. However, if you specify an Employer Match, the spreadsheet assumes you are first contributing to a 401k, and then any savings beyond the 401k limits are placed in other accounts. Updated 11/15/2018 : The labels and comments associated with the Employer Match should be more clear now. For this spreadsheet, if you enter 50% as the Employer Match and 6% as the Max Employee % of ",
+        "laced in other accounts. Updated 11/15/2018 : The labels and comments associated with the Employer Match should be more clear now. For this spreadsheet, if you enter 50% as the Employer Match and 6% as the Max Employee % of Contribution , this should be interpreted as \" 50% match up to an employee contribution of 6%. \" This means that the company stops matching the rest of your contribution if you contribute more than 6% of your salary. Social Security This spreadshe",
+        "his means that the company stops matching the rest of your contribution if you contribute more than 6% of your salary. Social Security This spreadsheet doesn't include social security calculations. Instead, you can use the Other Retirement Income section to includes estimates of other income like social security. The social security administration provides a Retirement Estimator that you can use to get a rough idea of what your social security benefits might be. Taxe",
+        "e making all the correct tax-related decisions that apply to your specific situation. More Retirement Calculators Annuity Calculator - This spreadsheet lets you enter the total nest egg and the years you want the nest egg to last and it calculates the withdrawal amount. Withdrawal Calculator - Instead of calculating the withdrawal amount, this spreadsheet lets you enter the desired withdrawal and it calculates how long the nest egg would last. 401(k) Savings Calculat",
+        "nt the nest egg to last and it calculates the withdrawal amount. Withdrawal Calculator - Instead of calculating the withdrawal amount, this spreadsheet lets you enter the desired withdrawal and it calculates how long the nest egg would last. 401(k) Savings Calculator - This one lets you play with some random rates to estimate what your final savings might come to. Disclaimer : This spreadsheet and the information on this page should not be construed as professional f",
+        "(k) Savings Calculator - This one lets you play with some random rates to estimate what your final savings might come to. Disclaimer : This spreadsheet and the information on this page should not be construed as professional financial advice. We do not guarantee the results or the applicability to your unique financial situation. You may want to seek the advice of qualified professionals regarding financial decisions. Follow Us On ... FB PIN TWEET LI IG YT Financial ",
+        "h Calculator Withdrawal Calculator Traditional vs. Roth Calculator Paycheck Calculator Debt Calculators Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "aditional vs. Roth Calculator Paycheck Calculator Debt Calculators Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        "alculators Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Retirement Calculator f",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Retirement Calculator for Excel Sitemap | Privac",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Retirement Calculator for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Ve",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Retirement Calculator for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        "icrosoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Retirement Calculator for Excel Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "vertex42_timesheet",
+      "origin": "Vertex42",
+      "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html",
+      "utc": "2026-10-18T05:53:40.771164+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 64542,
+      "sha256": "2e4949e458fab5a50862a98bf6ae274515c38190c4f1a4ea91e4216c4e01db43",
+      "path": "source_discovery/expansion_20261018_v7/pages/vertex42_timesheet.source",
+      "title": "Timesheet Template - Free Simple Time Sheet for Excel",
+      "text_characters": 8671,
+      "relevant_links": [
+        {
+          "text": "Excel Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/budgets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Invoice Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/invoice-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Project Management",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-project-management.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/timesheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Business Templates",
+          "url": "https://www.vertex42.com/ExcelTemplates/business-templates.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calendar Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-calendar-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Calculators",
+          "url": "https://www.vertex42.com/Calculators/financial-calculators.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Gantt Chart Pro",
+          "url": "https://www.vertex42.com/ExcelTemplates/gantt-chart-template-pro.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Create a Gantt Chart",
+          "url": "https://www.vertex42.com/ExcelTips/how-to-make-a-gantt-chart-in-excel.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Tutorials",
+          "url": "https://www.vertex42.com/edu/excel-tutorials-for-beginners.html",
+          "workbook_link": false
+        },
+        {
+          "text": "100+ Excel Tips",
+          "url": "https://www.vertex42.com/ExcelTips/",
+          "workbook_link": false
+        },
+        {
+          "text": "Templates for School",
+          "url": "https://www.vertex42.com/ExcelTemplates/education.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Weekly Excel Timesheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html#weekly",
+          "workbook_link": false
+        },
+        {
+          "text": "Biweekly Excel Timesheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html#biweekly",
+          "workbook_link": false
+        },
+        {
+          "text": "How To Use a Timesheet Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html#how-to-use-a-timesheet",
+          "workbook_link": false
+        },
+        {
+          "text": "Printed vs. Electronic Timesheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html#printed-vs-electronic",
+          "workbook_link": false
+        },
+        {
+          "text": "Time Sheet with Breaks",
+          "url": "https://www.vertex42.com/ExcelTemplates/free-timesheet-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Time Card Calculator",
+          "url": "https://www.vertex42.com/ExcelTemplates/time-card-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timecard",
+          "url": "https://www.vertex42.com/ExcelTemplates/weekly-timecard.html",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/weekly-employee-timesheet-template.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-timesheet",
+          "workbook_link": false
+        },
+        {
+          "text": "",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/excel-timesheet-template.png",
+          "workbook_link": false
+        },
+        {
+          "text": "⤓ Excel (.xlsx)",
+          "url": "https://www.vertex42.com/Links/go2.php?urlid=file-timesheet2",
+          "workbook_link": false
+        },
+        {
+          "text": "Biweekly Timesheet",
+          "url": "https://cdn.vertex42.com/ExcelTemplates/Images/biweekly-timesheet.gif",
+          "workbook_link": false
+        },
+        {
+          "text": "payroll spreadsheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/payroll-register.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Vacation Tracking Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/vacation-tracking.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Expense Reimbursement",
+          "url": "https://www.vertex42.com/ExcelTemplates/reimbursement-form.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Mileage Tracking Log",
+          "url": "https://www.vertex42.com/ExcelTemplates/mileage-tracking.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Monthly Timesheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/monthly-timesheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Paycheck Calculator",
+          "url": "https://www.vertex42.com/Calculators/paycheck-calculator.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Payslip Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/payslip-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Rotation Schedule",
+          "url": "https://www.vertex42.com/ExcelTemplates/rotation-schedule.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Shift Schedule",
+          "url": "https://www.vertex42.com/ExcelTemplates/shift-schedule.html",
+          "workbook_link": false
+        },
+        {
+          "text": "New! Time Log",
+          "url": "https://www.vertex42.com/ExcelTemplates/time-log.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Time Tracker",
+          "url": "https://www.vertex42.com/ExcelTemplates/time-tracker.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Timesheet Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Travel Expense Report",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-expense-report.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Weekly Expense Report",
+          "url": "https://www.vertex42.com/ExcelTemplates/weekly-expense-report.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Attendance Sheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/attendance-sheets.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Attendance Sheet - Mobile",
+          "url": "https://www.vertex42.com/ExcelTemplates/attendance-sheet-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Attendance Records",
+          "url": "https://www.vertex42.com/ExcelTemplates/attendance-record.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Class Attendance Template",
+          "url": "https://www.vertex42.com/ExcelTemplates/class-attendance-template.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Open House Sign In Sheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/open-house-sign-in-sheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Potluck Sign Up Sheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/potluck-sign-up-sheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "School Attendance",
+          "url": "https://www.vertex42.com/ExcelTemplates/attendance-tracking.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Sign In Sheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/sign-in-sheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Sign Up Sheets",
+          "url": "https://www.vertex42.com/ExcelTemplates/sign-up-sheet.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Consulting",
+          "url": "https://www.vertex42.com/excel-consulting.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Articles",
+          "url": "https://www.vertex42.com/ExcelArticles/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel Links",
+          "url": "https://www.vertex42.com/ExcelLinks/",
+          "workbook_link": false
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://www.vertex42.com/terms.html",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "Timesheet Template - Free Simple Time Sheet for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms R",
+        "Timesheet Template - Free Simple Time Sheet for Excel ≡ Vertex42 Logo Excel Templates Budget Templates Invoice Templates Project Management Timesheets Business Templates - More Templates - Calendars 2026 Calendar 2027 Calendar Calendar Template Printable Calendars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Educati",
+        "endars - More Calendars - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Time Sheets > Timesheet Template Timesheet Template for Excel Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet ",
+        "rs - Calculators Gantt Chart Gantt Chart Pro Create a Gantt Chart Word Templates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Time Sheets > Timesheet Template Timesheet Template for Excel Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet Biweekly Excel Timesh",
+        "mplates Legal Forms Resumes Letters Education Excel Tutorials 100+ Excel Tips LAMBDA Library Templates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Time Sheets > Timesheet Template Timesheet Template for Excel Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet Biweekly Excel Timesheet How To Use a Timesheet Template Printed vs. Electronic Timesheets Gre",
+        "mplates for School Blog ► Search Icon Home > Excel Templates > Business Templates > Time Sheets > Timesheet Template Timesheet Template for Excel Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet Biweekly Excel Timesheet How To Use a Timesheet Template Printed vs. Electronic Timesheets Great for New Businesses This timesheet template provides a simple and free time-tracking solution",
+        "siness Templates > Time Sheets > Timesheet Template Timesheet Template for Excel Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet Biweekly Excel Timesheet How To Use a Timesheet Template Printed vs. Electronic Timesheets Great for New Businesses This timesheet template provides a simple and free time-tracking solution for new businesses. There is no need to make your own timesheet ",
+        "esheet Template for Excel Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet Biweekly Excel Timesheet How To Use a Timesheet Template Printed vs. Electronic Timesheets Great for New Businesses This timesheet template provides a simple and free time-tracking solution for new businesses. There is no need to make your own timesheet or install and learn new time-tracking software. Simply",
+        " Download and customize a timesheet for your business using Excel® | Updated 5/5/2025 This Page (contents): Weekly Excel Timesheet Biweekly Excel Timesheet How To Use a Timesheet Template Printed vs. Electronic Timesheets Great for New Businesses This timesheet template provides a simple and free time-tracking solution for new businesses. There is no need to make your own timesheet or install and learn new time-tracking software. Simply download and customize o",
+        "is no need to make your own timesheet or install and learn new time-tracking software. Simply download and customize our free timesheet for Excel or Google Sheets. Share Directly with Employees You can create an effective online timesheet solution by privately sharing a timesheet with your employees on Google Sheets, OneDrive, Google Drive, DropBox, etc. Advertisement Learn How to Use a Timesheet Template Check out the \"How to Use a Timesheet Template\" section ",
+        " to report hours worked, but don't need to report clock in/out times. Other template options include: To record clock-in/out times and have Excel calculate hours worked, try our Time Sheet with Breaks or the Time Card Calculator To keep track of hours worked on specific projects, try the Timecard template. If you want your employees to use printable time sheets, our templates can be modified to print blank forms. Weekly Excel Timesheet Download ⤓ Excel (.xlsx) ",
+        " the Timecard template. If you want your employees to use printable time sheets, our templates can be modified to print blank forms. Weekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This weekly timesheet lets you enter times in h:mm format or decimal format (a separate worksheet for each option). You can enter pay rates to calculate the total pay. License : Private Use (not for distribution or resale) \"No inst",
+        "you want your employees to use printable time sheets, our templates can be modified to print blank forms. Weekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This weekly timesheet lets you enter times in h:mm format or decimal format (a separate worksheet for each option). You can enter pay rates to calculate the total pay. License : Private Use (not for distribution or resale) \"No installation, no macros - just ",
+        "yees to use printable time sheets, our templates can be modified to print blank forms. Weekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This weekly timesheet lets you enter times in h:mm format or decimal format (a separate worksheet for each option). You can enter pay rates to calculate the total pay. License : Private Use (not for distribution or resale) \"No installation, no macros - just a simple spreadshee",
+        "ou enter times in h:mm format or decimal format (a separate worksheet for each option). You can enter pay rates to calculate the total pay. License : Private Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Biweekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This biweekly timesheet provides the same options as the weekly version. The only",
+        "er pay rates to calculate the total pay. License : Private Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Biweekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This biweekly timesheet provides the same options as the weekly version. The only difference is that it's designed for a two-week period. License : Private Use (not for distribution or",
+        "ivate Use (not for distribution or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Biweekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This biweekly timesheet provides the same options as the weekly version. The only difference is that it's designed for a two-week period. License : Private Use (not for distribution or resale) How to Use a Timesheet Template Custom",
+        "tion or resale) \"No installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Biweekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This biweekly timesheet provides the same options as the weekly version. The only difference is that it's designed for a two-week period. License : Private Use (not for distribution or resale) How to Use a Timesheet Template Customize the template with your ",
+        " installation, no macros - just a simple spreadsheet\" - by Jon Wittwer Advertisement Biweekly Excel Timesheet Download ⤓ Excel (.xlsx) For: Excel 2010 or later ⤓ Google Sheets Description This biweekly timesheet provides the same options as the weekly version. The only difference is that it's designed for a two-week period. License : Private Use (not for distribution or resale) How to Use a Timesheet Template Customize the template with your company, employee, ",
+        "n This biweekly timesheet provides the same options as the weekly version. The only difference is that it's designed for a two-week period. License : Private Use (not for distribution or resale) How to Use a Timesheet Template Customize the template with your company, employee, and pay rate information Print, email or share the file with your employees Have the employees fill out the timesheet on a daily basis and submit weekly or biweekly Develop a procedure for",
+        "send the completed timesheet to your manager (besides printing) is to first save as a PDF and then email the PDF. You can create a PDF with Excel by going to Save As and choosing PDF from the list of file types. Customizing the Timesheet Biweekly Timesheet (screenshot) [h]:mm vs. Decimal Formats Each of the templates contains a separate worksheet tab for entering times using either h:mm or decimal format. The h:mm time format is the simple for the employee to u",
+        "SharePoint, etc.) Share the file with your employee ( Share files on Google Drive , Share files on OneDrive ) Have your employee update the spreadsheet throughout the week Save a printed and/or electronic copy of completed time sheets Note: It is a violation of copyright to share the template publicly or to add a copy to a public template gallery, but sharing it with an employee is allowed. For Employers/Managers: The system you use to report and record the hours is ",
+        "ployee update the spreadsheet throughout the week Save a printed and/or electronic copy of completed time sheets Note: It is a violation of copyright to share the template publicly or to add a copy to a public template gallery, but sharing it with an employee is allowed. For Employers/Managers: The system you use to report and record the hours is up to you. It could involve printing a copy of the spreadsheet or having the employee export a copy of the completed doc",
+        "is allowed. For Employers/Managers: The system you use to report and record the hours is up to you. It could involve printing a copy of the spreadsheet or having the employee export a copy of the completed document and email it to you. Or, you could simply log into Google Sheets, look at the completed documents, and record the hours in your payroll spreadsheet . The procedure I use is to save a copy (exported to an Excel file that I save on my computer), and then cle",
+        "ent and email it to you. Or, you could simply log into Google Sheets, look at the completed documents, and record the hours in your payroll spreadsheet . The procedure I use is to save a copy (exported to an Excel file that I save on my computer), and then clear out the hours and update the date in the Week Of field. That is the signal to the employee that the document is ready to be updated for the next pay period. Other Free Excel Timesheet Templates Time Sheet wit",
+        ", look at the completed documents, and record the hours in your payroll spreadsheet . The procedure I use is to save a copy (exported to an Excel file that I save on my computer), and then clear out the hours and update the date in the Week Of field. That is the signal to the employee that the document is ready to be updated for the next pay period. Other Free Excel Timesheet Templates Time Sheet with Breaks Weekly Timecard by Project Payroll Register Timesheet",
+        " date in the Week Of field. That is the signal to the employee that the document is ready to be updated for the next pay period. Other Free Excel Timesheet Templates Time Sheet with Breaks Weekly Timecard by Project Payroll Register Timesheet Software for Multiple Employees and/or Projects An employer normally needs to keep track of the hours worked for multiple employees . One of the simple (and free) ways to do that is to use our Payroll Spreadsheet along wit",
+        "ormally needs to keep track of the hours worked for multiple employees . One of the simple (and free) ways to do that is to use our Payroll Spreadsheet along with one of our time sheets. In addition to storing the employee payroll information, the register will let you record the hours worked by each employee for each pay period. Follow Us On ... FB PIN TWEET LI IG YT Related Templates Time Card Calculator Vacation Tracking Template Timesheets & Payroll Expense Reimb",
+        "ngs, visitors, patients) Sign Up Sheets (volunteer, parties, interviews) Time Sheets (weekly, biweekly) Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of ",
+        "ts (volunteer, parties, interviews) Time Sheets (weekly, biweekly) Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not ",
+        " biweekly) Company About Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Polic",
+        "Us Contact Us Support Excel Consulting Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2",
+        " Products & Services Spreadsheet Templates Word Templates Calendar Templates Excel Articles Education Excel Links Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved.",
+        " Vertex42.com The Guide to Excel in Everything Herriman, Utah Vertex42® is a registered trademark of Vertex42 LLC. Microsoft® and Microsoft Excel® and Microsoft Word® are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft. Sitemap | Privacy Policy | Terms of Use © 2003-2026 Vertex42 LLC. All rights reserved."
+      ],
+      "challenge_suspected": false
+    }
+  ]
+}

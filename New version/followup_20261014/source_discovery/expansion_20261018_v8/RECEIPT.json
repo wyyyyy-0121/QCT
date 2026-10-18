@@ -1,0 +1,1527 @@
+{
+  "role": "Metadata discovery only; no candidate workbook bodies or answer files fetched",
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "index_sha256": "771259383fbd76810d690f7ef0f21b0f855676327438ec7966a884ed73900aa3",
+  "script_sha256": "f0f94ff6e94de7449fac7cc28e0dc3e16f06c099e220068cc8fe8a0e1f7de0f6",
+  "results": [
+    {
+      "id": "excelint_org_repos",
+      "origin": "ExceLint dataset discovery metadata",
+      "url": "https://api.github.com/orgs/ExceLint/repos?per_page=30",
+      "utc": "2026-10-18T05:55:42.708237+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.github.com/orgs/ExceLint/repos?per_page=30",
+      "content_type": "application/json; charset=utf-8",
+      "body_read": true,
+      "bytes": 16323,
+      "sha256": "638be52eb0ee9061f7ba91ab0de34def080868c5ea4da81564a44539f53d5997",
+      "path": "source_discovery/expansion_20261018_v8/pages/excelint_org_repos.source",
+      "title": null,
+      "text_characters": 16323,
+      "relevant_links": [],
+      "snippets": [
+        ",\"type\":\"Organization\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/ExceLint/ExceLint\",\"description\":\"Finds formula errors in spreadsheets (plugin for Microsoft Excel)\",\"fork\":false,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint\",\"forks_url\":\"https://api.github.com/repos/ExceLint/ExceLint/forks\",\"keys_url\":\"https://api.github.com/repos/ExceLint/ExceLint/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/ExceLin",
+        "e_admin\":false},\"html_url\":\"https://github.com/ExceLint/ExceLint\",\"description\":\"Finds formula errors in spreadsheets (plugin for Microsoft Excel)\",\"fork\":false,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint\",\"forks_url\":\"https://api.github.com/repos/ExceLint/ExceLint/forks\",\"keys_url\":\"https://api.github.com/repos/ExceLint/ExceLint/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/ExceLint/ExceLint/collaborators{/collaborator}\",\"teams_url",
+        "i\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":7,\"mirror_url\":null,\"archived\":true,\"disabled\":false,\"open_issues_count\":1,\"license\":{\"key\":\"bsd-2-clause\",\"name\":\"BSD 2-Clause \\\"Simplified\\\" License\",\"spdx_id\":\"BSD-2-Clause\",\"url\":\"https://api.github.com/licenses/bsd-2-clause\",\"node_id\":\"MDc6TGljZW5zZTQ=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"top",
+        "mirror_url\":null,\"archived\":true,\"disabled\":false,\"open_issues_count\":1,\"license\":{\"key\":\"bsd-2-clause\",\"name\":\"BSD 2-Clause \\\"Simplified\\\" License\",\"spdx_id\":\"BSD-2-Clause\",\"url\":\"https://api.github.com/licenses/bsd-2-clause\",\"node_id\":\"MDc6TGljZW5zZTQ=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[\"excel\",\"spreadsheets\"],\"visibility\":\"public\",\"forks\":7,\"open",
+        "king\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[\"excel\",\"spreadsheets\"],\"visibility\":\"public\",\"forks\":7,\"open_issues\":1,\"watchers\":74,\"default_branch\":\"master\",\"permissions\":{\"admin\":false,\"maintain\":false,\"push\":false,\"triage\":false,\"pull\":true},\"custom_properties\":{}},{\"id\":175311686,\"node_id\":\"MDEwOlJlcG9zaXRvcnkxNzUzMTE2ODY=\",\"name\":\"ExceLint-addin\",\"full_name\":\"ExceL",
+        "ganization\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/ExceLint/ExceLint-addin\",\"description\":\"Add-in for Excel that finds formula errors\",\"fork\":false,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin\",\"forks_url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin/forks\",\"keys_url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/ExceLint/ExceLi",
+        "_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/ExceLint/ExceLint-addin\",\"description\":\"Add-in for Excel that finds formula errors\",\"fork\":false,\"url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin\",\"forks_url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin/forks\",\"keys_url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/ExceLint/ExceLint-addin/collaborat",
+        "\":true,\"has_pages\":true,\"has_discussions\":false,\"forks_count\":8,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":13,\"license\":{\"key\":\"apache-2.0\",\"name\":\"Apache License 2.0\",\"spdx_id\":\"Apache-2.0\",\"url\":\"https://api.github.com/licenses/apache-2.0\",\"node_id\":\"MDc6TGljZW5zZTI=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"p",
+        "lse,\"forks_count\":8,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":13,\"license\":{\"key\":\"apache-2.0\",\"name\":\"Apache License 2.0\",\"spdx_id\":\"Apache-2.0\",\"url\":\"https://api.github.com/licenses/apache-2.0\",\"node_id\":\"MDc6TGljZW5zZTI=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":8,\"open_issues\":13,\"watchers\"",
+        "\":true,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":1,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":3,\"license\":{\"key\":\"apache-2.0\",\"name\":\"Apache License 2.0\",\"spdx_id\":\"Apache-2.0\",\"url\":\"https://api.github.com/licenses/apache-2.0\",\"node_id\":\"MDc6TGljZW5zZTI=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"p",
+        "alse,\"forks_count\":1,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":3,\"license\":{\"key\":\"apache-2.0\",\"name\":\"Apache License 2.0\",\"spdx_id\":\"Apache-2.0\",\"url\":\"https://api.github.com/licenses/apache-2.0\",\"node_id\":\"MDc6TGljZW5zZTI=\"},\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"public\",\"forks\":1,\"open_issues\":3,\"watchers\":"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "illinois_fast_tools",
+      "origin": "University of Illinois farmdoc",
+      "url": "https://farmdoc.illinois.edu/fast-tools",
+      "utc": "2026-10-18T05:55:42.705277+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 404,
+      "resolved_url": "https://farmdoc.illinois.edu/fast-tools",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 99709,
+      "sha256": "7ead6397ccd98a14a8620e219c4033eae36bc5e184ecee8ed776c8d29e32c701",
+      "path": "source_discovery/expansion_20261018_v8/pages/illinois_fast_tools.source",
+      "title": "Page not found - farmdoc",
+      "text_characters": 7327,
+      "relevant_links": [
+        {
+          "text": "skip to Main Content",
+          "url": "https://farmdoc.illinois.edu/fast-tools#content",
+          "workbook_link": false
+        },
+        {
+          "text": "Sections",
+          "url": "https://farmdoc.illinois.edu/fast-tools",
+          "workbook_link": false
+        },
+        {
+          "text": "Tools & Data",
+          "url": "https://farmdoc.illinois.edu/farmland-center/tools-data",
+          "workbook_link": false
+        },
+        {
+          "text": "FAST Tools",
+          "url": "https://farmdoc.illinois.edu/fast",
+          "workbook_link": false
+        },
+        {
+          "text": "Cover Crop Analyzer",
+          "url": "https://farmdoc.illinois.edu/decision-tools/cover-crop-analyzer",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Insurance Decision Tool (Sheet)",
+          "url": "https://farmdoc.illinois.edu/fast-tools/crop-insurance-decision-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Insurance Payment Evaluator",
+          "url": "https://fd-tools.ncsa.illinois.edu/evaluator",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Insurance Premium Calculator",
+          "url": "https://fd-tools.ncsa.illinois.edu/premiums",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Insurance Summary of Business Tool (Sheet)",
+          "url": "https://farmdoc.illinois.edu/fast-tools/crop-insurance-summary-of-business-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "ECO/SCO Payment Estimator (Sheet)",
+          "url": "https://farmdoc.illinois.edu/fast-tools/eco-sco-payment-estimator",
+          "workbook_link": false
+        },
+        {
+          "text": "Margin Protection Tool (Sheet)",
+          "url": "https://farmdoc.illinois.edu/fast-tools/margin-protection-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Post Application Coverage Endorsement Tool (Sheet)",
+          "url": "https://farmdoc.illinois.edu/fast-tools/post-application-coverage-endorsement-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Price Distribution Tool",
+          "url": "https://farmdoc.illinois.edu/decision-tools/price-distribution",
+          "workbook_link": false
+        },
+        {
+          "text": "Farmland Correlation With Other Assets",
+          "url": "https://farmdoc.illinois.edu/decision-tools/farmland-correlation-with-other-assets-by-holding-interval",
+          "workbook_link": false
+        },
+        {
+          "text": "Farmland and Cropland Index and Return Utility",
+          "url": "https://farmdoc.illinois.edu/decision-tools/farmland-and-cropland-index-and-return-utility",
+          "workbook_link": false
+        },
+        {
+          "text": "Farmland Values and Returns by State",
+          "url": "https://farmdoc.illinois.edu/decision-tools/farmland-values-and-returns-by-state-through-time",
+          "workbook_link": false
+        },
+        {
+          "text": "Land Purchase Evaluation Tool",
+          "url": "https://farmdoc.illinois.edu/decision-tools/land-purchase-evaluation-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Representative Parcel Transfer Information",
+          "url": "https://farmdoc.illinois.edu/decision-tools/illinois-society-of-farm-managers-and-rural-appraisers-representative-parcel-transfer-information",
+          "workbook_link": false
+        },
+        {
+          "text": "Returns to Alternative Investments by Holding Interval",
+          "url": "https://farmdoc.illinois.edu/decision-tools/returns-to-alternative-investments-by-holding-interval",
+          "workbook_link": false
+        },
+        {
+          "text": "US AG Sector Balance Sheet Data Through Time",
+          "url": "https://farmdoc.illinois.edu/decision-tools/us-ag-sector-balance-sheet-data-through-time-with-lender-shares",
+          "workbook_link": false
+        },
+        {
+          "text": "Farm Bill What-If Tool",
+          "url": "https://farmdoc.illinois.edu/fast-tools/arc-co-plc-model",
+          "workbook_link": false
+        },
+        {
+          "text": "Balance Sheet & Historical Financial Statements",
+          "url": "https://farmdoc.illinois.edu/fast-tools/balance-sheet-historical-financial-statements",
+          "workbook_link": false
+        },
+        {
+          "text": "Cash Rent with Bonus Worksheet",
+          "url": "https://farmdoc.illinois.edu/fast-tools/cash-rent-with-bonus-worksheet",
+          "workbook_link": false
+        },
+        {
+          "text": "Farm Projection Tool",
+          "url": "https://farmdoc.illinois.edu/fast-tools/farm-projection-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Land Purchase Analysis",
+          "url": "https://farmdoc.illinois.edu/fast-tools/land-purchase-analysis",
+          "workbook_link": false
+        },
+        {
+          "text": "Planting Decision Model",
+          "url": "https://farmdoc.illinois.edu/fast-tools/planting-decision-model",
+          "workbook_link": false
+        },
+        {
+          "text": "Appraisal of Current Financial Position",
+          "url": "https://farmdoc.illinois.edu/fast-tools/appraisal-of-current-financial-position",
+          "workbook_link": false
+        },
+        {
+          "text": "Beef Profitability Model",
+          "url": "https://farmdoc.illinois.edu/fast-tools/beef-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Biomass Crop Budget Tool – Corn Stover",
+          "url": "https://farmdoc.illinois.edu/fast-tools/biomass-crop-budget-tool-corn-stover",
+          "workbook_link": false
+        },
+        {
+          "text": "Biomass Crop Budget Tool – Miscanthus and Switchgrass",
+          "url": "https://farmdoc.illinois.edu/fast-tools/biomass-crop-budget-tool-miscanthus-and-switchgrass",
+          "workbook_link": false
+        },
+        {
+          "text": "Capital Budgeting Analysis",
+          "url": "https://farmdoc.illinois.edu/fast-tools/capital-budgeting",
+          "workbook_link": false
+        },
+        {
+          "text": "Carbon Calculator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/carbon-calculator",
+          "workbook_link": false
+        },
+        {
+          "text": "Cash to Accrual Income Approximation",
+          "url": "https://farmdoc.illinois.edu/fast-tools/cash-to-accrual-income-approximation",
+          "workbook_link": false
+        },
+        {
+          "text": "Corn & Soybean Basis Tool",
+          "url": "https://farmdoc.illinois.edu/fast-tools/corn-soybean-basis-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Cost of Feedstuffs Calculator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/cost-of-feedstuffs-calculator",
+          "workbook_link": false
+        },
+        {
+          "text": "Dairy Profitability Model",
+          "url": "https://farmdoc.illinois.edu/fast-tools/dairy-profitability-model",
+          "workbook_link": false
+        },
+        {
+          "text": "Earned Net Worth Allocation",
+          "url": "https://farmdoc.illinois.edu/fast-tools/net-worth-allocation",
+          "workbook_link": false
+        },
+        {
+          "text": "Enterprise Allocation Module",
+          "url": "https://farmdoc.illinois.edu/fast-tools/enterprise-allocation-and-analysis",
+          "workbook_link": false
+        },
+        {
+          "text": "Estimation of Deferred Taxes",
+          "url": "https://farmdoc.illinois.edu/fast-tools/estimation-of-deferred-taxes",
+          "workbook_link": false
+        },
+        {
+          "text": "Ethanol Dry Mill Plant Simulator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/ethanol-plant-simulator",
+          "workbook_link": false
+        },
+        {
+          "text": "Farm Rent Evaluator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/farm-rent-evaluator",
+          "workbook_link": false
+        },
+        {
+          "text": "Grain Storage Purchase Analysis",
+          "url": "https://farmdoc.illinois.edu/fast-tools/grain-bin-analysis",
+          "workbook_link": false
+        },
+        {
+          "text": "Grain Inventory Management",
+          "url": "https://farmdoc.illinois.edu/fast-tools/grain-inventory-management",
+          "workbook_link": false
+        },
+        {
+          "text": "Grain Pricing Tool",
+          "url": "https://farmdoc.illinois.edu/fast-tools/grain-pricing-tool",
+          "workbook_link": false
+        },
+        {
+          "text": "Illinois Soil Productivity and Yield Utilities",
+          "url": "https://farmdoc.illinois.edu/fast-tools/illinois-soil-productivity-index-utilities",
+          "workbook_link": false
+        },
+        {
+          "text": "Lease vs Purchase Analysis",
+          "url": "https://farmdoc.illinois.edu/fast-tools/lease-vs-purchase",
+          "workbook_link": false
+        },
+        {
+          "text": "Loan Amortization",
+          "url": "https://farmdoc.illinois.edu/fast-tools/loan-amortization",
+          "workbook_link": false
+        },
+        {
+          "text": "Loan Comparison",
+          "url": "https://farmdoc.illinois.edu/fast-tools/loan-comparison",
+          "workbook_link": false
+        },
+        {
+          "text": "Machinery Economics",
+          "url": "https://farmdoc.illinois.edu/fast-tools/machinery-economics",
+          "workbook_link": false
+        },
+        {
+          "text": "Machinery Financing",
+          "url": "https://farmdoc.illinois.edu/fast-tools/machinery-financing",
+          "workbook_link": false
+        },
+        {
+          "text": "MACRS Calculator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/macrs-calculator",
+          "workbook_link": false
+        },
+        {
+          "text": "Marketing and Crop Insurance Risk Model",
+          "url": "https://farmdoc.illinois.edu/fast-tools/marketing-and-crop-insurance-risk-model",
+          "workbook_link": false
+        },
+        {
+          "text": "Monthly Cash Flow Planning",
+          "url": "https://farmdoc.illinois.edu/fast-tools/cash-flow-planning",
+          "workbook_link": false
+        },
+        {
+          "text": "New Company Simulator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/new-company-simulator",
+          "workbook_link": false
+        },
+        {
+          "text": "Personal Financial Statements",
+          "url": "https://farmdoc.illinois.edu/fast-tools/personal-financial-statements",
+          "workbook_link": false
+        },
+        {
+          "text": "Quick Cash Flow Projections",
+          "url": "https://farmdoc.illinois.edu/fast-tools/quick-cash-flow-projections",
+          "workbook_link": false
+        },
+        {
+          "text": "Repayment Capacity Analysis",
+          "url": "https://farmdoc.illinois.edu/fast-tools/repayment-capacity-analysis",
+          "workbook_link": false
+        },
+        {
+          "text": "Revolving Loan Calculator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/revolving-loan-calculator",
+          "workbook_link": false
+        },
+        {
+          "text": "Savings Calculator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/savings-calculator",
+          "workbook_link": false
+        },
+        {
+          "text": "Specialty Commodity Breakeven Analysis",
+          "url": "https://farmdoc.illinois.edu/fast-tools/specialty-commodity-breakeven-analysis",
+          "workbook_link": false
+        },
+        {
+          "text": "Time Value Tools",
+          "url": "https://farmdoc.illinois.edu/fast-tools/time-value-tools",
+          "workbook_link": false
+        },
+        {
+          "text": "Yield Risk Evaluator",
+          "url": "https://farmdoc.illinois.edu/fast-tools/crop-yield-database",
+          "workbook_link": false
+        },
+        {
+          "text": "Illinois Crop Budgets and Historic Returns",
+          "url": "https://farmdoc.illinois.edu/management#handbook-crop-budgets",
+          "workbook_link": false
+        },
+        {
+          "text": "ARC/PLC Calculators",
+          "url": "https://farmdoc.illinois.edu/policy-toolbox",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Farm Bill What-If Tool (Sheet)",
+          "url": "https://farmdoc.illinois.edu/assets/fast-tools/excel/arccoplc25.xlsb",
+          "workbook_link": true
+        },
+        {
+          "text": "ARC/PLC Calculator (Online)",
+          "url": "https://fd-tools.ncsa.illinois.edu/arcplc",
+          "workbook_link": false
+        },
+        {
+          "text": "Copyright",
+          "url": "https://illinois.edu/resources/website/copyright.html",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Insurance Tools",
+          "url": "https://farmdoc.illinois.edu/crop-insurance#tools",
+          "workbook_link": false
+        },
+        {
+          "text": "Back To Top",
+          "url": "https://farmdoc.illinois.edu/fast-tools#outer-wrap",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "tative Parcel Transfer Information Returns to Alternative Investments by Holding Interval US AG Sector Balance Sheet Data Through Time FAST Spreadsheet Tools Farm Bill What-If Tool Balance Sheet & Historical Financial Statements Cash Rent with Bonus Worksheet Crop Insurance Decision Tool Crop Insurance Summary of Business Tool ECO/SCO Payment Estimator Farm Projection Tool Land Purchase Analysis Planting Decision Model Post Application Coverage Endorsement Tool — App",
+        "al and Consumer Economics Mumford Hall 1301 W. Gregory Dr Urbana IL  61801 Send Us Feedback EDUCATIONAL PARTNERS Dept of ACE FBFM EXTENSION Copyright Accessibility Privacy Quicklinks Agricultural Law Agricultural Policy Crop Insurance Management Marketing & Outlook Crop Insurance Tools FAST Tools Illinois Farm Management Handbook Upcoming Webinars Webinar Archive IFES Archive Subscribe farmdoc Sponsorship Corporate Sponsor Platinum Sponsor Platinum Sponsor Platinum",
+        "tative Parcel Transfer Information Returns to Alternative Investments by Holding Interval US AG Sector Balance Sheet Data Through Time FAST Spreadsheet Tools Farm Bill What-If Tool Balance Sheet & Historical Financial Statements Cash Rent with Bonus Worksheet Crop Insurance Decision Tool Crop Insurance Summary of Business Tool ECO/SCO Payment Estimator Farm Projection Tool Land Purchase Analysis Planting Decision Model Post Application Coverage Endorsement Tool — App"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_paper_metadata",
+      "origin": "Crossref bibliographic metadata",
+      "url": "https://api.crossref.org/works/10.1093/cje/bet075",
+      "utc": "2026-10-18T05:55:42.707325+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.1093/cje/bet075",
+      "content_type": "application/json",
+      "body_read": true,
+      "bytes": 2901,
+      "sha256": "f80d70f6248e54a6bd4ba4282aabb7a17e1f2d47f1aab65f44ee72269471db4e",
+      "path": "source_discovery/expansion_20261018_v8/pages/rr_paper_metadata.source",
+      "title": null,
+      "text_characters": 2901,
+      "relevant_links": [],
+      "snippets": [],
+      "challenge_suspected": false
+    },
+    {
+      "id": "rr_science_readme",
+      "origin": "Reinhart Rogoff historical replication metadata",
+      "url": "https://raw.githubusercontent.com/scienceetonnante/Reinhart-Rogoff/658bfafcfe19878cf13ffa748d3e5ab8c1969f6b/README.md",
+      "utc": "2026-10-18T05:55:42.706737+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
+      "id": "tennessee_budgets",
+      "origin": "University of Tennessee",
+      "url": "https://arec.tennessee.edu/extension/budgets/",
+      "utc": "2026-10-18T05:55:42.706300+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 200,
+      "resolved_url": "https://arec.tennessee.edu/extension/budgets/",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 221444,
+      "sha256": "eccbc0d357d1ac94ddc6ecc648d319ea88656e2843683318641ea83ab91705b1",
+      "path": "source_discovery/expansion_20261018_v8/pages/tennessee_budgets.source",
+      "title": "Budgets | Department of Agricultural and Resource Economics",
+      "text_characters": 18132,
+      "relevant_links": [
+        {
+          "text": "Skip to content",
+          "url": "https://arec.tennessee.edu/extension/budgets/#content",
+          "workbook_link": false
+        },
+        {
+          "text": "Budgets",
+          "url": "https://arec.tennessee.edu/extension/budgets/",
+          "workbook_link": false
+        },
+        {
+          "text": "Decision-Aid Tools",
+          "url": "https://arec.tennessee.edu/extension/decision-aid-tools/",
+          "workbook_link": false
+        },
+        {
+          "text": "Agri-Industry Modeling & Analysis Group",
+          "url": "https://arec.tennessee.edu/research-old/aim-ag/",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets for 2026 – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/2026-Crop-Budgets.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Field Crop Budgets for 2026",
+          "url": "https://solutions.tennessee.edu/publication/D33/",
+          "workbook_link": false
+        },
+        {
+          "text": "Profitable Marketing Decision Aid – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/02/ProfitableMarketingDecisionAid-2026.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "No-Till, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/CornNT2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Conventional Tillage, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/CornCT2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/CornIrr2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/SoyNT2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/SoyIrr2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/WW2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/SoyWheat2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/CottNT2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Conventional Tillage, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/CottCT2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/CottIrr2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "No-Till, Non-Irrigated",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/GS2026.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Footnotes",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/footnotes.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow/Calf Budget for 2026 – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/UT-Cow-Calf-Budget2026.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Cow/Calf Budget for 2026",
+          "url": "https://solutions.tennessee.edu/publication/D31/",
+          "workbook_link": false
+        },
+        {
+          "text": "Heifer Development for 2025 – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/02/UT-Heifer-Development-Budget2025.xlsx.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Stocker/Backgrounding Budget for 2026 – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/Stocker-Backgrounding-Budget2026.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Stocker/Backgrounding Budget for 2026",
+          "url": "https://solutions.tennessee.edu/publication/D32/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Considerations for Various Herd Sizes of Meat Goat Enterprises in Tennessee – PB1793",
+          "url": "https://solutions.tennessee.edu/publication/PB1793/",
+          "workbook_link": false
+        },
+        {
+          "text": "Budget Spreadsheets – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/10/TNMeatGoatBudget2010.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Forage Budget Calculator",
+          "url": "https://arec.tennessee.edu/forage-budgets-calculator/",
+          "workbook_link": false
+        },
+        {
+          "text": "Tennessee Forage Budget Calculator",
+          "url": "https://solutions.tennessee.edu/publication/D252A/",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Tennessee Hay Budgets",
+          "url": "https://solutions.tennessee.edu/publication/D252C/",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Tennessee Pasture Budgets",
+          "url": "https://solutions.tennessee.edu/publication/D252D/",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Tennessee Baleage Budgets",
+          "url": "https://solutions.tennessee.edu/publication/D252B/",
+          "workbook_link": false
+        },
+        {
+          "text": "Alfalfa",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/AlfalfaHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Alfalfa",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/AlfalfaHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Alfalfa",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/AlfalfaPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Alfalfa",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/AlfalfaBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Bermudagrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/BermHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Bermudagrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/BermHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Bermudagrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/BermPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Bermudagrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/BermBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolFescueHayRound-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolFescueHaySquare-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSFescuePasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSFescueBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolOrchHayRound-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolOrchHaySquare-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSOrchPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSOrchBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolFescueCloverHayRound-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolFescueCloverHaySquare-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSFescueCloverPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Fescue/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSGCFescueBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolOrchCloverHayRound-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CoolOrchCloverHaySquare-Bale.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/CSOrchCloverPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Orchardgrass/Clover",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/GCCSOrchBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crabgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SACrabHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crabgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SACrabHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crabgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SACrabPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crabgrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SACrabBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Millet",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SAMilHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Millet",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SAMilHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Millet",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SAMilPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Millet",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SAMilBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Sorghum-Sudan",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SASSHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Sorghum-Sudan",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SASSHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Sorghum-Sudan",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SASSPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Sorghum-Sudan",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/SASSBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Barley",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WABarleyHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Barley",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WABarleyHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Barley",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WABarleyPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Barley",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WABarBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Rye",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyeHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Rye",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyeHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Rye",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyePasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Rye",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyeBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Oats",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAOatsHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Oats",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAOatsHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Oats",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAOatPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Oats",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAOatBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Ryegrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyeGHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Ryegrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyeGHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Ryegrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyegrassPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Ryegrass",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WARyeGBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Triticale",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WATritHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Triticale",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WATritHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Triticale",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WATritPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Triticale",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WATritBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAWheatHayRound.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAWheatHaySquare.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAWheatPasture.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/WAWheatBal.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Tennessee-Kentucky Burley Tobacco Budget",
+          "url": "https://solutions.tennessee.edu/publication/D37A/",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Tennessee-Kentucky Burley Tobacco Budget – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/2025-TN-KY-Burley-Tobacco-Budget.xls",
+          "workbook_link": true
+        },
+        {
+          "text": "2025 Dark Air Cured Tobacco Budget",
+          "url": "https://solutions.tennessee.edu/publication/D37C/",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Dark Air Cured Tobacco Budget – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/2025-TN-KY-Dark-Air-Cured-Tobacco-Budget.xls",
+          "workbook_link": true
+        },
+        {
+          "text": "2025 Dark Fired Tobacco Budget",
+          "url": "https://solutions.tennessee.edu/publication/D37B/",
+          "workbook_link": false
+        },
+        {
+          "text": "2025 Dark Fired Tobacco Budget – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/03/2025-TN-KY-Dark-Fired-Tobacco-Budget.xls",
+          "workbook_link": true
+        },
+        {
+          "text": "Sample Budget for Small-Scale Tomato Operations",
+          "url": "https://solutions.tennessee.edu/publication/W1125/",
+          "workbook_link": false
+        },
+        {
+          "text": "Sample Budget for Small-Scale Tomato Operations – Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2022/12/Sample-Budget-for-Small-Scale-Commercial-Tomato-Operations-2022_9_20_2022_final.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Sample Budget for Large-Scale Bell Pepper Operations and the Impact of Phytophthora Blight on Farm Revenue and Costs, 2022",
+          "url": "https://solutions.tennessee.edu/publication/W831/",
+          "workbook_link": false
+        },
+        {
+          "text": "Excel spreadsheet version of the sample budget for large-scale bell peppers",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2023/01/Bell-Pepper-budget_rgb_final.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Sample Budget for Blueberry Production Under Various Integrated Pest Management and Marketing Strategies – 2020",
+          "url": "https://solutions.tennessee.edu/publication/D102/",
+          "workbook_link": false
+        },
+        {
+          "text": "Blueberry sample budget Excel tool",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/11/BlueberryBudget-rgb1019_final.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Sample Budget for Blackberry Production Under Various Integrated Pest Management and Marketing Strategies – 2022",
+          "url": "https://solutions.tennessee.edu/publication/D154/",
+          "workbook_link": false
+        },
+        {
+          "text": "Blackberry sample budget Excel tool",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2022/02/Blackberry-Budget-2022_1_26_2022.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Tennessee Cut Flower Summer Annual Enterprise Budgets",
+          "url": "https://solutions.tennessee.edu/publication/W1348/",
+          "workbook_link": false
+        },
+        {
+          "text": "Celosia Budget PDF",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/Celosia-Budget-8.4.2025.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Celosia Budget Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/Celosia-Budget-8.4.2025.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Cosmos Budget PDF",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/Cosmos-Budget-8.4.2025.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cosmos Budget Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/Cosmos-Budget-8.4.2025.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Gomphrena Budget PDF",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/Gomphrena-Budget-8.4.2025.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Gomphrena Budget Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/Gomphrena-Budget-8.4.2025.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Sunflower Budget PDF",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/SunflowerBudget-8.4.25.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Sunflower Budget Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/SunflowerBudget-8.4.25.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Zinnia Budget PDF",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/ZinniaBudget-8.4.25.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Zinnia Budget Excel",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/10/ZinniaBudget-8.4.25.xlsm",
+          "workbook_link": true
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2026/01/D332025.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/12/D31-2025-Cow-Calf-Budget.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/12/D32-2025-Stocker-Backgrouding-Budget.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2025/01/D332024.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2024/12/D31-2024-Cow-Calf-Budget.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2024/12/D32-2024-Stocker-Backgrounding-Budget.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Burley Tobacco Budget 2024 – PDF",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/W1076.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Dark Air Cured Tobacco Budget 2024 – PDF",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/W1077.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Dark Fired Tobacco Budget 2024 – PDF",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/W1075.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Dark Fired Wrapper Tobacco Budget 2024 – PDF",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/W1074.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Dark Air Wrapper Tobacco Budget 2024 – PDF",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/W1079.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2024/01/D33-2023.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2024/01/UT-Cow-Calf-Budget2023.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2024/01/UT-Stocker-Backgrounding-Budget-2023.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2023/01/2022-Field-Crop-Budgets-D33.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2023/01/CowCalf2022.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2023/01/Stocker2022.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2022/01/2021FieldCropD33.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2022/01/CowCalf2021.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2022/01/Stocker2021.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2021/02/2020FieldCropD33.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2021/01/CowCalf2020.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2021/01/Stocker2020.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CropBudgets2019.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CowCalf2019.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/Stocker2019.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Canola, Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2018RowCropBudgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CowCalf2018.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/Stocker2018.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Canola, Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/FieldCropBudgets2017.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CowCalf2017.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/Stocker2017.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Canola, Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2016FieldCropBudgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CowCalf2016.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/Stocker2016.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Tobacco Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/TobaccoBudgets2016.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Canola, Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2015FieldCropBudgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cow-Calf Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CowCalf2015.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Stocker/Backgrounding Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/Stocker2015.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Tobacco Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/TobaccoBudgets2015.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2014RowCropBudgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CropBudgets2013.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Tobacco Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/TobaccoBudgets2013.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CropBudgets2012.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Tobacco Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/TobaccoBudgets2012.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CropBudgets2011.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2010CropBudgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Tobacco Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/TobaccoBudgets2010.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/CropBudgets2009.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Tobacco Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/TobaccoBudgets2009.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Guideline Switchgrass Establishment and Annual Production Budgets Over Three Year Planning Horizon (AE10-02)",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/Switchgrass2009.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2008CropBudgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans, Wheat and Tobacco",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2007Budgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Beef Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/BeefBudgets2007.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Forage Budgets 2007 – PDF",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/PB1658.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Guideline Switchgrass Establishment and Annual Production Budgets Over Three, Six and Tean Year Planning Horizons (AE0803)",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/switchgrassplan.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2006Budgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Crop Budgets – Corn, Cotton, Grain Sorghum, Soybeans and Wheat",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/2005Budgets.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cotton Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/04cotton.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/04field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cotton Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/03cotton.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/03field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cotton Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/02cotton.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/02field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cotton Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/01cotton.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/01field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Cotton Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/00cotton.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/00field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/99field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/98field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/97field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/1996field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/95field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/94field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/93field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/92field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/91field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/90field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/89field.pdf",
+          "workbook_link": false
+        },
+        {
+          "text": "Field Crop Budgets",
+          "url": "https://arec.tennessee.edu/wp-content/uploads/sites/17/2020/09/87field.pdf",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [
+        "op a custom budget for a specific field or operation, interested parties are strongly encouraged to use University of Tennessee Extension’s Excel-based spreadsheet available below. The spreadsheet uses the same format as the budgets contained in this document; however, it allows the user to change yields, input quantities, input prices, machinery costs and add additional costs that are specific to a field or enterprise. This allows users to adjust for region- a",
+        "budget for a specific field or operation, interested parties are strongly encouraged to use University of Tennessee Extension’s Excel-based spreadsheet available below. The spreadsheet uses the same format as the budgets contained in this document; however, it allows the user to change yields, input quantities, input prices, machinery costs and add additional costs that are specific to a field or enterprise. This allows users to adjust for region- and site-specific p",
+        "eration, interested parties are strongly encouraged to use University of Tennessee Extension’s Excel-based spreadsheet available below. The spreadsheet uses the same format as the budgets contained in this document; however, it allows the user to change yields, input quantities, input prices, machinery costs and add additional costs that are specific to a field or enterprise. This allows users to adjust for region- and site-specific production methods and input selec",
+        "e. This allows users to adjust for region- and site-specific production methods and input selections. This publication and the accompanying Excel spreadsheet contain short-term planning budgets for corn, cotton, soybean and wheat enterprises. These budgets should be used for short-run or annual plans developed for 2026, as significant changes may occur from year to year in production methods and input and output prices. The fertilizer recommendations in the cro",
+        "s allows users to adjust for region- and site-specific production methods and input selections. This publication and the accompanying Excel spreadsheet contain short-term planning budgets for corn, cotton, soybean and wheat enterprises. These budgets should be used for short-run or annual plans developed for 2026, as significant changes may occur from year to year in production methods and input and output prices. The fertilizer recommendations in the crop budgets ar",
+        "s are included in the budgets. Adjust payment estimates as appropriate for your enterprise Field Crop Budgets Field Crop Budgets for 2026 – Excel Field Crop Budgets for 2026 Profitable Marketing Decision Aid – Excel This marketing tool is to be used in conjunction with the Field Crop Budgets and is to help producers determine profitable yield and price combinations for primary row crops. Individual Budgets Corn No-Till, Non-Irrigated Conventional Tillage, Non-I",
+        " for your enterprise Field Crop Budgets Field Crop Budgets for 2026 – Excel Field Crop Budgets for 2026 Profitable Marketing Decision Aid – Excel This marketing tool is to be used in conjunction with the Field Crop Budgets and is to help producers determine profitable yield and price combinations for primary row crops. Individual Budgets Corn No-Till, Non-Irrigated Conventional Tillage, Non-Irrigated No-Till, Irrigated Soybeans No-Till, Non-Irrigated No-Till, I",
+        "ts, prices, production practices, and management that are employed on their specific operation. Cow/Calf Budgets Cow/Calf Budget for 2026 – Excel Cow/Calf Budget for 2026 Heifer Development Budget Heifer Development for 2025 – Excel Heifer Development for 2025 Stocker/Backgrounding Budgets Stocker/Backgrounding Budget for 2026 – Excel Stocker/Backgrounding Budget for 2026 Meat Goat Budget – 2010 Budget Considerations for Various Herd Sizes of Meat Goat Enterpri",
+        "eration. Cow/Calf Budgets Cow/Calf Budget for 2026 – Excel Cow/Calf Budget for 2026 Heifer Development Budget Heifer Development for 2025 – Excel Heifer Development for 2025 Stocker/Backgrounding Budgets Stocker/Backgrounding Budget for 2026 – Excel Stocker/Backgrounding Budget for 2026 Meat Goat Budget – 2010 Budget Considerations for Various Herd Sizes of Meat Goat Enterprises in Tennessee – PB1793 Budget Spreadsheets – Excel For additional information, conta",
+        "udget Heifer Development for 2025 – Excel Heifer Development for 2025 Stocker/Backgrounding Budgets Stocker/Backgrounding Budget for 2026 – Excel Stocker/Backgrounding Budget for 2026 Meat Goat Budget – 2010 Budget Considerations for Various Herd Sizes of Meat Goat Enterprises in Tennessee – PB1793 Budget Spreadsheets – Excel For additional information, contact Andrew Griffith or Becky Bowling . Forage Budgets Forage Budget Calculator (Excel) Tennessee Forage B",
+        "6 Meat Goat Budget – 2010 Budget Considerations for Various Herd Sizes of Meat Goat Enterprises in Tennessee – PB1793 Budget Spreadsheets – Excel For additional information, contact Andrew Griffith or Becky Bowling . Forage Budgets Forage Budget Calculator (Excel) Tennessee Forage Budget Calculator 2025 Tennessee Hay Budgets 2025 Tennessee Pasture Budgets 2025 Tennessee Baleage Budgets Individual budgets (PDF) can be download from the table below. Hay – Round B",
+        "Budget Spreadsheets – Excel For additional information, contact Andrew Griffith or Becky Bowling . Forage Budgets Forage Budget Calculator (Excel) Tennessee Forage Budget Calculator 2025 Tennessee Hay Budgets 2025 Tennessee Pasture Budgets 2025 Tennessee Baleage Budgets Individual budgets (PDF) can be download from the table below. Hay – Round Bales Hay – Square Bales Pasture Baleage Alfalfa Alfalfa Alfalfa Alfalfa Bermudagrass Bermudagrass Bermudagrass Bermuda",
+        " Dark Tobacco Production Guide Burley Tobacco 2025 Tennessee-Kentucky Burley Tobacco Budget 2025 Tennessee-Kentucky Burley Tobacco Budget – Excel Dark Air Cured Tobacco 2025 Dark Air Cured Tobacco Budget 2025 Dark Air Cured Tobacco Budget – Excel Dark Fired Tobacco 2025 Dark Fired Tobacco Budget 2025 Dark Fired Tobacco Budget – Excel Fruit and Vegetable Budgets Sample Budget for Small-Scale Tomato Operations – 2022 The objective of this sample budget is to guid",
+        "essee-Kentucky Burley Tobacco Budget – Excel Dark Air Cured Tobacco 2025 Dark Air Cured Tobacco Budget 2025 Dark Air Cured Tobacco Budget – Excel Dark Fired Tobacco 2025 Dark Fired Tobacco Budget 2025 Dark Fired Tobacco Budget – Excel Fruit and Vegetable Budgets Sample Budget for Small-Scale Tomato Operations – 2022 The objective of this sample budget is to guide small-scale tomato producers on things to consider when estimating their net returns. Given that th",
+        "obacco Budget 2025 Dark Air Cured Tobacco Budget – Excel Dark Fired Tobacco 2025 Dark Fired Tobacco Budget 2025 Dark Fired Tobacco Budget – Excel Fruit and Vegetable Budgets Sample Budget for Small-Scale Tomato Operations – 2022 The objective of this sample budget is to guide small-scale tomato producers on things to consider when estimating their net returns. Given that the budget presented here is just an example, actual numbers should not be used to estimate",
+        "estimated costs and revenue may vary depending on soil conditions, tomato variety, production practices used, and various other factors. An Excel spreadsheet version of the sample tomato enterprise budget (Table 1) is available. Growers can modify values and details in this Excel Workbook highlighted in grey and thus use it to evaluate their own production costs and returns. Sample Budget for Small-Scale Tomato Operations Sample Budget for Small-Scale Tomato Op",
+        "ted costs and revenue may vary depending on soil conditions, tomato variety, production practices used, and various other factors. An Excel spreadsheet version of the sample tomato enterprise budget (Table 1) is available. Growers can modify values and details in this Excel Workbook highlighted in grey and thus use it to evaluate their own production costs and returns. Sample Budget for Small-Scale Tomato Operations Sample Budget for Small-Scale Tomato Operations – E",
+        ". An Excel spreadsheet version of the sample tomato enterprise budget (Table 1) is available. Growers can modify values and details in this Excel Workbook highlighted in grey and thus use it to evaluate their own production costs and returns. Sample Budget for Small-Scale Tomato Operations Sample Budget for Small-Scale Tomato Operations – Excel Sample Budget for Large-Scale Bell Pepper Operations and the Impact of Phytophthora Blight on Farm Revenue and Costs –",
+        "e their own production costs and returns. Sample Budget for Small-Scale Tomato Operations Sample Budget for Small-Scale Tomato Operations – Excel Sample Budget for Large-Scale Bell Pepper Operations and the Impact of Phytophthora Blight on Farm Revenue and Costs – 2022 This sample budget aims to guide bell pepper producers and those interested in producing bell peppers on the factors to consider when estimating their net revenue from growing and marketing bell ",
+        "this disease. Sample Budget for Large-Scale Bell Pepper Operations and the Impact of Phytophthora Blight on Farm Revenue and Costs, 2022 An Excel spreadsheet version of the sample budget for large-scale bell peppers is available. Sample Budget for Blueberry Production Under Various Integrated Pest Management and Marketing Strategies – 2020 The objective of this sample budget is to guide blueberry producers and those interested in producing blueberries on the fa",
+        "isease. Sample Budget for Large-Scale Bell Pepper Operations and the Impact of Phytophthora Blight on Farm Revenue and Costs, 2022 An Excel spreadsheet version of the sample budget for large-scale bell peppers is available. Sample Budget for Blueberry Production Under Various Integrated Pest Management and Marketing Strategies – 2020 The objective of this sample budget is to guide blueberry producers and those interested in producing blueberries on the factors to con",
+        "d three marketing strategies (i.e., 100% Ready retail, 50% U-Pick and 50% Ready Picked retail, 75% U-Pick and 25% Ready Picked retail). The Excel-based blueberry sample budget Excel tool allows users to select different scenarios associated with plant density, IPM and marketing strategies. Sample Budget for Blueberry Production Under Various Integrated Pest Management and Marketing Strategies – 2020 Blueberry sample budget Excel tool For additional information,",
+        "100% Ready retail, 50% U-Pick and 50% Ready Picked retail, 75% U-Pick and 25% Ready Picked retail). The Excel-based blueberry sample budget Excel tool allows users to select different scenarios associated with plant density, IPM and marketing strategies. Sample Budget for Blueberry Production Under Various Integrated Pest Management and Marketing Strategies – 2020 Blueberry sample budget Excel tool For additional information, contact Margarita Velandia or Becky",
+        "es. Sample Budget for Blueberry Production Under Various Integrated Pest Management and Marketing Strategies – 2020 Blueberry sample budget Excel tool For additional information, contact Margarita Velandia or Becky Bowling . Sample Budget for Blackberry Production Under Various Integrated Pest Management and Marketing Strategies – 2022 The objective of this sample budget is to guide blackberry producers and those interested in producing blackberries on the fact",
+        "ies (i.e., 100% Ready retail, 50% U-Pick and 50% Ready Picked retail, 75% U-Pick and 25% Ready Picked retail). The blackberry sample budget Excel tool allows users to select different scenarios associated with IPM and marketing strategies, as well as change assumptions related to labor and fuel costs, yield, and blackberry prices. Sample Budget for Blackberry Production Under Various Integrated Pest Management and Marketing Strategies – 2022 Blackberry sample b",
+        ". Sample Budget for Blackberry Production Under Various Integrated Pest Management and Marketing Strategies – 2022 Blackberry sample budget Excel tool For additional information, contact Margarita Velandia or Becky Bowling . Cut Flowers Budgets The summer annual cut flower enterprise budgets provide estimates of income, variable expenses and fixed expenses for common flowers grown in Tennessee, including single-stem sunflowers, zinnias, cosmos, celosia and gomp",
+        "e practices and prices of an individual farm. Learn more about the Tennessee Cut Flower Summer Annual Enterprise Budgets . When opening the Excel spreadsheet, the user will find the Introduction page, which includes instructions and information regarding security settings that may need to be enabled for the calculator to function properly. To begin, select the Get Started button on the bottom of the introduction page to access the budget. On the Flower Producti",
+        "tices and prices of an individual farm. Learn more about the Tennessee Cut Flower Summer Annual Enterprise Budgets . When opening the Excel spreadsheet, the user will find the Introduction page, which includes instructions and information regarding security settings that may need to be enabled for the calculator to function properly. To begin, select the Get Started button on the bottom of the introduction page to access the budget. On the Flower Production Budget pa",
+        "y considerably and are current as of the version date on the Introduction page and are subject to change. Celosia Budget PDF Celosia Budget Excel Cosmos Budget PDF Cosmos Budget Excel Gomphrena Budget PDF Gomphrena Budget Excel Sunflower Budget PDF Sunflower Budget Excel Zinnia Budget PDF Zinnia Budget Excel Farm management specialists are available for individual consultation and assistance utilizing enterprise budgets and decision-aid tools including the cut ",
+        "he version date on the Introduction page and are subject to change. Celosia Budget PDF Celosia Budget Excel Cosmos Budget PDF Cosmos Budget Excel Gomphrena Budget PDF Gomphrena Budget Excel Sunflower Budget PDF Sunflower Budget Excel Zinnia Budget PDF Zinnia Budget Excel Farm management specialists are available for individual consultation and assistance utilizing enterprise budgets and decision-aid tools including the cut flower enterprise budgets. Archived Bu",
+        " are subject to change. Celosia Budget PDF Celosia Budget Excel Cosmos Budget PDF Cosmos Budget Excel Gomphrena Budget PDF Gomphrena Budget Excel Sunflower Budget PDF Sunflower Budget Excel Zinnia Budget PDF Zinnia Budget Excel Farm management specialists are available for individual consultation and assistance utilizing enterprise budgets and decision-aid tools including the cut flower enterprise budgets. Archived Budgets 2025 Budgets Crop Budgets Cow-Calf Bud",
+        "elosia Budget Excel Cosmos Budget PDF Cosmos Budget Excel Gomphrena Budget PDF Gomphrena Budget Excel Sunflower Budget PDF Sunflower Budget Excel Zinnia Budget PDF Zinnia Budget Excel Farm management specialists are available for individual consultation and assistance utilizing enterprise budgets and decision-aid tools including the cut flower enterprise budgets. Archived Budgets 2025 Budgets Crop Budgets Cow-Calf Budgets Stocker/Backgrounding Budgets 2024 Budg",
+        "Cosmos Budget Excel Gomphrena Budget PDF Gomphrena Budget Excel Sunflower Budget PDF Sunflower Budget Excel Zinnia Budget PDF Zinnia Budget Excel Farm management specialists are available for individual consultation and assistance utilizing enterprise budgets and decision-aid tools including the cut flower enterprise budgets. Archived Budgets 2025 Budgets Crop Budgets Cow-Calf Budgets Stocker/Backgrounding Budgets 2024 Budgets Crop Budgets Cow-Calf Budgets Stoc"
+      ],
+      "challenge_suspected": false
+    },
+    {
+      "id": "wisconsin_dairy_tools",
+      "origin": "University of Wisconsin Madison",
+      "url": "https://cdp.wisc.edu/decision-tools/",
+      "utc": "2026-10-18T05:55:42.705877+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "error": "ConnectionError: HTTPSConnectionPool(host='cdp.wisc.edu', port=443): Max retries exceeded with url: /decision-tools/ (Caused by NameResolutionError(\"HTTPSConnection(host='cdp.wisc.edu', port=443): Failed to resolve 'cdp.wisc.edu' ([Errno -5] No address associated with hostname)\"))"
+    },
+    {
+      "id": "wisconsin_finance_tools",
+      "origin": "University of Wisconsin Madison",
+      "url": "https://farms.extension.wisc.edu/financial-management-tools/",
+      "utc": "2026-10-18T05:55:42.705587+00:00",
+      "workbook_acquired": false,
+      "accepted": false,
+      "accepted_template_families": 0,
+      "status": 404,
+      "resolved_url": "https://farms.extension.wisc.edu/financial-management-tools/",
+      "content_type": "text/html; charset=UTF-8",
+      "body_read": true,
+      "bytes": 125239,
+      "sha256": "dd0b9e901c6e0a38e24253df5c4c061eac8bfed57b37e5a1ea9033e7c0030588",
+      "path": "source_discovery/expansion_20261018_v8/pages/wisconsin_finance_tools.source",
+      "title": "Page not found – Farm Management",
+      "text_characters": 2954,
+      "relevant_links": [
+        {
+          "text": "Skip to content",
+          "url": "https://farms.extension.wisc.edu/financial-management-tools/#content",
+          "workbook_link": false
+        },
+        {
+          "text": "Search",
+          "url": "https://farms.extension.wisc.edu/financial-management-tools/",
+          "workbook_link": false
+        },
+        {
+          "text": "© 2026 The Board of Regents of the University of Wisconsin System",
+          "url": "https://legal.wisc.edu/copyright-law/",
+          "workbook_link": false
+        }
+      ],
+      "snippets": [],
+      "challenge_suspected": false
+    }
+  ]
+}

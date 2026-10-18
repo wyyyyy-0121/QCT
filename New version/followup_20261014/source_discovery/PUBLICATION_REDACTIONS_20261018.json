@@ -1,0 +1,20 @@
+{
+  "reason": "GitHub push protection rejected unpushed metadata checkpoint 9496c26 for Mapbox token strings embedded in two NIST 404 HTML pages",
+  "action": "Retain originals in locally excluded private capture; publish redacted pages and recompute published hashes; replace rejected local commit without bypassing protection",
+  "utc": "2026-10-18T06:04:40.903227+00:00",
+  "files": [
+    {
+      "path": "source_discovery/expansion_20261018_v3/pages/nist_economic_tools.source",
+      "redaction_count": 1,
+      "raw_sha256": "6987fbbe24ae74d577f6711d6198b0d841502a10e5881de6a2bb3b8d4bc7e3d0",
+      "published_sha256": "c252aede1bf1482565f7494c26f21c7b8ffa0b58c6acdc2c3f49a31920e6018e"
+    },
+    {
+      "path": "source_discovery/expansion_20261018_v3/pages/nist_life_cycle.source",
+      "redaction_count": 1,
+      "raw_sha256": "170a8e554ac69e2551e1e7baa890ec51a884640ec0a0999653d4120baae98e51",
+      "published_sha256": "258161d28e5ca0163f1fc8723505e924c3765be8e927a7a5601d442dcd3c0a4d"
+    }
+  ],
+  "original_workbooks_acquired": 0
+}

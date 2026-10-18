@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/templates/Calculators_Category.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-192x192.png" sizes="192x192">
+<link rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-512x512.png" sizes="512x512">
+<meta name="theme-color" content="#3969ad">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- InstanceBeginEditable name="Head Region" -->
+
+<title>Free Financial Calculators for Excel</title>
+<meta name="Description" content="Free collection of financial calculators in Excel, including retirement, 401(k), budget, savings, loan and mortgage calculators.">
+
+<meta property="og:title" content="Free Financial Calculators for Excel"> 
+<meta property="og:type" content="product">
+<meta property="fb:admins" content="1351545342">
+<meta property="fb:app_id" content="1640028932926293">
+<meta property="og:url" content="https://www.vertex42.com/Calculators/financial-calculators.html"> 
+<meta property="og:image" content="https://cdn.vertex42.com/templates/images/financial-calculators-by-vertex42.png">
+<meta property="og:site_name" content="Vertex42.com">
+<meta property="og:description" content="Free collection of financial calculators in Excel, including retirement, 401(k), budget, savings, loan and mortgage calculators.">
+
+<style>/* Vertex42 CSS Document (c) 2008-2023 Vertex42 LLC. All rights reserved. */
+body{margin:0;font-family:arial, sans-serif;background:#f5f5f5;text-align:center;font-size:16px;}
+form{margin:0;}
+h1, h2, h3, h4, h5, h6{font-family:arial, sans-serif;margin:0;padding:0;}
+a{color:#369;}a:hover{color:#060;}a img{border:0;}
+.center{text-align:center;}.margin20{padding-left:20px;}.clear{clear:both;}.hidden{display:none;}
+ol li, ul li{margin-bottom:.5em;line-height:1.4em;}
+p{line-height:1.4em;}
+ul.bulletlist, .refblock ul{list-style-image:url(//cdn.vertex42.com/Images/bullet_arrow.png);margin:0;padding:0;margin-left:1.429em;}
+ul.bulletlist li{margin-bottom:.6em;line-height:1.5em;}
+.downloadlink a{text-decoration:none;}.downloadlink a:hover{text-decoration:underline;}
+.imgshadow{-moz-box-shadow:0 0 8px #ccc;-webkit-box-shadow:0 0 8px #ccc;box-shadow:0 0 8px #ccc;}
+.caption{font-size:.9em;}.mono{font-family:'Courier New', courier, monospace;}
+code, pre{line-height:20px;font-family:Courier,Consolas,Menlo,Monaco,Verdana,sans-serif;clear:both;tab-size:4;margin:1em 0;padding:.5em;display:block;word-wrap:break-word;white-space:-moz-pre-wrap;white-space:pre-wrap;overflow:auto;border:1px solid #cddbea;border-radius:3px;background-color:#f5f5f5;}
+.XLformula{font-size:1em;color:#333;background-color:#eee;border:solid 3px #ccc;border-radius:1px;margin-left:0;padding:.5em 1em;}.XLformula .function{color:#222;font-weight:bold;}.XLformula .arg{color:#3969ad;font-style:italic;font-weight:bold;}.XLformula .green{color:#3c7d3e;font-weight:bold;}
+.key {font-family:Raleway,sans-serif;display:inline-block;border:1px solid #ccc;border-radius:4px;padding:.05em 0.5em;margin:0 0.1em;box-shadow:0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;background:#f7f7f7;}
+.formula-in-text {font-family:Courier New,monospace;border:1px solid #999;padding:.1em 0.5em;background:#f7f7f7;}
+table{font-size:1em;border:0;}table.fullwidth{width:100%;}td{vertical-align:top;}
+h1{font-size:2em;color:#333;padding-bottom:2px;border-bottom:1px solid #4A696B;margin-bottom:5px;}
+h2{font-size:1.714em;line-height:1.5em;color:#2b5482;padding:0;margin-top:1.5em;margin-bottom:5px;font-weight:normal;border-bottom:5px solid #eee;}
+h3{font-size:1.2em;color:#2b5482;font-weight:normal;padding-bottom:2px;margin-top:2em;margin-bottom:0;}
+.highlight{color:#2a689b;background-color:#e9eff6;padding:.5em 1em;}
+.align-right, .imgright{float:right;margin:0 0 1em 1.5em;text-align:center;}
+.align-left, .imgleft{float:left;margin:0 1.5em 1em 0;text-align:center;}
+.adlabel{font-size:.714em;color:#656565;text-align:center;}.atf_right{float:right;width:360px;}.btf{margin:2em 0;}
+
+.wrapper{text-align:left;position:relative;width:1100px;margin:0 auto;}
+.container{width:1100px;position:relative;}
+ #content{float:left;width:780px;border:1px solid #ccc;background:#fff;}
+  #content-main{margin:0 25px;width:730px;padding:20px 0;font-family:Arial, Helvetica, sans-serif;}
+ #content-right{float:right;width:300px;vertical-align:top;}
+#banner{background:#141e29;border-bottom:solid 4px #3969ad;color:#fff;position:relative;}
+.menu_control{display:none;}
+a.ytvid{text-decoration:none;}
+.ytplay{background:#d00;color:#fff;border:1px solid #d00;border-radius:4px;padding:1px 6px 1px 8px;}
+a:hover .ytplay{border-color:#f00;}
+#breadcrumb{display:block;font-family:Tahoma, Arial, Helvetica, sans-serif;color:#666;font-size:.875em;margin:.25em 0;padding:4px;padding-left:7px;line-height:2em;}#breadcrumb a{color:#666;text-decoration:none;margin:0 5px;}#breadcrumb a:hover{color:#09C;}
+#header{border-bottom:1px solid #ddd;padding-bottom:10px;}#header h1{border:0;margin-bottom:0;color:#305992;}#subline{color:#666;}#subline .updated{font-size:.9em;font-style:italic;}
+#disclaimer{font-size:.786em;color:#555;padding:1em;}
+#share{background-color:#EFF3F7;padding:10px;margin-top:2em;}
+#share h3{color:#305e92;margin-top:0;margin-bottom:.5em;}
+#content-right h4, #content-left h4{font-family:Georgia, "Times New Roman", Times, serif; font-style:italic;font-size:.786em;font-weight:bolder;line-height:1.286em;background:none;margin-bottom:.5em;}
+#content-right h2, #content-right h3{margin:0;font-family:Arial, Helvetica, sans-serif;font-style:normal;font-weight:bold;background:#CCC;color:#333;font-size:.857em;text-transform:uppercase;line-height:2.25em;padding:0 0.714em;}
+#content-right h2 a, #content-right h3 a{font-family:Arial, Helvetica, sans-serif;color:#333;text-decoration:none;padding:0;margin:0;line-height:2.25em;display:inline;}
+#content-right h2 a:hover, #content-right h3 a:hover{color:#069;}
+#content-right h2{background:#3969AD;color:#fff;}
+#content-right h2 a{color:#fff;}
+#content-right h2 a:hover{color:#eee;}
+.side-nav ul{margin:0;padding:0;list-style:none;}.side-nav li{display:block;margin:0;padding:0;background:#ddd;border-bottom:.143em solid #ccc;}.side-nav a{display:block;height:2.143em;line-height:2.143em;overflow:hidden;color:#555;font-weight:bold;text-transform:uppercase;text-decoration:none;}.side-nav a .text{font-size:.857em;}.side-nav li a{padding-left:.5em;}.side-nav a:hover, .side-nav a.active{color:#06A;text-decoration:none;background:#eee;}
+.navlist{font-family:Arial, Helvetica, sans-serif;margin:0;padding:0;margin-top:1.429em;border:1px solid #ccc;background:#f9f9f9;color:#555;}.navlist a{text-decoration:none;color:#305992;display:block;padding:.214em 0.5em;padding-right:.214em;margin-bottom:.35em;}.navlist a:hover{color:#09C;}.navlist ul{list-style:none;margin:0;padding:0;}.navlist ul li{margin:0;padding:0;}.navlist ul li a{display:block;margin:0;width:100%;padding:.214em 0 0.286em 0.286em;text-decoration:none;}.navlist ul li a:hover{background:#eee;text-decoration:none;}
+.subnavlist{margin-left:.357em;padding-top:.143em;padding-bottom:.286em;color:#555;}
+#footer a{color:#c4e4ff;text-decoration:none;} #footer a:hover{color:#fff;}
+.footer-nav {width:30%;float:right;}
+.blogfeatureblock{width:75%;background-color:#eee;color:#555;font-size:.857em;margin-top:1em;margin-bottom:1em;}.blogfeature{background-image:url(//cdn.vertex42.com/Images/blog-icon-g.png);background-repeat:no-repeat;padding:5px 5px 5px 130px;min-height:53px;}.blogfeature a{color:#036;font-size:1em;text-decoration:underline;display:block;margin-top:5px;margin-bottom:5px;font-weight:bold;}.blogfeature a:hover{color:#555;}
+.icon20{display:block;float:left;margin:.357em 0.25em 0 0;background:url(//cdn.vertex42.com/Images/icon20_sprite_2.png) no-repeat;height:1.429em;width:1.429em;background-size:100%;}
+.icon28{display:block;float:left;margin:.38em .75em 0 0;background:url(//cdn.vertex42.com/Images/icon28_sprite_3.png) no-repeat;height:1.5em;width:1.5em;background-size:100%;}
+.icon16{background:url(//cdn.vertex42.com/Images/icon16_sprite.png) no-repeat;margin-right:.357em;margin-bottom:.214em;display:inline-block;width:16px;height:16px;vertical-align:middle;}.icon16.plus{background-position:-16px 0;}.icon16.v42{background-position:-32px 0;}.icon16.excel{background-position:-32px -32px;}.icon16.xlsx{background-position:-32px -48px;}.icon16.word{background-position:-32px -64px;}.icon16.docx{background-position:-32px -80px;}.icon16.oo{background-position:-32px -96px;}.icon16.pdf{background-position:-32px -128px;}.icon16.gdocs{background-position:-32px -160px;}.icon16.iPad{background-position:-16px -96px;}
+.icon16.rl{background:url(//cdn.vertex42.com/Images/icon16_RocketLawyer.gif) no-repeat;}
+#user-notice.info{background:#217095;border-color:#1e5b78;}
+#user-notice.success{background:#6a842d;border-color:#4c6120;}
+#user-notice.error{background:#914426;border-color:#7e3a20;}
+.pv{margin-top:2em;margin-bottom:1em;}
+.pv .title{font-size:.857em;margin:0 0 0.5em 0;padding-top:1em;padding-bottom:.714em;border-top:1px solid #eee;}
+.pv .title h2{font-size:2em;line-height:1em;border:0;margin:0 0 0.214em 0;}
+.pv .tags{display:block;float:right;margin:.5em 1em 0 2em;text-align:right;line-height:1.714em;max-width:50%;}
+.pv .tags a{display:inline-block;padding:0 0.357em;line-height:1.5em;background:#eee;text-decoration:none;margin-right:.357em;}
+.pv .tags a:hover{background:#ccc;}
+.db2 .preview{float:left;font-size:.857em;width:66%;margin-right:3%;text-align:center;position:relative;}
+.db2 .preview img{max-width:100%;}
+.db2 .preview img.border{border:1px solid #ccc;}
+.db2 .dl{margin-left:69%;color:#333;}
+.btnDL{display:block;max-width:300px;background:#567b00;color:#fff;padding:.517em 0;font-size:1.286em;text-decoration:none;text-transform:uppercase;text-align:center;border-radius:4px;text-shadow:0 1px 2px rgba(0,0,0,0.2);}.btnDL:hover{color:#fff;background:#999;}.btnDL:active{background:#888;}
+.btnDL.blue{background:#407aae;}.btnDL.red{background:#b71717;}.btnDL.blue:hover,.btnDL.red:hover{color:#fff;background:#999;}
+.type{color:#567b00;margin-top:.5em;margin-bottom:1em;}.type.blue{color:#356691;}
+.pv .scr{font-weight:bold;color:#333;margin-bottom:1em;font-size:1em;}
+.pv .scr a, .pv .scr span.current{display:inline-block;background:#eee;width:1.714em;height:1.714em;line-height:1.714em;text-decoration:none;text-align:center;margin-right:.5em;}
+.pv .scr span.current{color:#656565;background:#eee;}
+.pv .scr a:hover{background:#ccc;}
+.pv .dl h4, .pv .dl h3{border-bottom:1px solid #ddd;color:#555;padding:.214em 0;text-transform:uppercase;margin-bottom:.5em;margin-top:1.5em;font-weight:normal;margin-right:20px;}
+.pv .dl .lbl{font-size:.857em;margin-top:1.5em;color:#555;font-weight:bold;}
+.pv .dl h4 + div.lbl{margin-top:0;}
+a.video-link{display:inline-block;color:#3969ad;height:20px;line-height:1.429em;text-decoration:none;background:url(//cdn.vertex42.com/Images/play_20x30.png) no-repeat;padding-left:35px;}
+a.video-link:hover{filter:alpha(opacity=60);opacity:.6;}
+.versions a{display:block;margin-bottom:.9em;line-height:1.143em;}
+.versions a:hover{filter:alpha(opacity=60);opacity:.6;}
+.sq{display:inline-block;height:.714em;width:.714em;margin-right:.357em;}
+.sq.xlsx, .sq.xls{background:#217446;}
+.sq.oo, .sq.doc{background:#4a8eca;}
+.sq.gd, .sq.pdf{background:#d64937;}
+.pv.fullwidth .db2 .preview {width:100%;}
+.pv.fullwidth .dl {clear:both;margin-left:0;padding-top:1em;}
+.sbgallery{display:block;overflow-x:hidden;text-align:center;background:#eee;padding:10px 0;}
+.sbgallery .related-item{display:block;text-align:center;margin:10px 0;font-size:.857em;color:#777;padding:0 5px;}
+.sbgallery .related-item a{text-decoration:none;font-weight:bold;}
+.sbgallery .related-item img{margin:5px 0 5px 0;-moz-box-shadow:0 0 8px #ccc;-webkit-box-shadow:0 0 8px #ccc;box-shadow:0 0 8px #ccc;}
+.more {display:block;font-size:.857em;line-height:2.25em;text-align:left;text-transform:uppercase;padding:0 0.714em;background:#e5e5e5;margin-bottom:-10px;text-decoration:none;}
+.more:hover {background:#ccc;}
+.calculators #testimonials{padding:3px;font-size:.857em;color:#555;}
+.calendars td h3{margin-top:0;}
+.wordtemplates h2{margin-top:1.5em;}
+.wordtemplates h3{margin-bottom:1em;}
+ul.worddocs{list-style-image:url(//cdn.vertex42.com/Images/icon16_Word.gif); margin:0; padding:0; margin-left:30px;}
+ul.worddocs li{margin-bottom:10px;}
+.item{float:left;width:200px;margin:0 18px 2em 18px;z-index:1;}
+.item .itemtitle{text-align:center;margin:0 0 10px;font-size:1em;color:#575757;min-height:220px;}
+.item .itemtitle a{text-decoration:none;font-weight:bold;}
+.item .itemtitle a:hover{text-decoration:underline;}
+.item img{margin:10px 0 5px 0;-moz-box-shadow:0 0 8px #ccc;-webkit-box-shadow:0 0 8px #ccc;box-shadow:0 0 8px #ccc;}
+.summary{text-align:left;font-size:.95em;font-weight:normal;background:#fff;color:#555;min-width:180px;margin-bottom:.5em;}
+.note{display:none;font-size:.857em;line-height:1.143em;position:absolute;top:50px;left:180px;padding:10px;background:#fff;color:#333;border:1px solid #ccc;box-shadow:5px 5px 5px rgba(0,0,0,0.2);-moz-box-shadow:5px 5px 5px rgba(0,0,0,0.3);-webkit-box-shadow:5px 5px 5px rgba(0,0,0,0.3);z-index:9999;min-width:200px;}
+.note ul{margin:0;padding:0;margin-left:15px;}
+.note li{margin:0;padding:0;}
+.has_note:hover{position:relative;}
+.has_note:hover .note{display:block;}
+#related .item .note{top:200px;left:20px;}
+#related .item{width:150px;margin:0 15px 1em 15px;}
+#related .item img{max-width:150px;}
+a:hover .imgshadow, .item .itemtitle a:hover img, .db2 .preview a:hover img, .sbgallery .related-item a:hover img{-moz-box-shadow:0 0 12px #999;-webkit-box-shadow:0 0 12px #999;box-shadow:0 0 12px #999;}
+.shr{display:block;position:relative;width:100%;margin:0 0 1em 0;z-index:100;}
+.shr .title{color:#eee;font-weight:bold;background:#f8684c;font-size:1.15em;display:block;padding:.5em;cursor:pointer;}
+a.shbtn{display:inline-block;color:#fff;width:40%;margin:.5em 2% 0 0;padding:.35em 3%;cursor:pointer;text-decoration:none;}
+a.shbtn:hover{margin-left:0;padding:.2em 3%;}
+.shicon{display:block;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat;height:2.286em;width:2.286em;background-size:100%;}
+a.shbtn .label{font-size:.857em;}
+a.shbtn .count{float:right;font-size:1.5em;font-weight:bold;color:#eee;line-height:1.876em}
+.shbtn.fb{background:#1777f2;}.shbtn.fb .shicon{background-position:0 0%;}
+.shbtn.tw{background:#1da1f2;}.shbtn.tw .shicon{background-position:0 20%;}
+.shbtn.pn{background:#c82828;}.shbtn.pn .shicon{background-position:0 40%;}
+.shbtn.in{background:#0a66c2;}.shbtn.in .shicon{background-position:0 60%;}
+.shbtn.ig{background:#e31360;}.shbtn.ig .shicon{background-position:0 80%;}
+.shbtn.yt{background:#ff0000;}.shbtn.yt .shicon{background-position:0 100%;}
+.img_grid_1of2{float:left;width:50%;text-align:center;margin-bottom:1em;min-width:250px;}
+.img_grid_1of3{float:left;width:33%;text-align:center;margin-bottom:1em;min-width:200px;}
+
+nav.topnav{background:#141e29;width:100%;height:54px;margin:auto;position:relative;}
+nav .logo{float:left;padding:0 5px;margin-top:4px;}
+.topnav ul{list-style:none;margin:0;padding:0;}
+.topnav ul li{display:inline-block;position:relative;margin:0;}
+.topnav ul li a{color:#eee;background:#1c2334;text-decoration:none;margin:0;padding:0 10px;font-size:14px;line-height:54px;display:block;}
+.topnav ul li a:hover{background-color:#3969ad;color:#fff;transition:color .3s;transition:background-color .3s;}
+.topnav ul li ul{display:none;position:absolute;top:54px;left:0;box-shadow:0 5px 10px rgba(0,0,0,0.2);-moz-box-shadow:0 5px 10px rgba(0,0,0,0.3);-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.3); filter:alpha(opacity=95); opacity:.95;z-index:9999;}
+.topnav ul li:hover ul{display:block;}
+.topnav ul ul li{display:block;margin:0;line-height:2em;}
+.topnav ul ul a{display:block;background:#eee;color:#3969ad;font-size:1em;width:180px;padding:0 10px;font-weight:bold;}
+.topnav ul ul a:hover{background:#3969ad;color:white;}
+nav .btn{position:absolute;display:block;top:7px;width:42px;height:38px;color:#eee;font-size:28px;font-weight:bold;text-align:center;cursor:pointer;z-index:99;background-color:#3969ad;border-radius:4px;}
+nav .btn:hover{background-color:#eee;color:#3969ad;transition:.3s;}
+nav .btn.menu-icon{left:5%;display:none;}
+nav .btn.search-icon{right:3%;fill:#fff;}label.btn.search-icon:hover{fill:#3969ad;}
+.topnav form{width:100%;height:38px;right:0;background-color:#fff;display:flex;overflow:hidden;padding:2px;border-radius:4px;}
+.search-box{position:absolute;float:left;background-color:#3969ad;right:3%;top:-80px;width:300px;height:45px;padding:10px;border-radius:4px;box-shadow:0 2px 4px 0 rgba(0,0,0,0.5);transition:all 0.17s ease;}
+.search-box::before{content:'';position:absolute;top:0;right:20px;width:0;height:0;border:10px solid transparent;border-bottom-color:#3969ad;margin:-20px 0 0;}
+.search{width:95%;background-color:white;color:#3969ad;padding:0 10px;font-size:14px;border:0;outline:none;}
+.search::placeholder{color:#3969ad;}
+.topnav .submit{font-size:14px;padding:0 10px;border:0;background-color:#eee;color:#3969ad;border-radius:4px;cursor:pointer;}
+#bc1, #bc2 {display:none;}
+#bc2:checked ~ .search-box{top:45px;z-index:999;}
+
+@media only screen and (max-width:951px){
+.wrapper{width:auto;}
+.container{width:auto;}
+.navigation{padding:5px 0;}
+.menu_control{font-size:1.1em;display:inline-block;color:white;background-color:#3969ad;margin:0 auto;padding:7px 13px;cursor:pointer;border-radius:3px;}
+.shr-title{display:none;}
+.shr.btns{position:fixed;top:auto;bottom:-26px;right:0;width:300px;font-size:1em;margin:0;}
+.shr.btns:hover{bottom:-2px;}
+#content{float:none;margin:0 auto;}
+#content-right{float:none;margin:1em auto;width:80%;}
+#colophon{margin-left:10px;width:auto;max-width:400px;}
+#colophon .tm-msg{font-size:.875em;}
+.ad_sidebar{display:none;}
+.navlist a{margin-top:.6em;margin-bottom:.6em;}
+}
+@media all and (max-width:798px){
+#content{width:100%;border:none;}
+#content-main{width:auto;overflow:hidden;}
+img, video{max-width:100%;height:auto;}
+}
+@media all and (max-width:641px){
+.blogfeatureblock{width:100%;}
+.db2 .preview{width:93%;}
+.db2 .dl{clear:both;width:95%;margin-left:0;padding-top:2em;}
+.download .left{padding-left:0;padding-right:0;}
+.download .left img{max-width:100px;max-height:130px;}
+.footer-nav {width:45%;}
+}
+@media all and (max-width:540px){
+#banner .wrapper {text-align:center;}
+#banner .wrapper img{width:175px;height:auto;margin-top:0;}
+.img_grid_1of2{width:90%;}
+.item{width:80%;padding:0 10%;margin:1em 0;}
+}
+@media all and (max-width:480px){
+#content-main{margin:0 10px;}
+#banner .wrapper{text-align:center;margin-bottom:0;padding-bottom:0;}
+#m-menu{display:none;}
+.shr.btns{width:200px;}
+.align-right{max-width:60%;}
+.img_grid_1of3{width:90%;}
+.ui-dialog {width:95%!important;}
+}
+@media all and (max-width:400px){
+body{font-size:14px;}
+}
+
+@media (max-width:1000px){
+    nav .logo{position:absolute;text-align:center;top:50%;left:50%;transform:translate(-50%, -50%);}
+    nav .btn.menu-icon{display:block;}
+    nav{width:100%;}
+    .topnav ul{position:fixed;width:300px;background-color:#eee;height:100%;text-align:center;transition:all 0.5s;top:54px;left:-800px;z-index:999;padding:10px;}
+    .topnav ul li{display:block;padding:5px 0;}
+    .topnav ul li a{font-size:1.1em;}
+    .topnav ul li:hover ul{display:none;}
+    #bc1:checked ~ ul{left:0;}
+}
+
+@media print{
+.container{width:auto;}
+#ad, #ads{display:none;}
+.ad, .btf, .atf, .atf_right{display:none;}
+#content{width:auto;float:none;border:none;margin:0 0.5in;}
+#content-main{width:auto;margin:0;height:auto;float:none;border:none;}
+#banner{border-bottom:1px solid #999;}nav .btn{display:none!important;}nav .logo{left:130px;}
+#content-left{display:none;}
+#content-right{display:none;}
+.shr{display:none;}
+}</style>	
+<style>
+a {color:#259;text-decoration:none;}
+a:hover {color:#060;text-decoration:underline;}
+
+.item {width:45%;margin:1em 2%;padding:0;}
+.item .itemtitle {background:#f9f9f9;margin:0;padding:0;}
+.itemtitle .title {display:block;background:#eee;font-size:1.1em;text-align:left;padding:8px 12px;}
+.item .itemtitle a:hover{text-decoration:none;}
+.item .itemtitle a:hover .title {background:#ddd;}
+.item .summary {background:#f3f3f3;color:#555;padding:8px 12px;}
+.item .details {display:block;text-align:left;font-size:.75em;font-weight:bold;color:#555;padding-bottom:3px;text-transform:uppercase;}
+.item img {margin:1em 0;}
+@media all and (max-width: 540px){
+.item{width:80%;padding:0 10%;margin:1em 0;}
+}
+
+.ext{display:inline-block;vertical-align:top;margin-top:1px;font-family:Arial,sans-serif;font-weight:bold;font-size:.8em;padding:2px 4px;border-radius:3px;text-transform:uppercase;margin-right:0.5em;border:1px solid #bbb;background:#ddd;color:#555;}
+.ext.doc{background:#2A5699;color:#fff;}.ext.pdf{background:#BF3C37;color:#fff;}
+</style>
+<style>
+.img-right{float:right;width:50%;margin:1em 0 1em 1em;}
+@media (max-width:550px){
+.img-right{float:none;width:100%;margin:1em 0;}
+}
+</style>
+	
+<style>
+.img-right{float:right;width:50%;margin:1em 0 1em 1em;}
+@media (max-width:550px){
+.img-right{float:none;width:100%;margin:1em 0;}
+}
+</style>	
+
+<style>
+.itemtitle .note {font-weight:normal;text-align:left;}
+.morebtn {text-align:center;}
+div.category-list {padding:1.5em 0 1em 1em;background:#f9f9f9;clear:both;position:relative;}
+.category-list .header {display:block;position:absolute;left:-5px;top:-5px;z-index:999;font-size:0.8em;background:#eee;color:#555;padding:3px 30px 3px 10px;}
+.category-list ul {margin:0;padding:0;list-style:none;}
+.category-list li {float:left;display:block;width:33%;text-align:left;}
+.category-list a {text-decoration:none;}
+.category-list a:hover {text-decoration:underline;}
+</style>
+<style>
+.img-right{float:right;width:50%;margin:1em 0 1em 1em;}
+@media (max-width:550px){
+.img-right{float:none;width:100%;margin:1em 0;}
+}
+</style>
+
+
+<!-- InstanceEndEditable -->
+<link rel="canonical" href="https://www.vertex42.com/Calculators/financial-calculators.html">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js?ver=3.5.0" async="async"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7DMYPMV58"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N7DMYPMV58', { 'anonymize_ip': true });
+  //setTimeout("gtag('event', 'read', { 'event_category' : '15_seconds' } )",15000);
+</script>
+<meta name="robots" content="max-image-preview:large"></head>
+
+<body class="calculators calculators_category">
+
+<!--    =====================     HEADER SECTION     =====================     -->
+
+<div id="banner" class="google-anno-skip">
+<div class="wrapper">
+<nav aria-label="Vertex42 Menu Bar" class="topnav">
+<input type="checkbox" id="bc1">
+<label for="bc1" class="btn menu-icon" title="Menu">&#8801;</label>
+<div class="logo">
+    <a href="/" title="Home: Vertex42 Excel Templates, Calculators, and Calendars" style="margin-right:20px;">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.13 38.6" width="220" height="44"><title>Vertex42 Logo</title><path d="m190.74,6.15c.57,0,1.13.15,1.67.44s.97.71,1.27,1.26.45,1.11.45,1.7-.15,1.15-.45,1.69-.72.96-1.26,1.26-1.1.45-1.69.45-1.15-.15-1.69-.45-.96-.72-1.26-1.26-.45-1.1-.45-1.69.15-1.16.46-1.7.73-.96,1.27-1.26,1.1-.44,1.67-.44Zm0,.56c-.48,0-.94.12-1.39.37s-.8.59-1.06,1.05-.38.93-.38,1.42.13.96.38,1.41.6.8,1.05,1.05.92.38,1.41.38.96-.13,1.41-.38.8-.6,1.05-1.05.37-.92.37-1.41-.13-.96-.38-1.42-.61-.8-1.06-1.05-.92-.37-1.39-.37Zm-1.49,4.71v-3.65h1.26c.43,0,.74.03.93.1s.34.19.46.35.17.35.17.54c0,.27-.1.5-.29.7s-.44.31-.76.33c.13.05.23.12.31.19.15.14.33.39.54.72l.45.72h-.72l-.32-.58c-.25-.45-.46-.74-.62-.85-.11-.08-.27-.13-.47-.13h-.35v1.55h-.59Zm.59-2.06h.72c.34,0,.58-.05.7-.15s.19-.24.19-.4c0-.11-.03-.2-.09-.29s-.14-.15-.25-.19-.3-.06-.59-.06h-.67v1.1Z" fill="#646464"/><g fill="#888"><use xlink:href="#B"/><use xlink:href="#C"/><use xlink:href="#D"/><path d="M62.28 36.72v-1.51c0-1.21.74-1.88 1.91-1.88 1.02 0 1.58.52 1.81 1.26.01.06 0 .09-.06.11l-.65.19c-.06.01-.09 0-.11-.06-.14-.41-.39-.68-.97-.68-.7 0-1.02.41-1.02 1.07v1.49c0 .67.32 1.07 1.03 1.07s1.03-.41 1.03-1.07v-.22h-.88c-.06 0-.09-.04-.09-.09v-.6c0-.06.04-.09.09-.09h1.65c.06 0 .09.04.09.09v.91c0 1.11-.64 1.9-1.91 1.9s-1.91-.75-1.91-1.88zm5.38.08v-3.31c0-.06.04-.09.09-.09h.71c.06 0 .09.04.09.09v3.29c0 .62.3 1 .97 1s.98-.37.98-1v-3.29c0-.06.04-.09.09-.09h.71c.06 0 .09.04.09.09v3.29c0 1.06-.64 1.82-1.88 1.82s-1.86-.71-1.86-1.8z"/><use xlink:href="#E"/><path d="m75.9,38.43v-4.94c0-.06.04-.09.09-.09h1.65c1.3,0,1.96.79,1.96,1.88v1.34c0,1.11-.66,1.9-1.97,1.9h-1.65c-.06,0-.09-.04-.09-.09Zm1.75-.74c.73,0,1.06-.41,1.06-1.08v-1.32c0-.67-.33-1.08-1.06-1.08h-.85v3.47h.85Z"/><use xlink:href="#D" x="26.04"/><use xlink:href="#B" x="43.5"/><path d="m92.85,36.72v-1.5c0-1.22.74-1.9,1.95-1.9,1.3,0,1.96.79,1.96,1.88v1.5c0,1.11-.66,1.9-1.96,1.9s-1.95-.75-1.95-1.88Zm1.95,1.06c.73,0,1.06-.41,1.06-1.07v-1.49c0-.67-.33-1.07-1.06-1.07s-1.06.41-1.06,1.07v1.49c0,.67.32,1.07,1.06,1.07Z"/></g><g fill="#427cbc"><use xlink:href="#D" x="45.88"/><path d="M108.46 38.46l-1.06-1.83-1.09 1.83s-.06.06-.11.06h-.79c-.07 0-.09-.05-.06-.11l1.53-2.47-1.49-2.44c-.04-.06-.01-.11.06-.11h.83s.08.02.1.06l1.04 1.77 1.08-1.77s.06-.06.1-.06h.78c.07 0 .09.05.06.11l-1.51 2.42 1.53 2.48c.04.06.01.11-.06.11h-.83s-.08-.02-.1-.06zm2.12-1.74v-1.51c0-1.21.71-1.88 1.83-1.88 1.02 0 1.54.54 1.75 1.3.01.06 0 .09-.06.11l-.65.19c-.06.01-.09 0-.11-.06-.14-.42-.35-.72-.92-.72-.65 0-.95.41-.95 1.07v1.49c0 .67.29 1.07.96 1.07.6 0 .83-.32.94-.78.01-.06.06-.08.11-.06l.64.21s.08.05.07.09c-.18.77-.69 1.37-1.77 1.37-1.21 0-1.85-.75-1.85-1.88z"/><use xlink:href="#D" x="60.43"/><path d="m120.32,38.43v-4.94c0-.06.04-.09.09-.09h.71c.06,0,.09.04.09.09v4.21h2c.06,0,.09.04.09.09v.64c0,.06-.04.09-.09.09h-2.8c-.06,0-.09-.04-.09-.09Z"/><use xlink:href="#E" x="53.96"/><path d="M129.86 38.43v-4.94c0-.06.04-.09.09-.09h1.04s.09.03.11.07l1.23 2.63.58 1.45h.01l-.06-1.37v-2.7c0-.06.04-.09.09-.09h.68c.06 0 .09.04.09.09v4.94c0 .06-.04.09-.09.09h-.97s-.09-.03-.11-.07l-1.26-2.63c-.24-.5-.45-1.04-.6-1.48h-.02l.06 1.37v2.72c0 .06-.03.09-.09.09h-.67c-.06 0-.09-.04-.09-.09z"/><use xlink:href="#D" x="82.99"/><path d="M143.92 38.45l-1.51-4.94c-.02-.06.01-.11.08-.11h.74s.08.02.1.08l.78 2.63.38 1.51h.02c.1-.47.32-1.22.41-1.52l.77-2.61c.01-.06.05-.08.1-.08h.7c.06 0 .1.04.08.11l-1.5 4.94c-.01.06-.05.08-.1.08h-.94s-.08-.02-.1-.08z"/><use xlink:href="#D" x="92.7"/><path d="M152.58 38.43v-4.94c0-.06.04-.09.09-.09h1.69c1.1 0 1.64.62 1.64 1.51v.18c0 .67-.32 1.18-.92 1.4l1.08 1.93c.04.06 0 .11-.06.11h-.81s-.08-.02-.1-.06l-1-1.86h-.71v1.83c0 .06-.03.09-.09.09h-.71c-.06 0-.09-.04-.09-.09zm1.72-2.6c.58 0 .81-.28.81-.76v-.13c0-.46-.23-.75-.81-.75h-.82v1.63h.82zm4.37 2.6v-2.02l-1.63-2.9c-.04-.06 0-.11.06-.11h.81s.08.02.1.06l1.11 2.12 1.11-2.12s.06-.06.11-.06h.78c.07 0 .1.05.06.11l-1.62 2.89v2.04c0 .06-.04.09-.09.09h-.71c-.06 0-.09-.04-.09-.09z"/><use xlink:href="#B" x="117.6"/><use xlink:href="#C" x="117.6"/><use xlink:href="#E" x="99.64"/><path d="M175.53 38.43v-4.94c0-.06.04-.09.09-.09h1.04s.09.03.11.07L178 36.1l.58 1.45h.01l-.06-1.37v-2.7c0-.06.04-.09.09-.09h.68c.06 0 .09.04.09.09v4.94c0 .06-.04.09-.09.09h-.97s-.09-.03-.11-.07l-1.26-2.63c-.24-.5-.45-1.04-.6-1.48h-.02l.06 1.37v2.72c0 .06-.03.09-.09.09h-.67c-.06 0-.09-.04-.09-.09zm5.54-1.71v-1.51c0-1.21.74-1.88 1.91-1.88 1.02 0 1.58.52 1.81 1.26.01.06 0 .09-.06.11l-.65.19c-.06.01-.09 0-.11-.06-.14-.41-.39-.68-.97-.68-.7 0-1.02.41-1.02 1.07v1.49c0 .67.32 1.07 1.03 1.07s1.03-.41 1.03-1.07v-.22h-.88c-.06 0-.09-.04-.09-.09v-.6c0-.06.03-.09.09-.09h1.65c.06 0 .09.04.09.09v.91c0 1.11-.64 1.9-1.91 1.9s-1.91-.75-1.91-1.88zM7.59 8.65l-2.01 2.98 4.02-.41 1.28-3.55-3.29.98zm23.68.32l-2.21-6.81-3.43 1.04 1.43 6.2 4.21-.43zM7.85 16.03l1.32-3.63-4.33.33-2.07 3.05 5.08.25zm26.14 1.31l-2.21-6.8-4.38.36 1.42 6.18 5.17.26zm-31.93-.5L0 19.89l6.11.97 1.33-3.67-5.38-.35zm6.78.44l-1.25 3.81 6.17.98.48-4.44-5.4-.35zm20.22 7.22l-1.29-5.99-5.37-.35.5 5.36 6.16.98zm7.66 1.22l-2.21-6.78-5.34-.34 1.41 6.14 6.14.98zM7.21 22.25l-1.24 3.82 7.16 1.72.49-4.45-6.41-1.09zM21.9 29.9l-.39-5.22-6.39-1.08-.39 4.58 7.17 1.72zm1.13-4.96l.5 5.35L30.67 32l-1.29-5.98-6.35-1.08zm-.64 11.57L22 31.3l-7.37-1.83-.39 4.57 8.15 2.47z"/></g><path d="M57.77 27.21l4.18-4.18V6.38h-3.4v15.2l-3.13 3.08c-.57.6-1.18.91-1.79.92h-.02c-.62 0-1.24-.31-1.85-.92l-3.08-3.08V6.4h-3.4v16.63l4.18 4.18c2.76 2.76 5.56 2.76 8.31 0zM73.89 6.4h-2.64c-3.91 0-5.98 2.07-5.98 5.98v7.74c0 2.82 1.13 4.18 2.5 5.55l5.41 5.36 2.4-2.4-4.37-4.38 8.06-8.06c1.7-1.7 2.64-3.52 2.64-5.12 0-2.93-2.99-4.68-8-4.68zm3.51 6.56l-8.56 8.56v-9.13c0-1.59.82-2.4 2.41-2.4H75c1.78 0 2.93.58 2.93 1.78 0 .63-.39 1.06-.53 1.2zM90.83 9.8h4.11V6.4H84.85v22.1h3.4V12.38c0-1.69.89-2.58 2.58-2.58zm16.09 18.7h.88v-3.4h-.88c-1.73 0-2.58-.84-2.58-2.58V9.79h4.52v-3.4h-4.52V0h-3.4v3.82c0 1.71-.87 2.58-2.58 2.58h-.35v3.4h2.93v12.73c0 3.97 2.01 5.98 5.98 5.98zM120.2 6.4h-2.64c-3.91 0-5.98 2.07-5.98 5.98v7.74c0 2.82 1.13 4.18 2.5 5.55l5.41 5.36 2.4-2.4-4.38-4.38 8.06-8.06c1.7-1.7 2.64-3.52 2.64-5.12 0-2.93-2.99-4.68-8-4.68zm3.51 6.56l-8.56 8.56v-9.13c0-1.59.82-2.4 2.4-2.4h3.75c1.78 0 2.93.58 2.93 1.78 0 .63-.38 1.06-.53 1.2z" fill="#aaa"/><path d="M167.15 28.5V6.35h-3.4v10.73h-6.86c-1.71 0-2.58-.87-2.58-2.58V6.35h-3.4v8.15c0 3.91 2.07 5.98 5.98 5.98h6.86v8.02h3.4zm2.84 0h14.89v-3.4h-11.49v-3c0-1.71.87-2.58 2.58-2.58h2.69c3.88 0 5.93-2.07 5.93-5.98v-1.21c0-3.91-2.05-5.98-5.93-5.98h-7.04v3.4h7.04c1.69 0 2.58.89 2.58 2.58v1.21c0 1.69-.89 2.58-2.58 2.58h-2.69c-3.91 0-5.98 2.07-5.98 5.98v6.4z" fill="#427cbc"/><path d="M136.1 19.99l-.04-.05c-.57-.6-.97-1.36-1.12-2.21l-4.19 4.19v6.58h3.4v-5.33l2.6-2.64c-.12-.08-.21-.18-.32-.27l-.33-.27zm7.21-2.27l-.02.07c-.02.13-.07.25-.1.38a3.5 3.5 0 0 1-.14.46c-.02.05-.05.09-.07.14a4.18 4.18 0 0 1-1.46 1.76l2.6 2.64v5.33h3.4v-6.58l-4.2-4.2zm.8-11.32v4.42l-2.64 2.64a4.29 4.29 0 0 1 1.59 1.95c.02.05.03.11.05.16a4.45 4.45 0 0 1 .19.65c0 .02.01.03.01.05l4.2-4.2V6.4h-3.4zm-7.34 7.04l-2.63-2.63V6.39h-3.4v5.67l4.19 4.19c.21-1.17.88-2.18 1.84-2.81z" fill="#aaa"/><circle cx="139.12" cy="16.99" r="2.13" fill="#427cbc"/><defs ><path id="B" d="m45.92,38.43v-4.21h-1.34c-.06,0-.09-.04-.09-.09v-.64c0-.06.04-.09.09-.09h3.59c.06,0,.09.04.09.09v.64c0,.06-.04.09-.09.09h-1.34v4.21c0,.06-.04.09-.09.09h-.71c-.06,0-.09-.04-.09-.09Z"/><path id="C" d="m52.51,38.43v-2.07h-1.98v2.07c0,.06-.03.09-.09.09h-.71c-.06,0-.09-.04-.09-.09v-4.94c0-.06.04-.09.09-.09h.71c.06,0,.09.04.09.09v2.05h1.98v-2.05c0-.06.04-.09.09-.09h.71c.06,0,.09.04.09.09v4.94c0,.06-.04.09-.09.09h-.71c-.06,0-.09-.04-.09-.09Z"/><path id="D" d="m55.23,38.43v-4.94c0-.06.04-.09.09-.09h2.83c.06,0,.09.04.09.09v.62c0,.06-.03.09-.09.09h-2.02v1.32h1.82c.06,0,.09.04.09.09v.6c0,.06-.03.09-.09.09h-1.82v1.41h2.03c.06,0,.09.04.09.09v.62c0,.06-.04.09-.09.09h-2.84c-.06,0-.09-.04-.09-.09Z"/><path id="E" d="m73.19,38.43v-4.94c0-.06.04-.09.09-.09h.71c.06,0,.09.04.09.09v4.94c0,.06-.03.09-.09.09h-.71c-.06,0-.09-.04-.09-.09Z"/></defs></svg>
+
+    </a>
+</div>
+<ul role="menubar" aria-label="Vertex42 Menu Bar">
+<li role="none"><a role="menuitem" aria-haspopup="true" href="/ExcelTemplates/" title="Excel Templates" >Excel Templates</a>
+<ul role="menu" aria-label="Excel Templates" class="sub-menu">
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/budgets.html">Budget Templates</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/invoice-templates.html">Invoice Templates</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/excel-project-management.html">Project Management</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/timesheets.html">Timesheets</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/business-templates.html">Business Templates</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/">- More Templates -</a></li>
+</ul>
+</li>
+<li role="none"><a role="menuitem" aria-haspopup="true" href="/calendars/" title="Calendar Templates">Calendars</a>
+    <ul role="menu" aria-label="Calendars" class="sub-menu">
+        <li role="none"><a role="menuitem" href="/calendars/2026.html">2026 Calendar</a></li>
+        <li role="none"><a role="menuitem" href="/calendars/2027.html">2027 Calendar</a></li>
+        <li role="none"><a role="menuitem" href="/ExcelTemplates/excel-calendar-template.html">Calendar Template</a></li>
+    <li role="none"><a role="menuitem" href="/calendars/printable-calendars.html">Printable Calendars</a></li>
+    <li role="none"><a role="menuitem" href="/calendars/">- More Calendars -</a></li>
+</ul>    
+</li>
+<li role="none"><a role="menuitem" href="/Calculators/financial-calculators.html" title="Financial Calculators">Calculators</a>
+</li>
+<li role="none"><a role="menuitem" aria-haspopup="true" href="/ExcelTemplates/excel-gantt-chart.html" title="Gantt Chart Template">Gantt Chart</a>
+<ul role="menu" aria-label="Gantt Chart" class="sub-menu">
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/gantt-chart-template-pro.html">Gantt Chart Pro</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTips/how-to-make-a-gantt-chart-in-excel.html">Create a Gantt Chart</a></li>
+</ul>
+</li>
+    
+<li role="none"><a role="menuitem" aria-haspopup="true" href="/WordTemplates/">Word Templates</a>
+<ul role="menu" aria-label="Word Templates" class="sub-menu">
+    <li role="none"><a role="menuitem" href="/forms/legal-forms.html">Legal Forms</a></li>
+    <li role="none"><a role="menuitem" href="/resumes/">Resumes</a></li>
+    <li role="none"><a role="menuitem" href="/WordTemplates/letters.html">Letters</a></li>
+</ul>
+</li>
+<li role="none"><a role="menuitem" aria-haspopup="true" href="/edu/" title="Education">Education</a>
+<ul role="menu" aria-label="Education" class="sub-menu">
+    <li role="none"><a role="menuitem" href="/edu/excel-tutorials-for-beginners.html">Excel Tutorials</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTips/">100+ Excel Tips</a></li>
+    <li role="none"><a role="menuitem" href="/lambda/">LAMBDA Library</a></li>
+    <li role="none"><a role="menuitem" href="/ExcelTemplates/education.html">Templates for School</a></li>
+</ul>
+</li>
+<li role="none"><a role="menuitem" href="/blog/" title="Vertex42 Blog">Blog</a></li>
+<li role="none"><a role="menuitem" href="https://www.youtube.com/vertex42/?sub_confirmation=1" onclick="gtag('event','TopNav',{'event_category':'YouTube','event_label':'general')};" target="_blank" rel="noopener" title="Vertex42 Channel on YouTube"><span class="ytplay" title="Vertex42 on YouTube">►</span></a></li>
+</ul>
+
+<input type="checkbox" id="bc2">
+<label for="bc2" class="btn search-icon" title="Search Vertex42.com">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.61 114.46" style="width:20px;height:20px;margin:7px auto;"><title>Search Icon</title><path d="M113.61 103.35L81.88 71.62c5.37-7.44 8.55-16.55 8.55-26.41C90.43 20.28 70.15 0 45.21 0S0 20.28 0 45.21s20.28 45.21 45.21 45.21c9.42 0 18.17-2.9 25.42-7.84l31.87 31.87 11.11-11.11zm-97.9-58.14c0-16.27 13.24-29.5 29.5-29.5s29.5 13.24 29.5 29.5-13.24 29.5-29.5 29.5-29.5-13.24-29.5-29.5z" /></svg>
+</label>
+<div class="search-box">
+    <form action="https://www.vertex42.com/search.html" id="cse-search-box" role="search">
+    <input type="search" name="q" aria-label="Search" placeholder="Type search here.." class="search">
+    <input type="submit" value="Go" class="submit">
+    </form>
+</div>
+</nav>
+</div><!-- end .wrapper -->
+</div><!-- end #banner --><div class="wrapper">
+
+<div id="breadcrumb" class="google-anno-skip">
+<!-- InstanceBeginEditable name="Breadcrumb" -->
+
+<div vocab="https://schema.org/" typeof="BreadcrumbList"><a href="/" title="Vertex42 Home - Excel Templates, Calculators and Calendars">Home</a> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/ExcelTemplates/"><span property="name">Excel Templates</span></a><meta property="position" content="1"></span> &gt; Financial Calculators</div>
+<!-- InstanceEndEditable -->
+<!-- ================     BODY SECTION      ================  -->
+</div>
+<div class="container">
+<div id="content">
+<div id="content-main">
+<!-- google_ad_section_start -->
+<!-- InstanceBeginEditable name="Main Content Region" -->
+
+
+<div id="header">
+<h1>Financial Calculators</h1>
+<div id="subline">Free Mortgage, Loan, Amortization, Retirement &amp; Savings Calculators for Microsoft Excel&reg;</div>
+</div>
+    
+<div class="img-right">
+<a href="https://cdn.vertex42.com/templates/images/financial-calculators-by-vertex42.png" target="_blank" aria-hidden="true"><img src="https://cdn.vertex42.com/templates/images/financial-calculators-by-vertex42.png" width="730" height="730" alt="Financial Calculators by Vertex42" style="width:100%;height:auto;"></a>
+</div>
+
+<p>Do you need more <i>flexibility</i> than <b>online financial calculators</b> can provide? Are you worried about entering your <i>financial information</i> on the internet? Download our free financial spreadsheets, designed for Microsoft Excel&reg;,and work with them on your own computer.</p>
+
+<p>Our financial templates are designed primarily for personal use, with the end user being anyone who has a basic understanding of spreadsheets. Although intuitive to use, each calculator also contains helpful information within the cell comments, and additional resources and references are provided on the individual download pages.</p>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script><script>var v42_ad_counter = 0;</script>
+<div class="adlabel" style="clear:both">Advertisement</div>
+
+<!-- ATF responsive -->
+<div style="width:730px;height:280px;background:#f9f9f9;">
+    
+<div>
+<ins class="adsbygoogle"
+	 style="display:block"
+	 data-ad-client="ca-pub-3683987017468561"
+	 data-ad-slot="2904388899"
+	 data-ad-format="rectangle"
+	 data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+</div><!-- End ATF responsive -->
+    
+	
+<h2>Browse Categories</h2>
+
+<div class="category-list" style="background:none;">
+<ul>
+<li><a href="mortgage-calculators.html">MORTGAGE Calculators</a></li>
+<li><a href="debt-calculators.html">DEBT PAYOFF Calculators</a></li>
+<li><a href="retirement-calculators.html">SAVINGS &amp; RETIREMENT</a></li>
+<li><a href="/ExcelTemplates/excel-amortization-spreadsheet.html">AMORTIZATION Calculators</a></li>
+<li><a href="/ExcelTemplates/budgets.html">BUDGET Spreadsheets</a></li>
+<li><a href="loan-calculators.html">LOAN Calculators</a></li>
+<li><a href="/ExcelTemplates/timesheets.html">PAYROLL Spreadsheets</a></li>
+<li><a href="/ExcelTemplates/financial-statements.html">FINANCIAL STATEMENTS</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<div class="bundle" style="background:#eaf0f7;color:#3969ad;padding:1em;margin:1em 0;">
+Are you a financial planner? If so, check out the <b><a href="/ExcelTemplates/financial-planning.html" onClick="gtag('event','FPTP',{'event_category':'Referral','event_label':'financial-calculators'});">Financial Planner's Template Pack</a></b>
+</div>
+
+<div itemscope itemtype="https://schema.org/ItemList" class="google-anno-skip">
+<h2>Featured Financial Calculators</h2>
+<br>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/home-mortgage-calculator.html"><span itemprop="name" class="title">Home Mortgage Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/home-mortgage-calculator-3-1_193x250.png" alt="Thumbnail - Home Mortgage Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary"><ul>
+    <li>Full-featured mortgage calculator</li>
+    <li>Fixed-rate and adjustable-rate mortgages</li>
+    <li>Amortization schedule</li>
+    <li>Optional extra payments</li>
+    </ul></div>
+</div>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/debt-reduction-calculator.html"><span itemprop="name" class="title">Debt Reduction Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/debt-reduction-calculator_213x250.png" alt="Thumbnail - Debt Reduction Calculator" width="213" height="250"></a></div><div itemprop="description" class="summary">    <ul>
+    <li>How fast can I get out of debt?</li>
+    <li>Try different debt reduction strategies</li>
+    <li>List up to 20 creditors</li>
+    </ul></div></div>
+
+<div class="clear"></div>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html"><span itemprop="name" class="title">Loan Amortization Schedule</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/loan-amortization-schedule-template_194x250.png" alt="Thumbnail - Loan Amortization Schedule" width="194" height="250"></a></div><div itemprop="description" class="summary">  <ul>
+    <li>Flexible payment and compound frequency</li>
+    <li>Optional extra payments</li>
+    <li>Commercial licenses available</li>
+    </ul></div></div>
+
+
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>
+
+<h2>Mortgage and Home Affordability Calculators</h2>
+<br>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/home-mortgage-calculator.html"><span itemprop="name" class="title">Home Mortgage Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/home-mortgage-calculator-3-1_193x250.png" alt="Thumbnail - Home Mortgage Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary">The ultimate all-in-one mortgage calculator for Excel. Fixed or variable rate. Optional extra payments.</div></div>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/arm-calculator.html"><span itemprop="name" class="title">ARM Calculator for Excel</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/arm-loan-calculator_large_193x250.png" alt="Thumbnail - ARM Calculator for Excel" width="193" height="250"></a></div><div itemprop="description" class="summary">Create an amortization table and graphs for adjustable rate mortgage (ARM) loans.</div></div>
+		
+<div class="clear"></div>	
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/home-affordability-calculator.html"><span itemprop="name" class="title">Home Affordability Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/home-affordability-calculator_193x250.png" alt="Thumbnail - Home Affordability Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary">Estimate the mortgage that you can afford based on income, debt-to-income ratio, down payment, and housing expenses.</div></div>
+		
+<div class="clear"></div>		
+
+<div class="category-list">
+<div class="header">More</div>
+<ul>
+	<li><a href="/ExcelTemplates/home-expense-calculator.html">Home Expense Calculator</a></li>
+    <li><a href="Canadian-mortgage.html">Canadian Mortgage Calculator</a></li>
+    <li><a href="mortgage-payment-calculator.html">Mortgage Payment Calculator</a></li>
+    <li><a href="home-equity-loan-calculator.html">Home Equity Loan Calculator</a></li>
+    <li><a href="line-of-credit.html">Home Equity Line of Credit Calculator</a></li>
+    <li><a href="mortgage-payoff-with-line-of-credit.html">Mortgage Payoff Calculator with HELOC</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>
+
+<h2>Savings &amp; Retirement Calculators</h2>
+<br>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/retirement-calculator.html"><span itemprop="name" class="title">Retirement Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/retirement-calculator_193x250.png" alt="Thumbnail - Retirement Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary">Estimate how much of your salary to save to reach your retirement goal.</div></div>
+	
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/college-savings.html"><span itemprop="name" class="title">College Savings Calculator for Excel</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/college-savings-calculator_192x250.png" alt="Thumbnail - College Savings Calculator for Excel" width="192" height="250"></a></div><div itemprop="description" class="summary">Create a college savings plan for your children, including costs for K-12 and high-school.</div></div>
+
+<div class="clear"></div>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/annuity-calculator.html"><span itemprop="name" class="title">Annuity Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/annuity-calculator_193x250.png" alt="Thumbnail - Annuity Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary">Figure out how much you will need to have saved for retirement, and how long your nest egg may last.</div></div>
+
+<div class="clear"></div>	
+
+<div class="category-list">
+<div class="header">More</div>
+<ul>
+    <li><a href="savings-interest-calculator.html">Savings Calculator</a></li>
+    <li><a href="simple-interest.html">Simple Interest Calculator</a></li>
+    <li><a href="savings-snowball.html">Savings Snowball Calculator</a></li>
+    <li><a href="/ExcelTemplates/retirement-planning-spreadsheet.html">Retirement Savings Calculator</a></li>
+    <li><a href="retirement-withdrawal-calculator.html">Savings Withdrawal Calculator</a></li>
+    <li><a href="traditional-vs-roth-ira.html">Traditional vs. Roth Calculator</a></li>
+    <li><a href="401k-savings-calculator.html">401k Calculator</a></li>
+	<li><a href="/ExcelTemplates/investment-tracker.html">Simple Investment Tracker</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>
+
+<h2>Budget Calculators</h2>
+<br>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/budget-calculator.html"><span itemprop="name" class="title">Yearly Budget Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/yearly-budget-calculator_285x220.png" alt="Thumbnail - Yearly Budget Calculator" width="285" height="220"></a></div><div itemprop="description" class="summary">Combines a yearly budget planner with monthly calculations and graphs.</div></div>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/home-budget-worksheet.html"><span itemprop="name" class="title">Home Budget Worksheet</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/home-budget-worksheet_193x250.png" alt="Thumbnail - Home Budget Worksheet" width="193" height="250"></a></div><div itemprop="description" class="summary">Create a simple yearly home budget, with expenses divided into deductible and non-deductible categories.</div></div>
+		
+<div class="clear"></div>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/money-tracker.html"><span itemprop="name" class="title">Money Tracker</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/money-tracker-in-excel-mobile_285x140.png" alt="Thumbnail - Money Tracker" width="285" height="140"></a></div><div itemprop="description" class="summary">Track your cash, checking, credit, and savings in Excel on your mobile phone.</div></div>
+
+<div class="clear"></div>		
+
+<div class="category-list">
+<div class="header">More</div>
+<ul>
+    <li><a href="/ExcelTemplates/money-management-template.html">Money Management Template</a></li>
+    <li><a href="/ExcelTemplates/family-budget-planner.html">Family Budget Planner</a></li>
+    <li><a href="/ExcelTemplates/monthly-household-budget.html">Monthly Household Budget</a></li>
+    <li><a href="/ExcelTemplates/travel-budget-worksheet.html">Travel Budget</a></li>
+    <li><a href="/ExcelTemplates/event-budget-template.html">Event Budget</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>
+
+<h2>Loan Calculators</h2>
+<br>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/auto-loan-calculator.html"><span itemprop="name" class="title">Auto Loan Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/auto-loan-calculator_192x250.png" alt="Thumbnail - Auto Loan Calculator" width="192" height="250"></a></div><div itemprop="description" class="summary">Understand what you are getting into before you buy! Figure out how much you'll need to finance and what type of loan will work best for you.</div></div>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/balloon-loan-calculator.html"><span itemprop="name" class="title">Balloon Loan Calculator for Excel</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/balloon-loan-calculator_193x250.png" alt="Thumbnail - Balloon Loan Calculator for Excel" width="193" height="250"></a></div><div itemprop="description" class="summary">Calculate the payment required to pay off an auto or mortgage loan in one big chunk after a number of regular payments have been made.</div></div>
+		
+<div class="clear"></div>	
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/simple-interest-loan.html"><span itemprop="name" class="title">Simple Interest Loan Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/simple-interest-loan-calculator_193x250.png" alt="Thumbnail - Simple Interest Loan Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary">This is a special type of mortgage based on simple interest calculations and daily interest accrual.</div></div>
+	
+<div class="clear"></div>		
+		
+<div class="category-list">
+<div class="header">More</div>
+<ul>
+    <li><a href="simple-loan-calculator.html">Simple Loan Calculator</a></li>
+    <li><a href="daily-compounding-loan-calculator.html">Daily Compounding Loan Calculator</a></li>
+    <li><a href="interest-only-loan.html">Interest-Only Loan Calculator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+    
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>    
+   
+<h2>Debt Reduction and Credit Tracking</h2>
+<br>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/debt-reduction-calculator.html"><span itemprop="name" class="title">Debt Reduction Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/debt-reduction-calculator_213x250.png" alt="Thumbnail - Debt Reduction Calculator" width="213" height="250"></a></div><div itemprop="description" class="summary">How fast can I get out of debt using the snowball or avalanche technique?</div></div>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/line-of-credit-tracker.html"><span itemprop="name" class="title">Line of Credit Tracker</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/line-of-credit-tracker_193x250.png" alt="Thumbnail - Line of Credit Tracker" width="193" height="250"></a></div><div itemprop="description" class="summary">For small businesses, lenders, or borrowers wanting to track draws, payments, and interest for a general line of credit.</div></div>
+		
+<div class="clear"></div>		
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/credit-account-register.html"><span itemprop="name" class="title">Credit Account Register Template</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/credit-account-register-template_285x236.png" alt="Thumbnail - Credit Account Register Template" width="285" height="236"></a></div><div itemprop="description" class="summary">Keep track of your credit card transactions, fees and payments with this free account register template.</div></div>
+	
+<div class="clear"></div>			
+		
+<div class="category-list">
+<div class="header">More</div>
+<ul>
+    <li><a href="credit-card-payoff-calculator.html">Credit Card Payoff Calculator</a></li>
+    <li><a href="credit-card-payment-calculator.html">Credit Card Payment Calculator</a></li>
+    <li><a href="credit-repair.html">Credit Repair Spreadsheet</a></li>
+    <li><a href="balance-transfer.html">Balance Transfer Calculator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>
+
+<h2>Business &amp; General Finance Calculators</h2>
+<br>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/breakeven-analysis.html"><span itemprop="name" class="title">Break Even Analysis Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/break-even-analysis_209x250.png" alt="Thumbnail - Break Even Analysis Calculator" width="209" height="250"></a></div><div itemprop="description" class="summary">Calculate the Break-Even Point or Payback Period for a new venture or product.</div></div>
+
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/net-worth.html"><span itemprop="name" class="title">Net Worth Calculator for Excel</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/Calculators/Images/net-worth-calculator_193x250.png" alt="Thumbnail - Net Worth Calculator for Excel" width="193" height="250"></a></div><div itemprop="description" class="summary">Calculate your net worth based on the total of all your assets minus your liabilities.</div></div>
+		
+<div class="clear"></div>			
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/rental-cash-flow-analysis.html"><span itemprop="name" class="title">Rental Property Cash Flow Analysis</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/rental-cash-flow-analysis-template_193x250.png" alt="Thumbnail - Rental Property Cash Flow Analysis" width="193" height="250"></a></div><div itemprop="description" class="summary">Perform a basic cash flow analysis for a rental property, including capitalization rate and cash on cash return.</div></div>
+		
+<div class="clear"></div>	
+		
+<div class="category-list">
+<div class="header">More</div>
+<ul>
+    <li><a href="inflation-calculator.html">Inflation Calculator</a></li>
+    <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
+    <li><a href="depreciation-calculator.html">Depreciation Calculator</a></li>
+    <li><a href="npv-irr-calculator.html">NPV and IRR Calculator</a></li>
+    <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+    
+<div class="clear"></div>
+<div class="btf">
+<div class="adlabel">Advertisement</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ev+4t+b8-cd-9l"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="5138334090"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="clear"></div>
+
+<h2>Payroll Calculators</h2>
+<br>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/Calculators/paycheck-calculator.html"><span itemprop="name" class="title">Paycheck Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/paycheck-calculator_266x250.png" alt="Thumbnail - Paycheck Calculator" width="266" height="250"></a></div><div itemprop="description" class="summary">How do the W-9 allowances affect your tax withholdings?</div></div>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/time-card-calculator.html"><span itemprop="name" class="title">Time Card Calculator</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/time-card-calculator_193x250.png" alt="Thumbnail - Time Card Calculator" width="193" height="250"></a></div><div itemprop="description" class="summary">Enter clock-in and clock-out times and the total breaks in minutes. Calculates total hours worked and overtime automatically.</div></div>
+		
+<div class="clear"></div>
+		
+<div class="item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div class="itemtitle"><a itemprop="url" href="https://www.vertex42.com/ExcelTemplates/vacation-tracking.html"><span itemprop="name" class="title">Vacation Tracking Template</span><img itemprop="image" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.vertex42.com/ExcelTemplates/Images/vacation-tracking-monthly_192x250.png" alt="Thumbnail - Vacation Tracking Template" width="192" height="250"></a></div><div itemprop="description" class="summary">Track your vacation, sick leave, and personal leave. Great for both employers and employees.</div></div>
+
+<div class="clear"></div>
+
+</div><!-- end ItemList -->
+
+
+<!-- InstanceEndEditable -->
+
+<!-- google_ad_section_end -->
+</div><!-- #content-main -->
+</div><!-- #content -->
+<div id="content-right">
+<!-- ===========================   RIGHT SIDE BAR   ============================  -->
+
+<div id="social-buttons" class="google-anno-skip">
+
+
+<h3 style="margin-bottom:0.5em;">Follow Us On ...</h3>
+
+<div style="margin-bottom:1.5em;">
+<a href="https://www.facebook.com/Vertex42" title="Facebook" target="_blank" rel="noopener" onClick="gtag('event','Sidebar',{'event_category':'Fan','event_label':'FB')};" style="display:inline-block;width:32px;height:32px;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat 0% 0%;background-size:100%;margin-right:15px;text-decoration:none;border-radius:3px;margin-bottom:5px;"><span style="display:none;">FB</span>&nbsp;</a>
+
+<a href="https://www.pinterest.com/vertex42/" title="Pinterest" target="_blank" rel="noopener" onClick="gtag('event','Sidebar',{'event_category':'Fan','event_label':'pinterest')};" style="display:inline-block;width:32px;height:32px;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat 0% 40%;background-size:100%;margin-right:15px;text-decoration:none;border-radius:3px;margin-bottom:5px;"><span style="display:none;">PIN</span>&nbsp;</a>
+
+<a href="https://x.com/Vertex42/" title="Twitter" target="_blank" rel="noopener" onClick="gtag('event','Sidebar',{'event_category':'Fan','event_label':'twitter')};" style="display:inline-block;width:32px;height:32px;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat 0% 20%;background-size:100%;margin-right:15px;text-decoration:none;border-radius:3px;margin-bottom:5px;"><span style="display:none;">TWEET</span>&nbsp;</a>
+
+<a href="https://www.linkedin.com/company/vertex42-llc" title="LinkedIn" target="_blank" rel="noopener" onClick="gtag('event','Sidebar',{'event_category':'Fan','event_label':'linkedin')};" style="display:inline-block;width:32px;height:32px;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat 0% 60%;background-size:100%;margin-right:15px;text-decoration:none;border-radius:3px;margin-bottom:5px;"><span style="display:none;">LI</span>&nbsp;</a>
+
+<a href="https://www.instagram.com/vertex42/" title="Instagram" target="_blank" rel="noopener" onClick="gtag('event','Sidebar',{'event_category':'Fan','event_label':'instagram')};" style="display:inline-block;width:32px;height:32px;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat 0% 80%;background-size:100%;margin-right:15px;text-decoration:none;border-radius:3px;margin-bottom:5px;"><span style="display:none;">IG</span>&nbsp;</a>
+
+<a href="https://www.youtube.com/vertex42/?sub_confirmation=1" title="YouTube" target="_blank" rel="noopener" onClick="gtag('event','Sidebar',{'event_category':'Fan','event_label':'youtube')};" style="display:inline-block;width:32px;height:32px;background:url(//cdn.vertex42.com/Images/social-sprite-64.png) no-repeat 0px 100%;background-size:100%;text-decoration:none;border-radius:3px;margin-bottom:5px;"><span style="display:none;">YT</span>&nbsp;</a>
+
+</div>
+
+</div><!-- end social-buttons -->
+
+
+<div style="margin:1em 0;" class="ad_sidebar">
+<a href="https://theactivecell.com/?referral=vertex42" onClick="gtag('event','Sidebar',{'event_category':'Referral','event_label':'activecell')};" target="_blank" rel="nofollow noopener"><img src="/Images/products/the-active-cell-2024.png" alt="Excel and Financial Modeling Conference" width="300" height="250"></a>
+</div>
+
+<!-- InstanceBeginEditable name="Right NavBar" -->
+
+
+<div class="google-anno-skip">
+<div style="padding:0 1em;font-size:0.9em;font-weight:bold;height:2.143em;line-height:2.143em;background:#3969ad;color:#fff;text-transform:uppercase;">Template Categories</div>
+<div class="side-nav">
+<ul role="menubar" aria-label="Template Categories">
+<li role="none"><a role="menuitem" href="/ExcelTemplates/attendance-sheets.html" ><span class="icon28" role="none" style="background-position:0 0;"></span><span class="text">Attendance</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/budgets.html" ><span class="icon28" role="none" style="background-position:0 2%;"></span><span class="text">Budget Templates</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/business-templates.html" ><span class="icon28" role="none" style="background-position:0 4%;"></span><span class="text">Business Templates</span></a></li>
+<li role="none"><a role="menuitem" href="/calendars/" ><span class="icon28" role="none" style="background-position:0 6%;"></span><span class="text">Calendars</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/statistics.html" ><span class="icon28" role="none" style="background-position:0 8%;"></span><span class="text">Data Analysis</span></a></li>
+<li role="none"><a role="menuitem" href="/Calculators/debt-calculators.html" ><span class="icon28" role="none" style="background-position:0 10%;"></span><span class="text">Debt Payoff</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/education.html" ><span class="icon28" role="none" style="background-position:0 12%;"></span><span class="text">Education</span></a></li>
+<li role="none"><a role="menuitem" href="/Calculators/financial-calculators.html" class="active"><span class="icon28" role="none" style="background-position:0 14%;"></span><span class="text">Financial Calculators</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/financial-statements.html" ><span class="icon28" role="none" style="background-position:0 16%;"></span><span class="text">Financial Statements</span></a></li>
+<li role="none"><a role="menuitem" href="/WordTemplates/flyer-templates.html" ><span class="icon28" role="none" style="background-position:0 18%;"></span><span class="text">Flyers</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/exercise-charts-and-logs.html" ><span class="icon28" role="none" style="background-position:0 20%;"></span><span class="text">Health Charts &amp; Logs</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/home-and-family.html" ><span class="icon28" role="none" style="background-position:0 22%;"></span><span class="text">Home and Family</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/inventory.html" ><span class="icon28" role="none" style="background-position:0 24%;"></span><span class="text">Inventory</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/invoice-templates.html" ><span class="icon28" role="none" style="background-position:0 26%;"></span><span class="text">Invoices</span></a></li>
+<li role="none"><a role="menuitem" href="/WordTemplates/letters.html" ><span class="icon28" role="none" style="background-position:0 28%;"></span><span class="text">Letters</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/checklist.html" ><span class="icon28" role="none" style="background-position:0 30%;"></span><span class="text">Lists / Checklists</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/to-do-lists.html" ><span class="icon28" role="none" style="background-position:0 32%;"></span><span class="text">To Do Lists</span></a></li>
+<li role="none"><a role="menuitem" href="/Calculators/loan-calculators.html" ><span class="icon28" role="none" style="background-position:0 34%;"></span><span class="text">Loan Calculators</span></a></li>
+<li role="none"><a role="menuitem" href="/Calculators/mortgage-calculators.html" ><span class="icon28" role="none" style="background-position:0 36%;"></span><span class="text">Mortgage Calculators</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/excel-project-management.html" ><span class="icon28" role="none" style="background-position:0 38%;"></span><span class="text">Project Management</span></a></li>
+<li role="none"><a role="menuitem" href="/resumes/" ><span class="icon28" role="none" style="background-position:0 40%;"></span><span class="text">Resumes</span></a></li>
+<li role="none"><a role="menuitem" href="/Calculators/retirement-calculators.html" ><span class="icon28" role="none" style="background-position:0 42%;"></span><span class="text">Savings &amp; Retirement</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/schedules.html" ><span class="icon28" role="none" style="background-position:0 44%;"></span><span class="text">Schedules / Planners</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/strategic-planning.html" ><span class="icon28" role="none" style="background-position:0 52%;"></span><span class="text">Strategic Planning</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/timeline.html" ><span class="icon28" role="none" style="background-position:0 46%;"></span><span class="text">Timeline Templates</span></a></li>
+<li role="none"><a role="menuitem" href="/ExcelTemplates/timesheets.html" ><span class="icon28" role="none" style="background-position:0 48%;"></span><span class="text">Timesheets &amp; HR</span></a></li>
+<li role="none"><a role="menuitem" href="/NumbersTemplates/" ><span class="icon28" role="none" style="background-position:0 50%;"></span><span class="text">Numbers Templates</span></a></li>
+</ul>
+</div>
+</div>
+
+<div class="navlist google-anno-skip">
+<h3>Finance Articles</h3>
+<div class="subnavlist">
+<a href="/ExcelArticles/how-to-make-a-budget.html">Make a Budget</a>
+<a href="/ExcelArticles/financial-modeling.html">Financial Modeling</a>
+<a href="/ExcelArticles/financial-functions.html">Excel Financial Functions</a>
+<a href="/Calculators/simple-interest.html">Simple Interest</a>
+<a href="/Calculators/compound-interest-calculator.html">Compound Interest</a>
+<a href="/ExcelArticles/amortization-calculation.html">Amortization Calculation</a>
+<a href="/ExcelArticles/amortization-formulas.html">Amortization Formulas</a>
+<a href="/ExcelArticles/negative-amortization.html">Negative Amortization</a>
+<a href="/ExcelArticles/debt-consolidation.html">Debt Consolidation</a>
+<a href="/ExcelArticles/exponential-growth.html">Growth Rate</a>
+<a href="/Calculators/cagr-calculator.html">CAGR Calculator &amp; Formula</a>
+<a href="/ExcelArticles/discount-factors.html">Discount Factors</a>
+<a href="/Calculators/depreciation-calculator.html">Depreciation</a>
+<a href="/Calculators/npv-irr-calculator.html">NPV</a>
+</div>
+</div>
+<br>
+<div id="sticky" class="ad_sidebar" style="width:300px;margin:1em 0;">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683987017468561" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3683987017468561"
+     data-ad-slot="6074900496"
+     data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+</div><!-- #sticky -->
+<script>
+// http://andrewhenderson.me/tutorial/jquery-sticky-sidebar/
+var async=async||[];async.push(["ready",function(){if($("#sticky").offset()){var s=$("#sticky").offset().top;$(window).scroll(function(){var o=$(window).scrollTop();o-100>s?$("#sticky").css({position:"fixed",top:0}):$("#sticky").css("position","static"),$("#sticky").css("top",Math.max(0,150-$(this).scrollTop()))})}}]);
+!function n(){if("undefined"==typeof $)return void setTimeout(n,10);for(async=async||[];async.length;){var a=async.shift();"ready"==a[0]?$(a[1]):"load"==a[0]&&$(window).load(a[1])}async={push:function(n){"ready"==n[0]?$(n[1]):"load"==n[0]&&$(window).load(n[1])}}}();
+</script>
+
+
+
+<!-- InstanceEndEditable -->
+</div><!-- #content-right -->
+<div class="clear"></div>
+</div><!-- .container -->
+</div><!-- .wrapper -->
+
+<!-- =====  FOOTER SECTION   ===== -->
+<!-- InstanceBeginEditable name="Footer Region" -->
+
+<div id="user-notice" style="font-family:Arial, Helvetica, sans-serif;display:none;z-index:9999;position:fixed;bottom:100px;left:0;border:3px solid #7e3a20;background:#914426;color:#fff;font-size:1em;font-weight:bolder;text-align:left;vertical-align:middle;line-height:1.286em;padding:4px;padding-left:15px;-moz-box-shadow:5px 5px 5px #333; -webkit-box-shadow:5px 5px 5px #333; box-shadow:5px 5px 5px #333;white-space:nowrap;border-left:0;padding-right:20px;"></div>
+
+<div id="footer" role="contentinfo" style="position:relative;font-family:Arial,sans-serif;background:#2e63ad;color:#d3e6ff;border-top:1px solid #3869ac;margin-top:2em;padding-top:1em;padding-bottom:2em;">
+<div class="wrapper">
+<div style="line-height:2.2em;margin:0 0 1.5em 2em;max-width:300px;" class="footer-nav"><span style="color:#fff;font-weight:bold;">Company</span>
+<br><a href="/about.html">About Us</a>
+<br><a href="/contact.html">Contact Us</a>
+<br><a href="/support.html">Support</a>
+<br><a href="/excel-consulting.html">Excel Consulting</a>
+</div>
+<div style="line-height:2.2em;margin:0 0 1.5em 2em;max-width:300px;" class="footer-nav">
+<span style="color:#fff;font-weight:bold;">Products &amp; Services</span>
+<br><a href="/ExcelTemplates/">Spreadsheet Templates</a>
+<br><a href="/WordTemplates/">Word Templates</a>
+<br><a href="/calendars/">Calendar Templates</a>
+<br><a href="/ExcelArticles/">Excel Articles</a>
+<br><a href="/edu/">Education</a>
+<br><a href="/ExcelLinks/">Excel Links</a>
+</div>
+<div id="footer-company-info" style="margin-left:1em;">
+<span role="none" style="font-size:1.5em;font-family:Roboto, Arial Narrow, Arrial, sans-serif;font-weight:bolder;color:#fff;">Vertex42.com</span>
+<br><span style="font-size:1.1em;color:#fff;">The Guide to Excel in Everything</span>
+<br><br>
+Herriman, Utah
+<br><br><br>
+<div style="font-size:0.875em;max-width:350px;">Vertex42&reg; is a registered trademark of Vertex42 LLC. Microsoft&reg; and Microsoft Excel&reg; and Microsoft Word&reg; are registered trademarks of Microsoft Corporation. Vertex42.com is not associated with Microsoft.</div>
+<br><br>
+Free Financial Calculators for Excel</div>
+<div id="footer-bottom" style="clear:both;border-top:1px solid #9dbbf1;padding-top:0.5em;margin-top:1.5em;">
+<div style="float:right;text-align:right;width:50%;margin-right:1em;">
+<a href="/sitemap.html">Sitemap</a> &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html" rel="nofollow">Terms of Use</a>
+</div>
+<div id="colophon">
+<span>&copy; 2003-2026 Vertex42 LLC. All rights reserved.</span>
+</div>
+
+</div><!-- #bottom-line -->
+
+</div><!-- .wrapper -->
+<div class="clear"></div>
+</div><!-- #footer -->
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;    
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+		  image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+	}, {
+	  root: document.querySelector("#content-main"),
+	  rootMargin: "0px 0px 500px 0px"
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop + 500)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
+
+<!-- InstanceEndEditable -->
+<!-- Add Footer Scripts -->
+<script>
+// Add a script element as a child of the body
+function downloadJSAtOnload() {var element = document.createElement("script"); element.src = "/JavaScripts/footerscripts.js"; document.body.appendChild(element);}
+// Check for browser support of event handling capability
+if (window.addEventListener)
+ window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+ window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -76,16 +76,40 @@
           "url": "https://www.nlr.gov/analysis/jedi",
           "path": "source_discovery/metadata_v6/nlr_jedi.source",
           "sha256": "571c1f7763e7197e27da909a190365fa516be74aea8cbad64a5c8557514dcc01"
+        },
+        {
+          "name": "nlr_jedi_models_1",
+          "url": "https://www.nlr.gov/analysis/jedi/biofuels",
+          "path": "source_discovery/expansion_20261018_v4/pages/nlr_jedi_models_1.source",
+          "sha256": "0c04ec4f896adf2b68b08b49f86e3166362360be630f51b3f9b9f1301143ef82"
+        },
+        {
+          "name": "nlr_jedi_models_3",
+          "url": "https://www.nlr.gov/analysis/jedi/geothermal",
+          "path": "source_discovery/expansion_20261018_v4/pages/nlr_jedi_models_3.source",
+          "sha256": "45dfdd524b661a16f2ba43e489ba1abdb615c9458e5c5be2a6fb8ff160f02576"
+        },
+        {
+          "name": "nlr_jedi_models_4",
+          "url": "https://www.nlr.gov/analysis/jedi/natural-gas",
+          "path": "source_discovery/expansion_20261018_v4/pages/nlr_jedi_models_4.source",
+          "sha256": "e3e167d28e4eee9a36cf2c703842026afcf44f3a552cab718bc4ff54aa54f40f"
+        },
+        {
+          "name": "nlr_jedi_models_6",
+          "url": "https://www.nlr.gov/analysis/jedi/wind",
+          "path": "source_discovery/expansion_20261018_v4/pages/nlr_jedi_models_6.source",
+          "sha256": "c912c3587347dd851e584d6160ef11476c0626b3bf8ed5790414da25cf467e89"
         }
       ],
-      "status": "metadata candidate only; no direct workbook URL verified",
+      "status": "official sector directories verified; tested workbook download headers 403",
       "accepted": false,
       "accepted_template_families": 0,
       "workbook_acquired": false,
       "historical_overlap_audit_complete": false,
       "formula_truth_audit_complete": false,
       "remaining_gates": [
-        "locate available workbook version",
+        "resolve ordinary public download availability (tested addresses 403)",
         "source/history overlap",
         "license scope",
         "freeze before input acquisition",
@@ -358,10 +382,431 @@
       "development_workbook_ids": [
         "public08"
       ]
+    },
+    {
+      "id": "ohio_state",
+      "origin_group": "Ohio State University",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "annual crop budgeting",
+        "cow-calf",
+        "beef finishing",
+        "sheep"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "ohio_budgets",
+          "url": "https://farmoffice.osu.edu/farm-management/enterprise-budgets",
+          "path": "source_discovery/expansion_20261018_v2/pages/ohio_budgets.source",
+          "sha256": "d1f17809b0562437c9899972f0e8e5c6f2fd159b8a8d2e6995d9eea370d68a8a",
+          "metadata_receipt": "source_discovery/expansion_20261018_v2/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": ""
+    },
+    {
+      "id": "washington_state",
+      "origin_group": "Washington State University",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "irrigation crop costing",
+        "perennial orchard establishment",
+        "harvest method cost"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "wsu_budgets",
+          "url": "https://ses.wsu.edu/enterprise_budgets/",
+          "path": "source_discovery/expansion_20261018_v2/pages/wsu_budgets.source",
+          "sha256": "46a14ba054c82236267028dff336c9e1428198917225aa79ae375e2c63fa4e98",
+          "metadata_receipt": "source_discovery/expansion_20261018_v2/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": ""
+    },
+    {
+      "id": "arkansas",
+      "origin_group": "University of Arkansas",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "machinery costs",
+        "land lease",
+        "irrigated crop budgeting"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "arkansas_budgets",
+          "url": "https://www.uaex.uada.edu/farm-ranch/economics-marketing/farm-planning/budgets/crop-budgets.aspx",
+          "path": "source_discovery/expansion_20261018_v4/pages/arkansas_budgets.source",
+          "sha256": "0a547ab3c32225501eea6109009290482ad5ae1f143b2922c80af5fb5999afe9",
+          "metadata_receipt": "source_discovery/expansion_20261018_v4/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": ""
+    },
+    {
+      "id": "purdue",
+      "origin_group": "Purdue University",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "multi-crop profitability and break-even"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "purdue_budget_search_1",
+          "url": "https://ag.purdue.edu/commercialag/home/resource/2024/11/crop-budget-spreadsheet/",
+          "path": "source_discovery/expansion_20261018_v4/pages/purdue_budget_search_1.source",
+          "sha256": "7c8aa324bbb41249803c31f05fa89350ae9e5ad19d102b3099e7c39406cbd708",
+          "metadata_receipt": "source_discovery/expansion_20261018_v4/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": ""
+    },
+    {
+      "id": "kansas_state",
+      "origin_group": "Kansas State University",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "crop budgets",
+        "beef",
+        "sheep",
+        "dairy",
+        "price worksheet"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "kansas_tools_2",
+          "url": "https://www.agmanager.info/farm-budgets/2026-farm-management-guides-non-irrigated-crops",
+          "path": "source_discovery/expansion_20261018_v5/pages/kansas_tools_2.source",
+          "sha256": "866b64ecd084c2ee52c05016a1e5434a1674de01075642cf60f338424f39351d",
+          "metadata_receipt": "source_discovery/expansion_20261018_v5/RECEIPT.json"
+        },
+        {
+          "name": "kansas_tools_3",
+          "url": "https://www.agmanager.info/farm-budgets/2026-farm-management-guides-irrigated-crops",
+          "path": "source_discovery/expansion_20261018_v5/pages/kansas_tools_3.source",
+          "sha256": "1fd2afdd59a9440465f56979e5560a7ec09fb6cd8eec1c2c67850e1295b58568",
+          "metadata_receipt": "source_discovery/expansion_20261018_v5/RECEIPT.json"
+        },
+        {
+          "name": "kansas_tools_4",
+          "url": "https://www.agmanager.info/farm-mgmt-guides/livestock-budgets",
+          "path": "source_discovery/expansion_20261018_v5/pages/kansas_tools_4.source",
+          "sha256": "552fae4b2b777f53d1ffade0f9550056dd01946f4f6fb3827934fb5f052324b9",
+          "metadata_receipt": "source_discovery/expansion_20261018_v5/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": ""
+    },
+    {
+      "id": "tennessee",
+      "origin_group": "University of Tennessee",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "crop budgeting",
+        "marketing decision",
+        "heifer development",
+        "multi-year blueberry"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "tennessee_budgets",
+          "url": "https://arec.tennessee.edu/extension/budgets/",
+          "path": "source_discovery/expansion_20261018_v8/pages/tennessee_budgets.source",
+          "sha256": "eccbc0d357d1ac94ddc6ecc648d319ea88656e2843683318641ea83ab91705b1",
+          "metadata_receipt": "source_discovery/expansion_20261018_v8/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": "Tennessee-Kentucky joint tobacco budgets must not count as two origins"
+    },
+    {
+      "id": "ipcc_tfi",
+      "origin_group": "IPCC TFI",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-some-download-headers-successful",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "HWP upload template - formula presence unknown"
+      ],
+      "license_status": "Official public directory; document-specific redistribution terms not established; no workbook uploaded",
+      "evidence": [
+        {
+          "name": "ipcc_inventory",
+          "url": "https://www.ipcc-nggip.iges.or.jp/software/index.html",
+          "path": "source_discovery/expansion_20261018_v2/pages/ipcc_inventory.source",
+          "sha256": "8bd21c6fc444a15e4b954d3f6b0c03ec9a2d695a3cb68c05899ca9a7509af243",
+          "metadata_receipt": "source_discovery/expansion_20261018_v2/RECEIPT.json"
+        }
+      ],
+      "download_header_success": true,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": "Upload template may contain no eligible formulas"
+    },
+    {
+      "id": "vertex42",
+      "origin_group": "Vertex42",
+      "use": [
+        "public_injected_candidate"
+      ],
+      "status": "metadata-reserved-download-headers-denied",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "amortization",
+        "retirement projection",
+        "timesheet",
+        "Gantt schedule",
+        "project budget"
+      ],
+      "license_status": "Personal noncommercial use only; public distribution of original/derived templates forbidden",
+      "evidence": [
+        {
+          "name": "vertex42_license",
+          "url": "https://www.vertex42.com/licensing/EULA_personaluse.html",
+          "path": "source_discovery/expansion_20261018_v6/pages/vertex42_license.source",
+          "sha256": "7b0309decb425ba85f6128f249685936ec80252eda9b6f0e3ae7e37f17a1f8ff",
+          "metadata_receipt": "source_discovery/expansion_20261018_v6/RECEIPT.json"
+        },
+        {
+          "name": "vertex42_budget",
+          "url": "https://www.vertex42.com/ExcelTemplates/project-budget.html",
+          "path": "source_discovery/expansion_20261018_v7/pages/vertex42_budget.source",
+          "sha256": "bd1eca2cd4583ae0dde047f4433c6b7d8d73f72d5b9459ab28dfc62690cf4e8a",
+          "metadata_receipt": "source_discovery/expansion_20261018_v7/RECEIPT.json"
+        },
+        {
+          "name": "vertex42_gantt",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-gantt-chart.html",
+          "path": "source_discovery/expansion_20261018_v7/pages/vertex42_gantt.source",
+          "sha256": "63e5b6ba63cb63ec180f31055d1dd03417e50b710c4e4ca5a70ea076131e55c6",
+          "metadata_receipt": "source_discovery/expansion_20261018_v7/RECEIPT.json"
+        },
+        {
+          "name": "vertex42_loan",
+          "url": "https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html",
+          "path": "source_discovery/expansion_20261018_v7/pages/vertex42_loan.source",
+          "sha256": "d86e86fc18a2089dcf24fa3158c36518e7d15ce7cd854d162e2393fbd82339ce",
+          "metadata_receipt": "source_discovery/expansion_20261018_v7/RECEIPT.json"
+        },
+        {
+          "name": "vertex42_retirement",
+          "url": "https://www.vertex42.com/Calculators/retirement-calculator.html",
+          "path": "source_discovery/expansion_20261018_v7/pages/vertex42_retirement.source",
+          "sha256": "f414353cd58d303e49ec0ef6766a4872223a97ec6fc626724f19e5b77d5a23cd",
+          "metadata_receipt": "source_discovery/expansion_20261018_v7/RECEIPT.json"
+        },
+        {
+          "name": "vertex42_timesheet",
+          "url": "https://www.vertex42.com/ExcelTemplates/excel-timesheet.html",
+          "path": "source_discovery/expansion_20261018_v7/pages/vertex42_timesheet.source",
+          "sha256": "2e4949e458fab5a50862a98bf6ae274515c38190c4f1a4ea91e4216c4e01db43",
+          "metadata_receipt": "source_discovery/expansion_20261018_v7/RECEIPT.json"
+        }
+      ],
+      "download_header_success": false,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "preserved original formulas and injection log; independent assessment of original correctness"
+      ],
+      "special_note": ""
+    },
+    {
+      "id": "rr_replication",
+      "origin_group": "Reinhart Rogoff original historical case; mirrors grouped",
+      "use": [
+        "natural_error_candidate"
+      ],
+      "status": "natural-original-and-label-pair-unverified",
+      "accepted": false,
+      "accepted_template_families": 0,
+      "workbook_acquired": false,
+      "final_validation_eligible": false,
+      "historical_overlap_audit_complete": false,
+      "formula_truth_audit_complete": false,
+      "candidate_mechanisms_not_verified_families": [
+        "natural formula error candidate; original/correction pair not verified"
+      ],
+      "license_status": "Repository metadata declares CC0 for HAP-RR; other mirrors not established",
+      "evidence": [
+        {
+          "name": "natural_rr_repo",
+          "url": "https://api.github.com/repos/michaelaoash/HAP-RR-git",
+          "path": "source_discovery/expansion_20261018_v3/pages/natural_rr_repo.source",
+          "sha256": "f1a36c01d9e24bd7807e7b01801e679ba5dd1a6cc1f81f235882ea224ef1fa16",
+          "metadata_receipt": "source_discovery/expansion_20261018_v3/RECEIPT.json"
+        },
+        {
+          "name": "rr_tree_main",
+          "url": "https://api.github.com/repos/michaelaoash/HAP-RR-git/git/trees/main?recursive=1",
+          "path": "source_discovery/expansion_20261018_v6/pages/rr_tree_main.source",
+          "sha256": "ffee51dbb89ad2864f3e5148110fb99628220383941add0169be85cfd7891bde",
+          "metadata_receipt": "source_discovery/expansion_20261018_v6/RECEIPT.json"
+        },
+        {
+          "name": "rr_science_tree",
+          "url": "https://api.github.com/repos/scienceetonnante/Reinhart-Rogoff/git/trees/master?recursive=1",
+          "path": "source_discovery/expansion_20261018_v7/pages/rr_science_tree.source",
+          "sha256": "730d92159bf6d1debe062186fbdaf2b0eb1f01fdcc9d2577008de975cdbb4ef5",
+          "metadata_receipt": "source_discovery/expansion_20261018_v7/RECEIPT.json"
+        },
+        {
+          "name": "rr_paper_metadata",
+          "url": "https://api.crossref.org/works/10.1093/cje/bet075",
+          "path": "source_discovery/expansion_20261018_v8/pages/rr_paper_metadata.source",
+          "sha256": "f80d70f6248e54a6bd4ba4282aabb7a17e1f2d47f1aab65f44ee72269471db4e",
+          "metadata_receipt": "source_discovery/expansion_20261018_v8/RECEIPT.json"
+        }
+      ],
+      "download_header_success": false,
+      "header_success_means_formula_content_verified": false,
+      "remaining_gates": [
+        "source-history and author/template lineage audit",
+        "freeze before workbook/answer acquisition",
+        "formula presence and independent family deduplication",
+        "all emitted suggestions adjudicable",
+        "reliable original/correction labels"
+      ],
+      "special_note": ""
     }
   ],
   "candidate_family_names_not_verified": 15,
-  "note": "No number of directory names or errata links is a verified template count. Metadata-only historical keyword check is not a full overlap audit.",
+  "note": "Directory links and response headers are prescreening evidence only; not source acceptance, independent template counts, business formula truth or model performance. Seven development origins remain excluded.",
   "development_acquired_origins": [
     "18f",
     "damodaran",
@@ -372,5 +817,18 @@
     "uk_government"
   ],
   "development_acquisition_evidence": "development/public_candidate_pipeline_dev10/public_index.json",
-  "development_acquisition_sha256": "27f82b6668dacf2bcfec0aa366a03a7a5cae12615af9f83b0db2557ba95f8e8c"
+  "development_acquisition_sha256": "27f82b6668dacf2bcfec0aa366a03a7a5cae12615af9f83b0db2557ba95f8e8c",
+  "latest_source_expansion_report": "source_discovery/SOURCE_EXPANSION_REPORT_20261018.md",
+  "source_discovery_checkpoint": {
+    "reserved_file_links": 45,
+    "reserved_preliminary_origin_labels": 9,
+    "university_calculation_directories_with_successful_file_headers": 6,
+    "other_origin_with_successful_headers_but_formula_presence_unknown": "IPCC TFI",
+    "verified_template_families": 0,
+    "final_workbook_bodies_acquired": 0,
+    "natural_error_original_correction_pairs_verified": 0,
+    "reserved_for_final_not_development": true,
+    "domain_limit": "Six successful calculation directory origins currently concentrate on agricultural economics",
+    "new_final_acceptance_evidence": false
+  }
 }
