@@ -6,8 +6,8 @@
 
 | 检索批次 | 查询/渠道 | 回执 | 结论 |
 |---|---|---|---|
-| 历史检索 01 | GitHub commit search：2013年前的 `"formula error" xlsx`、`"fix formula" ods`、`"corrected formula" xls`、`"formula bug" spreadsheet` | 4个查询成功，47个去重命中；逐项检查提交和工作簿路径 | 仅找到文件格式/导出、改名或无法取得工作簿正文的候选；没有认证自然错误对。原始回执在`source_evidence/HISTORICAL_REVISION_SEARCH_01.json`及`source_evidence/raw/HISTORICAL_REVISION_SEARCH_01/`。 |
-| 历史检索 02 | GitHub commit search：`Tuxprogrammer/msu_ece4723`公式修复提交及2013年前`"fix formula" xlsx` | 2个查询成功，21个去重命中；审阅提交差异 | Software Metrics 是开发证据；其他命中属于解析器/格式兼容改动、测试夹具或无修复真值。没有新增最终来源。回执在`source_evidence/HISTORICAL_REVISION_SEARCH_02.json`。 |
+| 历史检索 01 | GitHub commit search：2023年前的 `"formula error" xlsx`、`"fix formula" ods`、`"corrected formula" xls`、`"formula bug" spreadsheet` | 4个查询成功，47个去重命中；逐项检查提交和工作簿路径 | 原始查询使用`committer-date:<2023-01-01`，不是2013年前。仅找到文件格式/导出、改名或无法取得工作簿正文的候选；没有认证自然错误对。原始回执在`source_evidence/HISTORICAL_REVISION_SEARCH_01.json`及`source_evidence/raw/HISTORICAL_REVISION_SEARCH_01/`。 |
+| 历史检索 02 | GitHub commit search：`Tuxprogrammer/msu_ece4723`公式修复提交及2023年前`"fix formula" xlsx` | 2个查询成功，21个去重命中；审阅提交差异 | Software Metrics 是开发证据；其他命中属于解析器/格式兼容改动、测试夹具或无修复真值。没有新增最终来源。回执在`source_evidence/HISTORICAL_REVISION_SEARCH_02.json`。 |
 | GitHub 检索 03 | 2026-10-18查询`"corrected formula" xlsx`、`"formula error" spreadsheet`、`"fix formula" xlsm` | 查询成功，检查19个提交，其中5个触及工作簿文件 | 5个均未认证自然静默公式错误真值；包括生成文件、删除运行数据、模板修订或提交叙述缺独立业务核验。详见`source_evidence/NATURAL_REVISION_SEARCH.json`。 |
 | GitHub 检索 04 | 2026-10-19追加4个提交元数据查询 | 4个查询成功，检查19个提交，0个触及工作簿 | 无新增候选；回执`source_evidence/NATURAL_REVISION_SEARCH_20261019_2.json`。 |
 | 学术索引/搜索端点 05 | Google与DuckDuckGo网页搜索；Crossref、OpenAlex题名/关键词检索 | Google和DuckDuckGo各超时20秒；Crossref与OpenAlex各返回20项并保存原始响应哈希 | 结果为ExceLint、Enron语料错误检测等研究论文，没有识别出原/修订工作簿对或公式级真值；新增合格来源为0。回执`source_evidence/NATURAL_REVISION_SEARCH_20261019_3.json`，原始响应在忽略的`source_evidence/raw/source_search_20261019_3/`。 |
