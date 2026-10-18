@@ -1,0 +1,101 @@
+{
+  "cpu_seconds": 851.119508342,
+  "folds": [
+    {
+      "cpu_seconds": 201.295645939,
+      "features": 347,
+      "fold": "source__18f",
+      "negative": 1283517,
+      "positive": 18011,
+      "rows": 1301528,
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 0,
+        "learned_only": 0
+      },
+      "wall_seconds": 79.13149478699779
+    },
+    {
+      "cpu_seconds": 48.507687085999976,
+      "features": 347,
+      "fold": "source__authored_development",
+      "negative": 39723,
+      "positive": 171,
+      "rows": 39894,
+      "suggestions": {
+        "dev11": 14213,
+        "keep_base_plus_learned": 14213,
+        "learned_only": 0
+      },
+      "wall_seconds": 36.69214163200013
+    },
+    {
+      "cpu_seconds": 196.451371302,
+      "features": 347,
+      "fold": "source__iowa_state_agdm",
+      "negative": 1278626,
+      "positive": 18001,
+      "rows": 1296627,
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 3,
+        "learned_only": 3
+      },
+      "wall_seconds": 76.84141954200095
+    },
+    {
+      "cpu_seconds": 201.73561971399994,
+      "features": 347,
+      "fold": "source__packt",
+      "negative": 1278301,
+      "positive": 17974,
+      "rows": 1296275,
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 4,
+        "learned_only": 4
+      },
+      "wall_seconds": 78.34159693000038
+    },
+    {
+      "cpu_seconds": 202.85085498,
+      "features": 347,
+      "fold": "source__uk_government",
+      "negative": 1256453,
+      "positive": 17931,
+      "rows": 1274384,
+      "suggestions": {
+        "dev11": 0,
+        "keep_base_plus_learned": 80,
+        "learned_only": 80
+      },
+      "wall_seconds": 79.13765935800257
+    }
+  ],
+  "gpu_used": false,
+  "margin": 0.05,
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.0"
+  },
+  "parameters": {
+    "early_stopping": false,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.08,
+    "max_depth": 6,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "random_state": 1618
+  },
+  "peak_rss_kib": 7572944,
+  "python": "3.11.16",
+  "scope": "role feature ablation fits/inference; feature extraction and paper pipeline excluded",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "threshold": 0.9,
+  "wall_seconds": 350.34357733100114
+}

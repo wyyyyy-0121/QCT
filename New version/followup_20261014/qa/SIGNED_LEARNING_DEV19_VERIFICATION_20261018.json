@@ -1,0 +1,40 @@
+{
+  "accepted_final_families": 0,
+  "accepted_final_sources": 0,
+  "candidate_source_lock_verified": true,
+  "feature_pool_and_original_labels_unchanged": true,
+  "feature_replay_cases": 213,
+  "final_validation_eligible": false,
+  "frozen_score_unknown_preserved": 80,
+  "goal_complete": false,
+  "independent_integer_checks": 4473,
+  "known_correct_supplements": 7,
+  "main_candidate_adopted": false,
+  "posthoc_confirmed_wrong_supplements": 80,
+  "prediction_lock_sha256": "80d68637364e6dc3695f169f592834c7c60218eb9cea186515d7a83227d712fd",
+  "qa": {
+    "EVIDENCE_VISIBILITY_ADDENDUM": {
+      "file": "qa/SIGNED_LEARNING_DEV19_EVIDENCE_VISIBILITY_ADDENDUM_20261018.json",
+      "sha256": "1b927385e55876b8979dbe8f1086e31c8410999c47eab2beb84c5000c8bce65e"
+    },
+    "FEATURE_REPLAY": {
+      "file": "qa/SIGNED_LEARNING_DEV19_FEATURE_REPLAY_20261018.json",
+      "sha256": "2bea2d39bcafe4da5252312b1e24e2ec9e842017318973c2cad1606cc520ff05"
+    },
+    "INDEPENDENT_COUNTS": {
+      "file": "qa/SIGNED_LEARNING_DEV19_INDEPENDENT_COUNTS_20261018.json",
+      "sha256": "03bb66391c0999d6e15a1c5c92dfc3c3a88f236910cf8d2c43fd40813fd95573"
+    },
+    "POSTHOC_BUSINESS_REVIEW": {
+      "file": "qa/SIGNED_LEARNING_DEV19_POSTHOC_BUSINESS_REVIEW_20261018.json",
+      "sha256": "987a2e58eda23f668f3df979da0061b7c10ce7b32f6226dacd1c4f155a96f2ec"
+    },
+    "REPLAY": {
+      "file": "qa/SIGNED_LEARNING_DEV19_REPLAY_20261018.json",
+      "sha256": "063f77e2b695bb3160cecc34d613be56fd8fd13c48fbc2f1a1aaf54a0fcda13e"
+    }
+  },
+  "research_tests_passed": 196,
+  "source_holdout_folds": 5,
+  "suggestion_replay_cases": 213
+}

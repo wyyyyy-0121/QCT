@@ -2,7 +2,7 @@
   "goal_status": "active",
   "resumed_on": "2026-10-18",
   "resume_reason": "User requested continuation after verified GitHub upload",
-  "previous_upload_commit": "7be04903b27999c8d738de2072db91ddc6c45bd6",
+  "previous_upload_commit": "ce9c5f08ea0992ce5c5b2e8f9bb2f03f8cd64250",
   "git_branch": "research/hybridguard-followup",
   "final_validation_complete": false,
   "public_candidate_audit_dev7": {
@@ -17,17 +17,17 @@
     "accepted_template_families": 0
   },
   "baseline_reproduced": true,
-  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev18 experimental only",
+  "development_candidate": "dev6/dev8 core with frozen dev11 complete-AST gate; dev12-dev19 experimental only",
   "development_precision": 1.0,
   "development_coverage": 0.7936297279362973,
   "development_gate_passed": false,
   "public_sources_accepted": 0,
   "public_template_families_accepted": 0,
   "next_actions": [
-    "Develop observable signed-flow and target/reference role features: dev18 high-confidence false positives turn valid subtraction into addition",
-    "Use source-blocked training and calibration; do not lower thresholds against revealed heldout outcomes",
-    "Preserve full regression, exceptions, hidden errors, neutral changes, and unknown-output denominators",
-    "Freeze model, scorer and inclusion rules before reserved final workbook or correction-answer acquisition"
+    "Develop dimension and operator-consistency constraints before any dev19 adoption; unit evidence must be observable and not read from posthoc review",
+    "Preserve whole-origin validation and compare precision/coverage against frozen dev18 and dev19; do not use newly reviewed labels as unseen validation",
+    "Improve correct-candidate ranking without trading legitimate exceptions for additive or multiplicative stereotypes",
+    "Freeze model, scorer and inclusion rules before acquiring reserved final workbooks and answer bodies; natural-error pairing still incomplete"
   ],
   "original_locks_unchanged": true,
   "score_contract_tests_passed": true,
@@ -56,7 +56,7 @@
   "development_policy_tradeoff_wrong_correct_cells": 25,
   "development_policy_tradeoff_blocked_true_repairs": 0,
   "development_business_exception_problem_resolved": false,
-  "latest_report": "DEV18_CANDIDATE_EXPANSION_REPORT_20261018.md",
+  "latest_report": "DEV19_SIGNED_LEARNING_REPORT_20261018.md",
   "development_policy_tradeoff_previous_dev3_blocked_true_repairs": 24,
   "development_policy_interpretation": "four controlled English patterns only; development-authored; unseen policy generalization untested",
   "next_research_plan": "NEXT_RESEARCH.md",
@@ -849,8 +849,253 @@
     "additional_features": 185,
     "candidate_pool_changed": false,
     "control": "frozen dev18 source-heldout experiment",
-    "state": "feature locked; five-origin training running",
+    "state": "complete development ablation; rejected for adoption",
     "repair_metrics": null,
-    "final_validation_eligible": false
+    "final_validation_eligible": false,
+    "report": "DEV19_SIGNED_LEARNING_REPORT_20261018.md",
+    "total_features": 347,
+    "source_holdout": {
+      "18f": {
+        "dev11": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 11,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "keep_base_plus_learned": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 11,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "learned_only": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 11,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        }
+      },
+      "authored_development": {
+        "dev11": {
+          "correct": 14184,
+          "correct_errors": 14184,
+          "coverage": 0.7934660997986127,
+          "errors": 17876,
+          "precision_confirmed_lower_bound": 0.9979596144374868,
+          "suggestions": 14213,
+          "unknown": 0,
+          "wrong": 29,
+          "wrong_clean_cells": 29
+        },
+        "keep_base_plus_learned": {
+          "correct": 14184,
+          "correct_errors": 14184,
+          "coverage": 0.7934660997986127,
+          "errors": 17876,
+          "precision_confirmed_lower_bound": 0.9979596144374868,
+          "suggestions": 14213,
+          "unknown": 0,
+          "wrong": 29,
+          "wrong_clean_cells": 29
+        },
+        "learned_only": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 17876,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        }
+      },
+      "iowa_state_agdm": {
+        "dev11": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 21,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "keep_base_plus_learned": {
+          "correct": 3,
+          "correct_errors": 3,
+          "coverage": 0.14285714285714285,
+          "errors": 21,
+          "precision_confirmed_lower_bound": 1.0,
+          "suggestions": 3,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "learned_only": {
+          "correct": 3,
+          "correct_errors": 3,
+          "coverage": 0.14285714285714285,
+          "errors": 21,
+          "precision_confirmed_lower_bound": 1.0,
+          "suggestions": 3,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        }
+      },
+      "packt": {
+        "dev11": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 46,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "keep_base_plus_learned": {
+          "correct": 4,
+          "correct_errors": 4,
+          "coverage": 0.08695652173913043,
+          "errors": 46,
+          "precision_confirmed_lower_bound": 1.0,
+          "suggestions": 4,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "learned_only": {
+          "correct": 4,
+          "correct_errors": 4,
+          "coverage": 0.08695652173913043,
+          "errors": 46,
+          "precision_confirmed_lower_bound": 1.0,
+          "suggestions": 4,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        }
+      },
+      "uk_government": {
+        "dev11": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 119,
+          "precision_confirmed_lower_bound": null,
+          "suggestions": 0,
+          "unknown": 0,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "keep_base_plus_learned": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 119,
+          "precision_confirmed_lower_bound": 0.0,
+          "suggestions": 80,
+          "unknown": 80,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        },
+        "learned_only": {
+          "correct": 0,
+          "correct_errors": 0,
+          "coverage": 0.0,
+          "errors": 119,
+          "precision_confirmed_lower_bound": 0.0,
+          "suggestions": 80,
+          "unknown": 80,
+          "wrong": 0,
+          "wrong_clean_cells": 0
+        }
+      }
+    },
+    "pooled_diagnostic": {
+      "dev11": {
+        "correct": 14184,
+        "correct_errors": 14184,
+        "coverage": 0.7848171305261993,
+        "errors": 18073,
+        "precision_confirmed_lower_bound": 0.9979596144374868,
+        "suggestions": 14213,
+        "unknown": 0,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "keep_base_plus_learned": {
+        "correct": 14191,
+        "correct_errors": 14191,
+        "coverage": 0.7852044486250207,
+        "errors": 18073,
+        "precision_confirmed_lower_bound": 0.9923776223776224,
+        "suggestions": 14300,
+        "unknown": 80,
+        "wrong": 29,
+        "wrong_clean_cells": 29
+      },
+      "learned_only": {
+        "correct": 7,
+        "correct_errors": 7,
+        "coverage": 0.00038731809882144635,
+        "errors": 18073,
+        "precision_confirmed_lower_bound": 0.08045977011494253,
+        "suggestions": 87,
+        "unknown": 80,
+        "wrong": 0,
+        "wrong_clean_cells": 0
+      }
+    },
+    "supplemental_correct": 7,
+    "frozen_score_unknown": 80,
+    "posthoc_confirmed_harmful": 80,
+    "main_candidate_adopted": false,
+    "model_trained": true,
+    "posthoc_review": "qa/SIGNED_LEARNING_DEV19_POSTHOC_BUSINESS_REVIEW_20261018.json",
+    "evidence_visibility_addendum": "qa/SIGNED_LEARNING_DEV19_EVIDENCE_VISIBILITY_ADDENDUM_20261018.json",
+    "full_role_feature_replay_reproduced": true,
+    "qa": {
+      "REPLAY": {
+        "file": "qa/SIGNED_LEARNING_DEV19_REPLAY_20261018.json",
+        "sha256": "063f77e2b695bb3160cecc34d613be56fd8fd13c48fbc2f1a1aaf54a0fcda13e"
+      },
+      "FEATURE_REPLAY": {
+        "file": "qa/SIGNED_LEARNING_DEV19_FEATURE_REPLAY_20261018.json",
+        "sha256": "2bea2d39bcafe4da5252312b1e24e2ec9e842017318973c2cad1606cc520ff05"
+      },
+      "INDEPENDENT_COUNTS": {
+        "file": "qa/SIGNED_LEARNING_DEV19_INDEPENDENT_COUNTS_20261018.json",
+        "sha256": "03bb66391c0999d6e15a1c5c92dfc3c3a88f236910cf8d2c43fd40813fd95573"
+      },
+      "POSTHOC_BUSINESS_REVIEW": {
+        "file": "qa/SIGNED_LEARNING_DEV19_POSTHOC_BUSINESS_REVIEW_20261018.json",
+        "sha256": "987a2e58eda23f668f3df979da0061b7c10ce7b32f6226dacd1c4f155a96f2ec"
+      },
+      "EVIDENCE_VISIBILITY_ADDENDUM": {
+        "file": "qa/SIGNED_LEARNING_DEV19_EVIDENCE_VISIBILITY_ADDENDUM_20261018.json",
+        "sha256": "1b927385e55876b8979dbe8f1086e31c8410999c47eab2beb84c5000c8bce65e"
+      }
+    },
+    "upload_state": "source and features verified ce9c5f0; results to push"
   }
 }

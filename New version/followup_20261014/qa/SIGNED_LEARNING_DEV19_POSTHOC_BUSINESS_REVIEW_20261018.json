@@ -1,0 +1,1620 @@
+{
+  "confirmed_harmful_suggestions": 80,
+  "final_validation_eligible": false,
+  "frozen_score_sha256": "aadba67ce00955081d7a95a34964a8eb27854612a5f8bbbd7dc47a8a092198eb",
+  "frozen_score_unchanged": true,
+  "outputs_reviewed": 80,
+  "prediction_lock_sha256": "80d68637364e6dc3695f169f592834c7c60218eb9cea186515d7a83227d712fd",
+  "review_script_sha256": "7efc5689fd4b9c1570ae43894ccfd5171444fa02989c9162b51b939b5f87f57a",
+  "rows": [
+    {
+      "case": "lcoe/annotation01",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation01",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation01",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation01",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation01",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation02",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation02",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation02",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation02",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation02",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation03",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation03",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation03",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation03",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation03",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation04",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation04",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation04",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation04",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation04",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation05",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation05",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation05",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation05",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation05",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation06",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation06",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation06",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation07",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation07",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation08",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation08",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation09",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation09",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation09",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation09",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation09",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation10",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation10",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation10",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation10",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation10",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation11",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation11",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation11",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation11",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation11",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation12",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation12",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation12",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation12",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation12",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation13",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation13",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation13",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation13",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation13",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation14",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation14",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation14",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation14",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation14",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation15",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation15",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation15",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    },
+    {
+      "case": "lcoe/annotation16",
+      "cell": "CCGT LCOE calc!J45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=J42+J44",
+      "observed_formula": "=J42+J44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!J42": "32/7",
+          "ccgt lcoe calc!J44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=J42*J44"
+    },
+    {
+      "case": "lcoe/annotation16",
+      "cell": "CCGT LCOE calc!K45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=K42+K44",
+      "observed_formula": "=K42+K44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!K42": "32/7",
+          "ccgt lcoe calc!K44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=K42*K44"
+    },
+    {
+      "case": "lcoe/annotation16",
+      "cell": "CCGT LCOE calc!L45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=L42+L44",
+      "observed_formula": "=L42+L44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "ccgt lcoe calc!L42": "32/7",
+          "ccgt lcoe calc!L44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=L42*L44"
+    },
+    {
+      "case": "lcoe/annotation16",
+      "cell": "Offshore LCOE!M45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=M42+M44",
+      "observed_formula": "=M42+M44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!M42": "32/7",
+          "offshore lcoe!M44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=M42*M44"
+    },
+    {
+      "case": "lcoe/annotation16",
+      "cell": "Offshore LCOE!N45",
+      "correct_before": true,
+      "evidence": "Visible construction-total description requires sum; both contributing costs and total are in GBP million. Product has incompatible squared currency units.",
+      "expected_formula": "=N42+N44",
+      "observed_formula": "=N42+N44",
+      "rational_relation_witness": {
+        "expected": "487/56",
+        "inputs": {
+          "offshore lcoe!N42": "32/7",
+          "offshore lcoe!N44": "33/8"
+        },
+        "observed": "132/7",
+        "scope": "exact rational relation counterexample, not actual full-workbook Excel values"
+      },
+      "repair_correct": false,
+      "scope": "local additive cost relationship only; upstream costs and actual Excel numeric impact not certified",
+      "suggested_formula": "=N42*N44"
+    }
+  ],
+  "scope_selected_after_output_inspection": true,
+  "supplemental_posthoc_learner_counts": {
+    "correct": 7,
+    "precision": 0.08045977011494253,
+    "suggestions": 87,
+    "unknown": 0,
+    "wrong": 80
+  },
+  "unique_original_cells": 5
+}
