@@ -1,0 +1,5494 @@
+{
+  "audit_source_sha256": "36bfa2b29c808ca22fa6f043116ca7aa274c0fb62fbf985b5417cd07915d334b",
+  "by_origin": {
+    "18f": {
+      "correct_candidate_ineligible": 1,
+      "insufficient_margin": 10
+    },
+    "authored_development": {
+      "base_correct_selected": 14184,
+      "correct_candidate_missing": 25,
+      "selected_wrong_or_unknown": 22,
+      "wrong_or_unknown_ranked_first": 3645
+    },
+    "iowa_state_agdm": {
+      "correct_candidate_ineligible": 1,
+      "wrong_or_unknown_ranked_first": 20
+    },
+    "packt": {
+      "correct_candidate_ineligible": 1,
+      "insufficient_margin": 4,
+      "wrong_or_unknown_ranked_first": 41
+    },
+    "uk_government": {
+      "correct_candidate_missing": 29,
+      "insufficient_margin": 63,
+      "wrong_or_unknown_ranked_first": 27
+    }
+  },
+  "details": [
+    {
+      "best_correct_preference": 0.998510145320066,
+      "case": "multisource/ms02_03",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18+E6",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E18*E6",
+          "label": 1,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E18-E6",
+          "label": 0,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E18/E6",
+          "label": 0,
+          "preference": 0.998510145320066
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9634037443295034,
+      "case": "multisource/ms02_04",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18*F6",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E18*E6",
+          "label": 1,
+          "preference": 0.9634037443295034
+        },
+        {
+          "formula": "=E18*G6",
+          "label": 0,
+          "preference": 0.9575745248122436
+        },
+        {
+          "formula": "=E18+F6",
+          "label": 0,
+          "preference": 0.9089746052858889
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9985117531156209,
+      "case": "multisource/ms02_05",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18*E6*1.1",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E18*E6",
+          "label": 1,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=E18*E6+1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=E18*E6-1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.998510145320066,
+      "case": "multisource/ms02_06",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18+E6",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E18*E6",
+          "label": 1,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E18-E6",
+          "label": 0,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E18/E6",
+          "label": 0,
+          "preference": 0.998510145320066
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.998510145320066,
+      "case": "multisource/ms02_06",
+      "cell": "Optimistic Inucrring Technical !E13",
+      "expected": "=E12*E5",
+      "observed": "=E12+E5",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E12*E5",
+          "label": 1,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E12-E5",
+          "label": 0,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E12/E5",
+          "label": 0,
+          "preference": 0.998510145320066
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.998510145320066,
+      "case": "multisource/ms02_06",
+      "cell": "Realistic Steady-State!E13",
+      "expected": "=E12*E5",
+      "observed": "=E12+E5",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E12*E5",
+          "label": 1,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E12-E5",
+          "label": 0,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E12/E5",
+          "label": 0,
+          "preference": 0.998510145320066
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9985117531156209,
+      "case": "multisource/ms02_07",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18*E6*1.1",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E18*E6",
+          "label": 1,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=E18*E6+1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=E18*E6-1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9985117531156209,
+      "case": "multisource/ms02_07",
+      "cell": "Optimistic Inucrring Technical !E12",
+      "expected": "=SUM(E8:E11)",
+      "observed": "=(SUM(E8:E11))*1.1",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=(SUM(E8:E11))",
+          "label": 1,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=(SUM(E8:E11))+1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=(SUM(E8:E11))-1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9985117531156209,
+      "case": "multisource/ms02_07",
+      "cell": "Realistic Steady-State!E13",
+      "expected": "=E12*E5",
+      "observed": "=E12*E5*1.1",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E12*E5",
+          "label": 1,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=E12*E5+1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        },
+        {
+          "formula": "=E12*E5-1.1",
+          "label": 0,
+          "preference": 0.9985117531156209
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "multisource/ms02_09",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18+E6",
+      "origin": "18f",
+      "reason": "correct_candidate_ineligible",
+      "top": []
+    },
+    {
+      "best_correct_preference": 0.998510145320066,
+      "case": "multisource/ms02_10",
+      "cell": "Enter Your Model Here!E19",
+      "expected": "=E18*E6",
+      "observed": "=E18+E6",
+      "origin": "18f",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=E18*E6",
+          "label": 1,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E18-E6",
+          "label": 0,
+          "preference": 0.998510145320066
+        },
+        {
+          "formula": "=E18/E6",
+          "label": 0,
+          "preference": 0.998510145320066
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9203179201588427,
+      "case": "regression/sparse_seed101",
+      "cell": "Central!I157",
+      "expected": "=B157*C157*(1-D157)*(1-G157)-B157*E157-F157",
+      "observed": "=B157*C157*(1-D157)*(1-G157)-B157*E157",
+      "origin": "authored_development",
+      "reason": "base_correct_selected",
+      "top": [
+        {
+          "formula": "=B157*C157*(1*D157)*(1-G157)-B157*E157",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B157*C157*(1-D157)*(1*G157)-B157*E157",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B157*C157*(1-D157)*(1-G157)*B157*E157",
+          "label": 0,
+          "preference": 0.9871942557305068
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.7775010996226281,
+      "case": "regression/sparse_seed101",
+      "cell": "Central!I47",
+      "expected": "=B47*C47*(1-D47)*(1-G47)-B47*E47-F47",
+      "observed": "=B47*C47*(1-D47)*(1-G47)+B47*E47-F47",
+      "origin": "authored_development",
+      "reason": "base_correct_selected",
+      "top": [
+        {
+          "formula": "=B47*C47*(1*D47)*(1-G47)+B47*E47-F47",
+          "label": 0,
+          "preference": 0.9861548956572601
+        },
+        {
+          "formula": "=B47*C47*(1-D47)*(1*G47)+B47*E47-F47",
+          "label": 0,
+          "preference": 0.9861548956572601
+        },
+        {
+          "formula": "=B47*C47*(1-D47)*(1-G47)+B47*E47*F47",
+          "label": 0,
+          "preference": 0.9861548956572601
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9531703071154058,
+      "case": "regression/sparse_seed101",
+      "cell": "Central!I662",
+      "expected": "=B662*C662*(1-D662)*(1-G662)-B662*E662-F662",
+      "observed": "=B662*C662*(1-D662)*(1-G662)*0.85-B662*E662-F662",
+      "origin": "authored_development",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B662*C662*(1*D662)*(1-G662)*0.85-B662*E662-F662",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B662*C662*(1-D662)*(1*G662)*0.85-B662*E662-F662",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B662*C662*(1-D662)*(1-G662)*0.85*B662*E662-F662",
+          "label": 0,
+          "preference": 0.9871942557305068
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9531703071154058,
+      "case": "regression/sparse_seed101",
+      "cell": "Central!I930",
+      "expected": "=B930*C930*(1-D930)*(1-G930)-B930*E930-F930",
+      "observed": "=B930*C930*(1-D930)*(1-G930)*0.85-B930*E930-F930",
+      "origin": "authored_development",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B930*C930*(1*D930)*(1-G930)*0.85-B930*E930-F930",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B930*C930*(1-D930)*(1*G930)*0.85-B930*E930-F930",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B930*C930*(1-D930)*(1-G930)*0.85*B930*E930-F930",
+          "label": 0,
+          "preference": 0.9871942557305068
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.7775010996226281,
+      "case": "regression/sparse_seed101",
+      "cell": "East!I1038",
+      "expected": "=B1038*C1038*(1-D1038)*(1-G1038)-B1038*E1038-F1038",
+      "observed": "=B1038*C1038*(1-D1038)*(1-G1038)+B1038*E1038-F1038",
+      "origin": "authored_development",
+      "reason": "base_correct_selected",
+      "top": [
+        {
+          "formula": "=B1038*C1038*(1*D1038)*(1-G1038)+B1038*E1038-F1038",
+          "label": 0,
+          "preference": 0.9861548956572601
+        },
+        {
+          "formula": "=B1038*C1038*(1-D1038)*(1*G1038)+B1038*E1038-F1038",
+          "label": 0,
+          "preference": 0.9861548956572601
+        },
+        {
+          "formula": "=B1038*C1038*(1-D1038)*(1-G1038)+B1038*E1038*F1038",
+          "label": 0,
+          "preference": 0.9861548956572601
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9531703071154058,
+      "case": "regression/sparse_seed101",
+      "cell": "East!I277",
+      "expected": "=B277*C277*(1-D277)*(1-G277)-B277*E277-F277",
+      "observed": "=B277*C277*(1-D277)*(1-G277)*0.85-B277*E277-F277",
+      "origin": "authored_development",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B277*C277*(1*D277)*(1-G277)*0.85-B277*E277-F277",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B277*C277*(1-D277)*(1*G277)*0.85-B277*E277-F277",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B277*C277*(1-D277)*(1-G277)*0.85*B277*E277-F277",
+          "label": 0,
+          "preference": 0.9871942557305068
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.7775010996226281,
+      "case": "regression/sparse_seed101",
+      "cell": "East!I326",
+      "expected": "=B326*C326*(1-D326)*(1-G326)-B326*E326-F326",
+      "observed": "=B326*C326*(1+D326)*(1-G326)-B326*E326-F326",
+      "origin": "authored_development",
+      "reason": "base_correct_selected",
+      "top": [
+        {
+          "formula": "=B326*C326*(1+D326)*(1*G326)-B326*E326-F326",
+          "label": 0,
+          "preference": 0.9861548956572601
+        },
+        {
+          "formula": "=B326*C326*(1+D326)*(1-G326)*B326*E326-F326",
+          "label": 0,
+          "preference": 0.9861548956572601
+        },
+        {
+          "formula": "=B326*C326*(1+D326)*(1-G326)-B326*E326*F326",
+          "label": 0,
+          "preference": 0.9861548956572601
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9531703071154058,
+      "case": "regression/sparse_seed101",
+      "cell": "South!I204",
+      "expected": "=B204*C204*(1-D204)*(1-G204)-B204*E204-F204",
+      "observed": "=B204*C204*(1-D204)*(1-G204)*0.85-B204*E204-F204",
+      "origin": "authored_development",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B204*C204*(1*D204)*(1-G204)*0.85-B204*E204-F204",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B204*C204*(1-D204)*(1*G204)*0.85-B204*E204-F204",
+          "label": 0,
+          "preference": 0.9871942557305068
+        },
+        {
+          "formula": "=B204*C204*(1-D204)*(1-G204)*0.85*B204*E204-F204",
+          "label": 0,
+          "preference": 0.9871942557305068
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.14961964712730502,
+      "case": "adversarial/a34",
+      "cell": "A!F10",
+      "expected": "=B10*C10/D10+E10",
+      "observed": "=B10*C10*D10+E10",
+      "origin": "authored_development",
+      "reason": "selected_wrong_or_unknown",
+      "top": [
+        {
+          "formula": "=B10*C10*D10*E10",
+          "label": 0,
+          "preference": 0.9834744059415618
+        },
+        {
+          "formula": "=B10*C10*D10+F10",
+          "label": 0,
+          "preference": 0.9086821762442878
+        },
+        {
+          "formula": "=B10*C10*D10-E10",
+          "label": 0,
+          "preference": 0.8938736636661035
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.14961964712730502,
+      "case": "adversarial/a34",
+      "cell": "A!F11",
+      "expected": "=B11*C11/D11+E11",
+      "observed": "=B11*C11*D11+E11",
+      "origin": "authored_development",
+      "reason": "selected_wrong_or_unknown",
+      "top": [
+        {
+          "formula": "=B11*C11*D11*E11",
+          "label": 0,
+          "preference": 0.9834744059415618
+        },
+        {
+          "formula": "=B11*C11*D11+F11",
+          "label": 0,
+          "preference": 0.9086821762442878
+        },
+        {
+          "formula": "=B11*C11*D11-E11",
+          "label": 0,
+          "preference": 0.8938736636661035
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.14961964712730502,
+      "case": "adversarial/a34",
+      "cell": "A!F12",
+      "expected": "=B12*C12/D12+E12",
+      "observed": "=B12*C12*D12+E12",
+      "origin": "authored_development",
+      "reason": "selected_wrong_or_unknown",
+      "top": [
+        {
+          "formula": "=B12*C12*D12*E12",
+          "label": 0,
+          "preference": 0.9834744059415618
+        },
+        {
+          "formula": "=B12*C12*D12+F12",
+          "label": 0,
+          "preference": 0.9086821762442878
+        },
+        {
+          "formula": "=B12*C12*D12-E12",
+          "label": 0,
+          "preference": 0.8938736636661035
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.14961964712730502,
+      "case": "adversarial/a34",
+      "cell": "A!F13",
+      "expected": "=B13*C13/D13+E13",
+      "observed": "=B13*C13*D13+E13",
+      "origin": "authored_development",
+      "reason": "selected_wrong_or_unknown",
+      "top": [
+        {
+          "formula": "=B13*C13*D13*E13",
+          "label": 0,
+          "preference": 0.9834744059415618
+        },
+        {
+          "formula": "=B13*C13*D13+F13",
+          "label": 0,
+          "preference": 0.9086821762442878
+        },
+        {
+          "formula": "=B13*C13*D13-E13",
+          "label": 0,
+          "preference": 0.8938736636661035
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "adversarial/a42",
+      "cell": "A!F2",
+      "expected": "=B2*C2+D2+E2",
+      "observed": "=B2*C2-D2+E2",
+      "origin": "authored_development",
+      "reason": "correct_candidate_missing",
+      "top": []
+    },
+    {
+      "best_correct_preference": null,
+      "case": "adversarial/a42",
+      "cell": "A!F3",
+      "expected": "=B3*C3+D3+E3",
+      "observed": "=B3*C3-D3+E3",
+      "origin": "authored_development",
+      "reason": "correct_candidate_missing",
+      "top": []
+    },
+    {
+      "best_correct_preference": null,
+      "case": "adversarial/a42",
+      "cell": "A!F4",
+      "expected": "=B4*C4+D4+E4",
+      "observed": "=B4*C4-D4+E4",
+      "origin": "authored_development",
+      "reason": "correct_candidate_missing",
+      "top": []
+    },
+    {
+      "best_correct_preference": null,
+      "case": "adversarial/a42",
+      "cell": "A!F5",
+      "expected": "=B5*C5+D5+E5",
+      "observed": "=B5*C5-D5+E5",
+      "origin": "authored_development",
+      "reason": "correct_candidate_missing",
+      "top": []
+    },
+    {
+      "best_correct_preference": 0.9991862700302665,
+      "case": "multisource/ms01_03",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B26+B52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B26*B52",
+          "label": 0,
+          "preference": 0.9995340625305758
+        },
+        {
+          "formula": "=B26/B52",
+          "label": 0,
+          "preference": 0.9992293747994994
+        },
+        {
+          "formula": "=B26-B52",
+          "label": 1,
+          "preference": 0.9991862700302665
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.880468304134527,
+      "case": "multisource/ms01_04",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B25-B52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B25*B52",
+          "label": 0,
+          "preference": 0.9995340625305758
+        },
+        {
+          "formula": "=B25+B52",
+          "label": 0,
+          "preference": 0.9995197981857641
+        },
+        {
+          "formula": "=B25/B52",
+          "label": 0,
+          "preference": 0.9992293747994994
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9983220690027061,
+      "case": "multisource/ms01_05",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B26-B52*1.1",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B26*B52*1.1",
+          "label": 0,
+          "preference": 0.9996049934922727
+        },
+        {
+          "formula": "=B26+B52*1.1",
+          "label": 0,
+          "preference": 0.9995920048809743
+        },
+        {
+          "formula": "=B26/B52*1.1",
+          "label": 0,
+          "preference": 0.99934452697453
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B26+B52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B26*B52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=B26/B52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=B26-B52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!C56",
+      "expected": "=C26-C52",
+      "observed": "=C26+C52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=C26*C52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=C26/C52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=C26-C52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!D56",
+      "expected": "=D26-D52",
+      "observed": "=D26+D52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=D26*D52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=D26/D52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=D26-D52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!E56",
+      "expected": "=E26-E52",
+      "observed": "=E26+E52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=E26*E52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=E26/E52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=E26-E52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!F56",
+      "expected": "=F26-F52",
+      "observed": "=F26+F52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=F26*F52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=F26/F52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=F26-F52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!G56",
+      "expected": "=G26-G52",
+      "observed": "=G26+G52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=G26*G52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=G26/G52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=G26-G52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!H56",
+      "expected": "=H26-H52",
+      "observed": "=H26+H52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=H26*H52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=H26/H52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=H26-H52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!I56",
+      "expected": "=I26-I52",
+      "observed": "=I26+I52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=I26*I52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=I26/I52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=I26-I52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!J56",
+      "expected": "=J26-J52",
+      "observed": "=J26+J52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=J26*J52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=J26/J52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=J26-J52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!K56",
+      "expected": "=K26-K52",
+      "observed": "=K26+K52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=K26*K52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=K26/K52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=K26-K52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!L56",
+      "expected": "=L26-L52",
+      "observed": "=L26+L52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=L26*L52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=L26/L52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=L26-L52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.999312419574371,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!M56",
+      "expected": "=M26-M52",
+      "observed": "=M26+M52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=M26*M52",
+          "label": 0,
+          "preference": 0.9996123605833759
+        },
+        {
+          "formula": "=M26/M52",
+          "label": 0,
+          "preference": 0.9993478315808646
+        },
+        {
+          "formula": "=M26-M52",
+          "label": 1,
+          "preference": 0.999312419574371
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9989054779498014,
+      "case": "multisource/ms01_06",
+      "cell": "Cash Flow Budget!N56",
+      "expected": "=N26-N52",
+      "observed": "=N26+N52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=N26*N52",
+          "label": 0,
+          "preference": 0.9993825744824818
+        },
+        {
+          "formula": "=N26/N52",
+          "label": 0,
+          "preference": 0.998961980073783
+        },
+        {
+          "formula": "=N26-N52",
+          "label": 1,
+          "preference": 0.9989054779498014
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9983220690027061,
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B26-B52*1.1",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B26*B52*1.1",
+          "label": 0,
+          "preference": 0.9996049934922727
+        },
+        {
+          "formula": "=B26+B52*1.1",
+          "label": 0,
+          "preference": 0.9995920048809743
+        },
+        {
+          "formula": "=B26/B52*1.1",
+          "label": 0,
+          "preference": 0.99934452697453
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9994081533785306,
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!H58",
+      "expected": "=G58+H56",
+      "observed": "=(G58+H56)*1.1",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=(G58*H56)*1.1",
+          "label": 0,
+          "preference": 0.9995264027352933
+        },
+        {
+          "formula": "=G58+H56",
+          "label": 1,
+          "preference": 0.9994081533785306
+        },
+        {
+          "formula": "=(G58/H56)*1.1",
+          "label": 0,
+          "preference": 0.99934452697453
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9983220690027061,
+      "case": "multisource/ms01_07",
+      "cell": "Cash Flow Budget!N56",
+      "expected": "=N26-N52",
+      "observed": "=N26-N52*1.1",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=N26*N52*1.1",
+          "label": 0,
+          "preference": 0.9996049934922727
+        },
+        {
+          "formula": "=N26+N52*1.1",
+          "label": 0,
+          "preference": 0.9995920048809743
+        },
+        {
+          "formula": "=N26/N52*1.1",
+          "label": 0,
+          "preference": 0.99934452697453
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "multisource/ms01_09",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B26+B52",
+      "origin": "iowa_state_agdm",
+      "reason": "correct_candidate_ineligible",
+      "top": []
+    },
+    {
+      "best_correct_preference": 0.9991862700302665,
+      "case": "multisource/ms01_10",
+      "cell": "Cash Flow Budget!B56",
+      "expected": "=B26-B52",
+      "observed": "=B26+B52",
+      "origin": "iowa_state_agdm",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=B26*B52",
+          "label": 0,
+          "preference": 0.9995340625305758
+        },
+        {
+          "formula": "=B26/B52",
+          "label": 0,
+          "preference": 0.9992293747994994
+        },
+        {
+          "formula": "=B26-B52",
+          "label": 1,
+          "preference": 0.9991862700302665
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9796117694935831,
+      "case": "multisource/ms03_03",
+      "cell": "Debt!F11",
+      "expected": "=SUM(F8:F10)",
+      "observed": "=F8+F9-F10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=F8*F9-F10",
+          "label": 0,
+          "preference": 0.9984658853945118
+        },
+        {
+          "formula": "=F8-F9-F10",
+          "label": 0,
+          "preference": 0.9984468148111649
+        },
+        {
+          "formula": "=F8/F9-F10",
+          "label": 0,
+          "preference": 0.9969650849601431
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9951102492348238,
+      "case": "multisource/ms03_05",
+      "cell": "Debt!F11",
+      "expected": "=SUM(F8:F10)",
+      "observed": "=SUM(F8:F10)*1.1",
+      "origin": "packt",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=SUM(F8:F10)",
+          "label": 1,
+          "preference": 0.9951102492348238
+        },
+        {
+          "formula": "=SUM(F8:F10)-1.1",
+          "label": 0,
+          "preference": 0.9935143848042309
+        },
+        {
+          "formula": "=SUM(F8:F10)/1.1",
+          "label": 0,
+          "preference": 0.9871911216673543
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!F11",
+      "expected": "=SUM(F8:F10)",
+      "observed": "=F8+F9-F10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=F8/F9-F10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=F8*F9-F10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=F8-F9-F10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!G11",
+      "expected": "=SUM(G8:G10)",
+      "observed": "=G8+G9-G10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=G8/G9-G10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=G8*G9-G10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=G8-G9-G10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!H11",
+      "expected": "=SUM(H8:H10)",
+      "observed": "=H8+H9-H10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=H8/H9-H10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=H8*H9-H10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=H8-H9-H10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!I11",
+      "expected": "=SUM(I8:I10)",
+      "observed": "=I8+I9-I10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=I8/I9-I10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=I8*I9-I10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=I8-I9-I10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!J11",
+      "expected": "=SUM(J8:J10)",
+      "observed": "=J8+J9-J10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=J8/J9-J10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=J8*J9-J10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=J8-J9-J10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!K11",
+      "expected": "=SUM(K8:K10)",
+      "observed": "=K8+K9-K10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=K8/K9-K10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=K8*K9-K10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=K8-K9-K10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!L11",
+      "expected": "=SUM(L8:L10)",
+      "observed": "=L8+L9-L10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=L8/L9-L10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=L8*L9-L10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=L8-L9-L10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!M11",
+      "expected": "=SUM(M8:M10)",
+      "observed": "=M8+M9-M10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=M8/M9-M10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=M8*M9-M10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=M8-M9-M10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!N11",
+      "expected": "=SUM(N8:N10)",
+      "observed": "=N8+N9-N10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=N8/N9-N10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=N8*N9-N10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=N8-N9-N10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!O11",
+      "expected": "=SUM(O8:O10)",
+      "observed": "=O8+O9-O10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=O8/O9-O10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=O8*O9-O10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=O8-O9-O10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!P11",
+      "expected": "=SUM(P8:P10)",
+      "observed": "=P8+P9-P10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=P8/P9-P10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=P8*P9-P10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=P8-P9-P10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!Q11",
+      "expected": "=SUM(Q8:Q10)",
+      "observed": "=Q8+Q9-Q10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=Q8/Q9-Q10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=Q8*Q9-Q10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=Q8-Q9-Q10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!R11",
+      "expected": "=SUM(R8:R10)",
+      "observed": "=R8+R9-R10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=R8/R9-R10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=R8*R9-R10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=R8-R9-R10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!S11",
+      "expected": "=SUM(S8:S10)",
+      "observed": "=S8+S9-S10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=S8/S9-S10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=S8*S9-S10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=S8-S9-S10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!T11",
+      "expected": "=SUM(T8:T10)",
+      "observed": "=T8+T9-T10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=T8/T9-T10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=T8*T9-T10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=T8-T9-T10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!U11",
+      "expected": "=SUM(U8:U10)",
+      "observed": "=U8+U9-U10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=U8/U9-U10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=U8*U9-U10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=U8-U9-U10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!V11",
+      "expected": "=SUM(V8:V10)",
+      "observed": "=V8+V9-V10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=V8/V9-V10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=V8*V9-V10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=V8-V9-V10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!W11",
+      "expected": "=SUM(W8:W10)",
+      "observed": "=W8+W9-W10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=W8/W9-W10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=W8*W9-W10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=W8-W9-W10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!X11",
+      "expected": "=SUM(X8:X10)",
+      "observed": "=X8+X9-X10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=X8/X9-X10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=X8*X9-X10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=X8-X9-X10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!Y11",
+      "expected": "=SUM(Y8:Y10)",
+      "observed": "=Y8+Y9-Y10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=Y8/Y9-Y10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=Y8*Y9-Y10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=Y8-Y9-Y10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!Z11",
+      "expected": "=SUM(Z8:Z10)",
+      "observed": "=Z8+Z9-Z10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=Z8/Z9-Z10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=Z8*Z9-Z10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=Z8-Z9-Z10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AA11",
+      "expected": "=SUM(AA8:AA10)",
+      "observed": "=AA8+AA9-AA10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AA8/AA9-AA10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AA8*AA9-AA10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AA8-AA9-AA10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AB11",
+      "expected": "=SUM(AB8:AB10)",
+      "observed": "=AB8+AB9-AB10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AB8/AB9-AB10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AB8*AB9-AB10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AB8-AB9-AB10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AC11",
+      "expected": "=SUM(AC8:AC10)",
+      "observed": "=AC8+AC9-AC10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AC8/AC9-AC10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AC8*AC9-AC10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AC8-AC9-AC10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AD11",
+      "expected": "=SUM(AD8:AD10)",
+      "observed": "=AD8+AD9-AD10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AD8/AD9-AD10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AD8*AD9-AD10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AD8-AD9-AD10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AE11",
+      "expected": "=SUM(AE8:AE10)",
+      "observed": "=AE8+AE9-AE10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AE8/AE9-AE10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AE8*AE9-AE10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AE8-AE9-AE10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AF11",
+      "expected": "=SUM(AF8:AF10)",
+      "observed": "=AF8+AF9-AF10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AF8/AF9-AF10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AF8*AF9-AF10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AF8-AF9-AF10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AG11",
+      "expected": "=SUM(AG8:AG10)",
+      "observed": "=AG8+AG9-AG10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AG8/AG9-AG10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AG8*AG9-AG10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AG8-AG9-AG10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AH11",
+      "expected": "=SUM(AH8:AH10)",
+      "observed": "=AH8+AH9-AH10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AH8/AH9-AH10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AH8*AH9-AH10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AH8-AH9-AH10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AI11",
+      "expected": "=SUM(AI8:AI10)",
+      "observed": "=AI8+AI9-AI10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AI8/AI9-AI10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AI8*AI9-AI10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AI8-AI9-AI10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AJ11",
+      "expected": "=SUM(AJ8:AJ10)",
+      "observed": "=AJ8+AJ9-AJ10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AJ8/AJ9-AJ10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AJ8*AJ9-AJ10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AJ8-AJ9-AJ10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AK11",
+      "expected": "=SUM(AK8:AK10)",
+      "observed": "=AK8+AK9-AK10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AK8/AK9-AK10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AK8*AK9-AK10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AK8-AK9-AK10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AL11",
+      "expected": "=SUM(AL8:AL10)",
+      "observed": "=AL8+AL9-AL10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AL8/AL9-AL10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AL8*AL9-AL10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AL8-AL9-AL10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AM11",
+      "expected": "=SUM(AM8:AM10)",
+      "observed": "=AM8+AM9-AM10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AM8/AM9-AM10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AM8*AM9-AM10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AM8-AM9-AM10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AN11",
+      "expected": "=SUM(AN8:AN10)",
+      "observed": "=AN8+AN9-AN10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AN8/AN9-AN10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AN8*AN9-AN10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AN8-AN9-AN10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AO11",
+      "expected": "=SUM(AO8:AO10)",
+      "observed": "=AO8+AO9-AO10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AO8/AO9-AO10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AO8*AO9-AO10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AO8-AO9-AO10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AP11",
+      "expected": "=SUM(AP8:AP10)",
+      "observed": "=AP8+AP9-AP10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AP8/AP9-AP10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AP8*AP9-AP10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AP8-AP9-AP10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AQ11",
+      "expected": "=SUM(AQ8:AQ10)",
+      "observed": "=AQ8+AQ9-AQ10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AQ8/AQ9-AQ10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AQ8*AQ9-AQ10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AQ8-AQ9-AQ10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9873182886486329,
+      "case": "multisource/ms03_06",
+      "cell": "Debt!AR11",
+      "expected": "=SUM(AR8:AR10)",
+      "observed": "=AR8+AR9-AR10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AR8/AR9-AR10",
+          "label": 0,
+          "preference": 0.9988787956335242
+        },
+        {
+          "formula": "=AR8*AR9-AR10",
+          "label": 0,
+          "preference": 0.9988399708237362
+        },
+        {
+          "formula": "=AR8-AR9-AR10",
+          "label": 0,
+          "preference": 0.9988227087711008
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9951102492348238,
+      "case": "multisource/ms03_07",
+      "cell": "Debt!F11",
+      "expected": "=SUM(F8:F10)",
+      "observed": "=SUM(F8:F10)*1.1",
+      "origin": "packt",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=SUM(F8:F10)",
+          "label": 1,
+          "preference": 0.9951102492348238
+        },
+        {
+          "formula": "=SUM(F8:F10)-1.1",
+          "label": 0,
+          "preference": 0.9935143848042309
+        },
+        {
+          "formula": "=SUM(F8:F10)/1.1",
+          "label": 0,
+          "preference": 0.9871911216673543
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9945902823464348,
+      "case": "multisource/ms03_07",
+      "cell": "Debt!Y8",
+      "expected": "=X11",
+      "observed": "=(X11)*1.1",
+      "origin": "packt",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=X11",
+          "label": 1,
+          "preference": 0.9945902823464348
+        },
+        {
+          "formula": "=(X11)-1.1",
+          "label": 0,
+          "preference": 0.9940505966260178
+        },
+        {
+          "formula": "=(X11)/1.1",
+          "label": 0,
+          "preference": 0.9871911216673543
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9951102492348238,
+      "case": "multisource/ms03_07",
+      "cell": "Debt!AR11",
+      "expected": "=SUM(AR8:AR10)",
+      "observed": "=SUM(AR8:AR10)*1.1",
+      "origin": "packt",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=SUM(AR8:AR10)",
+          "label": 1,
+          "preference": 0.9951102492348238
+        },
+        {
+          "formula": "=SUM(AR8:AR10)-1.1",
+          "label": 0,
+          "preference": 0.9935143848042309
+        },
+        {
+          "formula": "=SUM(AR8:AR10)/1.1",
+          "label": 0,
+          "preference": 0.9871911216673543
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "multisource/ms03_09",
+      "cell": "Debt!F11",
+      "expected": "=SUM(F8:F10)",
+      "observed": "=F8+F9-F10",
+      "origin": "packt",
+      "reason": "correct_candidate_ineligible",
+      "top": []
+    },
+    {
+      "best_correct_preference": 0.9796117694935831,
+      "case": "multisource/ms03_10",
+      "cell": "Debt!F11",
+      "expected": "=SUM(F8:F10)",
+      "observed": "=F8+F9-F10",
+      "origin": "packt",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=F8*F9-F10",
+          "label": 0,
+          "preference": 0.9984658853945118
+        },
+        {
+          "formula": "=F8-F9-F10",
+          "label": 0,
+          "preference": 0.9984468148111649
+        },
+        {
+          "formula": "=F8/F9-F10",
+          "label": 0,
+          "preference": 0.9969650849601431
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9978377417157811,
+      "case": "lcoe/annotation03",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9978377417157811
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9977299731883096
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.9976513478947889
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.8438429098219478,
+      "case": "lcoe/annotation04",
+      "cell": "Offshore LCOE!P27",
+      "expected": "=$D$11*P25*P26*$D$14",
+      "observed": "=$D$11*P26*P26*$D$14",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=$D$11*P26*P26-$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        },
+        {
+          "formula": "=$D$11*P26-P26*$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        },
+        {
+          "formula": "=$D$11-P26*P26*$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9990049677132318,
+      "case": "lcoe/annotation05",
+      "cell": "Offshore LCOE!Q27",
+      "expected": "=$D$11*Q25*Q26*$D$14",
+      "observed": "=$D$11*Q25*Q26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Q25*Q26*$D$14",
+          "label": 1,
+          "preference": 0.9990049677132318
+        },
+        {
+          "formula": "=Q26*Q21",
+          "label": 0,
+          "preference": 0.9945363143732189
+        },
+        {
+          "formula": "=$D$11*Q25*Q26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9935258415694261
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AA27",
+      "expected": "=$D$11*AA25*AA26*$D$14",
+      "observed": "=$D$11+AA25*AA26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AA25*AA26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AA25*AA26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AA25*AA26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AB27",
+      "expected": "=$D$11*AB25*AB26*$D$14",
+      "observed": "=$D$11+AB25*AB26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AB25*AB26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AB25*AB26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AB25*AB26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AC27",
+      "expected": "=$D$11*AC25*AC26*$D$14",
+      "observed": "=$D$11+AC25*AC26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AC25*AC26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AC25*AC26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AC25*AC26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AD27",
+      "expected": "=$D$11*AD25*AD26*$D$14",
+      "observed": "=$D$11+AD25*AD26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AD25*AD26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AD25*AD26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AD25*AD26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AE27",
+      "expected": "=$D$11*AE25*AE26*$D$14",
+      "observed": "=$D$11+AE25*AE26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AE25*AE26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AE25*AE26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AE25*AE26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AF27",
+      "expected": "=$D$11*AF25*AF26*$D$14",
+      "observed": "=$D$11+AF25*AF26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AF25*AF26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AF25*AF26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AF25*AF26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AG27",
+      "expected": "=$D$11*AG25*AG26*$D$14",
+      "observed": "=$D$11+AG25*AG26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AG25*AG26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AG25*AG26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AG25*AG26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AH27",
+      "expected": "=$D$11*AH25*AH26*$D$14",
+      "observed": "=$D$11+AH25*AH26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AH25*AH26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AH25*AH26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AH25*AH26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AI27",
+      "expected": "=$D$11*AI25*AI26*$D$14",
+      "observed": "=$D$11+AI25*AI26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AI25*AI26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AI25*AI26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AI25*AI26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AJ27",
+      "expected": "=$D$11*AJ25*AJ26*$D$14",
+      "observed": "=$D$11+AJ25*AJ26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AJ25*AJ26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AJ25*AJ26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AJ25*AJ26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AK27",
+      "expected": "=$D$11*AK25*AK26*$D$14",
+      "observed": "=$D$11+AK25*AK26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AK25*AK26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AK25*AK26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AK25*AK26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AL27",
+      "expected": "=$D$11*AL25*AL26*$D$14",
+      "observed": "=$D$11+AL25*AL26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AL25*AL26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AL25*AL26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AL25*AL26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AM27",
+      "expected": "=$D$11*AM25*AM26*$D$14",
+      "observed": "=$D$11+AM25*AM26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AM25*AM26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AM25*AM26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AM25*AM26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AN27",
+      "expected": "=$D$11*AN25*AN26*$D$14",
+      "observed": "=$D$11+AN25*AN26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AN25*AN26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AN25*AN26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AN25*AN26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AO27",
+      "expected": "=$D$11*AO25*AO26*$D$14",
+      "observed": "=$D$11+AO25*AO26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AO25*AO26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AO25*AO26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AO25*AO26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AP27",
+      "expected": "=$D$11*AP25*AP26*$D$14",
+      "observed": "=$D$11+AP25*AP26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AP25*AP26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AP25*AP26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AP25*AP26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AQ27",
+      "expected": "=$D$11*AQ25*AQ26*$D$14",
+      "observed": "=$D$11+AQ25*AQ26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AQ25*AQ26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AQ25*AQ26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AQ25*AQ26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!AR27",
+      "expected": "=$D$11*AR25*AR26*$D$14",
+      "observed": "=$D$11+AR25*AR26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AR25*AR26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-AR25*AR26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+AR25*AR26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!P27",
+      "expected": "=$D$11*P25*P26*$D$14",
+      "observed": "=$D$11+P25*P26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*P25*P26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-P25*P26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+P25*P26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!Q27",
+      "expected": "=$D$11*Q25*Q26*$D$14",
+      "observed": "=$D$11+Q25*Q26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Q25*Q26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-Q25*Q26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+Q25*Q26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!R27",
+      "expected": "=$D$11*R25*R26*$D$14",
+      "observed": "=$D$11+R25*R26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*R25*R26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-R25*R26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+R25*R26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!S27",
+      "expected": "=$D$11*S25*S26*$D$14",
+      "observed": "=$D$11+S25*S26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*S25*S26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-S25*S26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+S25*S26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!T27",
+      "expected": "=$D$11*T25*T26*$D$14",
+      "observed": "=$D$11+T25*T26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*T25*T26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-T25*T26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+T25*T26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!U27",
+      "expected": "=$D$11*U25*U26*$D$14",
+      "observed": "=$D$11+U25*U26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*U25*U26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-U25*U26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+U25*U26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!V27",
+      "expected": "=$D$11*V25*V26*$D$14",
+      "observed": "=$D$11+V25*V26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*V25*V26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-V25*V26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+V25*V26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!W27",
+      "expected": "=$D$11*W25*W26*$D$14",
+      "observed": "=$D$11+W25*W26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*W25*W26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-W25*W26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+W25*W26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!X27",
+      "expected": "=$D$11*X25*X26*$D$14",
+      "observed": "=$D$11+X25*X26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*X25*X26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-X25*X26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+X25*X26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!Y27",
+      "expected": "=$D$11*Y25*Y26*$D$14",
+      "observed": "=$D$11+Y25*Y26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Y25*Y26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-Y25*Y26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+Y25*Y26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9734175675677184,
+      "case": "lcoe/annotation06",
+      "cell": "Offshore LCOE!Z27",
+      "expected": "=$D$11*Z25*Z26*$D$14",
+      "observed": "=$D$11+Z25*Z26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Z25*Z26*$D$14",
+          "label": 1,
+          "preference": 0.9734175675677184
+        },
+        {
+          "formula": "=$D$11-Z25*Z26*$D$14",
+          "label": 0,
+          "preference": 0.9693305550058288
+        },
+        {
+          "formula": "=$D$11+Z25*Z26-$D$14",
+          "label": 0,
+          "preference": 0.968466593765098
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AA27",
+      "expected": "=$D$11*AA25*AA26*$D$14",
+      "observed": "=$D$11*AA25*AA26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AA25*AA26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AA26*AA21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AA25*AA26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AB27",
+      "expected": "=$D$11*AB25*AB26*$D$14",
+      "observed": "=$D$11*AB25*AB26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AB25*AB26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AB26*AB21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AB25*AB26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AC27",
+      "expected": "=$D$11*AC25*AC26*$D$14",
+      "observed": "=$D$11*AC25*AC26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AC25*AC26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AC26*AC21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AC25*AC26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AD27",
+      "expected": "=$D$11*AD25*AD26*$D$14",
+      "observed": "=$D$11*AD25*AD26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AD25*AD26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AD26*AD21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AD25*AD26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AE27",
+      "expected": "=$D$11*AE25*AE26*$D$14",
+      "observed": "=$D$11*AE25*AE26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AE25*AE26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AE26*AE21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AE25*AE26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AF27",
+      "expected": "=$D$11*AF25*AF26*$D$14",
+      "observed": "=$D$11*AF25*AF26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AF25*AF26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AF26*AF21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AF25*AF26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AG27",
+      "expected": "=$D$11*AG25*AG26*$D$14",
+      "observed": "=$D$11*AG25*AG26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AG25*AG26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AG26*AG21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AG25*AG26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AH27",
+      "expected": "=$D$11*AH25*AH26*$D$14",
+      "observed": "=$D$11*AH25*AH26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AH25*AH26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AH26*AH21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AH25*AH26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AI27",
+      "expected": "=$D$11*AI25*AI26*$D$14",
+      "observed": "=$D$11*AI25*AI26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AI25*AI26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AI26*AI21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AI25*AI26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AJ27",
+      "expected": "=$D$11*AJ25*AJ26*$D$14",
+      "observed": "=$D$11*AJ25*AJ26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AJ25*AJ26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AJ26*AJ21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AJ25*AJ26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!AK27",
+      "expected": "=$D$11*AK25*AK26*$D$14",
+      "observed": "=$D$11*AK25*AK26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*AK25*AK26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=AK26*AK21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*AK25*AK26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!M27",
+      "expected": "=$D$11*M25*M26*$D$14",
+      "observed": "=$D$11*M25*M26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*M25*M26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=M26*M21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*M25*M26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!N27",
+      "expected": "=$D$11*N25*N26*$D$14",
+      "observed": "=$D$11*N25*N26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*N25*N26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=N26*N21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*N25*N26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11*O25*O26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=O26*O21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*O25*O26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!P27",
+      "expected": "=$D$11*P25*P26*$D$14",
+      "observed": "=$D$11*P25*P26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*P25*P26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=P26*P21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*P25*P26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!Q27",
+      "expected": "=$D$11*Q25*Q26*$D$14",
+      "observed": "=$D$11*Q25*Q26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Q25*Q26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=Q26*Q21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*Q25*Q26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!R27",
+      "expected": "=$D$11*R25*R26*$D$14",
+      "observed": "=$D$11*R25*R26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*R25*R26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=R26*R21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*R25*R26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!S27",
+      "expected": "=$D$11*S25*S26*$D$14",
+      "observed": "=$D$11*S25*S26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*S25*S26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=S26*S21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*S25*S26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!T27",
+      "expected": "=$D$11*T25*T26*$D$14",
+      "observed": "=$D$11*T25*T26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*T25*T26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=T26*T21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*T25*T26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!U27",
+      "expected": "=$D$11*U25*U26*$D$14",
+      "observed": "=$D$11*U25*U26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*U25*U26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=U26*U21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*U25*U26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!V27",
+      "expected": "=$D$11*V25*V26*$D$14",
+      "observed": "=$D$11*V25*V26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*V25*V26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=V26*V21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*V25*V26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!W27",
+      "expected": "=$D$11*W25*W26*$D$14",
+      "observed": "=$D$11*W25*W26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*W25*W26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=W26*W21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*W25*W26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!X27",
+      "expected": "=$D$11*X25*X26*$D$14",
+      "observed": "=$D$11*X25*X26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*X25*X26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=X26*X21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*X25*X26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!Y27",
+      "expected": "=$D$11*Y25*Y26*$D$14",
+      "observed": "=$D$11*Y25*Y26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Y25*Y26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=Y26*Y21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*Y25*Y26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9876565864300481,
+      "case": "lcoe/annotation07",
+      "cell": "CCGT LCOE calc!Z27",
+      "expected": "=$D$11*Z25*Z26*$D$14",
+      "observed": "=$D$11*Z25*Z26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*Z25*Z26*$D$14",
+          "label": 1,
+          "preference": 0.9876565864300481
+        },
+        {
+          "formula": "=Z26*Z21",
+          "label": 0,
+          "preference": 0.9478740711404359
+        },
+        {
+          "formula": "=$D$11*Z25*Z26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AA81",
+      "expected": "=AA78*AA80",
+      "observed": "=AA79*AA80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AA79+AA80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AA79-AA80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AA79/AA80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AB81",
+      "expected": "=AB78*AB80",
+      "observed": "=AB79*AB80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AB79+AB80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AB79-AB80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AB79/AB80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AC81",
+      "expected": "=AC78*AC80",
+      "observed": "=AC79*AC80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AC79+AC80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AC79-AC80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AC79/AC80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AD81",
+      "expected": "=AD78*AD80",
+      "observed": "=AD79*AD80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AD79+AD80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AD79-AD80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AD79/AD80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AE81",
+      "expected": "=AE78*AE80",
+      "observed": "=AE79*AE80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AE79+AE80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AE79-AE80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AE79/AE80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AF81",
+      "expected": "=AF78*AF80",
+      "observed": "=AF79*AF80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AF79+AF80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AF79-AF80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AF79/AF80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AG81",
+      "expected": "=AG78*AG80",
+      "observed": "=AG79*AG80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AG79+AG80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AG79-AG80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AG79/AG80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AH81",
+      "expected": "=AH78*AH80",
+      "observed": "=AH79*AH80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AH79+AH80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AH79-AH80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AH79/AH80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AI81",
+      "expected": "=AI78*AI80",
+      "observed": "=AI79*AI80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AI79+AI80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AI79-AI80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AI79/AI80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AJ81",
+      "expected": "=AJ78*AJ80",
+      "observed": "=AJ79*AJ80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AJ79+AJ80",
+          "label": 0,
+          "preference": 0.9794118412795216
+        },
+        {
+          "formula": "=AJ79-AJ80",
+          "label": 0,
+          "preference": 0.9785879279864844
+        },
+        {
+          "formula": "=AJ79/AJ80",
+          "label": 0,
+          "preference": 0.9715786023716089
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!AK81",
+      "expected": "=AK78*AK80",
+      "observed": "=AK79*AK80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=AK79+AK80",
+          "label": 0,
+          "preference": 0.9240848416729499
+        },
+        {
+          "formula": "=AK79-AK80",
+          "label": 0,
+          "preference": 0.9213253942441479
+        },
+        {
+          "formula": "=AK79/AK80",
+          "label": 0,
+          "preference": 0.896980090318348
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!M81",
+      "expected": "=M78*M80",
+      "observed": "=M79*M80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=M79+M80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=M79-M80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=M79/M80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!N81",
+      "expected": "=N78*N80",
+      "observed": "=N79*N80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=N79+N80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=N79-N80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=N79/N80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!O81",
+      "expected": "=O78*O80",
+      "observed": "=O79*O80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=O79+O80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=O79-O80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=O79/O80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!P81",
+      "expected": "=P78*P80",
+      "observed": "=P79*P80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=P79+P80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=P79-P80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=P79/P80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Q81",
+      "expected": "=Q78*Q80",
+      "observed": "=Q79*Q80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=Q79+Q80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=Q79-Q80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=Q79/Q80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!R81",
+      "expected": "=R78*R80",
+      "observed": "=R79*R80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=R79+R80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=R79-R80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=R79/R80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!S81",
+      "expected": "=S78*S80",
+      "observed": "=S79*S80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=S79+S80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=S79-S80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=S79/S80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!T81",
+      "expected": "=T78*T80",
+      "observed": "=T79*T80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=T79+T80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=T79-T80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=T79/T80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!U81",
+      "expected": "=U78*U80",
+      "observed": "=U79*U80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=U79+U80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=U79-U80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=U79/U80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!V81",
+      "expected": "=V78*V80",
+      "observed": "=V79*V80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=V79+V80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=V79-V80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=V79/V80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!W81",
+      "expected": "=W78*W80",
+      "observed": "=W79*W80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=W79+W80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=W79-W80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=W79/W80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!X81",
+      "expected": "=X78*X80",
+      "observed": "=X79*X80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=X79+X80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=X79-X80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=X79/X80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Y81",
+      "expected": "=Y78*Y80",
+      "observed": "=Y79*Y80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=Y79+Y80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=Y79-Y80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=Y79/Y80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.22845258307795696,
+      "case": "lcoe/annotation08",
+      "cell": "CCGT LCOE calc!Z81",
+      "expected": "=Z78*Z80",
+      "observed": "=Z79*Z80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=Z79+Z80",
+          "label": 0,
+          "preference": 0.9792784943502104
+        },
+        {
+          "formula": "=Z79-Z80",
+          "label": 0,
+          "preference": 0.9784545810571732
+        },
+        {
+          "formula": "=Z79/Z80",
+          "label": 0,
+          "preference": 0.971349145483303
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9990049677132318,
+      "case": "lcoe/annotation09",
+      "cell": "CCGT LCOE calc!N27",
+      "expected": "=$D$11*N25*N26*$D$14",
+      "observed": "=$D$11*N25*N26*$D$14*1.1",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*N25*N26*$D$14",
+          "label": 1,
+          "preference": 0.9990049677132318
+        },
+        {
+          "formula": "=N26*N21",
+          "label": 0,
+          "preference": 0.9945363143732189
+        },
+        {
+          "formula": "=$D$11*N25*N26*$D$14-1.1",
+          "label": 0,
+          "preference": 0.9935258415694261
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.8612199476637219,
+      "case": "lcoe/annotation09",
+      "cell": "CCGT LCOE calc!O81",
+      "expected": "=O78*O80",
+      "observed": "=O79*O80",
+      "origin": "uk_government",
+      "reason": "wrong_or_unknown_ranked_first",
+      "top": [
+        {
+          "formula": "=O79+O80",
+          "label": 0,
+          "preference": 0.9934707812268602
+        },
+        {
+          "formula": "=O79-O80",
+          "label": 0,
+          "preference": 0.9931781015778371
+        },
+        {
+          "formula": "=O79/O80",
+          "label": 0,
+          "preference": 0.9890787802748228
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9978377417157811,
+      "case": "lcoe/annotation09",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9978377417157811
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9977299731883096
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.9976513478947889
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9977567095113615,
+      "case": "lcoe/annotation10",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9977567095113615
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9977299731883096
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.9976513478947889
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9977567095113615,
+      "case": "lcoe/annotation11",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9977567095113615
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9977299731883096
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.9976513478947889
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9977567095113615,
+      "case": "lcoe/annotation12",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9977567095113615
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9977299731883096
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.9976513478947889
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AA27",
+      "expected": "=$D$11*AA25*AA26*$D$14",
+      "observed": "=$D$11*$D$12*AA26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AA26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AA26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AA26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AB27",
+      "expected": "=$D$11*AB25*AB26*$D$14",
+      "observed": "=$D$11*$D$12*AB26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AB26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AB26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AB26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AC27",
+      "expected": "=$D$11*AC25*AC26*$D$14",
+      "observed": "=$D$11*$D$12*AC26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AC26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AC26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AC26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AD27",
+      "expected": "=$D$11*AD25*AD26*$D$14",
+      "observed": "=$D$11*$D$12*AD26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AD26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AD26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AD26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AE27",
+      "expected": "=$D$11*AE25*AE26*$D$14",
+      "observed": "=$D$11*$D$12*AE26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AE26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AE26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AE26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AF27",
+      "expected": "=$D$11*AF25*AF26*$D$14",
+      "observed": "=$D$11*$D$12*AF26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AF26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AF26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AF26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AG27",
+      "expected": "=$D$11*AG25*AG26*$D$14",
+      "observed": "=$D$11*$D$12*AG26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AG26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AG26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AG26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AH27",
+      "expected": "=$D$11*AH25*AH26*$D$14",
+      "observed": "=$D$11*$D$12*AH26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AH26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AH26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AH26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AI27",
+      "expected": "=$D$11*AI25*AI26*$D$14",
+      "observed": "=$D$11*$D$12*AI26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AI26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AI26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AI26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AJ27",
+      "expected": "=$D$11*AJ25*AJ26*$D$14",
+      "observed": "=$D$11*$D$12*AJ26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AJ26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AJ26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AJ26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AK27",
+      "expected": "=$D$11*AK25*AK26*$D$14",
+      "observed": "=$D$11*$D$12*AK26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AK26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AK26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AK26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AL27",
+      "expected": "=$D$11*AL25*AL26*$D$14",
+      "observed": "=$D$11*$D$12*AL26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AL26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AL26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AL26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AM27",
+      "expected": "=$D$11*AM25*AM26*$D$14",
+      "observed": "=$D$11*$D$12*AM26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AM26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AM26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AM26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AN27",
+      "expected": "=$D$11*AN25*AN26*$D$14",
+      "observed": "=$D$11*$D$12*AN26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AN26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AN26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AN26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AO27",
+      "expected": "=$D$11*AO25*AO26*$D$14",
+      "observed": "=$D$11*$D$12*AO26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AO26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AO26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AO26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AP27",
+      "expected": "=$D$11*AP25*AP26*$D$14",
+      "observed": "=$D$11*$D$12*AP26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AP26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AP26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AP26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AQ27",
+      "expected": "=$D$11*AQ25*AQ26*$D$14",
+      "observed": "=$D$11*$D$12*AQ26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AQ26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AQ26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AQ26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!AR27",
+      "expected": "=$D$11*AR25*AR26*$D$14",
+      "observed": "=$D$11*$D$12*AR26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*AR26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-AR26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*AR26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!P27",
+      "expected": "=$D$11*P25*P26*$D$14",
+      "observed": "=$D$11*$D$12*P26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*P26-$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        },
+        {
+          "formula": "=$D$11*$D$12-P26*$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        },
+        {
+          "formula": "=$D$11-$D$12*P26*$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!Q27",
+      "expected": "=$D$11*Q25*Q26*$D$14",
+      "observed": "=$D$11*$D$12*Q26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*Q26-$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        },
+        {
+          "formula": "=$D$11*$D$12-Q26*$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        },
+        {
+          "formula": "=$D$11-$D$12*Q26*$D$14",
+          "label": 0,
+          "preference": 0.9935258415694261
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!R27",
+      "expected": "=$D$11*R25*R26*$D$14",
+      "observed": "=$D$11*$D$12*R26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*R26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-R26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*R26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!S27",
+      "expected": "=$D$11*S25*S26*$D$14",
+      "observed": "=$D$11*$D$12*S26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*S26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-S26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*S26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!T27",
+      "expected": "=$D$11*T25*T26*$D$14",
+      "observed": "=$D$11*$D$12*T26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*T26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-T26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*T26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!U27",
+      "expected": "=$D$11*U25*U26*$D$14",
+      "observed": "=$D$11*$D$12*U26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*U26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-U26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*U26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!V27",
+      "expected": "=$D$11*V25*V26*$D$14",
+      "observed": "=$D$11*$D$12*V26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*V26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-V26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*V26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!W27",
+      "expected": "=$D$11*W25*W26*$D$14",
+      "observed": "=$D$11*$D$12*W26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*W26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-W26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*W26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!X27",
+      "expected": "=$D$11*X25*X26*$D$14",
+      "observed": "=$D$11*$D$12*X26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*X26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-X26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*X26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!Y27",
+      "expected": "=$D$11*Y25*Y26*$D$14",
+      "observed": "=$D$11*$D$12*Y26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*Y26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-Y26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*Y26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": null,
+      "case": "lcoe/annotation15",
+      "cell": "Offshore LCOE!Z27",
+      "expected": "=$D$11*Z25*Z26*$D$14",
+      "observed": "=$D$11*$D$12*Z26*$D$14",
+      "origin": "uk_government",
+      "reason": "correct_candidate_missing",
+      "top": [
+        {
+          "formula": "=$D$11*$D$12*Z26-$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11*$D$12-Z26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        },
+        {
+          "formula": "=$D$11-$D$12*Z26*$D$14",
+          "label": 0,
+          "preference": 0.9242475137271253
+        }
+      ]
+    },
+    {
+      "best_correct_preference": 0.9977567095113615,
+      "case": "lcoe/annotation16",
+      "cell": "Offshore LCOE!O27",
+      "expected": "=$D$11*O25*O26*$D$14",
+      "observed": "=$D$11+O25*O26*$D$14",
+      "origin": "uk_government",
+      "reason": "insufficient_margin",
+      "top": [
+        {
+          "formula": "=$D$11*O25*O26*$D$14",
+          "label": 1,
+          "preference": 0.9977567095113615
+        },
+        {
+          "formula": "=$D$11-O25*O26*$D$14",
+          "label": 0,
+          "preference": 0.9977299731883096
+        },
+        {
+          "formula": "=$D$11+O25*O26-$D$14",
+          "label": 0,
+          "preference": 0.9976513478947889
+        }
+      ]
+    }
+  ],
+  "final_validation_eligible": false,
+  "posthoc_labels_read": true,
+  "prediction_lock_sha256": "718cf514f33a69bafad1d8596dc56852eb8c405ab6a86b28970730ba7cde7979",
+  "preference_ranges": {
+    "18f": {
+      "at_least_0_90": 691,
+      "candidate_count": 1919,
+      "preference_max": 0.9985117531156209,
+      "preference_min": 0.005801373107888086
+    },
+    "authored_development": {
+      "at_least_0_90": 275997,
+      "candidate_count": 1262283,
+      "preference_max": 0.9976007001124529,
+      "preference_min": 0.0014691814391108449
+    },
+    "iowa_state_agdm": {
+      "at_least_0_90": 1053,
+      "candidate_count": 6750,
+      "preference_max": 0.9996123605833759,
+      "preference_min": 0.0030919249294681928
+    },
+    "packt": {
+      "at_least_0_90": 103873,
+      "candidate_count": 338913,
+      "preference_max": 0.9995203009238709,
+      "preference_min": 0.0005326731114706496
+    },
+    "uk_government": {
+      "at_least_0_90": 74263,
+      "candidate_count": 251297,
+      "preference_max": 0.9992826758714842,
+      "preference_min": 0.0075034978889036985
+    }
+  },
+  "preferences_are_not_calibrated_correctness_probabilities": true,
+  "score_sha256": "68cf67fd5b8855c75808ca1eb1efd7113e2c94c6b1a6129c524da04c808d7fbd"
+}

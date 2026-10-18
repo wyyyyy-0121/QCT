@@ -1,0 +1,39 @@
+building certified matrix source__18f 1161520
+fitting certified source__18f (1161520, 712) 6616017920
+trained certified source__18f {'directed_pairs': 1161520, 'positive': 580760, 'negative': 580760, 'source_weight_sums': {'authored_development': 290380.0, 'iowa_state_agdm': 290380.00000000006, 'packt': 290380.0, 'uk_government': 290380.0}, 'class_weight_sums': [580759.9999999999, 580759.9999999999], 'selection_sha256': 'e1e35fb444f86b583007de0586aa47b73613db3e651d3d0244be9cceabea9c4c', 'features': 712, 'training_matrix_sha256': 'f4bc2168133a52dfbfb2a846b39d8898c0408f9a7dd55e245b1fb807f6cac05f', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building certified matrix source__authored_development 6810
+fitting certified source__authored_development (6810, 712) 38789760
+trained certified source__authored_development {'directed_pairs': 6810, 'positive': 3405, 'negative': 3405, 'source_weight_sums': {'18f': 1702.5, 'iowa_state_agdm': 1702.4999999999995, 'packt': 1702.5, 'uk_government': 1702.4999999999998}, 'class_weight_sums': [3404.9999999999995, 3404.9999999999995], 'selection_sha256': 'bf3dc89bfbddfd821fc0068c58ab7ee19be5de6f56e46bad721163b03cec2c17', 'features': 712, 'training_matrix_sha256': '8b9116b14142e1fb6379af69de6aa4d59e755a9391c2e47a0418733cc8d8cf9b', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 14213, 'learned_only': 274, 'keep_base_plus_learned': 14261, 'learned_unfiltered': 274}
+building certified matrix source__iowa_state_agdm 1161274
+fitting certified source__iowa_state_agdm (1161274, 712) 6614616704
+trained certified source__iowa_state_agdm {'directed_pairs': 1161274, 'positive': 580637, 'negative': 580637, 'source_weight_sums': {'18f': 290318.5, 'authored_development': 290318.50000000006, 'packt': 290318.50000000006, 'uk_government': 290318.5}, 'class_weight_sums': [580637.0000000001, 580637.0000000001], 'selection_sha256': 'd297522a6b13ef9f1721c8cf428964efd919274b7dfe6ac364f972c777804801', 'features': 712, 'training_matrix_sha256': 'a83a1cba4a1b9cebba5783c9a5b27b5156423215e2396d06e3c3c41a2bcf9d38', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 0, 'learned_only': 160, 'keep_base_plus_learned': 160, 'learned_unfiltered': 160}
+building certified matrix source__packt 1160042
+fitting certified source__packt (1160042, 712) 6607599232
+trained certified source__packt {'directed_pairs': 1160042, 'positive': 580021, 'negative': 580021, 'source_weight_sums': {'18f': 290010.5, 'authored_development': 290010.5, 'iowa_state_agdm': 290010.5, 'uk_government': 290010.5}, 'class_weight_sums': [580021.0000000001, 580021.0000000001], 'selection_sha256': '94dc6d6cfb705015d616dc2cb1238852f6826f8794a479067fdc5f2ed6c742a5', 'features': 712, 'training_matrix_sha256': 'ecda31571addf6c61ad2aff90a6009976ccff01b29a2a745abf8fe6b527fa0d5', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 0, 'learned_only': 401, 'keep_base_plus_learned': 401, 'learned_unfiltered': 401}
+building certified matrix source__uk_government 1157594
+fitting certified source__uk_government (1157594, 712) 6593655424
+trained certified source__uk_government {'directed_pairs': 1157594, 'positive': 578797, 'negative': 578797, 'source_weight_sums': {'18f': 289398.5, 'authored_development': 289398.50000000006, 'iowa_state_agdm': 289398.5, 'packt': 289398.50000000006}, 'class_weight_sums': [578797.0000000001, 578797.0000000001], 'selection_sha256': 'b65883070d5d77e0c639f6c3f37d825a11075014e8ea49effbbd76e77b2567ff', 'features': 712, 'training_matrix_sha256': 'f304e0207aa9baebaeaaebbbbaa54e689d400ce70a0c2305343eb438a7bdb6d7', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 0, 'learned_only': 496, 'keep_base_plus_learned': 496, 'learned_unfiltered': 496}
+DEV22 PREDICTIONS LOCKED
+	Command being timed: "/home/ayaka/hybridguard/.venv/bin/python scripts/run_certified_learning_dev22.py predict"
+	User time (seconds): 1547.11
+	System time (seconds): 49.19
+	Percent of CPU this job got: 285%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:19.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8622444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 201998
+	Minor (reclaiming a frame) page faults: 22129243
+	Voluntary context switches: 61049
+	Involuntary context switches: 1894
+	Swaps: 0
+	File system inputs: 2784
+	File system outputs: 51706584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
