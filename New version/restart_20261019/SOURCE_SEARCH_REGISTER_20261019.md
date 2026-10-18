@@ -51,4 +51,6 @@
 
 Crossref/OpenAlex 元数据检索命中 DOE/OSTI 题录 [Strontium-90 Error Discovered in Subcontract Laboratory Spreadsheet](https://doi.org/10.2172/12185)，报告日期为1999-07-31，机构元数据列出 West Valley Demonstration Project 与 US Department of Energy。该题名显示存在真实报告线索，但这不是工作簿级标签，也未读取报告正文。
 
-当前证据边界：Crossref资源字段指向 OSTI PURL；OpenAlex列出 OSTI 与 UNT 两个仓储位置，但许可均为未知。对 OSTI 书目页、API/PURL和UNT馆藏页的请求均超时；OpenAlex全文内容端点返回401。尚未证实报告是否附带原始/修订工作簿、具体公式单元格、修订链或明确再分发许可。因此只保留为未揭示的元数据候选，不计来源/家族，不获取或预测任何工作簿，不运行模型。下一步先通过可访问的机构目录/出版者记录核实附件、许可与版本元数据；只有这些门槛成立，才制定预登记并考虑取得原始工作簿。
+Semantic Scholar 的独立 DOI 记录提供摘要，称项目健康物理学家与环境科学家发现了承包商用于 Sr-90 分析数据处理的电子表格中“一系列错误”。它确认存在自然错误事件，但不指出公式、单元格或修订版本。
+
+当前证据边界：Crossref资源字段指向 OSTI PURL；OpenAlex列出 OSTI 与 UNT 两个仓储位置，但许可均为未知；Semantic Scholar也未列出许可，并明确提示应回源核对版权。对 OSTI 书目页、API/PURL和UNT馆藏页的请求均超时；OpenAlex全文内容端点返回401。尚未证实报告是否附带原始/修订工作簿、具体公式单元格、修订链或明确再分发许可。因此只保留为未揭示的来源级候选，不计来源/家族，不获取或预测任何工作簿，不运行模型。下一步先通过可访问的机构目录/出版者记录核实附件、许可与版本元数据；只有这些门槛成立，才制定预登记并考虑取得原始工作簿。
