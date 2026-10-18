@@ -1,0 +1,863 @@
+{
+  "audit_script_sha256": "c69215cf583e4a03e27df2aea2834cc71bd5984c22a8e78337b3aabff89770ad",
+  "cases": [
+    {
+      "errors": [],
+      "id": "ms01_01",
+      "origin": "iowa_state_agdm",
+      "scenario": "clean_original"
+    },
+    {
+      "errors": [],
+      "id": "ms01_02",
+      "origin": "iowa_state_agdm",
+      "scenario": "clean_populated"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0011625103966164847,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms01_03",
+      "origin": "iowa_state_agdm",
+      "scenario": "isolated_operator"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0014722795495874287,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms01_04",
+      "origin": "iowa_state_agdm",
+      "scenario": "isolated_reference"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.001362005974202964,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms01_05",
+      "origin": "iowa_state_agdm",
+      "scenario": "coefficient"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!C56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!D56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!E56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!F56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!G56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!H56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!I56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!J56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!K56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!L56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!M56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!N56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms01_06",
+      "origin": "iowa_state_agdm",
+      "scenario": "common_region"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.001362005974202964,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        },
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!H58",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0007399995487138111,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        },
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!N56",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0008599191022840972,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms01_07",
+      "origin": "iowa_state_agdm",
+      "scenario": "multiple_regions"
+    },
+    {
+      "errors": [],
+      "id": "ms01_08",
+      "origin": "iowa_state_agdm",
+      "scenario": "legitimate_exception"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms01_09",
+      "origin": "iowa_state_agdm",
+      "scenario": "hidden_region"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Cash Flow Budget!B56",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0011625103966164847,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms01_10",
+      "origin": "iowa_state_agdm",
+      "scenario": "wrong_text_with_error"
+    },
+    {
+      "errors": [],
+      "id": "ms02_01",
+      "origin": "18f",
+      "scenario": "clean_original"
+    },
+    {
+      "errors": [],
+      "id": "ms02_02",
+      "origin": "18f",
+      "scenario": "clean_populated"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_03",
+      "origin": "18f",
+      "scenario": "isolated_operator"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_04",
+      "origin": "18f",
+      "scenario": "isolated_reference"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_05",
+      "origin": "18f",
+      "scenario": "coefficient"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Optimistic Inucrring Technical !E13",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Realistic Steady-State!E13",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_06",
+      "origin": "18f",
+      "scenario": "common_region"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Optimistic Inucrring Technical !E12",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Realistic Steady-State!E13",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_07",
+      "origin": "18f",
+      "scenario": "multiple_regions"
+    },
+    {
+      "errors": [],
+      "id": "ms02_08",
+      "origin": "18f",
+      "scenario": "legitimate_exception"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_09",
+      "origin": "18f",
+      "scenario": "hidden_region"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Enter Your Model Here!E19",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms02_10",
+      "origin": "18f",
+      "scenario": "wrong_text_with_error"
+    },
+    {
+      "errors": [],
+      "id": "ms03_01",
+      "origin": "packt",
+      "scenario": "clean_original"
+    },
+    {
+      "errors": [],
+      "id": "ms03_02",
+      "origin": "packt",
+      "scenario": "clean_populated"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Debt!F11",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.001491741070220254,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms03_03",
+      "origin": "packt",
+      "scenario": "isolated_operator"
+    },
+    {
+      "errors": [],
+      "id": "ms03_04",
+      "origin": "packt",
+      "scenario": "isolated_reference"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Debt!F11",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0007399995487138111,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms03_05",
+      "origin": "packt",
+      "scenario": "coefficient"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AA11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AB11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AC11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AD11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AE11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AF11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AG11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AH11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AI11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AJ11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AK11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AL11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AM11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AN11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AO11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AP11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AQ11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!AR11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!F11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!G11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!H11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!I11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!J11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!K11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!L11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!M11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!N11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!O11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!P11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!Q11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!R11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!S11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!T11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!U11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!V11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!W11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!X11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!Y11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        },
+        {
+          "candidate_count": 1,
+          "cell": "Debt!Z11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms03_06",
+      "origin": "packt",
+      "scenario": "common_region"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Debt!AR11",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0007399995487138111,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        },
+        {
+          "candidate_count": 2,
+          "cell": "Debt!F11",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0007399995487138111,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        },
+        {
+          "candidate_count": 2,
+          "cell": "Debt!Y8",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.0007399995487138111,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms03_07",
+      "origin": "packt",
+      "scenario": "multiple_regions"
+    },
+    {
+      "errors": [],
+      "id": "ms03_08",
+      "origin": "packt",
+      "scenario": "legitimate_exception"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 1,
+          "cell": "Debt!F11",
+          "correct_candidate_origins": [],
+          "eligible_correct_candidate_count": 0,
+          "maximum_correct_candidate_probability": null,
+          "reason": "correct_candidate_absent"
+        }
+      ],
+      "id": "ms03_09",
+      "origin": "packt",
+      "scenario": "hidden_region"
+    },
+    {
+      "errors": [
+        {
+          "candidate_count": 2,
+          "cell": "Debt!F11",
+          "correct_candidate_origins": [
+            "peer"
+          ],
+          "eligible_correct_candidate_count": 1,
+          "maximum_correct_candidate_probability": 0.001491741070220254,
+          "reason": "eligible_correct_candidate_rejected_by_frozen_model"
+        }
+      ],
+      "id": "ms03_10",
+      "origin": "packt",
+      "scenario": "wrong_text_with_error"
+    }
+  ],
+  "final_validation_eligible": false,
+  "post_hoc_labels_deliberately_read": true,
+  "prediction_lock_sha256": "929046ca63ea6e3f723a31c9dadfa2618114f6fca4d8dbf1eaa8e433f3bd5951",
+  "predictions_unchanged": true,
+  "totals": {
+    "correct_candidate_absent": 65,
+    "eligible_correct_candidate_rejected_by_frozen_model": 13
+  }
+}

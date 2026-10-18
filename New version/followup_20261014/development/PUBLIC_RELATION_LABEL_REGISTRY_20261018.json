@@ -1,0 +1,38 @@
+{
+  "accepted_final_sources": 0,
+  "accepted_final_template_families": 0,
+  "excluded_real_development_origins_with_local_labels": 4,
+  "not_all_workbook_formulas_certified": true,
+  "original_formula_cells_reviewed": 255,
+  "role": "excluded public development sources with partial locally reviewed labels; not final acceptance",
+  "sources": [
+    {
+      "cases": 16,
+      "origin": "uk_government",
+      "reviewed_original_formula_cells": 80,
+      "source_id": "public08",
+      "truth": "development/annotation_dev14_inputs_v1/truth.json"
+    },
+    {
+      "cases": 10,
+      "origin": "iowa_state_agdm",
+      "reviewed_original_formula_cells": 91,
+      "source_id": "public03",
+      "truth": "development/multisource_dev17_inputs_v1/truth.json"
+    },
+    {
+      "cases": 10,
+      "origin": "18f",
+      "reviewed_original_formula_cells": 6,
+      "source_id": "public09",
+      "truth": "development/multisource_dev17_inputs_v1/truth.json"
+    },
+    {
+      "cases": 10,
+      "origin": "packt",
+      "reviewed_original_formula_cells": 78,
+      "source_id": "public10",
+      "truth": "development/multisource_dev17_inputs_v1/truth.json"
+    }
+  ]
+}

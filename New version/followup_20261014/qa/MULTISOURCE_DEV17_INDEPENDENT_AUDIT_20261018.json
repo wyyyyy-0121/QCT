@@ -1,0 +1,79 @@
+{
+  "aggregate_counts": {
+    "dev11": {
+      "correct": 0,
+      "correct_errors": 0,
+      "errors": 78,
+      "suggestions": 0,
+      "unknown": 0,
+      "unnecessary": 0,
+      "wrong": 0
+    },
+    "dev11_plus_frozen_dev16": {
+      "correct": 0,
+      "correct_errors": 0,
+      "errors": 78,
+      "suggestions": 0,
+      "unknown": 0,
+      "unnecessary": 0,
+      "wrong": 0
+    },
+    "dev11_plus_note": {
+      "correct": 0,
+      "correct_errors": 0,
+      "errors": 78,
+      "suggestions": 0,
+      "unknown": 0,
+      "unnecessary": 0,
+      "wrong": 0
+    },
+    "frozen_dev16": {
+      "correct": 0,
+      "correct_errors": 0,
+      "errors": 78,
+      "suggestions": 0,
+      "unknown": 0,
+      "unnecessary": 0,
+      "wrong": 0
+    },
+    "note_only": {
+      "correct": 0,
+      "correct_errors": 0,
+      "errors": 78,
+      "suggestions": 0,
+      "unknown": 0,
+      "unnecessary": 0,
+      "wrong": 0
+    },
+    "paper": {
+      "correct": 0,
+      "correct_errors": 0,
+      "errors": 78,
+      "suggestions": 26130,
+      "unknown": 24780,
+      "unnecessary": 1272,
+      "wrong": 1350
+    }
+  },
+  "all_counts_match": true,
+  "all_original_source_hashes_match": true,
+  "audit_script_sha256": "c16ff356d2dc3895a0d538f245046a736f0e1ff776d01a120a926b984ece7bcf",
+  "case_method_count_checks": 1260,
+  "cases": 30,
+  "final_validation_eligible": false,
+  "independent_ast_engine": "FormulaGuard AST + exact SymPy; scorer used openpyxl token stack",
+  "main_candidate_adopted": false,
+  "neutral_mutations_preserved": [
+    {
+      "after": "=SUM(F7:F10)",
+      "before": "=SUM(F8:F10)",
+      "cell": "F11",
+      "id": "ms03_04",
+      "kind": "formula_error_injection",
+      "sheet": "Debt"
+    }
+  ],
+  "peer_translations_checked": 5079,
+  "prediction_lock_sha256": "929046ca63ea6e3f723a31c9dadfa2618114f6fca4d8dbf1eaa8e433f3bd5951",
+  "rational_witnesses_checked": 78
+}
