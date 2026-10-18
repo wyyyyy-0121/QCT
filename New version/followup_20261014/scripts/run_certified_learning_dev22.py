@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT/'scripts'), str(ROOT/'baseline/source/HybridGuard_V5_handoff_20260904/src')]
 from run_selector_dev5 import read, save, sha
 from build_candidates_dev18 import compact, protection
-from build_keep_features_dev21 import DATA as FEATURES, BASE, case_data, case_path, verify as verify_features
+from build_keep_features_dev21 import DATA as FEATURES, BASE, case_data, case_path
 from prepare_certified_labels_dev22 import DATA as LABELS
 from build_signed_features_dev19 import order_digest
 from certified_matrix_dev22 import build_matrix
@@ -30,14 +30,45 @@ RUN = ROOT/'development/certified_learning_dev22_v1'
 MODES = ['dev11', 'learned_only', 'keep_base_plus_learned', 'learned_unfiltered']
 
 
+def verify_features():
+    # Historical aggregate verifiers also hash old truth bodies. Verify the
+    # identical observable inputs/features directly without traversing labels.
+    for folder in [BASE, ROOT/'development/signed_features_dev19_v1',
+                   ROOT/'development/unit_features_dev20_v1', FEATURES]:
+        lock = read(folder/'feature_lock.json')
+        for rel, value in lock['files'].items(): assert sha(folder/rel) == value, rel
+        for field in ['sources', 'inputs']:
+            for rel, value in lock.get(field, {}).items(): assert sha(ROOT/rel) == value, rel
+        if 'base_feature_lock_sha256' in lock:
+            assert sha(BASE/'feature_lock.json') == lock['base_feature_lock_sha256']
+        if 'control_prediction_lock_sha256' in lock:
+            assert sha(ROOT/'development/unit_learning_dev20_v1/prediction_lock.json') == lock['control_prediction_lock_sha256']
+        assert lock['labels_read'] == []
+
+
+def protect_preflight():
+    active = [True]
+    def guard(event, args):
+        if active[0] and event == 'open' and isinstance(args[0], (str, bytes)):
+            name = os.fsdecode(args[0])
+            if any(part in name for part in ['/author_case_states/', '/author_case_pairs/',
+                    '/training_labels/', '/case_labels/', '/heldout_truth', '/truth.json']):
+                raise PermissionError('No label-body hashing or parsing in learner preflight')
+    sys.addaudithook(guard)
+    return active
+
+
 def selection_digest(rows):
     return hashlib.sha256('\n'.join('\t'.join(str(r[k]) for k in
         ['case', 'cell', 'left_id', 'right_id', 'label']) for r in rows).encode()).hexdigest()
 
 
-def verify_preparation():
+def verify_preparation(include_label_bodies=False):
     lock = read(LABELS/'preparation_lock.json')
-    for rel, value in lock['files'].items(): assert sha(LABELS/rel) == value, rel
+    # The independent author audit verifies all bodies. A learner preflight
+    # only binds the metadata locks; it must not even hash other-fold labels.
+    names = lock['files'] if include_label_bodies else ['fold_index.json', 'state_counts.json']
+    for rel in names: assert sha(LABELS/rel) == lock['files'][rel], rel
     for rel, value in lock['sources'].items(): assert sha(ROOT/rel) == value, rel
     assert sha(BASE/'label_preparation_lock.json') == lock['upstream_label_lock_sha256']
     assert sha(BASE/'fold_index.json') == lock['upstream_fold_index_sha256']
@@ -91,12 +122,14 @@ def protect_training():
 
 def predict():
     if RUN.exists(): raise SystemExit('Preserve dev22')
+    preflight = protect_preflight()
     verify_features(); verify_preparation()
     sources = sorted((ROOT/'scripts').glob('*.py')) + sorted((ROOT/'tests').glob('*.py'))
     sources += [ROOT/'CERTIFIED_PREFERENCES_DEV22_PLAN_20261018.md']
     save(RUN/'source_lock.json', {'files': {str(p.relative_to(ROOT)): sha(p) for p in sources}})
     index = {item['case']: item for item in read(BASE/'public_index.json')}
     folds = read(LABELS/'fold_index.json')['folds']
+    preflight[0] = False
     active, accesses, allowed, reads = protect_training()
     files = {}; runtime = []; wall, cpu = time.perf_counter(), time.process_time()
     for fold in folds:

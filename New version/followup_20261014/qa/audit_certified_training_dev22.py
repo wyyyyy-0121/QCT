@@ -13,7 +13,7 @@ from build_keep_features_dev21 import BASE, case_path
 
 
 def audit(check_runtime=False):
-    verify_preparation(); summaries = []; coverage = Counter()
+    verify_preparation(include_label_bodies=True); summaries = []; coverage = Counter()
     truth = read(BASE/'heldout_truth.json.gz')['cases']
     metadata = {case: (t['origin_group'], t['family']) for case, t in truth.items()}
     for item in read(BASE/'public_index.json'):

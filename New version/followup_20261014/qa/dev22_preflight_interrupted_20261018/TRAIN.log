@@ -1,0 +1,52 @@
+building certified matrix source__18f 1161520
+fitting certified source__18f (1161520, 712) 6616017920
+trained certified source__18f {'directed_pairs': 1161520, 'positive': 580760, 'negative': 580760, 'source_weight_sums': {'authored_development': 290380.0, 'iowa_state_agdm': 290380.00000000006, 'packt': 290380.0, 'uk_government': 290380.0}, 'class_weight_sums': [580759.9999999999, 580759.9999999999], 'selection_sha256': 'e1e35fb444f86b583007de0586aa47b73613db3e651d3d0244be9cceabea9c4c', 'features': 712, 'training_matrix_sha256': 'f4bc2168133a52dfbfb2a846b39d8898c0408f9a7dd55e245b1fb807f6cac05f', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 0, 'learned_only': 0, 'keep_base_plus_learned': 0, 'learned_unfiltered': 0}
+building certified matrix source__authored_development 6810
+fitting certified source__authored_development (6810, 712) 38789760
+trained certified source__authored_development {'directed_pairs': 6810, 'positive': 3405, 'negative': 3405, 'source_weight_sums': {'18f': 1702.5, 'iowa_state_agdm': 1702.4999999999995, 'packt': 1702.5, 'uk_government': 1702.4999999999998}, 'class_weight_sums': [3404.9999999999995, 3404.9999999999995], 'selection_sha256': 'bf3dc89bfbddfd821fc0068c58ab7ee19be5de6f56e46bad721163b03cec2c17', 'features': 712, 'training_matrix_sha256': '8b9116b14142e1fb6379af69de6aa4d59e755a9391c2e47a0418733cc8d8cf9b', 'storage': 'read-only float64 mmap of float32 differences'} {'dev11': 14213, 'learned_only': 274, 'keep_base_plus_learned': 14261, 'learned_unfiltered': 274}
+building certified matrix source__iowa_state_agdm 1161274
+fitting certified source__iowa_state_agdm (1161274, 712) 6614616704
+Traceback (most recent call last):
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/run_certified_learning_dev22.py", line 193, in <module>
+    {'predict': predict, 'score': score, 'verify': verify, 'replay': replay}[parser.parse_args().mode]()
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/run_certified_learning_dev22.py", line 105, in predict
+    model, summary = fit(fold, index); allowed[0] = None
+                     ^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/New version/followup_20261014/scripts/run_certified_learning_dev22.py", line 71, in fit
+    model = HistGradientBoostingClassifier(**PARAMETERS); model.fit(x, y, sample_weight=w)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/site-packages/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py", line 841, in fit
+    grower.grow()
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/site-packages/sklearn/ensemble/_hist_gradient_boosting/grower.py", line 386, in grow
+    self.split_next()
+  File "/home/ayaka/hybridguard/.venv/lib/python3.11/site-packages/sklearn/ensemble/_hist_gradient_boosting/grower.py", line 618, in split_next
+    smallest_child.histograms = self.histogram_builder.compute_histograms_brute(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Command terminated by signal 2
+	Command being timed: "/home/ayaka/hybridguard/.venv/bin/python scripts/run_certified_learning_dev22.py predict"
+	User time (seconds): 528.37
+	System time (seconds): 29.43
+	Percent of CPU this job got: 239%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:53.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8364304
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 101257
+	Minor (reclaiming a frame) page faults: 12451973
+	Voluntary context switches: 47669
+	Involuntary context switches: 925
+	Swaps: 0
+	File system inputs: 2568
+	File system outputs: 25920936
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
