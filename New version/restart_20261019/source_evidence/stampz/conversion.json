@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/usr/bin/libreoffice",
+    "-env:UserInstallation=file:///tmp/hg-stampz-profile-p6_ky6sc",
+    "--headless",
+    "--convert-to",
+    "xlsx:Calc MS Excel 2007 XML",
+    "--outdir",
+    "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/stampz",
+    "/home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/stampz/before.ods"
+  ],
+  "returncode": 0,
+  "stdout": "convert /home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/stampz/before.ods as a Calc document -> /home/ayaka/hybridguard/New version/restart_20261019/source_evidence/raw/stampz/before.xlsx using filter : Calc MS Excel 2007 XML\n",
+  "stderr": "",
+  "version": "LibreOffice 26.2.6.3 620(Build:3)",
+  "original_ods_sha256": "3e4901115c03aaa33b9cba85323705ebf8317858d8f9655d553d96002a49b9ec",
+  "original_unchanged": true,
+  "native_ods_model_support": false,
+  "conversion_fidelity_verified": false
+}

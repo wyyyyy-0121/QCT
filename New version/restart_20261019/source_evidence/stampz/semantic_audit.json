@@ -1,0 +1,32 @@
+{
+  "formula_column": "Q",
+  "formula_label": "Hue (h)",
+  "input_headers": {
+    "A": "Xnorm",
+    "B": "Ynorm",
+    "C": "Znorm"
+  },
+  "changed_formula_count": 98,
+  "changed_formula_range": "Q8:Q105",
+  "before_reference_row_offset": 5,
+  "after_reference_row_offset": 0,
+  "same_row_semantic_support": [
+    "column headers identify B/C as Ynorm/Znorm and Q as Hue",
+    "same-row L* and C* formulas in columns O/P use A and B/C"
+  ],
+  "original_input_rows_with_nonempty_A_to_C": 0,
+  "original_changed_Q_cells_with_nonempty_cached_result": 0,
+  "conversion_formula_address_set_matches": true,
+  "conversion_formula_text_mismatch_count": 0,
+  "conversion_scalar_fidelity_verified": false,
+  "formula_level_candidate": true,
+  "realized_natural_errors_certified": 0,
+  "scorable_natural_errors": 0,
+  "accepted_natural_source_for_admission": false,
+  "final_validation_eligible": false,
+  "exclusion_reasons": [
+    "original input area is empty, so changed formulas have no observed output impact",
+    "repository license is not established",
+    "source is excluded from final validation"
+  ]
+}

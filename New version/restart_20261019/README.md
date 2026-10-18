@@ -38,6 +38,8 @@ cd '/home/ayaka/hybridguard/New version/restart_20261019'
 - `DEV32_EXACT_MATCH_SCORE.json`：保留原论文含等号全文本精确匹配口径；不能把关系等价分数混称原论文分数。
 - `../followup_20261014/development/natural_weights_dev33_v1/`：原表锁、重放、修订取得回执、双解析器和布局审计；未认证任何自然错误。原文件和含第三方正文的差异留本地，git忽略。
 - `source_evidence/EPA_ERRATA_RECEIPT.json`：3份官方勘误的URL与哈希；文档不是可评分原始/修订工作簿对。
+- `EPA_ERRATA_FOLLOWUP.md`：勘误中披露的具体工作簿名和公式地址、当前文件追索结果及证据边界。EPA自然样本当前仍是0。
 - `source_evidence/NATURAL_REVISION_SEARCH.json`：3个成功查询、18个提交细查、5个含工作簿变化的提交；新增路径、删表、计算兼容错误和AI生成来源不能自动视为自然静默公式错误。
+- `STAMPZ_SEMANTIC_AUDIT.md`：StampZ原/修订版98个Hue公式存在一致的+5行偏移且修订改为同行；因原表输入和结果均为空，只记公式级候选，不能计准确率、覆盖率或自然来源准入数。原件未提交且全来源排除最终验证。
 
 新运行器测试：`python -m unittest discover -s tools -p 'test_*.py' -v`。这4项覆盖输出隔离、线程限制、失败/超时保留、路径与重名校验和已有证据保护。历史研究321项测试的记录在dev32审计中核对，本轮没有将其冒称为重新运行。
