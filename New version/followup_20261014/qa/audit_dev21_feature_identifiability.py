@@ -53,7 +53,7 @@ def main():
                 base = prior.get(cell)
                 base_correct = bool(base and labels[uid(case, cell, base['suggested_formula'])] == 1)
                 count['eligible_correct_candidate_exists'] += bool(good)
-                count['unique_compatible_correct_candidate_exists'] += bool(unique_good)
+                count['unique_correct_candidate_not_rejected_by_unit_gate'] += bool(unique_good)
                 count['baseline_correct'] += base_correct
                 count['baseline_or_distinguishable_correct_upper_bound'] += bool(base_correct or unique_good)
                 if good and not unique_good:

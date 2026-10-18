@@ -4,9 +4,9 @@
     "baseline_or_distinguishable_correct_upper_bound": 18016,
     "eligible_correct_candidate_exists": 18016,
     "errors": 18073,
-    "unique_compatible_correct_candidate_exists": 18016
+    "unique_correct_candidate_not_rejected_by_unit_gate": 18016
   },
-  "audit_source_sha256": "5e0a58a4fed4c45265851233e893a5241eaaa240364e5e9327aeb4ccc976b428",
+  "audit_source_sha256": "3163213c8f5d10e79f411ab534479fb004bd9f9958ef1b0b679a7ed650275bb6",
   "bound_scope": "Necessary condition only; per-cell feature ties with strictly positive margin; not achieved coverage",
   "by_origin": {
     "18f": {
@@ -14,35 +14,35 @@
       "baseline_or_distinguishable_correct_upper_bound": 10,
       "eligible_correct_candidate_exists": 10,
       "errors": 11,
-      "unique_compatible_correct_candidate_exists": 10
+      "unique_correct_candidate_not_rejected_by_unit_gate": 10
     },
     "authored_development": {
       "baseline_correct": 14184,
       "baseline_or_distinguishable_correct_upper_bound": 17851,
       "eligible_correct_candidate_exists": 17851,
       "errors": 17876,
-      "unique_compatible_correct_candidate_exists": 17851
+      "unique_correct_candidate_not_rejected_by_unit_gate": 17851
     },
     "iowa_state_agdm": {
       "baseline_correct": 0,
       "baseline_or_distinguishable_correct_upper_bound": 20,
       "eligible_correct_candidate_exists": 20,
       "errors": 21,
-      "unique_compatible_correct_candidate_exists": 20
+      "unique_correct_candidate_not_rejected_by_unit_gate": 20
     },
     "packt": {
       "baseline_correct": 0,
       "baseline_or_distinguishable_correct_upper_bound": 45,
       "eligible_correct_candidate_exists": 45,
       "errors": 46,
-      "unique_compatible_correct_candidate_exists": 45
+      "unique_correct_candidate_not_rejected_by_unit_gate": 45
     },
     "uk_government": {
       "baseline_correct": 0,
       "baseline_or_distinguishable_correct_upper_bound": 90,
       "eligible_correct_candidate_exists": 90,
       "errors": 119,
-      "unique_compatible_correct_candidate_exists": 90
+      "unique_correct_candidate_not_rejected_by_unit_gate": 90
     }
   },
   "decisions_unchanged": true,
