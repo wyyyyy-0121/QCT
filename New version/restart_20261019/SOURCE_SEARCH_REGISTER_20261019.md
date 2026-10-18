@@ -102,3 +102,9 @@ GitHub repository search returned `plasma-umass/DataDebug` (https://github.com/p
 The same search surfaced `RUCKBReasoning/SpreadsheetBench-2` (https://github.com/RUCKBReasoning/SpreadsheetBench-2). Its README lists a `Debugging` category with input and golden-response workbooks hosted on Hugging Face, but GitHub repository metadata has no license, the repository tree does not include the dataset files, and the Hugging Face dataset API timed out during this screen. The task benchmark description alone does not establish naturally occurring silent formula errors, source-authored correction lineage, or independent cell-level truth. Defer pending accessible dataset terms and provenance audit; do not infer that the dataset has zero eligible cases from the timeout.
 
 These two screens add no qualified natural source or template family. They do not change the final-validation count (`0/0`) or justify model tuning.
+
+## 2026-10-19 London Whale 官方报告目录复查
+
+本轮跟进GitHub文章提交中关于JPMorgan London Whale公式错误的线索，仅核查报告书目/官方目录，不读取工作簿或错误标签、不运行模型。Bing精确查询`"JPMorgan Chase Whale Trades" "S. Prt."`可返回搜索页，但前列结果与目标报告无关，未获得可靠报告编号；Google连接超时。Congress.gov搜索请求返回Cloudflare 403。GovInfo `committee-publications`集合页返回HTTP 200，但页面内容是集合介绍而非目标报告条目。对猜测的包路径`CPRT-112SPRT76071`及`CPRT-113SPRT81946`请求均返回HTTP 200、约44 KB HTML错误页（并非PDF）；`file`检查确认响应不是PDF，因此这些路径不能用来确认报告编号或附件。上述端点和响应只说明访问/路径状态，不构成报告不存在的证据。
+
+此前线索文章称其引用2013年美国参议院常设调查小组委员会报告，描述某替换模型公式把两个值相加而未取平均；但当前未取得正式报告书目、附件清单、原始/修订工作簿、明确再分发许可或逐格独立真值。该候选继续停留在来源级线索，不获取可疑工作簿、不计来源或模板家族、不作准确率评分。检索回执：Bing `https://www.bing.com/search?q=%22JPMorgan+Chase+Whale+Trades%22+%22S.+Prt.%22`；GovInfo集合 `https://www.govinfo.gov/collection/committee-publications`；Congress.gov搜索端点被拦截。后续若重试，先从GovInfo官方API/目录按标题与委员会元数据定位唯一包ID，再核对报告正文的引用与附件索引；只有发现允许公开使用且可证实版本链的工作簿对，才继续准入审查。
