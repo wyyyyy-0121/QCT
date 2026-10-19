@@ -1,0 +1,58 @@
+{
+  "experiment": "M7 explicit source-equation reader",
+  "task_count": 16,
+  "counts": {
+    "unsupported": 12,
+    "equation_extracted": 5,
+    "abstain": 2,
+    "propose": 2
+  },
+  "groups": {
+    "engineering_mapping_control": {
+      "conditions": 2,
+      "unsupported": 2,
+      "equation_extracted": 1
+    },
+    "engineering_text_perturbation": {
+      "conditions": 2,
+      "unsupported": 2,
+      "equation_extracted": 0
+    },
+    "real_source_fragment": {
+      "conditions": 10,
+      "abstain": 2,
+      "equation_extracted": 2,
+      "unsupported": 8
+    },
+    "engineering_formula_fault": {
+      "conditions": 2,
+      "propose": 2,
+      "equation_extracted": 2
+    }
+  },
+  "expectation_mismatches": [],
+  "acceptance_passed": true,
+  "fraction_checks": 10,
+  "fraction_passed": 10,
+  "native_pool_has_equivalent_for_proposals": {
+    "injected_adjusted": false,
+    "injected_ratio": false
+  },
+  "original_paper_preserved": true,
+  "automatic_field_mapping": false,
+  "independent_human_annotation": false,
+  "natural_repair_accuracy_established": false,
+  "natural_validation_sources": 0,
+  "natural_validation_families": 0,
+  "final_validation_eligible": false,
+  "runtime": {
+    "requested_worker_count": 20,
+    "worker_count": 20,
+    "wall_seconds": 0.6912459220038727,
+    "child_cpu_seconds": 7.609999999999999,
+    "aggregate_peak_rss_bytes_sampled": 1342095360,
+    "all_tasks_complete": true
+  },
+  "source_input_lock_sha256": "fbca24d0c3a69b4a1987d9a29eaf4317c80e9979887cd1c7111687000c1f3270",
+  "source_output_lock_sha256": "1728b441839d5cdb03a44b727ff4dbfd98b2bc9b852415418d8255ebc9852b6b"
+}
