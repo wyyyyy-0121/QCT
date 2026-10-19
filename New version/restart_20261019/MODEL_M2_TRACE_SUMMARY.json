@@ -1,0 +1,56 @@
+{
+  "role": "Revealed-development mechanism diagnosis, uncertified golden differences",
+  "ordinary_candidate_denominator": 10948,
+  "all_observed_paper_outputs_identical": true,
+  "traced_paper_tasks": 90,
+  "input_inventory_tasks": 100,
+  "baseline_timeout_tasks": 10,
+  "gap_partition": {
+    "no_exact_in_observed_pools": 2475,
+    "target_not_in_input_formula_inventory": 2406,
+    "exact_in_observed_pool_but_not_final": 225,
+    "final_exact": 449,
+    "baseline_timeout_unobserved_pool": 5393
+  },
+  "selection_and_trigger_details": {
+    "no_exact_fg_not_triggered": 1806,
+    "no_exact_fg_probed": 669,
+    "fg_not_emitted": 124,
+    "sg_emitted_then_fusion_overrode": 89,
+    "sg_selected_then_gate_withheld": 2,
+    "fg_not_emitted+sg_emitted_then_fusion_overrode": 10
+  },
+  "nonformula_target_xml_types": {
+    "formula_dataTable": 40,
+    "text": 689,
+    "numeric": 251,
+    "error": 288,
+    "blank": 718,
+    "missing": 420
+  },
+  "observed_pool_counts": {
+    "union_exact_reachable": 674,
+    "fg_exact_reachable": 247,
+    "sg_exact_reachable": 533,
+    "both_exact_reachable": 106
+  },
+  "observed_pool_oracle_coverage": 0.061563755937157474,
+  "raw_difference_representation_audit": {
+    "ordinary_formula_changed": 6982,
+    "ordinary_formula_added": 3963,
+    "array_text_and_bounds_identical_representation_only": 189037,
+    "formula_removed": 2466,
+    "formula_type_conversion_same_text_unknown": 102,
+    "array_text_changed_same_bounds": 1,
+    "formula_type_conversion_changed_or_missing_text_unknown": 14
+  },
+  "trace_totals": {
+    "fg_triggered_cells": 35700,
+    "sg_repair_calls": 117921,
+    "distinct_candidates_per_cell_summed": 774810
+  },
+  "trace_output_lock_sha256": "679af9058db3d2fd6072540e4f64b095caae09162f12dbbcb522bb7af87f9d91",
+  "candidate_differences_sha256": "12b4551000c0ff1dea3eb2b298800cf456937de508cb6fa5ae542cdfc0901c29",
+  "final_validation_eligible": false,
+  "business_accuracy": null
+}
