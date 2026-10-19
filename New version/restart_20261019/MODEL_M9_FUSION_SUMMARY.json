@@ -1,0 +1,307 @@
+{
+  "experiment": "M9 emitted SG priority on actual FG/SG conflicts",
+  "role": "Exposed-development fusion ablation; uncertified ordinary golden differences",
+  "overall": {
+    "paper": {
+      "all_suggestions": 97037,
+      "exact_correct": 449,
+      "suggestions_on_errors": 2648,
+      "wrong_formula_on_errors": 2199,
+      "no_suggestion_on_errors": 8300,
+      "suggestions_outside_confirmed_errors": 94389,
+      "candidate_formula_differences": 10948,
+      "precision_against_candidates": 0.004627101002710307,
+      "candidate_repair_coverage": 0.041012056996711725
+    },
+    "m9": {
+      "all_suggestions": 97037,
+      "exact_correct": 531,
+      "suggestions_on_errors": 2648,
+      "wrong_formula_on_errors": 2117,
+      "no_suggestion_on_errors": 8300,
+      "suggestions_outside_confirmed_errors": 94389,
+      "candidate_formula_differences": 10948,
+      "precision_against_candidates": 0.005472139493183013,
+      "candidate_repair_coverage": 0.04850200949945196
+    }
+  },
+  "selection_changes": {
+    "all": 14685,
+    "on_candidate_targets": 523,
+    "both_nonmatching": 14569,
+    "outside_candidate_targets": 14162
+  },
+  "exact_gained": 99,
+  "exact_lost": 17,
+  "original_exact_retained": 432,
+  "exact_gained_by_group": {
+    "07_Debugging": 56,
+    "05_Debugging": 30,
+    "02_Debugging": 1,
+    "01_Debugging": 7,
+    "03_Debugging": 5
+  },
+  "exact_lost_by_group": {
+    "03_Debugging": 6,
+    "04_Debugging": 5,
+    "07_Debugging": 1,
+    "01_Debugging": 5
+  },
+  "source_changes": {
+    "formulaguard-v5": 14685
+  },
+  "terminal_states": {
+    "complete": 90,
+    "timeout": 10
+  },
+  "continuation_checks": {
+    "all_90_postprocess_tasks_complete": true,
+    "suggestions_do_not_increase": true,
+    "retains_at_least_95pct_original_exact": true,
+    "net_at_least_50_exact": true,
+    "candidate_precision_does_not_decrease": true
+  },
+  "continuation_gate_passed": true,
+  "decision": "independent_validation_needed",
+  "by_group": {
+    "paper": {
+      "02_Debugging": {
+        "all_suggestions": 6590,
+        "exact_correct": 12,
+        "suggestions_on_errors": 120,
+        "wrong_formula_on_errors": 108,
+        "no_suggestion_on_errors": 65,
+        "suggestions_outside_confirmed_errors": 6470,
+        "candidate_formula_differences": 185,
+        "precision_against_candidates": 0.0018209408194233688,
+        "candidate_repair_coverage": 0.06486486486486487
+      },
+      "01_Debugging": {
+        "all_suggestions": 15780,
+        "exact_correct": 86,
+        "suggestions_on_errors": 406,
+        "wrong_formula_on_errors": 320,
+        "no_suggestion_on_errors": 1374,
+        "suggestions_outside_confirmed_errors": 15374,
+        "candidate_formula_differences": 1780,
+        "precision_against_candidates": 0.005449936628643853,
+        "candidate_repair_coverage": 0.048314606741573035
+      },
+      "06_Debugging": {
+        "all_suggestions": 11869,
+        "exact_correct": 31,
+        "suggestions_on_errors": 351,
+        "wrong_formula_on_errors": 320,
+        "no_suggestion_on_errors": 468,
+        "suggestions_outside_confirmed_errors": 11518,
+        "candidate_formula_differences": 819,
+        "precision_against_candidates": 0.0026118459853399613,
+        "candidate_repair_coverage": 0.03785103785103785
+      },
+      "08_Debugging": {
+        "all_suggestions": 8641,
+        "exact_correct": 24,
+        "suggestions_on_errors": 208,
+        "wrong_formula_on_errors": 184,
+        "no_suggestion_on_errors": 204,
+        "suggestions_outside_confirmed_errors": 8433,
+        "candidate_formula_differences": 412,
+        "precision_against_candidates": 0.0027774563129267446,
+        "candidate_repair_coverage": 0.05825242718446602
+      },
+      "05_Debugging": {
+        "all_suggestions": 8709,
+        "exact_correct": 46,
+        "suggestions_on_errors": 238,
+        "wrong_formula_on_errors": 192,
+        "no_suggestion_on_errors": 97,
+        "suggestions_outside_confirmed_errors": 8471,
+        "candidate_formula_differences": 335,
+        "precision_against_candidates": 0.0052818922953266735,
+        "candidate_repair_coverage": 0.1373134328358209
+      },
+      "03_Debugging": {
+        "all_suggestions": 4460,
+        "exact_correct": 12,
+        "suggestions_on_errors": 216,
+        "wrong_formula_on_errors": 204,
+        "no_suggestion_on_errors": 162,
+        "suggestions_outside_confirmed_errors": 4244,
+        "candidate_formula_differences": 378,
+        "precision_against_candidates": 0.0026905829596412557,
+        "candidate_repair_coverage": 0.031746031746031744
+      },
+      "04_Debugging": {
+        "all_suggestions": 15619,
+        "exact_correct": 24,
+        "suggestions_on_errors": 290,
+        "wrong_formula_on_errors": 266,
+        "no_suggestion_on_errors": 174,
+        "suggestions_outside_confirmed_errors": 15329,
+        "candidate_formula_differences": 464,
+        "precision_against_candidates": 0.0015365900505794226,
+        "candidate_repair_coverage": 0.05172413793103448
+      },
+      "07_Debugging": {
+        "all_suggestions": 11733,
+        "exact_correct": 141,
+        "suggestions_on_errors": 451,
+        "wrong_formula_on_errors": 310,
+        "no_suggestion_on_errors": 237,
+        "suggestions_outside_confirmed_errors": 11282,
+        "candidate_formula_differences": 688,
+        "precision_against_candidates": 0.012017386857581181,
+        "candidate_repair_coverage": 0.20494186046511628
+      },
+      "10_Debugging": {
+        "all_suggestions": 0,
+        "exact_correct": 0,
+        "suggestions_on_errors": 0,
+        "wrong_formula_on_errors": 0,
+        "no_suggestion_on_errors": 5393,
+        "suggestions_outside_confirmed_errors": 0,
+        "candidate_formula_differences": 5393,
+        "precision_against_candidates": null,
+        "candidate_repair_coverage": 0.0
+      },
+      "09_Debugging": {
+        "all_suggestions": 13636,
+        "exact_correct": 73,
+        "suggestions_on_errors": 368,
+        "wrong_formula_on_errors": 295,
+        "no_suggestion_on_errors": 126,
+        "suggestions_outside_confirmed_errors": 13268,
+        "candidate_formula_differences": 494,
+        "precision_against_candidates": 0.005353476092695805,
+        "candidate_repair_coverage": 0.14777327935222673
+      }
+    },
+    "m9": {
+      "02_Debugging": {
+        "all_suggestions": 6590,
+        "exact_correct": 13,
+        "suggestions_on_errors": 120,
+        "wrong_formula_on_errors": 107,
+        "no_suggestion_on_errors": 65,
+        "suggestions_outside_confirmed_errors": 6470,
+        "candidate_formula_differences": 185,
+        "precision_against_candidates": 0.0019726858877086493,
+        "candidate_repair_coverage": 0.07027027027027027
+      },
+      "01_Debugging": {
+        "all_suggestions": 15780,
+        "exact_correct": 88,
+        "suggestions_on_errors": 406,
+        "wrong_formula_on_errors": 318,
+        "no_suggestion_on_errors": 1374,
+        "suggestions_outside_confirmed_errors": 15374,
+        "candidate_formula_differences": 1780,
+        "precision_against_candidates": 0.005576679340937896,
+        "candidate_repair_coverage": 0.04943820224719101
+      },
+      "06_Debugging": {
+        "all_suggestions": 11869,
+        "exact_correct": 31,
+        "suggestions_on_errors": 351,
+        "wrong_formula_on_errors": 320,
+        "no_suggestion_on_errors": 468,
+        "suggestions_outside_confirmed_errors": 11518,
+        "candidate_formula_differences": 819,
+        "precision_against_candidates": 0.0026118459853399613,
+        "candidate_repair_coverage": 0.03785103785103785
+      },
+      "08_Debugging": {
+        "all_suggestions": 8641,
+        "exact_correct": 24,
+        "suggestions_on_errors": 208,
+        "wrong_formula_on_errors": 184,
+        "no_suggestion_on_errors": 204,
+        "suggestions_outside_confirmed_errors": 8433,
+        "candidate_formula_differences": 412,
+        "precision_against_candidates": 0.0027774563129267446,
+        "candidate_repair_coverage": 0.05825242718446602
+      },
+      "05_Debugging": {
+        "all_suggestions": 8709,
+        "exact_correct": 76,
+        "suggestions_on_errors": 238,
+        "wrong_formula_on_errors": 162,
+        "no_suggestion_on_errors": 97,
+        "suggestions_outside_confirmed_errors": 8471,
+        "candidate_formula_differences": 335,
+        "precision_against_candidates": 0.00872660466184407,
+        "candidate_repair_coverage": 0.22686567164179106
+      },
+      "03_Debugging": {
+        "all_suggestions": 4460,
+        "exact_correct": 11,
+        "suggestions_on_errors": 216,
+        "wrong_formula_on_errors": 205,
+        "no_suggestion_on_errors": 162,
+        "suggestions_outside_confirmed_errors": 4244,
+        "candidate_formula_differences": 378,
+        "precision_against_candidates": 0.002466367713004484,
+        "candidate_repair_coverage": 0.0291005291005291
+      },
+      "04_Debugging": {
+        "all_suggestions": 15619,
+        "exact_correct": 19,
+        "suggestions_on_errors": 290,
+        "wrong_formula_on_errors": 271,
+        "no_suggestion_on_errors": 174,
+        "suggestions_outside_confirmed_errors": 15329,
+        "candidate_formula_differences": 464,
+        "precision_against_candidates": 0.001216467123375376,
+        "candidate_repair_coverage": 0.040948275862068964
+      },
+      "07_Debugging": {
+        "all_suggestions": 11733,
+        "exact_correct": 196,
+        "suggestions_on_errors": 451,
+        "wrong_formula_on_errors": 255,
+        "no_suggestion_on_errors": 237,
+        "suggestions_outside_confirmed_errors": 11282,
+        "candidate_formula_differences": 688,
+        "precision_against_candidates": 0.016705020028978095,
+        "candidate_repair_coverage": 0.28488372093023256
+      },
+      "10_Debugging": {
+        "all_suggestions": 0,
+        "exact_correct": 0,
+        "suggestions_on_errors": 0,
+        "wrong_formula_on_errors": 0,
+        "no_suggestion_on_errors": 5393,
+        "suggestions_outside_confirmed_errors": 0,
+        "candidate_formula_differences": 5393,
+        "precision_against_candidates": null,
+        "candidate_repair_coverage": 0.0
+      },
+      "09_Debugging": {
+        "all_suggestions": 13636,
+        "exact_correct": 73,
+        "suggestions_on_errors": 368,
+        "wrong_formula_on_errors": 295,
+        "no_suggestion_on_errors": 126,
+        "suggestions_outside_confirmed_errors": 13268,
+        "candidate_formula_differences": 494,
+        "precision_against_candidates": 0.005353476092695805,
+        "candidate_repair_coverage": 0.14777327935222673
+      }
+    }
+  },
+  "business_accuracy": null,
+  "final_validation_eligible": false,
+  "natural_validation_sources": 0,
+  "natural_validation_families": 0,
+  "candidate_differences_sha256": "12b4551000c0ff1dea3eb2b298800cf456937de508cb6fa5ae542cdfc0901c29",
+  "input_lock_sha256": "4b0c265957bffca2545c07c484878be909dadbddc9bc9a933bddf03f8ca16f0c",
+  "output_lock_sha256": "0f630630764f4ba511137590e0c27e5b1c049c029b6389568d194cf21263d58e",
+  "runtime": {
+    "requested_worker_count": 20,
+    "worker_count": 20,
+    "wall_seconds": 0.9353403369968873,
+    "child_cpu_seconds": 12.049999999999997,
+    "aggregate_peak_rss_bytes_sampled": 1103073280,
+    "all_tasks_complete": true
+  }
+}
