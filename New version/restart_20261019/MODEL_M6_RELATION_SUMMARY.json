@@ -1,0 +1,277 @@
+{
+  "role": "Supplied-relation generator on 16 engineering conditions and one revealed EPA target; not natural accuracy",
+  "conditions": 16,
+  "statuses": {
+    "abstain": 8,
+    "propose": 3,
+    "unsupported": 5
+  },
+  "all_condition_expectations_match": true,
+  "all_fraction_checks_pass": true,
+  "calc_controls": {
+    "q12_d2_active_generated": {
+      "expected": 6.0,
+      "observed": 6.0,
+      "agrees": true
+    },
+    "q12_d2_active_native": {
+      "expected": 0,
+      "observed": 0.0,
+      "agrees": true
+    },
+    "q12_d2_inactive_generated": {
+      "expected": 12,
+      "observed": 12.0,
+      "agrees": true
+    },
+    "q12_d2_inactive_native": {
+      "expected": 12,
+      "observed": 12.0,
+      "agrees": true
+    },
+    "q9_d3_active_generated": {
+      "expected": 3.0,
+      "observed": 3.0,
+      "agrees": true
+    },
+    "q9_d3_active_native": {
+      "expected": -9,
+      "observed": -9.0,
+      "agrees": true
+    }
+  },
+  "condition_results": {
+    "correct_original": {
+      "status": "abstain",
+      "reason": "original_satisfies_contract",
+      "native_pool_has_equivalent": false,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_affine": {
+      "status": "propose",
+      "reason": "candidate_satisfies_explicit_relation",
+      "native_pool_has_equivalent": false,
+      "original_paper_has_changed_suggestion": false,
+      "fraction_point_checks": [
+        {
+          "q": "10",
+          "d": "1",
+          "expected": "10",
+          "predicted": "10",
+          "original": "10",
+          "original_matches": true
+        },
+        {
+          "q": "10",
+          "d": "2",
+          "expected": "0",
+          "predicted": "0",
+          "original": "5",
+          "original_matches": false
+        },
+        {
+          "q": "9",
+          "d": "3",
+          "expected": "-9",
+          "predicted": "-9",
+          "original": "0",
+          "original_matches": false
+        },
+        {
+          "q": "13",
+          "d": "4",
+          "expected": "-26",
+          "predicted": "-26",
+          "original": "-13/2",
+          "original_matches": false
+        },
+        {
+          "q": "7",
+          "d": "1/2",
+          "expected": "21/2",
+          "predicted": "21/2",
+          "original": "35/4",
+          "original_matches": false
+        }
+      ]
+    },
+    "counter_conflict": {
+      "status": "abstain",
+      "reason": "conflicting_business_relations",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_missing_mapping": {
+      "status": "unsupported",
+      "reason": "missing_reference_mapping",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_none": {
+      "status": "abstain",
+      "reason": "missing_business_relation",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_nonlinear": {
+      "status": "unsupported",
+      "reason": "output_relation_not_linear_and_unique",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_nonunique_domain": {
+      "status": "abstain",
+      "reason": "output_coefficient_not_provably_nonzero",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_ratio": {
+      "status": "propose",
+      "reason": "candidate_satisfies_explicit_relation",
+      "native_pool_has_equivalent": false,
+      "original_paper_has_changed_suggestion": false,
+      "fraction_point_checks": [
+        {
+          "q": "10",
+          "d": "1",
+          "expected": "10",
+          "predicted": "10",
+          "original": "10",
+          "original_matches": true
+        },
+        {
+          "q": "10",
+          "d": "2",
+          "expected": "5",
+          "predicted": "5",
+          "original": "5",
+          "original_matches": true
+        },
+        {
+          "q": "9",
+          "d": "3",
+          "expected": "3",
+          "predicted": "3",
+          "original": "0",
+          "original_matches": false
+        },
+        {
+          "q": "13",
+          "d": "4",
+          "expected": "13/4",
+          "predicted": "13/4",
+          "original": "-13/2",
+          "original_matches": false
+        },
+        {
+          "q": "7",
+          "d": "1/2",
+          "expected": "14",
+          "predicted": "14",
+          "original": "35/4",
+          "original_matches": false
+        }
+      ]
+    },
+    "counter_undeclared": {
+      "status": "unsupported",
+      "reason": "arithmetic syntax unsupported",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_units": {
+      "status": "abstain",
+      "reason": "missing_business_relation",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "counter_units_mismatch": {
+      "status": "unsupported",
+      "reason": "relation_units_mismatch",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": false
+    },
+    "epa_conflict": {
+      "status": "abstain",
+      "reason": "conflicting_business_relations",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": true
+    },
+    "epa_none": {
+      "status": "abstain",
+      "reason": "missing_business_relation",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": true
+    },
+    "epa_ratio": {
+      "status": "propose",
+      "reason": "candidate_satisfies_explicit_relation",
+      "native_pool_has_equivalent": false,
+      "original_paper_has_changed_suggestion": true,
+      "fraction_point_checks": [
+        {
+          "q": "10",
+          "d": "1",
+          "expected": "10",
+          "predicted": "10",
+          "original": "10",
+          "original_matches": true
+        },
+        {
+          "q": "10",
+          "d": "2",
+          "expected": "5",
+          "predicted": "5",
+          "original": "0",
+          "original_matches": false
+        },
+        {
+          "q": "9",
+          "d": "3",
+          "expected": "3",
+          "predicted": "3",
+          "original": "-9",
+          "original_matches": false
+        },
+        {
+          "q": "13",
+          "d": "4",
+          "expected": "13/4",
+          "predicted": "13/4",
+          "original": "-26",
+          "original_matches": false
+        },
+        {
+          "q": "7",
+          "d": "1/2",
+          "expected": "14",
+          "predicted": "14",
+          "original": "21/2",
+          "original_matches": false
+        }
+      ]
+    },
+    "epa_wrong_guard": {
+      "status": "unsupported",
+      "reason": "guard or inactive branch differs",
+      "native_pool_has_equivalent": null,
+      "original_paper_has_changed_suggestion": true
+    },
+    "legal_exception": {
+      "status": "abstain",
+      "reason": "original_satisfies_contract",
+      "native_pool_has_equivalent": false,
+      "original_paper_has_changed_suggestion": false
+    }
+  },
+  "proposed_with_absent_native_equivalent": 3,
+  "epa_target_generated": true,
+  "epa_native_pool_has_equivalent": false,
+  "unreviewed_paper_rows_epa": 231,
+  "output_lock_sha256": "b344560488e34ad719b75c1e2534cf5c212250241458a383cd3c7f40e0cc51fe",
+  "calc_input_lock_sha256": "df00d3a181a7a3302ba90d2a5eadaef8e3e1ffffe7bd9e1e7b2dbbc1bcc88a49",
+  "automatic_relation_extraction": false,
+  "natural_error_accuracy": null,
+  "full_workbook_precision": null,
+  "final_validation_eligible": false
+}
