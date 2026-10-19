@@ -1,0 +1,69 @@
+{
+  "role": "Candidate generation only on revealed data; not repair accuracy",
+  "counts": {
+    "ordinary_candidate_denominator": 10948,
+    "horizontal_candidates": 20804,
+    "horizontal_candidates_distinct_from_native": 20512,
+    "horizontal_target_cells": 19407,
+    "native_exact_reachable": 674,
+    "horizontal_exact_reachable": 48,
+    "union_exact_reachable": 720,
+    "newly_exact_reachable": 46,
+    "baseline_timeout_unobserved_targets": 5393
+  },
+  "candidate_expansion_per_new_exact_target": 445.9130434782609,
+  "union_oracle_coverage": 0.06576543660942638,
+  "continuation_checks": {
+    "at_least_100_additional_exact_targets": false,
+    "at_most_100_new_candidates_per_new_exact_target": false
+  },
+  "continue_to_selector_research": false,
+  "target_status_counts": {
+    "no_supported_changed_candidate": 93753,
+    "original_parse_unsupported": 4911,
+    "target_with_candidates": 19407
+  },
+  "by_group": {
+    "01_Debugging": {
+      "ordinary_targets": 1780,
+      "newly_exact_reachable": 12
+    },
+    "02_Debugging": {
+      "ordinary_targets": 185,
+      "newly_exact_reachable": 0
+    },
+    "03_Debugging": {
+      "ordinary_targets": 378,
+      "newly_exact_reachable": 1
+    },
+    "04_Debugging": {
+      "ordinary_targets": 464,
+      "newly_exact_reachable": 5
+    },
+    "05_Debugging": {
+      "ordinary_targets": 335,
+      "newly_exact_reachable": 0
+    },
+    "06_Debugging": {
+      "ordinary_targets": 819,
+      "newly_exact_reachable": 12
+    },
+    "07_Debugging": {
+      "ordinary_targets": 688,
+      "newly_exact_reachable": 1
+    },
+    "08_Debugging": {
+      "ordinary_targets": 412,
+      "newly_exact_reachable": 11
+    },
+    "09_Debugging": {
+      "ordinary_targets": 494,
+      "newly_exact_reachable": 4
+    }
+  },
+  "output_lock_sha256": "f1ff14ea3ed80e78fea60a1acb55b9c18d3b8eed53fcdaf7cf693352b2ce0ebf",
+  "candidate_differences_sha256": "12b4551000c0ff1dea3eb2b298800cf456937de508cb6fa5ae542cdfc0901c29",
+  "chosen_repairs": 0,
+  "business_accuracy": null,
+  "final_validation_eligible": false
+}
