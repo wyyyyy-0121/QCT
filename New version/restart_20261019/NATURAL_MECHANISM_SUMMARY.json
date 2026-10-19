@@ -1,0 +1,179 @@
+{
+  "role": "Revealed natural development; actual invoked candidate pools only; not a model change",
+  "terminal_states": {
+    "complete": 7
+  },
+  "original_predictions_identical_on_complete_tasks": true,
+  "natural_error_denominator": 513,
+  "natural_gap_partition": {
+    "no_exact_in_observed_pools": 513
+  },
+  "natural_selection_and_trigger_details": {
+    "no_exact_fg_not_triggered": 513
+  },
+  "natural_observed_pool_counts": {},
+  "natural_text_exact_pool_oracle_coverage": 0.0,
+  "tasks": [
+    {
+      "id": "aedist_corrected",
+      "group": "corrected_controls",
+      "status": "complete",
+      "targets": 0,
+      "partition": {},
+      "details": {},
+      "outside_types": {},
+      "pool_counts": {},
+      "probe_invocation_on_targets": {
+        "fg": 0,
+        "sg": 0,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 2,
+      "known_correct_targets_modified": 2
+    },
+    {
+      "id": "aedist_original",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 2,
+      "partition": {
+        "no_exact_in_observed_pools": 2
+      },
+      "details": {
+        "no_exact_fg_not_triggered": 2
+      },
+      "outside_types": {},
+      "pool_counts": {},
+      "probe_invocation_on_targets": {
+        "fg": 0,
+        "sg": 2,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 0,
+      "known_correct_targets_modified": 0
+    },
+    {
+      "id": "corrected_cv500",
+      "group": "corrected_controls",
+      "status": "complete",
+      "targets": 0,
+      "partition": {},
+      "details": {},
+      "outside_types": {},
+      "pool_counts": {},
+      "probe_invocation_on_targets": {
+        "fg": 0,
+        "sg": 0,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 505,
+      "known_correct_targets_modified": 0
+    },
+    {
+      "id": "metrics_original",
+      "group": "range_candidates",
+      "status": "complete",
+      "targets": 28,
+      "partition": {
+        "exact_in_observed_pool_but_not_final": 22,
+        "no_exact_in_observed_pools": 6
+      },
+      "details": {
+        "fg_not_emitted": 22,
+        "no_exact_fg_not_triggered": 6
+      },
+      "outside_types": {},
+      "pool_counts": {
+        "union_exact_reachable": 22,
+        "fg_exact_reachable": 22
+      },
+      "probe_invocation_on_targets": {
+        "fg": 22,
+        "sg": 28,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 0,
+      "known_correct_targets_modified": 0
+    },
+    {
+      "id": "natural_cv500",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 505,
+      "partition": {
+        "no_exact_in_observed_pools": 505
+      },
+      "details": {
+        "no_exact_fg_not_triggered": 505
+      },
+      "outside_types": {},
+      "pool_counts": {},
+      "probe_invocation_on_targets": {
+        "fg": 0,
+        "sg": 505,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 0,
+      "known_correct_targets_modified": 0
+    },
+    {
+      "id": "natural_epa_flares",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 5,
+      "partition": {
+        "no_exact_in_observed_pools": 5
+      },
+      "details": {
+        "no_exact_fg_not_triggered": 5
+      },
+      "outside_types": {},
+      "pool_counts": {},
+      "probe_invocation_on_targets": {
+        "fg": 0,
+        "sg": 5,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 0,
+      "known_correct_targets_modified": 0
+    },
+    {
+      "id": "natural_epa_oxidizers",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 1,
+      "partition": {
+        "no_exact_in_observed_pools": 1
+      },
+      "details": {
+        "no_exact_fg_not_triggered": 1
+      },
+      "outside_types": {},
+      "pool_counts": {},
+      "probe_invocation_on_targets": {
+        "fg": 0,
+        "sg": 1,
+        "fg_invoked_but_empty": 0
+      },
+      "known_correct_targets": 0,
+      "known_correct_targets_modified": 0
+    }
+  ],
+  "final_validation_eligible": false,
+  "business_accuracy": null,
+  "limits": [
+    "No exact text in invoked pool does not rule out uninvoked or equivalent formulas",
+    "Same visible workbook may have incompatible external business intents; dev29 counterexamples remain",
+    "505 errors share one exposed source; neither source-balanced nor final validation"
+  ],
+  "input_lock_sha256": "17e34819cbc408d65711347ec1f2e3907452588e6c40e5f8e5c3db23046099d0",
+  "output_lock_sha256": "87b5be16d1e3d1946f3d3f8f03ae788f518a3e6c1f6436347d787bb75960bba4",
+  "runtime": {
+    "requested_worker_count": 20,
+    "worker_count": 20,
+    "wall_seconds": 7.693649563996587,
+    "child_cpu_seconds": 18.87,
+    "aggregate_peak_rss_bytes_sampled": 519888896,
+    "all_tasks_complete": true
+  }
+}
