@@ -1,0 +1,68 @@
+{
+  "experiment": "M8 static-label address mapping without target formulas",
+  "task_count": 18,
+  "counts": {
+    "mapped": 7,
+    "unresolved": 7,
+    "abstain": 4
+  },
+  "groups": {
+    "real_mapping_query": {
+      "conditions": 8,
+      "mapped": 4,
+      "unresolved": 4
+    },
+    "engineering_invariance_control": {
+      "conditions": 1,
+      "mapped": 1
+    },
+    "engineering_layout_control": {
+      "conditions": 2,
+      "unresolved": 2
+    },
+    "engineering_unit_control": {
+      "conditions": 3,
+      "mapped": 2,
+      "unresolved": 1
+    },
+    "end_to_end_correct": {
+      "conditions": 2,
+      "abstain": 2
+    },
+    "end_to_end_fault": {
+      "conditions": 2,
+      "abstain": 2
+    }
+  },
+  "expectation_mismatches": [],
+  "diagnostic_checks_passed": true,
+  "mechanism_continuation_gate_passed": false,
+  "decision": "stop_label_only_mechanism_do_not_adopt",
+  "end_to_end_faults": 2,
+  "correct_fault_repairs": 0,
+  "end_to_end_correct_originals": 2,
+  "correct_originals_modified": 0,
+  "all_repair_proposals": 0,
+  "independent_fraction_checks": 0,
+  "original_and_fault_metadata_identical": true,
+  "formula_change_mapping_identical": true,
+  "formula_slots_independently_verified": true,
+  "metadata_workbooks_checked": 6,
+  "inference_addresses_manually_supplied": false,
+  "mapping_query_text_manually_supplied": true,
+  "independent_human_annotation": false,
+  "final_validation_eligible": false,
+  "natural_accuracy_established": false,
+  "natural_validation_sources": 0,
+  "natural_validation_families": 0,
+  "runtime": {
+    "requested_worker_count": 20,
+    "worker_count": 20,
+    "wall_seconds": 0.2468975810043048,
+    "child_cpu_seconds": 2.85,
+    "aggregate_peak_rss_bytes_sampled": 781250560,
+    "all_tasks_complete": true
+  },
+  "source_input_lock_sha256": "a55c18424470169d7c9e8531f294a53b351bec14f97b3ec70fb699f4ab74b9fe",
+  "source_output_lock_sha256": "c826e036236e392a3656d3260db39de8500cf7760ba0aa84423a9495575ee846"
+}
