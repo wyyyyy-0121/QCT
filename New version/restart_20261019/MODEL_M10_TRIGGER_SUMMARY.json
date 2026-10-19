@@ -1,0 +1,274 @@
+{
+  "experiment": "M10 unchanged generator without pre-generation trigger; candidate availability only",
+  "terminal_states": {
+    "complete": 49
+  },
+  "by_group": {
+    "corrected_controls": {
+      "targets": 0,
+      "known_correct_targets": 507,
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 0,
+      "additional_fg_calls": 5693,
+      "all_native_fg_candidates": 2956,
+      "all_ungated_fg_candidates": 99515,
+      "correct_targets_with_changed_fg_candidate": 507,
+      "unknown_cells_with_changed_fg_candidate": 5482
+    },
+    "natural_errors": {
+      "targets": 513,
+      "known_correct_targets": 0,
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 513,
+      "additional_fg_calls": 6155,
+      "all_native_fg_candidates": 3880,
+      "all_ungated_fg_candidates": 109079,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 5988
+    },
+    "authored_finance": {
+      "targets": 96,
+      "known_correct_targets": 60,
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 6,
+      "exact_gained": 6,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 96,
+      "additional_fg_calls": 234,
+      "all_native_fg_candidates": 288,
+      "all_ungated_fg_candidates": 4710,
+      "correct_targets_with_changed_fg_candidate": 60,
+      "unknown_cells_with_changed_fg_candidate": 83
+    },
+    "range_candidates": {
+      "targets": 28,
+      "known_correct_targets": 0,
+      "original_exact_reachable": 22,
+      "ungated_exact_reachable": 28,
+      "exact_gained": 6,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 22,
+      "ungated_fg_called_on_targets": 28,
+      "additional_fg_calls": 603,
+      "all_native_fg_candidates": 720,
+      "all_ungated_fg_candidates": 13931,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 445
+    },
+    "authored_text": {
+      "targets": 96,
+      "known_correct_targets": 96,
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 46,
+      "exact_gained": 46,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 96,
+      "additional_fg_calls": 192,
+      "all_native_fg_candidates": 0,
+      "all_ungated_fg_candidates": 4608,
+      "correct_targets_with_changed_fg_candidate": 96,
+      "unknown_cells_with_changed_fg_candidate": 0
+    }
+  },
+  "natural_gap_partition": {
+    "no_exact_in_observed_pools": 513
+  },
+  "natural_details": {
+    "no_exact_fg_probed": 513
+  },
+  "continuation_checks": {
+    "all49_complete": true,
+    "original_predictions_identical": true,
+    "no_existing_exact_pool_loss": true,
+    "natural_exact_pool_strictly_increases": false
+  },
+  "continuation_gate_passed": false,
+  "decision": "stop_ungating_route_no_parameter_search",
+  "natural_by_workbook": [
+    {
+      "id": "aedist_corrected",
+      "group": "corrected_controls",
+      "status": "complete",
+      "targets": 0,
+      "known_correct_targets": 2,
+      "partition": {},
+      "details": {},
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 0,
+      "additional_fg_calls": 5188,
+      "all_native_fg_candidates": 2956,
+      "all_ungated_fg_candidates": 87395,
+      "correct_targets_with_changed_fg_candidate": 2,
+      "unknown_cells_with_changed_fg_candidate": 5482
+    },
+    {
+      "id": "aedist_original",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 2,
+      "known_correct_targets": 0,
+      "partition": {
+        "no_exact_in_observed_pools": 2
+      },
+      "details": {
+        "no_exact_fg_probed": 2
+      },
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 2,
+      "additional_fg_calls": 5188,
+      "all_native_fg_candidates": 2956,
+      "all_ungated_fg_candidates": 87395,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 5482
+    },
+    {
+      "id": "corrected_cv500",
+      "group": "corrected_controls",
+      "status": "complete",
+      "targets": 0,
+      "known_correct_targets": 505,
+      "partition": {},
+      "details": {},
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 0,
+      "additional_fg_calls": 505,
+      "all_native_fg_candidates": 0,
+      "all_ungated_fg_candidates": 12120,
+      "correct_targets_with_changed_fg_candidate": 505,
+      "unknown_cells_with_changed_fg_candidate": 0
+    },
+    {
+      "id": "metrics_original",
+      "group": "range_candidates",
+      "status": "complete",
+      "targets": 28,
+      "known_correct_targets": 0,
+      "partition": {
+        "exact_in_observed_pool_but_not_final": 28
+      },
+      "details": {
+        "fg_not_emitted": 28
+      },
+      "original_exact_reachable": 22,
+      "ungated_exact_reachable": 28,
+      "exact_gained": 6,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 22,
+      "ungated_fg_called_on_targets": 28,
+      "additional_fg_calls": 603,
+      "all_native_fg_candidates": 720,
+      "all_ungated_fg_candidates": 13931,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 445
+    },
+    {
+      "id": "natural_cv500",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 505,
+      "known_correct_targets": 0,
+      "partition": {
+        "no_exact_in_observed_pools": 505
+      },
+      "details": {
+        "no_exact_fg_probed": 505
+      },
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 505,
+      "additional_fg_calls": 505,
+      "all_native_fg_candidates": 0,
+      "all_ungated_fg_candidates": 12120,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 0
+    },
+    {
+      "id": "natural_epa_flares",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 5,
+      "known_correct_targets": 0,
+      "partition": {
+        "no_exact_in_observed_pools": 5
+      },
+      "details": {
+        "no_exact_fg_probed": 5
+      },
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 5,
+      "additional_fg_calls": 242,
+      "all_native_fg_candidates": 720,
+      "all_ungated_fg_candidates": 5413,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 275
+    },
+    {
+      "id": "natural_epa_oxidizers",
+      "group": "natural_errors",
+      "status": "complete",
+      "targets": 1,
+      "known_correct_targets": 0,
+      "partition": {
+        "no_exact_in_observed_pools": 1
+      },
+      "details": {
+        "no_exact_fg_probed": 1
+      },
+      "original_exact_reachable": 0,
+      "ungated_exact_reachable": 0,
+      "exact_gained": 0,
+      "exact_lost": 0,
+      "original_fg_called_on_targets": 0,
+      "ungated_fg_called_on_targets": 1,
+      "additional_fg_calls": 220,
+      "all_native_fg_candidates": 204,
+      "all_ungated_fg_candidates": 4151,
+      "correct_targets_with_changed_fg_candidate": 0,
+      "unknown_cells_with_changed_fg_candidate": 231
+    }
+  ],
+  "model_predictions_changed": false,
+  "business_accuracy": null,
+  "final_validation_eligible": false,
+  "natural_validation_sources": 0,
+  "natural_validation_families": 0,
+  "input_lock_sha256": "763daab09a1a92df1a9bfe7f02ac6c81cd3d6bf822396308f903b79831245c53",
+  "output_lock_sha256": "2ea0e66a12b4da48adb9a807038a8a9a633d30209e50e679dd79e380f9de6f2a",
+  "runtime": {
+    "requested_worker_count": 20,
+    "worker_count": 20,
+    "wall_seconds": 18.57454338399839,
+    "child_cpu_seconds": 62.5,
+    "aggregate_peak_rss_bytes_sampled": 1112403968,
+    "all_tasks_complete": true
+  }
+}
