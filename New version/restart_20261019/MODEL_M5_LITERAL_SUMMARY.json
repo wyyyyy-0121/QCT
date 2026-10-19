@@ -1,0 +1,115 @@
+{
+  "role": "Revealed development ordinary-formula candidates; literal integrity and repair performance separate",
+  "overall": {
+    "native": {
+      "all_suggestions": 97037,
+      "exact_correct": 449,
+      "suggestions_on_errors": 2648,
+      "wrong_formula_on_errors": 2199,
+      "no_suggestion_on_errors": 8300,
+      "suggestions_outside_confirmed_errors": 94389,
+      "ordinary_candidate_denominator": 10948,
+      "candidate_precision": 0.004627101002710307,
+      "candidate_repair_coverage": 0.041012056996711725,
+      "terminal_status_counts": {
+        "complete": 90,
+        "timeout": 10
+      }
+    },
+    "m5": {
+      "all_suggestions": 97346,
+      "exact_correct": 449,
+      "suggestions_on_errors": 2664,
+      "wrong_formula_on_errors": 2215,
+      "no_suggestion_on_errors": 8284,
+      "suggestions_outside_confirmed_errors": 94682,
+      "ordinary_candidate_denominator": 10948,
+      "candidate_precision": 0.004612413453043782,
+      "candidate_repair_coverage": 0.041012056996711725,
+      "terminal_status_counts": {
+        "complete": 90,
+        "timeout": 10
+      }
+    }
+  },
+  "changed_predictions": {
+    "tasks_with_changed_final_suggestions": 20,
+    "changed_final_suggestions": 309,
+    "gained_exact_candidates": 0,
+    "lost_exact_candidates": 0
+  },
+  "control": {
+    "status": "complete",
+    "counts": {
+      "safe_compared": 8,
+      "safe_correct": 8,
+      "native_compared": 8,
+      "native_correct": 5
+    },
+    "failures": [
+      {
+        "cell": "S!J1",
+        "variant": "native",
+        "expected": {
+          "kind": "text",
+          "value": "A1+B1 / SUM"
+        },
+        "observed": {
+          "content_type": "FORMULA",
+          "display": "A2+B2 / SUM",
+          "formula_imported": "=IF(A2=0;\"A2+B2 / SUM\";B2)",
+          "kind": "text",
+          "result_type": "TEXT",
+          "uno_error_code": 0,
+          "value": "A2+B2 / SUM"
+        }
+      },
+      {
+        "cell": "S!J2",
+        "variant": "native",
+        "expected": {
+          "kind": "text",
+          "value": "A1 \"quote\""
+        },
+        "observed": {
+          "content_type": "FORMULA",
+          "display": "A2 \"quote\"",
+          "formula_imported": "=IF(A2=0;\"A2 \"\"quote\"\"\";B2)",
+          "kind": "text",
+          "result_type": "TEXT",
+          "uno_error_code": 0,
+          "value": "A2 \"quote\""
+        }
+      },
+      {
+        "cell": "S!J5",
+        "variant": "native",
+        "expected": {
+          "kind": "text",
+          "value": "SUM / A1"
+        },
+        "observed": {
+          "content_type": "FORMULA",
+          "display": "SUM / A2",
+          "formula_imported": "=IF(A2=0;\"SUM / A2\";B2)",
+          "kind": "text",
+          "result_type": "TEXT",
+          "uno_error_code": 0,
+          "value": "SUM / A2"
+        }
+      }
+    ],
+    "result_sha256": "3053fb15337b9000775e786f50cdfa2437df7dac9dde9375809319e2ac45db9f"
+  },
+  "continuation_checks": {
+    "safe_controls_all_correct": true,
+    "no_new_prediction_failures": true,
+    "candidate_precision_not_lower": false,
+    "candidate_coverage_not_lower": true
+  },
+  "model_adoption_eligible_for_further_research": false,
+  "output_lock_sha256": "9e6486a18f2e97254227eda0e1c02fc06f07c50b7875bdd3a0404bbfcac85fe6",
+  "candidate_differences_sha256": "12b4551000c0ff1dea3eb2b298800cf456937de508cb6fa5ae542cdfc0901c29",
+  "business_accuracy": null,
+  "final_validation_eligible": false
+}

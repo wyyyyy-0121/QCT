@@ -1,0 +1,128 @@
+{
+  "role": "Static syntax and function-support diagnosis; not execution success or repair accuracy",
+  "counts": {
+    "ordinary_candidate_denominator": 10948,
+    "all_input_formula_cells": 118071,
+    "input_unsupported": 4911,
+    "input_parsed": 113160,
+    "parsed_cells_with_unsupported_functions": 6572,
+    "ordinary_targets_with_unsupported_original": 427,
+    "baseline_timeout_targets": 5393
+  },
+  "all_input_parse_failure_primary": {
+    "text_literal": 3302,
+    "percent_operator": 340,
+    "error_literal": 421,
+    "name_or_noncell_reference": 848
+  },
+  "all_input_failure_features_nonexclusive": {
+    "concatenation_operator": 1860,
+    "text_literal": 3302,
+    "percent_operator": 340,
+    "error_literal": 421,
+    "name_or_noncell_reference": 924
+  },
+  "parsed_input_unsupported_function_cells_by_name": {
+    "INDEX": 199,
+    "MATCH": 199,
+    "CHOOSE": 2086,
+    "_XLFN.RRI": 60,
+    "MEDIAN": 319,
+    "PV": 30,
+    "LN": 10,
+    "SQRT": 20,
+    "NORMSDIST": 20,
+    "EXP": 10,
+    "IRR": 60,
+    "XIRR": 60,
+    "PERCENTILE": 110,
+    "_XLFN.PERCENTILE.EXC": 30,
+    "_XLUDF.RRI": 8,
+    "TRANSPOSE": 9,
+    "MOD": 140,
+    "YEAR": 1190,
+    "RRI": 12,
+    "PPMT": 500,
+    "IPMT": 500,
+    "RATE": 20,
+    "PMT": 209,
+    "OFFSET": 480,
+    "DATE": 30,
+    "EOMONTH": 360,
+    "TODAY": 10,
+    "IFERROR": 240
+  },
+  "ordinary_target_original_to_expected_syntax": {
+    "parsed -> parsed": 2690,
+    "not_in_formula_inventory -> parsed": 2347,
+    "parsed -> text_literal": 32,
+    "not_in_formula_inventory -> text_literal": 59,
+    "text_literal -> parsed": 20,
+    "error_literal -> text_literal": 6,
+    "error_literal -> parsed": 275,
+    "name_or_noncell_reference -> parsed": 70,
+    "text_literal -> text_literal": 18,
+    "error_literal -> name_or_noncell_reference": 8,
+    "name_or_noncell_reference -> name_or_noncell_reference": 30
+  },
+  "no_exact_observed_pool_by_syntax": {
+    "parsed -> parsed": 2077,
+    "error_literal -> parsed": 247,
+    "error_literal -> text_literal": 5,
+    "parsed -> text_literal": 19,
+    "name_or_noncell_reference -> parsed": 70,
+    "text_literal -> text_literal": 16,
+    "text_literal -> parsed": 3,
+    "error_literal -> name_or_noncell_reference": 8,
+    "name_or_noncell_reference -> name_or_noncell_reference": 30
+  },
+  "parsed_expected_unsupported_function_cells_by_name": {
+    "TABLE": 1000,
+    "CHOOSE": 153,
+    "MEDIAN": 10,
+    "INDEX": 25,
+    "MATCH": 25,
+    "RRI": 20,
+    "YEAR": 105,
+    "PMT": 9,
+    "XIRR": 1,
+    "PPMT": 1,
+    "IPMT": 1,
+    "OFFSET": 44,
+    "EOMONTH": 9
+  },
+  "by_group": {
+    "01_Debugging": {
+      "targets_with_unsupported_original": 74
+    },
+    "02_Debugging": {
+      "targets_with_unsupported_original": 15
+    },
+    "03_Debugging": {
+      "targets_with_unsupported_original": 5
+    },
+    "04_Debugging": {
+      "targets_with_unsupported_original": 5
+    },
+    "05_Debugging": {
+      "targets_with_unsupported_original": 46
+    },
+    "06_Debugging": {
+      "targets_with_unsupported_original": 80
+    },
+    "07_Debugging": {
+      "targets_with_unsupported_original": 4
+    },
+    "08_Debugging": {
+      "targets_with_unsupported_original": 124
+    },
+    "09_Debugging": {
+      "targets_with_unsupported_original": 74
+    }
+  },
+  "output_lock_sha256": "11e4859f4e62778ef25fa3b9fd656d907bf1bf08376092cf45253e3658b09c3d",
+  "m2_output_lock_sha256": "679af9058db3d2fd6072540e4f64b095caae09162f12dbbcb522bb7af87f9d91",
+  "candidate_differences_sha256": "12b4551000c0ff1dea3eb2b298800cf456937de508cb6fa5ae542cdfc0901c29",
+  "final_validation_eligible": false,
+  "business_accuracy": null
+}
