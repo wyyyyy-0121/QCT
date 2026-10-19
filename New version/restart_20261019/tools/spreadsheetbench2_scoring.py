@@ -12,7 +12,12 @@ def formula_inventory(workbook):
     for sheet in workbook:
         for row in sheet:
             for cell in row:
-                key = f'{sheet.title}!{cell.coordinate}'
+                # read_only worksheets may yield EmptyCell placeholders with
+                # no coordinate; they carry no formula or value evidence.
+                coordinate = getattr(cell, 'coordinate', None)
+                if coordinate is None:
+                    continue
+                key = f'{sheet.title}!{coordinate}'
                 if cell.data_type == 'f':
                     value = cell.value
                     formulas[key] = value if isinstance(value, str) else {

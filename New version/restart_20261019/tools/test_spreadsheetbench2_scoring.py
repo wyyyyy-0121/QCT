@@ -3,10 +3,24 @@ from pathlib import Path
 import unittest
 import openpyxl
 
-from spreadsheetbench2_scoring import exact_metrics, verify_prediction_lock, formula_differences
+from spreadsheetbench2_scoring import exact_metrics, verify_prediction_lock, formula_differences, formula_inventory
 
 
 class ExactMetricTests(unittest.TestCase):
+    def test_read_only_empty_cells_do_not_hide_later_formulas(self):
+        with tempfile.TemporaryDirectory() as root:
+            path = Path(root) / 'sparse.xlsx'
+            book = openpyxl.Workbook()
+            book.active['D3'] = '=A1+1'
+            book.save(path)
+            read_only = openpyxl.load_workbook(path, read_only=True, data_only=False)
+            try:
+                formulas, values = formula_inventory(read_only)
+                self.assertEqual(formulas, {'Sheet!D3': '=A1+1'})
+                self.assertEqual(values, {})
+            finally:
+                read_only.close()
+
     def test_timeouts_preserve_coverage_denominator(self):
         result = exact_metrics(None, {'S!A1': '=1'}, terminal_status='timeout')
         self.assertEqual(result['confirmed_errors'], 1)

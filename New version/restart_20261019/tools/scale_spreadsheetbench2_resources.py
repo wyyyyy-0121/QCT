@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Repeat frozen inference at 16 workers after validating the baseline lock.
+"""Repeat frozen inference at a selected worker count after validating the baseline lock.
 
 This is a resource experiment, never an alternate accuracy baseline. It does
 not open golden workbooks or task labels. The original runner remains frozen.
@@ -45,7 +45,11 @@ def differences(baseline, repeat):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check-only', action='store_true')
+    parser.add_argument('--workers', type=int, default=20)
+    parser.add_argument('--worker-memory-mib', type=int, default=475)
     args = parser.parse_args()
+    if args.workers < 1 or args.worker_memory_mib < 1:
+        raise SystemExit('--workers and --worker-memory-mib must be positive')
     lock, inputs = verify_prediction_lock(EVIDENCE)
     if sys.executable != lock['runtime_executable'] or sys.version != lock['runtime_python']:
         raise SystemExit('Use the locked Python interpreter')
@@ -54,13 +58,13 @@ def main():
     if sha256(manifest) != lock['full_runtime']['manifest_sha256']:
         raise SystemExit('Full manifest differs from baseline')
     validate_runtime(lock['full_runtime'], manifest)
-    plan = admission(available_memory_bytes())
+    plan = admission(available_memory_bytes(), args.workers, args.worker_memory_mib)
     if args.check_only:
         print(json.dumps(plan, indent=2))
         return
-    target = EVIDENCE / 'runs/full_workers_16'
-    record = EVIDENCE / 'resource_scaling_16_preflight.json'
-    summary = EVIDENCE / 'resource_scaling_16_comparison.json'
+    target = EVIDENCE / f'runs/full_workers_{args.workers}'
+    record = EVIDENCE / f'resource_scaling_{args.workers}_preflight.json'
+    summary = EVIDENCE / f'resource_scaling_{args.workers}_comparison.json'
     if target.exists() or record.exists() or summary.exists():
         raise SystemExit('Preserving existing scaling evidence; inspect its live process/runtime')
     plan.update(created_utc=dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -73,15 +77,15 @@ def main():
     write_json(record, plan)
     result = subprocess.run([
         sys.executable, str(RUNNER), '--manifest', str(manifest),
-        '--output-dir', str(target), '--workers', '16',
-        '--worker-memory-mib', '550', '--timeout', '900',
+        '--output-dir', str(target), '--workers', str(args.workers),
+        '--worker-memory-mib', str(args.worker_memory_mib), '--timeout', '900',
     ], cwd=ROOT, check=False)
     runtime = json.loads((target / 'runtime.json').read_text())
     verify_prediction_lock(EVIDENCE)
     verify_frozen(inputs)
     validate_runtime(runtime, manifest)
-    if runtime['worker_count'] != 16 or runtime['manifest_sha256'] != sha256(manifest):
-        raise SystemExit('Resource repeat did not run 16 workers on the frozen manifest')
+    if runtime['worker_count'] != args.workers or runtime['manifest_sha256'] != sha256(manifest):
+        raise SystemExit(f'Resource repeat did not run {args.workers} workers on the frozen manifest')
     delta = differences(lock['full_runtime'], runtime)
     comparison = {
         'created_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -92,10 +96,10 @@ def main():
         'all_terminal_states_and_success_hashes_identical': not delta,
         'task_differences': delta,
         'wall_seconds_8': lock['full_runtime']['wall_seconds'],
-        'wall_seconds_16': runtime['wall_seconds'],
-        'child_cpu_seconds_16': runtime['child_cpu_seconds'],
-        'cpu_accounting_complete_16': runtime['cpu_accounting_complete'],
-        'aggregate_peak_rss_bytes_sampled_16': runtime['aggregate_peak_rss_bytes_sampled'],
+        f'wall_seconds_{args.workers}': runtime['wall_seconds'],
+        f'child_cpu_seconds_{args.workers}': runtime['child_cpu_seconds'],
+        f'cpu_accounting_complete_{args.workers}': runtime['cpu_accounting_complete'],
+        f'aggregate_peak_rss_bytes_sampled_{args.workers}': runtime['aggregate_peak_rss_bytes_sampled'],
         'speedup': None,
         'speedup_limitation': 'Censored tasks and incomplete CPU accounting; report raw wall times',
         'accuracy_baseline_replaced': False,
