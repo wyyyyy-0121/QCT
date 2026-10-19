@@ -1,0 +1,167 @@
+{
+  "snapshot": {
+    "id": "km8rkfgcpb",
+    "version": 1,
+    "name": "Spatial locking of rural incomes: terrain gradients and spillovers across 150 counties in Sichuan, China",
+    "description": "This deposit contains the two supplementary-data workbooks referenced in the Data Availability Statement of the manuscript submitted to Spatial Economic Analysis (RSEA-2026-0452), supporting a spatial analysis of farmers' income across a terrain gradient in Sichuan, China.\n\nFile 1 — farmers_income_panel_Sichuan.xlsx (Supplementary Data S1) County-level balanced panel: 150 counties × three benchmark years (2000, 2010, 2020) = 450 county-year observations, no missing values. Cross-section covers 18 prefecture-level cities and autonomous prefectures of Sichuan. 43 variables including the dependent variable RuralPerCapitaDisposableIncome (current yuan), six mutually exclusive geomorphic-gradient dummies (Non-mountainous omitted), and a control set. Sheets: README, Variable_dictionary, Panel_data, Descriptive_statistics (live formulas), Data_quality_flags, Known_issues_corrections. Supports the Spatial Durbin model and Moran's I analysis (manuscript Table 6), reproducible with row-standardised k-nearest-neighbour weights (k = 5), inverse-distance and contiguity alternatives, and LeSage–Pace direct/indirect/total effects. Known issues are documented transparently: a corrected county-centroid duplication (F1), a spreadsheet-formula error in the tertiary-industry and GDP-per-capita controls (both published and corrected columns retained), electricity-consumption magnitude anomalies (F2), and rural-population zeros (F3); the geomorphic-gradient coefficients are unaffected.\n\nFile 2 — policy_effect_DiD_rural_revitalization.xlsx (Supplementary Data S2) Difference-in-differences panel derived from S1 (same 150 counties, 450 records; county_id join key), 12 columns. Supports Section 5.5.1, Table 7 and Figure 6(a): the effect of China's targeted poverty-alleviation campaign (2013–2020) on rural income, interacted with deep-mountain (prominent-/entirely-mountainous) priority zones — 88 treated vs 62 control, 2010 pre-policy base, 2000 interaction as a pre-trend placebo. Sheets: README, Variable_dictionary, DiD_panel, Model_specification, Estimation_results, Known_issues. Reproduces Table 7 end to end; known-issue notes cover treated-group definition sensitivity and cumulative-effect timing.\n\nBoth files ship Chinese administrative names alongside romanised forms. Data are released for verification and replication; underlying raw yearbook volumes are not redistributed where publishers restrict it.",
+    "doi": "10.17632/km8rkfgcpb.1",
+    "publish_date": "2026-08-17T17:26:46.616Z",
+    "last_modification_date": "2026-08-14T08:57:40.316Z",
+    "is_confidential": false,
+    "customer": {
+      "id": "7377952c-6404-4428-bbfc-77242cfc301e",
+      "name": "Mendeley Guests",
+      "chief_id": 810289,
+      "config": {
+        "repository_id": "MENDELEY_DATA",
+        "dataset_size_limit": 10737418240,
+        "doi_prefix": "10.17632"
+      },
+      "is_user_mendeley_admin": false,
+      "customer_roles": [],
+      "is_guest": true,
+      "is_user_customer_moderator": false
+    },
+    "owner": {
+      "id": "86078bdf-5119-3984-ad7c-380fc8bcb8cb",
+      "first_name": "mingxia",
+      "last_name": "He",
+      "display_name": "mingxia He",
+      "$ref": "/profiles/86078bdf-5119-3984-ad7c-380fc8bcb8cb",
+      "profile": {
+        "id": "86078bdf-5119-3984-ad7c-380fc8bcb8cb",
+        "$ref": "/profiles/86078bdf-5119-3984-ad7c-380fc8bcb8cb"
+      }
+    },
+    "categories": [
+      {
+        "id": "data.elsevier.com/vocabulary/OmniScience/Concept-235581447",
+        "label": "Economic Geography"
+      },
+      {
+        "id": "data.elsevier.com/vocabulary/OmniScience/Concept-392307293",
+        "label": "Aquaculture Economics"
+      },
+      {
+        "id": "data.elsevier.com/vocabulary/OmniScience/Concept-481939921",
+        "label": "Spatial Econometrics"
+      }
+    ],
+    "licence": {
+      "id": "01d9c749-3c4d-4431-9df3-620b2dcfe144",
+      "short_name": "CC BY 4.0",
+      "full_name": "Creative Commons Attribution 4.0 International",
+      "description": "You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.",
+      "url": "http://creativecommons.org/licenses/by/4.0",
+      "category": "Creative",
+      "customer_id": null
+    },
+    "institutions": [],
+    "funders": [],
+    "organisational_unit_names": [],
+    "contributors": [
+      {
+        "id": "86078bdf-5119-3984-ad7c-380fc8bcb8cb",
+        "first_name": "mingxia",
+        "last_name": "He",
+        "$ref": "/profiles/86078bdf-5119-3984-ad7c-380fc8bcb8cb",
+        "profile": {
+          "id": "86078bdf-5119-3984-ad7c-380fc8bcb8cb",
+          "$ref": "/profiles/86078bdf-5119-3984-ad7c-380fc8bcb8cb"
+        }
+      }
+    ],
+    "related_links": [],
+    "custom_metadata": {},
+    "is_metadata_only": false
+  },
+  "requests": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/km8rkfgcpb/files?folder_id=root&version=1",
+      "acquired_utc": "2026-10-19T02:18:20.870742+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "ok": true,
+      "sha256": "e49220428296ed2119359e19952a0d6b7bccba214c16c9a8fcfca69f1640997b",
+      "bytes": 2293,
+      "metadata": [
+        {
+          "filename": "farmers_income_panel_Sichuan.xlsx",
+          "id": "b7efb4e1-961d-4e03-95a5-c1b79270c6e4",
+          "content_details": {
+            "id": "dff96c82-781d-476c-ae60-ed67a6fabb97",
+            "sha256_hash": "64c469cf01952cb7188e19a88d48a6e44016954ad4ae23f4e03be99262269bf7",
+            "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "size": 119592,
+            "created_date": "2026-08-14T08:49:52.65Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/km8rkfgcpb/files/b7efb4e1-961d-4e03-95a5-c1b79270c6e4/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/km8rkfgcpb/files/b7efb4e1-961d-4e03-95a5-c1b79270c6e4/file_viewed",
+            "download_expiry_time": "2126-10-19T02:18:21.72314846Z"
+          },
+          "size": 119592,
+          "last_modified_date": "2026-08-14T08:49:52.65Z",
+          "status": "COMPLETED"
+        },
+        {
+          "filename": "policy_effect_DiD_rural_revitalization.xlsx",
+          "id": "bb2752a5-107c-4e46-85cd-382a31fbae97",
+          "content_details": {
+            "id": "07672239-c03a-4015-8af9-7eba89436099",
+            "sha256_hash": "2e08ab59ddb13aabf157b646d610ef056970079356a5b4530e0395978893aad6",
+            "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "size": 36399,
+            "created_date": "2026-08-14T08:49:52.553Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/km8rkfgcpb/files/bb2752a5-107c-4e46-85cd-382a31fbae97/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/km8rkfgcpb/files/bb2752a5-107c-4e46-85cd-382a31fbae97/file_viewed",
+            "download_expiry_time": "2126-10-19T02:18:21.72315329Z"
+          },
+          "size": 36399,
+          "last_modified_date": "2026-08-14T08:49:52.553Z",
+          "status": "COMPLETED"
+        },
+        {
+          "filename": "Supplementary_reproducibility_note.pdf",
+          "id": "cfe9eedf-a0e8-47cb-85a7-7d7f8e987173",
+          "content_details": {
+            "id": "22e1dd37-e2c7-433a-aa42-2e345b14cefd",
+            "sha256_hash": "0fc981d793e1fd8f1788ab6dc61333d3e7b032bf8cb25086b0535290471201ef",
+            "content_type": "application/pdf",
+            "size": 219489,
+            "created_date": "2026-08-14T08:49:55.862Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/km8rkfgcpb/files/cfe9eedf-a0e8-47cb-85a7-7d7f8e987173/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/km8rkfgcpb/files/cfe9eedf-a0e8-47cb-85a7-7d7f8e987173/file_viewed",
+            "download_expiry_time": "2126-10-19T02:18:21.72315619Z"
+          },
+          "size": 219489,
+          "last_modified_date": "2026-08-14T08:49:55.862Z",
+          "status": "COMPLETED"
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/km8rkfgcpb/versions",
+      "acquired_utc": "2026-10-19T02:18:20.871238+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "ok": true,
+      "sha256": "eff6ba064afde7bc616e622d0eb51e9fba0973056aaade200c6a93bfcf32e0f7",
+      "bytes": 60,
+      "metadata": [
+        {
+          "version": 1,
+          "publish_date": "2026-08-17",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/api/datasets-v2/datasets/km8rkfgcpb/versions/1",
+      "acquired_utc": "2026-10-19T02:18:20.871483+00:00",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+  ],
+  "workbook_bodies_acquired": false,
+  "truth_certified": false,
+  "final_validation_eligible": false
+}

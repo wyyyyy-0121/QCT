@@ -1,0 +1,32 @@
+{
+  "method": "Independent openpyxl data_type inventory; no value/formula bodies reported",
+  "records": [
+    {
+      "filename": "farmers_income_panel_Sichuan.xlsx",
+      "formula_cells": {
+        "README": 0,
+        "Variable_dictionary": 0,
+        "Panel_data": 0,
+        "Descriptive_statistics": 0,
+        "Data_quality_flags": 0,
+        "Known_issues_corrections": 0
+      },
+      "agrees_with_xml_inventory": true,
+      "input_unchanged": true
+    },
+    {
+      "filename": "policy_effect_DiD_rural_revitalization.xlsx",
+      "formula_cells": {
+        "README": 0,
+        "Variable dictionary": 0,
+        "DID_Panel": 0,
+        "Model specification": 0,
+        "Estimation results": 0,
+        "Known issues ": 0
+      },
+      "agrees_with_xml_inventory": true,
+      "input_unchanged": true
+    }
+  ],
+  "passed": true
+}

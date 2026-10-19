@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/km8rkfgcpb/versions/1",
+      "acquired_utc": "2026-10-19T02:17:40.668820+00:00",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/km8rkfgcpb/versions/1/files",
+      "acquired_utc": "2026-10-19T02:17:40.669509+00:00",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://data.mendeley.com/datasets/km8rkfgcpb/1",
+      "acquired_utc": "2026-10-19T02:17:40.669719+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "ok": true,
+      "sha256": "846c4276e705f33bee8a90b61d8b2e2a6f735f804d4f0aa95d50181d850a1dd9",
+      "bytes": 129990
+    }
+  ],
+  "workbook_bodies_acquired": false,
+  "truth_certified": false,
+  "final_validation_eligible": false
+}

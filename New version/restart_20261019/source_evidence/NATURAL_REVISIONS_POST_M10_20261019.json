@@ -1,0 +1,1223 @@
+{
+  "queries": [
+    {
+      "url": "https://api.github.com/search/commits?q=%22wrong+formula%22+xlsx+committer-date%3A2023-01-01..2026-10-19&per_page=20",
+      "acquired_utc": "2026-10-19T02:15:24.908975+00:00",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=%22wrong+formula%22+xlsx+committer-date%3A2023-01-01..2026-10-19&per_page=20",
+      "ok": true,
+      "bytes": 192185,
+      "sha256": "8df5532dca5085567dbd692d63a4e601aad1d11305dc5e440e022695c06bf0d1",
+      "query": "\"wrong formula\" xlsx committer-date:2023-01-01..2026-10-19",
+      "total_count": 23
+    },
+    {
+      "url": "https://api.github.com/search/commits?q=%22fix+formula%22+ods+committer-date%3A2023-01-01..2026-10-19&per_page=20",
+      "acquired_utc": "2026-10-19T02:15:27.297686+00:00",
+      "http_status": 200,
+      "resolved_url": "https://api.github.com/search/commits?q=%22fix+formula%22+ods+committer-date%3A2023-01-01..2026-10-19&per_page=20",
+      "ok": true,
+      "bytes": 210885,
+      "sha256": "00ef182ec9098faee784c24df157c1e75e85fef4c80f32494771ae2df21193de",
+      "query": "\"fix formula\" ods committer-date:2023-01-01..2026-10-19",
+      "total_count": 15
+    }
+  ],
+  "unique_search_hits": 35,
+  "inspected": [
+    {
+      "origin": "Kartik24Hulmukh/Axiom-Grid",
+      "sha": "029898611238f03d61bfcedd62a15c1d09d46fe4",
+      "url": "https://api.github.com/repos/Kartik24Hulmukh/Axiom-Grid/commits/029898611238f03d61bfcedd62a15c1d09d46fe4",
+      "message": "feat(excel): make Excel domain Real \u2014 xlsx_recompute oracle + CLI + fixtures\n\nFIX: engine code was in __init__.py, engine.py was a stub \u2192 moved code to\nengine.py, __init__.py now re-exports the public API.\n\nFIX: recompute_xlsx was outputting to the same dir as input (LibreOffice\ncan't overwrite the input file) \u2192 now outputs to a temp dir then moves\nthe recomputed file back to the original path.\n\nExcel domain engine (kairo/excel/engine.py):\n  - openpyxl (MIT) writes formulas + structure\n  - LibreOffice headless (MPL, external subprocess) recomputes values\n  - Read recomputed VALUES back and compare to independent Python calc\n  - Never trust the writer alone \u2014 oracle verifies recomputed values\n\nOracles (deterministic, kill-proven):\n  - xlsx_recompute: LO recalc \u2192 read values \u2192 assert equal to independent\n    calc (float tolerance). Kill-proof: wrong formula \u2192 FAILS; no recompute\n    \u2192 FAILS (None values caught).\n  - xlsx_structure_readback: sheets/named-ranges survive round-trip.\n    Kill-proof: drop a sheet \u2192 FAILS; drop a named range \u2192 FAILS.\n\nHonest degradation:\n  - LibreOffice missing \u2192 LibreOfficeUnavailableError ('recompute engine\n    unavailable \u2014 install LibreOffice'). Never presents unverified formula\n    strings as done. Proven by test_pipeline_fails_loud_without_libreoffice.\n\n3 gauntlet scenarios (fixtures/excel/):\n  - s01_financial_model: cross-sheet deps + named ranges, SUM/division\n  - s02_pivot_aggregation: SUMIF/AVERAGEIF with cross-sheet refs\n  - s03_wrong_formula: deliberately wrong formula \u2192 oracle catches it\n\nTrust stack integration:\n  - excel_pipeline emits Ed25519 audit log + signed zero-egress report\n  - CLI  subcommand: input xlsx + spec \u2192 recomputed xlsx + audit +\n    egress report;  works on output\n\nCLI (kairo/cli.py):\n  -  \u2014 runs the real pipeline\n  - Writes recomputed.xlsx, audit_log.json, zero_egress_report.json,\n    public_key.pem\n  - Prints human summary with recompute/audit/egress verification status\n\nTests: 16 Excel oracle tests + 2 Excel CLI tests = 18 new tests, all\npassing. 246 total tests (Excel + CLI + wedge gauntlet + injection +\nairgap + redline + audit + airgap validation) all green, 0 skipped.\n\nSTATUS.md: Excel = 'Real' (xlsx_recompute + xlsx_structure_readback pass\nwith kill-proofs). All other unshipped domains remain 'prompt-only'.\n\nRuff 0.6.9 clean. No mocks on production paths. Additive only.",
+      "request": {
+        "url": "https://api.github.com/repos/Kartik24Hulmukh/Axiom-Grid/commits/029898611238f03d61bfcedd62a15c1d09d46fe4",
+        "acquired_utc": "2026-10-19T02:15:32.631693+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/Kartik24Hulmukh/Axiom-Grid/commits/029898611238f03d61bfcedd62a15c1d09d46fe4",
+        "ok": true,
+        "bytes": 68536,
+        "sha256": "e0d8a7bf314c21e30358fdcc5718cb2925752044d2905e83d9546c653d4485f7"
+      },
+      "parents": [
+        "20ca173eec5508cac51f7f6a021654928c3ccb7d"
+      ],
+      "workbook_paths": [
+        {
+          "path": "fixtures/excel/s01_financial_model.xlsx",
+          "status": "added",
+          "sha": "586a01e94ca07e9f16e5330ffafb4a496c6f3cc9",
+          "previous_path": null
+        },
+        {
+          "path": "fixtures/excel/s02_pivot_aggregation.xlsx",
+          "status": "added",
+          "sha": "22a81a02bb9e79fc0541f6a13bff6bb02c23ecbd",
+          "previous_path": null
+        },
+        {
+          "path": "fixtures/excel/s03_wrong_formula.xlsx",
+          "status": "added",
+          "sha": "6d6e8880c574fb6f66b61bb3b81812dc9d5de145",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "Kartik24Hulmukh/Kairo-Phantom",
+      "sha": "029898611238f03d61bfcedd62a15c1d09d46fe4",
+      "url": "https://api.github.com/repos/Kartik24Hulmukh/Kairo-Phantom/commits/029898611238f03d61bfcedd62a15c1d09d46fe4",
+      "message": "feat(excel): make Excel domain Real \u2014 xlsx_recompute oracle + CLI + fixtures\n\nFIX: engine code was in __init__.py, engine.py was a stub \u2192 moved code to\nengine.py, __init__.py now re-exports the public API.\n\nFIX: recompute_xlsx was outputting to the same dir as input (LibreOffice\ncan't overwrite the input file) \u2192 now outputs to a temp dir then moves\nthe recomputed file back to the original path.\n\nExcel domain engine (kairo/excel/engine.py):\n  - openpyxl (MIT) writes formulas + structure\n  - LibreOffice headless (MPL, external subprocess) recomputes values\n  - Read recomputed VALUES back and compare to independent Python calc\n  - Never trust the writer alone \u2014 oracle verifies recomputed values\n\nOracles (deterministic, kill-proven):\n  - xlsx_recompute: LO recalc \u2192 read values \u2192 assert equal to independent\n    calc (float tolerance). Kill-proof: wrong formula \u2192 FAILS; no recompute\n    \u2192 FAILS (None values caught).\n  - xlsx_structure_readback: sheets/named-ranges survive round-trip.\n    Kill-proof: drop a sheet \u2192 FAILS; drop a named range \u2192 FAILS.\n\nHonest degradation:\n  - LibreOffice missing \u2192 LibreOfficeUnavailableError ('recompute engine\n    unavailable \u2014 install LibreOffice'). Never presents unverified formula\n    strings as done. Proven by test_pipeline_fails_loud_without_libreoffice.\n\n3 gauntlet scenarios (fixtures/excel/):\n  - s01_financial_model: cross-sheet deps + named ranges, SUM/division\n  - s02_pivot_aggregation: SUMIF/AVERAGEIF with cross-sheet refs\n  - s03_wrong_formula: deliberately wrong formula \u2192 oracle catches it\n\nTrust stack integration:\n  - excel_pipeline emits Ed25519 audit log + signed zero-egress report\n  - CLI  subcommand: input xlsx + spec \u2192 recomputed xlsx + audit +\n    egress report;  works on output\n\nCLI (kairo/cli.py):\n  -  \u2014 runs the real pipeline\n  - Writes recomputed.xlsx, audit_log.json, zero_egress_report.json,\n    public_key.pem\n  - Prints human summary with recompute/audit/egress verification status\n\nTests: 16 Excel oracle tests + 2 Excel CLI tests = 18 new tests, all\npassing. 246 total tests (Excel + CLI + wedge gauntlet + injection +\nairgap + redline + audit + airgap validation) all green, 0 skipped.\n\nSTATUS.md: Excel = 'Real' (xlsx_recompute + xlsx_structure_readback pass\nwith kill-proofs). All other unshipped domains remain 'prompt-only'.\n\nRuff 0.6.9 clean. No mocks on production paths. Additive only.",
+      "request": {
+        "url": "https://api.github.com/repos/Kartik24Hulmukh/Kairo-Phantom/commits/029898611238f03d61bfcedd62a15c1d09d46fe4",
+        "acquired_utc": "2026-10-19T02:15:32.632011+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/Kartik24Hulmukh/Kairo-Phantom/commits/029898611238f03d61bfcedd62a15c1d09d46fe4",
+        "ok": true,
+        "bytes": 68692,
+        "sha256": "9125126ad3c965f3a76af5304ac5743c0ecf425dd048b2d84bcfa5dfb2de3008"
+      },
+      "parents": [
+        "20ca173eec5508cac51f7f6a021654928c3ccb7d"
+      ],
+      "workbook_paths": [
+        {
+          "path": "fixtures/excel/s01_financial_model.xlsx",
+          "status": "added",
+          "sha": "586a01e94ca07e9f16e5330ffafb4a496c6f3cc9",
+          "previous_path": null
+        },
+        {
+          "path": "fixtures/excel/s02_pivot_aggregation.xlsx",
+          "status": "added",
+          "sha": "22a81a02bb9e79fc0541f6a13bff6bb02c23ecbd",
+          "previous_path": null
+        },
+        {
+          "path": "fixtures/excel/s03_wrong_formula.xlsx",
+          "status": "added",
+          "sha": "6d6e8880c574fb6f66b61bb3b81812dc9d5de145",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "asqd/comma_editor",
+      "sha": "732bad42a1fff34909faa258f6b86107fea7826a",
+      "url": "https://api.github.com/repos/asqd/comma_editor/commits/732bad42a1fff34909faa258f6b86107fea7826a",
+      "message": "Open Excel 97-2003 workbooks for viewing\n\n.xls files open like .xlsx ones: sheets in tabs, values in their number\nformats, column widths, hidden and frozen columns, merged cells and the\nactive sheet. Values and strings come from calamine; number formats and\nlayout, which it keeps to itself, are read from the BIFF8 records. Results of\nformulas show, the formulas themselves do not: calamine turns ranges and\ncolumns past Z into wrong references, and a wrong formula misleads.\n\nThe kind of workbook is told by its contents, so an .xlsx named .xls opens.\nWeb pages and Excel 2003 XML saved as .xls, as many exports are, are named\nfor what they are, and a workbook with a password says so.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/asqd/comma_editor/commits/732bad42a1fff34909faa258f6b86107fea7826a",
+        "acquired_utc": "2026-10-19T02:15:32.632315+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/asqd/comma_editor/commits/732bad42a1fff34909faa258f6b86107fea7826a",
+        "ok": true,
+        "bytes": 69572,
+        "sha256": "c10010533f0e000e2c3f788e3a2b00046ff5f44ce0e8cca3a6b5f28967c591ce"
+      },
+      "parents": [
+        "7208ab1a749b574127613edd2d92ba3727aa11cd"
+      ],
+      "workbook_paths": [
+        {
+          "path": "core/comma-core/tests/fixtures/sales.xls",
+          "status": "added",
+          "sha": "5b3a7a66b5de17ad60a8d9caa8d8eb17e559ec1c",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "alejotorreshi/retoeli1",
+      "sha": "5442afa4e4c4af64aa3c28a8e6b3d66842d67907",
+      "url": "https://api.github.com/repos/alejotorreshi/retoeli1/commits/5442afa4e4c4af64aa3c28a8e6b3d66842d67907",
+      "message": "fix(01): IN-06 pin literal xlsx widths and derive TipoCelda from a constant\n\nThe width golden no longer recomputes the production formula. It pins\nthe literal width of every column of the co and hn fixtures, so a wrong\nformula can no longer pass by replicating itself in the expectation.\nTipoCelda now derives from the TIPO_CELDA as-const object, as the\nderived-union rule requires.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01YR5B3jB5LWAUoz62Yi3sLP",
+      "request": {
+        "url": "https://api.github.com/repos/alejotorreshi/retoeli1/commits/5442afa4e4c4af64aa3c28a8e6b3d66842d67907",
+        "acquired_utc": "2026-10-19T02:15:32.632750+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/alejotorreshi/retoeli1/commits/5442afa4e4c4af64aa3c28a8e6b3d66842d67907",
+        "ok": true,
+        "bytes": 10422,
+        "sha256": "326e91586c259a9779a6fe290cecbe33cd94b4e406f3722a2db9d3b7ac7b7775"
+      },
+      "parents": [
+        "28841fd85d84b583ceff90dd42065fc9e8b23cbf"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "mike442144/gsupdater",
+      "sha": "f224ce0ed4f0df5b3e8cc1de43c4165e9f8467e6",
+      "url": "https://api.github.com/repos/mike442144/gsupdater/commits/f224ce0ed4f0df5b3e8cc1de43c4165e9f8467e6",
+      "message": "feat: ingest Capital IQ's new per-statement .xlsx exports\n\nCIQ replaced its export interface: one .xlsx per statement instead of one .xls\nworkbook per company, metadata rows instead of a title row, subtotals marked by\nindent rather than bold, and several line items renamed. xlrd 2.x cannot open\n.xlsx at all, so ciq_source.py presents the new files as a legacy-shaped virtual\nworkbook and every downstream parser, column matcher and formula copier stays\nas it was. Statement and period type come from file content, because CIQ's\n\" (1)\"/\" (2)\" re-download suffixes do not say which export they are.\n\nThe traps in the new format were silent rather than loud:\n\n- Key Stats items resolve by name, and six required refs (Minority Interest,\n  Effective Tax Rate %, Total Cash & ST Investments, Net Rental Exp., Total\n  Shares Out. on Balance Sheet Date, Curr. Port. of Leases) no longer existed\n  under those names. resolve_formula mapped a missing required item to row 1,\n  the header row, producing a plausible-looking wrong formula. ALIASES maps the\n  renames back to the legacy spelling, and unresolved_items() now leaves the row\n  blank and reports it.\n- Effective Tax Rate and Payout Ratio now arrive in percentage points instead of\n  fractions; unscaled, (1 - tax rate) turned ROIC into -1348% instead of 42%.\n- extract_code_from_filename picked the export year ('2026') out of the new\n  filenames as the stock code, and batch mode would have routed each statement\n  file as its own company.\n\nFound while validating \u5206\u4f17\u4f20\u5a92 (002027) into \u4f20\u5a92, fixed here as well: \u6263\u975e LTM\nsummed the last four quarter columns including a not-yet-reported one; Net\nInterest Margin had no formula template, leaving that row blank and Summary's\n\u51c0\u5229\u606f\u6536\u76ca\u7387 at #DIV/0!; and quarter columns received ROE formulas that can never\nresolve, since CIQ exports no quarterly balance sheet - existing tabs leave that\nrow blank, so new ones now do too. new_company.sh gained --template, required\nfor spreadsheets whose tabs are bare-named.",
+      "request": {
+        "url": "https://api.github.com/repos/mike442144/gsupdater/commits/f224ce0ed4f0df5b3e8cc1de43c4165e9f8467e6",
+        "acquired_utc": "2026-10-19T02:15:32.633022+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/mike442144/gsupdater/commits/f224ce0ed4f0df5b3e8cc1de43c4165e9f8467e6",
+        "ok": true,
+        "bytes": 50146,
+        "sha256": "bddfb164fa947f29ce91863e84cef727b8b23a1b3c5c49a345a4e87251f749e4"
+      },
+      "parents": [
+        "9cd9ba627bfb6932dfe7c791f0a677ca62b1b79c"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "laurentfabre/zlsx",
+      "sha": "7d08f7affb0266f4bff62b6c45154b37b2166234",
+      "url": "https://api.github.com/repos/laurentfabre/zlsx/commits/7d08f7affb0266f4bff62b6c45154b37b2166234",
+      "message": "feat(env): the decode boundary, and the workbook behind EvalEnv\n\nM4b1 of the tier-D1 ladder: `pkg/workbook.zig` gains the `EvalEnv`\nadapter, and `src/formula/` gains the two files it reads a package\nthrough \u2014 the XML decode boundary and the decoded symbol layer.\n\nDecoding is split by CARRIER CLASS, which is the row's hardest claim\nand the one that fails silently when it is wrong. FORMULA carriers\n(`<f>` bodies, defined-name bodies, table formulas) get XML entity\ndecoding ONLY: a literal `_x0041_` written inside a formula is still\n`_x0041_` when the tokenizer sees it. STRING carriers (shared, inline,\n`t=\"str\"`, and the ST_Xstring-typed identifiers) get entities THEN\nST_Xstring, with rich runs concatenated in document order and `<rPh>`\nphonetics excluded. Authoring inverts the same split, and because a\nformula has no second escape layer, a formula carrying a character XML\ncannot represent refuses instead of inventing one.\n\nThe corpus decided four rows against the plan. `wdi_excel.xlsx` omits\n`r` on `<row>` as well as `<c>` \u2014 13.9M cells whose coordinates exist\nonly as a rule \u2014 and `src/xlsx.zig` already reconstructs it, so\nrefusing r-less rows would have refused a workbook this repo reads.\n`poi_poc_shared_strings.xlsx` carries `<row r=\"0\">`, which the typed\nreader silently skips and this boundary refuses: a dropped row\nrecalculates as blank cells. \u00a79's `max_modeled_cells` (64M) turns out\nnot to bound memory at all \u2014 that workbook models at ~7 GB \u2014 so the\nnumber stands as specified and the gap is recorded for M5's byte\nbudget. And the shared-string run limit had to become per string\nrather than per part.\n\nThe namespace preflight sweeps every part the run will read before any\nof them is decoded: a scanner that literal-matches `<sheetData>` reads\nan unknown vocabulary as an empty sheet, and recalculating an empty\nsheet writes zeroes over real data.\n\nTwo build-graph consequences. The engine is now ONE module: reaching\n`env`, `value` and `decode` separately would compile `env.zig` twice\nand build an `EvalEnv` the evaluator could not accept, and\n`src/xlsx.zig`'s relative import of the rewriter would have put\n`tokenizer.zig` in two modules at once. The pkg-facing module\ndeliberately declares no `zlsx_casefold`, which is test-only and would\nclaim `src/unicode/casefold.zig` for two modules.\n\nAlso fixes a latent double-free found by this row's allocation-failure\nsweep: `Workbook.open` and `Workbook.empty` kept an armed `errdefer`\nover a `PartStore` that `fromStore` already frees on failure, so a\nworkbook with no `xl/workbook.xml` segfaulted instead of returning\n`MissingWorkbookPart`.\n\nThe adapter is proven by the fake's own suite \u2014 one test body, two\nharnesses, and the adapter's harness authors real sheet XML and reads\nit back through the boundary rather than injecting cells.\n\n3152 -> 3560 tests, `zig build` and `zig build fuzz` green.\n\nClaude-Session: https://claude.ai/code/session_015fiLfaSZCv1WwnzcbR4QE1",
+      "request": {
+        "url": "https://api.github.com/repos/laurentfabre/zlsx/commits/7d08f7affb0266f4bff62b6c45154b37b2166234",
+        "acquired_utc": "2026-10-19T02:15:32.633265+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/laurentfabre/zlsx/commits/7d08f7affb0266f4bff62b6c45154b37b2166234",
+        "ok": true,
+        "bytes": 143426,
+        "sha256": "80fc9d3b72f300d6156dbef33acf0e05eff95cf624d7dc1dbeb115bef59ce705"
+      },
+      "parents": [
+        "c6721e1477efd348578ceb6511a4d0c2f070ed72"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "dominicplouffe/businessplanner",
+      "sha": "31e5587d5137559018ba16e9be9fdd64b9244de4",
+      "url": "https://api.github.com/repos/dominicplouffe/businessplanner/commits/31e5587d5137559018ba16e9be9fdd64b9244de4",
+      "message": "Teach the workbook the curve, and make a missing driver fail loudly\n\nThree problems, one of which the equivalence test found the moment it was\ngiven the chance.\n\nThe driver-sheet writer only emits numeric properties, so the nested growth\ncurve was skipped entirely. The formulas would then have had no cell to point\nat \u2014 and `d()` answered a missing driver with the string \"0\", which means the\nworkbook would have shown flat growth while the engine compounded. A\nspreadsheet that looks perfect and disagrees with the plan exported beside it is\nthe single most damaging thing this product could ship, so `d()` now throws, and\n`dOpt` exists for the drivers whose absence is a shape rather than a bug.\n\n`curveAt` emits `projectCurve` as a live Excel expression, branch for branch.\nThat is why the growth module uses POWER and never EXP or LN: the evaluator in\ntests/helpers/xlsx-eval.ts has no EXP, and more importantly the TypeScript and\nthe spreadsheet have to be the same expression or the workbook stops being the\nmodel.\n\nAnd the test earned its place immediately. The new fixture \u2014 a plan whose stream\ncarries a saturating curve \u2014 failed on month two: the workbook said 5,466.24\nwhere the engine said 5,551.82. The subscription formula was still multiplying\nby the legacy growth rate, because one of my edits had silently not matched.\nEvery other stream had been converted; that one had not, and nothing else in the\nsuite would have noticed. exceljs writes formulas and never evaluates them, so a\nwrong formula ships looking perfect.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_012juekRbihybkamm4McPeUC",
+      "request": {
+        "url": "https://api.github.com/repos/dominicplouffe/businessplanner/commits/31e5587d5137559018ba16e9be9fdd64b9244de4",
+        "acquired_utc": "2026-10-19T02:15:32.633816+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/dominicplouffe/businessplanner/commits/31e5587d5137559018ba16e9be9fdd64b9244de4",
+        "ok": true,
+        "bytes": 18536,
+        "sha256": "5e972704359c6d10f11f841b3bb96fb8fcce636e8e093dea7c22c984e59ef372"
+      },
+      "parents": [
+        "3e6cb2f6c4a99e6840b323d95ead233d8584d8bc"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "VisiGrid/VisiGrid",
+      "sha": "d4c0c3f68bd147eb0a28de0929034838d31b6338",
+      "url": "https://api.github.com/repos/VisiGrid/VisiGrid/commits/d4c0c3f68bd147eb0a28de0929034838d31b6338",
+      "message": "Keep quoted values text when reading visigrid-json\n\nStep 2 of the text-typed cells spec, and it needed no format change: the\ndistinction was already on the wire. FullCell.value is a serde_json::Value,\nso \"007\" is a JSON string and 7.0 a JSON number, and the writer emits both\nfaithfully. The reader matched on the type, flattened it to a string, and\nhanded it to set_value \u2014 which inferred the type over again. Recognised,\nthen discarded one line later, under a comment reading \"typed value\".\n\nThat is why step 1 delivered nothing in the server. The xlsx reader kept\n007 through import and the first recalc turned it back into 7, because\nevery server-side recalc runs json-full through this path. Verified: the\nimport-then-recalc diff was three values collapsing and is now empty.\n\nQuoted means text, decided on the failure direction rather than on which\nis more often intended. Today's behaviour destroys data silently; a\nforeign document that quoted a number now shows text, which is visible\nand fixable. Our own writers only quote what was text, so round trips are\nexact either way, and the importer says how many quoted values read as\nnumbers so the ambiguity is discoverable rather than deduced from a total\nthat came out wrong.\n\nFormulas still coerce: LEN(\"007\") is 1 and ISNUMBER is TRUE, because a\ncell reference is read through CellLookup::get_text and re-typed from the\nstring (eval.rs:540). get_cell_value is a default method built on the\nsame call, so the loss is at the trait's foundation. That is step 3 and\nit is now the visible seam \u2014 the cell stores and displays 007 while\nformulas see 7.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/VisiGrid/VisiGrid/commits/d4c0c3f68bd147eb0a28de0929034838d31b6338",
+        "acquired_utc": "2026-10-19T02:15:32.634531+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/VisiGrid/VisiGrid/commits/d4c0c3f68bd147eb0a28de0929034838d31b6338",
+        "ok": true,
+        "bytes": 10818,
+        "sha256": "e0068e5ab2a0f456b146738bb2b396766ea3b3ebe2f540999dec42f8536b1987"
+      },
+      "parents": [
+        "c89fdf913b3dfab749905d056ce7f410a4c4de39"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine",
+      "sha": "07d43c117259ce611d0fad1062a2785f6896ca96",
+      "url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/commits/07d43c117259ce611d0fad1062a2785f6896ca96",
+      "message": "Recompute the workbook's analytics outside the spreadsheet\n\nThe Validation tab reports 23 of 23 checks passing under a green banner.\nBoth numbers are produced by the same workbook whose formulas are the\nthing in question, so neither carries independent weight: a wrong\nformula reports a pass exactly as confidently as a right one.\n\nvalidate_portfolio.py reads only inputs, per-holding cost and market\nvalue, the sector table, the risk-free rate, the market return and beta,\nand recomputes 27 derived figures in Python. It never reads a cell\nholding a tick or a pass count. Three groups: portfolio accounting\nincluding every holding's gain, return and weight; concentration\nincluding the Herfindahl-Hirschman index and effective positions; and\nthe CAPM and risk ratios, each rebuilt from its own definition. All 27\nreconcile on this workbook.\n\nThe script is itself tested, because one that has only seen a correct\nworkbook proves nothing. Eleven tests copy the workbook, change one\ncached cell and assert that specific figure is reported wrong: a broken\ntotal, a single corrupted holding weight, a wrong index, a broken CAPM\nreturn, a broken Sharpe ratio and a cell holding a division by zero.\n\nTwo things worth recording for anyone extending this:\n\n- openpyxl holds either formulas or cached results, never both, so\n  saving a workbook with it discards every cached value and the\n  validator then reads nothing. tests/xlsx_surgery.py edits the cached\n  value directly in the sheet XML instead, leaving the formula, the\n  styles and every other cell untouched.\n- Effective positions is the reciprocal of the HOLDING-level index, not\n  the sector-level one shown in the HHI Index row. Checking it against\n  the wrong basis reported a defect that did not exist, so a test now\n  pins the right one.\n\nCI runs the tests first and the real workbook second. Running only the\nsecond would show a green tick even if every comparison were inverted.",
+      "request": {
+        "url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/commits/07d43c117259ce611d0fad1062a2785f6896ca96",
+        "acquired_utc": "2026-10-19T02:15:33.304116+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/alvenyuka/Stock-Portfolio-Tracker-Analytics-Engine/commits/07d43c117259ce611d0fad1062a2785f6896ca96",
+        "ok": true,
+        "bytes": 46457,
+        "sha256": "c9aa6a0cc1311fae26903daaa3bcc2baaf5a2c5b629166856a9c3a8eb42690c7"
+      },
+      "parents": [
+        "afb462f6f95a32cfff66fc5cd62b3fd372d3e037"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "ChinmoyMandal74/StockPulse",
+      "sha": "5d5dd2ef4ecfa0c62badfd070d97d8361fed379c",
+      "url": "https://api.github.com/repos/ChinmoyMandal74/StockPulse/commits/5d5dd2ef4ecfa0c62badfd070d97d8361fed379c",
+      "message": "Add an Excel model of the momentum calculation\n\nnode --use-system-ca momentum-model.js CRWD writes a three-sheet workbook \u2014\nBars, Factors, Score \u2014 in which every cell is a live formula over the daily\nbars. It is not a picture of the calculation: change a close price and the score\nmoves, because the workbook does the arithmetic itself.\n\nBars carries the sessions newest-first, as the app holds them, plus the running\nintermediates the factors need \u2014 log returns, both moving averages, and RSI.\nWilder smoothing is a recursive column seeded with a simple fourteen-day average\nat the old end and smoothed upward, because Wilder runs oldest-first while the\nsheet reads newest-first.\n\nFactors shows each raw measurement as a formula reading Bars, then the curve\nthat turns it into a sub-score, with the centre and scale beside it so the fixed\nscale is visible rather than buried. Score renormalises the weights, produces\nthe 0-100 and the 1-10, and then subtracts what the app reported when the file\nwas written. That check is the point: on CRWD it reads 72.1 against 72.1, with\nevery factor agreeing within the two decimals the stored breakdown rounds to.\n\nWritten by hand because an xlsx is a zip of XML and a spreadsheet library would\nbe a fourth dependency for a one-off explainer \u2014 the same reasoning that sends\nmail over plain fetch. Excel is told to recalculate on load, since no cached\nvalues are stored.\n\nOne bug worth recording: values[k] in the app is bar k back from today, which\nlands on sheet row D+1+k. Writing D+k reads the session next door, and every\nreturn in the model is a difference between two of these \u2014 it produced four\nwrong formulas before the check against the app caught it. There is a B(k)\nhelper now so the offset is written once.\n\nThe output is gitignored. It goes stale the moment prices move, and regenerating\nit takes a second.\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/ChinmoyMandal74/StockPulse/commits/5d5dd2ef4ecfa0c62badfd070d97d8361fed379c",
+        "acquired_utc": "2026-10-19T02:15:33.346844+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/ChinmoyMandal74/StockPulse/commits/5d5dd2ef4ecfa0c62badfd070d97d8361fed379c",
+        "ok": true,
+        "bytes": 34474,
+        "sha256": "137edd02b70301f5bc66ce030ed99e9bcc22d4fe2270963c9d70aad980635f23"
+      },
+      "parents": [
+        "a5ab62de228403498ae764773dff67eeb5d29d65"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "chosenvision/DataMind",
+      "sha": "147f012996f830605da4420cd1ed6b85dd2cedd6",
+      "url": "https://api.github.com/repos/chosenvision/DataMind/commits/147f012996f830605da4420cd1ed6b85dd2cedd6",
+      "message": "Rebuild the Excel dashboard as a formula-driven workbook\n\nReworks datamind/dashboard.py to match the architecture of a hand-built\ninteractive Excel dashboard (per a reference financial dashboard file)\ninstead of writing static computed numbers into cells:\n\n- Dashboard sheet: up to 4 dropdown filters (data-validated against a\n  hidden Lists sheet), 4 KPI cards, and up to 5 charts - a trend line,\n  a doughnut for share-of-total, plain bars, and red/teal diverging\n  bars for any metric whose per-category values can go negative\n  (decided from the real computed data, never guessed).\n- Calc sheet: the formula engine. Dropdowns resolve to SUMIFS/\n  AVERAGEIFS/COUNTIFS wildcard filters (\"All\" -> \"*\"); every KPI card\n  and chart is a live formula against Data, so changing a filter\n  recalculates the whole dashboard - matching the reference file's\n  \"no hardcoded numbers\" approach. Median/distinct-count KPIs (no\n  *IFS equivalent in Excel) fall back to a one-time computed value.\n- KPI Reference sheet: definitions/formula/why-it-matters/good-bad\n  result/best-visualization table, plus insights/risks/opportunities/\n  recommendations (previously on a separate Overview sheet).\n- Data sheet gains a derived \"<col> (Month)\" helper column for any\n  date field used in a trend chart, so SUMIFS can group by month.\n\nSince this environment's LibreOffice install can't actually open/\nrecalculate xlsx files (verified: even a plain .txt conversion fails),\nadded an independent SUMIFS/AVERAGEIFS/COUNTIFS formula interpreter in\nthe test suite that parses the generated formula strings and\nre-evaluates them against the dataframe, to catch a plausible-looking\nbut wrong formula (bad column letter, off-by-one row range) that\nstatic inspection alone would miss.\n\nExpands the Gemini plan schema (agent.py) with filter_columns and\nricher per-KPI reference fields, and fixes a latent bug where the\ndashboard-plan prompt's JSON schema example used doubled {{ }} braces\nthat were never templated, so Gemini was literally being shown\ninvalid/confusing JSON syntax in the instructions.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01HyYk5nbFjk8cKdf62T8JqQ",
+      "request": {
+        "url": "https://api.github.com/repos/chosenvision/DataMind/commits/147f012996f830605da4420cd1ed6b85dd2cedd6",
+        "acquired_utc": "2026-10-19T02:15:33.412915+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/chosenvision/DataMind/commits/147f012996f830605da4420cd1ed6b85dd2cedd6",
+        "ok": true,
+        "bytes": 76578,
+        "sha256": "3b2b1077302be25685305002b4c6e2ea2ec1a69bfdbfb3818dd46c058017d6e6"
+      },
+      "parents": [
+        "794d93a3671aab5e7793d3a41056e6f7867b241a"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "inventor1975/ZTL",
+      "sha": "2bf7ee69594135a910f37c9d5fe643db6a1efa6d",
+      "url": "https://api.github.com/repos/inventor1975/ZTL/commits/2bf7ee69594135a910f37c9d5fe643db6a1efa6d",
+      "message": "db: run the cascade on a graph nobody typed \u2014 the spreadsheet test\n\nSix days established the shape and the killer. The instrument catches system\nerrors rather than fraud, and both catches rest on one condition: somebody had\nto write the citation down. That is daily work for a benefit that arrives only\nwhen something goes wrong \u2014 the shape of every ledger nobody fills in.\n\nSo the test was not a better store but whether the condition can be removed by\ngoing where the dependency graph already exists. It can, for the expensive\nhalf. A workbook is generated and read back with zipfile and ElementTree\nalone \u2014 no library, no server, no permission \u2014 and the cascade runs on it:\n\n  line_b (B2) turns out wrong -> subtotal, vat, total, margin, over_ceiling\n\nFive links, and the number of links anybody typed is ZERO. Ranges are expanded,\nso SUM(B1:B4) resolves to the four cells it names nowhere.\n\nThe generated workbook is a real .xlsx and not a private dialect: LibreOffice\nopens it and recomputes every formula (subtotal 7250, total 8700, margin 3700).\n\nWhat the human still owes, measured rather than hoped: the graph is free, the\nGROUNDS are not. A sheet knows the total is subtotal plus VAT; it has no idea\nB1 came from invoice 17. But annotation is owed only on the LEAVES \u2014 every\nderived figure inherits by computation. On this sheet that is 54%, and the\nsheet is small; the honest number is the measured one, not the flattering one\na formula-heavy model would give.\n\nNamed rather than skipped: cross-sheet and cross-file references are not\nfollowed; a pasted value is indistinguishable from a typed one, so the London\nWhale's copy-paste stays invisible exactly as it was in the model; and a wrong\nformula remains an honest dependency.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/inventor1975/ZTL/commits/2bf7ee69594135a910f37c9d5fe643db6a1efa6d",
+        "acquired_utc": "2026-10-19T02:15:33.571506+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/inventor1975/ZTL/commits/2bf7ee69594135a910f37c9d5fe643db6a1efa6d",
+        "ok": true,
+        "bytes": 18776,
+        "sha256": "3c1f13ab0f51840e9ddc5d29e5502f9f70d090796e8079cfd0aa8dd099712a29"
+      },
+      "parents": [
+        "4c6bd79b3b597eed8c39e0977d7b7a74966488c4"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "datakid/ranking-builder-demo",
+      "sha": "63801780379177bf1f73e6dd9bb519ae31c30bca",
+      "url": "https://api.github.com/repos/datakid/ranking-builder-demo/commits/63801780379177bf1f73e6dd9bb519ae31c30bca",
+      "message": "feat(rubric): custom equations, guided builder, calculated columns, live-formula .xlsx export, in-app controls\n\nAdds user-defined equations at every stage of scoring, a guided way to\r\nbuild them, formula-driven columns, and a native workbook export, and\r\nreplaces the browser-native controls with app-styled ones. Still a\r\nsingle index.html with no dependencies and no code comments.\r\n\r\nCustom equations\r\n- Add EXPR, a small expression engine (tokenizer, precedence-climbing\r\n  parser, evaluator) with no eval() or new Function(). Supports\r\n  + - * / % ^ (right-associative), comparisons, && || !, the ternary\r\n  operator and a whitelisted set of functions (abs, sqrt, exp, ln,\r\n  log10, log2, pow, min, max, floor, ceil, round, sign, tanh, sin, cos,\r\n  atan, clamp, if). Unknown names, unknown functions and syntax errors\r\n  are reported before anything runs.\r\n- Add a \"Custom equation\" value function: x is the raw value; min, max,\r\n  mean, median, std, n, sum, pi and e are available, plus named\r\n  constants. Output is clamped to 0-1 and flagged when out of range.\r\n  Direction is encoded in the equation, so the toggle is hidden for it.\r\n- Equation editor on criteria cards: live validation, a sample\r\n  evaluation, insert chips, a constants field, a \"Write your own\r\n  equation\" shortcut and a \"Start from a template\" menu (7 curves).\r\n- Add a \"Scoring method\" panel on the Rank tab: weighted sum, geometric\r\n  mean, harmonic mean, TOPSIS, or a custom combining equation using\r\n  per-criterion scores, w_<id> weight shares, wsum, wgeo, whm, wmin,\r\n  wmax, wpow(p), n and constants, with 4 blend templates.\r\n- Treat custom value functions that reference column statistics as\r\n  relative scoring so the Relative badge, rank-reversal check and\r\n  assumptions note stay accurate.\r\n- Centralise the direction rule in dirApplies().\r\n\r\nGuided equation builder\r\n- \"Build step by step\" on criteria cards: pick a shape (straight line,\r\n  fast then flat, slow then fast, S-curve, pass/fail at a limit, peak\r\n  at a target), a direction and a few labelled values seeded from the\r\n  data, with a live preview. Invalid input is blocked. Writes a normal\r\n  custom equation that stays editable.\r\n\r\nCalculated columns\r\n- A criterion can carry a formula over other criteria (e.g. cost /\r\n  seats), evaluated before scoring in dependency order; cycles resolve\r\n  to missing values. Columns are read-only in Data (marked with a\r\n  function glyph) and feed scoring, flip thresholds, robustness and\r\n  Monte Carlo; they are skipped in the per-input tolerance list.\r\n\r\nWorkbook export\r\n- Add \"Download workbook (.xlsx)\": a dependency-free writer (stored\r\n  zip with CRC-32, hand-built SpreadsheetML) producing a Data sheet and\r\n  a Scores sheet with live formulas: normalizers over live column\r\n  ranges, calculated columns as formulas, totals for weighted sum,\r\n  geometric/power mean and custom equations, percentile and categorical\r\n  criteria, missing-value policies, hard gates and incomplete-data\r\n  exclusions as live Status formulas, rank over passing options,\r\n  soft-gate penalties, and the app's own total for comparison.\r\n- Percentile scores use COUNTIF instead of RANK.AVG, which needs a\r\n  special prefix in .xlsx and showed #NAME? in some spreadsheet apps.\r\n- Verified by recalculating 36 exports (4 examples x 9 scoring\r\n  methods) in LibreOffice against the app's totals: no mismatches.\r\n- Not modelled: the \"redistribute\" missing policy; TOPSIS is exported\r\n  as static totals.\r\n- Remove the legacy .csv spreadsheet export, which could produce wrong\r\n  formulas, in favour of the workbook.\r\n\r\nApp-styled controls\r\n- Replace every native <select> with a custom listbox dropdown with\r\n  full keyboard support; it opens upward near the window bottom and\r\n  closes on outside click, scroll and resize.\r\n- Replace native number inputs with in-app fields with +/- steppers and\r\n  arrow-key stepping; invalid typed weights are ignored.\r\n- Restyle range sliders; replace title tooltips with in-app tooltips;\r\n  replace window.prompt() for preset names with an in-app dialog.\r\n- Add shared field, textarea and chip styles and the missing .linkbtn\r\n  class used by the pairwise \"Revisit\" link.\r\n\r\nFixes\r\n- Surface value-function errors in Notes instead of silently dropping\r\n  the option.\r\n- Header: the example dropdown no longer collapses over the Undo button\r\n  on half-width windows; below 1100px the tagline is hidden and the\r\n  tabs move to a full-width second row.\r\n\r\nTests\r\n- Add 11 assertions (60 total, run with ?test=1): operator precedence\r\n  and right-associative power; rejection of bad names, functions and\r\n  syntax; custom value function vs. linear; named constants; custom\r\n  aggregate vs. the weighted sum; a wsum/wmin blend against hand\r\n  arithmetic; spreadsheet translation; calculated-column dependency\r\n  order; workbook zip signature; every builder shape compiles.",
+      "request": {
+        "url": "https://api.github.com/repos/datakid/ranking-builder-demo/commits/63801780379177bf1f73e6dd9bb519ae31c30bca",
+        "acquired_utc": "2026-10-19T02:15:33.687403+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/datakid/ranking-builder-demo/commits/63801780379177bf1f73e6dd9bb519ae31c30bca",
+        "ok": true,
+        "bytes": 17235,
+        "sha256": "83cab5f96335d43b598d20050ca49dd24cbb08d67d9bd36e149d325a0c213cea"
+      },
+      "parents": [
+        "0e02b7b58e9d35e1833376f640d9bc79edb4dbfd"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "NickAtBishops/GGC",
+      "sha": "71070499a42c0882b2be83d823b090254dbf9d76",
+      "url": "https://api.github.com/repos/NickAtBishops/GGC/commits/71070499a42c0882b2be83d823b090254dbf9d76",
+      "message": "Match CorrectOutput Asset/NOI valuation table layout\n\nRun2's M:R Underwriting layout diverged from CorrectOutput in multiple\nplaces (missing VALUE/UNIT + UNIT columns, wrong cap rates, wrong\nformula on the lot-rent NOI row). Three issues in fix_template.py\nfighting each other:\n\n1. Section 13 added Q13/R13 headers (\"VALUE/UNIT\", \"UNIT\") and the\n   per-site formulas at Q14/Q15/R14/R15. CorrectOutput's full layout.\n\n2. Section 19b's \"clear duplicate cells\" sweep then wiped Q13/R13/R14/R15\n   back to None \u2014 it was cleaning up DemoOutput5's stale two-scenario\n   layout but also took out the legitimate per-unit valuation column.\n   Trimmed the clear list to keep Q13/R13/R14/R15 (only S/T columns\n   still cleared for the actual stray data).\n\n3. Section 16f hardcoded 6%/13.5% cap rates and \"Methodology range:\"\n   text into Q14/Q15 (overriding section 13). Reverted to CorrectOutput's\n   5.5%/12% caps and the =P14/R14 / =P15/R15 per-unit formulas.\n\n4. Late LABEL_FIXES list also shortened M14/M15 from \"Lot Rent only NOI\"\n   / \"Home Rent only NOI\" to the abbreviated form. Restored to gold.\n\nResult \u2014 output now matches CorrectOutput cell-for-cell on M13:R16:\n  r13: Asset \u00b7 NOI \u00b7 CAP RATE \u00b7 VALUE \u00b7 VALUE/UNIT \u00b7 UNIT\n  r14: Lot Rent only NOI \u00b7 =I47   \u00b7 5.5% \u00b7 =N14/O14 \u00b7 =P14/R14 \u00b7 =UMS!E9\n  r15: Home Rent only NOI \u00b7 =I47-H47 \u00b7 12%  \u00b7 =N15/O15 \u00b7 =P15/R15 \u00b7 =UMS!E5+!E7\n  r16: Total \u00b7 =SUM(N14:N15) \u00b7 =N16/P16 \u00b7 =SUM(P14:P15)\n\nAlso applied currency / percentage number formats matching the gold\nstandard so values display correctly (not as raw decimals).\n\nRegenerated GGC_Blank_Underwriting_Sizer_Extended.xlsx with the new\nlayout \u2014 that's the deployed template.\n\nCo-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/NickAtBishops/GGC/commits/71070499a42c0882b2be83d823b090254dbf9d76",
+        "acquired_utc": "2026-10-19T02:15:33.830266+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/NickAtBishops/GGC/commits/71070499a42c0882b2be83d823b090254dbf9d76",
+        "ok": true,
+        "bytes": 14949,
+        "sha256": "6c14b569caa78291abe3909bf4c063e03d2e8dbdb224f5e2473d6c64b8f26474"
+      },
+      "parents": [
+        "1e3a2b6a6d4e31dd867e82d8991ee22350b71000"
+      ],
+      "workbook_paths": [
+        {
+          "path": "GGC_Blank_Underwriting_Sizer_Extended.xlsx",
+          "status": "modified",
+          "sha": "7d2e5e7a538869a4f7b28c2339a091be5a9054e8",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "IRockThs/OOTPResources",
+      "sha": "61dbd8ce114f54a580dd189f3c689d89675df801",
+      "url": "https://api.github.com/repos/IRockThs/OOTPResources/commits/61dbd8ce114f54a580dd189f3c689d89675df801",
+      "message": "Update Iron Model.xlsx\n\nI had a wrong formula on the pitcher sheet. It's fixed now. Thanks to Stradico for pointing it out.",
+      "request": {
+        "url": "https://api.github.com/repos/IRockThs/OOTPResources/commits/61dbd8ce114f54a580dd189f3c689d89675df801",
+        "acquired_utc": "2026-10-19T02:15:33.919029+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/IRockThs/OOTPResources/commits/61dbd8ce114f54a580dd189f3c689d89675df801",
+        "ok": true,
+        "bytes": 3991,
+        "sha256": "28d730fa10e23bbb05d36976be7e5fbe0640d83a9df1819ee87748a399387efe"
+      },
+      "parents": [
+        "d25d8de62a7c0540bd60c64bd2fb10c6d90374a4"
+      ],
+      "workbook_paths": [
+        {
+          "path": "Iron Model.xlsx",
+          "status": "modified",
+          "sha": "9491d857e64f8e2648b39d401e31180f7afcd4f7",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "ZeroSum-Solutions/terroir-prototype",
+      "sha": "3b477d5aa45c2c61fe2cc93a6c3d4dec85c9729a",
+      "url": "https://api.github.com/repos/ZeroSum-Solutions/terroir-prototype/commits/3b477d5aa45c2c61fe2cc93a6c3d4dec85c9729a",
+      "message": "feat(import): accept Excel workbooks, and spreadsheets dropped on the scanner (#148)\n\nA cellar spreadsheet had no working door. The scan screen accepted only\nimage/* and application/pdf, so a .csv or .xlsx dropped there was refused\nwith no explanation and no redirect; /import accepted .csv but rejected\nExcel outright with \"Only .csv files are accepted.\"\n\nExcel is now converted to CSV before it touches anything else, so the\nentire existing pipeline runs on it unchanged \u2014 header matching, row\nvalidation, dedup keys, LWIN matching, chunk planning, digests, revert.\nThe conversion is the only spreadsheet-aware code in the import domain;\neverything after it sees bytes indistinguishable from an uploaded .csv,\nrather than a second ingestion path that could drift from the first.\n\nThe reader runs server-side (POST /api/import/convert) because exceljs is\nfar too heavy to ship to the browser \u2014 the build confirms zero client\nchunks reference it. The client calls it the moment a workbook is chosen\nand swaps in the returned CSV, so a large sheet is split into chunks by\nexactly the same client-side splitter a large .csv is. Converting on the\nserver while the browser keeps the CSV text is what preserves chunking;\nconverting in the browser would have cost ~1MB of bundle, and converting\nwithout handing the text back would have broken every file over MAX_ROWS.\n\nA spreadsheet dropped on the scan screen is now parked and the operator is\ntaken to /import, which picks it up and behaves as if they had chosen it\nthere. The handoff is single-consumption so a later visit cannot re-import\na file already dealt with, and React's development double-invoke cannot\nimport it twice.\n\nDetails worth knowing:\n- Only the first worksheet is read, and the UI says which sheet it used\n  and how many it saw. A silent one-of-four import is invisible until the\n  totals come out wrong.\n- Formula cells contribute their cached result, never the formula text.\n- Rows are padded to a rectangle. exceljs drops trailing empty cells, so a\n  sheet with an empty last column produced short rows whose values then\n  shifted into the wrong columns downstream. Caught by its own test.\n- .xls is refused by name with a message saying to re-save as .xlsx, since\n  exceljs cannot read the legacy binary format at all.\n- MAX_SPREADSHEET_ROWS / MAX_SPREADSHEET_CSV_BYTES bound how far a small\n  ZIP-compressed upload may expand; exceeding either is a 413, not a 422.\n- exceljs pulls a vulnerable uuid, so uuid is pinned via the existing\n  override mechanism. pnpm audit is back to the single unfixable\n  extract-zip advisory. exceljs only calls uuid.v4 when WRITING conditional\n  formatting, a path this code never takes, and it reads workbooks fine on\n  the pinned version.\n\nGates: 289 files / 2579 tests green (live stack up), tsc clean, eslint\nclean, next build clean, API contract regenerated and verified, all six\nschema/contract gates pass. 9 mutations applied across the converter,\nhandoff, scan wiring and client module \u2014 all 9 caught.",
+      "request": {
+        "url": "https://api.github.com/repos/ZeroSum-Solutions/terroir-prototype/commits/3b477d5aa45c2c61fe2cc93a6c3d4dec85c9729a",
+        "acquired_utc": "2026-10-19T02:15:34.402838+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/ZeroSum-Solutions/terroir-prototype/commits/3b477d5aa45c2c61fe2cc93a6c3d4dec85c9729a",
+        "ok": true,
+        "bytes": 129475,
+        "sha256": "73f3233766b1cc6c7f69ed1eb87b6016684b5212905902ca4d80c36c69b8cfe5"
+      },
+      "parents": [
+        "3a58b7de4d9177923f410787515b7a6ba59b0190"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "Kavyansh-55/ConvertOcean",
+      "sha": "8698606783d722195d80a315ce0e447b180468e0",
+      "url": "https://api.github.com/repos/Kavyansh-55/ConvertOcean/commits/8698606783d722195d80a315ce0e447b180468e0",
+      "message": "test: cover the last eleven tools, and fix the invoice bug that found\n\nEleven tools had never been driven by anything. Four of them are calculators\nwith no input file, four more are generators, OCR and a legacy format that\nrefuses by design, and three were waiting on a fixture nobody had built.\n\nThe legacy .xls trio is the one that needed real work. The harness note was\nright to refuse a shortcut \u2014 a renamed .xlsx exercises the modern ZIP reader\nand proves nothing about the BIFF path these tools take. There is no SheetJS\nin node_modules, so the fixture is now written by the browser using the very\nlibrary the tools use, and checked for the OLE2 signature before it is saved.\nAll three pass, including unicode through a BIFF8 string record. They were\nworking; they had simply never been tested. Sweep 290 -> 306.\n\nThe calculators are all correct, including the one most often got wrong:\nreverse sales tax takes total / (1 + rate), so 120 at 20% is 100 base and 20\ntax, not the 24 a naive subtraction gives. Expected values are worked out from\nthe definition of each quantity rather than copied from the component, because\na test that mirrors its implementation will happily confirm a wrong formula \u2014\nmargin over revenue and markup over cost are the classic pair to swap, and\nboth are asserted separately, plus that they differ at all.\n\nDriving the generators found a real bug in both of them. The \"Client Entity\nName\" on the invoice and the \"Customer Name\" on the receipt were collected\ninto state and used only to name the downloaded file: neither document had an\nelement for them, so the client's name never appeared on the invoice at all.\nThe vendor side had one; the client side did not. An invoice without the\nclient's name is not an invoice, and no amount of file-fidelity testing would\never have noticed, because there is no input file to compare against.\n\nppt-to-pdf's refusal of legacy .ppt is now pinned as behaviour: silently doing\nnothing, or accepting and producing rubbish, are both regressions from saying\nit cannot. OCR asks for three of four known words rather than an exact\ntranscription \u2014 a test that demands perfection from OCR fails on a good day\nand teaches everyone to ignore it.\n\nEvery tool now has coverage somewhere; the eight still outside the main sweep\nsay which suite covers them instead of reading as untested.\n\nUnit tests 215, fidelity 306/0/0, mobile 11/11, resilience 19/19, limits 20/20,\nraces 8/8, degenerate 16/16, calculators 40/40, generators 12/12.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/Kavyansh-55/ConvertOcean/commits/8698606783d722195d80a315ce0e447b180468e0",
+        "acquired_utc": "2026-10-19T02:15:34.424320+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/Kavyansh-55/ConvertOcean/commits/8698606783d722195d80a315ce0e447b180468e0",
+        "ok": true,
+        "bytes": 48542,
+        "sha256": "b27a493966bbaf9d90f47aa0e74139d3d7da3ecc1c19666f241d126ff2280314"
+      },
+      "parents": [
+        "08ff8f5dd80b637b5c1f0d50ab672316acb9ea97"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "sushi2all/cashkit",
+      "sha": "5a9fa083bf63892f39f2d5bd43608d3940833d14",
+      "url": "https://api.github.com/repos/sushi2all/cashkit/commits/5a9fa083bf63892f39f2d5bd43608d3940833d14",
+      "message": "feat(mlp-s2): gate 3 \u2014 ported trials T01\u2013T12 on google/gemini-3.7-flash\n\nThe model-behaviour gate (SPEC \u00a710, ADR-0028). Twelve trials, thirty-one tests,\nall through `POST /turns` and `POST /proposals/{id}`, all asserting final book\nstate numerically. Every expected figure is arithmetic over the sentence the\nuser said, computed in Decimal inside the trial, so no assertion is a copy of\nwhat the engine happened to produce.\n\nWiring the grammar to a real model found a gap in two read intents that S1\ncould not have seen: both payloads were rich enough for a *person* to finish\nthe sum, and finishing a sum is the one thing the model must never do. R1 now\ncarries the closing balance for every month, before and after the hypothetical\n\u2014 \"can I afford this in September\" is a question about September, and the\nanswer is quoted rather than worked out. R9 now carries the `delta` column\nSPEC \u00a75-F4 already required the compare view to show. Both are additions; S1's\nread-intent tests pass unchanged.\n\nTwo trials are narrowed deliberately (D-MLP-27). T06 and T07 paste the table as\ntext: the xlsx pipeline with its SSE progress and reconciliation loop is S5's\n(gate T16), and what S2 owns is the model-behaviour half \u2014 can the model turn a\ntabular budget into a correct book, and does it make a one-off into a one-off.\nT10 walks the API path an interface will drive; the browser end-to-end is S3's.\n\nT07 asserts the closing balance of every month rather than the items, because\nthe construct is the model's to choose: a December bonus is equally correct as\nan event or as a windowed line, and a trial that insisted on one would fail a\nright answer. The month-by-month balance is what the user sees, and it is wrong\nthe moment any construct is.\n\nT03 is the one that matters most. Asked for the recursive overdraft rule that\nmade lite produce valid-but-wrong formulas with no diagnostic, flash says the\nbook cannot express it \u2014 and the grammar has no formula slot for it to author\none through, which the trial asserts without a model at all.\n\nTrials are marked `live_model` and excluded from a per-commit run.\n\nReproduce: `uv run pytest apps/service/trials -m live_model -q` \u2192 31 passed\n(~$0.10, ~6 min). Per-commit: `uv run pytest apps/service/tests\napps/service/trials -q` \u2192 319 passed, 31 deselected.",
+      "request": {
+        "url": "https://api.github.com/repos/sushi2all/cashkit/commits/5a9fa083bf63892f39f2d5bd43608d3940833d14",
+        "acquired_utc": "2026-10-19T02:15:34.470963+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/sushi2all/cashkit/commits/5a9fa083bf63892f39f2d5bd43608d3940833d14",
+        "ok": true,
+        "bytes": 83759,
+        "sha256": "70a0d399e491b3d22b886b903a6ee2eddfe08d17336a3b441941cb73aa036714"
+      },
+      "parents": [
+        "fb30f106d9f5424b97c2160ce808d8212c8bdf3f"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "achammah/driftbench",
+      "sha": "5354503afed4cccfafdc43bd3988316aaa555c3d",
+      "url": "https://api.github.com/repos/achammah/driftbench/commits/5354503afed4cccfafdc43bd3988316aaa555c3d",
+      "message": "Example defects: fixture reconcile script, family formula check (#439)\n\n* Fixture reconcile script reads the estate's JSON invoices and applies the per-unit rule\n\nThe Northwind fixture's reconcile.py read CSV only: on the JSON invoices of its own workspaces it printed\nnothing and exited 0, the code its docstring gives to \"every line matches\". It also compared line totals\nagainst 0.05 EUR, where matching-rules.md line 4 says under 0.05 EUR per unit is rounding: 24 units at\n6.53 against 6.50 came out \"over 0.72 EUR\".\n\nIt now reads a .json file's lines list or a CSV file, and a line matches when the quantities are equal\nand the unit prices differ by less than 0.05 EUR (decimal arithmetic, so 0.05 exactly is a difference).\nThe usage error (exit 2) and the empty-file answer (exit 0, no output), the two fixtures the estate unit\ntest records, are unchanged. fixture-v2 holds the same script, as its README lists no script change.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n\n* Family formula checks take a commuted multiplication or addition\n\nThe price-sheet family asks for the yearly price \"as a formula, twelve times the monthly price\" and its\noracle names =C<row>*12. formulaPattern matched that text only, so =12*C2 failed instance i04 (and every\nyearly=formula instance) though the instruction never fixes the operand order.\n\nA formula of one multiplication or one addition now also matches with its two operands swapped. Other\nrows, other constants, other operators and formulas of two operations still fail; subtraction and\ndivision keep their order. Regenerated: the price-sheet instances (n 20, seed 1; only the regex lines\nchange, family verify passes 88 of 88 and writes the same verify-report.json) and examples/acme/generated\n(17 specs, regex lines only). docs/generating.md states the rule.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n\n* CHANGELOG: the example defect fixes\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n\n* formulaPattern swaps only a cell reference or a number around one * or +\n\nReview finding on PR 439: the operand detector excluded only * + - /, so '=' and '^' passed as operand\ncharacters. formulaPattern('=C2=12+1') accepted '=1+C2=12' (TRUE against FALSE at C2=13), and\n'=C2^2+1' accepted the rearranged two-operation form; a compiled check passed a real workbook with the\nwrong formula.\n\nThe swap now needs exactly two operands from a strict token grammar, a cell reference [A-Z]+[0-9]+ or a\nnumber [0-9]+(.[0-9]+)?, around one * or +. Anything else keeps the strict form as written. Red first\nagainst the branch head: format.test.ts (=C2=12+1, =C2^2+1, functions, $ references, unary minus, &, %,\n>) and artifacts/test/family-formula.test.ts, which compiles the check and runs the xlsx reader on real\nworkbooks: =12*C2 passes, =1+C2=12, =1+C2^2 and =12*C3 fail. The committed instances and\nexamples/acme/generated are unchanged: their =C<row>*12 compiles to the same pattern.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n\n* fix: refresh categorical pins and reject invoices without lines\n\nRecompute all five Acme hashes and verify only formula regex lines change.\nReject unsupported JSON shapes in both reconciliation fixtures and cover\nevery seeded invoice/order pair without a traceback.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n\n---------\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/achammah/driftbench/commits/5354503afed4cccfafdc43bd3988316aaa555c3d",
+        "acquired_utc": "2026-10-19T02:15:34.773725+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/achammah/driftbench/commits/5354503afed4cccfafdc43bd3988316aaa555c3d",
+        "ok": true,
+        "bytes": 439976,
+        "sha256": "779e4064ef871367b722d7092a9bd9223b902f0efce743b782aa96701efa908d"
+      },
+      "parents": [
+        "9f14f170b452dc8bd718749f833225ab977dcee3"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "aiseed-dev/officework",
+      "sha": "9fb91306e95acbb2600694f0b447b360c9bf1018",
+      "url": "https://api.github.com/repos/aiseed-dev/officework/commits/9fb91306e95acbb2600694f0b447b360c9bf1018",
+      "message": "Spreadsheet printing: what goes on a page, and how wide a column is\n\nLooking at a National Tax Agency liquor-tax workbook: five sheets that Excel\nprints on seven pages come out of ours on twenty-two. Three things were wrong,\nnone of them the whole story.\n\n**Cells with nothing in them were being printed.** The print range came from\n`extent`, which is every cell present in the map \u2014 and xlsx files carry cells\nthat hold only a style, no value, no border, no fill. That workbook declares\ntwelve columns on its first sheet where nine hold anything, and eighty rows on\nits last where seventy-one do. `print_extent` stops at the last cell worth\nprinting, and keeps empty cells that carry a border or a fill, because those\nare part of the ruled form.\n\n**Column width was a linear guess.** Excel's rule is `trunc(width \u00d7 MDW) + 5`\nin pixels, the five being the cell's inner padding and its gridline; ours was\n`width \u00d7 2.0mm`. At the default width of 8.43 the two agree to within a tenth\nof a millimetre, so this changes no page count here \u2014 but they diverge in both\ndirections, and a form of narrow columns adds up the padding the old formula\nnever charged for.\n\n**Rows with no stated height fell to a fixed 7mm** rather than the sheet's own\n`defaultRowHeight`. Almost every row in this workbook states its height, so\nagain no page count moved, but a sheet that leaves its rows alone was being\nlaid out half again too tall.\n\nTogether these take it from twenty-two pages to twenty-one. That is the honest\nnumber.\n\nI should record how I nearly claimed more. Comparing our widths against a\nformula I wrote from memory, every sheet looked 8% too wide, and correcting to\nthat wrong formula took the count to fourteen \u2014 a satisfying result from\ncolumns that were simply too narrow. The test I wrote afterwards, checking the\ndefault width against its known 64 pixels, is what caught it. The formula in\nthis commit is the real one and the count went back to twenty-one.\n\nSo the three-fold page count is still unexplained. What I can say from\nmeasurement: the reference PDF lays about 182mm of ink across each page, and\nour own arithmetic makes the widest sheet 388mm against Excel's implied 364mm.\nSix per cent, somewhere in the column widths or in a couple of columns that\nstill should not be printing. Finding it means measuring against the rendered\nreference rather than against a formula.\n\nTwo tests, each confirmed to fail when its fix is reverted: the print range\nstops at the last cell with a value or a border while a style-only cell does\nnot extend it, and a column of the default width comes out at Excel's 64\npixels.\n\nCore tests pass with no locale, calc/writer/ui with OFFICE_LANG=ja, the page\nimage regression is unchanged, and the Python scripts pass.\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/aiseed-dev/officework/commits/9fb91306e95acbb2600694f0b447b360c9bf1018",
+        "acquired_utc": "2026-10-19T02:15:34.850922+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/aiseed-dev/officework/commits/9fb91306e95acbb2600694f0b447b360c9bf1018",
+        "ok": true,
+        "bytes": 17447,
+        "sha256": "e5340d7f17c0c3d3e167d4f2ecb6c21a8f81d516bb71cc955a51d22e9c16d514"
+      },
+      "parents": [
+        "17df128271b5a9f0b3f61f4badb349bfad76eca2"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "GitHubNewbie0/odf-kit",
+      "sha": "cd7900aae8d69b517915f5c77da1da4ff4a66035",
+      "url": "https://api.github.com/repos/GitHubNewbie0/odf-kit/commits/cd7900aae8d69b517915f5c77da1da4ff4a66035",
+      "message": "fix(xlsx-to-ods): fix formula cell interface mismatch (closes #25)",
+      "request": {
+        "url": "https://api.github.com/repos/GitHubNewbie0/odf-kit/commits/cd7900aae8d69b517915f5c77da1da4ff4a66035",
+        "acquired_utc": "2026-10-19T02:15:34.855563+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/GitHubNewbie0/odf-kit/commits/cd7900aae8d69b517915f5c77da1da4ff4a66035",
+        "ok": true,
+        "bytes": 19251,
+        "sha256": "f70dc88606af9768935516a32627af6fd788c72d4ad593d4d35d52b934f87bab"
+      },
+      "parents": [
+        "419d52f185f5af1a43d0232080a8319e4e36d3e2"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "c1e91a79681190302336e13541b60a2627fee37a",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/c1e91a79681190302336e13541b60a2627fee37a",
+      "message": "feat(formula): evaluate a parsed formula, or give no answer (#1008)\n\n* feat(formula): evaluate a parsed formula, or give no answer\n\n`formula::evaluate` computes the values, the operators and the references\nof a formula, and propagates errors. It gives a value or no answer, and\nnever a wrong value (decision 29). It gives no answer for a function it\ndoes not know, a name, a reference into another document, a cell with no\nanswer, and a text whose number depends on the locale.\n\n- `formula::Settings` holds the dialect and the settings of a document.\n  An ods follows LibreOffice and reads `table:calculation-settings`. An\n  xlsx follows Excel, which types a boolean apart and computes `0^0` as\n  `#NUM!`.\n- `internal::SheetCellSource` reads the cells of a decoded document.\n- A corpus test evaluates every formula of the test spreadsheets and\n  compares each answer with the result that the file caches. 8408 of\n  15160 formulas get an answer, and all of them match.\n\nThe corpus showed four faults in the readers:\n\n- An ods and an xlsx cell that states no value read as a string, so an\n  empty cell and an empty text were the same. They read as `unknown` now.\n- An ods error result read as a string. It reads as `error` now.\n- An ods cell with a value or a formula but no text was not read.\n- After a merge in an ods row, the cell lookup and the formula visitor\n  counted the positions wrong. Each cell run now states its first column.\n\n* fix(formula): read the old ods error form from a number cell only\n\nLibreOffice 3 and OpenOffice state an error as the number 0 that shows its\nspelling. The source read every formula cell whose text spells an error as\nthat error, so a formula whose text result is \"#N/A\" read as #N/A.\n\nAlso remove the unused SheetCellSource::sheets(), move the Number and Text\naliases next to number_of_text, and check the characters of a text order\nin one pass.\n\n* fix(formula): give an xlsx sum the exact result, as Excel does\n\nExcel sets a sum that cancels to almost 0 to 0 only in the last operation\nof a formula outside brackets, so =(1-0.9-0.1)*1 is -2.78E-17 there. The\nevaluator gave 0 in both dialects. An xlsx sum is now exact. A near\ncancellation in the last operation has no answer, because the tree keeps\nno brackets and Excel does not document its threshold.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/c1e91a79681190302336e13541b60a2627fee37a",
+        "acquired_utc": "2026-10-19T02:15:35.341626+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/c1e91a79681190302336e13541b60a2627fee37a",
+        "ok": true,
+        "bytes": 116781,
+        "sha256": "c6513bd1639fdcbf20de1f947901772a5b16b76f7799537bd5d9c5f590449b0c"
+      },
+      "parents": [
+        "ff740053472dff356f3378f5ed8a0a795e29e406"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "15b229c3db02a104a5e62513f83f6b2f54df0bc4",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/15b229c3db02a104a5e62513f83f6b2f54df0bc4",
+      "message": "fix(formula): read a space before an ods function's parenthesis (#1198)\n\nOpenFormula 5.14 forbids a space between a function name and its \"(\", but\nLibreOffice writes and reads \"ROUND (\". The parser refused these formulas,\nso they got no result, no exact reads and no structural edit. Skip spaces\nthere in the OpenFormula syntax only. A tab or a line break stays an error,\nas in LibreOffice, and the OOXML syntax stays strict.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/15b229c3db02a104a5e62513f83f6b2f54df0bc4",
+        "acquired_utc": "2026-10-19T02:15:35.515908+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/15b229c3db02a104a5e62513f83f6b2f54df0bc4",
+        "ok": true,
+        "bytes": 9184,
+        "sha256": "61306f6ecfdc3564f1008816b351c0ec97b45cf73cf7f3401cc16e8e125e2704"
+      },
+      "parents": [
+        "20a48d150814cb5cc7d6699feea107f1ca9151b9"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "StefanSchade/spreadsheet-handling",
+      "sha": "fcf037b25509bc65b09dd1adef3872b37a193555",
+      "url": "https://api.github.com/repos/StefanSchade/spreadsheet-handling/commits/fcf037b25509bc65b09dd1adef3872b37a193555",
+      "message": "docs(BUG-ODS-XLOOKUP-FORMULA-INTEROP-P4A): record XLOOKUP interop fix\n\nUpdates the BUG with the verified root cause, discarded hypotheses, exact\npre-/post-fix formulas, LibreOffice 25.2.3.2 evidence, test results, and the\nWorldbuilding consumer validation result; sets Status to Fixed and moves it\nto cold storage per the existing completed-BUG lifecycle (with a curated\nentry in docs/cold_storage/backlog/_backlog.adoc).\n\nDocuments the helper_value_mode formula/values operational contract and the\nODS LibreOffice XLOOKUP compatibility boundary in the supporting-steps user\nguide, adds a release-notes bug-fix entry, and records a coarse Project\nMemory concern event on the existing adapter/spreadsheet-boundary concern\n(CONC-ADAPTER-SPREADSHEET-BOUNDARY) per project_memory_workflow.adoc.\n\nCo-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/StefanSchade/spreadsheet-handling/commits/fcf037b25509bc65b09dd1adef3872b37a193555",
+        "acquired_utc": "2026-10-19T02:15:35.547520+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/StefanSchade/spreadsheet-handling/commits/fcf037b25509bc65b09dd1adef3872b37a193555",
+        "ok": true,
+        "bytes": 19793,
+        "sha256": "b381955da00d074ec5e1de0f604e5418d1050f0cfb61ed634c9f3bde3dda2a6c"
+      },
+      "parents": [
+        "5397d9d399159d58b95dd23fdd97efa78b8263a2"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "ULTRA-OS-Project/UltraCanvas",
+      "sha": "c850325f5f5ee379e768ac0eb4cafde34d4f658b",
+      "url": "https://api.github.com/repos/ULTRA-OS-Project/UltraCanvas/commits/c850325f5f5ee379e768ac0eb4cafde34d4f658b",
+      "message": "Phase 5: XLSX load/save, ODS style round-trip, embedded math import\n\n- Implement the LoadXLSX/SaveXLSX stubs (core/UltraCanvasSpreadsheetXlsxIO.cpp):\n  full SpreadsheetML read/write \u2014 multi-sheet workbooks, shared strings\n  (plain and rich), formulas with cached results, typed values recovered\n  through number-format classification (dates/times/percentages/currency\n  are plain serials in XLSX), cell styles (font, solid fill, borders,\n  alignment, wrap) with deduplicated font/fill/border/xf tables, merged\n  cells, column widths and row heights. Validated against LibreOffice\n  Calc in both directions, including two-generation round trips and\n  xlsx->ods conversion.\n\n- Fix formula loss on load: both the ODS loader and the new XLSX loader\n  now store cached evaluation results via SetFormulaResult \u2014 calling\n  SetText/SetNumber after SetFormula silently wiped the formula, so\n  formulas did not survive an open/save cycle. The ODS saver also writes\n  the cached numeric/boolean result instead of degrading formula cells\n  to strings.\n\n- Complete ODS style serialization: WriteStyleDefinition previously\n  emitted empty style bodies, so all formatting was lost on save. It now\n  writes font (family/size/bold/italic/color/underline/strikethrough),\n  background fill, uniform or per-side borders, horizontal/vertical\n  alignment and wrap; the loader gained the matching per-side border,\n  underline and strikethrough parsing.\n\n- Add MathML/OMML -> LaTeX converter\n  (Plugins/Documents/Word/UltraCanvasMathToLatex.{h,cpp}) covering\n  fractions, scripts, radicals, delimiters, n-ary operators, accents,\n  matrices, Greek/operator symbol mapping. The ODT reader resolves\n  embedded formula objects (Object N/content.xml) and the DOCX reader\n  handles m:oMath/m:oMathPara, both emitting formulas as $latex$ runs\n  that the TextArea markdown pipeline renders.\n\n- Offer .xlsx in the demo app spreadsheet dialogs and extend\n  WordFormatsTest with embedded-math packages for both formats.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Vnn44ajDxSfEEEqz7p2PEy",
+      "request": {
+        "url": "https://api.github.com/repos/ULTRA-OS-Project/UltraCanvas/commits/c850325f5f5ee379e768ac0eb4cafde34d4f658b",
+        "acquired_utc": "2026-10-19T02:15:35.680199+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/ULTRA-OS-Project/UltraCanvas/commits/c850325f5f5ee379e768ac0eb4cafde34d4f658b",
+        "ok": true,
+        "bytes": 133562,
+        "sha256": "82f692c60af085dfba89df1499c0d53941291da414789944e351466fa19c8153"
+      },
+      "parents": [
+        "b8c837d2e9e3beaacc0b2d3099c91e1d84340b79"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "productdevbook/hucre",
+      "sha": "372c8d4ce4bd44dd2ba86bff45ba4d909dd8d3ac",
+      "url": "https://api.github.com/repos/productdevbook/hucre/commits/372c8d4ce4bd44dd2ba86bff45ba4d909dd8d3ac",
+      "message": "fix: formula-ref conversion no longer corrupts function names/literals; markdown newline escaping (#336)\n\n- a1ToR1C1 and ODS excelFormulaToOds used a naive /[A-Z]+\\d+/ regex that\n  rewrote refs inside function names (LOG10 \u2192 [.LOG10]) and quoted string\n  literals (\"AB1\" \u2192 [.AB1]), producing broken formulas. Added shared\n  replaceA1Refs/replaceA1Ranges helpers in cell-utils that skip string\n  literals, function names, and embedded identifiers; both call sites use them.\n- toMarkdown now renders embedded newlines as <br> so a multi-line cell no\n  longer breaks the GFM table structure.\n\nCo-authored-by: Claude Fable 5 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/productdevbook/hucre/commits/372c8d4ce4bd44dd2ba86bff45ba4d909dd8d3ac",
+        "acquired_utc": "2026-10-19T02:15:35.899369+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/productdevbook/hucre/commits/372c8d4ce4bd44dd2ba86bff45ba4d909dd8d3ac",
+        "ok": true,
+        "bytes": 17493,
+        "sha256": "f80e4b6530a9e55ffdaf78057e504e9b53645ed3efa2547fadace44fbdb11f75"
+      },
+      "parents": [
+        "43c11d8c3042eee5b26a805713955f631099098a"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "1550ad24549cf3455f52757e5390dc414e477e3b",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1550ad24549cf3455f52757e5390dc414e477e3b",
+      "message": "feat(formula): read the names a document defines (#1013)\n\n* feat(formula): read the names a document defines\n\nA formula that names a name now reads what the name stands for: a named\nrange or a named expression of an ods, or a `definedName` of an xlsx. A\nname local to the formula's sheet comes before one of the whole\ndocument, and a name is read without case.\n\n- `abstract::Document::formula_names` states the names of a document.\n- `formula::CellSource::name` gives what a name stands for, parsed.\n- A name whose references are relative has no answer: it reads from a\n  base cell, which the two formats state apart.\n- A name inside a name is read up to 16 deep, so a name that names\n  itself ends.\n\n* fix(formula): take the first of two global names of one spelling\n\nSheetCellSource::name took the first local name but the last global one.\nBoth now take the first.\n\nAlso rename the depth of nested names to m_name_depth, and give the\nmembers of formula::Name a default initializer.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1550ad24549cf3455f52757e5390dc414e477e3b",
+        "acquired_utc": "2026-10-19T02:15:36.107441+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1550ad24549cf3455f52757e5390dc414e477e3b",
+        "ok": true,
+        "bytes": 34936,
+        "sha256": "6075674596689314a21323e2f8a7588bdddf378525f65b3891c06f98821b0e97"
+      },
+      "parents": [
+        "1982c439a3239efd9ce34d0b6e84b511541898db"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "10adb2058e8b85ec932c0903070c148dfa5cd2a5",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/10adb2058e8b85ec932c0903070c148dfa5cd2a5",
+      "message": "feat(formula): recalculate the stale formulas, and on every save (#1014)\n\n* feat(formula): recalculate the stale formulas, and on every save\n\n`Document::recalculate` computes the stale formula cells of an ods and an\nxlsx and writes each result into the document (decision 32). It returns\nthe cells whose result changed, the cells of a cycle, and the cells\nnothing here computes. A save recalculates first where an edit left a\nformula stale (decision 33).\n\n- A cell is stale where an edit since the last recalculation reaches it,\n  where it caches no result, or where it reads what no position names: a\n  name, a volatile function, a reference over several sheets. A\n  structural edit makes every formula stale. `internal::Document` notes\n  the edits.\n- A stale cell is computed on demand, and every other cell reads as the\n  file caches it. The stale cells are computed in reading order, so a\n  chain down a column is one step deep at a time. A cell its own\n  computation reaches is a cycle, and none of a cycle gets a result.\n- `SheetAdapter::sheet_set_result` writes a result and keeps the formula.\n  An ods takes the type the cell's data style shows: a date, a time or a\n  number. It states an error with `calcext:value-type`, and declares the\n  namespace where an older file does not. An xlsx writes `v` and `t`.\n- A cell the evaluator has no answer for stays as before: an ods states\n  no result, and an xlsx keeps the one it had and asks a reader to compute\n  it on load.\n- `sheet_visit_formulas` now states the size of a repeat, so a stale\n  formula a repeat stands for has no answer, rather than its other\n  positions reading the stale result.\n\n* fix(formula): give an array formula no result, and bound the depth of a recalculation\n\n- Decision 29 gives an array formula no answer, but recalculate computed\n  one as a plain formula and wrote the result: an xlsx\n  {=SUM(A1:A2*B1:B2)} got A1*B1 after an edit. The formula visitor now\n  states an array formula and the range it fills, and a recalculation\n  treats that range as it treats a repeat. A formula that reads a cell of\n  the range is stale with it, and gets no result.\n- The ods parser skipped table:covered-table-cell and relied on a span to\n  account for it. An array formula's range has no span, so every cell\n  after one of its covered cells read a column to the left.\n- A level of the recalculation takes about a kilobyte of stack, so 1024\n  levels could overflow a mobile thread. The depth limit is now 64. A read\n  that reaches it computes the far end of the chain first and then tries\n  again, so a chain up a column of 1100 cells still gets every result. A\n  depth-limited result was cached as no answer before, which left the\n  whole chain above it without one.\n- SheetCellSource::sheets is back, as the recalculation reads it.\n\n* refactor(formula): define a header-declared function by its qualified name\n\ninternal::recalculate, internal::is_edited, formula::sum_of and the\nformula::*_functions tables were defined bare inside their namespace. A\nsignature that drifts from its header then declares a new function instead\nof failing to compile, so each is now defined by its qualified name, as\nAGENTS.md asks.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/10adb2058e8b85ec932c0903070c148dfa5cd2a5",
+        "acquired_utc": "2026-10-19T02:15:36.109604+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/10adb2058e8b85ec932c0903070c148dfa5cd2a5",
+        "ok": true,
+        "bytes": 95256,
+        "sha256": "2901ba596892992085c0dd75ecd1d0e76476767da254ade735e7a7ecf90aa90b"
+      },
+      "parents": [
+        "1550ad24549cf3455f52757e5390dc414e477e3b"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "1982c439a3239efd9ce34d0b6e84b511541898db",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1982c439a3239efd9ce34d0b6e84b511541898db",
+      "message": "feat(formula): the functions of dates and times (#1012)\n\n* feat(formula): the functions of dates and times\n\nThe evaluator knows 13 functions of dates and times: `DATE`, `TIME`,\n`YEAR`, `MONTH`, `DAY`, `HOUR`, `MINUTE`, `SECOND`, `WEEKDAY`, `EDATE`,\n`EOMONTH`, `DAYS` and `DATEDIF`. LibreOffice gave the result of each case\nin the tests, and Excel's documentation the result of the Excel dialect.\n\n- A serial counts from the epoch of the document: `table:null-date` in an\n  ods, 1900 or 1904 in an xlsx. `Settings::days` turns one into a date.\n- A two-digit year of an ods is at or past `table:null-year`, 1930 where\n  the file states none: `DATE(29;1;1)` is 2029. Excel adds 1900 to a year\n  before 1900. LibreOffice refuses some years before 1583 by a rule not\n  found yet, so those have no answer.\n- Excel counts a 1900-02-29 that never was, so a serial before 61 has no\n  answer in a 1900 workbook.\n- `TIME` truncates its arguments in Excel and not in LibreOffice. `DAYS`\n  counts whole days in Excel and subtracts the serials in LibreOffice.\n- A part of a time where rounding and truncating to the second differ\n  has no answer, as neither application documents which it does.\n- `TODAY` and `NOW` have no answer yet. A recalculation decides when\n  they compute.\n\nThe corpus test now answers 14970 of 15160 formulas, and all of them\nmatch.\n\n* fix(formula): read a LibreOffice DATE argument as 16 bits, and keep serial 0\n\n- LibreOffice reads each argument of DATE with GetInt16, so one past\n  32767 is Err:502. DATE(1900;1;40000) gave a date, and now has no answer.\n- A whole-number argument of a date function has no answer where reading\n  it to 15 digits first truncates it elsewhere, as LibreOffice's double_to\n  does: it reads DATE(2020;0.3/0.1;1) as March, std::trunc as February.\n- An xlsx DATE gave #NUM! below serial 1, so 1904-01-01, serial 0 of a\n  1904 workbook, was refused. Only a serial below 0 is #NUM! now.\n- An xlsx DAYS refuses a date outside Excel's range with #NUM!, as Excel\n  documents.\n- snapped moves to formula_value, the date file uses the shared\n  is_libreoffice, and the table is a std::array.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1982c439a3239efd9ce34d0b6e84b511541898db",
+        "acquired_utc": "2026-10-19T02:15:36.285241+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1982c439a3239efd9ce34d0b6e84b511541898db",
+        "ok": true,
+        "bytes": 39768,
+        "sha256": "a5e88297762a409bc77044a6fbc9db4a047ab129cc737d2e08db00373d589a72"
+      },
+      "parents": [
+        "11af0f711b4c4c4a47beb0bfc8685d41a1d4507b"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "heylencer-debug/supplement-scope-dash",
+      "sha": "98494611f252cccf1b167276b98a90eb74e6915d",
+      "url": "https://api.github.com/repos/heylencer-debug/supplement-scope-dash/commits/98494611f252cccf1b167276b98a90eb74e6915d",
+      "message": "Fix formula-validator excipients, P10 verdict parse, P12 ingredient extraction\n\nformula-validator.js:\n- parseFormulaTable now stops at FUNCTIONAL EXCIPIENTS section\n- Added EXCIPIENT_NAMES set \u2014 tapioca syrup, pectin, citric acid, sugars,\n  flavors etc are excluded from active load calculation\n- Prevents false 800mg+ FAIL from excipient rows in formula table\n\nphase9-formula-qa.js:\n- parseQAVerdict: add fallback patterns for plain (non-bold) Overall/Score\n  lines and bare verdict keywords; was returning UNKNOWN/null when AI\n  used slightly different formatting\n\nphase11-fda-compliance.js:\n- extractIngredientNames: remove ^ anchor (broke on leading spaces),\n  add bold-marker stripping, add inline and capitalized-phrase fallbacks\n  so NIH ODS fetch actually runs on ingredient list\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/heylencer-debug/supplement-scope-dash/commits/98494611f252cccf1b167276b98a90eb74e6915d",
+        "acquired_utc": "2026-10-19T02:15:36.434925+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/heylencer-debug/supplement-scope-dash/commits/98494611f252cccf1b167276b98a90eb74e6915d",
+        "ok": true,
+        "bytes": 12988,
+        "sha256": "e88161ddd1417f9418e908bd96ee39fb2e18f42033f92112b10119440e402194"
+      },
+      "parents": [
+        "ae216a3b1e5f6588546dfa4d2d521c5f55c2bc1d"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "1cdb5915c932b1e5b27ac64934812b8f658064a5",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1cdb5915c932b1e5b27ac64934812b8f658064a5",
+      "message": "fix(formula): review the evaluator stack, shorten the changelog, compact the plan (#1016)\n\n* fix(formula): the findings of a review of the whole evaluator stack\n\nWrong values and results:\n- A stale ods cell without an answer kept its old result after a\n  recalculation, where its reads were a name, a repeat or the range of an\n  array formula. It now drops it; an xlsx keeps its one, as every save sets\n  fullCalcOnLoad.\n- A whole column was cut to the extent of its sheet: =t!A:A in row 30 read\n  t!A1. An implicit intersection now reaches past the extent. COUNTBLANK,\n  an operator, an array context, an approximate lookup, an INDEX past the\n  extent, and a criterion that takes an empty cell have no answer there.\n- A text with a decimal point read as a number, but the locale decides it.\n- FACT(-0.5) gave 1. An xlsx date past 9999-12-31 and a TIME part past\n  32767 are #NUM!, and SIN, COS and TAN of 2^27 or more have no answer.\n- & and SUBSTITUTE had no text limit of 32767 units.\n\nCrashes:\n- REPT(\"\";1E300) looped for ever.\n- A date or a month count out of range was cast to int64 without a bound.\n- An array result had no size limit.\n- A non-finite result reached the file as \"nan\"; it has no answer now.\n- A reversed xlsx array ref wrapped its size, and the span limit made\n  every save after an edit throw. The ref is normalized, and a save goes\n  on without a recalculation it cannot do.\n\nConciseness and conventions:\n- Errors, number_argument and Call::for_each_value replace five copies of\n  the walk over an argument and about fifteen of the error check.\n- order_of_texts and equal_texts are defined by their qualified names, a\n  span loop and the month division are shared, and Cells::area is gone.\n- No out-parameter, no bare int, and default initializers on new members.\n\n* docs(changelog): shorten each unreleased entry to three lines at most\n\n* docs(design): compact the landed evaluator plan\n\nDecisions 29 to 33 and the steps of the evaluator become one item of the\nlanded list, as decisions 9 to 28 did. The code still names decisions 29\nand 32. The status and decision 5 state that the evaluator exists. The open\nwork drops the evaluator and adds what the review left: a range read one\ncell at a time, Excel's comparison tolerance, the nesting of the parser,\nand LibreOffice's coming spelling of a boolean in &.\n\n* fix(formula): keep Matrix::cells without a default member initializer\n\nValue is incomplete inside Matrix, and a {} initializer of the member needs\nthe vector of it complete. clang 18 with libstdc++ refused it, and AppleClang\nwith libc++ did not.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1cdb5915c932b1e5b27ac64934812b8f658064a5",
+        "acquired_utc": "2026-10-19T02:15:36.445463+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/1cdb5915c932b1e5b27ac64934812b8f658064a5",
+        "ok": true,
+        "bytes": 117575,
+        "sha256": "7b2268ec7512e79c272dc9f0405e5caf48bb5fc24654e36a96a293889507a3d1"
+      },
+      "parents": [
+        "1ae4a40b20c663430fa760f51ef09259f1f1aba6"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "bdaae320be83ddc98c9f9b2b605270b1195c40f7",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/bdaae320be83ddc98c9f9b2b605270b1195c40f7",
+      "message": "feat(formula): the functions of mathematics and aggregation (#1009)\n\n* feat(formula): the functions of mathematics and aggregation\n\nThe evaluator knows 48 functions of mathematics and aggregation: `SUM`,\n`AVERAGE`, `COUNT`, `ROUND`, `MOD`, `SUMPRODUCT`, the trigonometric\nfunctions and others. LibreOffice gave the result of each case in the\ntests, and Excel's documentation the result of the Excel dialect.\n\n- An aggregate reads the numbers of a range. LibreOffice reads a boolean\n  cell as 1, and Excel skips it. A text stated as an argument reads as a\n  number in Excel. LibreOffice refuses one, function by function, so it\n  gives no answer.\n- LibreOffice adds left to right and makes a sum that cancels 0. A sum\n  that nearly cancels has no answer in Excel.\n- A rounding reads the number to 15 significant digits first, so\n  `ROUND(2.675;2)` is 2.68. Where reading it to 12 digits rounds it\n  elsewhere, the number is too close to the edge, and it has no answer.\n- An argument outside a function's domain is `#NUM!` in Excel. LibreOffice\n  states a code of its own (`Err:502`), which a file cannot hold as an\n  error, so it has no answer.\n- `SUMPRODUCT` reads its arguments in an array context: an operator reads\n  every cell of a range. A function inside that context has no answer yet.\n\nThe corpus test now answers 9674 of 15160 formulas, and all of them match.\n\n* fix(formula): add an ods sum as LibreOffice's KahanSum does\n\nLibreOffice adds SUM, AVERAGE, SUMSQ and SUMPRODUCT with KahanSum, a\nNeumaier sum that holds back the last number. Adding left to right with\napproxAdd gave 0.5 for SUM(1;1E20;-1E20;0.5), where LibreOffice gives 1.5.\nVAR takes its mean with KahanSum and each deviation with approxSub.\n\nAlso:\n- An ods MOD whose remainder precision put outside the divisor is #VALUE!,\n  as ScMod decides.\n- Excel documents no reading to 15 digits outside a rounding, so INT,\n  MOD, QUOTIENT, EVEN, ODD and FACT give no answer in an xlsx where the\n  reading changes the result. An xlsx MOD that nearly cancels has none\n  either.\n- COUNTBLANK of several areas has no answer.\n- One nearly_cancels test holds Excel's threshold for an operator and SUM.\n- The function tables are std::array.\n\n* refactor(formula): read the numbers of an aggregate without a sentinel or a vector\n\ncollect takes the count of arguments it reads, so kth no longer passes a\nlast index of -1. kahan_sum and sum_of read a std::span.\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/bdaae320be83ddc98c9f9b2b605270b1195c40f7",
+        "acquired_utc": "2026-10-19T02:15:36.826294+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/bdaae320be83ddc98c9f9b2b605270b1195c40f7",
+        "ok": true,
+        "bytes": 75499,
+        "sha256": "3ce8b77b9f0e29b6bc7e2e7243b0468efe5e8fd16db112b3fa618cc4a6a27b60"
+      },
+      "parents": [
+        "c1e91a79681190302336e13541b60a2627fee37a"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "kduvekot/ubl-gc",
+      "sha": "6d456601f018e0caf92810ddc304cab0b640da43",
+      "url": "https://api.github.com/repos/kduvekot/ubl-gc/commits/6d456601f018e0caf92810ddc304cab0b640da43",
+      "message": "Add UBL 2.0 errata and post-release updates with GenericCode\n\nDiscovered and added previously undocumented UBL 2.0 releases:\n\nERRATA RELEASE:\n\u2713 errata-UBL-2.0 - Post-release errata with fixes and clarifications\n  - 30 ODS files (all document types + core library)\n  - 2074 entities (same as official standard)\n  - +186 documentation entries vs os-UBL-2.0\n  - New column: \"ChangesforUBL20UpdatePackage\"\n  - Specific change notes (e.g., formula fixes)\n  - Generated GenericCode: 3.2M, 2074 rows\n\nUPDATE RELEASE:\n\u2713 os-update-UBL-2.0 - Identical to errata (alternative naming)\n  - BYTE-FOR-BYTE identical to errata-UBL-2.0\n  - 30 ODS files\n  - Generated GenericCode: 3.2M, 2074 rows\n\nWHAT CHANGED IN ERRATA:\n\u2022 Property renames for clarity:\n  - \"Identifier\" \u2192 \"Customization Identifier\"\n  - \"Identifier\" \u2192 \"Profile Identifier\"\n\u2022 Documented calculation formula fixes\n\u2022 CommonLibrary semantic clarifications\n\u2022 No new entities, no breaking changes\n\nCOMPLETE UBL 2.0 HISTORY NOW INCLUDES:\n\nStandardization Process:\n  1. prd3-UBL-2.0       (2006-09-21)\n  2. prd3r1-UBL-2.0     (2006-10-05)\n  3. cs-UBL-2.0         (2006-10-12)\n  4. os-UBL-2.0         (2006-12-12)\n\nPost-Release Updates:\n  5. errata-UBL-2.0     (post-2006)\n  6. os-update-UBL-2.0  (post-2006)\n\nAll 6 releases have GenericCode files showing:\n- Semantic model froze at prd3r1 (Oct 5, 2006)\n- No functional changes in any stage\n- Only documentation and clarification updates\n- Errata focused on fixing formulas and improving naming\n\nRepository now has complete UBL 2.0 evolution with full\nauditability and reproducibility for all stages.\n\nhttps://claude.ai/code/session_017VQcDyYXjB5KUr3GFRmiAc",
+      "request": {
+        "url": "https://api.github.com/repos/kduvekot/ubl-gc/commits/6d456601f018e0caf92810ddc304cab0b640da43",
+        "acquired_utc": "2026-10-19T02:15:37.008059+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/kduvekot/ubl-gc/commits/6d456601f018e0caf92810ddc304cab0b640da43",
+        "ok": true,
+        "bytes": 48255,
+        "sha256": "4626ba4a7409b5d479f4232769c0163da34e3e144e0ef885a6779b7b48189d50"
+      },
+      "parents": [
+        "9cf6af4731e2f4f15ee2a26be9b22c6bce6d49a6"
+      ],
+      "workbook_paths": [
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-ApplicationResponse-2.0.ods",
+          "status": "added",
+          "sha": "889575b8457f0b853d351f8c22a19e8e67c79ae3",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-AttachedDocument-2.0.ods",
+          "status": "added",
+          "sha": "598be1d12931f6d9610a0829020db596ebd851cd",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-BillOfLading-2.0.ods",
+          "status": "added",
+          "sha": "da2c60409898b94d67a53d2dc65b12cc1355f610",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Catalogue-2.0.ods",
+          "status": "added",
+          "sha": "39ec48451d7f3e7f7692616bb517bc645f28dd09",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CatalogueDeletion-2.0.ods",
+          "status": "added",
+          "sha": "586ed5f19fa98a5001b9a1c5d4ec671357ac0df1",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CatalogueItemSpecificationUpdate-2.0.ods",
+          "status": "added",
+          "sha": "86c6e638828a9da15dcb9e87645d810690fdc057",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CataloguePricingUpdate-2.0.ods",
+          "status": "added",
+          "sha": "763c53918ad99f08b9751ce7f133ba7f5942e7b8",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CatalogueRequest-2.0.ods",
+          "status": "added",
+          "sha": "8e990607b166b87166ed9202c672610a59d3e758",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CertificateOfOrigin-2.0.ods",
+          "status": "added",
+          "sha": "f2d4b4945d56d4b27731c11d1963b1d978f6857f",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CommonLibrary-2.0.ods",
+          "status": "added",
+          "sha": "d71db63aba8ce53fc00d0475ff385d43a992249a",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-CreditNote-2.0.ods",
+          "status": "added",
+          "sha": "c0baca2b8d8c374044fc67fcf4b901244114f4ef",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-DebitNote-2.0.ods",
+          "status": "added",
+          "sha": "0ee9f0833f88b54042db6cb516a76b4ea6d3c392",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-DespatchAdvice-2.0.ods",
+          "status": "added",
+          "sha": "3247ce6ffb0e114462181967eb24e5ad35ee02cb",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-ForwardingInstructions-2.0.ods",
+          "status": "added",
+          "sha": "fff7f8bde06e02922e7853b1bad30ad02327b21c",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-FreightInvoice-2.0.ods",
+          "status": "added",
+          "sha": "9ba164a0010722325817b3baa24d67ab3a04fcc0",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Invoice-2.0.ods",
+          "status": "added",
+          "sha": "a3030e5cd96f2343637bf8bf139e0d79029f9760",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Order-2.0.ods",
+          "status": "added",
+          "sha": "817f64f94fdaf2ffe05efbfb887b70cde3617e76",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-OrderCancellation-2.0.ods",
+          "status": "added",
+          "sha": "75e3382c3918b4abf44e76579d887f263d3ea262",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-OrderChange-2.0.ods",
+          "status": "added",
+          "sha": "11363979a0245600c235679f7e946ae9e9fe54fb",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-OrderResponse-2.0.ods",
+          "status": "added",
+          "sha": "f1b4ed002737e1df112af5957066d1b66cd8008a",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-OrderResponseSimple-2.0.ods",
+          "status": "added",
+          "sha": "91c5b6ea575909226704932c3dec874b631b8c1f",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-PackingList-2.0.ods",
+          "status": "added",
+          "sha": "66bb37e23d73290d53e39b9540f5cfd3e940cd3c",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Quotation-2.0.ods",
+          "status": "added",
+          "sha": "922eb782d6958b6ccf852ec7b3a3c2bdf75bfcd2",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-ReceiptAdvice-2.0.ods",
+          "status": "added",
+          "sha": "a5ca5741fe7d8a63db322fe479e116b1bf8a43bd",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Reminder-2.0.ods",
+          "status": "added",
+          "sha": "c005b5cead538eadb832f432727151cc1e2b9623",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-RemittanceAdvice-2.0.ods",
+          "status": "added",
+          "sha": "1d24b42df7779fc7fde5867cc2bb42cabde43520",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Statement-2.0.ods",
+          "status": "added",
+          "sha": "65f13e3fe70a54c62841045852a85d0b914970ad",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-TransportationStatus-2.0.ods",
+          "status": "added",
+          "sha": "1053af509cdd9c3eb428c7561cc49c23d7b41643",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-Waybill-2.0.ods",
+          "status": "added",
+          "sha": "bd372e9264d347eee8a3b5920a75bf3d1658d52a",
+          "previous_path": null
+        },
+        {
+          "path": "history/errata-UBL-2.0/mod/UBL-qDT-2.0.ods",
+          "status": "added",
+          "sha": "c54400c05099efe4965ff62dd58b753b375b66f5",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-ApplicationResponse-2.0.ods",
+          "status": "added",
+          "sha": "889575b8457f0b853d351f8c22a19e8e67c79ae3",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-AttachedDocument-2.0.ods",
+          "status": "added",
+          "sha": "598be1d12931f6d9610a0829020db596ebd851cd",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-BillOfLading-2.0.ods",
+          "status": "added",
+          "sha": "da2c60409898b94d67a53d2dc65b12cc1355f610",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Catalogue-2.0.ods",
+          "status": "added",
+          "sha": "39ec48451d7f3e7f7692616bb517bc645f28dd09",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CatalogueDeletion-2.0.ods",
+          "status": "added",
+          "sha": "586ed5f19fa98a5001b9a1c5d4ec671357ac0df1",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CatalogueItemSpecificationUpdate-2.0.ods",
+          "status": "added",
+          "sha": "86c6e638828a9da15dcb9e87645d810690fdc057",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CataloguePricingUpdate-2.0.ods",
+          "status": "added",
+          "sha": "763c53918ad99f08b9751ce7f133ba7f5942e7b8",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CatalogueRequest-2.0.ods",
+          "status": "added",
+          "sha": "8e990607b166b87166ed9202c672610a59d3e758",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CertificateOfOrigin-2.0.ods",
+          "status": "added",
+          "sha": "f2d4b4945d56d4b27731c11d1963b1d978f6857f",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CommonLibrary-2.0.ods",
+          "status": "added",
+          "sha": "15cb1f5078c68ad8ba96c9b23f34bd6a3bef41c9",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-CreditNote-2.0.ods",
+          "status": "added",
+          "sha": "c0baca2b8d8c374044fc67fcf4b901244114f4ef",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-DebitNote-2.0.ods",
+          "status": "added",
+          "sha": "0ee9f0833f88b54042db6cb516a76b4ea6d3c392",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-DespatchAdvice-2.0.ods",
+          "status": "added",
+          "sha": "3247ce6ffb0e114462181967eb24e5ad35ee02cb",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-ForwardingInstructions-2.0.ods",
+          "status": "added",
+          "sha": "fff7f8bde06e02922e7853b1bad30ad02327b21c",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-FreightInvoice-2.0.ods",
+          "status": "added",
+          "sha": "9ba164a0010722325817b3baa24d67ab3a04fcc0",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Invoice-2.0.ods",
+          "status": "added",
+          "sha": "a3030e5cd96f2343637bf8bf139e0d79029f9760",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Order-2.0.ods",
+          "status": "added",
+          "sha": "817f64f94fdaf2ffe05efbfb887b70cde3617e76",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-OrderCancellation-2.0.ods",
+          "status": "added",
+          "sha": "75e3382c3918b4abf44e76579d887f263d3ea262",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-OrderChange-2.0.ods",
+          "status": "added",
+          "sha": "11363979a0245600c235679f7e946ae9e9fe54fb",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-OrderResponse-2.0.ods",
+          "status": "added",
+          "sha": "f1b4ed002737e1df112af5957066d1b66cd8008a",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-OrderResponseSimple-2.0.ods",
+          "status": "added",
+          "sha": "91c5b6ea575909226704932c3dec874b631b8c1f",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-PackingList-2.0.ods",
+          "status": "added",
+          "sha": "66bb37e23d73290d53e39b9540f5cfd3e940cd3c",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Quotation-2.0.ods",
+          "status": "added",
+          "sha": "922eb782d6958b6ccf852ec7b3a3c2bdf75bfcd2",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-ReceiptAdvice-2.0.ods",
+          "status": "added",
+          "sha": "a5ca5741fe7d8a63db322fe479e116b1bf8a43bd",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Reminder-2.0.ods",
+          "status": "added",
+          "sha": "c005b5cead538eadb832f432727151cc1e2b9623",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-RemittanceAdvice-2.0.ods",
+          "status": "added",
+          "sha": "1d24b42df7779fc7fde5867cc2bb42cabde43520",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Statement-2.0.ods",
+          "status": "added",
+          "sha": "65f13e3fe70a54c62841045852a85d0b914970ad",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-TransportationStatus-2.0.ods",
+          "status": "added",
+          "sha": "1053af509cdd9c3eb428c7561cc49c23d7b41643",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-Waybill-2.0.ods",
+          "status": "added",
+          "sha": "bd372e9264d347eee8a3b5920a75bf3d1658d52a",
+          "previous_path": null
+        },
+        {
+          "path": "history/os-update-UBL-2.0/mod/UBL-qDT-2.0.ods",
+          "status": "added",
+          "sha": "c54400c05099efe4965ff62dd58b753b375b66f5",
+          "previous_path": null
+        }
+      ],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "opendocument-app/OpenDocument.core",
+      "sha": "11af0f711b4c4c4a47beb0bfc8685d41a1d4507b",
+      "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/11af0f711b4c4c4a47beb0bfc8685d41a1d4507b",
+      "message": "feat(formula): the functions of lookup and the conditional aggregates (#1011)\n\n* feat(formula): the functions of lookup and the conditional aggregates\n\nThe evaluator knows 14 more functions: `VLOOKUP`, `HLOOKUP`, `MATCH`,\n`INDEX`, `ROW`, `COLUMN`, `ROWS`, `COLUMNS`, `COUNTIF`, `COUNTIFS`,\n`SUMIF`, `SUMIFS`, `AVERAGEIF` and `AVERAGEIFS`. LibreOffice gave the\nresult of each case in the tests.\n\n- A criterion and a lookup match a text without case, whatever the\n  settings of the document. Only the operators follow\n  `table:case-sensitive`.\n- A criterion that spells a number (`\"5\"`, `\">4\"`) matches the number.\n  For `=` and `<>` it also matches a text spelling it. A number criterion\n  (`5`) matches no text.\n- `\"\"` matches an empty cell and an empty text, `\"=\"` an empty cell, and\n  `\"<>\"` every cell that is not empty.\n- A wildcard, and a regular expression where the document turns them on,\n  have no answer. So does an ordering of texts that holds more than\n  letters and digits, as the collator of each application decides.\n- An approximate lookup has an answer only for numbers in ascending\n  order without a repeat at the match. Elsewhere the binary search of\n  each application decides.\n- `ROWS` of a whole column has no answer, as the two grids differ in\n  height. A `Area` now states whether it is a whole column or row.\n\nThe corpus test now answers 14963 of 15160 formulas, and all of them\nmatch.\n\n* fix(formula): add an ods conditional sum as LibreOffice's KahanSum does\n\nLibreOffice adds SUMIF, SUMIFS, AVERAGEIF and AVERAGEIFS with KahanSum\n(IterateParametersIf, ParamIfsResult), as it adds SUM. The matched numbers\nnow go through sum_of, so an xlsx sum that nearly cancels has no answer,\nas for SUM.\n\nAlso:\n- Remove the copy of is_libreoffice that #1010 made shared.\n- Rename the new Call::cell(position) to cell_value, apart from\n  Call::cell(), the position of the formula.\n- COUNTIF and COUNTIFS share one function, and so do the sum and the\n  average of the matched cells.\n- The tables are std::array, and the comment of cell_limit says what it\n  limits.\n\n* refactor(formula): read the conditions of a lookup through a std::span\n\nCo-authored-by: Claude Opus 5.5 (1M context) <noreply@anthropic.com>",
+      "request": {
+        "url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/11af0f711b4c4c4a47beb0bfc8685d41a1d4507b",
+        "acquired_utc": "2026-10-19T02:15:37.129052+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/opendocument-app/OpenDocument.core/commits/11af0f711b4c4c4a47beb0bfc8685d41a1d4507b",
+        "ok": true,
+        "bytes": 57173,
+        "sha256": "f8eec5d3e05c6b7580b0381cbd988ab3983a561d627e5e92ebe296688f2f05bd"
+      },
+      "parents": [
+        "c48e6575c5c33567aa6b3fc82fb7d810e6dd75e0"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    },
+    {
+      "origin": "cryptpad/onlyoffice-x2t-wasm",
+      "sha": "cb631ef86d98356d09407025a2869db13abf8ba5",
+      "url": "https://api.github.com/repos/cryptpad/onlyoffice-x2t-wasm/commits/cb631ef86d98356d09407025a2869db13abf8ba5",
+      "message": "Squashed 'core/' changes from 4910d69a405..a33743cff21\n\na33743cff21 fix bug #73052\na83e19cbdf4 fix bug #72176\n8a991ae24a8 Merge pull request 'Fix bug #72857' (#208) from fix/bug72857 into release/v8.3.0\n6caca87b64c Merge pull request 'For bug #72496' (#207) from fix/bug72496 into release/v8.3.0\n9ab884ae240 Merge pull request 'Fix hwp conversion' (#217) from fix/hwp into release/v8.3.0\ne493d976e3e Fix bug #73036\nd75e7342cfa Fix bug #73042\nddd750be9ca Merge pull request 'Fix write base fonts' (#216) from fix/pdf-standart-fonts into release/v8.3.0\n79a4434583f Fix bug #73040\n44ff2aff3c5 Fix empty FreeText AP\n2f4b3e41b33 Fix write base fonts\nfe208f5243b Merge pull request 'Fix bug #72961' (#215) from fix/bug-72961 into release/v8.3.0\ne41c1d9703f Fix bug #72961\n5c5f98a6e36 Fix bug 73014\nf9dd82ad479 Merge pull request 'Fix HWP conversion' (#211) from fix/hwp into release/v8.3.0\n084c8f4b943 Fix bug #72999\nbf15325a9ea Fix bug #73000\n1b50b3a53ab Fix bug 72868\n70b40c46d2a Fix bug #72721\n23798f3c968 Fix ios build\n1e8d22080dd Merge pull request 'Fix hwp bugs' (#209) from fix/hwp into release/v8.3.0\n90bcd47fb71 The conversion of the character spacing to hwp has been removed\nc1adf0b30c4 Fix bug #72685\n81a4d9ccd0b Fix bug 72936\na97014c1735 Disable use filesystem in metafiles (js module)\nb3951d083a9 Fix elements align in html conversion\n7d78b37540a Fix bug #72932\nff162d451e6 Merge pull request 'Fix hwp bug' (#205) from fix/hwp into release/v8.3.0\n5dc6402006d Fix test file\nfae17d9bfc8 Merge pull request 'For bug #72694' (#204) from fix/bug72694 into release/v8.3.0\n931f4edae40 For bug #72694\n3609cf12371 Fix bug #72933\ncc8fa641aa0 Merge pull request 'Fix bug 72811' (#203) from fix/bug-72811 into release/v8.3.0\n3b9a865d77d Fix bug 72811\nf3b0a992bdd Fix typo\n74f3e7f2797 Merge pull request 'Fix hwp conversion' (#202) from fix/hwp into release/v8.3.0\nd195aa4a792 Fix build\n4a384edf08b For bug #72496\n30f96cbc6c9 Fix bug #72705\n007362d8bea Fix bug #72780\nf4aac048ea8 fix bug #72012\nf815fec8ed2 Fix bug #72714\n4ec217226d2 Fix bug #72721\n3cef41e876e Added bookmark conversion, fix bugs, refactoring in hwp format\n20bff1d6fee for bug #72794\n8da1a109de6 Fix bug #72857\n704cef604e4 fix bug #72496\n3c850e20862 Fix bug #72667\nab660cb8a32 Merge pull request 'for bug #72496' (#198) from For/bug72496 into release/v8.3.0\naf4343b1d87 for bug #72496\n7e4fe558f45 Fix bug #72847\nf942e563610 fix namespaces\n8b85f6987f2 Merge pull request 'Fix bug #72839' (#197) from fix/bug-72839 into release/v8.3.0\ncbe412d3c7d Fix bug #72839\nd3d9c8df94f Added text indent in hwp conversion\n01b582c4b99 Added BorderFill in hwp conversion\n4568144a227 Merge branch 'fix/bug72794' into release/v8.3.0\ncc4df3726af fix bug #72745\n696610862a5 .\nda6a5e9e98c for binary\nd395e63b80b Merge pull request 'Fix bug #72657' (#188) from fix/bug72657 into release/v8.3.0\n0350675df63 Fix min version\naead2e9fb81 Merge pull request 'Fix bug#72779' (#196) from fix/bug72779 into release/v8.3.0\nd12bad7bd19 Fix bug#72779\nda2284fff67 Fix bug #72712\n1382aa0b3df Fix bug #72780\n8ba5df60d9e Fix bug #72705\n5299872b179 Fixes for snapshots\ne1757dd5d1c fix bug #72796\nb5c5a5f1ed1 Fix bug #72781\n6979e17c3df Added polygon and curve conversion in hwp format\nc43fb928603 Fixed the correction of large text size in svg\n63887c95b6a Use wmf&emf instead conversion to svg in zip images (for native convertations)\nd3d4e869256 Merge pull request 'Fix bug #72365' (#179) from fix/bug72365 into release/v8.3.0\nf6383571eb0 fix bug #72794\na6f6a67aed2 Fix prev commit\nf9543ef9de4 Year Up\nbb58be4f180 Add new method for images inside zip\n40efe7dabc1 Fix build\n80b7caaf7a4 Fix bug #72721\n08e3dfb061f Fix bug #72772\n3a9d91b2914 Fix bug #72719\n45b26554b2e Merge pull request 'Fix bug #72175' (#191) from fix/bug72175 into release/v8.3.0\n09c4df8e052 Fix remove AP when transform\n85533a6553e fix bug #72768\n65898a94ad2 Merge pull request 'Fix hwp bugs' (#187) from fix/hwp into release/v8.3.0\n86009ff6fa0 Fix bug #72175\nb91dfb075e0 Fix bug #72657\nf057a16bc1c Fix bug #72700\nbd76adc97f7 Fix bug #72714\n27b5dbf15e9 Fix bad conversion hwp to ooxml\n58a7c7cd9de Merge branch 'release/v8.3.0' of git.onlyoffice.com:ONLYOFFICE/core into release/v8.3.0\n18fa4639b09 fix convert to ooxml\n389e5314dfc Fix bug #72692\n42636a8ab16 Merge pull request 'Fix bug #72173' (#185) from fix/bug72173 into release/v8.3.0\na3c87e7119a Fix crash with fonts with symbol > 0x10FFFF and wirh \\n in name\n2115371c0c1 Fix bug #72173\nbd95478d774 Fix build\n965680de236 Fix build\nad44ddf682b Fix build\n06386d54586 Fix build\nffda83848dd Fix bug 70819\n55dc0b789ff Merge remote-tracking branch 'origin/feature/hwpx' into release/v8.3.0\n53e3f8c561d Merge pull request 'feature/docx-renderer' (#183) from feature/docx-renderer into release/v8.3.0\n731a7addeea Comment logic\n36b82c1ef98 add default font size on odf math\n229a8f9dad8 .\n5f5d74df92a .\n66ea88bf14b fix bug #72043\n39530440634 Add clearing\n9a4a1546cb4 Fix bug #72655\n4085ee50024 Merge pull request 'Fix bug #69572' (#180) from fix/bug69572 into release/v8.3.0\nf6ef5826581 Merge pull request 'Fix bug#72187' (#176) from fix/bug72187 into release/v8.3.0\n7b62295149f Fix bug 72544\n421dcd780d8 Fix bug #69572\nb9e7a3143c5 Fix bug 72595\n6026841c005 Refactoring\n1e6d0a9f25f fix text entry\nadad3a05bac Fix build\n99fa27e6933 Merge branch 'release/v8.3.0' into feature/hwpx\n6b66c8fb50a Merge pull request 'Fix bug#72189' (#177) from fix/bug72189 into release/v8.3.0\n9faa7fb69d4 Added hwpx format to ASCConverter\n84042360ab1 Fixed bugs in hwpx conversion\n8a8a6e78eb3 fix bug #72578\n8bd655dd17e fix bug #72611\n34ecf848355 Merge pull request 'Fix bug #72414' (#161) from fix/bug72414 into release/v8.3.0\n4cf79c985d4 Merge pull request 'Fix bug #72432' (#162) from fix/bug72432 into release/v8.3.0\n18e359c1a69 Merge pull request 'Fix bug #72375' (#163) from fix/bug72375 into release/v8.3.0\ndc777f43d9f Merge pull request 'Fix bug #72264' (#164) from fix/bug72264 into release/v8.3.0\n8cd7ca97312 Merge pull request 'Fix bug #72039' (#165) from fix/bug72039 into release/v8.3.0\n8f91c471780 Merge pull request 'Fix bug #69238' (#166) from fix/bug69238 into release/v8.3.0\nfdac954df52 Add main logic of tables (in developing)\n70c98eb9f34 Fix build\n024efd2e357 Fix bug #72535\nda252bfa5ec Fix bug #72589\nc9ce68eab3c Improved work with external style files in html\n3af549a1580 Fix bug #72586\n34627ff1c56 Fix bug #72519\n0c2b49af11e Fix build for win XP\n4324ea847c7 Reafactoring and fixed bugs in hwp conversion\ndf76ff37781 Fix bug 72537\n172bb093057 Fix bug 72484\naa0ba83d327 Fix bug#72189\nfb934ef5271 Fix bug #72558\na2b817bbc21 Merge pull request 'for bug #72486' (#169) from fix/bug72486 into release/v8.3.0\necd80408e28 for bug #72486\nb78e2cb33c7 Adding parsing of hwpx format elements\nf0c52d2e814 Merge pull request 'Fixed html bugs' (#168) from fix/html into release/v8.3.0\n23ac269339e Fix bug #72533\n8239d6f51da Fix bug 72529\n3adf3363849 For bug #72519\n8e1810697f3 Fix bug #72519\n7c2105b613e Fix bug #72365\n2027defafb2 Fix bug #69238\n2ea586ec6f2 Fix bug #72414\na6940c42acf Obtain builder's version from INTVER\n6ed1cb60d6a Merge pull request 'Fixed bugs in hwp format' (#159) from fix/hwp into release/v8.3.0\n2c9e58280bc Fixed the bug of missing bmp images in hwp format\nf18b50cd4f8 Fix typo\naa2af5d2808 [android] Add new formats\ndde69ba65f9 Fix typo\nf51b58c9272 [android] Add HWPFile\n43f1ac0596c Adding parsing of hwpx format elements\n321e0de9f3a Merge pull request 'Fix bug 72489' (#158) from fix/bug-72489 into release/v8.3.0\nca77113e79e .\n2098c72a351 Fix bug 72489\n06e34fc303d Merge pull request 'Fix bug 71493' (#154) from fix/bug-71493 into release/v8.3.0\n7b56d56c0e2 [android] Add new formats\naa90104b18d Fix build\n98b285ab647 Merge pull request 'Added HWP format' (#155) from feature/hwp into release/v8.3.0\ncbd7e8ee7be Refactoring\nb76235d4fc4 For bug #72413\nb9e1d77038a Fix bug #72353\n8f448d3842f For bug #72318\n89d7242d215 Fix bug #72386\n9aaa2415231 fix bug #72328\n02bd5c4b0b2 Fix bug#72187\n4003a39ef99 Fix typo\na5fed4af708 Fix build and refactoring\na9d8cbbc574 Fix bug 71493\n6c79ab37fa2 Fix bug 72193\n17762b71dba Unused files have been deleted\nbe2f142fd33 Fix build\nfdcb2cf7ba9 Fix bug #72432\n07bf7a44aaa Fix bug #72375\na2bfbd8368b Adding parsing of hwpx format elements\n25553904df4 Adding parsing of hwpx format elements\n954ef089752 Adding parsing of hwpx format elements\naea8b7873cb Refactoring and fix bugs\na7774a6bc33 fix bug #72395\n4d15b5c19df Improved conversion of shapes properties \u0432 hwp format\ne230fa1d438 fix bug #53173\n3d30144ebb7 Merge pull request 'Fix scientific numbers csv reading' (#153) from fix/scientific-scv-reading into release/v8.3.0\n3365ca15d6e Fix scientific numbers csv reading\nc0debdfe39b Improved conversion of shape styles, fix bugs, refactoring in hwp format\nf7d55d48fe6 Remove depends to CSvgFile from CConverter2OOXML in hwp format\nf2510a94104 Merge branch 'release/v8.3.0' into feature/hwp\nf2a8a9878b6 Added partial web video conversion in hwp format\n39adc06921f Fixed the merge obstacle\n64af642c406 Added AutoNumber conversion in hwp conversion\nef26ac732e0 Added columns conversion in hwp format\n8bbaaf4cef3 Added header and footer conversion in hwp format, fix bugs and refactoring\nde821b73c80 Added endnotes conversion in hwp format and fixed bugs\na7d5fe3994f Added footnotes conversion in hwp format\n7deeefbcf40 Added chart conversion in hwp format\n3666bdf6fc5 Fixed bugs in the parse and improved shapes conversion\neaa7bb30dbf Added rectangle conversion in hwp format\nd4619c5786a Added hwp format to x2t\n0f3852ab1ef Refactoring\nfb5b1c5a6ea Added conversion of a numbered list in hwp format\ncef8ac9fd97 Remove depends to CSvgFile from HtmlFile2. Add initialize fontsfor svg.\n45aa5df2676 Fix build\ne8c94aa1033 Improved text conversion in hwp format\naa5b7e12769 Improved conversion of styles in hwp format\ndd98d0c11dd Merge pull request 'Fix bug 72344' (#149) from fix/bug-72344 into release/v8.3.0\n08971025bd4 Added support for conversion of HWP tables, fixed bugs\n00f6a823d67 Fix bug 72344\nb4f4da26d6c Mark files as debug\n1c9f7ac597d .\n673139f5a9d Merge pull request 'Fix Metafile conversion' (#148) from fix/Metafile into release/v8.3.0\n4bf0cee034b Added image conversion to hwp, bug fixes, and refactoring\n00abbab3705 Fix bug #72264\n3125a7a928e fix bug #72263\nf20c944c728 Merge pull request 'Fix bug 72273' (#146) from fix/bug-72273 into release/v8.3.0\n6d7dc6517bc fix bug #70653\n6fd84c6c8cb [android] Enable minify and update agp\nd37f31208c6 Merge pull request 'Update branch' (#147) from release/v8.3.0 into fix/Metafile\nc472b19e0dd Fix bug#72243\n7b03bcde890 Writing the HWP format conversion\n03a7eb0fd44 Fix bug 72273\nc0a779727eb Merge pull request 'Fix bug #72173' (#145) from fix/bug72173 into release/v8.3.0\n52d3f0bc192 Merge pull request 'Fix bug #72187' (#144) from fix/bug72187 into release/v8.3.0\nc17497e304e Merge pull request 'Fix bug #72048' (#143) from fix/bug72048 into release/v8.3.0\n6bc4ecbc733 Fix bug #72173\n22460775894 Fix bug #72187\n91eb74773b5 Merge branch 'fix/bug72039' of git.onlyoffice.com:ONLYOFFICE/core into fix/bug72039\n5b8d2660aa4 Fix bug #72039\n60ad1c10fda fix bug #72196\n36b0cc524e3 Fix bug #72039\nbb33e70b3e3 The writing code for converting hwp format and fixed bugs\n5f2d7b2f5af Add base xml for tables\n02aeaa6a642 Fix bug with ascent/descent\n76965414303 fix bug #72151\n614156f5756 fix bug #72170\n397abd51a50 Fix bug 72159\nd311090ced6 fix write empty custom\n4a110d68c12 Fixed bugs in reading hwp format and added test example\n505a3c6224a Merge pull request 'Fix bug 63154' (#140) from fix/bug-63154 into release/v8.3.0\n75a21ee1620 Fix bug 63154\n440cf968d5f Fix bug 70708\n3daa374a513 Compute text lines\n5d83d912fc9 Fix bug 72142\n695fd3ba1cb Merge pull request 'Fix bug #69851' (#139) from fix/bug69851 into release/v8.3.0\n75f68904f28 Merge branch 'release/v8.3.0' of git.onlyoffice.com:ONLYOFFICE/core into release/v8.3.0\nb99badda9fb fix bug #72057\n48d86cb7cea Add base classes\n9991cc8c032 Rewrite split lines logic\n36a3b693d51 Update paragraph logic for enums\ndbd6be95207 Fix bug #69851\n42ef948fcc3 Merge pull request 'Create Stamp Annot' (#131) from feature/pdf-new-stamp into release/v8.3.0\n69f4ac3ed71 fix bug #71799\n328e379ec26 The writing code for converting hwp format\n7d65d4b11a4 Fix bug #72048\n57ba4355f9d fix bug #72062\n2eea44bc8cc Merge pull request 'Fix int to double conversion' (#136) from fix/bug72062 into release/v8.3.0\ncb982a1ad4d Fix int to double conversion\n0aca0a0a5ac fix bug #71977\n0c1df859e29 The writing code for converting hwp format\n7a153285c89 fix bug #72063\nc2d00ee8198 Merge pull request 'Fix bug #54422' (#135) from fix/bug54422 into release/v8.3.0\n3603787df83 Merge pull request 'Fix bug #71477' (#134) from fix/bug71477 into release/v8.3.0\nd58424d089a Fix build\nfe2ca8c566a Delete unused headers & add new files\n20d2ff7954e Refactoring\nb125c19d024 Remove useless call\n2f2d11a5f63 Fix bug with recalc size of space\nde4897fdefb Add HorVerLinesCollector\nf9952d0f94d Refactoring for future tables\n5483a8d36b4 Merge pull request 'Fix bug #72067' (#133) from fix/bug72067 into release/v8.3.0\n80ac89f16b9 fix bug #72065\nfcf9830aa65 Fix bug #72067\nd7b435a446e Delete unused file\n887d963d8d6 Fix bug 72045\nbc4c39b7aaa The writing code for converting hwp format\n8d89026d196 Change path for pdf.bin\n4e6e3ce5f0e Fix rotate double\n3d7eced836a Fix Rotate\n7130b1be347 [x2t] Rename draw->visio; For bug 72002\na5917c389f9 The writing code for converting hwp format\neee80b0f870 [x2t] Rename draw->visio; For bug 72002\n35dff37820b Create Stamp Annot\n2f45a876691 Remove HtmlRenderer library\n185b3d54eb4 Merge pull request 'feature/docx-renderer' (#130) from feature/docx-renderer into release/v8.3.0\nf7f059b6c02 Merge pull request 'Feature pdf text' (#119) from feature/pdf-text into release/v8.3.0\n2a9044d0660 No changes HtmlRenderer\na93f00d0af4 The writing code for converting hwp format\n9a1abe98199 Fix bug 71495\nf8f9d55ab86 Merge branch hotfix/v8.2.2 into release/v8.3.0\n99b777a5eb9 Merge pull request 'Fix bug #71944' (#121) from fix/bug71944 into release/v8.3.0\nd1506ec9fa8 Merge pull request 'Fix bug #71943' (#122) from fix/bug71943 into release/v8.3.0\n9fc74159ff4 Fix bug #71927\nec149159253 fix bug\nf9f4efc3835 Fix statistics\n12ad4e604b5 Add indents logic with bullets\ne0ad062380a Add origin font\nb72f678c1de Fix drop caps\n7b67dfa57c2 fix bug #71976\n5153ac069ba fix bug #71974\na08b614bce5 refactoring convert ods formula\n59f41bcdec4 Fix bug 70699\ne8aa709d4e9 Fix bug #54422\nc4515aca3a2 Problem\n3fde7b3f922 fix bug\nb776b7b63f3 The writing code for converting hwp format\nd69601c2d22 fix bug #71946\n912482beeee Merge pull request 'Fix pdf accuracy' (#118) from fix/pdf-precision into release/v8.3.0\nc0ca4189d3a Fix pdf accuracy\n134a214a0b0 Refactoring\n95f604ec68c Merge remote-tracking branch 'origin/release/v8.3.0' into feature/pdf-text\necd71dd92a0 The writing code for converting hwp format\nd8bd9ef8458 Fix size of Line\nd3a317ed4b4 Merge pull request 'Fix number format csv reading' (#117) from fix/number-formats-csv-reading into release/v8.3.0\n37141b6ba36 Fix number format csv reading\nbd3cabd236b Return to typed arrays\nc2403aa0b7b fix\nbdf70dd99e7 Merge pull request 'feature/add-lcid-to-csv' (#116) from feature/add-lcid-to-csv into release/v8.3.0\n9f18cbce015 Fix bug 71930\n05a6f6afaf7 Fix build android version\n7e11af55538 The writing code for converting hwp format\n32751820139 Add local using to default date formats\nca2b6d78aad Fix iso date parsing\n6a24fd149ad Fix bug 71908\n168dc1ddb8a Merge remote-tracking branch 'origin/develop' into fix/bug69238\n8918b7fae07 Fix formula conversion order\n4501adbc615 Update iwork\n0c1864a1362 Fixed a bug with the termination of recording when converting iwork formats on Linux\n3e2373687c3 Add standart date reading\n779af49e0d5 Add local info inicialization on request\ncb2f1c5577c Add more locales support\n446a0f95242 Fix bug 70337\n1c839e6c62e Add more locales support\nf7d7dc8c6bf Fix bug 71899\n6d789e966ae Merge branch 'develop' into feature/add-lcid-to-csv\nd20d1af154c The writing code for converting hwp format\n925ffa09e2f Merge remote-tracking branch 'origin/develop' into fix/bug69238\ndd0ed96e5ad fix bug #71885\n25b30981cee Add more locales support\nebfee2376f0 fix opacity\nfa33af2304a Merge branch 'develop' into feature/add-lcid-to-csv\n6b9fc964b96 Fix isSpace\n9242ab97436 Merge remote-tracking branch 'origin/develop' into feature/pdf-text\ne14cc2d5c5c HtmlRenderer to serialize\ncd73a4d9e37 Merge pull request 'feature/docx-renderer' (#107) from feature/docx-renderer into develop\n1b39b9f416f Fix bug 70795\n4e57fda1f6b .\nf3d65cb04cb .\n4ba288978d7 Add method for get document type\nc862d58966a fix perm\nc6effb6de29 fix bug #71868\n295dbbbb862 The writing code for converting hwp format\n96b34ee008b fix bug #52238\n265db0216b9 Fix new word\n76f2d816553 Add more locales\n10ff332f4d1 Merge remote-tracking branch 'origin/develop' into fix/bug69238\nf57179911ff The beginning of writing code for converting hwp format\n863144596c6 Merge branch 'develop' into feature/add-lcid-to-csv\na82a8977c32 Add more locales to localinfo\n0109c69e38e Merge pull request 'fix build' (#105) from fix/OOXml2Odf-build into develop\n92ce5d81ad8 fix build\n482da0dab3c Merge branch 'develop' into feature/add-lcid-to-csv\n32afe4f24e5 Merge pull request 'feature/binary-reading-optimisation' (#104) from feature/binary-reading-optimisation into develop\n182dd9e0729 Merge branch 'develop' into feature/add-lcid-to-csv\n2ba281a5eee Fix empty\nb3a30cf2ea8 Fix row compression\nc321783b447 Merge pull request 'fix OOXml2Odf' (#101) from fix/OOXml2Odf into develop\n182cd8d74a9 Fix bug 70795\n98a1988d9ad test editing\nacd9219b16f Merge branch 'develop' into feature/binary-reading-optimisation\n0cbcaa209cd Add pcrRecord reading\na53e46be24c Add restriction for MS compiler\nab8070aa56d Fix build\n6a930c5aa40 Merge pull request 'Fix build for linux' (#100) from fix/iwork-build into develop\n6c0715cc662 Fix build for linux\nce0f8251d36 Fix bug #69238\nf019dfbb074 Words with X and Width\nfefcef7da40 Add pivot cache records fast reading\n361bc70fe38 Merge branch hotfix/v8.2.1 into hotfix/v8.2.2\n09b4ab50929 Merge branch hotfix/v8.2.1 into develop\ne1fcf17b342 Merge pull request 'feture/iwork-build' (#99) from feture/iwork-build into develop\nc83a8a3a548 Serialization\n54f06355004 Optimise PCDIDT records loading\nbb48b57af98 Merge branch 'develop' into feature/binary-reading-optimisation\n8a000efb7f9 fill stretch\n1c362612e3a Refactoring HtmlRendererText\n78404c4ffed fix bug #45121\n3a49869ce0f change sheet data conversion cicle condition\na1a6e6c9a07 Refactoring\n41997165503 Add xlsx->xlsb empty cells compression\n6d68d7aee5d .\ncf346bd5358 CMetafile to NSWasm::CData\n61e6b54710e .\n536dac5fc93 getSelectionQuads..\n65ba8ffd3b2 Add method for get document type\nc6467d67c51 Merge branch 'develop' into feature/binary-reading-optimisation\n5a9812887ba Add empty strings compression\ne637b47d688 Removed the mandatory dependency on gperf when building iWork\n0078a2e19bb Move empty cells compression to individual method\nd2713d0cfd7 fix perm\n4bf363f458e Merge pull request 'COfficeDrawingPageParams' (#98) from feature/pdf-params into develop\nc1b01029df0 COfficeDrawingPageParams\n4b299fedd72 Fix empty cell compression\ndc4074299c5 change CHtmlRendererText\n2d161f13412 edit attributes\nfea872d7791 Fixed the build of iWork on linux\n6c614051d92 Merge branch 'develop' into feature/binary-reading-optimisation\n2517316e2b3 Add empty rows compressing\nc83e50d1649 fix bug #59349\n66bc0223cba fix bug #57207\n9ea09f95f84 fix bug #17798\nd66d95d4c6d Fix bullet paragraph\n024c288e128 iWork formats are built into x2t\ncaac75fcc16 Create struct for text\neb88373ec55 Refactoring\n4e86a9a08a9 add cellBlank compression to xlsb->xlsx conversion\n099ebc3de94 Enable JS error logs in release mode\n4c3b9411b47 Fix bug 70699\n555b91e3850 Merge branch 'develop' into feature/binary-reading-optimisation\n9713138f4f1 Fix other currecyes csv reading\n0934c2cda49 Add rtl csv reading for some currencyes\nbb204098a1d Fix PDFCoordsToMM\nc65e8d4a045 Merge branch 'develop' into feature/add-lcid-to-csv\na0cecd357f0 External libraries have been moved to 3dParty\n6a4f30d6fad fix bug #59772\ncfde4aa357f Add other currencyes\n2a2f33fd6f3 Fix build\n8ad76e4e1f5 Fix bug 68072\nb0b3d6b280f Fix linux build\n029e6c6df76 Merge branch hotfix/v8.2.1 into master\ne8257896d49 Add loc date format csv writing\n1e9a63083b8 Read CHTMLRenderer\n2f525c1e4f0 Remove using iterator after remove it from list\n40a1e150335 Merge branch 'develop' into feature/binary-reading-optimisation\n6c93c8b16cb Merge branch 'develop' into feature/add-lcid-to-csv\n8813f8bb198 Merge remote-tracking branch 'origin/hotfix/v8.2.1' into develop\ne979defdeef Add param for disable own xml wrappers\ncc585185dda Fix bug 71045\n9a5240cbbaa For bug 70996\n8e498c82991 Merge branch 'develop' into feature/add-lcid-to-csv\n706a2252fa6 for bug #71510\nd423549ae42 Add frtRecord skiping in rows and cols\ncef0adda0a5 Add array formula reading\nab2ab7a4078 Merge pull request 'Fix bug 71505' (#95) from fix/bug-71505 into hotfix/v8.2.1\n62c401ae5b3 Refactoring\nd73d682cbc3 Merge branch 'develop' into feature/binary-reading-optimisation\nc470363ec0a Fix template parameter redefines default argument\n25be50f0580 Fix unresolved external symbol, delete include\n10931f937ac implementation moved to cpp\n647c8a3cded Without template\n1d4f9b5c41c Reduce _CSoftMask\n3de464a31e8 for bug #71527\n3429e8b345a Fix bug 71505\nb3f5d84a51b Fix bug #71477\n23c2ecfe54c Add shared formula reading\n485dcb52728 Fix write int in StringBuilder\n1c9a9f53e3a fix bug #52676\n62ad5bf127f Add cell metadata conversion from bin\necc1e974ae1 fix bug #53487\nef61b902428 Remove unused sheet data params from conversion\n00bdf67b8a1 Merge branch 'develop' into feature/binary-reading-optimisation\nee83f6c8267 Merge remote-tracking branch 'origin/hotfix/v8.2.1' into develop\nec50e77695c HtmlRenderer research\n72fbe989255 fixing bugs with indices and brackets\n4ef62b88cb5 Revert \"Add quick binary reading method\"\n3e8d5926ba7 Revert \"Add string conversion optimisation\"\n0284c8df706 Add table cell conversion\n3d4faa267e5 add normal formula conversion\nedc0ae2b8dc Fix switch-case-break\nebaf0eb43ab Fix bug with patch transform & unused memory\neab40d6bb25 fix bug #71478\ne7d081aefb9 Add other cell value types conversion\ncc2867e2922 Fixed calculation of the conversion matrix in media file conversion\n8e51f9bdbbb for bug #71449\n92b0f4e654c Updated calculation of line width in metafile conversion\n46d4d76f26e Add datacell conversion\n53593c96af3 Add direct from bin reading sheet data method\n21f75547fb1 Remove unused code\nac8c99415f5 fix bug #71415\n0daee49007e Add eny delimeter date reading\n5a6a2f800f4 Fix bug 65824\n8e3df35232d Add short months reading and writing\n521d7c1ee8f Add short month names\nf1e80adb9c0 Merge branch 'develop' into feature/add-lcid-to-csv\n3503eee5b6c Create GetGlyphs for PdfFile\n10418022147 Fix build\ncebc04b852e Unused functionality has been removed\ndbfdffd0c53 Fixed missing text in the specified font in the metafile\nb8d2cba3aee Refactoring\nb56d62442d1 Added the ability to set shape-rendering in metafile to svg conversion\n5d70f47ebcb Add lcid long month writing\n859351a8d15 Add 14 format csv local writing\nfbd408ec6de Add lcid using to csvwriter\nc631b62e510 Merge branch 'develop' into feature/add-lcid-to-csv\n1286dbaaaf1 Fix bug with numeric limits\n1dbeea42b8b Fix build\n0dc65baa255 Merge remote-tracking branch 'origin/hotfix/v8.2.1' into develop\n50fec656179 Added support for custom markers in metafile to svg conversion\na5ea301e3e0 fix bug #71334\nfb40437d21b fix bug #53148\ncf66adea288 Add string conversion optimisation\n42466cf648f Fix atan2 custom shape formula conversion\n2b00698810c Add support iwork formats\nb00fbeff53b Fix bug #69024\n819d1fad172 fix bug #71349\n97f0958f09c Merge branch 'develop' into feature/binary-reading-optimisation\nce88c4ca951 Fix pattern bbox offset\nac7614c4e63 Add quick binary reading method\na69a992a0d0 Fix bug 71330\nb4bb20bea79 Fixed a bug with dotted lines in metafiles\n949aed7bb4b Fix bug 71045\n2ce37e34c4c Fixed a bug with incorrect positioning in EmfPlus\n6ec4191483d Fix bug 71308\n3401c2b02e9 Fix bug 70986\n0dd0ad00232 Fix unbalanced text operator\n8cf7809359a Fix unbalanced text operator\n277dd4a4648 Merge branch 'hotfix/v8.2.1' into develop\ncb8466de270 Fix merge\n1c2501eeb10 Merge pull request 'release/v8.2.0' (#85) from release/v8.2.0 into hotfix/v8.2.1\n0d443743a84 Merge pull request 'fix/docx-renderer' (#79) from fix/docx-renderer into hotfix/v8.2.1\n8c7a22b726e fix bug #70715\nc8b8462d314 Support for embedded WMFs in emf is disabled\na14b3eb8e20 Fix bug 70952\n6eaf5908446 For bug #71100\nfac279ba81c Fix bug #71100\n571a7ee2d18 fix bug #71047\nadb6d7bbc20 Remove debug logs by default\nf7fa6385919 Fix bug 69828\nedfa558a384 Merge pull request 'Fix pdf widget AP' (#84) from fix/pdf-widget into hotfix/v8.2.1\nb80ada4b4e4 Fix old server\n492b8214723 Fix old server\nd75a3a55873 Merge branch 'develop' into feature/add-lcid-to-csv\na8ce7eaad38 Fix crash on v8 engine\n8cf78b9e58a Fix write listbox\n28bcfafcc66 Fix change font\ne527db95153 Write Text Widget AP\ndb2660a1a3a Text Widget write\n77b5ffb56df Fix write listbox\nca70de93a45 Removed memory leak\n04565bbdd4e Fix change font\n4266857c6e5 Merge branch 'develop' into feature/binary-reading-optimisation\n8e6e510cd66 fix bug #71238\n03919dcb338 fix bug #71238\n46588b05b11 Merge pull request 'fix/nativeDraw' (#82) from fix/nativeDraw into release/v8.2.0\ndc0ea6a7f38 Add fromJS functionality for Images\na84c8cc4711 Add support Images in nativeEditors\n986d0f0d95e Write Text Widget AP\ncd1bb3b6580 Merge pull request 'release/v8.2.0' (#81) from release/v8.2.0 into fix/nativeDraw\ncd71bc06721 Fix build\n6caf517fe59 Merge branch 'develop' into feature/binary-reading-optimisation\nd65d37476ee Fix csv date reading\n14c98967731 Merge pull request 'Fix bug #71134' (#78) from fix/bug-71134 into hotfix/v8.2.1\n19694bf32df Adjusted the definition of the possibility of obtaining a local image in html\nffe85bd64fb fix bug ooxml->odf. writing tests\nd4c4b804c7e Text Widget write\n1de2807051f fix bug odf->ooxml(empty row in matrix)\n96e1280082b fix bug #71076\nce41e42851a .\nb414fb961ed Develop native drawer\n0370948e98d Merge pull request 'feature/cvalue-image' (#77) from feature/cvalue-image into release/v8.2.0\nccbd9da871c Add externalize method to Image\ncec8402adc3 Add tests\nfd90f73c19a Add functionality\n6447aeafa56 .\naa3e0759d7a Fix bug 71025\n3db4bdc93fd Fix bug 71169\n3003c66eba2 Merge branch 'develop' into feature/binary-reading-optimisation\ncc4c0dd68e5 Fix comment\n5692bee77a8 Fix gradients in xps\ne25a9522794 Add reading acording record type\nd6864e044ac Fix curves intersection\nad69100d3f4 fix bug #70790\nb05a95d54e6 Merge pull request 'Fixed bugs in metafile conversion' (#74) from fix/Metafile into hotfix/v8.2.1\n87a09faefbd Fix bug #71134\n5e35517d719 Merge pull request 'Fix hlinx binary reading' (#75) from fix/bug71042 into hotfix/v8.2.1\nca948826999 Fix hlinx binary reading\n894f78d1432 Get Stamp stream AP\neeac44a1abf Add word months parsing\n77ece713ee9 fix bug #71042\na8e3dd2ef5c Fix FreeText generate AP\n20a2aa1ef10 Draw Stamp\n7d10e1e995a Add space separeted date conversion\nc3531cb19cb Add month names to local info\nba6de346dce Merge branch 'develop' into feature/add-lcid-to-csv\n5b44611560c write alternative in binary\nf2aa34b5cee Fix bug 70835\nd43a724ee6a Fix drop cap logic\ncba68e2d2a1 Add am-pm parsing\nf8dd9fb0851 Merge remote-tracking branch 'origin/fix/pfg-bugs' into develop\n39e95e8b492 Merge remote-tracking branch 'origin/develop' into fix/pfg-bugs\nb98922dbfdd Fix style PdfAnnot\nf57af6ecc13 Refactoring\naf77bf3f77c Fix bug 70795\n45787310012 Merge branch 'fix/fix-bugs-8.2.1' into hotfix/v8.2.1\n72566e8064b Fix bug #70873\n346f0e9dd0d Fixed a problem with writing the font name in metafile to svg conversion\ne32bd8fd96b Fixed calcalate final transform\nde51108ba7a Fixed unnecessary insertion of xml in an html document\n83a6e52df2a Fix clip reset\nb2e807ec331 Merge branch 'develop' into feature/add-lcid-to-csv\n1eba4aefa88 Stamp Rotate\n956508f9945 Add date with time parsing\n4eb761eec3e fix bug #71000\ne27415bb842 Merge remote-tracking branch 'origin/release/v8.2.0' into develop\n2afbd3c4293 Add local datetimeParsing\nbaf9fb4a934 Merge branch release/v8.2.0 into master\n0b8e833e77a fix bug #69488\n94bb0f53065 Fix bug 70987\n8cadb329b91 Fix for Stamp\naf7cb378ac3 Merge branch 'develop' into feature/add-lcid-to-csv\n81e075e7154 .\nf7607e1c92e Add short date format building\n1022d29fe87 Merge remote-tracking branch 'origin/release/v8.2.0' into fix/pfg-bugs\nfc3ce62ec7f fix bug #70698\n3fac5441cb1 Merge branch 'release/v8.2.0' into fix/fix-bugs-8.2.1\n32bd8166d7f for bug #60796\n4acdd6dd209 Fix bug 70888\n518a4ddb2b9 Fix bug 70840\n895082cc939 Fix bug 70823\nf16fa656e9c Fix types\nf16318aebb1 Add check ooxml limits\nd8d540bd027 Add local info class\na5c28b72bbf for bug #70894\n290d50ebcca Fix empty contents\n3de1152a3fe Fix bug 70813\n93900a0be8e Fix Helvetica for empty Contents in FreeText\n9ba32e031d5 Added Lcid using in csv conversion\n109c891c1bd Improve used memory\n1b2d8039768 For bug 70792. Improve memory usage in the AddCurveIntersection method\n9f4613b15c6 Fix bug 70578\nd69e4ca0bae .\nab7e8a07beb Fixed bugs with clipping images in metafile conversion\n7603aceee1a Optimization of image reflection in metafiles\n7ea66d0bee9 For bug #70825\n0e8230cc7f2 Fix inverseTransform in metafile conversion\nef2963242ae Fix OShapes ID after editing\n0229d928ab3 Fix bug 70825\ncbfc2d50523 For FreeText read, fix test\n1a979fe30a1 Fix Byte to Guchar\nff2146b6718 Create read/write Stamp annot\n4bdea2d154f fix bug #70717\nd1d5a46896c writing tests\n751a5d4d7d4 Fix bug 69723\ndcc43424831 Merge pull request 'feature add pivot hierarchies' (#64) from feature/add-pivot-hierarchies into develop\nef5e71e9418 Merge pull request 'Fix bug #69169' (#63) from fix/bug69169 into develop\n5c1b611b884 Fix bug #69169\n4b1bd2fb70e fix bug #70790\ncbbf650c561 Fix bug #69036\nb55cd751d14 Merge branch 'release/v8.2.0' of git.onlyoffice.com:ONLYOFFICE/core into release/v8.2.0\nc7d5b60637c Fix ios build\n666f5c2f9e0 fix bug #70778\n42b432b4de2 Add engine for base32\nc6e15b7526f Fix bug 61203\n08ca60091cd Fix bug 70130\n88d9827d3fd Fix bug 70129\nbae672f7189 Fix bug 68986\n00344df9ad4 Fix for -D with brackets\nd9902ba6f90 returned exconnections15 conversion\ncfb060e1429 Fix build\n633af329197 Fix condfmt number conversion\n0565e6164bd Add data for hard update hunspell module\n306cc3f9858 For bug 70578\n2739dd3abd3 Fix bug 69154\n70e6df5aae4 fix bug #70440\n40d3cd1a85b Fix hierarchies reading with pcdh15\n96030aa322e Set timelimits of dictionaries tester bigger\nfee801eeebc Merge pull request 'Add custom timelimits logic in dictionariestester' (#59) from fix/dictionariestester into release/v8.2.0\n750273b526b Change timelimits\ncfdb541c287 Add custom timelimits logic in dictionariestester\n11121961d91 Fix typo\n45828709ee8 Merge pull request 'Fix bug #70515' (#57) from fix/bug70515 into release/v8.2.0\n40916e5ccc4 Merge pull request 'Fix bug 60796' (#56) from fix/bug60796 into release/v8.2.0\n319610c58d5 Fix bug 60796\n1837a2737e3 Fix RefTo id\n686fc60860d For bug 61203\n51216f27f41 Fix bug 70466\n2eb33ddd228 Merge pull request 'Fix bug #70484' (#30) from fix/bug70484 into release/v8.2.0\n58c80b052b7 Merge pull request 'Fix bug #70492' (#34) from fix/bug70492 into release/v8.2.0\n5eee408eebe Merge pull request 'Fix bug #70617' (#54) from fix/bug70617 into release/v8.2.0\n32103b8b9f2 Add slicercachePivotCache ids binary reading\nb6ae1f272c0 Fix bug #70617\n045f23d921c Fix bug 68091\nd06b52988ca Fix bug 70352\n4717b47388d Fix bug in metafile conversion\n31ce9f6a184 Fix bug #66337\ne44c9fa4c9a Fix bug #31062\n3c59ba7a136 fixed a bug with the location of the embedded metafile\n42e84249e80 For bug #68708\ne2dbde8722a fix bug #70163\n36c67d79d54 fix bug #70717\ncdc14d22f03 fix bug #70684\nbaed05236bc fix bug #70368\nc644f94c0b8 fix bug #69104\n1244ba5fe56 Fix pivot cache from bin conversion\n087e4433f2b For bug 69977\nbc11a5cf5fa Fix bug 70574\nd86303e2901 Fix bug 69704\n51f1faa51a4 Fix uncheckedsqrfx conversion to xlsx\n6775dccc2ce Fix font tables\nee3b4c612da Merge pull request 'Fix bug 70563' (#45) from fix/bug-70563 into release/v8.2.0\n1144bb166cf Remove using bitcode on ios\na9752208f61 Fix bug #70515\n84016cf8cf2 Fix bug 70563\ncb7edc373c9 Disable bitcode for ios builds with xcode 16+\nd1e43d68dcf Fix getOriginPage\nb5ab5f9b2b0 Fix bug 70559\n761c5bec531 Fix detect allfonts path for builder\n8cc7034c221 For bug 70566\nee1c385b548 Fix Bug 70566\nded640825b7 Fix alpha\n84301531c84 .\n66231b65c17 Add pivot cache other elements binari reading\n7aa2d36d856 Add pivot hierarchies binary reading\n310cd6d8fd5 Add full GetContext function\n2d37cf634aa Add new dependent libraries\n04880b4e1d1 Merge pull request 'Fix bug 70590' (#41) from fix/bug-70590 into release/v8.2.0\n1000b5d5bd1 Merge pull request 'Add full GetContext function to docbuilder python wrapper' (#40) from feature/docbuilder-wrappers-getcontext into release/v8.2.0\nc324b4a11c9 Add to python wrapper\n982d2d1872c edit start of conversion\na51fe4134c2 fix bug #68406\n985d258bc15 Fix bug with rotated crop\n71b1e4fbf36 Add pivot cache hierarchies binary reading\nfee5c112b42 Merge pull request 'fix bug70534' (#37) from fix/bug70534 into release/v8.2.0\n9b50f9fbc2e Fix bug 68091\n10f770fdbcf Fix bug 70566\neb53c401358 fix\nded1655a043 Fix bug 70561\n20c11889aac Fix bug 70590\n910c2418d6a fix chartEx\ne6ffdc0ae82 Merge remote-tracking branch 'origin/for-bug#68406' into release/v8.2.0\n0335d330b84 Merge pull request 'Fix bug 69602' (#33) from fix/pdf-bugs into release/v8.2.0\n1a1ec927e2f Fix pivot cache conversion\naf2e86e777a Fix name OUserID\nbcf7d08c51d Fix bug 69602\n11886dcdf7c Add user-id for annots\n615d0b682ca formula size calculation\n535028fa0e4 For bug 70559\nc421936857e Add pivot cache dimensions, measure groups and measure group maps binary conversion\n3580e841847 Add measure groups and Dimension maps\n5a6386e08ba Fix bug #70492\n1538997b63e Add pivot cache dimensions\n7ca8b221602 fix bug #70518\nec16e247e96 Fix build\n9a765750828 Fix bug\nc1a586cb56c Fix bug 69974\n7707aeb9149 Fix NULL borderStyle in FreeText\n50a8540f75d Fix build\nbdb902128d7 Add slicerCache Pivot table part to xlsb writing\nbb41c8b85fe Merge branch 'develop' into feature/add-pivot-hierarchies\nfbee170e870 fix build\ncc2e755bca8 Fix bug\n9c1efdeac20 Fix bug with text\nea1538bc113 Fix bug in xps\nc0d0fb6f5cd Critical fix\n5e5e07b406a Fix bug 67321\n9b5f762420b Fix bug #70484\n7020548f06e Merge pull request 'Fix bug 69009' (#28) from fix/docx-renderer into release/v8.2.0\n2d2e15671a3 Fix bug 69009\n115917b9e56 fix build\n00ad32d420b Merge pull request 'For bug #70040' (#27) from fix/bug70040 into release/v8.2.0\nc67b78508e5 Merge branch 'develop' into feature/add-pivot-hierarchies\nba2cf66c310 Fix build\n57ed9d0c32b Fix build\n40d82f32879 Fix\n9bdcbf0d897 Rollback std::vector\nc1774219ecd Fix pdf editor build\n2a6f0bb1b64 Close any clip-path fix\na23ce22950d Add unit-tests\nb4f0d32b6d7 Fix bugs\n83db7f2165f Remove STL from export\n3ce03d897d2 Fix bug\nbe12237042a Fix bug\ncf7252b92d7 Fix bounds\n523f3f24f96 Fix wrong bounds\n0196a4bb573 Fix one inters\n9ee9192cd42 Refactoring\n5df63a58b79 Add more bullets\nd107bd5df22 Fix unused font names in PDF\nf51c1fced26 Fix bug 69109\n86cba0bdcd1 Fix bug 70340\ncceec835686 Transition from pointers to smart pointers\nf733543b447 Fix memory leak\nbb9d777c145 Refactoring\n694dd852d06 Fix bug\n18a18eaa408 Fix linux build\nfb021b33ece Add limits\n95ecd8468ad Refactoring\nfbb57d70090 Fix memory leak\n22e98732081 Done gradients support\n2581e9235d4 Develop rtl support\n270fd0601fb Fix close path\n5f69b4f8e68 Fix bug with gradient\nbdaf9fa10bd Fix bug\n77e64af80c7 Fix bug with gradient\n6e3beac6bf5 Fix one point inters and refactoring\n641297ac489 Fix bug with non-closed-paths\ndcca1f06f4e Developing gradients\n22d7cfb2403 Fix bug\nfa51ea21b41 Developing gradient support\n7632be9f2f9 Fix stack overflow\ncbf40d36f50 Develop gradient support (in porgress)\n2b8e70e67f1 Add compound paths\n4b05eb9a504 Indents fix + gitignore\n3221e41e89f Add subtraction for all overlap\n58cc6cf6e8b Fix epsilon\nc86a8edd30a Fix\ndb1d6a935f0 Add metainfo in ToXmlPptx (CContText)\ncb9589f6b43 Fix curve for pdf\ncbad285a9fd FIx curve conversion\n82a3fa61323 Fix\n0821eefbd3e Add figure \"Cross\" to test\n38a9dfcd14c Fix subtract\n0f222c15e93 Fix all overlap\nd0a554c7018 Fix overlap paths\nacfec0ceb17 Rollback\n899b27d6972 Fix bug with stride for adobe\n5a5db3e8c6a Fix bug with close\n57fdf7eed5c Add test for negative vertices\n7f13020f2f4 Fix bug with no clear clip vector\n020298b023b Update clip logic\n8eb249056bb Fix negative vertices\n2ed7e803cae Fix\nb9230ef5ffe Develop clip + tile images\n3907110e44d Fix + refactoring\n787575a53fc Fix including paths\nb58554a3daf Refactorting\n9e8c0dfb169 Add clip logic\n6831820dd41 Fix\ncac79cb66ec Refactor includes + fix build dll\n323213a63d6 Refacoring\n473ef17be3f Fix\n5e56d26a06b Fix bugs\na390c1ee182 Fix\n4158ebcd986 FIx\n7fc65a84ab3 Fix\n69ffd656af3 Fix\ncb929fc5c53 Fix\n7cd7c9f98f5 Refactoring Winding\n015c10495cc Refactoring\ne973c8f70bb Refactoring test\na77987488bb Refactoring\n1cfd17e2f3b Fix and Refactoring\nb4c6f69cee8 Add Test for Clip\n67194499a8a Fix\n9ec64890834 Fix\n3971400c78c Fix\ne21ed470196 Finish CGraphicsPathClip\n2cf83df7d0c add new methods for clip\n7f96336e75a add mathematical functions for clip\n99da1e3b8c2 Move CPathForClip methods to CGraphicsPath\n6d152880bd0 Add Clip lib for GraphicsPath\ndd9fca2a5c4 Fix hor/ver shape trough logic\n67043cf718e Fix & add logic\nba239f139df Images -> shapes\na99733c5a12 Fix bug 70119\na60bc542c72 Fix bug 70043\n97d36fa1cdf Fix multiline Text Widget indentation\n87fa0f93bee Fix bug 69972\n29a48da730b Fix bug 69976\n3d38fdd0050 refactoring math\ne0352541bed Fix bug 69990\n2e26a3697d2 For bug #70040\ncd124d51125 Fix page sizes on build pdf file\n296dba3a4e0 Add hierarhcies usage binary conversion\n38457c0115e Merge remote-tracking branch 'origin/release/v8.2.0' into develop\n40789fbd240 Merge pull request 'Add OOXml2Odf' (#24) from feature/OOXml2Odf into develop\n4adc16620bc Add hierarchies usage\n0bfe049e840 bug fix\n4242d32d958 Fix release build\na6b5e7e0103 Merge remote-tracking branch 'origin/release/v8.2.0' into release/v8.2.0\n57800ec8dd2 fix bug #33177\n0f3de35eb40 Fix bug 69927\n8c83b182160 fix bug #70440\ne1c2bf19d99 Fix build\na6d8deedcdc editing parse and converting text string\n26b69e86123 Fix hierarchy members\n9fa00c86094 Add pivot hierarchies binary conversion\nf38767ccbb0 Merge pull request 'Fix bug #69036' (#22) from fix/bug-69036 into release/v8.2.0\nfc94de8549b Refactoring and improving the debug mod\n812fae8f6c6 Fix bug #69036\nc938e2756e3 Merge pull request 'Fix bug #44363' (#20) from fix/bug44363 into release/v8.2.0\n5679a7902ff Merge pull request 'Fix placeholder styles conversion' (#19) from fix/placeholder_conversion into release/v8.2.0\n056bfb84ce6 Fix typo\n2d745de7e28 Merge branch 'feature/pdf-font' into release/v8.2.0\na5c73127fd0 Fix pdf bugs (add build with embedded fonts in changes)\nf0f4e39f5c5 Fix bug 70042\n59bb3035bb6 Add xml hierarchies writing\nb536d6eb415 Create test GetEmbeddedFont\ndbb757a954d Add pivot table hierarchies xml reading\n0af65b11376 Convert odp placeholder styles to pptx\n5c3a6978806 Fix for drawingfile\n1b8c59ff87b Separate GetFontPath\n6b4b6451804 Create GetEmbeddedFontPath\n55a2fb1b008 Add pivot table hierarchies structures\n30868b81bcd Fix bug #70339\n4c44edc9c93 Merge branch 'fix/bug70318' into fix/placeholder_conversion\ne9c200e455a Add xml writing of hierarchies\n60f9021bddb Merge pull request 'Fix bug #70318' (#15) from fix/bug70318 into release/v8.2.0\n887898fe58b Add group levels bin conversion\nfd90fbae21a Fix bug #70318\nc4979075aa7 Merge pull request 'Fix bug #70320' (#14) from fix/bug-70320 into release/v8.2.0\n6c067ba6eea Merge pull request 'Fix SVG conversion' (#13) from fix/SVG into release/v8.2.0\n2456501f1d6 Fixes for txt/csv\n07c0c583757 Fix bug #70320\ndb287518751 Fix placeholder conversion\n627d02b0069 Add group levels xml reading\nc9fad9a83f2 Add group levels\n81c9ae120f7 Fix bug 70293\n9b05fa38ea3 Add remained fields to pivotHierarchy\n830c5ec12c3 fix bug #46132\n375f79cdac8 fix bug #69904\n33627ab79c1 Added support for marker orientation in svg conversion\n7062a26561e Add binari conversion of pivot hierarchies\n9f81e37196f fox bug #70227\n32a409bb13e Merge pull request 'Enter new contexts by default' (#10) from feature/scoped-context into release/v8.2.0\nb53a1b3cd6f Merge pull request 'Add static CreateObject function to builder' (#11) from fix/bug70010 into release/v8.2.0\nf5f0630b2d2 Redesigned the drawing of markers in svg conversion\n19e5a2db2d1 fix bug #70240\n311d35f332a Add pivot cache Hierarchies\na7fb914f5e3 Merge pull request 'fix xlsb conversion errors' (#12) from fix/xlsb-conversion-errors into develop\n8ad7b123aa1 Fix build pdf files\nc068fd2ee08 Fix richStr conversion\ncfbb7d12164 index conversion, correction of brackets and fraction conversion\n312a95d9e18 Fix bug #70010\n0ac882b2073 Merge branch hotfix/v8.1.3 into release/v8.2.0\nabd2421cc18 Merge branch hotfix/v8.1.3 into develop\n4378becd0b7 Enter new contexts by default\n8c62dc448a5 Fixed bug width text position in svg conversion\n7f7e89babf0 fix bug #69781\n592fbfccbb5 Fix cfvo formula conversion\nd89d63e0db4 fix bug #70136\n42a4fe53dd9 fix bug #70160\nf738aa95ad9 .\na68b7e73540 fix bug #70134\ncf51a10da92 Fix pivot table conversion\n3c16ba01f09 Fix max font size in svg conversion\n106f448042b Fix build for xp\n81d90420dde Normalize JSON in tests\n2673b158352 Implement objects parsing in FromJSON\n436d9ecdb76 Implement arrays parsing in FromJSON\n150079e2f61 Implement FromJSON for primitives\nad18d65f7c0 Implement toJSON\n56551c3745c Add IsBool function to Java wrapper\n71342eb03d1 Add IsBool function to NET wrapper\nf811822364e Fix bug #70046\n765c27bdab5 Remove creation of empty string by default\nf90022c50cb Fix bug #70086\ne345eff63ad Fix build pdf files\n0b16086ff5c Fix bugs in svg conversion and optimization\n5904bb35070 Fix bug #69865\n5f2c00a0177 Fix databar conversion\n89173901859 binary mrun\n6a2d3838ae1 Fix bug #70044\nbb7b63c86e3 Add conditional formattings14 conversion\n493cec92c69 Move methods from graphics renderer to base interface\nf21d92ee92f Enable drawing file in doctrenderer\nd1dd3b4791d Merge pull request 'fix bug70020' (#5) from fix/bug70020 into release/v8.2.0\nb79c173f598 Add dependencies for doctrenderer\n5a7909a9015 Fix pivot cache definition conversion\n47ec9ab80d0 Fix bugs and refactoring\n8a560724543 Fix bugs and refactoring\nb6593c89a3d Merge pull request 'Fix bug #69988' (#2) from fix/bug69988 into release/v8.2.0\n978ec430471 printPr\nf6c48c1edb8 Fix bug #70039\n386bce9b68b Fix bug #70020\nceeaff9585d Fixes for pdf\n20a8de9440b Fix bug #69988\n1cf1d16cf53 Merge pull request 'Fix non-existing dicts bug' (#1) from fix/dictionariestester into release/v8.2.0\nae98f0551a9 Delete src/dst dictionariestester\neddfd2abe4f Fix non-existing dicts bug\n00ccd7f7a09 Fix colors conversion for sparklines\n4c9c79628fe Fix bug #69957\n3604ca94509 Fix row & col limits\n7625183fe36 Merge pull request #1636 from ONLYOFFICE/fix/office-utils\n0567de6d9fa .\n7f23f778663 fix bug #69770\n01428dc78a3 Add data position check\n8ae7e577f03 Test\nd7922089ea6 Merge branch 'develop' into fix/xlsb-conversion-errors\n32315930498 Fix number format code conversion\nb3ce8828859 Merge pull request #1635 from ONLYOFFICE/fix/bug69889\n2685f2807ca fix bug #69947\na748b081434 for bug #69781\na14e684528c Fix Bug 69900\n58c35139ea0 Merge branch 'fix/bug44363' of https://github.com/ONLYOFFICE/core into fix/bug44363\n7d804f1c705 Fix bug #44363\n41dcf2eac43 Fix SORTCOND conversion\nddf33fb4413 Fix bug #69889\n64dfeee0508 Merge pull request #1634 from ONLYOFFICE/fix/docbuilder-snapshots\nea58d59b68d Remove static functions from editors.h\na73c9cc6593 Some defines and typo fixes\n58b927edb68 Merge pull request #1633 from ONLYOFFICE/fix/bug-69862\nc7b72698a8a Fix ctm for write\nb00c2eb7735 Fix bug 69862\n13088c6ed4e fix bug #69892\n3b47ce04b46 Disable embedded drawing file\nc9117df33d2 Fix work with snapshots\n1771ce23541 Fix typo\ne9248fe046f Merge pull request #1632 from ONLYOFFICE/feature/pdfBuild\n447e1f5ccc6 Fix for snapshots\n94a67ed0076 Fix build\n06ee659edca Fixwork with replaceAll function\nfe35178e260 Add support snapshots\n9f62108376e Fix uncheckedsqrfx conversion to xlsx\n13590d4c2e8 Refactoring work with cache\n2ce1ee6b330 Merge pull request #1630 from ONLYOFFICE/fix/bug-69855\nea77177077b Fix bug 69855\n0eedb80d36d Fix worksheet vew after xlsb2xlsx conversion\n8daa8dd5096 Fix table conversion to xlsx\n39c03bb5be6 Merge pull request #1628 from ONLYOFFICE/fix/bug56747\n5bbff017826 Merge remote-tracking branch 'origin/fix/bug57197' into release/v8.2.0\n9cee5480b69 Merge remote-tracking branch 'origin/fix/bug61364' into release/v8.2.0\n5debf76cdaf Merge remote-tracking branch 'origin/fix/bug59708' into release/v8.2.0\nd5ebbf0542c Merge pull request #1627 from ONLYOFFICE/fix/bug63952\n84fc9f876ef Add flag for fonts generation\n7d118102a53 fix bug #69846\nc87a043bd02 fix bug #69847\na72fcb705b7 fix bug #69850\ndbd8344e6d6 Fix bug #63952\n8b82e485628 matrix conversion\n2425a40d367 Fix other functions argument types\n4384ca22745 Fix number value check\n8b56f22d76a Fix bug #59708\n5efb3253948 Merge pull request #1626 from ONLYOFFICE/fix/bug-58084\nd61fe20d125 Merge pull request #1625 from ONLYOFFICE/fix/bug-65310\n1ac4ec3b0df Fix bug 58084\n6ebccd7f4a3 Add DjVu test\n685f8d2442c Fix bug 65310\n5564e397ca8 Fix bug #61364\n12e1f1f992f Fix bug #61364\ne8cf13e89de Merge pull request #1624 from ONLYOFFICE/fix/bug66675\nec3d6fa05b3 Fix bug #61364\nc0f4ce46f04 Fix undefined values in conversion\ne91c72a265f Fix bug #57197\nc4530caac13 Merge pull request #1623 from ONLYOFFICE/release/v8.2.0\nc018d570816 fix bug #69634\n43f49b7a9d3 fix bug #69775\nf8e19a7f0b9 Merge pull request #1620 from ONLYOFFICE/fix/bug-69767\nf245985bbd2 fix bug #69774\n68171df9914 Merge branch 'release/v8.2.0' of https://github.com/ONLYOFFICE/core into release/v8.2.0\nbbf4003ec78 Refactoring\n75cc7d84573 Fix bug #69767\n7018402a580 Merge pull request #1619 from ONLYOFFICE/fix/pdf-bugs\n6ce30ccaad1 Fix test\n670677c23b1 Fix pdf clip\n208f6efcc55 fix bug #69781\n685165d270e fix bug #69780\nb18bdcc0a02 Fix bug #56747\nf18eb2ef5b8 Developing\nfacdff46fe2 Refactoring\nfeb3f4cdf09 Fix bug #66675\n8843c3dd36c Merge pull request #1617 from ONLYOFFICE/feature/docbuilder-java\n2708479152d Add class for embed pdf object\nf3facfa8e87 Fix for some JDK versions\n1e26e1723a9 For buf 59297\n6d9242e1ddd Add building support for JDK > 8\ne8de8dc03b4 fix bug #60796\nb3590d66f06 xml2odf test\n57447f757fd Merge pull request #1618 from ONLYOFFICE/fix/pdf-time\n46d6eaa793d Fix test Save/Restore graphics\n837ad1d8f75 Merge remote-tracking branch 'origin/release/v8.2.0' into develop\ndef502c7eb0 Refactoring drawingfile (native realization support)\n1e5e43cbe59 Fix clip\n60a888fc199 Fix PdfFile test\n01ca25d7985 Fix test\n6812ebaa42b fix bug #68293\naacb2842f70 Fix typo\n27a2a47cbe7 Fixes\n02f8178c016 Merge pull request #1616 from ONLYOFFICE/fix/bug65304\n7dda21d1e10 Merge remote-tracking branch 'origin/release/v8.2.0' into develop\na0e2384409d fix bug #69490\n56088e9eff0 Add support for JAVA_HOME environment variable\n1d6b8954967 Refactoring\nfa4b8c8d761 Fix build\n2db2b98c8fe Fix bug 65304\nf45fb3c6be2 for bug #69599\n6f60d758639 Fix build\nd1acdf35d84 Refactoring\na1bf6a76ed0 fix bug #69658\n3634d59ecec Merge branch 'release/v8.2.0' of https://github.com/ONLYOFFICE/core into release/v8.2.0\n1b21e8f1360 fix bug #69647\n554ca5ec7c4 Merge pull request #1615 from ONLYOFFICE/fix/docbuilder-script-cache\ndc2e0edf80c fix bug #25787\ne38fa336d23 Fix script caching with v8_89\n357450f2428 Merge pull request #1614 from ONLYOFFICE/fix/html\n4ed9925aff7 Merge pull request #1610 from ONLYOFFICE/feature/MetafileSize\n14a8a4d8bba the algorithm for converting an array of strings\n796537565b9 Fixed unnecessary use of standard styles in html to ooxml conversion\nfcf8e28ae8f Added tabs to the text in html to ooxml conversion\nde949afbb6c fix bug #69618\nfb7bb041c13 Merge pull request #1613 from ONLYOFFICE/fix/pdf-leaks\n8d6e15627bf Refactoring RenderOutputDev and test diff\n0583cbb5cc3 Merge branch 'release/v8.2.0' of https://github.com/ONLYOFFICE/core into release/v8.2.0\na68bec86dfb Improved html to ooxml conversion\n6554185ec75 Refacroting DrawImage\n22bbde155d7 fix bug #44738\n4a123d33ea4 fix bug #69552\nc7d0f27f6b4 Fix ReadImage\nf1ddd511646 Add support /* comments in script files\n1d636b717f1 [x2t] Fix bug 69574\nc026f33aa79 Improved html to ooxml conversion\n29e5769d6d1 fix bug #30042\n6ba96b0ae84 Merge remote-tracking branch 'origin/release/v8.2.0' into develop\n9d750ad3d44 .\n5b156d72c0f Fix bug #44363\n85a7c82aa7b .\n6586fc39ee3 Merge pull request #1612 from ONLYOFFICE/feature/gradients\n8a4b1672c92 .\n0d71f1c158f .\n394582df7a5 fix build\ne8c7a4f6701 Fix ReadDCT\nead6b305b2a Create ReadDCT for jpeg image in pdf\n2de6a6d199f Merge pull request #1611 from ONLYOFFICE/feature/docbuilder-java\nc6ca99994b3 Fix build into JAR on mac and linux\nb707510c88d Remove explicit `workDirectory` setting\n7171dcb9f0b Set library path at runtime\n49dedc7a6d9 fix bug #69392\n431fa060c48 fix bug #69488\n0fc5133d98f Fix for building test example\n8d5fc7d6ca2 Fix build for JDK 8 and force build into JAR\n3221d20d81e Remove docbuilder_jni_utils helper library\n9fdb81554a4 fix bug #69518\n95a1983e75b Refactoring RendererOutputDev\nbef68d03c96 Merge pull request #1609 from ONLYOFFICE/feature/add-future-functions-conversion\na1100f00911 Fix copiright dates\n15b18adf90d Fix copyright dates\nc27aa4d8074 Improved html to ooxml conversion\nc4f8c524b5d Merge remote-tracking branch 'origin/release/v8.2.0' into fix/pdf-leaks\n1a0a63c8dde Merge branch 'develop' into feature/add-future-functions-conversion\n9010dcc2204 Add initialization checks and default values in xslx 2 xlsb conversion\nf7d55c08d81 fix bug #69474\n4cfb8cc97a5 fix bug #69104\na41ecb07153 for bug #69405\nfaa9e5e640b Merge pull request #1608 from ONLYOFFICE/fix/bug-65822\nac2ee1b56d7 Save line AP\nb722238d212 Draw AP for markup annots\ndca5f4f7c5c Add prefix check for future functions names\n9875aed0a06 Add default values to style conversion\n83e20057f48 Merge pull request #1607 from ONLYOFFICE/feature/docx-renderer\n373786fca6a Update Clip\n0fa1b4feec7 Add return 0/1 for builder external scripts\n6a6204ae33e Fix add to conts & highlights\nf02147b97ca Fix jar build\n88b16607357 Add another way to load native libraries\nf5f7cb1aec9 .\naf01306997f .\nef30a30e005 Fix first word width in splitted lines\n16ae48ef4e6 Fix memory leaks\nab4fa069d1d Add xlsb buffer size reset after writing file\nd00919e139d Fix fonts bls\n0eb8c93cf93 Merge pull request #1606 from ONLYOFFICE/fix/bug66692\nc98285ffef7 Merge pull request #1605 from ONLYOFFICE/fix/bug66675\n7a9549633b6 conversion of indexes, operators and limits\n4b99c4179bd Fixed inaccuracies when converting html to ooxml elements big and small\ne98dec952f3 Fix build\n8b2d7035c13 Add build to JAR\n234def9cd7a Autowrap function arguments\nce92766ef66 Fix paths\n59c95c5039e Merge pull request #1597 from ONLYOFFICE/feature/pdf-layer\na23002225a8 Merge pull request #1598 from ONLYOFFICE/fix/bug-59297\ncb64a5a266d Fix bug #66675\n65483d04602 fix bug #69395\n41758f05528 Merge pull request #1604 from ONLYOFFICE/feature/docx-renderer\nbfd790ba11a Fix bug with spacing\n81d9e3cfd78 Merge pull request #1603 from ONLYOFFICE/feature/docx_renderer\n29205278989 Reformat code\n7013fdcb8d9 Merge branch hotfix/v8.1.1 into release/v8.2.0\nfeda29eb77b Merge branch hotfix/v8.1.1 into develop\ncaf90eb3a32 Merge branch hotfix/v8.1.1 into master\n0d84e22e79c Fix spaces more\nf2acef6bb20 Add `docbuilder.utils.Utils` class to edit PATH on Windows\n84b8850a52c Fix bug with spaces\nb2a3de852af Fix bug #66692\na8fa59d64d3 Added ruby support and bug fixes\n59b84f26ee7 Merge remote-tracking branch 'origin/fix/bug68344' into release/v8.2.0\n5b17009fb9c Merge remote-tracking branch 'origin/fix/bug68540' into release/v8.2.0\na5827f187c0 Merge remote-tracking branch 'origin/fix/bug68585' into release/v8.2.0\n6ae25ca4c4f Merge remote-tracking branch 'origin/fix/bug69238' into release/v8.2.0\nff4425e977f fix grad\n06edc93c7be Fix bug #69238\n8f9b35d94aa Fix inline destination\n14c06e4e7b6 Fix x coord Outlines\nabaaa54bc2a Fix SetByIndex and test example\n7d0683e3389 Update test example\nf9d6b49a051 Rename Call() to call()\n01916b7de61 Add file type constants\n666d62239e4 Add class `CDocBuilderContext` to Java and JNI\n2e25f5dc64e Get previous array on return\ncc61536a906 Fix function naming for `CDocBuilderContextScope`\n58b5417ab4d Add class `CDocBuilderContextScope` to Java and JNI\nc056c14303b Add hint how to run compiled Java example\n1b975c70489 Get headings as an array\n3fd5b5612ba Add test Java example\nb8a8d36b8b5 Improved html to ooxml conversion\nccbeb28f8ab fix bug #69325\n6ab0d9d106f Fixes in Java code\n79309d3f026 Add Java code for `CDocBuilder`\nc8c4edf592d Add JNI code for `CDocBuilder`\neac73b31b31 Add cell metadata conversion\n64afe550789 Add Java code for `CDocBuilderValue`\n383375ade2c Add metadata mdx binary reading\n967a5728c72 fix build\n16324b7bf1f Add future metadata bynary reading\n62b96623a08 Add missed files\n8a105d35d50 Merge pull request #1596 from ONLYOFFICE/fix/bug-69284\nd48e3ab6e01 Merge branch 'develop' into feature/add-future-functions-conversion\neaf2c02b86e Fix bug 69284\n46f30b980ff Add JNI code for `CDocBuilderValue`\nac4f15b9990 Improved html to ooxml conversion\n918a940e050 .\na28f12e170b Add metadata blocks conversion from bin\n43e506cff16 Add metadata types conversion from bin\n21cf3df902b Add esstr conversion from bin\n47961709add Fix docbuilder.c `ToString` function\na47e72cf2f3 fix bug #69311\n91d63bc49fd Merge branch 'develop' into feature/add-future-functions-conversion\nbc65bf962e5 Fix metadata conversion to xlsb\n4abc5b6bcc7 Add mdx metadata conversion\n472c9ecd0d1 for bug #61035\n7b8aa38c37c Fix bug 45813\n5c87955ae2d Fix bug 56118\nc37aa9d9dc7 Fix bug 55429\nd699c30bdaf Fix bug 48721\n4af9055aded Add future metadata conversion\n9db017b9f4b Fix bug 69136\n70fe6763007 Improved colgroup support in html to ooxml conversion\ne73d4455c2a Fix bug 55995\n96d994dc652 Add metadata blocks conversion to bin\n87f7be4bc67 Add binary writing ESSTR and ESMDT\n3158e830ff9 Indetns fix\n33daee696c5 Delete unused\n305492ec7bf Fix flip SoftMask\ne9f80455684 Add metadata records reading\n90d46b55d8d Merge branch hotfix/v8.1.1 into master\n8507c8d4d99 Adding text conversion, binary operators, and parentheses.\n2d213df8afe Create CSoftMask\n4bb3953171a Added colgroup implementation for tables in html to ooxml conversion\n02c54d90c66 Add binary record reading\nce69cf40d24 Add mdxSet bin records\n013ab00f063 Add Mdx Tuple binary records\n2ef1e8f8204 Add bmrIstr binary record\ndb980db306f Add mdxKpi binary struct\n45a7827b1be Merge branch 'develop' into feature/add-future-functions-conversion\nf8e894af67e Testing agg::scanline_u8_am\nf1d932c0848 Add Mdxmbrprop bin structs\na452a200492 Add Mdx bin structures\nd69b861ff7f Merge branch 'develop' into feature/add-future-functions-conversion\n4305ececd32 Add Esmdx bin structs\n777be235135 [android] Replace dependencies\n12adcfc8f15 Add ESMBD bin structures\nb8af955fcdc fix bug #69104\n176290adafe Fix bug + refactoring\n32a46c6859d Merge branch 'develop' into feature/add-future-functions-conversion\nc89de96a1b3 Add Esstr bin records\nb3868ff1469 fix bug #54575\nf30aba8bf1d Added support for the rules attribute for tables in html to ooxml conversion\nb039eeca38b fix bug #69097\n450cbf0ab12 fix bug #69096\n2e33e7d097e fix bug #69095\ne9af537e631 Merge remote-tracking branch 'origin/hotfix/v8.1.1' into develop\n849d3fb09a6 Merge pull request #1592 from ONLYOFFICE/fix/pdf-layer\nea76a114f32 Fix Alpha type SoftMask and nesting of layers\nfb209c6c8a7 Fix bugs\nd4af1308c07 Merge pull request #1591 from ONLYOFFICE/feature/svg-font\n824d9c59cfd Fix shapes merging\nd4f3cd38010 Fix bugs in html to ooxml conversion\nc7fc2bc3a75 The blockquote tag implementation has been added to the html to ooxml conversion\nf9ecfee6092 Merge pull request #1590 from ONLYOFFICE/pdf/fix-rotate-layer\na8c815d7bde Fix bugs\n64234659aac Merge pull request #1589 from ONLYOFFICE/fix/bug69073\n09c066def37 Change whitespaces on tabs\n685434b2ab4 Merge remote-tracking branch 'origin/hotfix/v8.1.1' into develop\nbcfb9b3630a Fix rotate layer\n17e6ebeb315 Merge pull request #1584 from ONLYOFFICE/fix/bug68998\nae0e888186b Merge pull request #1588 from ONLYOFFICE/fix/bug-69049\n4559d53a977 Change CContText logic\ndac41ff6f72 Fix bug #69073\n8cecbf1fb18 Merge branch 'develop' into feature/add-future-functions-conversion\n5e5fec1666e add bg\na2d32b59a10 Fix bug 69049\n0889f82c769 Merge pull request #1587 from ONLYOFFICE/feature/x2ttester\n56f2b181843 Add metadata info and future metadata bin structures\nee6ea32ad1d Fix bug 69056\n69e6ff99f63 Merge pull request #1586 from ONLYOFFICE/fix/EmfPlus\nb7630416955 Fixed working with the embedded EmfPlusOnly metafile\n712d603ff28 Add metadata conversion structures\nadfc64f01eb fix bug #69031\nf465f17b933 Merge pull request #1585 from ONLYOFFICE/fix/pdf-layer\nefd7b5ac9ae fix bug #69023\n2375b476d0c Fix drawMaskedImage\nf97bb4e688e Fix actual fonts\naff7b42f712 Add Isolated for AlphaMask and TransparencyGroup\n0675b8c5b53 Fix bug 69019\na27c26dbe36 Fix bug #68998\n74d7bbca7c7 Improvement in html to xml conversion of image size calculation\n6eba82f4336 Improvement in html to ooxml conversion of multi-level lists\nd1460a057e3 Merge remote-tracking branch 'origin/fix/bug68957' into develop\n21ba3ac0c9c fix bug #68957\n1e2535f6e12 Remove metadata xlsb conversion\n14196ddc9f2 Add Mask and Layer for pdf\n18db2f8614c Merge pull request #1574 from ONLYOFFICE/fix/bug-68843\n81f01f49ed9 Merge pull request #1583 from ONLYOFFICE/fix/bug-68928\n4cb159a7945 Fix bug #68928\nce6f6ea256d Add custom functions conversion\ne1641684188 fix bug #68971\nfd60059dd6f fix bug #68974\ne40be65c55f Merge pull request #1582 from ONLYOFFICE/fix/bug-68951\n0bf96631696 Fix bug 68951\na3913165299 Merge branch 'develop' into feature/add-future-functions-conversion\nb1ff8b79d3a Merge remote-tracking branch 'origin/hotfix/v8.1.1' into develop\nefb9095dc51 fix bug #55042\n06a60b2846f Add other future function names\n3aab7fd1830 fix bug #45681\n0c0cd575ad8 Merge pull request #1579 from ONLYOFFICE/fix/pdf-bugs\n75b22f6e197 Merge branch 'develop' into feature/add-future-functions-conversion\n82c06b5aaa7 Merge pull request #1581 from ONLYOFFICE/feature/libvlc-linux\nefa44331952 Added rendering of custom fonts in svg\ne9c9530d66d Update build with changed rpaths\n6c36fc71461 Add script to change rpaths in libvlc build\nd2724ac7126 Add static constructor\n34db65ff5e1 fix bug #68916\ne4e35ab579c Add future function parser\n5770551ed46 Merge remote-tracking branch 'origin/hotfix/v8.1.1' into develop\n75c56c13fc8 fix bug #68864\ne5b0c0f1f96 fix bug #68873\n723dcef8aaa fix bug #68895\nbc56b97ce03 Merge branch release/v8.1.0 into master\n880b96acfc1 Fix build\n81806d96d00 Fix bug 60317\n78c47b2007b Merge branch 'develop' into feature/add-future-functions-conversion\n49a9205aad1 Merge pull request #1576 from ONLYOFFICE/fix/bug68834\n971205b3258 For bug 59297\n73fc80aa7d8 Merge remote-tracking branch 'origin/fix/bug23800' into develop\n84836a3e8b7 Merge remote-tracking branch 'origin/fix/bug53148' into develop\n6dc7ff0874a fix bug #49062\neec0fa47cea Merge remote-tracking branch 'origin/hotfix/v8.1.1' into develop\nebadb754c5b fix bug #68471\n7d3bf0c328d Merge branch 'develop' of https://github.com/ONLYOFFICE/core into develop\n7e7ed8d7466 Merge pull request #1577 from ONLYOFFICE/feature/libvlc-linux\ncd7b39acf2f fix bug #68852\n92a3c6cfce7 Fix Dockerfile\nf3e6b5bc21d Add libva libraries to build\n95d2939a73d Fix bug 61747\nda06f824477 [x2t] Fix bug 68805\n5ad4cca9f4a Fix bug #68834\n3d528bf8b5a Fix bug #68843\nfe489b9da0f Rebuild libvlc with libva2\n6d9bccee653 fix bug #68601\n6ae6c37ef1d Added reading of custom fonts in svg\ncc3528c2261 Merge pull request #1573 from ONLYOFFICE/fix/bug-68549\ndb4ae797a13 Fix bug 68549\nb1810af6f07 Merge branch 'develop' of https://github.com/ONLYOFFICE/core into develop\n54468d21d5d Merge branch 'develop' into feature/add-future-functions-conversion\n263b48dea0a Fix bug #53148\n128e09f839c Merge pull request #1571 from ONLYOFFICE/fix/bug68007\n5b16ea06939 Merge pull request #1570 from ONLYOFFICE/fix/bug58826\nbe821d6b45b Fix bug #23800\n4c08e60ecc2 Merge pull request #1572 from ONLYOFFICE/fix/bug-68712\ne55101141ce [x2t] Save changes.zip in applyChangesPdf; Fix bug 67341\nce9268f1661 Fix for PdfWriter\ne7751e891a8 Fix bug #58826\na3a734a5582 fix bug #68769\n7326f88aa0c Create CAnnotFonts\n83f98f31865 Merge branch 'fix/pre-hotfix' into hotfix/v8.1.1\nb60a956b845 Add future function conversion\n2d6ef9a38b8 fix bug #68767\nbaae7b0a157 Fix bug 68754\n5e7caad32ab fix bug#68764\na517809a5d3 fix bug #68766\n255fa70292a Fix bug 68751\n71ecf1a1e0f Fix bug 68712\n8d092ad6e4b Fix bug #68711\nd9269bcd333 fix bug #68406\n2f45e0952ef Fix bug with cloud images\n05293f43ce0 Merge branch release/v8.1.0 into master\ndf6c20b57d9 Fix bug #68007\n59b3862d898 Fix bug #68585\ne80e545024f Merge pull request #1566 from ONLYOFFICE/fix/bug-68688\n2245952739e Merge pull request #1567 from ONLYOFFICE/fix/bug-68252\nff52afecc97 Fix bug #68252\n5503208e957 Fix bug 68237\n90c1ffe7de4 Fix bugs 68688, 68689\n23ef8fd8af8 Merge pull request #1565 from ONLYOFFICE/fix/bug-68638\ne5559e4cf86 Fix bug #68638\n91b82d9dcb4 Merge remote-tracking branch 'origin/release/v8.1.0' into develop\n142ed45a1b2 .\n76623ec66d2 [pdf=>image] Support orientation\nd5a4cf73ec9 Merge pull request #1564 from ONLYOFFICE/feature/StarMath\nef530fea0b7 fix bug  68587\na72b42bd6d6 Fix placeholder index attribute\ne20f98aa4a3 Merge pull request #1563 from ONLYOFFICE/fix/bug-68629\ncc27db504f6 Fix embedded fonts\n1da9dc12b56 Merge pull request #1562 from ONLYOFFICE/fix/svg\n6cf95e6151a Fix bug #68638\nad4ba02895b For bug 65310\n79c7fced0aa For bug 68629\nb63ff91ce4e Merge pull request #1561 from ONLYOFFICE/fix/bug-68629\nd0b6c553479 For bug 68237\n53f9629194b Merge pull request #1560 from ONLYOFFICE/fix/bug-68609\n272b69ae704 Fix bug #68609\n8c081c83c9e fix bug 68586\n37bef7c3988 Merge pull request #1559 from ONLYOFFICE/fix/bug-68546\naae80a161ca Clear\na4981177485 Fix bug 68546\n7a4cebb89c8 fix bug #68569\n3a8c9416496 Merge remote-tracking branch 'origin/release/v8.1.0' into develop\n32464cb6856 The size setting of metafiles has been changed\na8787e9220b Merge pull request #1558 from ONLYOFFICE/fix/bug68545\n17bc68d102d Fix bug 68545\nca17a96d320 Fix null\n04419326f4d Fix bug 68545\nadfbf6ea3fe Merge pull request #1549 from ONLYOFFICE/fix/bug-68532\n61397b67c1c Merge pull request #1557 from ONLYOFFICE/fix/propsbinary\na6e87b589c6 add props to binary\n5927b0113fc Merge pull request #1556 from ONLYOFFICE/fix/bug68540\ne03b3e9f1b7 fix bug #68540\necef6154ff5 Merge pull request #1555 from ONLYOFFICE/fix/bug65788\ne16578c3a1d fix bug #65788\n3e709a99ed9 Merge pull request #1548 from ONLYOFFICE/fix/bug68485\nc2f0390b6a2 Merge pull request #1550 from ONLYOFFICE/fix/bug68503\n27619798b96 Merge pull request #1551 from ONLYOFFICE/fix/bug68510\ne62585a7fc5 Merge pull request #1553 from ONLYOFFICE/fix/bug68404\n19c4a674f64 Merge pull request #1554 from ONLYOFFICE/fix/bug68238\n505d8093ef2 fix bug #68238\n3316216f8e3 Fix bug #68404\n7131129ba0b Merge pull request #1552 from ONLYOFFICE/feature/StarMath\n40707255155 Fix bug #68510\n5dfeeeb8092 Fix bug #68503\n14b66e2bb30 Fix bug 68532\n9a5e1464bd4 Fix bug #68485\naf9a69d0f20 Update logic & fix bugs\n819e568a35a Merge pull request #1547 from ONLYOFFICE/fix/bug-64722\nc8ce9c8a357 Merge pull request #1546 from ONLYOFFICE/fix/bug-68479\n95f91b816a1 Fix bug #64722\n29788a5d1b7 Fix bug 68479\na81fb19e1a0 fix bug 68445\nc82c8743f83 improvement of parsing and bracket conversion\nebef9ad556f Merge pull request #1545 from ONLYOFFICE/fix/bug68186\na564d289b72 Merge pull request #1543 from ONLYOFFICE/fix/html-bugs\na98ee52dc52 Fix bug 68186\nf39355156cf Merge remote-tracking branch 'origin/release/v8.1.0' into develop\n99a560bebd0 Merge pull request #1544 from ONLYOFFICE/fix/bug68390\ncb10bccd6ab Merge pull request #1538 from ONLYOFFICE/fix/bug68404\nc219ce8b064 Merge pull request #1537 from ONLYOFFICE/fix/bug68402\nafc8dd6e484 Merge pull request #1536 from ONLYOFFICE/fix/bug68400\n505c28f88d3 Merge pull request #1532 from ONLYOFFICE/fix/bug68238\n49d789dc778 Merge pull request #1524 from ONLYOFFICE/fix/bug65172\n2da89c8b03d Fix bug #68390\n24fb53ac6fd Fix bug #68426\n4af39960da8 Fix bug #50286\n29115060b48 Merge pull request #1540 from ONLYOFFICE/release/v8.1.0\ndc485997f08 Merge pull request #1539 from ONLYOFFICE/feature/StarMath\n2e6d5450b4f fix bug #66811\n4ed4c5596f5 Fix bug #68404\ndea44f18298 Fix bug #68402\nb428487d07b Merge pull request #1535 from ONLYOFFICE/fix/bug-68123\nf366cae6049 Fix bug #68400\n96ea86e3c0e Fix bug 68123\n5c7d0a61beb fix bug 68332\n4014d4914f6 fix bug 68327\n0b77fb2bbad fix bug 68333\n2e1ccbc985e For bug 46629\nf5202108a13 Merge pull request #1534 from ONLYOFFICE/fix/bug-68252\n2f7407bd8e3 Merge pull request #1533 from ONLYOFFICE/fix/bug-67967\nac721572f2a Fix bug #67967\n33da43b2f4b Fix bug 67747\n6000944cc98 Fix bug #68238\n591dffc9655 Merge pull request #1531 from ONLYOFFICE/feature/StarMath\ncd74ef4ded4 fix bug 68328\nc7612a259d3 Add support create & save pdf forms\nf665afc1ada Fix bug #68344\n586455310a8 Merge pull request #1530 from ONLYOFFICE/fix/pdf-tilingPattern\n96008085d64 Fix swap RGB\n282b87e5187 Merge pull request #1529 from ONLYOFFICE/fix/bug-63346\n115a60c273c For bug 68216\n66d48673cff Fix min tilingPattern\n29ef74770ac Fix bug 66523\n15247d39f07 Fix bug 63346\ne18fc06c7bc Fix bug in first word splitting\n145154690bc Merge pull request #1528 from ONLYOFFICE/fix/bug-68349\n4f28d8d3d8f For bug 68349\n4cd6e995319 Merge pull request #1527 from ONLYOFFICE/release/v8.1.0\n2d3cd6bd3af Merge remote-tracking br\u2026",
+      "request": {
+        "url": "https://api.github.com/repos/cryptpad/onlyoffice-x2t-wasm/commits/cb631ef86d98356d09407025a2869db13abf8ba5",
+        "acquired_utc": "2026-10-19T02:15:37.143862+00:00",
+        "http_status": 200,
+        "resolved_url": "https://api.github.com/repos/cryptpad/onlyoffice-x2t-wasm/commits/cb631ef86d98356d09407025a2869db13abf8ba5",
+        "ok": true,
+        "bytes": 70405,
+        "sha256": "b8994556f84348d0b7492d90537a6e48da5276827a72d06825fa44a89214d33c"
+      },
+      "parents": [
+        "eb3e26517f1f4eb42f13606a80f1c73b999c81ff"
+      ],
+      "workbook_paths": [],
+      "workbook_bodies_acquired": false,
+      "truth_certified": false,
+      "final_validation_eligible": false
+    }
+  ],
+  "commits_with_workbook_changes": 6,
+  "accepted_natural_sources": 0,
+  "accepted_final_sources": 0,
+  "rule": "Commit messages are leads only; all exposed origins are development-only. Pre-2023 filtering does not prove human authorship or correctness."
+}
